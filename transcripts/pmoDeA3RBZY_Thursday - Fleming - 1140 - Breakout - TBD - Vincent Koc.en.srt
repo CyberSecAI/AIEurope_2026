@@ -1,0 +1,4445 @@
+1
+00:00:15,519 --> 00:00:17,830
+
+They've got it. Cool. Amazing. So,
+
+2
+00:00:17,830 --> 00:00:17,840
+They've got it. Cool. Amazing. So,
+ 
+
+3
+00:00:17,840 --> 00:00:20,630
+They've got it. Cool. Amazing. So,
+welcome everyone. I'm Vincent. Uh, what
+
+4
+00:00:20,630 --> 00:00:20,640
+welcome everyone. I'm Vincent. Uh, what
+ 
+
+5
+00:00:20,640 --> 00:00:22,230
+welcome everyone. I'm Vincent. Uh, what
+do I do? I'm one of the core maintainers
+
+6
+00:00:22,230 --> 00:00:22,240
+do I do? I'm one of the core maintainers
+ 
+
+7
+00:00:22,240 --> 00:00:25,509
+do I do? I'm one of the core maintainers
+at OpenClaw, working with Peter. And as
+
+8
+00:00:25,509 --> 00:00:25,519
+at OpenClaw, working with Peter. And as
+ 
+
+9
+00:00:25,519 --> 00:00:27,750
+at OpenClaw, working with Peter. And as
+you've heard before, I have a day job as
+
+10
+00:00:27,750 --> 00:00:27,760
+you've heard before, I have a day job as
+ 
+
+11
+00:00:27,760 --> 00:00:29,669
+you've heard before, I have a day job as
+well. Same as Peter. he has a day job at
+
+12
+00:00:29,669 --> 00:00:29,679
+well. Same as Peter. he has a day job at
+ 
+
+13
+00:00:29,679 --> 00:00:32,630
+well. Same as Peter. he has a day job at
+OpenAI. Um, but you know, it's an open
+
+14
+00:00:32,630 --> 00:00:32,640
+OpenAI. Um, but you know, it's an open
+ 
+
+15
+00:00:32,640 --> 00:00:34,069
+OpenAI. Um, but you know, it's an open
+source project. Amazing things have been
+
+16
+00:00:34,069 --> 00:00:34,079
+source project. Amazing things have been
+ 
+
+17
+00:00:34,079 --> 00:00:35,510
+source project. Amazing things have been
+happening. I'm going to talk about what
+
+18
+00:00:35,510 --> 00:00:35,520
+happening. I'm going to talk about what
+ 
+
+19
+00:00:35,520 --> 00:00:38,150
+happening. I'm going to talk about what
+I call dark factories and how open claw
+
+20
+00:00:38,150 --> 00:00:38,160
+I call dark factories and how open claw
+ 
+
+21
+00:00:38,160 --> 00:00:40,470
+I call dark factories and how open claw
+ships faster than you can read the diff.
+
+22
+00:00:40,470 --> 00:00:40,480
+ships faster than you can read the diff.
+ 
+
+23
+00:00:40,480 --> 00:00:42,470
+ships faster than you can read the diff.
+Um, this meme is absolutely hilarious.
+
+24
+00:00:42,470 --> 00:00:42,480
+Um, this meme is absolutely hilarious.
+ 
+
+25
+00:00:42,480 --> 00:00:45,110
+Um, this meme is absolutely hilarious.
+So, I think Peter posted this a week or
+
+26
+00:00:45,110 --> 00:00:45,120
+So, I think Peter posted this a week or
+ 
+
+27
+00:00:45,120 --> 00:00:46,790
+So, I think Peter posted this a week or
+two ago. I wake up, there's a new
+
+28
+00:00:46,790 --> 00:00:46,800
+two ago. I wake up, there's a new
+ 
+
+29
+00:00:46,800 --> 00:00:49,029
+two ago. I wake up, there's a new
+technological advancement. I wake up.
+
+30
+00:00:49,029 --> 00:00:49,039
+technological advancement. I wake up.
+ 
+
+31
+00:00:49,039 --> 00:00:50,950
+technological advancement. I wake up.
+It's this this joke that we're shipping
+
+32
+00:00:50,950 --> 00:00:50,960
+It's this this joke that we're shipping
+ 
+
+33
+00:00:50,960 --> 00:00:53,430
+It's this this joke that we're shipping
+at insane speed and the velocity is just
+
+34
+00:00:53,430 --> 00:00:53,440
+at insane speed and the velocity is just
+ 
+
+35
+00:00:53,440 --> 00:00:56,229
+at insane speed and the velocity is just
+absolutely phenomenal. And some of you
+
+36
+00:00:56,229 --> 00:00:56,239
+absolutely phenomenal. And some of you
+ 
+
+37
+00:00:56,239 --> 00:00:59,189
+absolutely phenomenal. And some of you
+might think, oh, this is some luck or
+
+38
+00:00:59,189 --> 00:00:59,199
+might think, oh, this is some luck or
+ 
+
+39
+00:00:59,199 --> 00:01:00,869
+might think, oh, this is some luck or
+we're just like raal flipping to the
+
+40
+00:01:00,869 --> 00:01:00,879
+we're just like raal flipping to the
+ 
+
+41
+00:01:00,879 --> 00:01:02,950
+we're just like raal flipping to the
+max. Um, I think there's actual
+
+42
+00:01:02,950 --> 00:01:02,960
+max. Um, I think there's actual
+ 
+
+43
+00:01:02,960 --> 00:01:04,310
+max. Um, I think there's actual
+engineering work here and I'm going to
+
+44
+00:01:04,310 --> 00:01:04,320
+engineering work here and I'm going to
+ 
+
+45
+00:01:04,320 --> 00:01:07,030
+engineering work here and I'm going to
+talk about that. Now, as I mentioned,
+
+46
+00:01:07,030 --> 00:01:07,040
+talk about that. Now, as I mentioned,
+ 
+
+47
+00:01:07,040 --> 00:01:09,670
+talk about that. Now, as I mentioned,
+I'm Vincent. I'm your friendly clanker.
+
+48
+00:01:09,670 --> 00:01:09,680
+I'm Vincent. I'm your friendly clanker.
+ 
+
+49
+00:01:09,680 --> 00:01:11,990
+I'm Vincent. I'm your friendly clanker.
+Uh, this is me using VR goggles back in
+
+50
+00:01:11,990 --> 00:01:12,000
+Uh, this is me using VR goggles back in
+ 
+
+51
+00:01:12,000 --> 00:01:14,469
+Uh, this is me using VR goggles back in
+2013. So, despite my accent that sounds
+
+52
+00:01:14,469 --> 00:01:14,479
+2013. So, despite my accent that sounds
+ 
+
+53
+00:01:14,479 --> 00:01:15,750
+2013. So, despite my accent that sounds
+somewhat Australian, I was born and
+
+54
+00:01:15,750 --> 00:01:15,760
+somewhat Australian, I was born and
+ 
+
+55
+00:01:15,760 --> 00:01:17,030
+somewhat Australian, I was born and
+raised in East London, not far from
+
+56
+00:01:17,030 --> 00:01:17,040
+raised in East London, not far from
+ 
+
+57
+00:01:17,040 --> 00:01:19,030
+raised in East London, not far from
+here. I actually went to to college just
+
+58
+00:01:19,030 --> 00:01:19,040
+here. I actually went to to college just
+ 
+
+59
+00:01:19,040 --> 00:01:21,270
+here. I actually went to to college just
+down the road in Westminster. And, yeah,
+
+60
+00:01:21,270 --> 00:01:21,280
+down the road in Westminster. And, yeah,
+ 
+
+61
+00:01:21,280 --> 00:01:22,469
+down the road in Westminster. And, yeah,
+at some point decided to live in
+
+62
+00:01:22,469 --> 00:01:22,479
+at some point decided to live in
+ 
+
+63
+00:01:22,479 --> 00:01:24,710
+at some point decided to live in
+Australia. my accent changed. But I used
+
+64
+00:01:24,710 --> 00:01:24,720
+Australia. my accent changed. But I used
+ 
+
+65
+00:01:24,720 --> 00:01:26,789
+Australia. my accent changed. But I used
+to love technology. I used to love being
+
+66
+00:01:26,789 --> 00:01:26,799
+to love technology. I used to love being
+ 
+
+67
+00:01:26,799 --> 00:01:28,789
+to love technology. I used to love being
+at the edge of technology. And this was
+
+68
+00:01:28,789 --> 00:01:28,799
+at the edge of technology. And this was
+ 
+
+69
+00:01:28,799 --> 00:01:31,350
+at the edge of technology. And this was
+like one of the first few sort of early
+
+70
+00:01:31,350 --> 00:01:31,360
+like one of the first few sort of early
+ 
+
+71
+00:01:31,360 --> 00:01:33,109
+like one of the first few sort of early
+um VR goggles that came out. Came in
+
+72
+00:01:33,109 --> 00:01:33,119
+um VR goggles that came out. Came in
+ 
+
+73
+00:01:33,119 --> 00:01:34,630
+um VR goggles that came out. Came in
+this big box with a big warning sign on
+
+74
+00:01:34,630 --> 00:01:34,640
+this big box with a big warning sign on
+ 
+
+75
+00:01:34,640 --> 00:01:37,270
+this big box with a big warning sign on
+it saying, "Hey, use for 5 minutes at a
+
+76
+00:01:37,270 --> 00:01:37,280
+it saying, "Hey, use for 5 minutes at a
+ 
+
+77
+00:01:37,280 --> 00:01:38,469
+it saying, "Hey, use for 5 minutes at a
+time." Cuz it didn't have like the
+
+78
+00:01:38,469 --> 00:01:38,479
+time." Cuz it didn't have like the
+ 
+
+79
+00:01:38,479 --> 00:01:40,950
+time." Cuz it didn't have like the
+anti-motion sickness built into it. And
+
+80
+00:01:40,950 --> 00:01:40,960
+anti-motion sickness built into it. And
+ 
+
+81
+00:01:40,960 --> 00:01:42,630
+anti-motion sickness built into it. And
+the funny thing with this one here was
+
+82
+00:01:42,630 --> 00:01:42,640
+the funny thing with this one here was
+ 
+
+83
+00:01:42,640 --> 00:01:44,310
+the funny thing with this one here was
+that I didn't use it for 5 minutes. I
+
+84
+00:01:44,310 --> 00:01:44,320
+that I didn't use it for 5 minutes. I
+ 
+
+85
+00:01:44,320 --> 00:01:46,870
+that I didn't use it for 5 minutes. I
+used it for 3 hours. And I played Team
+
+86
+00:01:46,870 --> 00:01:46,880
+used it for 3 hours. And I played Team
+ 
+
+87
+00:01:46,880 --> 00:01:49,350
+used it for 3 hours. And I played Team
+Fortress 2, had an absolute blast. And
+
+88
+00:01:49,350 --> 00:01:49,360
+Fortress 2, had an absolute blast. And
+ 
+
+89
+00:01:49,360 --> 00:01:50,870
+Fortress 2, had an absolute blast. And
+then I vomited for three hours after
+
+90
+00:01:50,870 --> 00:01:50,880
+then I vomited for three hours after
+ 
+
+91
+00:01:50,880 --> 00:01:53,510
+then I vomited for three hours after
+that cuz my vision turned into B vision.
+
+92
+00:01:53,510 --> 00:01:53,520
+that cuz my vision turned into B vision.
+ 
+
+93
+00:01:53,520 --> 00:01:55,429
+that cuz my vision turned into B vision.
+Um the what I'm trying to say here is
+
+94
+00:01:55,429 --> 00:01:55,439
+Um the what I'm trying to say here is
+ 
+
+95
+00:01:55,439 --> 00:01:57,270
+Um the what I'm trying to say here is
+that like anything on the edge is going
+
+96
+00:01:57,270 --> 00:01:57,280
+that like anything on the edge is going
+ 
+
+97
+00:01:57,280 --> 00:02:00,550
+that like anything on the edge is going
+to be janky. It's going to be horri
+
+98
+00:02:00,550 --> 00:02:00,560
+to be janky. It's going to be horri
+ 
+
+99
+00:02:00,560 --> 00:02:03,190
+to be janky. It's going to be horri
+horrific. It's going to be uh uncharted
+
+100
+00:02:03,190 --> 00:02:03,200
+horrific. It's going to be uh uncharted
+ 
+
+101
+00:02:03,200 --> 00:02:06,550
+horrific. It's going to be uh uncharted
+territory. And working on openclaw and
+
+102
+00:02:06,550 --> 00:02:06,560
+territory. And working on openclaw and
+ 
+
+103
+00:02:06,560 --> 00:02:08,630
+territory. And working on openclaw and
+being part of the team that ships
+
+104
+00:02:08,630 --> 00:02:08,640
+being part of the team that ships
+ 
+
+105
+00:02:08,640 --> 00:02:11,190
+being part of the team that ships
+probably you know an insane velocity of
+
+106
+00:02:11,190 --> 00:02:11,200
+probably you know an insane velocity of
+ 
+
+107
+00:02:11,200 --> 00:02:12,630
+probably you know an insane velocity of
+commits to a point where I get ray
+
+108
+00:02:12,630 --> 00:02:12,640
+commits to a point where I get ray
+ 
+
+109
+00:02:12,640 --> 00:02:16,390
+commits to a point where I get ray
+limited by GitHub on an hourly basis uh
+
+110
+00:02:16,390 --> 00:02:16,400
+limited by GitHub on an hourly basis uh
+ 
+
+111
+00:02:16,400 --> 00:02:19,030
+limited by GitHub on an hourly basis uh
+is an interesting experience. And this
+
+112
+00:02:19,030 --> 00:02:19,040
+is an interesting experience. And this
+ 
+
+113
+00:02:19,040 --> 00:02:20,710
+is an interesting experience. And this
+experience Britain's gone through
+
+114
+00:02:20,710 --> 00:02:20,720
+experience Britain's gone through
+ 
+
+115
+00:02:20,720 --> 00:02:22,710
+experience Britain's gone through
+before. Um we had the industrial
+
+116
+00:02:22,710 --> 00:02:22,720
+before. Um we had the industrial
+ 
+
+117
+00:02:22,720 --> 00:02:25,750
+before. Um we had the industrial
+revolution when mills and cotton were
+
+118
+00:02:25,750 --> 00:02:25,760
+revolution when mills and cotton were
+ 
+
+119
+00:02:25,760 --> 00:02:28,070
+revolution when mills and cotton were
+being produced at extreme amounts of
+
+120
+00:02:28,070 --> 00:02:28,080
+being produced at extreme amounts of
+ 
+
+121
+00:02:28,080 --> 00:02:30,229
+being produced at extreme amounts of
+volume. And there's a lot of history
+
+122
+00:02:30,229 --> 00:02:30,239
+volume. And there's a lot of history
+ 
+
+123
+00:02:30,239 --> 00:02:32,470
+volume. And there's a lot of history
+here around production and
+
+124
+00:02:32,470 --> 00:02:32,480
+here around production and
+ 
+
+125
+00:02:32,480 --> 00:02:34,790
+here around production and
+productionization at scale uh in the UK
+
+126
+00:02:34,790 --> 00:02:34,800
+productionization at scale uh in the UK
+ 
+
+127
+00:02:34,800 --> 00:02:37,430
+productionization at scale uh in the UK
+and in Europe. And I feel like we're
+
+128
+00:02:37,430 --> 00:02:37,440
+and in Europe. And I feel like we're
+ 
+
+129
+00:02:37,440 --> 00:02:38,869
+and in Europe. And I feel like we're
+going through this moment again. Uh
+
+130
+00:02:38,869 --> 00:02:38,879
+going through this moment again. Uh
+ 
+
+131
+00:02:38,879 --> 00:02:40,550
+going through this moment again. Uh
+we're going through this moment of how
+
+132
+00:02:40,550 --> 00:02:40,560
+we're going through this moment of how
+ 
+
+133
+00:02:40,560 --> 00:02:43,589
+we're going through this moment of how
+do we build at scale? And the ways we
+
+134
+00:02:43,589 --> 00:02:43,599
+do we build at scale? And the ways we
+ 
+
+135
+00:02:43,599 --> 00:02:45,750
+do we build at scale? And the ways we
+used to work before just don't work
+
+136
+00:02:45,750 --> 00:02:45,760
+used to work before just don't work
+ 
+
+137
+00:02:45,760 --> 00:02:48,550
+used to work before just don't work
+anymore. And
+
+138
+00:02:48,550 --> 00:02:48,560
+anymore. And
+ 
+
+139
+00:02:48,560 --> 00:02:50,869
+anymore. And
+it's kind of strange because in my day
+
+140
+00:02:50,869 --> 00:02:50,879
+it's kind of strange because in my day
+ 
+
+141
+00:02:50,879 --> 00:02:53,589
+it's kind of strange because in my day
+job I kind of work in the space of evals
+
+142
+00:02:53,589 --> 00:02:53,599
+job I kind of work in the space of evals
+ 
+
+143
+00:02:53,599 --> 00:02:55,030
+job I kind of work in the space of evals
+which everything is sort of structured
+
+144
+00:02:55,030 --> 00:02:55,040
+which everything is sort of structured
+ 
+
+145
+00:02:55,040 --> 00:02:57,270
+which everything is sort of structured
+and there's telemetry and it has to be
+
+146
+00:02:57,270 --> 00:02:57,280
+and there's telemetry and it has to be
+ 
+
+147
+00:02:57,280 --> 00:02:59,589
+and there's telemetry and it has to be
+all perfect and I work on a project
+
+148
+00:02:59,589 --> 00:02:59,599
+all perfect and I work on a project
+ 
+
+149
+00:02:59,599 --> 00:03:02,949
+all perfect and I work on a project
+where I'm I have this blind faith in the
+
+150
+00:03:02,949 --> 00:03:02,959
+where I'm I have this blind faith in the
+ 
+
+151
+00:03:02,959 --> 00:03:05,750
+where I'm I have this blind faith in the
+harness and it's this kind of two walls
+
+152
+00:03:05,750 --> 00:03:05,760
+harness and it's this kind of two walls
+ 
+
+153
+00:03:05,760 --> 00:03:08,869
+harness and it's this kind of two walls
+but they're starting to come together.
+
+154
+00:03:08,869 --> 00:03:08,879
+but they're starting to come together.
+ 
+
+155
+00:03:08,879 --> 00:03:11,190
+but they're starting to come together.
+We used to have hand looms in cottages
+
+156
+00:03:11,190 --> 00:03:11,200
+We used to have hand looms in cottages
+ 
+
+157
+00:03:11,200 --> 00:03:14,390
+We used to have hand looms in cottages
+uh centralized mills everywhere. uh
+
+158
+00:03:14,390 --> 00:03:14,400
+uh centralized mills everywhere. uh
+ 
+
+159
+00:03:14,400 --> 00:03:17,190
+uh centralized mills everywhere. uh
+craftsmen were the factory workers, but
+
+160
+00:03:17,190 --> 00:03:17,200
+craftsmen were the factory workers, but
+ 
+
+161
+00:03:17,200 --> 00:03:19,910
+craftsmen were the factory workers, but
+the bottleneck was the weaver's hands.
+
+162
+00:03:19,910 --> 00:03:19,920
+the bottleneck was the weaver's hands.
+ 
+
+163
+00:03:19,920 --> 00:03:21,750
+the bottleneck was the weaver's hands.
+We're now switching to a world where
+
+164
+00:03:21,750 --> 00:03:21,760
+We're now switching to a world where
+ 
+
+165
+00:03:21,760 --> 00:03:24,229
+We're now switching to a world where
+engineers writing code and editors not
+
+166
+00:03:24,229 --> 00:03:24,239
+engineers writing code and editors not
+ 
+
+167
+00:03:24,239 --> 00:03:28,149
+engineers writing code and editors not
+so much. Uh swarms across repos,
+
+168
+00:03:28,149 --> 00:03:28,159
+so much. Uh swarms across repos,
+ 
+
+169
+00:03:28,159 --> 00:03:29,830
+so much. Uh swarms across repos,
+uh engineers are becoming factory
+
+170
+00:03:29,830 --> 00:03:29,840
+uh engineers are becoming factory
+ 
+
+171
+00:03:29,840 --> 00:03:31,990
+uh engineers are becoming factory
+managers, which I'm going to talk to.
+
+172
+00:03:31,990 --> 00:03:32,000
+managers, which I'm going to talk to.
+ 
+
+173
+00:03:32,000 --> 00:03:34,229
+managers, which I'm going to talk to.
+And the bottleneck becomes taste, you
+
+174
+00:03:34,229 --> 00:03:34,239
+And the bottleneck becomes taste, you
+ 
+
+175
+00:03:34,239 --> 00:03:36,869
+And the bottleneck becomes taste, you
+know, that lovely word Italian mother's
+
+176
+00:03:36,869 --> 00:03:36,879
+know, that lovely word Italian mother's
+ 
+
+177
+00:03:36,879 --> 00:03:38,949
+know, that lovely word Italian mother's
+hands. Yes.
+
+178
+00:03:38,949 --> 00:03:38,959
+hands. Yes.
+ 
+
+179
+00:03:38,959 --> 00:03:41,030
+hands. Yes.
+So in in context, like what does this
+
+180
+00:03:41,030 --> 00:03:41,040
+So in in context, like what does this
+ 
+
+181
+00:03:41,040 --> 00:03:42,229
+So in in context, like what does this
+mean? Like are you talking absolute
+
+182
+00:03:42,229 --> 00:03:42,239
+mean? Like are you talking absolute
+ 
+
+183
+00:03:42,239 --> 00:03:44,149
+mean? Like are you talking absolute
+nonsense? the people building things at
+
+184
+00:03:44,149 --> 00:03:44,159
+nonsense? the people building things at
+ 
+
+185
+00:03:44,159 --> 00:03:47,350
+nonsense? the people building things at
+absolute scale. they are. What happened
+
+186
+00:03:47,350 --> 00:03:47,360
+absolute scale. they are. What happened
+ 
+
+187
+00:03:47,360 --> 00:03:50,630
+absolute scale. they are. What happened
+was um very similar to the chat chutt
+
+188
+00:03:50,630 --> 00:03:50,640
+was um very similar to the chat chutt
+ 
+
+189
+00:03:50,640 --> 00:03:53,110
+was um very similar to the chat chutt
+era where everyone denied it at scale
+
+190
+00:03:53,110 --> 00:03:53,120
+era where everyone denied it at scale
+ 
+
+191
+00:03:53,120 --> 00:03:55,430
+era where everyone denied it at scale
+that they were using chatt everyone was
+
+192
+00:03:55,430 --> 00:03:55,440
+that they were using chatt everyone was
+ 
+
+193
+00:03:55,440 --> 00:03:57,589
+that they were using chatt everyone was
+in this absolute fear-mongering sort of
+
+194
+00:03:57,589 --> 00:03:57,599
+in this absolute fear-mongering sort of
+ 
+
+195
+00:03:57,599 --> 00:03:59,589
+in this absolute fear-mongering sort of
+world but what the reality was that
+
+196
+00:03:59,589 --> 00:03:59,599
+world but what the reality was that
+ 
+
+197
+00:03:59,599 --> 00:04:01,670
+world but what the reality was that
+everyone was using it everyone in secret
+
+198
+00:04:01,670 --> 00:04:01,680
+everyone was using it everyone in secret
+ 
+
+199
+00:04:01,680 --> 00:04:03,350
+everyone was using it everyone in secret
+was just like oh my god what's going on
+
+200
+00:04:03,350 --> 00:04:03,360
+was just like oh my god what's going on
+ 
+
+201
+00:04:03,360 --> 00:04:05,110
+was just like oh my god what's going on
+I need to talk to it and the same thing
+
+202
+00:04:05,110 --> 00:04:05,120
+I need to talk to it and the same thing
+ 
+
+203
+00:04:05,120 --> 00:04:07,990
+I need to talk to it and the same thing
+is happening with this autonomous agents
+
+204
+00:04:07,990 --> 00:04:08,000
+is happening with this autonomous agents
+ 
+
+205
+00:04:08,000 --> 00:04:10,229
+is happening with this autonomous agents
+at scale some organizations have openly
+
+206
+00:04:10,229 --> 00:04:10,239
+at scale some organizations have openly
+ 
+
+207
+00:04:10,239 --> 00:04:11,830
+at scale some organizations have openly
+come out with it so for example
+
+208
+00:04:11,830 --> 00:04:11,840
+come out with it so for example
+ 
+
+209
+00:04:11,840 --> 00:04:14,070
+come out with it so for example
+anthropic uh with their recent work they
+
+210
+00:04:14,070 --> 00:04:14,080
+anthropic uh with their recent work they
+ 
+
+211
+00:04:14,080 --> 00:04:16,469
+anthropic uh with their recent work they
+did on building a new C compiler
+
+212
+00:04:16,469 --> 00:04:16,479
+did on building a new C compiler
+ 
+
+213
+00:04:16,479 --> 00:04:19,270
+did on building a new C compiler
+Uh we had Spotify saying they they're no
+
+214
+00:04:19,270 --> 00:04:19,280
+Uh we had Spotify saying they they're no
+ 
+
+215
+00:04:19,280 --> 00:04:22,069
+Uh we had Spotify saying they they're no
+longer writing code by hand supposedly.
+
+216
+00:04:22,069 --> 00:04:22,079
+longer writing code by hand supposedly.
+ 
+
+217
+00:04:22,079 --> 00:04:25,350
+longer writing code by hand supposedly.
+Um Steve Jger, which I absolutely love,
+
+218
+00:04:25,350 --> 00:04:25,360
+Um Steve Jger, which I absolutely love,
+ 
+
+219
+00:04:25,360 --> 00:04:27,350
+Um Steve Jger, which I absolutely love,
+uh saying he pushes about 50 PRs a day,
+
+220
+00:04:27,350 --> 00:04:27,360
+uh saying he pushes about 50 PRs a day,
+ 
+
+221
+00:04:27,360 --> 00:04:29,030
+uh saying he pushes about 50 PRs a day,
+total solo. He calls himself a vibe
+
+222
+00:04:29,030 --> 00:04:29,040
+total solo. He calls himself a vibe
+ 
+
+223
+00:04:29,040 --> 00:04:30,870
+total solo. He calls himself a vibe
+maintainer. I can kind of relate to
+
+224
+00:04:30,870 --> 00:04:30,880
+maintainer. I can kind of relate to
+ 
+
+225
+00:04:30,880 --> 00:04:34,550
+maintainer. I can kind of relate to
+that. And Open Core, where we're pushing
+
+226
+00:04:34,550 --> 00:04:34,560
+that. And Open Core, where we're pushing
+ 
+
+227
+00:04:34,560 --> 00:04:36,550
+that. And Open Core, where we're pushing
+at the peak, we were doing 800 commits a
+
+228
+00:04:36,550 --> 00:04:36,560
+at the peak, we were doing 800 commits a
+ 
+
+229
+00:04:36,560 --> 00:04:39,430
+at the peak, we were doing 800 commits a
+day. And realistically, like there's
+
+230
+00:04:39,430 --> 00:04:39,440
+day. And realistically, like there's
+ 
+
+231
+00:04:39,440 --> 00:04:42,310
+day. And realistically, like there's
+about 10 to 15 core maintainers, all
+
+232
+00:04:42,310 --> 00:04:42,320
+about 10 to 15 core maintainers, all
+ 
+
+233
+00:04:42,320 --> 00:04:44,550
+about 10 to 15 core maintainers, all
+with day jobs. It's kind of astronomical
+
+234
+00:04:44,550 --> 00:04:44,560
+with day jobs. It's kind of astronomical
+ 
+
+235
+00:04:44,560 --> 00:04:48,629
+with day jobs. It's kind of astronomical
+in terms of scale.
+
+236
+00:04:48,629 --> 00:04:48,639
+
+ 
+
+237
+00:04:48,639 --> 00:04:51,990
+
+And for me, this was March 15. Um, what
+
+238
+00:04:51,990 --> 00:04:52,000
+And for me, this was March 15. Um, what
+ 
+
+239
+00:04:52,000 --> 00:04:53,430
+And for me, this was March 15. Um, what
+was that like two or three weeks ago
+
+240
+00:04:53,430 --> 00:04:53,440
+was that like two or three weeks ago
+ 
+
+241
+00:04:53,440 --> 00:04:55,670
+was that like two or three weeks ago
+where I hit close to 3,000 commits per
+
+242
+00:04:55,670 --> 00:04:55,680
+where I hit close to 3,000 commits per
+ 
+
+243
+00:04:55,680 --> 00:04:58,469
+where I hit close to 3,000 commits per
+day. And if you actually took look, my
+
+244
+00:04:58,469 --> 00:04:58,479
+day. And if you actually took look, my
+ 
+
+245
+00:04:58,479 --> 00:04:59,990
+day. And if you actually took look, my
+commits actually stop when I go to
+
+246
+00:04:59,990 --> 00:05:00,000
+commits actually stop when I go to
+ 
+
+247
+00:05:00,000 --> 00:05:02,150
+commits actually stop when I go to
+sleep. So, if you if you want to see
+
+248
+00:05:02,150 --> 00:05:02,160
+sleep. So, if you if you want to see
+ 
+
+249
+00:05:02,160 --> 00:05:03,510
+sleep. So, if you if you want to see
+when I go to sleep and when I wake up
+
+250
+00:05:03,510 --> 00:05:03,520
+when I go to sleep and when I wake up
+ 
+
+251
+00:05:03,520 --> 00:05:05,189
+when I go to sleep and when I wake up
+and how many hours of sleep I have, you
+
+252
+00:05:05,189 --> 00:05:05,199
+and how many hours of sleep I have, you
+ 
+
+253
+00:05:05,199 --> 00:05:06,390
+and how many hours of sleep I have, you
+can just take a look at my commit
+
+254
+00:05:06,390 --> 00:05:06,400
+can just take a look at my commit
+ 
+
+255
+00:05:06,400 --> 00:05:08,710
+can just take a look at my commit
+history. Yeah, it's astronomical. But
+
+256
+00:05:08,710 --> 00:05:08,720
+history. Yeah, it's astronomical. But
+ 
+
+257
+00:05:08,720 --> 00:05:09,909
+history. Yeah, it's astronomical. But
+the thing is this is going to become the
+
+258
+00:05:09,909 --> 00:05:09,919
+the thing is this is going to become the
+ 
+
+259
+00:05:09,919 --> 00:05:12,390
+the thing is this is going to become the
+norm everywhere else. Like this is this
+
+260
+00:05:12,390 --> 00:05:12,400
+norm everywhere else. Like this is this
+ 
+
+261
+00:05:12,400 --> 00:05:14,070
+norm everywhere else. Like this is this
+is like a me telling you you need to
+
+262
+00:05:14,070 --> 00:05:14,080
+is like a me telling you you need to
+ 
+
+263
+00:05:14,080 --> 00:05:15,830
+is like a me telling you you need to
+wake up that you know this scale of
+
+264
+00:05:15,830 --> 00:05:15,840
+wake up that you know this scale of
+ 
+
+265
+00:05:15,840 --> 00:05:18,629
+wake up that you know this scale of
+velocity is going to be normal and
+
+266
+00:05:18,629 --> 00:05:18,639
+velocity is going to be normal and
+ 
+
+267
+00:05:18,639 --> 00:05:20,950
+velocity is going to be normal and
+trying to review PRs and go through all
+
+268
+00:05:20,950 --> 00:05:20,960
+trying to review PRs and go through all
+ 
+
+269
+00:05:20,960 --> 00:05:23,350
+trying to review PRs and go through all
+this nonsense may not work but somewhere
+
+270
+00:05:23,350 --> 00:05:23,360
+this nonsense may not work but somewhere
+ 
+
+271
+00:05:23,360 --> 00:05:25,830
+this nonsense may not work but somewhere
+in the mix is engineering there is a
+
+272
+00:05:25,830 --> 00:05:25,840
+in the mix is engineering there is a
+ 
+
+273
+00:05:25,840 --> 00:05:26,950
+in the mix is engineering there is a
+form of engineering that's going to
+
+274
+00:05:26,950 --> 00:05:26,960
+form of engineering that's going to
+ 
+
+275
+00:05:26,960 --> 00:05:30,230
+form of engineering that's going to
+happen so we did commit maxing you know
+
+276
+00:05:30,230 --> 00:05:30,240
+happen so we did commit maxing you know
+ 
+
+277
+00:05:30,240 --> 00:05:31,590
+happen so we did commit maxing you know
+let's just go there smash as many
+
+278
+00:05:31,590 --> 00:05:31,600
+let's just go there smash as many
+ 
+
+279
+00:05:31,600 --> 00:05:34,390
+let's just go there smash as many
+commits as we can and this reminds me of
+
+280
+00:05:34,390 --> 00:05:34,400
+commits as we can and this reminds me of
+ 
+
+281
+00:05:34,400 --> 00:05:36,150
+commits as we can and this reminds me of
+Ralph looping right this like this this
+
+282
+00:05:36,150 --> 00:05:36,160
+Ralph looping right this like this this
+ 
+
+283
+00:05:36,160 --> 00:05:38,710
+Ralph looping right this like this this
+this this guy where you're like hey I'm
+
+284
+00:05:38,710 --> 00:05:38,720
+this this guy where you're like hey I'm
+ 
+
+285
+00:05:38,720 --> 00:05:40,150
+this this guy where you're like hey I'm
+just going to like give you a task I'm
+
+286
+00:05:40,150 --> 00:05:40,160
+just going to like give you a task I'm
+ 
+
+287
+00:05:40,160 --> 00:05:41,990
+just going to like give you a task I'm
+going to burn tokens for like 8 to nine
+
+288
+00:05:41,990 --> 00:05:42,000
+going to burn tokens for like 8 to nine
+ 
+
+289
+00:05:42,000 --> 00:05:45,189
+going to burn tokens for like 8 to nine
+hours and you're waiting, you know, uh
+
+290
+00:05:45,189 --> 00:05:45,199
+hours and you're waiting, you know, uh
+ 
+
+291
+00:05:45,199 --> 00:05:46,629
+hours and you're waiting, you know, uh
+you're waiting, you're hoping something
+
+292
+00:05:46,629 --> 00:05:46,639
+you're waiting, you're hoping something
+ 
+
+293
+00:05:46,639 --> 00:05:48,390
+you're waiting, you're hoping something
+happens, maybe something happens, I
+
+294
+00:05:48,390 --> 00:05:48,400
+happens, maybe something happens, I
+ 
+
+295
+00:05:48,400 --> 00:05:51,110
+happens, maybe something happens, I
+don't know. Um but what if we had a bit
+
+296
+00:05:51,110 --> 00:05:51,120
+don't know. Um but what if we had a bit
+ 
+
+297
+00:05:51,120 --> 00:05:53,110
+don't know. Um but what if we had a bit
+more of an opinionated uh approach to
+
+298
+00:05:53,110 --> 00:05:53,120
+more of an opinionated uh approach to
+ 
+
+299
+00:05:53,120 --> 00:05:55,749
+more of an opinionated uh approach to
+this? Um what if we call it bart
+
+300
+00:05:55,749 --> 00:05:55,759
+this? Um what if we call it bart
+ 
+
+301
+00:05:55,759 --> 00:05:57,189
+this? Um what if we call it bart
+looping? I don't know. Uh one of the
+
+302
+00:05:57,189 --> 00:05:57,199
+looping? I don't know. Uh one of the
+ 
+
+303
+00:05:57,199 --> 00:05:58,629
+looping? I don't know. Uh one of the
+other maintainers gave me this idea.
+
+304
+00:05:58,629 --> 00:05:58,639
+other maintainers gave me this idea.
+ 
+
+305
+00:05:58,639 --> 00:06:01,270
+other maintainers gave me this idea.
+Maybe we'll coin it. Do we do we need
+
+306
+00:06:01,270 --> 00:06:01,280
+Maybe we'll coin it. Do we do we need
+ 
+
+307
+00:06:01,280 --> 00:06:03,430
+Maybe we'll coin it. Do we do we need
+more than just tokens? Uh what does that
+
+308
+00:06:03,430 --> 00:06:03,440
+more than just tokens? Uh what does that
+ 
+
+309
+00:06:03,440 --> 00:06:05,670
+more than just tokens? Uh what does that
+reward mechanism look like? How do we
+
+310
+00:06:05,670 --> 00:06:05,680
+reward mechanism look like? How do we
+ 
+
+311
+00:06:05,680 --> 00:06:07,189
+reward mechanism look like? How do we
+get a bit more opinionated? Yes, let's
+
+312
+00:06:07,189 --> 00:06:07,199
+get a bit more opinionated? Yes, let's
+ 
+
+313
+00:06:07,199 --> 00:06:09,749
+get a bit more opinionated? Yes, let's
+run loops, but let's be a bit more smart
+
+314
+00:06:09,749 --> 00:06:09,759
+run loops, but let's be a bit more smart
+ 
+
+315
+00:06:09,759 --> 00:06:12,550
+run loops, but let's be a bit more smart
+about how we do this.
+
+316
+00:06:12,550 --> 00:06:12,560
+about how we do this.
+ 
+
+317
+00:06:12,560 --> 00:06:14,870
+about how we do this.
+So, um, right about the time you saw
+
+318
+00:06:14,870 --> 00:06:14,880
+So, um, right about the time you saw
+ 
+
+319
+00:06:14,880 --> 00:06:16,950
+So, um, right about the time you saw
+those 3,000 commits, uh, this was the
+
+320
+00:06:16,950 --> 00:06:16,960
+those 3,000 commits, uh, this was the
+ 
+
+321
+00:06:16,960 --> 00:06:19,510
+those 3,000 commits, uh, this was the
+day before I was at NVIDIA with Peter,
+
+322
+00:06:19,510 --> 00:06:19,520
+day before I was at NVIDIA with Peter,
+ 
+
+323
+00:06:19,520 --> 00:06:20,870
+day before I was at NVIDIA with Peter,
+and the gentleman you see on the left is
+
+324
+00:06:20,870 --> 00:06:20,880
+and the gentleman you see on the left is
+ 
+
+325
+00:06:20,880 --> 00:06:22,390
+and the gentleman you see on the left is
+is one of the other, uh, Nvidia
+
+326
+00:06:22,390 --> 00:06:22,400
+is one of the other, uh, Nvidia
+ 
+
+327
+00:06:22,400 --> 00:06:23,830
+is one of the other, uh, Nvidia
+gentlemen, and they were like, "Hey,
+
+328
+00:06:23,830 --> 00:06:23,840
+gentlemen, and they were like, "Hey,
+ 
+
+329
+00:06:23,840 --> 00:06:25,510
+gentlemen, and they were like, "Hey,
+we're building Nemo Claw." I'm like,
+
+330
+00:06:25,510 --> 00:06:25,520
+we're building Nemo Claw." I'm like,
+ 
+
+331
+00:06:25,520 --> 00:06:27,990
+we're building Nemo Claw." I'm like,
+"What? What's going on?" And, uh, let's
+
+332
+00:06:27,990 --> 00:06:28,000
+"What? What's going on?" And, uh, let's
+ 
+
+333
+00:06:28,000 --> 00:06:30,230
+"What? What's going on?" And, uh, let's
+help you build it. And I was in the
+
+334
+00:06:30,230 --> 00:06:30,240
+help you build it. And I was in the
+ 
+
+335
+00:06:30,240 --> 00:06:31,990
+help you build it. And I was in the
+room. I was like, "I can't work on a
+
+336
+00:06:31,990 --> 00:06:32,000
+room. I was like, "I can't work on a
+ 
+
+337
+00:06:32,000 --> 00:06:33,830
+room. I was like, "I can't work on a
+laptop for like hours on end. Can you
+
+338
+00:06:33,830 --> 00:06:33,840
+laptop for like hours on end. Can you
+ 
+
+339
+00:06:33,840 --> 00:06:35,350
+laptop for like hours on end. Can you
+bring me a screen?" They bought me a
+
+340
+00:06:35,350 --> 00:06:35,360
+bring me a screen?" They bought me a
+ 
+
+341
+00:06:35,360 --> 00:06:37,909
+bring me a screen?" They bought me a
+screen. Um, Peter didn't have a screen,
+
+342
+00:06:37,909 --> 00:06:37,919
+screen. Um, Peter didn't have a screen,
+ 
+
+343
+00:06:37,919 --> 00:06:40,629
+screen. Um, Peter didn't have a screen,
+so that's his laptop on the left. He
+
+344
+00:06:40,629 --> 00:06:40,639
+so that's his laptop on the left. He
+ 
+
+345
+00:06:40,639 --> 00:06:42,309
+so that's his laptop on the left. He
+asked for a screen, so they gave him an
+
+346
+00:06:42,309 --> 00:06:42,319
+asked for a screen, so they gave him an
+ 
+
+347
+00:06:42,319 --> 00:06:43,830
+asked for a screen, so they gave him an
+even bigger screen than mine because,
+
+348
+00:06:43,830 --> 00:06:43,840
+even bigger screen than mine because,
+ 
+
+349
+00:06:43,840 --> 00:06:46,230
+even bigger screen than mine because,
+you know, why not? And we just got to
+
+350
+00:06:46,230 --> 00:06:46,240
+you know, why not? And we just got to
+ 
+
+351
+00:06:46,240 --> 00:06:48,950
+you know, why not? And we just got to
+work. So, he's running about maybe 15
+
+352
+00:06:48,950 --> 00:06:48,960
+work. So, he's running about maybe 15
+ 
+
+353
+00:06:48,960 --> 00:06:50,550
+work. So, he's running about maybe 15
+codec sessions, and he's got his Mac
+
+354
+00:06:50,550 --> 00:06:50,560
+codec sessions, and he's got his Mac
+ 
+
+355
+00:06:50,560 --> 00:06:52,629
+codec sessions, and he's got his Mac
+Studio Home, his VPN into I'm running
+
+356
+00:06:52,629 --> 00:06:52,639
+Studio Home, his VPN into I'm running
+ 
+
+357
+00:06:52,639 --> 00:06:54,870
+Studio Home, his VPN into I'm running
+another like 10 or 15. And between
+
+358
+00:06:54,870 --> 00:06:54,880
+another like 10 or 15. And between
+ 
+
+359
+00:06:54,880 --> 00:06:56,230
+another like 10 or 15. And between
+collectively between us, we're probably
+
+360
+00:06:56,230 --> 00:06:56,240
+collectively between us, we're probably
+ 
+
+361
+00:06:56,240 --> 00:06:57,590
+collectively between us, we're probably
+running with sub agents included, maybe
+
+362
+00:06:57,590 --> 00:06:57,600
+running with sub agents included, maybe
+ 
+
+363
+00:06:57,600 --> 00:07:00,309
+running with sub agents included, maybe
+up to 60, 70 agents. Um, but on the
+
+364
+00:07:00,309 --> 00:07:00,319
+up to 60, 70 agents. Um, but on the
+ 
+
+365
+00:07:00,319 --> 00:07:02,870
+up to 60, 70 agents. Um, but on the
+foreground, maybe 15 uh swim lanes if
+
+366
+00:07:02,870 --> 00:07:02,880
+foreground, maybe 15 uh swim lanes if
+ 
+
+367
+00:07:02,880 --> 00:07:04,230
+foreground, maybe 15 uh swim lanes if
+you want to call it that. And we're just
+
+368
+00:07:04,230 --> 00:07:04,240
+you want to call it that. And we're just
+ 
+
+369
+00:07:04,240 --> 00:07:06,070
+you want to call it that. And we're just
+just going for it. Funny thing is we're
+
+370
+00:07:06,070 --> 00:07:06,080
+just going for it. Funny thing is we're
+ 
+
+371
+00:07:06,080 --> 00:07:08,550
+just going for it. Funny thing is we're
+working on Nemo claw one side but one
+
+372
+00:07:08,550 --> 00:07:08,560
+working on Nemo claw one side but one
+ 
+
+373
+00:07:08,560 --> 00:07:10,710
+working on Nemo claw one side but one
+maintainer decided I'm going to move
+
+374
+00:07:10,710 --> 00:07:10,720
+maintainer decided I'm going to move
+ 
+
+375
+00:07:10,720 --> 00:07:12,390
+maintainer decided I'm going to move
+some stuff around. I'm going to move a
+
+376
+00:07:12,390 --> 00:07:12,400
+some stuff around. I'm going to move a
+ 
+
+377
+00:07:12,400 --> 00:07:14,710
+some stuff around. I'm going to move a
+couple of folders around and that was
+
+378
+00:07:14,710 --> 00:07:14,720
+couple of folders around and that was
+ 
+
+379
+00:07:14,720 --> 00:07:16,790
+couple of folders around and that was
+moving entire channels. So like all our
+
+380
+00:07:16,790 --> 00:07:16,800
+moving entire channels. So like all our
+ 
+
+381
+00:07:16,800 --> 00:07:18,550
+moving entire channels. So like all our
+conversations with like MS Teams and
+
+382
+00:07:18,550 --> 00:07:18,560
+conversations with like MS Teams and
+ 
+
+383
+00:07:18,560 --> 00:07:20,230
+conversations with like MS Teams and
+Slack ended up moving to another
+
+384
+00:07:20,230 --> 00:07:20,240
+Slack ended up moving to another
+ 
+
+385
+00:07:20,240 --> 00:07:22,469
+Slack ended up moving to another
+location in the codebase
+
+386
+00:07:22,469 --> 00:07:22,479
+location in the codebase
+ 
+
+387
+00:07:22,479 --> 00:07:24,469
+location in the codebase
+and we were like oh my goodness we're
+
+388
+00:07:24,469 --> 00:07:24,479
+and we were like oh my goodness we're
+ 
+
+389
+00:07:24,479 --> 00:07:27,189
+and we were like oh my goodness we're
+going to have to change stuff. Um and I
+
+390
+00:07:27,189 --> 00:07:27,199
+going to have to change stuff. Um and I
+ 
+
+391
+00:07:27,199 --> 00:07:29,670
+going to have to change stuff. Um and I
+found a really nice uh place to put my
+
+392
+00:07:29,670 --> 00:07:29,680
+found a really nice uh place to put my
+ 
+
+393
+00:07:29,680 --> 00:07:31,909
+found a really nice uh place to put my
+drink as well. The Nvidia people don't
+
+394
+00:07:31,909 --> 00:07:31,919
+drink as well. The Nvidia people don't
+ 
+
+395
+00:07:31,919 --> 00:07:34,309
+drink as well. The Nvidia people don't
+like this. So what ended up happening is
+
+396
+00:07:34,309 --> 00:07:34,319
+like this. So what ended up happening is
+ 
+
+397
+00:07:34,319 --> 00:07:36,469
+like this. So what ended up happening is
+what we call the great refactor. Um
+
+398
+00:07:36,469 --> 00:07:36,479
+what we call the great refactor. Um
+ 
+
+399
+00:07:36,479 --> 00:07:38,950
+what we call the great refactor. Um
+essentially where we were like hey we
+
+400
+00:07:38,950 --> 00:07:38,960
+essentially where we were like hey we
+ 
+
+401
+00:07:38,960 --> 00:07:41,189
+essentially where we were like hey we
+have lots of people raising PRs and what
+
+402
+00:07:41,189 --> 00:07:41,199
+have lots of people raising PRs and what
+ 
+
+403
+00:07:41,199 --> 00:07:43,430
+have lots of people raising PRs and what
+they actually want is to build features.
+
+404
+00:07:43,430 --> 00:07:43,440
+they actually want is to build features.
+ 
+
+405
+00:07:43,440 --> 00:07:45,110
+they actually want is to build features.
+The thing is we don't want to give
+
+406
+00:07:45,110 --> 00:07:45,120
+The thing is we don't want to give
+ 
+
+407
+00:07:45,120 --> 00:07:46,790
+The thing is we don't want to give
+everyone every single feature that they
+
+408
+00:07:46,790 --> 00:07:46,800
+everyone every single feature that they
+ 
+
+409
+00:07:46,800 --> 00:07:49,350
+everyone every single feature that they
+want in which case it becomes bloat. Uh
+
+410
+00:07:49,350 --> 00:07:49,360
+want in which case it becomes bloat. Uh
+ 
+
+411
+00:07:49,360 --> 00:07:51,589
+want in which case it becomes bloat. Uh
+you heard Peter say earlier on the
+
+412
+00:07:51,589 --> 00:07:51,599
+you heard Peter say earlier on the
+ 
+
+413
+00:07:51,599 --> 00:07:53,430
+you heard Peter say earlier on the
+challenge becomes who do I say no to?
+
+414
+00:07:53,430 --> 00:07:53,440
+challenge becomes who do I say no to?
+ 
+
+415
+00:07:53,440 --> 00:07:55,270
+challenge becomes who do I say no to?
+It's not about saying yes. In a world
+
+416
+00:07:55,270 --> 00:07:55,280
+It's not about saying yes. In a world
+ 
+
+417
+00:07:55,280 --> 00:07:56,869
+It's not about saying yes. In a world
+where tokens are cheap I can just say
+
+418
+00:07:56,869 --> 00:07:56,879
+where tokens are cheap I can just say
+ 
+
+419
+00:07:56,879 --> 00:07:58,309
+where tokens are cheap I can just say
+yes to absolutely everyone and merge
+
+420
+00:07:58,309 --> 00:07:58,319
+yes to absolutely everyone and merge
+ 
+
+421
+00:07:58,319 --> 00:08:00,070
+yes to absolutely everyone and merge
+everything in. But that's going to turn
+
+422
+00:08:00,070 --> 00:08:00,080
+everything in. But that's going to turn
+ 
+
+423
+00:08:00,080 --> 00:08:01,909
+everything in. But that's going to turn
+this codebase into an absolute fire
+
+424
+00:08:01,909 --> 00:08:01,919
+this codebase into an absolute fire
+ 
+
+425
+00:08:01,919 --> 00:08:05,589
+this codebase into an absolute fire
+dump. So the vision was actually we need
+
+426
+00:08:05,589 --> 00:08:05,599
+dump. So the vision was actually we need
+ 
+
+427
+00:08:05,599 --> 00:08:07,350
+dump. So the vision was actually we need
+to cut this codebase down. We need to we
+
+428
+00:08:07,350 --> 00:08:07,360
+to cut this codebase down. We need to we
+ 
+
+429
+00:08:07,360 --> 00:08:09,830
+to cut this codebase down. We need to we
+need to rip it into pieces and a plug-in
+
+430
+00:08:09,830 --> 00:08:09,840
+need to rip it into pieces and a plug-in
+ 
+
+431
+00:08:09,840 --> 00:08:12,150
+need to rip it into pieces and a plug-in
+architecture somewhat made sense.
+
+432
+00:08:12,150 --> 00:08:12,160
+architecture somewhat made sense.
+ 
+
+433
+00:08:12,160 --> 00:08:15,270
+architecture somewhat made sense.
+Imagine if you're OpenAI or Mistral or
+
+434
+00:08:15,270 --> 00:08:15,280
+Imagine if you're OpenAI or Mistral or
+ 
+
+435
+00:08:15,280 --> 00:08:17,270
+Imagine if you're OpenAI or Mistral or
+Anthropic, what if you own that piece of
+
+436
+00:08:17,270 --> 00:08:17,280
+Anthropic, what if you own that piece of
+ 
+
+437
+00:08:17,280 --> 00:08:19,189
+Anthropic, what if you own that piece of
+the provider code and it was handed to
+
+438
+00:08:19,189 --> 00:08:19,199
+the provider code and it was handed to
+ 
+
+439
+00:08:19,199 --> 00:08:21,029
+the provider code and it was handed to
+you and it was separate from everything
+
+440
+00:08:21,029 --> 00:08:21,039
+you and it was separate from everything
+ 
+
+441
+00:08:21,039 --> 00:08:24,869
+you and it was separate from everything
+else. So this code change that occurred
+
+442
+00:08:24,869 --> 00:08:24,879
+else. So this code change that occurred
+ 
+
+443
+00:08:24,879 --> 00:08:27,189
+else. So this code change that occurred
+was like a catalyst for us. It was 2 in
+
+444
+00:08:27,189 --> 00:08:27,199
+was like a catalyst for us. It was 2 in
+ 
+
+445
+00:08:27,199 --> 00:08:29,749
+was like a catalyst for us. It was 2 in
+the morning. We're tired. We thought why
+
+446
+00:08:29,749 --> 00:08:29,759
+the morning. We're tired. We thought why
+ 
+
+447
+00:08:29,759 --> 00:08:32,149
+the morning. We're tired. We thought why
+not refactor the entire codebase? Sounds
+
+448
+00:08:32,149 --> 00:08:32,159
+not refactor the entire codebase? Sounds
+ 
+
+449
+00:08:32,159 --> 00:08:35,750
+not refactor the entire codebase? Sounds
+like a splendid idea. So, 2,700 commits
+
+450
+00:08:35,750 --> 00:08:35,760
+like a splendid idea. So, 2,700 commits
+ 
+
+451
+00:08:35,760 --> 00:08:39,110
+like a splendid idea. So, 2,700 commits
+later, uh, close to a million lines of
+
+452
+00:08:39,110 --> 00:08:39,120
+later, uh, close to a million lines of
+ 
+
+453
+00:08:39,120 --> 00:08:42,149
+later, uh, close to a million lines of
+code change, uh, touching 82% of the
+
+454
+00:08:42,149 --> 00:08:42,159
+code change, uh, touching 82% of the
+ 
+
+455
+00:08:42,159 --> 00:08:45,590
+code change, uh, touching 82% of the
+core codebase, plugins were launched.
+
+456
+00:08:45,590 --> 00:08:45,600
+core codebase, plugins were launched.
+ 
+
+457
+00:08:45,600 --> 00:08:47,030
+core codebase, plugins were launched.
+Um, the night before, I think it was
+
+458
+00:08:47,030 --> 00:08:47,040
+Um, the night before, I think it was
+ 
+
+459
+00:08:47,040 --> 00:08:48,230
+Um, the night before, I think it was
+like 1:00 in the morning, I'm trying to
+
+460
+00:08:48,230 --> 00:08:48,240
+like 1:00 in the morning, I'm trying to
+ 
+
+461
+00:08:48,240 --> 00:08:50,389
+like 1:00 in the morning, I'm trying to
+go to sleep and the tests are not
+
+462
+00:08:50,389 --> 00:08:50,399
+go to sleep and the tests are not
+ 
+
+463
+00:08:50,399 --> 00:08:52,870
+go to sleep and the tests are not
+passing and I was like, was Icarus and
+
+464
+00:08:52,870 --> 00:08:52,880
+passing and I was like, was Icarus and
+ 
+
+465
+00:08:52,880 --> 00:08:54,949
+passing and I was like, was Icarus and
+did I fly too close to the sun? Um, as
+
+466
+00:08:54,949 --> 00:08:54,959
+did I fly too close to the sun? Um, as
+ 
+
+467
+00:08:54,959 --> 00:08:56,630
+did I fly too close to the sun? Um, as
+we like to call it, did I did I vibe too
+
+468
+00:08:56,630 --> 00:08:56,640
+we like to call it, did I did I vibe too
+ 
+
+469
+00:08:56,640 --> 00:08:58,710
+we like to call it, did I did I vibe too
+hard? I actually generally thought I
+
+470
+00:08:58,710 --> 00:08:58,720
+hard? I actually generally thought I
+ 
+
+471
+00:08:58,720 --> 00:09:00,949
+hard? I actually generally thought I
+vibe too hard. But as a team, we managed
+
+472
+00:09:00,949 --> 00:09:00,959
+vibe too hard. But as a team, we managed
+ 
+
+473
+00:09:00,959 --> 00:09:03,030
+vibe too hard. But as a team, we managed
+we managed to bring this codebase back
+
+474
+00:09:03,030 --> 00:09:03,040
+we managed to bring this codebase back
+ 
+
+475
+00:09:03,040 --> 00:09:05,509
+we managed to bring this codebase back
+together again. But the saving grace was
+
+476
+00:09:05,509 --> 00:09:05,519
+together again. But the saving grace was
+ 
+
+477
+00:09:05,519 --> 00:09:09,509
+together again. But the saving grace was
+these awful sort of unit tests that AI
+
+478
+00:09:09,509 --> 00:09:09,519
+these awful sort of unit tests that AI
+ 
+
+479
+00:09:09,519 --> 00:09:11,350
+these awful sort of unit tests that AI
+code loves to generate that actually
+
+480
+00:09:11,350 --> 00:09:11,360
+code loves to generate that actually
+ 
+
+481
+00:09:11,360 --> 00:09:13,190
+code loves to generate that actually
+ended up overfitting on our code. So
+
+482
+00:09:13,190 --> 00:09:13,200
+ended up overfitting on our code. So
+ 
+
+483
+00:09:13,200 --> 00:09:14,389
+ended up overfitting on our code. So
+when we completely ripped everything
+
+484
+00:09:14,389 --> 00:09:14,399
+when we completely ripped everything
+ 
+
+485
+00:09:14,399 --> 00:09:15,750
+when we completely ripped everything
+out, we still had these tests that were
+
+486
+00:09:15,750 --> 00:09:15,760
+out, we still had these tests that were
+ 
+
+487
+00:09:15,760 --> 00:09:17,590
+out, we still had these tests that were
+like extremely overfitting and as long
+
+488
+00:09:17,590 --> 00:09:17,600
+like extremely overfitting and as long
+ 
+
+489
+00:09:17,600 --> 00:09:19,110
+like extremely overfitting and as long
+as they would go green, we knew we were
+
+490
+00:09:19,110 --> 00:09:19,120
+as they would go green, we knew we were
+ 
+
+491
+00:09:19,120 --> 00:09:22,310
+as they would go green, we knew we were
+kind somewhat close.
+
+492
+00:09:22,310 --> 00:09:22,320
+kind somewhat close.
+ 
+
+493
+00:09:22,320 --> 00:09:28,070
+kind somewhat close.
+Um, so how did we do this? you know um
+
+494
+00:09:28,070 --> 00:09:28,080
+Um, so how did we do this? you know um
+ 
+
+495
+00:09:28,080 --> 00:09:30,710
+Um, so how did we do this? you know um
+in my case I call it my factory it's
+
+496
+00:09:30,710 --> 00:09:30,720
+in my case I call it my factory it's
+ 
+
+497
+00:09:30,720 --> 00:09:33,110
+in my case I call it my factory it's
+many codec sessions everyone asks me
+
+498
+00:09:33,110 --> 00:09:33,120
+many codec sessions everyone asks me
+ 
+
+499
+00:09:33,120 --> 00:09:34,470
+many codec sessions everyone asks me
+like what's this magic source like how
+
+500
+00:09:34,470 --> 00:09:34,480
+like what's this magic source like how
+ 
+
+501
+00:09:34,480 --> 00:09:36,389
+like what's this magic source like how
+how do you do this what's this crazy
+
+502
+00:09:36,389 --> 00:09:36,399
+how do you do this what's this crazy
+ 
+
+503
+00:09:36,399 --> 00:09:37,590
+how do you do this what's this crazy
+insane thing like how are you guys
+
+504
+00:09:37,590 --> 00:09:37,600
+insane thing like how are you guys
+ 
+
+505
+00:09:37,600 --> 00:09:40,710
+insane thing like how are you guys
+building this very simple I have swim
+
+506
+00:09:40,710 --> 00:09:40,720
+building this very simple I have swim
+ 
+
+507
+00:09:40,720 --> 00:09:43,670
+building this very simple I have swim
+lanes um it could be five it could be 10
+
+508
+00:09:43,670 --> 00:09:43,680
+lanes um it could be five it could be 10
+ 
+
+509
+00:09:43,680 --> 00:09:46,310
+lanes um it could be five it could be 10
+it could be 20 but traditionally they
+
+510
+00:09:46,310 --> 00:09:46,320
+it could be 20 but traditionally they
+ 
+
+511
+00:09:46,320 --> 00:09:47,670
+it could be 20 but traditionally they
+kind of cut themselves up into different
+
+512
+00:09:47,670 --> 00:09:47,680
+kind of cut themselves up into different
+ 
+
+513
+00:09:47,680 --> 00:09:49,430
+kind of cut themselves up into different
+pieces so like if I does this work the
+
+514
+00:09:49,430 --> 00:09:49,440
+pieces so like if I does this work the
+ 
+
+515
+00:09:49,440 --> 00:09:52,550
+pieces so like if I does this work the
+laser you can't really see it but
+
+516
+00:09:52,550 --> 00:09:52,560
+laser you can't really see it but
+ 
+
+517
+00:09:52,560 --> 00:09:54,870
+laser you can't really see it but
+imagine you're a factory manager and you
+
+518
+00:09:54,870 --> 00:09:54,880
+imagine you're a factory manager and you
+ 
+
+519
+00:09:54,880 --> 00:09:57,110
+imagine you're a factory manager and you
+have a production line blow essentially
+
+520
+00:09:57,110 --> 00:09:57,120
+have a production line blow essentially
+ 
+
+521
+00:09:57,120 --> 00:09:59,670
+have a production line blow essentially
+you might have a case where you have uh
+
+522
+00:09:59,670 --> 00:09:59,680
+you might have a case where you have uh
+ 
+
+523
+00:09:59,680 --> 00:10:02,790
+you might have a case where you have uh
+let's just say CI to one side you might
+
+524
+00:10:02,790 --> 00:10:02,800
+let's just say CI to one side you might
+ 
+
+525
+00:10:02,800 --> 00:10:04,150
+let's just say CI to one side you might
+have features in one side you might have
+
+526
+00:10:04,150 --> 00:10:04,160
+have features in one side you might have
+ 
+
+527
+00:10:04,160 --> 00:10:06,310
+have features in one side you might have
+bugs in another so when I'm refactoring
+
+528
+00:10:06,310 --> 00:10:06,320
+bugs in another so when I'm refactoring
+ 
+
+529
+00:10:06,320 --> 00:10:08,470
+bugs in another so when I'm refactoring
+and doing stuff um right now the
+
+530
+00:10:08,470 --> 00:10:08,480
+and doing stuff um right now the
+ 
+
+531
+00:10:08,480 --> 00:10:10,310
+and doing stuff um right now the
+codebase is quite stable I want to
+
+532
+00:10:10,310 --> 00:10:10,320
+codebase is quite stable I want to
+ 
+
+533
+00:10:10,320 --> 00:10:12,310
+codebase is quite stable I want to
+refactor some tests well that might be
+
+534
+00:10:12,310 --> 00:10:12,320
+refactor some tests well that might be
+ 
+
+535
+00:10:12,320 --> 00:10:14,230
+refactor some tests well that might be
+swim lanes one and two I don't need to
+
+536
+00:10:14,230 --> 00:10:14,240
+swim lanes one and two I don't need to
+ 
+
+537
+00:10:14,240 --> 00:10:15,910
+swim lanes one and two I don't need to
+really babysit them too much I just tell
+
+538
+00:10:15,910 --> 00:10:15,920
+really babysit them too much I just tell
+ 
+
+539
+00:10:15,920 --> 00:10:17,509
+really babysit them too much I just tell
+them take your time make sure the tests
+
+540
+00:10:17,509 --> 00:10:17,519
+them take your time make sure the tests
+ 
+
+541
+00:10:17,519 --> 00:10:19,829
+them take your time make sure the tests
+pass just commit just just push them
+
+542
+00:10:19,829 --> 00:10:19,839
+pass just commit just just push them
+ 
+
+543
+00:10:19,839 --> 00:10:21,829
+pass just commit just just push them
+through whereas with three and four I
+
+544
+00:10:21,829 --> 00:10:21,839
+through whereas with three and four I
+ 
+
+545
+00:10:21,839 --> 00:10:23,110
+through whereas with three and four I
+might be looking at specific features
+
+546
+00:10:23,110 --> 00:10:23,120
+might be looking at specific features
+ 
+
+547
+00:10:23,120 --> 00:10:26,389
+might be looking at specific features
+and issues around say Docker or um one
+
+548
+00:10:26,389 --> 00:10:26,399
+and issues around say Docker or um one
+ 
+
+549
+00:10:26,399 --> 00:10:28,230
+and issues around say Docker or um one
+of our messaging channel channels in
+
+550
+00:10:28,230 --> 00:10:28,240
+of our messaging channel channels in
+ 
+
+551
+00:10:28,240 --> 00:10:29,509
+of our messaging channel channels in
+which case I'm having a conversation
+
+552
+00:10:29,509 --> 00:10:29,519
+which case I'm having a conversation
+ 
+
+553
+00:10:29,519 --> 00:10:31,190
+which case I'm having a conversation
+with those agents they're going off
+
+554
+00:10:31,190 --> 00:10:31,200
+with those agents they're going off
+ 
+
+555
+00:10:31,200 --> 00:10:33,190
+with those agents they're going off
+investigating doing the work coming back
+
+556
+00:10:33,190 --> 00:10:33,200
+investigating doing the work coming back
+ 
+
+557
+00:10:33,200 --> 00:10:35,750
+investigating doing the work coming back
+and then maybe five is actually um
+
+558
+00:10:35,750 --> 00:10:35,760
+and then maybe five is actually um
+ 
+
+559
+00:10:35,760 --> 00:10:38,790
+and then maybe five is actually um
+looking at new P 0 and P1's um that
+
+560
+00:10:38,790 --> 00:10:38,800
+looking at new P 0 and P1's um that
+ 
+
+561
+00:10:38,800 --> 00:10:40,310
+looking at new P 0 and P1's um that
+might be using other data might be using
+
+562
+00:10:40,310 --> 00:10:40,320
+might be using other data might be using
+ 
+
+563
+00:10:40,320 --> 00:10:42,790
+might be using other data might be using
+GitHub uh we have agents that run inside
+
+564
+00:10:42,790 --> 00:10:42,800
+GitHub uh we have agents that run inside
+ 
+
+565
+00:10:42,800 --> 00:10:44,310
+GitHub uh we have agents that run inside
+of a Discord channel. So when we do a
+
+566
+00:10:44,310 --> 00:10:44,320
+of a Discord channel. So when we do a
+ 
+
+567
+00:10:44,320 --> 00:10:45,829
+of a Discord channel. So when we do a
+release, we might be like, hey, what's
+
+568
+00:10:45,829 --> 00:10:45,839
+release, we might be like, hey, what's
+ 
+
+569
+00:10:45,839 --> 00:10:47,430
+release, we might be like, hey, what's
+happened in the last two hours that I
+
+570
+00:10:47,430 --> 00:10:47,440
+happened in the last two hours that I
+ 
+
+571
+00:10:47,440 --> 00:10:49,910
+happened in the last two hours that I
+need to be paying attention to and this
+
+572
+00:10:49,910 --> 00:10:49,920
+need to be paying attention to and this
+ 
+
+573
+00:10:49,920 --> 00:10:52,069
+need to be paying attention to and this
+will scale up and down. But what ends up
+
+574
+00:10:52,069 --> 00:10:52,079
+will scale up and down. But what ends up
+ 
+
+575
+00:10:52,079 --> 00:10:53,910
+will scale up and down. But what ends up
+becoming quite interesting is tokens are
+
+576
+00:10:53,910 --> 00:10:53,920
+becoming quite interesting is tokens are
+ 
+
+577
+00:10:53,920 --> 00:10:56,470
+becoming quite interesting is tokens are
+no longer the problem. Um, depends who
+
+578
+00:10:56,470 --> 00:10:56,480
+no longer the problem. Um, depends who
+ 
+
+579
+00:10:56,480 --> 00:10:58,790
+no longer the problem. Um, depends who
+you ask. What really ends up becoming
+
+580
+00:10:58,790 --> 00:10:58,800
+you ask. What really ends up becoming
+ 
+
+581
+00:10:58,800 --> 00:11:01,190
+you ask. What really ends up becoming
+the problem is just raw compute and my
+
+582
+00:11:01,190 --> 00:11:01,200
+the problem is just raw compute and my
+ 
+
+583
+00:11:01,200 --> 00:11:02,790
+the problem is just raw compute and my
+brain space in order to sort of keep an
+
+584
+00:11:02,790 --> 00:11:02,800
+brain space in order to sort of keep an
+ 
+
+585
+00:11:02,800 --> 00:11:05,269
+brain space in order to sort of keep an
+eye on all of these sessions. So in
+
+586
+00:11:05,269 --> 00:11:05,279
+eye on all of these sessions. So in
+ 
+
+587
+00:11:05,279 --> 00:11:07,509
+eye on all of these sessions. So in
+harness, we trust what ends up happening
+
+588
+00:11:07,509 --> 00:11:07,519
+harness, we trust what ends up happening
+ 
+
+589
+00:11:07,519 --> 00:11:09,829
+harness, we trust what ends up happening
+is I don't have this really insanely
+
+590
+00:11:09,829 --> 00:11:09,839
+is I don't have this really insanely
+ 
+
+591
+00:11:09,839 --> 00:11:11,750
+is I don't have this really insanely
+complicated process. The one thing I
+
+592
+00:11:11,750 --> 00:11:11,760
+complicated process. The one thing I
+ 
+
+593
+00:11:11,760 --> 00:11:13,430
+complicated process. The one thing I
+have complicated in my life is adopting
+
+594
+00:11:13,430 --> 00:11:13,440
+have complicated in my life is adopting
+ 
+
+595
+00:11:13,440 --> 00:11:15,990
+have complicated in my life is adopting
+git work trees and I kind of wish I
+
+596
+00:11:15,990 --> 00:11:16,000
+git work trees and I kind of wish I
+ 
+
+597
+00:11:16,000 --> 00:11:18,150
+git work trees and I kind of wish I
+hadn't. The only reason why I say this
+
+598
+00:11:18,150 --> 00:11:18,160
+hadn't. The only reason why I say this
+ 
+
+599
+00:11:18,160 --> 00:11:19,750
+hadn't. The only reason why I say this
+is when you're running an extremely
+
+600
+00:11:19,750 --> 00:11:19,760
+is when you're running an extremely
+ 
+
+601
+00:11:19,760 --> 00:11:22,470
+is when you're running an extremely
+heavy test harness, it ended up
+
+602
+00:11:22,470 --> 00:11:22,480
+heavy test harness, it ended up
+ 
+
+603
+00:11:22,480 --> 00:11:24,870
+heavy test harness, it ended up
+completely nuking my machine cuz I ended
+
+604
+00:11:24,870 --> 00:11:24,880
+completely nuking my machine cuz I ended
+ 
+
+605
+00:11:24,880 --> 00:11:27,670
+completely nuking my machine cuz I ended
+up running like every PR attach ends up
+
+606
+00:11:27,670 --> 00:11:27,680
+up running like every PR attach ends up
+ 
+
+607
+00:11:27,680 --> 00:11:30,150
+up running like every PR attach ends up
+becoming a new git work tree. I end up
+
+608
+00:11:30,150 --> 00:11:30,160
+becoming a new git work tree. I end up
+ 
+
+609
+00:11:30,160 --> 00:11:32,150
+becoming a new git work tree. I end up
+with like some close to like 70 or 80
+
+610
+00:11:32,150 --> 00:11:32,160
+with like some close to like 70 or 80
+ 
+
+611
+00:11:32,160 --> 00:11:33,750
+with like some close to like 70 or 80
+active git work trees in any given day
+
+612
+00:11:33,750 --> 00:11:33,760
+active git work trees in any given day
+ 
+
+613
+00:11:33,760 --> 00:11:35,990
+active git work trees in any given day
+on my machine and that's kind of hell.
+
+614
+00:11:35,990 --> 00:11:36,000
+on my machine and that's kind of hell.
+ 
+
+615
+00:11:36,000 --> 00:11:37,590
+on my machine and that's kind of hell.
+Um, so I had to actually build some like
+
+616
+00:11:37,590 --> 00:11:37,600
+Um, so I had to actually build some like
+ 
+
+617
+00:11:37,600 --> 00:11:40,310
+Um, so I had to actually build some like
+magic source around my my codec session.
+
+618
+00:11:40,310 --> 00:11:40,320
+magic source around my my codec session.
+ 
+
+619
+00:11:40,320 --> 00:11:42,310
+magic source around my my codec session.
+So my codeex is aware of get work trees
+
+620
+00:11:42,310 --> 00:11:42,320
+So my codeex is aware of get work trees
+ 
+
+621
+00:11:42,320 --> 00:11:44,069
+So my codeex is aware of get work trees
+if I hit the escape key it crashes it
+
+622
+00:11:44,069 --> 00:11:44,079
+if I hit the escape key it crashes it
+ 
+
+623
+00:11:44,079 --> 00:11:47,030
+if I hit the escape key it crashes it
+will selfheal self-reover get you know
+
+624
+00:11:47,030 --> 00:11:47,040
+will selfheal self-reover get you know
+ 
+
+625
+00:11:47,040 --> 00:11:49,350
+will selfheal self-reover get you know
+sparse stuff but realistically I should
+
+626
+00:11:49,350 --> 00:11:49,360
+sparse stuff but realistically I should
+ 
+
+627
+00:11:49,360 --> 00:11:50,790
+sparse stuff but realistically I should
+have adopted what Peter and other people
+
+628
+00:11:50,790 --> 00:11:50,800
+have adopted what Peter and other people
+ 
+
+629
+00:11:50,800 --> 00:11:52,949
+have adopted what Peter and other people
+do is just like clone the repo 10 times
+
+630
+00:11:52,949 --> 00:11:52,959
+do is just like clone the repo 10 times
+ 
+
+631
+00:11:52,959 --> 00:11:54,710
+do is just like clone the repo 10 times
+and point 10 different you know codec
+
+632
+00:11:54,710 --> 00:11:54,720
+and point 10 different you know codec
+ 
+
+633
+00:11:54,720 --> 00:11:56,790
+and point 10 different you know codec
+sessions to each one but the trick here
+
+634
+00:11:56,790 --> 00:11:56,800
+sessions to each one but the trick here
+ 
+
+635
+00:11:56,800 --> 00:11:58,230
+sessions to each one but the trick here
+is that like I haven't done any magical
+
+636
+00:11:58,230 --> 00:11:58,240
+is that like I haven't done any magical
+ 
+
+637
+00:11:58,240 --> 00:11:59,910
+is that like I haven't done any magical
+source I don't use plan mode or spec
+
+638
+00:11:59,910 --> 00:11:59,920
+source I don't use plan mode or spec
+ 
+
+639
+00:11:59,920 --> 00:12:01,590
+source I don't use plan mode or spec
+mode I have a conversation with the
+
+640
+00:12:01,590 --> 00:12:01,600
+mode I have a conversation with the
+ 
+
+641
+00:12:01,600 --> 00:12:03,509
+mode I have a conversation with the
+agent and we work through it and we find
+
+642
+00:12:03,509 --> 00:12:03,519
+agent and we work through it and we find
+ 
+
+643
+00:12:03,519 --> 00:12:05,829
+agent and we work through it and we find
+a way to make it work
+
+644
+00:12:05,829 --> 00:12:05,839
+a way to make it work
+ 
+
+645
+00:12:05,839 --> 00:12:07,269
+a way to make it work
+so realistically it looks a little bit
+
+646
+00:12:07,269 --> 00:12:07,279
+so realistically it looks a little bit
+ 
+
+647
+00:12:07,279 --> 00:12:11,110
+so realistically it looks a little bit
+like this from the matrix Um, and people
+
+648
+00:12:11,110 --> 00:12:11,120
+like this from the matrix Um, and people
+ 
+
+649
+00:12:11,120 --> 00:12:12,470
+like this from the matrix Um, and people
+go, "Oh, Vincent, like, how do you know
+
+650
+00:12:12,470 --> 00:12:12,480
+go, "Oh, Vincent, like, how do you know
+ 
+
+651
+00:12:12,480 --> 00:12:14,790
+go, "Oh, Vincent, like, how do you know
+it's kind of working?" And this is going
+
+652
+00:12:14,790 --> 00:12:14,800
+it's kind of working?" And this is going
+ 
+
+653
+00:12:14,800 --> 00:12:17,030
+it's kind of working?" And this is going
+to sound somewhat a little bit lunatic.
+
+654
+00:12:17,030 --> 00:12:17,040
+to sound somewhat a little bit lunatic.
+ 
+
+655
+00:12:17,040 --> 00:12:19,269
+to sound somewhat a little bit lunatic.
+It it if if anyone's watched The Matrix
+
+656
+00:12:19,269 --> 00:12:19,279
+It it if if anyone's watched The Matrix
+ 
+
+657
+00:12:19,279 --> 00:12:20,710
+It it if if anyone's watched The Matrix
+and seen the scene where Neo goes over,
+
+658
+00:12:20,710 --> 00:12:20,720
+and seen the scene where Neo goes over,
+ 
+
+659
+00:12:20,720 --> 00:12:21,750
+and seen the scene where Neo goes over,
+he's like, "How do you know? How do you
+
+660
+00:12:21,750 --> 00:12:21,760
+he's like, "How do you know? How do you
+ 
+
+661
+00:12:21,760 --> 00:12:23,110
+he's like, "How do you know? How do you
+read the text?" And the guy's like, "Oh,
+
+662
+00:12:23,110 --> 00:12:23,120
+read the text?" And the guy's like, "Oh,
+ 
+
+663
+00:12:23,120 --> 00:12:24,550
+read the text?" And the guy's like, "Oh,
+you know, I've been doing this for a
+
+664
+00:12:24,550 --> 00:12:24,560
+you know, I've been doing this for a
+ 
+
+665
+00:12:24,560 --> 00:12:26,550
+you know, I've been doing this for a
+while, so I can see like woman in red
+
+666
+00:12:26,550 --> 00:12:26,560
+while, so I can see like woman in red
+ 
+
+667
+00:12:26,560 --> 00:12:30,470
+while, so I can see like woman in red
+dress or guy walking dog." And you start
+
+668
+00:12:30,470 --> 00:12:30,480
+dress or guy walking dog." And you start
+ 
+
+669
+00:12:30,480 --> 00:12:32,230
+dress or guy walking dog." And you start
+to have this like relationship where you
+
+670
+00:12:32,230 --> 00:12:32,240
+to have this like relationship where you
+ 
+
+671
+00:12:32,240 --> 00:12:34,470
+to have this like relationship where you
+can feel the reasoning tokens. I know it
+
+672
+00:12:34,470 --> 00:12:34,480
+can feel the reasoning tokens. I know it
+ 
+
+673
+00:12:34,480 --> 00:12:36,310
+can feel the reasoning tokens. I know it
+sounds somewhat ludicrous, but there's
+
+674
+00:12:36,310 --> 00:12:36,320
+sounds somewhat ludicrous, but there's
+ 
+
+675
+00:12:36,320 --> 00:12:38,150
+sounds somewhat ludicrous, but there's
+times where I'm looking at the swim lane
+
+676
+00:12:38,150 --> 00:12:38,160
+times where I'm looking at the swim lane
+ 
+
+677
+00:12:38,160 --> 00:12:40,470
+times where I'm looking at the swim lane
+and I'm like, "This sounds off. It
+
+678
+00:12:40,470 --> 00:12:40,480
+and I'm like, "This sounds off. It
+ 
+
+679
+00:12:40,480 --> 00:12:42,069
+and I'm like, "This sounds off. It
+doesn't sound off because of what it's
+
+680
+00:12:42,069 --> 00:12:42,079
+doesn't sound off because of what it's
+ 
+
+681
+00:12:42,079 --> 00:12:43,829
+doesn't sound off because of what it's
+doing. It sounds off because of how it's
+
+682
+00:12:43,829 --> 00:12:43,839
+doing. It sounds off because of how it's
+ 
+
+683
+00:12:43,839 --> 00:12:46,470
+doing. It sounds off because of how it's
+explaining itself to me. It's waffling.
+
+684
+00:12:46,470 --> 00:12:46,480
+explaining itself to me. It's waffling.
+ 
+
+685
+00:12:46,480 --> 00:12:49,110
+explaining itself to me. It's waffling.
+It's not making sense. It doesn't seem
+
+686
+00:12:49,110 --> 00:12:49,120
+It's not making sense. It doesn't seem
+ 
+
+687
+00:12:49,120 --> 00:12:51,590
+It's not making sense. It doesn't seem
+to know what it's doing." And this feels
+
+688
+00:12:51,590 --> 00:12:51,600
+to know what it's doing." And this feels
+ 
+
+689
+00:12:51,600 --> 00:12:53,910
+to know what it's doing." And this feels
+a lot like how I would manage people.
+
+690
+00:12:53,910 --> 00:12:53,920
+a lot like how I would manage people.
+ 
+
+691
+00:12:53,920 --> 00:12:55,829
+a lot like how I would manage people.
+Um, if I had someone working for me and
+
+692
+00:12:55,829 --> 00:12:55,839
+Um, if I had someone working for me and
+ 
+
+693
+00:12:55,839 --> 00:12:58,230
+Um, if I had someone working for me and
+they started downright bullshitting, I'd
+
+694
+00:12:58,230 --> 00:12:58,240
+they started downright bullshitting, I'd
+ 
+
+695
+00:12:58,240 --> 00:12:59,509
+they started downright bullshitting, I'd
+be like, "Wait a minute, what's going
+
+696
+00:12:59,509 --> 00:12:59,519
+be like, "Wait a minute, what's going
+ 
+
+697
+00:12:59,519 --> 00:13:01,430
+be like, "Wait a minute, what's going
+on?" So in these cases, I might just
+
+698
+00:13:01,430 --> 00:13:01,440
+on?" So in these cases, I might just
+ 
+
+699
+00:13:01,440 --> 00:13:03,030
+on?" So in these cases, I might just
+nuke the session and go, you know, I'm
+
+700
+00:13:03,030 --> 00:13:03,040
+nuke the session and go, you know, I'm
+ 
+
+701
+00:13:03,040 --> 00:13:04,150
+nuke the session and go, you know, I'm
+not going to deal with this section of
+
+702
+00:13:04,150 --> 00:13:04,160
+not going to deal with this section of
+ 
+
+703
+00:13:04,160 --> 00:13:05,750
+not going to deal with this section of
+code. I'm going to leave that to another
+
+704
+00:13:05,750 --> 00:13:05,760
+code. I'm going to leave that to another
+ 
+
+705
+00:13:05,760 --> 00:13:07,430
+code. I'm going to leave that to another
+maintainer or I might come back to it
+
+706
+00:13:07,430 --> 00:13:07,440
+maintainer or I might come back to it
+ 
+
+707
+00:13:07,440 --> 00:13:09,190
+maintainer or I might come back to it
+four or five days later. But that
+
+708
+00:13:09,190 --> 00:13:09,200
+four or five days later. But that
+ 
+
+709
+00:13:09,200 --> 00:13:10,710
+four or five days later. But that
+experience feels very much like
+
+710
+00:13:10,710 --> 00:13:10,720
+experience feels very much like
+ 
+
+711
+00:13:10,720 --> 00:13:13,990
+experience feels very much like
+intuitive and building that intuition
+
+712
+00:13:13,990 --> 00:13:14,000
+intuitive and building that intuition
+ 
+
+713
+00:13:14,000 --> 00:13:15,750
+intuitive and building that intuition
+I've been able to get to because of the
+
+714
+00:13:15,750 --> 00:13:15,760
+I've been able to get to because of the
+ 
+
+715
+00:13:15,760 --> 00:13:18,150
+I've been able to get to because of the
+sheer volume of token maxing I've had to
+
+716
+00:13:18,150 --> 00:13:18,160
+sheer volume of token maxing I've had to
+ 
+
+717
+00:13:18,160 --> 00:13:20,949
+sheer volume of token maxing I've had to
+go through in the previous year.
+
+718
+00:13:20,949 --> 00:13:20,959
+go through in the previous year.
+ 
+
+719
+00:13:20,959 --> 00:13:23,670
+go through in the previous year.
+So there is engineering work. Uh I call
+
+720
+00:13:23,670 --> 00:13:23,680
+So there is engineering work. Uh I call
+ 
+
+721
+00:13:23,680 --> 00:13:25,910
+So there is engineering work. Uh I call
+this the agent development environment.
+
+722
+00:13:25,910 --> 00:13:25,920
+this the agent development environment.
+ 
+
+723
+00:13:25,920 --> 00:13:29,269
+this the agent development environment.
+Um essentially the process goes I have
+
+724
+00:13:29,269 --> 00:13:29,279
+Um essentially the process goes I have
+ 
+
+725
+00:13:29,279 --> 00:13:32,150
+Um essentially the process goes I have
+skills I call it skills similar to dot
+
+726
+00:13:32,150 --> 00:13:32,160
+skills I call it skills similar to dot
+ 
+
+727
+00:13:32,160 --> 00:13:35,670
+skills I call it skills similar to dot
+um dot files both of my dot skills and
+
+728
+00:13:35,670 --> 00:13:35,680
+um dot files both of my dot skills and
+ 
+
+729
+00:13:35,680 --> 00:13:37,670
+um dot files both of my dot skills and
+dot files is available on GitHub it's
+
+730
+00:13:37,670 --> 00:13:37,680
+dot files is available on GitHub it's
+ 
+
+731
+00:13:37,680 --> 00:13:39,670
+dot files is available on GitHub it's
+all open source go for it some of my
+
+732
+00:13:39,670 --> 00:13:39,680
+all open source go for it some of my
+ 
+
+733
+00:13:39,680 --> 00:13:41,509
+all open source go for it some of my
+skills are private but there's skills in
+
+734
+00:13:41,509 --> 00:13:41,519
+skills are private but there's skills in
+ 
+
+735
+00:13:41,519 --> 00:13:42,629
+skills are private but there's skills in
+there for like writing technical
+
+736
+00:13:42,629 --> 00:13:42,639
+there for like writing technical
+ 
+
+737
+00:13:42,639 --> 00:13:45,110
+there for like writing technical
+documentation for example um that I've
+
+738
+00:13:45,110 --> 00:13:45,120
+documentation for example um that I've
+ 
+
+739
+00:13:45,120 --> 00:13:47,430
+documentation for example um that I've
+co-created with other um developer
+
+740
+00:13:47,430 --> 00:13:47,440
+co-created with other um developer
+ 
+
+741
+00:13:47,440 --> 00:13:48,870
+co-created with other um developer
+experience and other engineers in the
+
+742
+00:13:48,870 --> 00:13:48,880
+experience and other engineers in the
+ 
+
+743
+00:13:48,880 --> 00:13:51,350
+experience and other engineers in the
+market um you can use a skills gym
+
+744
+00:13:51,350 --> 00:13:51,360
+market um you can use a skills gym
+ 
+
+745
+00:13:51,360 --> 00:13:53,190
+market um you can use a skills gym
+something like a ger which I'm also a
+
+746
+00:13:53,190 --> 00:13:53,200
+something like a ger which I'm also a
+ 
+
+747
+00:13:53,200 --> 00:13:55,590
+something like a ger which I'm also a
+contributor to and or you could just
+
+748
+00:13:55,590 --> 00:13:55,600
+contributor to and or you could just
+ 
+
+749
+00:13:55,600 --> 00:13:57,590
+contributor to and or you could just
+Hey, go codeex. I've been using this
+
+750
+00:13:57,590 --> 00:13:57,600
+Hey, go codeex. I've been using this
+ 
+
+751
+00:13:57,600 --> 00:14:00,710
+Hey, go codeex. I've been using this
+skill in my last uh two weeks. Go
+
+752
+00:14:00,710 --> 00:14:00,720
+skill in my last uh two weeks. Go
+ 
+
+753
+00:14:00,720 --> 00:14:02,710
+skill in my last uh two weeks. Go
+through the codec sessions, read the
+
+754
+00:14:02,710 --> 00:14:02,720
+through the codec sessions, read the
+ 
+
+755
+00:14:02,720 --> 00:14:06,150
+through the codec sessions, read the
+logs, make improvements to the skill. Um
+
+756
+00:14:06,150 --> 00:14:06,160
+logs, make improvements to the skill. Um
+ 
+
+757
+00:14:06,160 --> 00:14:07,670
+logs, make improvements to the skill. Um
+I would then take that skill and deploy
+
+758
+00:14:07,670 --> 00:14:07,680
+I would then take that skill and deploy
+ 
+
+759
+00:14:07,680 --> 00:14:09,750
+I would then take that skill and deploy
+that into my openclaw or take that into
+
+760
+00:14:09,750 --> 00:14:09,760
+that into my openclaw or take that into
+ 
+
+761
+00:14:09,760 --> 00:14:12,310
+that into my openclaw or take that into
+my know personal environment and I'll
+
+762
+00:14:12,310 --> 00:14:12,320
+my know personal environment and I'll
+ 
+
+763
+00:14:12,320 --> 00:14:14,470
+my know personal environment and I'll
+use something like versel skills.sh as
+
+764
+00:14:14,470 --> 00:14:14,480
+use something like versel skills.sh as
+ 
+
+765
+00:14:14,480 --> 00:14:16,310
+use something like versel skills.sh as
+like a mechanism to loop this. I've
+
+766
+00:14:16,310 --> 00:14:16,320
+like a mechanism to loop this. I've
+ 
+
+767
+00:14:16,320 --> 00:14:17,590
+like a mechanism to loop this. I've
+added some other testing and other
+
+768
+00:14:17,590 --> 00:14:17,600
+added some other testing and other
+ 
+
+769
+00:14:17,600 --> 00:14:19,509
+added some other testing and other
+elements on top of this, but there's a
+
+770
+00:14:19,509 --> 00:14:19,519
+elements on top of this, but there's a
+ 
+
+771
+00:14:19,519 --> 00:14:21,269
+elements on top of this, but there's a
+process to how I manage and maintain my
+
+772
+00:14:21,269 --> 00:14:21,279
+process to how I manage and maintain my
+ 
+
+773
+00:14:21,279 --> 00:14:24,629
+process to how I manage and maintain my
+skills as an engineer.
+
+774
+00:14:24,629 --> 00:14:24,639
+skills as an engineer.
+ 
+
+775
+00:14:24,639 --> 00:14:26,870
+skills as an engineer.
+The way we manage PRs has some level of
+
+776
+00:14:26,870 --> 00:14:26,880
+The way we manage PRs has some level of
+ 
+
+777
+00:14:26,880 --> 00:14:28,629
+The way we manage PRs has some level of
+engineering work to it. Um there's this
+
+778
+00:14:28,629 --> 00:14:28,639
+engineering work to it. Um there's this
+ 
+
+779
+00:14:28,639 --> 00:14:29,590
+engineering work to it. Um there's this
+kind of running joke that every
+
+780
+00:14:29,590 --> 00:14:29,600
+kind of running joke that every
+ 
+
+781
+00:14:29,600 --> 00:14:30,870
+kind of running joke that every
+maintainer that joins the project
+
+782
+00:14:30,870 --> 00:14:30,880
+maintainer that joins the project
+ 
+
+783
+00:14:30,880 --> 00:14:32,470
+maintainer that joins the project
+decides to try and tackle like oh my god
+
+784
+00:14:32,470 --> 00:14:32,480
+decides to try and tackle like oh my god
+ 
+
+785
+00:14:32,480 --> 00:14:34,069
+decides to try and tackle like oh my god
+we have 6,000 PRs. How are we going to
+
+786
+00:14:34,069 --> 00:14:34,079
+we have 6,000 PRs. How are we going to
+ 
+
+787
+00:14:34,079 --> 00:14:35,670
+we have 6,000 PRs. How are we going to
+solve it? I'm going to cluster
+
+788
+00:14:35,670 --> 00:14:35,680
+solve it? I'm going to cluster
+ 
+
+789
+00:14:35,680 --> 00:14:38,949
+solve it? I'm going to cluster
+everything and like figure this out. So
+
+790
+00:14:38,949 --> 00:14:38,959
+everything and like figure this out. So
+ 
+
+791
+00:14:38,959 --> 00:14:40,389
+everything and like figure this out. So
+>> how many
+
+792
+00:14:40,389 --> 00:14:40,399
+>> how many
+ 
+
+793
+00:14:40,399 --> 00:14:41,670
+>> how many
+>> there you go. There you go. Honor. Thank
+
+794
+00:14:41,670 --> 00:14:41,680
+>> there you go. There you go. Honor. Thank
+ 
+
+795
+00:14:41,680 --> 00:14:43,750
+>> there you go. There you go. Honor. Thank
+you very much. So this was my flavor of
+
+796
+00:14:43,750 --> 00:14:43,760
+you very much. So this was my flavor of
+ 
+
+797
+00:14:43,760 --> 00:14:44,949
+you very much. So this was my flavor of
+like trying to solve this. This is like
+
+798
+00:14:44,949 --> 00:14:44,959
+like trying to solve this. This is like
+ 
+
+799
+00:14:44,959 --> 00:14:47,590
+like trying to solve this. This is like
+a semantic graphing uh vector embedding
+
+800
+00:14:47,590 --> 00:14:47,600
+a semantic graphing uh vector embedding
+ 
+
+801
+00:14:47,600 --> 00:14:50,230
+a semantic graphing uh vector embedding
+on the entire GitHub stuff. This is one
+
+802
+00:14:50,230 --> 00:14:50,240
+on the entire GitHub stuff. This is one
+ 
+
+803
+00:14:50,240 --> 00:14:54,069
+on the entire GitHub stuff. This is one
+PR has 73 ed uh 106 edges. What ends up
+
+804
+00:14:54,069 --> 00:14:54,079
+PR has 73 ed uh 106 edges. What ends up
+ 
+
+805
+00:14:54,079 --> 00:14:55,350
+PR has 73 ed uh 106 edges. What ends up
+happening is that everyone else has the
+
+806
+00:14:55,350 --> 00:14:55,360
+happening is that everyone else has the
+ 
+
+807
+00:14:55,360 --> 00:14:56,790
+happening is that everyone else has the
+same problem. So they decide to to send
+
+808
+00:14:56,790 --> 00:14:56,800
+same problem. So they decide to to send
+ 
+
+809
+00:14:56,800 --> 00:14:59,110
+same problem. So they decide to to send
+their flavor of the PR issue becomes
+
+810
+00:14:59,110 --> 00:14:59,120
+their flavor of the PR issue becomes
+ 
+
+811
+00:14:59,120 --> 00:15:02,949
+their flavor of the PR issue becomes
+utter noise. So there is even process
+
+812
+00:15:02,949 --> 00:15:02,959
+utter noise. So there is even process
+ 
+
+813
+00:15:02,959 --> 00:15:04,629
+utter noise. So there is even process
+around like how we even consume what
+
+814
+00:15:04,629 --> 00:15:04,639
+around like how we even consume what
+ 
+
+815
+00:15:04,639 --> 00:15:06,310
+around like how we even consume what
+we're going to work on. We might not
+
+816
+00:15:06,310 --> 00:15:06,320
+we're going to work on. We might not
+ 
+
+817
+00:15:06,320 --> 00:15:08,150
+we're going to work on. We might not
+call it a road map, but we have a way of
+
+818
+00:15:08,150 --> 00:15:08,160
+call it a road map, but we have a way of
+ 
+
+819
+00:15:08,160 --> 00:15:09,750
+call it a road map, but we have a way of
+kind of dduplicating and seeing what's
+
+820
+00:15:09,750 --> 00:15:09,760
+kind of dduplicating and seeing what's
+ 
+
+821
+00:15:09,760 --> 00:15:11,750
+kind of dduplicating and seeing what's
+out there. This might be a signal for me
+
+822
+00:15:11,750 --> 00:15:11,760
+out there. This might be a signal for me
+ 
+
+823
+00:15:11,760 --> 00:15:13,750
+out there. This might be a signal for me
+to say, okay, if there's enough pressure
+
+824
+00:15:13,750 --> 00:15:13,760
+to say, okay, if there's enough pressure
+ 
+
+825
+00:15:13,760 --> 00:15:15,990
+to say, okay, if there's enough pressure
+coming on one issue, it must be big
+
+826
+00:15:15,990 --> 00:15:16,000
+coming on one issue, it must be big
+ 
+
+827
+00:15:16,000 --> 00:15:17,350
+coming on one issue, it must be big
+enough that all these other clankers
+
+828
+00:15:17,350 --> 00:15:17,360
+enough that all these other clankers
+ 
+
+829
+00:15:17,360 --> 00:15:19,350
+enough that all these other clankers
+decided it's a big problem. Maybe I
+
+830
+00:15:19,350 --> 00:15:19,360
+decided it's a big problem. Maybe I
+ 
+
+831
+00:15:19,360 --> 00:15:22,790
+decided it's a big problem. Maybe I
+should go and address it. There is evals
+
+832
+00:15:22,790 --> 00:15:22,800
+should go and address it. There is evals
+ 
+
+833
+00:15:22,800 --> 00:15:24,870
+should go and address it. There is evals
+surprisingly. Um after all this
+
+834
+00:15:24,870 --> 00:15:24,880
+surprisingly. Um after all this
+ 
+
+835
+00:15:24,880 --> 00:15:27,509
+surprisingly. Um after all this
+refactoring work, we decided to make a
+
+836
+00:15:27,509 --> 00:15:27,519
+refactoring work, we decided to make a
+ 
+
+837
+00:15:27,519 --> 00:15:30,550
+refactoring work, we decided to make a
+fake Slack of sorts with both synthetic
+
+838
+00:15:30,550 --> 00:15:30,560
+fake Slack of sorts with both synthetic
+ 
+
+839
+00:15:30,560 --> 00:15:32,470
+fake Slack of sorts with both synthetic
+models and real models so we can run
+
+840
+00:15:32,470 --> 00:15:32,480
+models and real models so we can run
+ 
+
+841
+00:15:32,480 --> 00:15:34,069
+models and real models so we can run
+evaluation loops to check that each of
+
+842
+00:15:34,069 --> 00:15:34,079
+evaluation loops to check that each of
+ 
+
+843
+00:15:34,079 --> 00:15:37,030
+evaluation loops to check that each of
+the providers and the channels work.
+
+844
+00:15:37,030 --> 00:15:37,040
+the providers and the channels work.
+ 
+
+845
+00:15:37,040 --> 00:15:38,550
+the providers and the channels work.
+And this question was asked of me
+
+846
+00:15:38,550 --> 00:15:38,560
+And this question was asked of me
+ 
+
+847
+00:15:38,560 --> 00:15:40,629
+And this question was asked of me
+recently. How do you manage 10 plus
+
+848
+00:15:40,629 --> 00:15:40,639
+recently. How do you manage 10 plus
+ 
+
+849
+00:15:40,639 --> 00:15:41,670
+recently. How do you manage 10 plus
+agents? And this is something that
+
+850
+00:15:41,670 --> 00:15:41,680
+agents? And this is something that
+ 
+
+851
+00:15:41,680 --> 00:15:43,750
+agents? And this is something that
+you're thinking. I asked them back, how
+
+852
+00:15:43,750 --> 00:15:43,760
+you're thinking. I asked them back, how
+ 
+
+853
+00:15:43,760 --> 00:15:45,990
+you're thinking. I asked them back, how
+do you manage 10 plus staff? And they
+
+854
+00:15:45,990 --> 00:15:46,000
+do you manage 10 plus staff? And they
+ 
+
+855
+00:15:46,000 --> 00:15:48,069
+do you manage 10 plus staff? And they
+had no answer for me. I'd worked in
+
+856
+00:15:48,069 --> 00:15:48,079
+had no answer for me. I'd worked in
+ 
+
+857
+00:15:48,079 --> 00:15:50,069
+had no answer for me. I'd worked in
+large organizations like airlines and
+
+858
+00:15:50,069 --> 00:15:50,079
+large organizations like airlines and
+ 
+
+859
+00:15:50,079 --> 00:15:51,829
+large organizations like airlines and
+other places like that managing large AI
+
+860
+00:15:51,829 --> 00:15:51,839
+other places like that managing large AI
+ 
+
+861
+00:15:51,839 --> 00:15:53,910
+other places like that managing large AI
+teams. I had experience managing up to
+
+862
+00:15:53,910 --> 00:15:53,920
+teams. I had experience managing up to
+ 
+
+863
+00:15:53,920 --> 00:15:56,790
+teams. I had experience managing up to
+30 40 people plus. So for me it was not
+
+864
+00:15:56,790 --> 00:15:56,800
+30 40 people plus. So for me it was not
+ 
+
+865
+00:15:56,800 --> 00:15:59,829
+30 40 people plus. So for me it was not
+like a a new paradigm. But I think for
+
+866
+00:15:59,829 --> 00:15:59,839
+like a a new paradigm. But I think for
+ 
+
+867
+00:15:59,839 --> 00:16:01,590
+like a a new paradigm. But I think for
+engineers and people working with these
+
+868
+00:16:01,590 --> 00:16:01,600
+engineers and people working with these
+ 
+
+869
+00:16:01,600 --> 00:16:03,910
+engineers and people working with these
+coding agents at scale, it's the soft
+
+870
+00:16:03,910 --> 00:16:03,920
+coding agents at scale, it's the soft
+ 
+
+871
+00:16:03,920 --> 00:16:05,749
+coding agents at scale, it's the soft
+skills that matter. It's how do you ask
+
+872
+00:16:05,749 --> 00:16:05,759
+skills that matter. It's how do you ask
+ 
+
+873
+00:16:05,759 --> 00:16:07,670
+skills that matter. It's how do you ask
+your agent what's going on? How do you
+
+874
+00:16:07,670 --> 00:16:07,680
+your agent what's going on? How do you
+ 
+
+875
+00:16:07,680 --> 00:16:09,430
+your agent what's going on? How do you
+know when they're not bullshitting you?
+
+876
+00:16:09,430 --> 00:16:09,440
+know when they're not bullshitting you?
+ 
+
+877
+00:16:09,440 --> 00:16:11,509
+know when they're not bullshitting you?
+And how do you run that factory? So it's
+
+878
+00:16:11,509 --> 00:16:11,519
+And how do you run that factory? So it's
+ 
+
+879
+00:16:11,519 --> 00:16:14,069
+And how do you run that factory? So it's
+no longer about the model or the agent.
+
+880
+00:16:14,069 --> 00:16:14,079
+no longer about the model or the agent.
+ 
+
+881
+00:16:14,079 --> 00:16:17,110
+no longer about the model or the agent.
+It's about the process. Uh 2025 was
+
+882
+00:16:17,110 --> 00:16:17,120
+It's about the process. Uh 2025 was
+ 
+
+883
+00:16:17,120 --> 00:16:19,590
+It's about the process. Uh 2025 was
+about token maxing. 2026 is about not
+
+884
+00:16:19,590 --> 00:16:19,600
+about token maxing. 2026 is about not
+ 
+
+885
+00:16:19,600 --> 00:16:21,990
+about token maxing. 2026 is about not
+wasting them. It's about token
+
+886
+00:16:21,990 --> 00:16:22,000
+wasting them. It's about token
+ 
+
+887
+00:16:22,000 --> 00:16:24,629
+wasting them. It's about token
+efficiency. It's about agent in the
+
+888
+00:16:24,629 --> 00:16:24,639
+efficiency. It's about agent in the
+ 
+
+889
+00:16:24,639 --> 00:16:28,839
+efficiency. It's about agent in the
+loop. Thank you.
+

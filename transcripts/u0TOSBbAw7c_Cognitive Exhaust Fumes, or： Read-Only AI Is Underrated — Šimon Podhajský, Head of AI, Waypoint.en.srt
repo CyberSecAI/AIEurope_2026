@@ -1,0 +1,3005 @@
+1
+00:00:01,800 --> 00:00:04,230
+
+Hi, my name is Shimon.
+
+2
+00:00:04,230 --> 00:00:04,240
+Hi, my name is Shimon.
+ 
+
+3
+00:00:04,240 --> 00:00:06,030
+Hi, my name is Shimon.
+Today, I'll talk about a personal AI
+
+4
+00:00:06,030 --> 00:00:06,040
+Today, I'll talk about a personal AI
+ 
+
+5
+00:00:06,040 --> 00:00:08,030
+Today, I'll talk about a personal AI
+system that knows you, but won't do
+
+6
+00:00:08,030 --> 00:00:08,040
+system that knows you, but won't do
+ 
+
+7
+00:00:08,040 --> 00:00:09,590
+system that knows you, but won't do
+anything instead of you or on your
+
+8
+00:00:09,590 --> 00:00:09,600
+anything instead of you or on your
+ 
+
+9
+00:00:09,600 --> 00:00:11,030
+anything instead of you or on your
+behalf,
+
+10
+00:00:11,030 --> 00:00:11,040
+behalf,
+ 
+
+11
+00:00:11,040 --> 00:00:13,070
+behalf,
+and won't blow up your life.
+
+12
+00:00:13,070 --> 00:00:13,080
+and won't blow up your life.
+ 
+
+13
+00:00:13,080 --> 00:00:14,710
+and won't blow up your life.
+So, that's good.
+
+14
+00:00:14,710 --> 00:00:14,720
+So, that's good.
+ 
+
+15
+00:00:14,720 --> 00:00:15,910
+So, that's good.
+In the process, I'll talk about the
+
+16
+00:00:15,910 --> 00:00:15,920
+In the process, I'll talk about the
+ 
+
+17
+00:00:15,920 --> 00:00:17,750
+In the process, I'll talk about the
+risks of personal AI and how read-only
+
+18
+00:00:17,750 --> 00:00:17,760
+risks of personal AI and how read-only
+ 
+
+19
+00:00:17,760 --> 00:00:21,110
+risks of personal AI and how read-only
+AI systems like this one mitigate them.
+
+20
+00:00:21,110 --> 00:00:21,120
+AI systems like this one mitigate them.
+ 
+
+21
+00:00:21,120 --> 00:00:22,910
+AI systems like this one mitigate them.
+Let's get started.
+
+22
+00:00:22,910 --> 00:00:22,920
+Let's get started.
+ 
+
+23
+00:00:22,920 --> 00:00:24,550
+Let's get started.
+The whole personal AI space is obsessed
+
+24
+00:00:24,550 --> 00:00:24,560
+The whole personal AI space is obsessed
+ 
+
+25
+00:00:24,560 --> 00:00:27,350
+The whole personal AI space is obsessed
+with agents that act on your behalf.
+
+26
+00:00:27,350 --> 00:00:27,360
+with agents that act on your behalf.
+ 
+
+27
+00:00:27,360 --> 00:00:30,830
+with agents that act on your behalf.
+I built something different.
+
+28
+00:00:30,830 --> 00:00:30,840
+I built something different.
+ 
+
+29
+00:00:30,840 --> 00:00:33,510
+I built something different.
+The starting point, six sources, read
+
+30
+00:00:33,510 --> 00:00:33,520
+The starting point, six sources, read
+ 
+
+31
+00:00:33,520 --> 00:00:36,270
+The starting point, six sources, read
+access only, no write permissions. The
+
+32
+00:00:36,270 --> 00:00:36,280
+access only, no write permissions. The
+ 
+
+33
+00:00:36,280 --> 00:00:39,790
+access only, no write permissions. The
+limitation is fully intentional.
+
+34
+00:00:39,790 --> 00:00:39,800
+limitation is fully intentional.
+ 
+
+35
+00:00:39,800 --> 00:00:41,630
+limitation is fully intentional.
+But first of all, what are cognitive
+
+36
+00:00:41,630 --> 00:00:41,640
+But first of all, what are cognitive
+ 
+
+37
+00:00:41,640 --> 00:00:44,510
+But first of all, what are cognitive
+exhaust fumes? What are they?
+
+38
+00:00:44,510 --> 00:00:44,520
+exhaust fumes? What are they?
+ 
+
+39
+00:00:44,520 --> 00:00:45,910
+exhaust fumes? What are they?
+It's my term for the digital activity
+
+40
+00:00:45,910 --> 00:00:45,920
+It's my term for the digital activity
+ 
+
+41
+00:00:45,920 --> 00:00:48,190
+It's my term for the digital activity
+that is a byproduct of your cognition.
+
+42
+00:00:48,190 --> 00:00:48,200
+that is a byproduct of your cognition.
+ 
+
+43
+00:00:48,200 --> 00:00:50,470
+that is a byproduct of your cognition.
+Like exhaust fumes for a car engine,
+
+44
+00:00:50,470 --> 00:00:50,480
+Like exhaust fumes for a car engine,
+ 
+
+45
+00:00:50,480 --> 00:00:52,350
+Like exhaust fumes for a car engine,
+individually, it's just waste, but if
+
+46
+00:00:52,350 --> 00:00:52,360
+individually, it's just waste, but if
+ 
+
+47
+00:00:52,360 --> 00:00:53,630
+individually, it's just waste, but if
+you analyze the exhaust, you can
+
+48
+00:00:53,630 --> 00:00:53,640
+you analyze the exhaust, you can
+ 
+
+49
+00:00:53,640 --> 00:00:55,910
+you analyze the exhaust, you can
+diagnose the engine.
+
+50
+00:00:55,910 --> 00:00:55,920
+diagnose the engine.
+ 
+
+51
+00:00:55,920 --> 00:00:57,670
+diagnose the engine.
+So, let's see some examples of what the
+
+52
+00:00:57,670 --> 00:00:57,680
+So, let's see some examples of what the
+ 
+
+53
+00:00:57,680 --> 00:00:59,990
+So, let's see some examples of what the
+exhaust reveals.
+
+54
+00:00:59,990 --> 00:01:00,000
+exhaust reveals.
+ 
+
+55
+00:01:00,000 --> 00:01:01,950
+exhaust reveals.
+What does this enable you to do?
+
+56
+00:01:01,950 --> 00:01:01,960
+What does this enable you to do?
+ 
+
+57
+00:01:01,960 --> 00:01:03,950
+What does this enable you to do?
+Three top uses I've found,
+
+58
+00:01:03,950 --> 00:01:03,960
+Three top uses I've found,
+ 
+
+59
+00:01:03,960 --> 00:01:06,390
+Three top uses I've found,
+intention action gaps,
+
+60
+00:01:06,390 --> 00:01:06,400
+intention action gaps,
+ 
+
+61
+00:01:06,400 --> 00:01:08,390
+intention action gaps,
+attention drift,
+
+62
+00:01:08,390 --> 00:01:08,400
+attention drift,
+ 
+
+63
+00:01:08,400 --> 00:01:11,030
+attention drift,
+and relationship decay.
+
+64
+00:01:11,030 --> 00:01:11,040
+and relationship decay.
+ 
+
+65
+00:01:11,040 --> 00:01:12,710
+and relationship decay.
+No single source tells you any of this,
+
+66
+00:01:12,710 --> 00:01:12,720
+No single source tells you any of this,
+ 
+
+67
+00:01:12,720 --> 00:01:15,070
+No single source tells you any of this,
+and the cross-source
+
+68
+00:01:15,070 --> 00:01:15,080
+and the cross-source
+ 
+
+69
+00:01:15,080 --> 00:01:17,710
+and the cross-source
+ability is what these have in common.
+
+70
+00:01:17,710 --> 00:01:17,720
+ability is what these have in common.
+ 
+
+71
+00:01:17,720 --> 00:01:19,310
+ability is what these have in common.
+Your email client doesn't know what you
+
+72
+00:01:19,310 --> 00:01:19,320
+Your email client doesn't know what you
+ 
+
+73
+00:01:19,320 --> 00:01:21,390
+Your email client doesn't know what you
+journaled. Your task manager doesn't
+
+74
+00:01:21,390 --> 00:01:21,400
+journaled. Your task manager doesn't
+ 
+
+75
+00:01:21,400 --> 00:01:22,950
+journaled. Your task manager doesn't
+know what you're browsing. The
+
+76
+00:01:22,950 --> 00:01:22,960
+know what you're browsing. The
+ 
+
+77
+00:01:22,960 --> 00:01:26,350
+know what you're browsing. The
+cross-source signal is the product.
+
+78
+00:01:26,350 --> 00:01:26,360
+cross-source signal is the product.
+ 
+
+79
+00:01:26,360 --> 00:01:29,790
+cross-source signal is the product.
+Let's take a closer look at the system.
+
+80
+00:01:29,790 --> 00:01:29,800
+Let's take a closer look at the system.
+ 
+
+81
+00:01:29,800 --> 00:01:33,230
+Let's take a closer look at the system.
+Here it is, Fulan. Three zones. The
+
+82
+00:01:33,230 --> 00:01:33,240
+Here it is, Fulan. Three zones. The
+ 
+
+83
+00:01:33,240 --> 00:01:35,790
+Here it is, Fulan. Three zones. The
+sources are read-only. The AI never
+
+84
+00:01:35,790 --> 00:01:35,800
+sources are read-only. The AI never
+ 
+
+85
+00:01:35,800 --> 00:01:37,350
+sources are read-only. The AI never
+writes back to them.
+
+86
+00:01:37,350 --> 00:01:37,360
+writes back to them.
+ 
+
+87
+00:01:37,360 --> 00:01:38,790
+writes back to them.
+The workspace is where the analysis
+
+88
+00:01:38,790 --> 00:01:38,800
+The workspace is where the analysis
+ 
+
+89
+00:01:38,800 --> 00:01:41,150
+The workspace is where the analysis
+happens. The outputs land in a separate
+
+90
+00:01:41,150 --> 00:01:41,160
+happens. The outputs land in a separate
+ 
+
+91
+00:01:41,160 --> 00:01:43,270
+happens. The outputs land in a separate
+Obsidian vault for me to review, but it
+
+92
+00:01:43,270 --> 00:01:43,280
+Obsidian vault for me to review, but it
+ 
+
+93
+00:01:43,280 --> 00:01:44,910
+Obsidian vault for me to review, but it
+doesn't have to be a separate Obsidian
+
+94
+00:01:44,910 --> 00:01:44,920
+doesn't have to be a separate Obsidian
+ 
+
+95
+00:01:44,920 --> 00:01:47,350
+doesn't have to be a separate Obsidian
+vault. It could be separate Notion,
+
+96
+00:01:47,350 --> 00:01:47,360
+vault. It could be separate Notion,
+ 
+
+97
+00:01:47,360 --> 00:01:49,830
+vault. It could be separate Notion,
+separate text files, separate anything.
+
+98
+00:01:49,830 --> 00:01:49,840
+separate text files, separate anything.
+ 
+
+99
+00:01:49,840 --> 00:01:51,710
+separate text files, separate anything.
+Could be any other system.
+
+100
+00:01:51,710 --> 00:01:51,720
+Could be any other system.
+ 
+
+101
+00:01:51,720 --> 00:01:54,150
+Could be any other system.
+And that's the whole thing.
+
+102
+00:01:54,150 --> 00:01:54,160
+And that's the whole thing.
+ 
+
+103
+00:01:54,160 --> 00:01:56,070
+And that's the whole thing.
+So, what about applications?
+
+104
+00:01:56,070 --> 00:01:56,080
+So, what about applications?
+ 
+
+105
+00:01:56,080 --> 00:01:57,830
+So, what about applications?
+Let's start with a David Allen style
+
+106
+00:01:57,830 --> 00:01:57,840
+Let's start with a David Allen style
+ 
+
+107
+00:01:57,840 --> 00:01:59,350
+Let's start with a David Allen style
+getting things done like spin on the
+
+108
+00:01:59,350 --> 00:01:59,360
+getting things done like spin on the
+ 
+
+109
+00:01:59,360 --> 00:02:01,030
+getting things done like spin on the
+weekly reflection.
+
+110
+00:02:01,030 --> 00:02:01,040
+weekly reflection.
+ 
+
+111
+00:02:01,040 --> 00:02:02,910
+weekly reflection.
+Based on the six sources, the AI
+
+112
+00:02:02,910 --> 00:02:02,920
+Based on the six sources, the AI
+ 
+
+113
+00:02:02,920 --> 00:02:04,830
+Based on the six sources, the AI
+synthesizes an occasionally brutal
+
+114
+00:02:04,830 --> 00:02:04,840
+synthesizes an occasionally brutal
+ 
+
+115
+00:02:04,840 --> 00:02:07,390
+synthesizes an occasionally brutal
+reflection on how you spent your week.
+
+116
+00:02:07,390 --> 00:02:07,400
+reflection on how you spent your week.
+ 
+
+117
+00:02:07,400 --> 00:02:11,470
+reflection on how you spent your week.
+Let's look at a real example.
+
+118
+00:02:11,470 --> 00:02:11,480
+
+ 
+
+119
+00:02:11,480 --> 00:02:14,030
+
+Everything runs in Claude. I've stored
+
+120
+00:02:14,030 --> 00:02:14,040
+Everything runs in Claude. I've stored
+ 
+
+121
+00:02:14,040 --> 00:02:15,190
+Everything runs in Claude. I've stored
+this
+
+122
+00:02:15,190 --> 00:02:15,200
+this
+ 
+
+123
+00:02:15,200 --> 00:02:17,150
+this
+logic in the weekly reflection \{slash\}
+
+124
+00:02:17,150 --> 00:02:17,160
+logic in the weekly reflection \{slash\}
+ 
+
+125
+00:02:17,160 --> 00:02:19,310
+logic in the weekly reflection \{slash\}
+command \{slash\} skill.
+
+126
+00:02:19,310 --> 00:02:19,320
+command \{slash\} skill.
+ 
+
+127
+00:02:19,320 --> 00:02:21,150
+command \{slash\} skill.
+And what it does is it launches a Python
+
+128
+00:02:21,150 --> 00:02:21,160
+And what it does is it launches a Python
+ 
+
+129
+00:02:21,160 --> 00:02:23,070
+And what it does is it launches a Python
+script that gets
+
+130
+00:02:23,070 --> 00:02:23,080
+script that gets
+ 
+
+131
+00:02:23,080 --> 00:02:24,470
+script that gets
+all the data
+
+132
+00:02:24,470 --> 00:02:24,480
+all the data
+ 
+
+133
+00:02:24,480 --> 00:02:27,430
+all the data
+that come from the read-only sources,
+
+134
+00:02:27,430 --> 00:02:27,440
+that come from the read-only sources,
+ 
+
+135
+00:02:27,440 --> 00:02:29,470
+that come from the read-only sources,
+and looks through them, and creates
+
+136
+00:02:29,470 --> 00:02:29,480
+and looks through them, and creates
+ 
+
+137
+00:02:29,480 --> 00:02:31,270
+and looks through them, and creates
+structured outputs
+
+138
+00:02:31,270 --> 00:02:31,280
+structured outputs
+ 
+
+139
+00:02:31,280 --> 00:02:34,070
+structured outputs
+with specified prompts that I've
+
+140
+00:02:34,070 --> 00:02:34,080
+with specified prompts that I've
+ 
+
+141
+00:02:34,080 --> 00:02:35,270
+with specified prompts that I've
+prepared.
+
+142
+00:02:35,270 --> 00:02:35,280
+prepared.
+ 
+
+143
+00:02:35,280 --> 00:02:37,470
+prepared.
+This takes a little bit of a while. It
+
+144
+00:02:37,470 --> 00:02:37,480
+This takes a little bit of a while. It
+ 
+
+145
+00:02:37,480 --> 00:02:39,710
+This takes a little bit of a while. It
+pings the Anthropic API
+
+146
+00:02:39,710 --> 00:02:39,720
+pings the Anthropic API
+ 
+
+147
+00:02:39,720 --> 00:02:42,310
+pings the Anthropic API
+to get those structured outputs back.
+
+148
+00:02:42,310 --> 00:02:42,320
+to get those structured outputs back.
+ 
+
+149
+00:02:42,320 --> 00:02:44,070
+to get those structured outputs back.
+And [snorts] once it does, it will
+
+150
+00:02:44,070 --> 00:02:44,080
+And [snorts] once it does, it will
+ 
+
+151
+00:02:44,080 --> 00:02:46,230
+And [snorts] once it does, it will
+create a markdown document that I will
+
+152
+00:02:46,230 --> 00:02:46,240
+create a markdown document that I will
+ 
+
+153
+00:02:46,240 --> 00:02:51,350
+create a markdown document that I will
+be able to review.
+
+154
+00:02:51,350 --> 00:02:51,360
+
+ 
+
+155
+00:02:51,360 --> 00:02:54,150
+
+This is now uh finished running, so it
+
+156
+00:02:54,150 --> 00:02:54,160
+This is now uh finished running, so it
+ 
+
+157
+00:02:54,160 --> 00:02:56,350
+This is now uh finished running, so it
+gives me an overview,
+
+158
+00:02:56,350 --> 00:02:56,360
+gives me an overview,
+ 
+
+159
+00:02:56,360 --> 00:03:00,270
+gives me an overview,
+and I can open it back up in Cursor,
+
+160
+00:03:00,270 --> 00:03:00,280
+and I can open it back up in Cursor,
+ 
+
+161
+00:03:00,280 --> 00:03:03,470
+and I can open it back up in Cursor,
+and I'll convert it to a preview that's
+
+162
+00:03:03,470 --> 00:03:03,480
+and I'll convert it to a preview that's
+ 
+
+163
+00:03:03,480 --> 00:03:04,790
+and I'll convert it to a preview that's
+more readable,
+
+164
+00:03:04,790 --> 00:03:04,800
+more readable,
+ 
+
+165
+00:03:04,800 --> 00:03:06,910
+more readable,
+and see that in fact, it does hit the
+
+166
+00:03:06,910 --> 00:03:06,920
+and see that in fact, it does hit the
+ 
+
+167
+00:03:06,920 --> 00:03:09,350
+and see that in fact, it does hit the
+themes of the week.
+
+168
+00:03:09,350 --> 00:03:09,360
+themes of the week.
+ 
+
+169
+00:03:09,360 --> 00:03:11,430
+themes of the week.
+It does hit some of the tensions and
+
+170
+00:03:11,430 --> 00:03:11,440
+It does hit some of the tensions and
+ 
+
+171
+00:03:11,440 --> 00:03:14,630
+It does hit some of the tensions and
+conflicts that I need to think about.
+
+172
+00:03:14,630 --> 00:03:14,640
+conflicts that I need to think about.
+ 
+
+173
+00:03:14,640 --> 00:03:15,870
+conflicts that I need to think about.
+Talks about my commitments and
+
+174
+00:03:15,870 --> 00:03:15,880
+Talks about my commitments and
+ 
+
+175
+00:03:15,880 --> 00:03:18,030
+Talks about my commitments and
+relationships, which is mostly notable
+
+176
+00:03:18,030 --> 00:03:18,040
+relationships, which is mostly notable
+ 
+
+177
+00:03:18,040 --> 00:03:20,670
+relationships, which is mostly notable
+by its omissions, and highlights the
+
+178
+00:03:20,670 --> 00:03:20,680
+by its omissions, and highlights the
+ 
+
+179
+00:03:20,680 --> 00:03:22,190
+by its omissions, and highlights the
+notable moments as well as reflection
+
+180
+00:03:22,190 --> 00:03:22,200
+notable moments as well as reflection
+ 
+
+181
+00:03:22,200 --> 00:03:30,950
+notable moments as well as reflection
+questions that I like to think about.
+
+182
+00:03:30,950 --> 00:03:30,960
+
+ 
+
+183
+00:03:30,960 --> 00:03:32,590
+
+In short, this is not a productivity
+
+184
+00:03:32,590 --> 00:03:32,600
+In short, this is not a productivity
+ 
+
+185
+00:03:32,600 --> 00:03:34,310
+In short, this is not a productivity
+report. It's a reflection on how you're
+
+186
+00:03:34,310 --> 00:03:34,320
+report. It's a reflection on how you're
+ 
+
+187
+00:03:34,320 --> 00:03:36,070
+report. It's a reflection on how you're
+thinking, assembled entirely from
+
+188
+00:03:36,070 --> 00:03:36,080
+thinking, assembled entirely from
+ 
+
+189
+00:03:36,080 --> 00:03:38,270
+thinking, assembled entirely from
+exhaust.
+
+190
+00:03:38,270 --> 00:03:38,280
+exhaust.
+ 
+
+191
+00:03:38,280 --> 00:03:41,110
+exhaust.
+Let's take another example.
+
+192
+00:03:41,110 --> 00:03:41,120
+Let's take another example.
+ 
+
+193
+00:03:41,120 --> 00:03:42,510
+Let's take another example.
+I like to discuss what I'm reading with
+
+194
+00:03:42,510 --> 00:03:42,520
+I like to discuss what I'm reading with
+ 
+
+195
+00:03:42,520 --> 00:03:43,830
+I like to discuss what I'm reading with
+others, but sometimes I think I
+
+196
+00:03:43,830 --> 00:03:43,840
+others, but sometimes I think I
+ 
+
+197
+00:03:43,840 --> 00:03:45,310
+others, but sometimes I think I
+shouldn't keep messaging the same three
+
+198
+00:03:45,310 --> 00:03:45,320
+shouldn't keep messaging the same three
+ 
+
+199
+00:03:45,320 --> 00:03:48,270
+shouldn't keep messaging the same three
+people about it. So, I asked the AI,
+
+200
+00:03:48,270 --> 00:03:48,280
+people about it. So, I asked the AI,
+ 
+
+201
+00:03:48,280 --> 00:03:50,110
+people about it. So, I asked the AI,
+"Given my recent reading, who in my
+
+202
+00:03:50,110 --> 00:03:50,120
+"Given my recent reading, who in my
+ 
+
+203
+00:03:50,120 --> 00:03:51,430
+"Given my recent reading, who in my
+network should I be discussing this
+
+204
+00:03:51,430 --> 00:03:51,440
+network should I be discussing this
+ 
+
+205
+00:03:51,440 --> 00:03:53,350
+network should I be discussing this
+with?"
+
+206
+00:03:53,350 --> 00:03:53,360
+with?"
+ 
+
+207
+00:03:53,360 --> 00:03:55,350
+with?"
+This is the cross-source magic.
+
+208
+00:03:55,350 --> 00:03:55,360
+This is the cross-source magic.
+ 
+
+209
+00:03:55,360 --> 00:03:56,790
+This is the cross-source magic.
+Four data sources, none of which were
+
+210
+00:03:56,790 --> 00:03:56,800
+Four data sources, none of which were
+ 
+
+211
+00:03:56,800 --> 00:03:58,990
+Four data sources, none of which were
+designed to talk to each other, combined
+
+212
+00:03:58,990 --> 00:03:59,000
+designed to talk to each other, combined
+ 
+
+213
+00:03:59,000 --> 00:04:00,590
+designed to talk to each other, combined
+into an insight you'd never get from any
+
+214
+00:04:00,590 --> 00:04:00,600
+into an insight you'd never get from any
+ 
+
+215
+00:04:00,600 --> 00:04:01,870
+into an insight you'd never get from any
+single tool.
+
+216
+00:04:01,870 --> 00:04:01,880
+single tool.
+ 
+
+217
+00:04:01,880 --> 00:04:03,750
+single tool.
+And all read-only.
+
+218
+00:04:03,750 --> 00:04:03,760
+And all read-only.
+ 
+
+219
+00:04:03,760 --> 00:04:06,510
+And all read-only.
+Nothing was sent. Nothing was scheduled.
+
+220
+00:04:06,510 --> 00:04:06,520
+Nothing was sent. Nothing was scheduled.
+ 
+
+221
+00:04:06,520 --> 00:04:08,270
+Nothing was sent. Nothing was scheduled.
+Just a suggestion for me to act on if I
+
+222
+00:04:08,270 --> 00:04:08,280
+Just a suggestion for me to act on if I
+ 
+
+223
+00:04:08,280 --> 00:04:10,710
+Just a suggestion for me to act on if I
+choose.
+
+224
+00:04:10,710 --> 00:04:10,720
+choose.
+ 
+
+225
+00:04:10,720 --> 00:04:14,550
+choose.
+Let me once again show you the demo.
+
+226
+00:04:14,550 --> 00:04:14,560
+
+ 
+
+227
+00:04:14,560 --> 00:04:17,407
+
+Once again, this is a Claude skill,
+
+228
+00:04:17,407 --> 00:04:17,417
+Once again, this is a Claude skill,
+ 
+
+229
+00:04:17,417 --> 00:04:17,830
+Once again, this is a Claude skill,
+>> [sighs]
+
+230
+00:04:17,830 --> 00:04:17,840
+>> [sighs]
+ 
+
+231
+00:04:17,840 --> 00:04:20,190
+>> [sighs]
+>> but in this case, I've hidden
+
+232
+00:04:20,190 --> 00:04:20,200
+>> but in this case, I've hidden
+ 
+
+233
+00:04:20,200 --> 00:04:22,590
+>> but in this case, I've hidden
+most of the guts of the Claude skill
+
+234
+00:04:22,590 --> 00:04:22,600
+most of the guts of the Claude skill
+ 
+
+235
+00:04:22,600 --> 00:04:25,590
+most of the guts of the Claude skill
+into the cross-origin query, and ask for
+
+236
+00:04:25,590 --> 00:04:25,600
+into the cross-origin query, and ask for
+ 
+
+237
+00:04:25,600 --> 00:04:28,150
+into the cross-origin query, and ask for
+the specific question uh
+
+238
+00:04:28,150 --> 00:04:28,160
+the specific question uh
+ 
+
+239
+00:04:28,160 --> 00:04:30,870
+the specific question uh
+in plain language.
+
+240
+00:04:30,870 --> 00:04:30,880
+in plain language.
+ 
+
+241
+00:04:30,880 --> 00:04:32,830
+in plain language.
+The plain language knows that it will
+
+242
+00:04:32,830 --> 00:04:32,840
+The plain language knows that it will
+ 
+
+243
+00:04:32,840 --> 00:04:33,710
+The plain language knows that it will
+auto
+
+244
+00:04:33,710 --> 00:04:33,720
+auto
+ 
+
+245
+00:04:33,720 --> 00:04:35,110
+auto
+that it will
+
+246
+00:04:35,110 --> 00:04:35,120
+that it will
+ 
+
+247
+00:04:35,120 --> 00:04:36,430
+that it will
+activate
+
+248
+00:04:36,430 --> 00:04:36,440
+activate
+ 
+
+249
+00:04:36,440 --> 00:04:38,990
+activate
+the specific skill for the cross-source
+
+250
+00:04:38,990 --> 00:04:39,000
+the specific skill for the cross-source
+ 
+
+251
+00:04:39,000 --> 00:04:41,630
+the specific skill for the cross-source
+queries, and it now goes through the
+
+252
+00:04:41,630 --> 00:04:41,640
+queries, and it now goes through the
+ 
+
+253
+00:04:41,640 --> 00:04:44,510
+queries, and it now goes through the
+databases that I've curated that I have
+
+254
+00:04:44,510 --> 00:04:44,520
+databases that I've curated that I have
+ 
+
+255
+00:04:44,520 --> 00:04:46,550
+databases that I've curated that I have
+regular interest for, looks through the
+
+256
+00:04:46,550 --> 00:04:46,560
+regular interest for, looks through the
+ 
+
+257
+00:04:46,560 --> 00:04:49,790
+regular interest for, looks through the
+Vivaldi SQLite database for the articles
+
+258
+00:04:49,790 --> 00:04:49,800
+Vivaldi SQLite database for the articles
+ 
+
+259
+00:04:49,800 --> 00:04:52,230
+Vivaldi SQLite database for the articles
+that I've been reading the most,
+
+260
+00:04:52,230 --> 00:04:52,240
+that I've been reading the most,
+ 
+
+261
+00:04:52,240 --> 00:04:53,470
+that I've been reading the most,
+and
+
+262
+00:04:53,470 --> 00:04:53,480
+and
+ 
+
+263
+00:04:53,480 --> 00:04:56,470
+and
+after a while, it will figure out which
+
+264
+00:04:56,470 --> 00:04:56,480
+after a while, it will figure out which
+ 
+
+265
+00:04:56,480 --> 00:05:01,030
+after a while, it will figure out which
+of these articles um are most read,
+
+266
+00:05:01,030 --> 00:05:01,040
+of these articles um are most read,
+ 
+
+267
+00:05:01,040 --> 00:05:03,070
+of these articles um are most read,
+still open on tabs,
+
+268
+00:05:03,070 --> 00:05:03,080
+still open on tabs,
+ 
+
+269
+00:05:03,080 --> 00:05:06,430
+still open on tabs,
+and which people might be curious about
+
+270
+00:05:06,430 --> 00:05:06,440
+and which people might be curious about
+ 
+
+271
+00:05:06,440 --> 00:05:09,230
+and which people might be curious about
+it based on the profile. Now, this is
+
+272
+00:05:09,230 --> 00:05:09,240
+it based on the profile. Now, this is
+ 
+
+273
+00:05:09,240 --> 00:05:12,430
+it based on the profile. Now, this is
+probably the weakest part. The Clay MCP
+
+274
+00:05:12,430 --> 00:05:12,440
+probably the weakest part. The Clay MCP
+ 
+
+275
+00:05:12,440 --> 00:05:14,630
+probably the weakest part. The Clay MCP
+takes forever to run,
+
+276
+00:05:14,630 --> 00:05:14,640
+takes forever to run,
+ 
+
+277
+00:05:14,640 --> 00:05:17,510
+takes forever to run,
+but it searches my CRM,
+
+278
+00:05:17,510 --> 00:05:17,520
+but it searches my CRM,
+ 
+
+279
+00:05:17,520 --> 00:05:19,390
+but it searches my CRM,
+or my friend relationship system, I
+
+280
+00:05:19,390 --> 00:05:19,400
+or my friend relationship system, I
+ 
+
+281
+00:05:19,400 --> 00:05:21,230
+or my friend relationship system, I
+suppose, so FRM,
+
+282
+00:05:21,230 --> 00:05:21,240
+suppose, so FRM,
+ 
+
+283
+00:05:21,240 --> 00:05:24,310
+suppose, so FRM,
+for people who might be interested in
+
+284
+00:05:24,310 --> 00:05:24,320
+for people who might be interested in
+ 
+
+285
+00:05:24,320 --> 00:05:26,870
+for people who might be interested in
+articles of on these topics.
+
+286
+00:05:26,870 --> 00:05:26,880
+articles of on these topics.
+ 
+
+287
+00:05:26,880 --> 00:05:31,590
+articles of on these topics.
+Um
+
+288
+00:05:31,590 --> 00:05:31,600
+
+ 
+
+289
+00:05:31,600 --> 00:05:33,750
+
+In this case, it's people interested in
+
+290
+00:05:33,750 --> 00:05:33,760
+In this case, it's people interested in
+ 
+
+291
+00:05:33,760 --> 00:05:35,830
+In this case, it's people interested in
+AI, or people in European tech, or
+
+292
+00:05:35,830 --> 00:05:35,840
+AI, or people in European tech, or
+ 
+
+293
+00:05:35,840 --> 00:05:37,630
+AI, or people in European tech, or
+people in education, which
+
+294
+00:05:37,630 --> 00:05:37,640
+people in education, which
+ 
+
+295
+00:05:37,640 --> 00:05:39,670
+people in education, which
+coincidentally are three things that I
+
+296
+00:05:39,670 --> 00:05:39,680
+coincidentally are three things that I
+ 
+
+297
+00:05:39,680 --> 00:05:42,590
+coincidentally are three things that I
+also am.
+
+298
+00:05:42,590 --> 00:05:42,600
+
+ 
+
+299
+00:05:42,600 --> 00:05:44,150
+
+Now,
+
+300
+00:05:44,150 --> 00:05:44,160
+Now,
+ 
+
+301
+00:05:44,160 --> 00:05:46,070
+Now,
+as you might notice, this takes up a lot
+
+302
+00:05:46,070 --> 00:05:46,080
+as you might notice, this takes up a lot
+ 
+
+303
+00:05:46,080 --> 00:05:48,830
+as you might notice, this takes up a lot
+of tokens in the context window, so you
+
+304
+00:05:48,830 --> 00:05:48,840
+of tokens in the context window, so you
+ 
+
+305
+00:05:48,840 --> 00:05:52,350
+of tokens in the context window, so you
+probably don't want to do this in a
+
+306
+00:05:52,350 --> 00:05:52,360
+probably don't want to do this in a
+ 
+
+307
+00:05:52,360 --> 00:05:54,550
+probably don't want to do this in a
+session that is not clean, but it's not
+
+308
+00:05:54,550 --> 00:05:54,560
+session that is not clean, but it's not
+ 
+
+309
+00:05:54,560 --> 00:05:57,470
+session that is not clean, but it's not
+a problem if it messes up a little bit
+
+310
+00:05:57,470 --> 00:05:57,480
+a problem if it messes up a little bit
+ 
+
+311
+00:05:57,480 --> 00:05:59,830
+a problem if it messes up a little bit
+of the 1 million context window for 4.6,
+
+312
+00:05:59,830 --> 00:05:59,840
+of the 1 million context window for 4.6,
+ 
+
+313
+00:05:59,840 --> 00:06:02,150
+of the 1 million context window for 4.6,
+and then you clear it again.
+
+314
+00:06:02,150 --> 00:06:02,160
+and then you clear it again.
+ 
+
+315
+00:06:02,160 --> 00:06:04,830
+and then you clear it again.
+So, at this point, it's getting
+
+316
+00:06:04,830 --> 00:06:04,840
+So, at this point, it's getting
+ 
+
+317
+00:06:04,840 --> 00:06:06,510
+So, at this point, it's getting
+the responses from all of the Clay
+
+318
+00:06:06,510 --> 00:06:06,520
+the responses from all of the Clay
+ 
+
+319
+00:06:06,520 --> 00:06:07,990
+the responses from all of the Clay
+searches.
+
+320
+00:06:07,990 --> 00:06:08,000
+searches.
+ 
+
+321
+00:06:08,000 --> 00:06:11,070
+searches.
+It synthesizes the people that I should
+
+322
+00:06:11,070 --> 00:06:11,080
+It synthesizes the people that I should
+ 
+
+323
+00:06:11,080 --> 00:06:12,310
+It synthesizes the people that I should
+talk to,
+
+324
+00:06:12,310 --> 00:06:12,320
+talk to,
+ 
+
+325
+00:06:12,320 --> 00:06:16,030
+talk to,
+and it maps them to one article each.
+
+326
+00:06:16,030 --> 00:06:16,040
+and it maps them to one article each.
+ 
+
+327
+00:06:16,040 --> 00:06:18,430
+and it maps them to one article each.
+That's what the or it's about to map
+
+328
+00:06:18,430 --> 00:06:18,440
+That's what the or it's about to map
+ 
+
+329
+00:06:18,440 --> 00:06:20,430
+That's what the or it's about to map
+them to one article each.
+
+330
+00:06:20,430 --> 00:06:20,440
+them to one article each.
+ 
+
+331
+00:06:20,440 --> 00:06:21,030
+them to one article each.
+Uh
+
+332
+00:06:21,030 --> 00:06:21,040
+Uh
+ 
+
+333
+00:06:21,040 --> 00:06:23,350
+Uh
+this requires a little bit of
+
+334
+00:06:23,350 --> 00:06:23,360
+this requires a little bit of
+ 
+
+335
+00:06:23,360 --> 00:06:25,150
+this requires a little bit of
+uh
+
+336
+00:06:25,150 --> 00:06:25,160
+uh
+ 
+
+337
+00:06:25,160 --> 00:06:28,110
+uh
+bash sorcery on behalf of Claude code,
+
+338
+00:06:28,110 --> 00:06:28,120
+bash sorcery on behalf of Claude code,
+ 
+
+339
+00:06:28,120 --> 00:06:29,350
+bash sorcery on behalf of Claude code,
+but if you're running it with auto to
+
+340
+00:06:29,350 --> 00:06:29,360
+but if you're running it with auto to
+ 
+
+341
+00:06:29,360 --> 00:06:31,230
+but if you're running it with auto to
+auto mode, or dangerous disk
+
+342
+00:06:31,230 --> 00:06:31,240
+auto mode, or dangerous disk
+ 
+
+343
+00:06:31,240 --> 00:06:32,670
+auto mode, or dangerous disk
+permissions, you can get rid of that as
+
+344
+00:06:32,670 --> 00:06:32,680
+permissions, you can get rid of that as
+ 
+
+345
+00:06:32,680 --> 00:06:34,270
+permissions, you can get rid of that as
+well.
+
+346
+00:06:34,270 --> 00:06:34,280
+well.
+ 
+
+347
+00:06:34,280 --> 00:06:36,670
+well.
+And indeed, when I take a look at the
+
+348
+00:06:36,670 --> 00:06:36,680
+And indeed, when I take a look at the
+ 
+
+349
+00:06:36,680 --> 00:06:39,150
+And indeed, when I take a look at the
+first results,
+
+350
+00:06:39,150 --> 00:06:39,160
+first results,
+ 
+
+351
+00:06:39,160 --> 00:06:41,070
+first results,
+those look like the people that I might
+
+352
+00:06:41,070 --> 00:06:41,080
+those look like the people that I might
+ 
+
+353
+00:06:41,080 --> 00:06:43,150
+those look like the people that I might
+want to talk to that I haven't talked to
+
+354
+00:06:43,150 --> 00:06:43,160
+want to talk to that I haven't talked to
+ 
+
+355
+00:06:43,160 --> 00:06:45,550
+want to talk to that I haven't talked to
+yet about the kinds of articles that
+
+356
+00:06:45,550 --> 00:06:45,560
+yet about the kinds of articles that
+ 
+
+357
+00:06:45,560 --> 00:06:47,110
+yet about the kinds of articles that
+I've been reading. So, thank you,
+
+358
+00:06:47,110 --> 00:06:47,120
+I've been reading. So, thank you,
+ 
+
+359
+00:06:47,120 --> 00:06:58,150
+I've been reading. So, thank you,
+Claude.
+
+360
+00:06:58,150 --> 00:06:58,160
+
+ 
+
+361
+00:06:58,160 --> 00:06:59,790
+
+Right, in this case, it even found the
+
+362
+00:06:59,790 --> 00:06:59,800
+Right, in this case, it even found the
+ 
+
+363
+00:06:59,800 --> 00:07:01,870
+Right, in this case, it even found the
+author of the article that I was reading
+
+364
+00:07:01,870 --> 00:07:01,880
+author of the article that I was reading
+ 
+
+365
+00:07:01,880 --> 00:07:03,350
+author of the article that I was reading
+that's in my network, so I should give
+
+366
+00:07:03,350 --> 00:07:03,360
+that's in my network, so I should give
+ 
+
+367
+00:07:03,360 --> 00:07:17,590
+that's in my network, so I should give
+them a whirl.
+
+368
+00:07:17,590 --> 00:07:17,600
+
+ 
+
+369
+00:07:17,600 --> 00:07:19,390
+
+In short, no source knows the whole of
+
+370
+00:07:19,390 --> 00:07:19,400
+In short, no source knows the whole of
+ 
+
+371
+00:07:19,400 --> 00:07:21,470
+In short, no source knows the whole of
+this. Your browser doesn't know your
+
+372
+00:07:21,470 --> 00:07:21,480
+this. Your browser doesn't know your
+ 
+
+373
+00:07:21,480 --> 00:07:23,750
+this. Your browser doesn't know your
+contacts. Your CRM doesn't know what
+
+374
+00:07:23,750 --> 00:07:23,760
+contacts. Your CRM doesn't know what
+ 
+
+375
+00:07:23,760 --> 00:07:24,870
+contacts. Your CRM doesn't know what
+you're reading.
+
+376
+00:07:24,870 --> 00:07:24,880
+you're reading.
+ 
+
+377
+00:07:24,880 --> 00:07:28,070
+you're reading.
+The exhaust does.
+
+378
+00:07:28,070 --> 00:07:28,080
+The exhaust does.
+ 
+
+379
+00:07:28,080 --> 00:07:29,590
+The exhaust does.
+So, why keep it read-only if it's so
+
+380
+00:07:29,590 --> 00:07:29,600
+So, why keep it read-only if it's so
+ 
+
+381
+00:07:29,600 --> 00:07:31,790
+So, why keep it read-only if it's so
+useful, after all?
+
+382
+00:07:31,790 --> 00:07:31,800
+useful, after all?
+ 
+
+383
+00:07:31,800 --> 00:07:32,910
+useful, after all?
+Here's the thing about the risk
+
+384
+00:07:32,910 --> 00:07:32,920
+Here's the thing about the risk
+ 
+
+385
+00:07:32,920 --> 00:07:36,150
+Here's the thing about the risk
+involved. It's asymmetric. The downside
+
+386
+00:07:36,150 --> 00:07:36,160
+involved. It's asymmetric. The downside
+ 
+
+387
+00:07:36,160 --> 00:07:38,150
+involved. It's asymmetric. The downside
+of a read-only error is zero. I just
+
+388
+00:07:38,150 --> 00:07:38,160
+of a read-only error is zero. I just
+ 
+
+389
+00:07:38,160 --> 00:07:39,550
+of a read-only error is zero. I just
+ignore it.
+
+390
+00:07:39,550 --> 00:07:39,560
+ignore it.
+ 
+
+391
+00:07:39,560 --> 00:07:41,150
+ignore it.
+The downside of a write error is
+
+392
+00:07:41,150 --> 00:07:41,160
+The downside of a write error is
+ 
+
+393
+00:07:41,160 --> 00:07:42,430
+The downside of a write error is
+unbounded.
+
+394
+00:07:42,430 --> 00:07:42,440
+unbounded.
+ 
+
+395
+00:07:42,440 --> 00:07:43,870
+unbounded.
+And personal AI operates in the
+
+396
+00:07:43,870 --> 00:07:43,880
+And personal AI operates in the
+ 
+
+397
+00:07:43,880 --> 00:07:45,910
+And personal AI operates in the
+high-stakes environment. Your
+
+398
+00:07:45,910 --> 00:07:45,920
+high-stakes environment. Your
+ 
+
+399
+00:07:45,920 --> 00:07:48,350
+high-stakes environment. Your
+relationships, your career, your
+
+400
+00:07:48,350 --> 00:07:48,360
+relationships, your career, your
+ 
+
+401
+00:07:48,360 --> 00:07:51,470
+relationships, your career, your
+reputation.
+
+402
+00:07:51,470 --> 00:07:51,480
+
+ 
+
+403
+00:07:51,480 --> 00:07:53,910
+
+I'd rather miss out on automated emails
+
+404
+00:07:53,910 --> 00:07:53,920
+I'd rather miss out on automated emails
+ 
+
+405
+00:07:53,920 --> 00:07:57,310
+I'd rather miss out on automated emails
+than have a misfire nuke my life.
+
+406
+00:07:57,310 --> 00:07:57,320
+than have a misfire nuke my life.
+ 
+
+407
+00:07:57,320 --> 00:07:59,030
+than have a misfire nuke my life.
+But there's also a subtler philosophical
+
+408
+00:07:59,030 --> 00:07:59,040
+But there's also a subtler philosophical
+ 
+
+409
+00:07:59,040 --> 00:08:01,790
+But there's also a subtler philosophical
+argument, almost a matter of taste.
+
+410
+00:08:01,790 --> 00:08:01,800
+argument, almost a matter of taste.
+ 
+
+411
+00:08:01,800 --> 00:08:04,070
+argument, almost a matter of taste.
+Read-only isn't just safer, it produces
+
+412
+00:08:04,070 --> 00:08:04,080
+Read-only isn't just safer, it produces
+ 
+
+413
+00:08:04,080 --> 00:08:06,590
+Read-only isn't just safer, it produces
+better analysis. The moment your AI
+
+414
+00:08:06,590 --> 00:08:06,600
+better analysis. The moment your AI
+ 
+
+415
+00:08:06,600 --> 00:08:08,710
+better analysis. The moment your AI
+writes to your data sources, the exhaust
+
+416
+00:08:08,710 --> 00:08:08,720
+writes to your data sources, the exhaust
+ 
+
+417
+00:08:08,720 --> 00:08:10,990
+writes to your data sources, the exhaust
+fumes are contaminated. You're no longer
+
+418
+00:08:10,990 --> 00:08:11,000
+fumes are contaminated. You're no longer
+ 
+
+419
+00:08:11,000 --> 00:08:12,830
+fumes are contaminated. You're no longer
+observing your cognition. You're
+
+420
+00:08:12,830 --> 00:08:12,840
+observing your cognition. You're
+ 
+
+421
+00:08:12,840 --> 00:08:14,790
+observing your cognition. You're
+observing a human-AI hybrid, and you
+
+422
+00:08:14,790 --> 00:08:14,800
+observing a human-AI hybrid, and you
+ 
+
+423
+00:08:14,800 --> 00:08:17,790
+observing a human-AI hybrid, and you
+can't tell which patterns are yours.
+
+424
+00:08:17,790 --> 00:08:17,800
+can't tell which patterns are yours.
+ 
+
+425
+00:08:17,800 --> 00:08:19,750
+can't tell which patterns are yours.
+Sure, the observer changes your
+
+426
+00:08:19,750 --> 00:08:19,760
+Sure, the observer changes your
+ 
+
+427
+00:08:19,760 --> 00:08:21,910
+Sure, the observer changes your
+behavior, too, but the feedback loop is
+
+428
+00:08:21,910 --> 00:08:21,920
+behavior, too, but the feedback loop is
+ 
+
+429
+00:08:21,920 --> 00:08:24,910
+behavior, too, but the feedback loop is
+mediated by you, not automated.
+
+430
+00:08:24,910 --> 00:08:24,920
+mediated by you, not automated.
+ 
+
+431
+00:08:24,920 --> 00:08:27,030
+mediated by you, not automated.
+You read the reflection. You decide what
+
+432
+00:08:27,030 --> 00:08:27,040
+You read the reflection. You decide what
+ 
+
+433
+00:08:27,040 --> 00:08:28,990
+You read the reflection. You decide what
+to do. That's a different thing from the
+
+434
+00:08:28,990 --> 00:08:29,000
+to do. That's a different thing from the
+ 
+
+435
+00:08:29,000 --> 00:08:32,070
+to do. That's a different thing from the
+AI writing your draft.
+
+436
+00:08:32,070 --> 00:08:32,080
+AI writing your draft.
+ 
+
+437
+00:08:32,080 --> 00:08:33,469
+AI writing your draft.
+And there's an argument to be made that
+
+438
+00:08:33,469 --> 00:08:33,479
+And there's an argument to be made that
+ 
+
+439
+00:08:33,479 --> 00:08:35,310
+And there's an argument to be made that
+you don't want the AI to write your
+
+440
+00:08:35,310 --> 00:08:35,320
+you don't want the AI to write your
+ 
+
+441
+00:08:35,320 --> 00:08:37,149
+you don't want the AI to write your
+draft in the first place, that you
+
+442
+00:08:37,149 --> 00:08:37,159
+draft in the first place, that you
+ 
+
+443
+00:08:37,159 --> 00:08:39,390
+draft in the first place, that you
+should reclaim your agency.
+
+444
+00:08:39,390 --> 00:08:39,400
+should reclaim your agency.
+ 
+
+445
+00:08:39,400 --> 00:08:40,950
+should reclaim your agency.
+Might be a hard sell for this crowd, I
+
+446
+00:08:40,950 --> 00:08:40,960
+Might be a hard sell for this crowd, I
+ 
+
+447
+00:08:40,960 --> 00:08:44,710
+Might be a hard sell for this crowd, I
+think, but worth considering.
+
+448
+00:08:44,710 --> 00:08:44,720
+think, but worth considering.
+ 
+
+449
+00:08:44,720 --> 00:08:46,310
+
+At this point, you might be asking, "Why
+
+450
+00:08:46,310 --> 00:08:46,320
+At this point, you might be asking, "Why
+ 
+
+451
+00:08:46,320 --> 00:08:47,950
+At this point, you might be asking, "Why
+not throw all this into open Claude on a
+
+452
+00:08:47,950 --> 00:08:47,960
+not throw all this into open Claude on a
+ 
+
+453
+00:08:47,960 --> 00:08:49,470
+not throw all this into open Claude on a
+read-only mount?"
+
+454
+00:08:49,470 --> 00:08:49,480
+read-only mount?"
+ 
+
+455
+00:08:49,480 --> 00:08:51,590
+read-only mount?"
+Which I have.
+
+456
+00:08:51,590 --> 00:08:51,600
+Which I have.
+ 
+
+457
+00:08:51,600 --> 00:08:53,310
+Which I have.
+Here's the thing.
+
+458
+00:08:53,310 --> 00:08:53,320
+Here's the thing.
+ 
+
+459
+00:08:53,320 --> 00:08:55,670
+Here's the thing.
+The producer The observer produces more
+
+460
+00:08:55,670 --> 00:08:55,680
+The producer The observer produces more
+ 
+
+461
+00:08:55,680 --> 00:08:58,910
+The producer The observer produces more
+value per interaction by a wide margin.
+
+462
+00:08:58,910 --> 00:08:58,920
+value per interaction by a wide margin.
+ 
+
+463
+00:08:58,920 --> 00:09:00,750
+value per interaction by a wide margin.
+The agent saves me 30 seconds on a
+
+464
+00:09:00,750 --> 00:09:00,760
+The agent saves me 30 seconds on a
+ 
+
+465
+00:09:00,760 --> 00:09:02,030
+The agent saves me 30 seconds on a
+weather check.
+
+466
+00:09:02,030 --> 00:09:02,040
+weather check.
+ 
+
+467
+00:09:02,040 --> 00:09:03,630
+weather check.
+The observer shows me I've been avoiding
+
+468
+00:09:03,630 --> 00:09:03,640
+The observer shows me I've been avoiding
+ 
+
+469
+00:09:03,640 --> 00:09:06,710
+The observer shows me I've been avoiding
+my most important project for 2 weeks.
+
+470
+00:09:06,710 --> 00:09:06,720
+my most important project for 2 weeks.
+ 
+
+471
+00:09:06,720 --> 00:09:08,430
+my most important project for 2 weeks.
+Not to mention that there's less risk of
+
+472
+00:09:08,430 --> 00:09:08,440
+Not to mention that there's less risk of
+ 
+
+473
+00:09:08,440 --> 00:09:13,070
+Not to mention that there's less risk of
+exfiltration and cognitive pollution.
+
+474
+00:09:13,070 --> 00:09:13,080
+
+ 
+
+475
+00:09:13,080 --> 00:09:14,470
+
+The argument I'm making here is that
+
+476
+00:09:14,470 --> 00:09:14,480
+The argument I'm making here is that
+ 
+
+477
+00:09:14,480 --> 00:09:16,270
+The argument I'm making here is that
+read-only isn't a stepping stone to
+
+478
+00:09:16,270 --> 00:09:16,280
+read-only isn't a stepping stone to
+ 
+
+479
+00:09:16,280 --> 00:09:17,070
+read-only isn't a stepping stone to
+\{quote\}
+
+480
+00:09:17,070 --> 00:09:17,080
+\{quote\}
+ 
+
+481
+00:09:17,080 --> 00:09:19,430
+\{quote\}
+real agents. It helps you do things
+
+482
+00:09:19,430 --> 00:09:19,440
+real agents. It helps you do things
+ 
+
+483
+00:09:19,440 --> 00:09:22,870
+real agents. It helps you do things
+well, yes, but it fits a different gap,
+
+484
+00:09:22,870 --> 00:09:22,880
+well, yes, but it fits a different gap,
+ 
+
+485
+00:09:22,880 --> 00:09:24,750
+well, yes, but it fits a different gap,
+serves a different need.
+
+486
+00:09:24,750 --> 00:09:24,760
+serves a different need.
+ 
+
+487
+00:09:24,760 --> 00:09:27,590
+serves a different need.
+It's a different product category.
+
+488
+00:09:27,590 --> 00:09:27,600
+It's a different product category.
+ 
+
+489
+00:09:27,600 --> 00:09:29,070
+It's a different product category.
+The industry frames read-only as a
+
+490
+00:09:29,070 --> 00:09:29,080
+The industry frames read-only as a
+ 
+
+491
+00:09:29,080 --> 00:09:31,750
+The industry frames read-only as a
+limitation you graduate from.
+
+492
+00:09:31,750 --> 00:09:31,760
+limitation you graduate from.
+ 
+
+493
+00:09:31,760 --> 00:09:33,550
+limitation you graduate from.
+I think that's wrong.
+
+494
+00:09:33,550 --> 00:09:33,560
+I think that's wrong.
+ 
+
+495
+00:09:33,560 --> 00:09:35,070
+I think that's wrong.
+Observers and agents are different
+
+496
+00:09:35,070 --> 00:09:35,080
+Observers and agents are different
+ 
+
+497
+00:09:35,080 --> 00:09:39,910
+Observers and agents are different
+tools, and mayor isn't a broken butler.
+
+498
+00:09:39,910 --> 00:09:39,920
+tools, and mayor isn't a broken butler.
+ 
+
+499
+00:09:39,920 --> 00:09:42,990
+tools, and mayor isn't a broken butler.
+So, that's the value proposition.
+
+500
+00:09:42,990 --> 00:09:43,000
+So, that's the value proposition.
+ 
+
+501
+00:09:43,000 --> 00:09:44,510
+So, that's the value proposition.
+But I'd be doing you a disservice if I
+
+502
+00:09:44,510 --> 00:09:44,520
+But I'd be doing you a disservice if I
+ 
+
+503
+00:09:44,520 --> 00:09:46,350
+But I'd be doing you a disservice if I
+stopped here.
+
+504
+00:09:46,350 --> 00:09:46,360
+stopped here.
+ 
+
+505
+00:09:46,360 --> 00:09:50,670
+stopped here.
+Let's put on the paranoid hat.
+
+506
+00:09:50,670 --> 00:09:50,680
+
+ 
+
+507
+00:09:50,680 --> 00:09:52,550
+
+What keeps me up at night?
+
+508
+00:09:52,550 --> 00:09:52,560
+What keeps me up at night?
+ 
+
+509
+00:09:52,560 --> 00:09:55,310
+What keeps me up at night?
+Let's start with the mosaic effect.
+
+510
+00:09:55,310 --> 00:09:55,320
+Let's start with the mosaic effect.
+ 
+
+511
+00:09:55,320 --> 00:09:56,670
+Let's start with the mosaic effect.
+There's something called the mosaic
+
+512
+00:09:56,670 --> 00:09:56,680
+There's something called the mosaic
+ 
+
+513
+00:09:56,680 --> 00:09:58,910
+There's something called the mosaic
+effect, where you put together a lot of
+
+514
+00:09:58,910 --> 00:09:58,920
+effect, where you put together a lot of
+ 
+
+515
+00:09:58,920 --> 00:10:01,190
+effect, where you put together a lot of
+small pieces of information and you get
+
+516
+00:10:01,190 --> 00:10:01,200
+small pieces of information and you get
+ 
+
+517
+00:10:01,200 --> 00:10:03,150
+small pieces of information and you get
+a picture.
+
+518
+00:10:03,150 --> 00:10:03,160
+a picture.
+ 
+
+519
+00:10:03,160 --> 00:10:05,070
+a picture.
+My own slide copy describes the security
+
+520
+00:10:05,070 --> 00:10:05,080
+My own slide copy describes the security
+ 
+
+521
+00:10:05,080 --> 00:10:06,590
+My own slide copy describes the security
+risk perfectly.
+
+522
+00:10:06,590 --> 00:10:06,600
+risk perfectly.
+ 
+
+523
+00:10:06,600 --> 00:10:07,990
+risk perfectly.
+The same cross-referencing that makes
+
+524
+00:10:07,990 --> 00:10:08,000
+The same cross-referencing that makes
+ 
+
+525
+00:10:08,000 --> 00:10:09,750
+The same cross-referencing that makes
+the system useful makes it a devastating
+
+526
+00:10:09,750 --> 00:10:09,760
+the system useful makes it a devastating
+ 
+
+527
+00:10:09,760 --> 00:10:11,510
+the system useful makes it a devastating
+target.
+
+528
+00:10:11,510 --> 00:10:11,520
+target.
+ 
+
+529
+00:10:11,520 --> 00:10:14,910
+target.
+So, careful there.
+
+530
+00:10:14,910 --> 00:10:14,920
+So, careful there.
+ 
+
+531
+00:10:14,920 --> 00:10:16,830
+So, careful there.
+The other side of the coin, Simon
+
+532
+00:10:16,830 --> 00:10:16,840
+The other side of the coin, Simon
+ 
+
+533
+00:10:16,840 --> 00:10:19,190
+The other side of the coin, Simon
+Willison's lethal triquetra.
+
+534
+00:10:19,190 --> 00:10:19,200
+Willison's lethal triquetra.
+ 
+
+535
+00:10:19,200 --> 00:10:20,270
+Willison's lethal triquetra.
+In case you don't know the lethal
+
+536
+00:10:20,270 --> 00:10:20,280
+In case you don't know the lethal
+ 
+
+537
+00:10:20,280 --> 00:10:22,310
+In case you don't know the lethal
+triquetra, it's a security risk model
+
+538
+00:10:22,310 --> 00:10:22,320
+triquetra, it's a security risk model
+ 
+
+539
+00:10:22,320 --> 00:10:24,470
+triquetra, it's a security risk model
+that combines three factors: private
+
+540
+00:10:24,470 --> 00:10:24,480
+that combines three factors: private
+ 
+
+541
+00:10:24,480 --> 00:10:27,510
+that combines three factors: private
+data, untrusted content, and external
+
+542
+00:10:27,510 --> 00:10:27,520
+data, untrusted content, and external
+ 
+
+543
+00:10:27,520 --> 00:10:29,390
+data, untrusted content, and external
+communications.
+
+544
+00:10:29,390 --> 00:10:29,400
+communications.
+ 
+
+545
+00:10:29,400 --> 00:10:31,030
+communications.
+I initially thought we only broke the
+
+546
+00:10:31,030 --> 00:10:31,040
+I initially thought we only broke the
+ 
+
+547
+00:10:31,040 --> 00:10:33,470
+I initially thought we only broke the
+lethal triquetra, and it doesn't, not
+
+548
+00:10:33,470 --> 00:10:33,480
+lethal triquetra, and it doesn't, not
+ 
+
+549
+00:10:33,480 --> 00:10:35,070
+lethal triquetra, and it doesn't, not
+fully. It removes the natural
+
+550
+00:10:35,070 --> 00:10:35,080
+fully. It removes the natural
+ 
+
+551
+00:10:35,080 --> 00:10:37,230
+fully. It removes the natural
+exfiltration circle channels, but the
+
+552
+00:10:37,230 --> 00:10:37,240
+exfiltration circle channels, but the
+ 
+
+553
+00:10:37,240 --> 00:10:39,710
+exfiltration circle channels, but the
+third leg is any ability to communicate
+
+554
+00:10:39,710 --> 00:10:39,720
+third leg is any ability to communicate
+ 
+
+555
+00:10:39,720 --> 00:10:40,950
+third leg is any ability to communicate
+externally,
+
+556
+00:10:40,950 --> 00:10:40,960
+externally,
+ 
+
+557
+00:10:40,960 --> 00:10:44,950
+externally,
+and shell access still has that.
+
+558
+00:10:44,950 --> 00:10:44,960
+
+ 
+
+559
+00:10:44,960 --> 00:10:47,550
+
+In short, the system isn't fireproof,
+
+560
+00:10:47,550 --> 00:10:47,560
+In short, the system isn't fireproof,
+ 
+
+561
+00:10:47,560 --> 00:10:49,590
+In short, the system isn't fireproof,
+and I'm not claiming that. Even in the
+
+562
+00:10:49,590 --> 00:10:49,600
+and I'm not claiming that. Even in the
+ 
+
+563
+00:10:49,600 --> 00:10:51,670
+and I'm not claiming that. Even in the
+best-case scenario, I'm still sending
+
+564
+00:10:51,670 --> 00:10:51,680
+best-case scenario, I'm still sending
+ 
+
+565
+00:10:51,680 --> 00:10:53,550
+best-case scenario, I'm still sending
+data to Anthropic
+
+566
+00:10:53,550 --> 00:10:53,560
+data to Anthropic
+ 
+
+567
+00:10:53,560 --> 00:10:55,790
+data to Anthropic
+on a network that's mostly open,
+
+568
+00:10:55,790 --> 00:10:55,800
+on a network that's mostly open,
+ 
+
+569
+00:10:55,800 --> 00:10:57,350
+on a network that's mostly open,
+with a lot more information lying around
+
+570
+00:10:57,350 --> 00:10:57,360
+with a lot more information lying around
+ 
+
+571
+00:10:57,360 --> 00:11:00,710
+with a lot more information lying around
+that is strictly speaking required.
+
+572
+00:11:00,710 --> 00:11:00,720
+that is strictly speaking required.
+ 
+
+573
+00:11:00,720 --> 00:11:02,950
+that is strictly speaking required.
+I'm not claiming the system is secure.
+
+574
+00:11:02,950 --> 00:11:02,960
+I'm not claiming the system is secure.
+ 
+
+575
+00:11:02,960 --> 00:11:04,390
+I'm not claiming the system is secure.
+I'm claiming that I've thought about
+
+576
+00:11:04,390 --> 00:11:04,400
+I'm claiming that I've thought about
+ 
+
+577
+00:11:04,400 --> 00:11:05,950
+I'm claiming that I've thought about
+where it isn't, and I've decided which
+
+578
+00:11:05,950 --> 00:11:05,960
+where it isn't, and I've decided which
+ 
+
+579
+00:11:05,960 --> 00:11:07,829
+where it isn't, and I've decided which
+risks I'm willing to carry.
+
+580
+00:11:07,829 --> 00:11:07,839
+risks I'm willing to carry.
+ 
+
+581
+00:11:07,839 --> 00:11:09,630
+risks I'm willing to carry.
+It's different from not knowing.
+
+582
+00:11:09,630 --> 00:11:09,640
+It's different from not knowing.
+ 
+
+583
+00:11:09,640 --> 00:11:11,390
+It's different from not knowing.
+The worst security posture is the one
+
+584
+00:11:11,390 --> 00:11:11,400
+The worst security posture is the one
+ 
+
+585
+00:11:11,400 --> 00:11:14,230
+The worst security posture is the one
+you haven't examined.
+
+586
+00:11:14,230 --> 00:11:14,240
+you haven't examined.
+ 
+
+587
+00:11:14,240 --> 00:11:15,790
+you haven't examined.
+With that said, I still think there's
+
+588
+00:11:15,790 --> 00:11:15,800
+With that said, I still think there's
+ 
+
+589
+00:11:15,800 --> 00:11:17,230
+With that said, I still think there's
+something worthwhile to be learned from
+
+590
+00:11:17,230 --> 00:11:17,240
+something worthwhile to be learned from
+ 
+
+591
+00:11:17,240 --> 00:11:18,630
+something worthwhile to be learned from
+all this.
+
+592
+00:11:18,630 --> 00:11:18,640
+all this.
+ 
+
+593
+00:11:18,640 --> 00:11:19,910
+all this.
+Your digital exhaust is the most
+
+594
+00:11:19,910 --> 00:11:19,920
+Your digital exhaust is the most
+ 
+
+595
+00:11:19,920 --> 00:11:21,910
+Your digital exhaust is the most
+underused data set you own.
+
+596
+00:11:21,910 --> 00:11:21,920
+underused data set you own.
+ 
+
+597
+00:11:21,920 --> 00:11:23,350
+underused data set you own.
+Reflect on it and use it to make
+
+598
+00:11:23,350 --> 00:11:23,360
+Reflect on it and use it to make
+ 
+
+599
+00:11:23,360 --> 00:11:25,990
+Reflect on it and use it to make
+yourself better.
+
+600
+00:11:25,990 --> 00:11:26,000
+yourself better.
+ 
+
+601
+00:11:26,000 --> 00:11:28,880
+yourself better.
+Thanks for listening.
+

@@ -1,0 +1,5535 @@
+1
+00:00:03,720 --> 00:00:05,430
+
+What happens when you have dozen of
+
+2
+00:00:05,430 --> 00:00:05,440
+What happens when you have dozen of
+ 
+
+3
+00:00:05,440 --> 00:00:07,390
+What happens when you have dozen of
+teams across three continents all
+
+4
+00:00:07,390 --> 00:00:07,400
+teams across three continents all
+ 
+
+5
+00:00:07,400 --> 00:00:09,910
+teams across three continents all
+building AI agents, each one wiring up
+
+6
+00:00:09,910 --> 00:00:09,920
+building AI agents, each one wiring up
+ 
+
+7
+00:00:09,920 --> 00:00:11,710
+building AI agents, each one wiring up
+their own connections, reinventing their
+
+8
+00:00:11,710 --> 00:00:11,720
+their own connections, reinventing their
+ 
+
+9
+00:00:11,720 --> 00:00:13,590
+their own connections, reinventing their
+own security model, deploying their own
+
+10
+00:00:13,590 --> 00:00:13,600
+own security model, deploying their own
+ 
+
+11
+00:00:13,600 --> 00:00:15,910
+own security model, deploying their own
+infrastructures? You get chaos.
+
+12
+00:00:15,910 --> 00:00:15,920
+infrastructures? You get chaos.
+ 
+
+13
+00:00:15,920 --> 00:00:18,270
+infrastructures? You get chaos.
+Hi, I'm Sonny Merla, Global Data Science
+
+14
+00:00:18,270 --> 00:00:18,280
+Hi, I'm Sonny Merla, Global Data Science
+ 
+
+15
+00:00:18,280 --> 00:00:20,510
+Hi, I'm Sonny Merla, Global Data Science
+and AI Manager at Amplifon, and I'm here
+
+16
+00:00:20,510 --> 00:00:20,520
+and AI Manager at Amplifon, and I'm here
+ 
+
+17
+00:00:20,520 --> 00:00:22,630
+and AI Manager at Amplifon, and I'm here
+today with Mauro Luchetti, AI Center of
+
+18
+00:00:22,630 --> 00:00:22,640
+today with Mauro Luchetti, AI Center of
+ 
+
+19
+00:00:22,640 --> 00:00:25,270
+today with Mauro Luchetti, AI Center of
+Excellence Manager, and Mattia Redaelli,
+
+20
+00:00:25,270 --> 00:00:25,280
+Excellence Manager, and Mattia Redaelli,
+ 
+
+21
+00:00:25,280 --> 00:00:27,430
+Excellence Manager, and Mattia Redaelli,
+AI Engineer at Quantica, the team that
+
+22
+00:00:27,430 --> 00:00:27,440
+AI Engineer at Quantica, the team that
+ 
+
+23
+00:00:27,440 --> 00:00:29,150
+AI Engineer at Quantica, the team that
+design and build the technical solution
+
+24
+00:00:29,150 --> 00:00:29,160
+design and build the technical solution
+ 
+
+25
+00:00:29,160 --> 00:00:31,150
+design and build the technical solution
+that we are about to describe.
+
+26
+00:00:31,150 --> 00:00:31,160
+that we are about to describe.
+ 
+
+27
+00:00:31,160 --> 00:00:32,910
+that we are about to describe.
+Today, we are going to show you how
+
+28
+00:00:32,910 --> 00:00:32,920
+Today, we are going to show you how
+ 
+
+29
+00:00:32,920 --> 00:00:35,150
+Today, we are going to show you how
+Amplifon tackled down this problem by
+
+30
+00:00:35,150 --> 00:00:35,160
+Amplifon tackled down this problem by
+ 
+
+31
+00:00:35,160 --> 00:00:38,110
+Amplifon tackled down this problem by
+launching their own Amplify program, and
+
+32
+00:00:38,110 --> 00:00:38,120
+launching their own Amplify program, and
+ 
+
+33
+00:00:38,120 --> 00:00:40,230
+launching their own Amplify program, and
+specifically how we design an
+
+34
+00:00:40,230 --> 00:00:40,240
+specifically how we design an
+ 
+
+35
+00:00:40,240 --> 00:00:42,990
+specifically how we design an
+enterprise-grade registry system for MCP
+
+36
+00:00:42,990 --> 00:00:43,000
+enterprise-grade registry system for MCP
+ 
+
+37
+00:00:43,000 --> 00:00:45,070
+enterprise-grade registry system for MCP
+and A2A agents.
+
+38
+00:00:45,070 --> 00:00:45,080
+and A2A agents.
+ 
+
+39
+00:00:45,080 --> 00:00:46,790
+and A2A agents.
+For who don't know Amplifon, Amplifon is
+
+40
+00:00:46,790 --> 00:00:46,800
+For who don't know Amplifon, Amplifon is
+ 
+
+41
+00:00:46,800 --> 00:00:48,950
+For who don't know Amplifon, Amplifon is
+the world leader in hearing care
+
+42
+00:00:48,950 --> 00:00:48,960
+the world leader in hearing care
+ 
+
+43
+00:00:48,960 --> 00:00:51,470
+the world leader in hearing care
+solutions. We operate across 26
+
+44
+00:00:51,470 --> 00:00:51,480
+solutions. We operate across 26
+ 
+
+45
+00:00:51,480 --> 00:00:53,750
+solutions. We operate across 26
+countries around the globe. We are more
+
+46
+00:00:53,750 --> 00:00:53,760
+countries around the globe. We are more
+ 
+
+47
+00:00:53,760 --> 00:00:56,230
+countries around the globe. We are more
+than 20,000 people, and we operate over
+
+48
+00:00:56,230 --> 00:00:56,240
+than 20,000 people, and we operate over
+ 
+
+49
+00:00:56,240 --> 00:00:58,950
+than 20,000 people, and we operate over
+10,000 stores across the globe.
+
+50
+00:00:58,950 --> 00:00:58,960
+10,000 stores across the globe.
+ 
+
+51
+00:00:58,960 --> 00:01:01,230
+10,000 stores across the globe.
+We are in the AI transformation. Right
+
+52
+00:01:01,230 --> 00:01:01,240
+We are in the AI transformation. Right
+ 
+
+53
+00:01:01,240 --> 00:01:03,270
+We are in the AI transformation. Right
+now, we are experimenting with AI
+
+54
+00:01:03,270 --> 00:01:03,280
+now, we are experimenting with AI
+ 
+
+55
+00:01:03,280 --> 00:01:05,670
+now, we are experimenting with AI
+solutions, technologies, and so we are
+
+56
+00:01:05,670 --> 00:01:05,680
+solutions, technologies, and so we are
+ 
+
+57
+00:01:05,680 --> 00:01:07,950
+solutions, technologies, and so we are
+facing challenges like building
+
+58
+00:01:07,950 --> 00:01:07,960
+facing challenges like building
+ 
+
+59
+00:01:07,960 --> 00:01:10,110
+facing challenges like building
+solutions that are stable over time, and
+
+60
+00:01:10,110 --> 00:01:10,120
+solutions that are stable over time, and
+ 
+
+61
+00:01:10,120 --> 00:01:12,670
+solutions that are stable over time, and
+understanding how to make them scale
+
+62
+00:01:12,670 --> 00:01:12,680
+understanding how to make them scale
+ 
+
+63
+00:01:12,680 --> 00:01:15,150
+understanding how to make them scale
+responsibly accordingly to guidelines
+
+64
+00:01:15,150 --> 00:01:15,160
+responsibly accordingly to guidelines
+ 
+
+65
+00:01:15,160 --> 00:01:17,110
+responsibly accordingly to guidelines
+that are defined centrally.
+
+66
+00:01:17,110 --> 00:01:17,120
+that are defined centrally.
+ 
+
+67
+00:01:17,120 --> 00:01:19,750
+that are defined centrally.
+So, how Amplifon decided to adopt AI at
+
+68
+00:01:19,750 --> 00:01:19,760
+So, how Amplifon decided to adopt AI at
+ 
+
+69
+00:01:19,760 --> 00:01:22,630
+So, how Amplifon decided to adopt AI at
+scale? We launched in January 2025 the
+
+70
+00:01:22,630 --> 00:01:22,640
+scale? We launched in January 2025 the
+ 
+
+71
+00:01:22,640 --> 00:01:24,070
+scale? We launched in January 2025 the
+Amplify program.
+
+72
+00:01:24,070 --> 00:01:24,080
+Amplify program.
+ 
+
+73
+00:01:24,080 --> 00:01:25,430
+Amplify program.
+It's a global and cross-functional
+
+74
+00:01:25,430 --> 00:01:25,440
+It's a global and cross-functional
+ 
+
+75
+00:01:25,440 --> 00:01:28,630
+It's a global and cross-functional
+program designed to set the rules for
+
+76
+00:01:28,630 --> 00:01:28,640
+program designed to set the rules for
+ 
+
+77
+00:01:28,640 --> 00:01:31,070
+program designed to set the rules for
+the AI adoption. And it is basic
+
+78
+00:01:31,070 --> 00:01:31,080
+the AI adoption. And it is basic
+ 
+
+79
+00:01:31,080 --> 00:01:34,270
+the AI adoption. And it is basic
+basically composed by an operating model
+
+80
+00:01:34,270 --> 00:01:34,280
+basically composed by an operating model
+ 
+
+81
+00:01:34,280 --> 00:01:36,150
+basically composed by an operating model
+and an execution plan. The operating
+
+82
+00:01:36,150 --> 00:01:36,160
+and an execution plan. The operating
+ 
+
+83
+00:01:36,160 --> 00:01:39,030
+and an execution plan. The operating
+model is based on two main sources, the
+
+84
+00:01:39,030 --> 00:01:39,040
+model is based on two main sources, the
+ 
+
+85
+00:01:39,040 --> 00:01:40,830
+model is based on two main sources, the
+control tower and the committee. The
+
+86
+00:01:40,830 --> 00:01:40,840
+control tower and the committee. The
+ 
+
+87
+00:01:40,840 --> 00:01:42,790
+control tower and the committee. The
+control tower is a limited set of people
+
+88
+00:01:42,790 --> 00:01:42,800
+control tower is a limited set of people
+ 
+
+89
+00:01:42,800 --> 00:01:45,310
+control tower is a limited set of people
+including chief decide deciding what are
+
+90
+00:01:45,310 --> 00:01:45,320
+including chief decide deciding what are
+ 
+
+91
+00:01:45,320 --> 00:01:47,150
+including chief decide deciding what are
+the guidelines for security, legal,
+
+92
+00:01:47,150 --> 00:01:47,160
+the guidelines for security, legal,
+ 
+
+93
+00:01:47,160 --> 00:01:49,670
+the guidelines for security, legal,
+technology, but also what are the
+
+94
+00:01:49,670 --> 00:01:49,680
+technology, but also what are the
+ 
+
+95
+00:01:49,680 --> 00:01:52,390
+technology, but also what are the
+strategy the the focus for the strategy,
+
+96
+00:01:52,390 --> 00:01:52,400
+strategy the the focus for the strategy,
+ 
+
+97
+00:01:52,400 --> 00:01:54,270
+strategy the the focus for the strategy,
+and so the use cases
+
+98
+00:01:54,270 --> 00:01:54,280
+and so the use cases
+ 
+
+99
+00:01:54,280 --> 00:01:56,390
+and so the use cases
+to develop us first. Then there is the
+
+100
+00:01:56,390 --> 00:01:56,400
+to develop us first. Then there is the
+ 
+
+101
+00:01:56,400 --> 00:01:59,310
+to develop us first. Then there is the
+committee that has the responsibility
+
+102
+00:01:59,310 --> 00:01:59,320
+committee that has the responsibility
+ 
+
+103
+00:01:59,320 --> 00:02:01,790
+committee that has the responsibility
+for running the strategy in the
+
+104
+00:02:01,790 --> 00:02:01,800
+for running the strategy in the
+ 
+
+105
+00:02:01,800 --> 00:02:03,750
+for running the strategy in the
+countries, but also in the the corporate
+
+106
+00:02:03,750 --> 00:02:03,760
+countries, but also in the the corporate
+ 
+
+107
+00:02:03,760 --> 00:02:06,590
+countries, but also in the the corporate
+side. So, prioritizing also the use
+
+108
+00:02:06,590 --> 00:02:06,600
+side. So, prioritizing also the use
+ 
+
+109
+00:02:06,600 --> 00:02:09,109
+side. So, prioritizing also the use
+cases more granularly, those are to to
+
+110
+00:02:09,109 --> 00:02:09,119
+cases more granularly, those are to to
+ 
+
+111
+00:02:09,119 --> 00:02:11,350
+cases more granularly, those are to to
+release the value to the organization.
+
+112
+00:02:11,350 --> 00:02:11,360
+release the value to the organization.
+ 
+
+113
+00:02:11,360 --> 00:02:13,190
+release the value to the organization.
+Which are the main focus of the Amplify
+
+114
+00:02:13,190 --> 00:02:13,200
+Which are the main focus of the Amplify
+ 
+
+115
+00:02:13,200 --> 00:02:15,110
+Which are the main focus of the Amplify
+program? We have three of them,
+
+116
+00:02:15,110 --> 00:02:15,120
+program? We have three of them,
+ 
+
+117
+00:02:15,120 --> 00:02:17,390
+program? We have three of them,
+governance, platform, and factory. So,
+
+118
+00:02:17,390 --> 00:02:17,400
+governance, platform, and factory. So,
+ 
+
+119
+00:02:17,400 --> 00:02:18,910
+governance, platform, and factory. So,
+the governance, we want to ensure the
+
+120
+00:02:18,910 --> 00:02:18,920
+the governance, we want to ensure the
+ 
+
+121
+00:02:18,920 --> 00:02:21,270
+the governance, we want to ensure the
+alignment with AI regulatory,
+
+122
+00:02:21,270 --> 00:02:21,280
+alignment with AI regulatory,
+ 
+
+123
+00:02:21,280 --> 00:02:23,110
+alignment with AI regulatory,
+also the strategy and the guidelines
+
+124
+00:02:23,110 --> 00:02:23,120
+also the strategy and the guidelines
+ 
+
+125
+00:02:23,120 --> 00:02:25,550
+also the strategy and the guidelines
+that we define centrally. So, it's also
+
+126
+00:02:25,550 --> 00:02:25,560
+that we define centrally. So, it's also
+ 
+
+127
+00:02:25,560 --> 00:02:28,510
+that we define centrally. So, it's also
+a matter of make the people aware of the
+
+128
+00:02:28,510 --> 00:02:28,520
+a matter of make the people aware of the
+ 
+
+129
+00:02:28,520 --> 00:02:30,710
+a matter of make the people aware of the
+existence of a program, the also the
+
+130
+00:02:30,710 --> 00:02:30,720
+existence of a program, the also the
+ 
+
+131
+00:02:30,720 --> 00:02:33,470
+existence of a program, the also the
+rules of the play, and also then
+
+132
+00:02:33,470 --> 00:02:33,480
+rules of the play, and also then
+ 
+
+133
+00:02:33,480 --> 00:02:36,030
+rules of the play, and also then
+make all the people informed of how we
+
+134
+00:02:36,030 --> 00:02:36,040
+make all the people informed of how we
+ 
+
+135
+00:02:36,040 --> 00:02:38,310
+make all the people informed of how we
+deliver and roll out the value. Then
+
+136
+00:02:38,310 --> 00:02:38,320
+deliver and roll out the value. Then
+ 
+
+137
+00:02:38,320 --> 00:02:41,030
+deliver and roll out the value. Then
+there is the platform side. So, we have
+
+138
+00:02:41,030 --> 00:02:41,040
+there is the platform side. So, we have
+ 
+
+139
+00:02:41,040 --> 00:02:43,550
+there is the platform side. So, we have
+to set up the infrastructure on which we
+
+140
+00:02:43,550 --> 00:02:43,560
+to set up the infrastructure on which we
+ 
+
+141
+00:02:43,560 --> 00:02:46,310
+to set up the infrastructure on which we
+operate as developers and implementation
+
+142
+00:02:46,310 --> 00:02:46,320
+operate as developers and implementation
+ 
+
+143
+00:02:46,320 --> 00:02:49,430
+operate as developers and implementation
+teams. So, certifying infrastructures
+
+144
+00:02:49,430 --> 00:02:49,440
+teams. So, certifying infrastructures
+ 
+
+145
+00:02:49,440 --> 00:02:52,590
+teams. So, certifying infrastructures
+and way of working to deliver processes
+
+146
+00:02:52,590 --> 00:02:52,600
+and way of working to deliver processes
+ 
+
+147
+00:02:52,600 --> 00:02:55,470
+and way of working to deliver processes
+and also services to
+
+148
+00:02:55,470 --> 00:02:55,480
+and also services to
+ 
+
+149
+00:02:55,480 --> 00:02:57,950
+and also services to
+scale AI application. Then we have the
+
+150
+00:02:57,950 --> 00:02:57,960
+scale AI application. Then we have the
+ 
+
+151
+00:02:57,960 --> 00:02:59,790
+scale AI application. Then we have the
+the factory. So, this is the most
+
+152
+00:02:59,790 --> 00:02:59,800
+the factory. So, this is the most
+ 
+
+153
+00:02:59,800 --> 00:03:00,950
+the factory. So, this is the most
+practical
+
+154
+00:03:00,950 --> 00:03:00,960
+practical
+ 
+
+155
+00:03:00,960 --> 00:03:02,590
+practical
+part of the story. So, we have the
+
+156
+00:03:02,590 --> 00:03:02,600
+part of the story. So, we have the
+ 
+
+157
+00:03:02,600 --> 00:03:05,710
+part of the story. So, we have the
+development teams that needs to have
+
+158
+00:03:05,710 --> 00:03:05,720
+development teams that needs to have
+ 
+
+159
+00:03:05,720 --> 00:03:08,750
+development teams that needs to have
+a focus on rolling out solutions to the
+
+160
+00:03:08,750 --> 00:03:08,760
+a focus on rolling out solutions to the
+ 
+
+161
+00:03:08,760 --> 00:03:12,270
+a focus on rolling out solutions to the
+market, also caring about the rollout
+
+162
+00:03:12,270 --> 00:03:12,280
+market, also caring about the rollout
+ 
+
+163
+00:03:12,280 --> 00:03:14,270
+market, also caring about the rollout
+across countries that is very important
+
+164
+00:03:14,270 --> 00:03:14,280
+across countries that is very important
+ 
+
+165
+00:03:14,280 --> 00:03:16,590
+across countries that is very important
+for for Amplifon. So, thinking about the
+
+166
+00:03:16,590 --> 00:03:16,600
+for for Amplifon. So, thinking about the
+ 
+
+167
+00:03:16,600 --> 00:03:19,430
+for for Amplifon. So, thinking about the
+solution as a scalable scalable and also
+
+168
+00:03:19,430 --> 00:03:19,440
+solution as a scalable scalable and also
+ 
+
+169
+00:03:19,440 --> 00:03:22,470
+solution as a scalable scalable and also
+reusable across different domains.
+
+170
+00:03:22,470 --> 00:03:22,480
+reusable across different domains.
+ 
+
+171
+00:03:22,480 --> 00:03:24,030
+reusable across different domains.
+So, which are the main problems that we
+
+172
+00:03:24,030 --> 00:03:24,040
+So, which are the main problems that we
+ 
+
+173
+00:03:24,040 --> 00:03:26,270
+So, which are the main problems that we
+see as an organization that tries to
+
+174
+00:03:26,270 --> 00:03:26,280
+see as an organization that tries to
+ 
+
+175
+00:03:26,280 --> 00:03:28,510
+see as an organization that tries to
+roll out AI at scale in a pervasive way
+
+176
+00:03:28,510 --> 00:03:28,520
+roll out AI at scale in a pervasive way
+ 
+
+177
+00:03:28,520 --> 00:03:30,510
+roll out AI at scale in a pervasive way
+in the organization? So, we foresee for
+
+178
+00:03:30,510 --> 00:03:30,520
+in the organization? So, we foresee for
+ 
+
+179
+00:03:30,520 --> 00:03:32,950
+in the organization? So, we foresee for
+sure maintenance and operations
+
+180
+00:03:32,950 --> 00:03:32,960
+sure maintenance and operations
+ 
+
+181
+00:03:32,960 --> 00:03:35,430
+sure maintenance and operations
+problems, governance and compliance
+
+182
+00:03:35,430 --> 00:03:35,440
+problems, governance and compliance
+ 
+
+183
+00:03:35,440 --> 00:03:37,430
+problems, governance and compliance
+problems, but also enterprise scaling.
+
+184
+00:03:37,430 --> 00:03:37,440
+problems, but also enterprise scaling.
+ 
+
+185
+00:03:37,440 --> 00:03:39,510
+problems, but also enterprise scaling.
+So, how the developers
+
+186
+00:03:39,510 --> 00:03:39,520
+So, how the developers
+ 
+
+187
+00:03:39,520 --> 00:03:40,710
+So, how the developers
+needs to
+
+188
+00:03:40,710 --> 00:03:40,720
+needs to
+ 
+
+189
+00:03:40,720 --> 00:03:42,670
+needs to
+develop to make the the solution stable
+
+190
+00:03:42,670 --> 00:03:42,680
+develop to make the the solution stable
+ 
+
+191
+00:03:42,680 --> 00:03:43,990
+develop to make the the solution stable
+over time.
+
+192
+00:03:43,990 --> 00:03:44,000
+over time.
+ 
+
+193
+00:03:44,000 --> 00:03:44,950
+over time.
+Um
+
+194
+00:03:44,950 --> 00:03:44,960
+Um
+ 
+
+195
+00:03:44,960 --> 00:03:46,110
+Um
+Starting from the maintenance and
+
+196
+00:03:46,110 --> 00:03:46,120
+Starting from the maintenance and
+ 
+
+197
+00:03:46,120 --> 00:03:48,110
+Starting from the maintenance and
+operations side, uh
+
+198
+00:03:48,110 --> 00:03:48,120
+operations side, uh
+ 
+
+199
+00:03:48,120 --> 00:03:50,190
+operations side, uh
+even the short life cycle of the LLM
+
+200
+00:03:50,190 --> 00:03:50,200
+even the short life cycle of the LLM
+ 
+
+201
+00:03:50,200 --> 00:03:51,990
+even the short life cycle of the LLM
+models that are at the core of the AI
+
+202
+00:03:51,990 --> 00:03:52,000
+models that are at the core of the AI
+ 
+
+203
+00:03:52,000 --> 00:03:53,670
+models that are at the core of the AI
+application and the AI agents that we
+
+204
+00:03:53,670 --> 00:03:53,680
+application and the AI agents that we
+ 
+
+205
+00:03:53,680 --> 00:03:56,110
+application and the AI agents that we
+develop and roll out, we want to be sure
+
+206
+00:03:56,110 --> 00:03:56,120
+develop and roll out, we want to be sure
+ 
+
+207
+00:03:56,120 --> 00:03:59,230
+develop and roll out, we want to be sure
+that we are able to address
+
+208
+00:03:59,230 --> 00:03:59,240
+that we are able to address
+ 
+
+209
+00:03:59,240 --> 00:04:02,630
+that we are able to address
+the the usage of this kind of LLM LLMs
+
+210
+00:04:02,630 --> 00:04:02,640
+the the usage of this kind of LLM LLMs
+ 
+
+211
+00:04:02,640 --> 00:04:05,190
+the the usage of this kind of LLM LLMs
+across the the use cases that we we roll
+
+212
+00:04:05,190 --> 00:04:05,200
+across the the use cases that we we roll
+ 
+
+213
+00:04:05,200 --> 00:04:07,470
+across the the use cases that we we roll
+out. So, we want to be ready and
+
+214
+00:04:07,470 --> 00:04:07,480
+out. So, we want to be ready and
+ 
+
+215
+00:04:07,480 --> 00:04:09,990
+out. So, we want to be ready and
+prepared to act promptly every time we
+
+216
+00:04:09,990 --> 00:04:10,000
+prepared to act promptly every time we
+ 
+
+217
+00:04:10,000 --> 00:04:12,310
+prepared to act promptly every time we
+we see a disruption in the model we use
+
+218
+00:04:12,310 --> 00:04:12,320
+we see a disruption in the model we use
+ 
+
+219
+00:04:12,320 --> 00:04:14,830
+we see a disruption in the model we use
+in the use case. Um on the other side
+
+220
+00:04:14,830 --> 00:04:14,840
+in the use case. Um on the other side
+ 
+
+221
+00:04:14,840 --> 00:04:16,310
+in the use case. Um on the other side
+with the governance and compliance, we
+
+222
+00:04:16,310 --> 00:04:16,320
+with the governance and compliance, we
+ 
+
+223
+00:04:16,320 --> 00:04:18,470
+with the governance and compliance, we
+we need to be sure
+
+224
+00:04:18,470 --> 00:04:18,480
+we need to be sure
+ 
+
+225
+00:04:18,480 --> 00:04:20,910
+we need to be sure
+to know about where we use AI in the
+
+226
+00:04:20,910 --> 00:04:20,920
+to know about where we use AI in the
+ 
+
+227
+00:04:20,920 --> 00:04:22,230
+to know about where we use AI in the
+organization, what are the main use
+
+228
+00:04:22,230 --> 00:04:22,240
+organization, what are the main use
+ 
+
+229
+00:04:22,240 --> 00:04:24,670
+organization, what are the main use
+cases, also for the regulatory
+
+230
+00:04:24,670 --> 00:04:24,680
+cases, also for the regulatory
+ 
+
+231
+00:04:24,680 --> 00:04:27,550
+cases, also for the regulatory
+point of view, but also for the usage
+
+232
+00:04:27,550 --> 00:04:27,560
+point of view, but also for the usage
+ 
+
+233
+00:04:27,560 --> 00:04:29,390
+point of view, but also for the usage
+across the organization. So, we want to
+
+234
+00:04:29,390 --> 00:04:29,400
+across the organization. So, we want to
+ 
+
+235
+00:04:29,400 --> 00:04:31,910
+across the organization. So, we want to
+have a catalog. We want to have a way to
+
+236
+00:04:31,910 --> 00:04:31,920
+have a catalog. We want to have a way to
+ 
+
+237
+00:04:31,920 --> 00:04:33,990
+have a catalog. We want to have a way to
+understand also the assets used by the
+
+238
+00:04:33,990 --> 00:04:34,000
+understand also the assets used by the
+ 
+
+239
+00:04:34,000 --> 00:04:36,190
+understand also the assets used by the
+single use cases. So, what they
+
+240
+00:04:36,190 --> 00:04:36,200
+single use cases. So, what they
+ 
+
+241
+00:04:36,200 --> 00:04:38,430
+single use cases. So, what they
+implemented, what they used
+
+242
+00:04:38,430 --> 00:04:38,440
+implemented, what they used
+ 
+
+243
+00:04:38,440 --> 00:04:41,470
+implemented, what they used
+to also create a sort of
+
+244
+00:04:41,470 --> 00:04:41,480
+to also create a sort of
+ 
+
+245
+00:04:41,480 --> 00:04:43,670
+to also create a sort of
+lineage of the information. On the other
+
+246
+00:04:43,670 --> 00:04:43,680
+lineage of the information. On the other
+ 
+
+247
+00:04:43,680 --> 00:04:46,310
+lineage of the information. On the other
+side then there is a a point related to
+
+248
+00:04:46,310 --> 00:04:46,320
+side then there is a a point related to
+ 
+
+249
+00:04:46,320 --> 00:04:48,750
+side then there is a a point related to
+the the way we develop AI solution in
+
+250
+00:04:48,750 --> 00:04:48,760
+the the way we develop AI solution in
+ 
+
+251
+00:04:48,760 --> 00:04:50,470
+the the way we develop AI solution in
+the organization across multiple teams
+
+252
+00:04:50,470 --> 00:04:50,480
+the organization across multiple teams
+ 
+
+253
+00:04:50,480 --> 00:04:51,710
+the organization across multiple teams
+that operates on different
+
+254
+00:04:51,710 --> 00:04:51,720
+that operates on different
+ 
+
+255
+00:04:51,720 --> 00:04:54,070
+that operates on different
+infrastructures. So, we want to make the
+
+256
+00:04:54,070 --> 00:04:54,080
+infrastructures. So, we want to make the
+ 
+
+257
+00:04:54,080 --> 00:04:55,430
+infrastructures. So, we want to make the
+developments
+
+258
+00:04:55,430 --> 00:04:55,440
+developments
+ 
+
+259
+00:04:55,440 --> 00:04:56,830
+developments
+at least
+
+260
+00:04:56,830 --> 00:04:56,840
+at least
+ 
+
+261
+00:04:56,840 --> 00:04:59,390
+at least
+in terms of governance centralized. Then
+
+262
+00:04:59,390 --> 00:04:59,400
+in terms of governance centralized. Then
+ 
+
+263
+00:04:59,400 --> 00:05:01,750
+in terms of governance centralized. Then
+so with clear guidelines,
+
+264
+00:05:01,750 --> 00:05:01,760
+so with clear guidelines,
+ 
+
+265
+00:05:01,760 --> 00:05:03,430
+so with clear guidelines,
+reusable also on different
+
+266
+00:05:03,430 --> 00:05:03,440
+reusable also on different
+ 
+
+267
+00:05:03,440 --> 00:05:05,510
+reusable also on different
+infrastructures and different teams.
+
+268
+00:05:05,510 --> 00:05:05,520
+infrastructures and different teams.
+ 
+
+269
+00:05:05,520 --> 00:05:08,270
+infrastructures and different teams.
+This is the the goal. So, we we want to
+
+270
+00:05:08,270 --> 00:05:08,280
+This is the the goal. So, we we want to
+ 
+
+271
+00:05:08,280 --> 00:05:10,830
+This is the the goal. So, we we want to
+make easy the life of developers to
+
+272
+00:05:10,830 --> 00:05:10,840
+make easy the life of developers to
+ 
+
+273
+00:05:10,840 --> 00:05:12,710
+make easy the life of developers to
+focus on the business logic inside the
+
+274
+00:05:12,710 --> 00:05:12,720
+focus on the business logic inside the
+ 
+
+275
+00:05:12,720 --> 00:05:14,910
+focus on the business logic inside the
+use cases, avoiding to reinvent the
+
+276
+00:05:14,910 --> 00:05:14,920
+use cases, avoiding to reinvent the
+ 
+
+277
+00:05:14,920 --> 00:05:16,910
+use cases, avoiding to reinvent the
+wheel every time we need to to take to
+
+278
+00:05:16,910 --> 00:05:16,920
+wheel every time we need to to take to
+ 
+
+279
+00:05:16,920 --> 00:05:19,430
+wheel every time we need to to take to
+take care about the security,
+
+280
+00:05:19,430 --> 00:05:19,440
+take care about the security,
+ 
+
+281
+00:05:19,440 --> 00:05:21,430
+take care about the security,
+but also the deployment
+
+282
+00:05:21,430 --> 00:05:21,440
+but also the deployment
+ 
+
+283
+00:05:21,440 --> 00:05:24,670
+but also the deployment
+and maintenance of the the use cases.
+
+284
+00:05:24,670 --> 00:05:24,680
+and maintenance of the the use cases.
+ 
+
+285
+00:05:24,680 --> 00:05:27,150
+and maintenance of the the use cases.
+So, now I let Mauro to introduce how we
+
+286
+00:05:27,150 --> 00:05:27,160
+So, now I let Mauro to introduce how we
+ 
+
+287
+00:05:27,160 --> 00:05:30,430
+So, now I let Mauro to introduce how we
+address these topics at Amplifon.
+
+288
+00:05:30,430 --> 00:05:30,440
+address these topics at Amplifon.
+ 
+
+289
+00:05:30,440 --> 00:05:32,870
+address these topics at Amplifon.
+Thank you, Sonny, and let's try to bring
+
+290
+00:05:32,870 --> 00:05:32,880
+Thank you, Sonny, and let's try to bring
+ 
+
+291
+00:05:32,880 --> 00:05:35,230
+Thank you, Sonny, and let's try to bring
+more technical point of view in this.
+
+292
+00:05:35,230 --> 00:05:35,240
+more technical point of view in this.
+ 
+
+293
+00:05:35,240 --> 00:05:38,110
+more technical point of view in this.
+The first component that we built in
+
+294
+00:05:38,110 --> 00:05:38,120
+The first component that we built in
+ 
+
+295
+00:05:38,120 --> 00:05:40,790
+The first component that we built in
+order to, you know, let's try try to to
+
+296
+00:05:40,790 --> 00:05:40,800
+order to, you know, let's try try to to
+ 
+
+297
+00:05:40,800 --> 00:05:43,630
+order to, you know, let's try try to to
+address those problems are an AI
+
+298
+00:05:43,630 --> 00:05:43,640
+address those problems are an AI
+ 
+
+299
+00:05:43,640 --> 00:05:44,910
+address those problems are an AI
+gateway.
+
+300
+00:05:44,910 --> 00:05:44,920
+gateway.
+ 
+
+301
+00:05:44,920 --> 00:05:47,110
+gateway.
+First of all, it brings us unified
+
+302
+00:05:47,110 --> 00:05:47,120
+First of all, it brings us unified
+ 
+
+303
+00:05:47,120 --> 00:05:50,150
+First of all, it brings us unified
+access. So, all the
+
+304
+00:05:50,150 --> 00:05:50,160
+access. So, all the
+ 
+
+305
+00:05:50,160 --> 00:05:52,390
+access. So, all the
+developers that want to use a model,
+
+306
+00:05:52,390 --> 00:05:52,400
+developers that want to use a model,
+ 
+
+307
+00:05:52,400 --> 00:05:53,750
+developers that want to use a model,
+they can
+
+308
+00:05:53,750 --> 00:05:53,760
+they can
+ 
+
+309
+00:05:53,760 --> 00:05:55,150
+they can
+use this
+
+310
+00:05:55,150 --> 00:05:55,160
+use this
+ 
+
+311
+00:05:55,160 --> 00:05:58,270
+use this
+gateway, and they can point to
+
+312
+00:05:58,270 --> 00:05:58,280
+gateway, and they can point to
+ 
+
+313
+00:05:58,280 --> 00:06:01,470
+gateway, and they can point to
+the unified endpoint, and
+
+314
+00:06:01,470 --> 00:06:01,480
+the unified endpoint, and
+ 
+
+315
+00:06:01,480 --> 00:06:05,950
+the unified endpoint, and
+use all the models that Amplifon has in
+
+316
+00:06:05,950 --> 00:06:05,960
+use all the models that Amplifon has in
+ 
+
+317
+00:06:05,960 --> 00:06:06,910
+use all the models that Amplifon has in
+in
+
+318
+00:06:06,910 --> 00:06:06,920
+in
+ 
+
+319
+00:06:06,920 --> 00:06:09,750
+in
+its catalog. Then there's a security
+
+320
+00:06:09,750 --> 00:06:09,760
+its catalog. Then there's a security
+ 
+
+321
+00:06:09,760 --> 00:06:12,230
+its catalog. Then there's a security
+aspect.
+
+322
+00:06:12,230 --> 00:06:12,240
+aspect.
+ 
+
+323
+00:06:12,240 --> 00:06:13,950
+aspect.
+If you want to use the models, you have
+
+324
+00:06:13,950 --> 00:06:13,960
+If you want to use the models, you have
+ 
+
+325
+00:06:13,960 --> 00:06:16,630
+If you want to use the models, you have
+to, you know, connect to the gateway.
+
+326
+00:06:16,630 --> 00:06:16,640
+to, you know, connect to the gateway.
+ 
+
+327
+00:06:16,640 --> 00:06:17,870
+to, you know, connect to the gateway.
+You have to
+
+328
+00:06:17,870 --> 00:06:17,880
+You have to
+ 
+
+329
+00:06:17,880 --> 00:06:21,070
+You have to
+authenticate yourself, and we have done
+
+330
+00:06:21,070 --> 00:06:21,080
+authenticate yourself, and we have done
+ 
+
+331
+00:06:21,080 --> 00:06:24,190
+authenticate yourself, and we have done
+this with the intra intra ID
+
+332
+00:06:24,190 --> 00:06:24,200
+this with the intra intra ID
+ 
+
+333
+00:06:24,200 --> 00:06:25,790
+this with the intra intra ID
+integration.
+
+334
+00:06:25,790 --> 00:06:25,800
+integration.
+ 
+
+335
+00:06:25,800 --> 00:06:28,710
+integration.
+Then there's a budgeting aspect because
+
+336
+00:06:28,710 --> 00:06:28,720
+Then there's a budgeting aspect because
+ 
+
+337
+00:06:28,720 --> 00:06:30,910
+Then there's a budgeting aspect because
+obviously Amplifon has lots of use
+
+338
+00:06:30,910 --> 00:06:30,920
+obviously Amplifon has lots of use
+ 
+
+339
+00:06:30,920 --> 00:06:33,910
+obviously Amplifon has lots of use
+cases, and if a use case came to you and
+
+340
+00:06:33,910 --> 00:06:33,920
+cases, and if a use case came to you and
+ 
+
+341
+00:06:33,920 --> 00:06:35,630
+cases, and if a use case came to you and
+asked for, you know, for budget for
+
+342
+00:06:35,630 --> 00:06:35,640
+asked for, you know, for budget for
+ 
+
+343
+00:06:35,640 --> 00:06:39,230
+asked for, you know, for budget for
+using those those models, you can set in
+
+344
+00:06:39,230 --> 00:06:39,240
+using those those models, you can set in
+ 
+
+345
+00:06:39,240 --> 00:06:40,950
+using those those models, you can set in
+this AI gateway
+
+346
+00:06:40,950 --> 00:06:40,960
+this AI gateway
+ 
+
+347
+00:06:40,960 --> 00:06:43,710
+this AI gateway
+a budget. So,
+
+348
+00:06:43,710 --> 00:06:43,720
+a budget. So,
+ 
+
+349
+00:06:43,720 --> 00:06:46,670
+a budget. So,
+a cost monthly cost, or I mean, yeah,
+
+350
+00:06:46,670 --> 00:06:46,680
+a cost monthly cost, or I mean, yeah,
+ 
+
+351
+00:06:46,680 --> 00:06:48,590
+a cost monthly cost, or I mean, yeah,
+you can set it monthly, weekly, and so
+
+352
+00:06:48,590 --> 00:06:48,600
+you can set it monthly, weekly, and so
+ 
+
+353
+00:06:48,600 --> 00:06:52,270
+you can set it monthly, weekly, and so
+on, but you can set a budget, and
+
+354
+00:06:52,270 --> 00:06:52,280
+on, but you can set a budget, and
+ 
+
+355
+00:06:52,280 --> 00:06:55,070
+on, but you can set a budget, and
+while the developers are using
+
+356
+00:06:55,070 --> 00:06:55,080
+while the developers are using
+ 
+
+357
+00:06:55,080 --> 00:06:58,190
+while the developers are using
+those budgets, it erodes, and it can
+
+358
+00:06:58,190 --> 00:06:58,200
+those budgets, it erodes, and it can
+ 
+
+359
+00:06:58,200 --> 00:07:00,670
+those budgets, it erodes, and it can
+brings to developers you know, the
+
+360
+00:07:00,670 --> 00:07:00,680
+brings to developers you know, the
+ 
+
+361
+00:07:00,680 --> 00:07:02,910
+brings to developers you know, the
+remaining part of those budgets. So,
+
+362
+00:07:02,910 --> 00:07:02,920
+remaining part of those budgets. So,
+ 
+
+363
+00:07:02,920 --> 00:07:05,190
+remaining part of those budgets. So,
+they can they can control it. And then
+
+364
+00:07:05,190 --> 00:07:05,200
+they can they can control it. And then
+ 
+
+365
+00:07:05,200 --> 00:07:08,670
+they can they can control it. And then
+there's the the the control aspect.
+
+366
+00:07:08,670 --> 00:07:08,680
+there's the the the control aspect.
+ 
+
+367
+00:07:08,680 --> 00:07:10,430
+there's the the the control aspect.
+So, all the
+
+368
+00:07:10,430 --> 00:07:10,440
+So, all the
+ 
+
+369
+00:07:10,440 --> 00:07:12,550
+So, all the
+you know, all the
+
+370
+00:07:12,550 --> 00:07:12,560
+you know, all the
+ 
+
+371
+00:07:12,560 --> 00:07:14,590
+you know, all the
+requests that
+
+372
+00:07:14,590 --> 00:07:14,600
+requests that
+ 
+
+373
+00:07:14,600 --> 00:07:17,510
+requests that
+are are done through LLM models or
+
+374
+00:07:17,510 --> 00:07:17,520
+are are done through LLM models or
+ 
+
+375
+00:07:17,520 --> 00:07:21,270
+are are done through LLM models or
+responses, all those all the analytics
+
+376
+00:07:21,270 --> 00:07:21,280
+responses, all those all the analytics
+ 
+
+377
+00:07:21,280 --> 00:07:24,470
+responses, all those all the analytics
+that we need to put in place
+
+378
+00:07:24,470 --> 00:07:24,480
+that we need to put in place
+ 
+
+379
+00:07:24,480 --> 00:07:26,830
+that we need to put in place
+on top of all the requests are done
+
+380
+00:07:26,830 --> 00:07:26,840
+on top of all the requests are done
+ 
+
+381
+00:07:26,840 --> 00:07:28,150
+on top of all the requests are done
+using
+
+382
+00:07:28,150 --> 00:07:28,160
+using
+ 
+
+383
+00:07:28,160 --> 00:07:31,270
+using
+a central auditing monitoring and
+
+384
+00:07:31,270 --> 00:07:31,280
+a central auditing monitoring and
+ 
+
+385
+00:07:31,280 --> 00:07:34,070
+a central auditing monitoring and
+analysis tools obviously connected to
+
+386
+00:07:34,070 --> 00:07:34,080
+analysis tools obviously connected to
+ 
+
+387
+00:07:34,080 --> 00:07:37,630
+analysis tools obviously connected to
+this AI gateway. And then for the
+
+388
+00:07:37,630 --> 00:07:37,640
+this AI gateway. And then for the
+ 
+
+389
+00:07:37,640 --> 00:07:39,590
+this AI gateway. And then for the
+governance part, I mean, this is the
+
+390
+00:07:39,590 --> 00:07:39,600
+governance part, I mean, this is the
+ 
+
+391
+00:07:39,600 --> 00:07:41,750
+governance part, I mean, this is the
+entry point. This is the top layer, I
+
+392
+00:07:41,750 --> 00:07:41,760
+entry point. This is the top layer, I
+ 
+
+393
+00:07:41,760 --> 00:07:43,550
+entry point. This is the top layer, I
+would say. And then we have three
+
+394
+00:07:43,550 --> 00:07:43,560
+would say. And then we have three
+ 
+
+395
+00:07:43,560 --> 00:07:46,910
+would say. And then we have three
+different registries. The first one is
+
+396
+00:07:46,910 --> 00:07:46,920
+different registries. The first one is
+ 
+
+397
+00:07:46,920 --> 00:07:49,830
+different registries. The first one is
+the MCP registry. So, as you as you can
+
+398
+00:07:49,830 --> 00:07:49,840
+the MCP registry. So, as you as you can
+ 
+
+399
+00:07:49,840 --> 00:07:51,670
+the MCP registry. So, as you as you can
+imagine, all the tools, all the
+
+400
+00:07:51,670 --> 00:07:51,680
+imagine, all the tools, all the
+ 
+
+401
+00:07:51,680 --> 00:07:54,950
+imagine, all the tools, all the
+integration with Amplifon systems, all
+
+402
+00:07:54,950 --> 00:07:54,960
+integration with Amplifon systems, all
+ 
+
+403
+00:07:54,960 --> 00:07:56,590
+integration with Amplifon systems, all
+the functionalities that we want to
+
+404
+00:07:56,590 --> 00:07:56,600
+the functionalities that we want to
+ 
+
+405
+00:07:56,600 --> 00:07:58,510
+the functionalities that we want to
+provide to LLM models are exposed
+
+406
+00:07:58,510 --> 00:07:58,520
+provide to LLM models are exposed
+ 
+
+407
+00:07:58,520 --> 00:08:01,350
+provide to LLM models are exposed
+through this MCP registry, which is the
+
+408
+00:08:01,350 --> 00:08:01,360
+through this MCP registry, which is the
+ 
+
+409
+00:08:01,360 --> 00:08:04,190
+through this MCP registry, which is the
+the the central catalog of all all
+
+410
+00:08:04,190 --> 00:08:04,200
+the the central catalog of all all
+ 
+
+411
+00:08:04,200 --> 00:08:05,630
+the the central catalog of all all
+available tools.
+
+412
+00:08:05,630 --> 00:08:05,640
+available tools.
+ 
+
+413
+00:08:05,640 --> 00:08:08,070
+available tools.
+Then there's the A2A
+
+414
+00:08:08,070 --> 00:08:08,080
+Then there's the A2A
+ 
+
+415
+00:08:08,080 --> 00:08:10,590
+Then there's the A2A
+agent-to-agent registry. So,
+
+416
+00:08:10,590 --> 00:08:10,600
+agent-to-agent registry. So,
+ 
+
+417
+00:08:10,600 --> 00:08:12,110
+agent-to-agent registry. So,
+it brings
+
+418
+00:08:12,110 --> 00:08:12,120
+it brings
+ 
+
+419
+00:08:12,120 --> 00:08:15,390
+it brings
+it's a full catalog of all implemented
+
+420
+00:08:15,390 --> 00:08:15,400
+it's a full catalog of all implemented
+ 
+
+421
+00:08:15,400 --> 00:08:18,910
+it's a full catalog of all implemented
+of all available agents, and it uses
+
+422
+00:08:18,910 --> 00:08:18,920
+of all available agents, and it uses
+ 
+
+423
+00:08:18,920 --> 00:08:21,670
+of all available agents, and it uses
+agent card standard. It exposes agent
+
+424
+00:08:21,670 --> 00:08:21,680
+agent card standard. It exposes agent
+ 
+
+425
+00:08:21,680 --> 00:08:24,750
+agent card standard. It exposes agent
+card, and also it can
+
+426
+00:08:24,750 --> 00:08:24,760
+card, and also it can
+ 
+
+427
+00:08:24,760 --> 00:08:25,950
+card, and also it can
+it can
+
+428
+00:08:25,950 --> 00:08:25,960
+it can
+ 
+
+429
+00:08:25,960 --> 00:08:27,950
+it can
+give the developer the ability to
+
+430
+00:08:27,950 --> 00:08:27,960
+give the developer the ability to
+ 
+
+431
+00:08:27,960 --> 00:08:31,910
+give the developer the ability to
+connect to already developed agents. And
+
+432
+00:08:31,910 --> 00:08:31,920
+connect to already developed agents. And
+ 
+
+433
+00:08:31,920 --> 00:08:33,950
+connect to already developed agents. And
+then there's the use case registry,
+
+434
+00:08:33,950 --> 00:08:33,960
+then there's the use case registry,
+ 
+
+435
+00:08:33,960 --> 00:08:36,550
+then there's the use case registry,
+which is the you know, the registry that
+
+436
+00:08:36,550 --> 00:08:36,560
+which is the you know, the registry that
+ 
+
+437
+00:08:36,560 --> 00:08:37,909
+which is the you know, the registry that
+connects
+
+438
+00:08:37,909 --> 00:08:37,919
+connects
+ 
+
+439
+00:08:37,919 --> 00:08:40,750
+connects
+connects all those all those information
+
+440
+00:08:40,750 --> 00:08:40,760
+connects all those all those information
+ 
+
+441
+00:08:40,760 --> 00:08:42,630
+connects all those all those information
+together, all those metadata together,
+
+442
+00:08:42,630 --> 00:08:42,640
+together, all those metadata together,
+ 
+
+443
+00:08:42,640 --> 00:08:43,750
+together, all those metadata together,
+and
+
+444
+00:08:43,750 --> 00:08:43,760
+and
+ 
+
+445
+00:08:43,760 --> 00:08:45,590
+and
+bring out the real governance
+
+446
+00:08:45,590 --> 00:08:45,600
+bring out the real governance
+ 
+
+447
+00:08:45,600 --> 00:08:47,070
+bring out the real governance
+functionality, the lineage
+
+448
+00:08:47,070 --> 00:08:47,080
+functionality, the lineage
+ 
+
+449
+00:08:47,080 --> 00:08:49,270
+functionality, the lineage
+functionality, and
+
+450
+00:08:49,270 --> 00:08:49,280
+functionality, and
+ 
+
+451
+00:08:49,280 --> 00:08:51,710
+functionality, and
+again connects all those aspects
+
+452
+00:08:51,710 --> 00:08:51,720
+again connects all those aspects
+ 
+
+453
+00:08:51,720 --> 00:08:52,910
+again connects all those aspects
+together.
+
+454
+00:08:52,910 --> 00:08:52,920
+together.
+ 
+
+455
+00:08:52,920 --> 00:08:55,750
+together.
+Let's try to go in more detail about
+
+456
+00:08:55,750 --> 00:08:55,760
+Let's try to go in more detail about
+ 
+
+457
+00:08:55,760 --> 00:08:57,950
+Let's try to go in more detail about
+each of those registry.
+
+458
+00:08:57,950 --> 00:08:57,960
+each of those registry.
+ 
+
+459
+00:08:57,960 --> 00:09:00,230
+each of those registry.
+I don't want to obviously tell anybody
+
+460
+00:09:00,230 --> 00:09:00,240
+I don't want to obviously tell anybody
+ 
+
+461
+00:09:00,240 --> 00:09:02,950
+I don't want to obviously tell anybody
+what MCP is not at this conference,
+
+462
+00:09:02,950 --> 00:09:02,960
+what MCP is not at this conference,
+ 
+
+463
+00:09:02,960 --> 00:09:06,230
+what MCP is not at this conference,
+but we started from the official MCP
+
+464
+00:09:06,230 --> 00:09:06,240
+but we started from the official MCP
+ 
+
+465
+00:09:06,240 --> 00:09:09,870
+but we started from the official MCP
+registry maintained by the community.
+
+466
+00:09:09,870 --> 00:09:09,880
+registry maintained by the community.
+ 
+
+467
+00:09:09,880 --> 00:09:11,910
+registry maintained by the community.
+This is the you know, the the public
+
+468
+00:09:11,910 --> 00:09:11,920
+This is the you know, the the public
+ 
+
+469
+00:09:11,920 --> 00:09:14,670
+This is the you know, the the public
+community-wide catalog of all available
+
+470
+00:09:14,670 --> 00:09:14,680
+community-wide catalog of all available
+ 
+
+471
+00:09:14,680 --> 00:09:17,030
+community-wide catalog of all available
+MCP servers,
+
+472
+00:09:17,030 --> 00:09:17,040
+MCP servers,
+ 
+
+473
+00:09:17,040 --> 00:09:19,590
+MCP servers,
+and we essentially build on top of that.
+
+474
+00:09:19,590 --> 00:09:19,600
+and we essentially build on top of that.
+ 
+
+475
+00:09:19,600 --> 00:09:20,750
+and we essentially build on top of that.
+So,
+
+476
+00:09:20,750 --> 00:09:20,760
+So,
+ 
+
+477
+00:09:20,760 --> 00:09:22,550
+So,
+Amplifon has built
+
+478
+00:09:22,550 --> 00:09:22,560
+Amplifon has built
+ 
+
+479
+00:09:22,560 --> 00:09:25,670
+Amplifon has built
+its own private MCP registry as an
+
+480
+00:09:25,670 --> 00:09:25,680
+its own private MCP registry as an
+ 
+
+481
+00:09:25,680 --> 00:09:27,750
+its own private MCP registry as an
+extension
+
+482
+00:09:27,750 --> 00:09:27,760
+extension
+ 
+
+483
+00:09:27,760 --> 00:09:29,950
+extension
+in functionalities, and also in you
+
+484
+00:09:29,950 --> 00:09:29,960
+in functionalities, and also in you
+ 
+
+485
+00:09:29,960 --> 00:09:32,030
+in functionalities, and also in you
+know, enterprise context that we want to
+
+486
+00:09:32,030 --> 00:09:32,040
+know, enterprise context that we want to
+ 
+
+487
+00:09:32,040 --> 00:09:33,710
+know, enterprise context that we want to
+add to each of the
+
+488
+00:09:33,710 --> 00:09:33,720
+add to each of the
+ 
+
+489
+00:09:33,720 --> 00:09:36,270
+add to each of the
+registered servers.
+
+490
+00:09:36,270 --> 00:09:36,280
+registered servers.
+ 
+
+491
+00:09:36,280 --> 00:09:38,510
+registered servers.
+It contains two main things. As you can
+
+492
+00:09:38,510 --> 00:09:38,520
+It contains two main things. As you can
+ 
+
+493
+00:09:38,520 --> 00:09:41,230
+It contains two main things. As you can
+imagine, the you know, the custom
+
+494
+00:09:41,230 --> 00:09:41,240
+imagine, the you know, the custom
+ 
+
+495
+00:09:41,240 --> 00:09:44,230
+imagine, the you know, the custom
+internal servers that
+
+496
+00:09:44,230 --> 00:09:44,240
+internal servers that
+ 
+
+497
+00:09:44,240 --> 00:09:46,310
+internal servers that
+the the the the internal Amplifon team
+
+498
+00:09:46,310 --> 00:09:46,320
+the the the the internal Amplifon team
+ 
+
+499
+00:09:46,320 --> 00:09:49,590
+the the the the internal Amplifon team
+have built for specific system, specific
+
+500
+00:09:49,590 --> 00:09:49,600
+have built for specific system, specific
+ 
+
+501
+00:09:49,600 --> 00:09:51,550
+have built for specific system, specific
+integration, specific tool that Amplifon
+
+502
+00:09:51,550 --> 00:09:51,560
+integration, specific tool that Amplifon
+ 
+
+503
+00:09:51,560 --> 00:09:54,670
+integration, specific tool that Amplifon
+want to provide, and also a curated set
+
+504
+00:09:54,670 --> 00:09:54,680
+want to provide, and also a curated set
+ 
+
+505
+00:09:54,680 --> 00:09:55,510
+want to provide, and also a curated set
+of
+
+506
+00:09:55,510 --> 00:09:55,520
+of
+ 
+
+507
+00:09:55,520 --> 00:09:57,670
+of
+public server that have been approved
+
+508
+00:09:57,670 --> 00:09:57,680
+public server that have been approved
+ 
+
+509
+00:09:57,680 --> 00:09:59,270
+public server that have been approved
+that have been, you know,
+
+510
+00:09:59,270 --> 00:09:59,280
+that have been, you know,
+ 
+
+511
+00:09:59,280 --> 00:10:01,870
+that have been, you know,
+certified by Amplifone for for for
+
+512
+00:10:01,870 --> 00:10:01,880
+certified by Amplifone for for for
+ 
+
+513
+00:10:01,880 --> 00:10:05,030
+certified by Amplifone for for for
+Amplifone use cases. And both these
+
+514
+00:10:05,030 --> 00:10:05,040
+Amplifone use cases. And both these
+ 
+
+515
+00:10:05,040 --> 00:10:07,710
+Amplifone use cases. And both these
+servers that we want that we register in
+
+516
+00:10:07,710 --> 00:10:07,720
+servers that we want that we register in
+ 
+
+517
+00:10:07,720 --> 00:10:11,070
+servers that we want that we register in
+in this catalog are enriched with some
+
+518
+00:10:11,070 --> 00:10:11,080
+in this catalog are enriched with some
+ 
+
+519
+00:10:11,080 --> 00:10:14,030
+in this catalog are enriched with some
+additional enterprise metadata.
+
+520
+00:10:14,030 --> 00:10:14,040
+additional enterprise metadata.
+ 
+
+521
+00:10:14,040 --> 00:10:16,790
+additional enterprise metadata.
+Let's let's see what are those metadata.
+
+522
+00:10:16,790 --> 00:10:16,800
+Let's let's see what are those metadata.
+ 
+
+523
+00:10:16,800 --> 00:10:19,830
+Let's let's see what are those metadata.
+First of all, the ownership. Each server
+
+524
+00:10:19,830 --> 00:10:19,840
+First of all, the ownership. Each server
+ 
+
+525
+00:10:19,840 --> 00:10:21,990
+First of all, the ownership. Each server
+has an owner. So,
+
+526
+00:10:21,990 --> 00:10:22,000
+has an owner. So,
+ 
+
+527
+00:10:22,000 --> 00:10:25,070
+has an owner. So,
+which is which team, which use case,
+
+528
+00:10:25,070 --> 00:10:25,080
+which is which team, which use case,
+ 
+
+529
+00:10:25,080 --> 00:10:28,350
+which is which team, which use case,
+which project is in a way owner is
+
+530
+00:10:28,350 --> 00:10:28,360
+which project is in a way owner is
+ 
+
+531
+00:10:28,360 --> 00:10:31,550
+which project is in a way owner is
+responsible for that specific server.
+
+532
+00:10:31,550 --> 00:10:31,560
+responsible for that specific server.
+ 
+
+533
+00:10:31,560 --> 00:10:33,870
+responsible for that specific server.
+What are the environment in in which the
+
+534
+00:10:33,870 --> 00:10:33,880
+What are the environment in in which the
+ 
+
+535
+00:10:33,880 --> 00:10:36,070
+What are the environment in in which the
+server is running. So, it is running is
+
+536
+00:10:36,070 --> 00:10:36,080
+server is running. So, it is running is
+ 
+
+537
+00:10:36,080 --> 00:10:38,190
+server is running. So, it is running is
+it running in dev, test, prod, and so
+
+538
+00:10:38,190 --> 00:10:38,200
+it running in dev, test, prod, and so
+ 
+
+539
+00:10:38,200 --> 00:10:39,070
+it running in dev, test, prod, and so
+on.
+
+540
+00:10:39,070 --> 00:10:39,080
+on.
+ 
+
+541
+00:10:39,080 --> 00:10:41,390
+on.
+What are the authentication model?
+
+542
+00:10:41,390 --> 00:10:41,400
+What are the authentication model?
+ 
+
+543
+00:10:41,400 --> 00:10:42,470
+What are the authentication model?
+So,
+
+544
+00:10:42,470 --> 00:10:42,480
+So,
+ 
+
+545
+00:10:42,480 --> 00:10:44,870
+So,
+how I can effect
+
+546
+00:10:44,870 --> 00:10:44,880
+how I can effect
+ 
+
+547
+00:10:44,880 --> 00:10:47,190
+how I can effect
+how I can as a developer use
+
+548
+00:10:47,190 --> 00:10:47,200
+how I can as a developer use
+ 
+
+549
+00:10:47,200 --> 00:10:49,990
+how I can as a developer use
+that server? What are the mechanism that
+
+550
+00:10:49,990 --> 00:10:50,000
+that server? What are the mechanism that
+ 
+
+551
+00:10:50,000 --> 00:10:52,910
+that server? What are the mechanism that
+I need to put in place? The cost
+
+552
+00:10:52,910 --> 00:10:52,920
+I need to put in place? The cost
+ 
+
+553
+00:10:52,920 --> 00:10:55,710
+I need to put in place? The cost
+attribution. So, this is linked to the
+
+554
+00:10:55,710 --> 00:10:55,720
+attribution. So, this is linked to the
+ 
+
+555
+00:10:55,720 --> 00:10:57,790
+attribution. So, this is linked to the
+AI gateway functionality, the budgeting
+
+556
+00:10:57,790 --> 00:10:57,800
+AI gateway functionality, the budgeting
+ 
+
+557
+00:10:57,800 --> 00:11:00,150
+AI gateway functionality, the budgeting
+aspect that we have described before.
+
+558
+00:11:00,150 --> 00:11:00,160
+aspect that we have described before.
+ 
+
+559
+00:11:00,160 --> 00:11:03,510
+aspect that we have described before.
+And this is done in order to see
+
+560
+00:11:03,510 --> 00:11:03,520
+And this is done in order to see
+ 
+
+561
+00:11:03,520 --> 00:11:05,710
+And this is done in order to see
+what server
+
+562
+00:11:05,710 --> 00:11:05,720
+what server
+ 
+
+563
+00:11:05,720 --> 00:11:09,070
+what server
+spending what essentially. And then the
+
+564
+00:11:09,070 --> 00:11:09,080
+spending what essentially. And then the
+ 
+
+565
+00:11:09,080 --> 00:11:11,550
+spending what essentially. And then the
+use case linkage. So, what are the use
+
+566
+00:11:11,550 --> 00:11:11,560
+use case linkage. So, what are the use
+ 
+
+567
+00:11:11,560 --> 00:11:14,950
+use case linkage. So, what are the use
+cases that are effect that are actually
+
+568
+00:11:14,950 --> 00:11:14,960
+cases that are effect that are actually
+ 
+
+569
+00:11:14,960 --> 00:11:17,190
+cases that are effect that are actually
+using that specific that specific
+
+570
+00:11:17,190 --> 00:11:17,200
+using that specific that specific
+ 
+
+571
+00:11:17,200 --> 00:11:19,750
+using that specific that specific
+server. And these are not simply, you
+
+572
+00:11:19,750 --> 00:11:19,760
+server. And these are not simply, you
+ 
+
+573
+00:11:19,760 --> 00:11:21,950
+server. And these are not simply, you
+know, metadata that are nice to have.
+
+574
+00:11:21,950 --> 00:11:21,960
+know, metadata that are nice to have.
+ 
+
+575
+00:11:21,960 --> 00:11:24,910
+know, metadata that are nice to have.
+This is something that really
+
+576
+00:11:24,910 --> 00:11:24,920
+This is something that really
+ 
+
+577
+00:11:24,920 --> 00:11:26,470
+This is something that really
+bring out the impact analysis
+
+578
+00:11:26,470 --> 00:11:26,480
+bring out the impact analysis
+ 
+
+579
+00:11:26,480 --> 00:11:28,910
+bring out the impact analysis
+functionality. This is where
+
+580
+00:11:28,910 --> 00:11:28,920
+functionality. This is where
+ 
+
+581
+00:11:28,920 --> 00:11:31,630
+functionality. This is where
+effectively we enable the governance and
+
+582
+00:11:31,630 --> 00:11:31,640
+effectively we enable the governance and
+ 
+
+583
+00:11:31,640 --> 00:11:33,670
+effectively we enable the governance and
+the auditability.
+
+584
+00:11:33,670 --> 00:11:33,680
+the auditability.
+ 
+
+585
+00:11:33,680 --> 00:11:36,630
+the auditability.
+And we have the complete trail of what
+
+586
+00:11:36,630 --> 00:11:36,640
+And we have the complete trail of what
+ 
+
+587
+00:11:36,640 --> 00:11:39,230
+And we have the complete trail of what
+AI tooling exist and how
+
+588
+00:11:39,230 --> 00:11:39,240
+AI tooling exist and how
+ 
+
+589
+00:11:39,240 --> 00:11:41,710
+AI tooling exist and how
+they are they are being used by
+
+590
+00:11:41,710 --> 00:11:41,720
+they are they are being used by
+ 
+
+591
+00:11:41,720 --> 00:11:43,510
+they are they are being used by
+Amplifone developers.
+
+592
+00:11:43,510 --> 00:11:43,520
+Amplifone developers.
+ 
+
+593
+00:11:43,520 --> 00:11:45,630
+Amplifone developers.
+And then we have second registry which
+
+594
+00:11:45,630 --> 00:11:45,640
+And then we have second registry which
+ 
+
+595
+00:11:45,640 --> 00:11:48,350
+And then we have second registry which
+is the eight way registry. This is fully
+
+596
+00:11:48,350 --> 00:11:48,360
+is the eight way registry. This is fully
+ 
+
+597
+00:11:48,360 --> 00:11:50,950
+is the eight way registry. This is fully
+based on the agent card
+
+598
+00:11:50,950 --> 00:11:50,960
+based on the agent card
+ 
+
+599
+00:11:50,960 --> 00:11:52,990
+based on the agent card
+that, you know, describe the agent's
+
+600
+00:11:52,990 --> 00:11:53,000
+that, you know, describe the agent's
+ 
+
+601
+00:11:53,000 --> 00:11:56,630
+that, you know, describe the agent's
+identity, its endpoint,
+
+602
+00:11:56,630 --> 00:11:56,640
+identity, its endpoint,
+ 
+
+603
+00:11:56,640 --> 00:11:59,030
+identity, its endpoint,
+the agent capabilities, the supported
+
+604
+00:11:59,030 --> 00:11:59,040
+the agent capabilities, the supported
+ 
+
+605
+00:11:59,040 --> 00:12:01,030
+the agent capabilities, the supported
+modalities, authentication requirements,
+
+606
+00:12:01,030 --> 00:12:01,040
+modalities, authentication requirements,
+ 
+
+607
+00:12:01,040 --> 00:12:03,750
+modalities, authentication requirements,
+and so on. We
+
+608
+00:12:03,750 --> 00:12:03,760
+and so on. We
+ 
+
+609
+00:12:03,760 --> 00:12:06,310
+and so on. We
+have built some blueprints and then we
+
+610
+00:12:06,310 --> 00:12:06,320
+have built some blueprints and then we
+ 
+
+611
+00:12:06,320 --> 00:12:08,590
+have built some blueprints and then we
+talk about those blueprints. But
+
+612
+00:12:08,590 --> 00:12:08,600
+talk about those blueprints. But
+ 
+
+613
+00:12:08,600 --> 00:12:12,190
+talk about those blueprints. But
+essentially, when an agent is deployed,
+
+614
+00:12:12,190 --> 00:12:12,200
+essentially, when an agent is deployed,
+ 
+
+615
+00:12:12,200 --> 00:12:14,990
+essentially, when an agent is deployed,
+it automatically publish publishes its
+
+616
+00:12:14,990 --> 00:12:15,000
+it automatically publish publishes its
+ 
+
+617
+00:12:15,000 --> 00:12:18,030
+it automatically publish publishes its
+agent card to the registry via CICD
+
+618
+00:12:18,030 --> 00:12:18,040
+agent card to the registry via CICD
+ 
+
+619
+00:12:18,040 --> 00:12:20,870
+agent card to the registry via CICD
+integration. So, in this way any other
+
+620
+00:12:20,870 --> 00:12:20,880
+integration. So, in this way any other
+ 
+
+621
+00:12:20,880 --> 00:12:24,430
+integration. So, in this way any other
+agent, any other developer can discover
+
+622
+00:12:24,430 --> 00:12:24,440
+agent, any other developer can discover
+ 
+
+623
+00:12:24,440 --> 00:12:26,470
+agent, any other developer can discover
+this new agent and obviously can
+
+624
+00:12:26,470 --> 00:12:26,480
+this new agent and obviously can
+ 
+
+625
+00:12:26,480 --> 00:12:28,430
+this new agent and obviously can
+interact with it.
+
+626
+00:12:28,430 --> 00:12:28,440
+interact with it.
+ 
+
+627
+00:12:28,440 --> 00:12:31,230
+interact with it.
+So, in a way we are trying to make all
+
+628
+00:12:31,230 --> 00:12:31,240
+So, in a way we are trying to make all
+ 
+
+629
+00:12:31,240 --> 00:12:32,270
+So, in a way we are trying to make all
+those
+
+630
+00:12:32,270 --> 00:12:32,280
+those
+ 
+
+631
+00:12:32,280 --> 00:12:36,310
+those
+agent development self-documenting.
+
+632
+00:12:36,310 --> 00:12:36,320
+agent development self-documenting.
+ 
+
+633
+00:12:36,320 --> 00:12:39,750
+agent development self-documenting.
+Now, we will see how use case registry
+
+634
+00:12:39,750 --> 00:12:39,760
+Now, we will see how use case registry
+ 
+
+635
+00:12:39,760 --> 00:12:42,670
+Now, we will see how use case registry
+connects those two other registry
+
+636
+00:12:42,670 --> 00:12:42,680
+connects those two other registry
+ 
+
+637
+00:12:42,680 --> 00:12:46,350
+connects those two other registry
+together. How do we can use the MCP
+
+638
+00:12:46,350 --> 00:12:46,360
+together. How do we can use the MCP
+ 
+
+639
+00:12:46,360 --> 00:12:49,190
+together. How do we can use the MCP
+registry and eight way registry from a
+
+640
+00:12:49,190 --> 00:12:49,200
+registry and eight way registry from a
+ 
+
+641
+00:12:49,200 --> 00:12:51,070
+registry and eight way registry from a
+business point of view?
+
+642
+00:12:51,070 --> 00:12:51,080
+business point of view?
+ 
+
+643
+00:12:51,080 --> 00:12:53,990
+business point of view?
+We want to have a use case registry. So,
+
+644
+00:12:53,990 --> 00:12:54,000
+We want to have a use case registry. So,
+ 
+
+645
+00:12:54,000 --> 00:12:56,590
+We want to have a use case registry. So,
+to map the agents and the tools in
+
+646
+00:12:56,590 --> 00:12:56,600
+to map the agents and the tools in
+ 
+
+647
+00:12:56,600 --> 00:12:58,829
+to map the agents and the tools in
+specific use case adopted across the
+
+648
+00:12:58,829 --> 00:12:58,839
+specific use case adopted across the
+ 
+
+649
+00:12:58,839 --> 00:13:01,110
+specific use case adopted across the
+organization. And this is the reason why
+
+650
+00:13:01,110 --> 00:13:01,120
+organization. And this is the reason why
+ 
+
+651
+00:13:01,120 --> 00:13:04,270
+organization. And this is the reason why
+we designed this specific building block
+
+652
+00:13:04,270 --> 00:13:04,280
+we designed this specific building block
+ 
+
+653
+00:13:04,280 --> 00:13:07,630
+we designed this specific building block
+that aims to contain the information of
+
+654
+00:13:07,630 --> 00:13:07,640
+that aims to contain the information of
+ 
+
+655
+00:13:07,640 --> 00:13:10,270
+that aims to contain the information of
+what are the assets used by the single
+
+656
+00:13:10,270 --> 00:13:10,280
+what are the assets used by the single
+ 
+
+657
+00:13:10,280 --> 00:13:12,270
+what are the assets used by the single
+use case, what they implement, what are
+
+658
+00:13:12,270 --> 00:13:12,280
+use case, what they implement, what are
+ 
+
+659
+00:13:12,280 --> 00:13:14,510
+use case, what they implement, what are
+the models they used also for the
+
+660
+00:13:14,510 --> 00:13:14,520
+the models they used also for the
+ 
+
+661
+00:13:14,520 --> 00:13:16,110
+the models they used also for the
+maintenance topic that we mentioned
+
+662
+00:13:16,110 --> 00:13:16,120
+maintenance topic that we mentioned
+ 
+
+663
+00:13:16,120 --> 00:13:17,110
+maintenance topic that we mentioned
+before.
+
+664
+00:13:17,110 --> 00:13:17,120
+before.
+ 
+
+665
+00:13:17,120 --> 00:13:18,350
+before.
+And also
+
+666
+00:13:18,350 --> 00:13:18,360
+And also
+ 
+
+667
+00:13:18,360 --> 00:13:21,350
+And also
+understand how and where we develop and
+
+668
+00:13:21,350 --> 00:13:21,360
+understand how and where we develop and
+ 
+
+669
+00:13:21,360 --> 00:13:23,710
+understand how and where we develop and
+deployed this kind of use cases. For
+
+670
+00:13:23,710 --> 00:13:23,720
+deployed this kind of use cases. For
+ 
+
+671
+00:13:23,720 --> 00:13:25,790
+deployed this kind of use cases. For
+example, which is the system that serve
+
+672
+00:13:25,790 --> 00:13:25,800
+example, which is the system that serve
+ 
+
+673
+00:13:25,800 --> 00:13:28,390
+example, which is the system that serve
+the use case the specific use case and
+
+674
+00:13:28,390 --> 00:13:28,400
+the use case the specific use case and
+ 
+
+675
+00:13:28,400 --> 00:13:31,710
+the use case the specific use case and
+what are all the other impacted by
+
+676
+00:13:31,710 --> 00:13:31,720
+what are all the other impacted by
+ 
+
+677
+00:13:31,720 --> 00:13:33,350
+what are all the other impacted by
+this use case. So, for example, if we
+
+678
+00:13:33,350 --> 00:13:33,360
+this use case. So, for example, if we
+ 
+
+679
+00:13:33,360 --> 00:13:36,190
+this use case. So, for example, if we
+have connection among multiple use
+
+680
+00:13:36,190 --> 00:13:36,200
+have connection among multiple use
+ 
+
+681
+00:13:36,200 --> 00:13:39,110
+have connection among multiple use
+cases, we want to see that clearly in
+
+682
+00:13:39,110 --> 00:13:39,120
+cases, we want to see that clearly in
+ 
+
+683
+00:13:39,120 --> 00:13:41,390
+cases, we want to see that clearly in
+interface that can be a catalog for for
+
+684
+00:13:41,390 --> 00:13:41,400
+interface that can be a catalog for for
+ 
+
+685
+00:13:41,400 --> 00:13:42,710
+interface that can be a catalog for for
+everyone.
+
+686
+00:13:42,710 --> 00:13:42,720
+everyone.
+ 
+
+687
+00:13:42,720 --> 00:13:45,710
+everyone.
+Let's see now how it works in practice.
+
+688
+00:13:45,710 --> 00:13:45,720
+Let's see now how it works in practice.
+ 
+
+689
+00:13:45,720 --> 00:13:48,590
+Let's see now how it works in practice.
+So, let's go in a walk through of the
+
+690
+00:13:48,590 --> 00:13:48,600
+So, let's go in a walk through of the
+ 
+
+691
+00:13:48,600 --> 00:13:50,310
+So, let's go in a walk through of the
+the platform that we developed and that
+
+692
+00:13:50,310 --> 00:13:50,320
+the platform that we developed and that
+ 
+
+693
+00:13:50,320 --> 00:13:52,710
+the platform that we developed and that
+implement all these registries
+
+694
+00:13:52,710 --> 00:13:52,720
+implement all these registries
+ 
+
+695
+00:13:52,720 --> 00:13:54,470
+implement all these registries
+for the organization.
+
+696
+00:13:54,470 --> 00:13:54,480
+for the organization.
+ 
+
+697
+00:13:54,480 --> 00:13:56,270
+for the organization.
+Okay, so we wanted also to give you a
+
+698
+00:13:56,270 --> 00:13:56,280
+Okay, so we wanted also to give you a
+ 
+
+699
+00:13:56,280 --> 00:13:58,950
+Okay, so we wanted also to give you a
+brief overview of our platform.
+
+700
+00:13:58,950 --> 00:13:58,960
+brief overview of our platform.
+ 
+
+701
+00:13:58,960 --> 00:14:02,070
+brief overview of our platform.
+Here you can see that is the home page.
+
+702
+00:14:02,070 --> 00:14:02,080
+Here you can see that is the home page.
+ 
+
+703
+00:14:02,080 --> 00:14:04,510
+Here you can see that is the home page.
+You can go into the catalog, so what we
+
+704
+00:14:04,510 --> 00:14:04,520
+You can go into the catalog, so what we
+ 
+
+705
+00:14:04,520 --> 00:14:07,350
+You can go into the catalog, so what we
+described in detail before, so MCP,
+
+706
+00:14:07,350 --> 00:14:07,360
+described in detail before, so MCP,
+ 
+
+707
+00:14:07,360 --> 00:14:10,470
+described in detail before, so MCP,
+eight way, use cases. We also have the
+
+708
+00:14:10,470 --> 00:14:10,480
+eight way, use cases. We also have the
+ 
+
+709
+00:14:10,480 --> 00:14:13,470
+eight way, use cases. We also have the
+AI gateway part where we define what
+
+710
+00:14:13,470 --> 00:14:13,480
+AI gateway part where we define what
+ 
+
+711
+00:14:13,480 --> 00:14:15,470
+AI gateway part where we define what
+LLMs are
+
+712
+00:14:15,470 --> 00:14:15,480
+LLMs are
+ 
+
+713
+00:14:15,480 --> 00:14:17,270
+LLMs are
+available
+
+714
+00:14:17,270 --> 00:14:17,280
+available
+ 
+
+715
+00:14:17,280 --> 00:14:20,710
+available
+in the enterprise right now.
+
+716
+00:14:20,710 --> 00:14:20,720
+in the enterprise right now.
+ 
+
+717
+00:14:20,720 --> 00:14:22,710
+in the enterprise right now.
+Going back to the dashboard, if we move
+
+718
+00:14:22,710 --> 00:14:22,720
+Going back to the dashboard, if we move
+ 
+
+719
+00:14:22,720 --> 00:14:25,110
+Going back to the dashboard, if we move
+on to the catalog,
+
+720
+00:14:25,110 --> 00:14:25,120
+on to the catalog,
+ 
+
+721
+00:14:25,120 --> 00:14:26,630
+on to the catalog,
+this is the platform that we are going
+
+722
+00:14:26,630 --> 00:14:26,640
+this is the platform that we are going
+ 
+
+723
+00:14:26,640 --> 00:14:30,150
+this is the platform that we are going
+to deploy in production soon. Here we
+
+724
+00:14:30,150 --> 00:14:30,160
+to deploy in production soon. Here we
+ 
+
+725
+00:14:30,160 --> 00:14:32,710
+to deploy in production soon. Here we
+have demo data.
+
+726
+00:14:32,710 --> 00:14:32,720
+have demo data.
+ 
+
+727
+00:14:32,720 --> 00:14:35,750
+have demo data.
+So, we have six entities defined
+
+728
+00:14:35,750 --> 00:14:35,760
+So, we have six entities defined
+ 
+
+729
+00:14:35,760 --> 00:14:37,710
+So, we have six entities defined
+until this point.
+
+730
+00:14:37,710 --> 00:14:37,720
+until this point.
+ 
+
+731
+00:14:37,720 --> 00:14:40,350
+until this point.
+We have use cases, MCP, and eight way
+
+732
+00:14:40,350 --> 00:14:40,360
+We have use cases, MCP, and eight way
+ 
+
+733
+00:14:40,360 --> 00:14:43,870
+We have use cases, MCP, and eight way
+agents. Going into the
+
+734
+00:14:43,870 --> 00:14:43,880
+agents. Going into the
+ 
+
+735
+00:14:43,880 --> 00:14:45,750
+agents. Going into the
+use cases part,
+
+736
+00:14:45,750 --> 00:14:45,760
+use cases part,
+ 
+
+737
+00:14:45,760 --> 00:14:47,829
+use cases part,
+if we open a sample use case for
+
+738
+00:14:47,829 --> 00:14:47,839
+if we open a sample use case for
+ 
+
+739
+00:14:47,839 --> 00:14:49,949
+if we open a sample use case for
+instance, we can define
+
+740
+00:14:49,949 --> 00:14:49,959
+instance, we can define
+ 
+
+741
+00:14:49,959 --> 00:14:52,310
+instance, we can define
+its status, its version, its
+
+742
+00:14:52,310 --> 00:14:52,320
+its status, its version, its
+ 
+
+743
+00:14:52,320 --> 00:14:53,870
+its status, its version, its
+description,
+
+744
+00:14:53,870 --> 00:14:53,880
+description,
+ 
+
+745
+00:14:53,880 --> 00:14:56,030
+description,
+assets used. So, for instance, an agent
+
+746
+00:14:56,030 --> 00:14:56,040
+assets used. So, for instance, an agent
+ 
+
+747
+00:14:56,040 --> 00:14:57,750
+assets used. So, for instance, an agent
+and then MCP server,
+
+748
+00:14:57,750 --> 00:14:57,760
+and then MCP server,
+ 
+
+749
+00:14:57,760 --> 00:15:00,270
+and then MCP server,
+what AI models it's using,
+
+750
+00:15:00,270 --> 00:15:00,280
+what AI models it's using,
+ 
+
+751
+00:15:00,280 --> 00:15:03,990
+what AI models it's using,
+and the life cycle history of the
+
+752
+00:15:03,990 --> 00:15:04,000
+and the life cycle history of the
+ 
+
+753
+00:15:04,000 --> 00:15:06,110
+and the life cycle history of the
+of the use case.
+
+754
+00:15:06,110 --> 00:15:06,120
+of the use case.
+ 
+
+755
+00:15:06,120 --> 00:15:08,990
+of the use case.
+If you go on to the
+
+756
+00:15:08,990 --> 00:15:09,000
+If you go on to the
+ 
+
+757
+00:15:09,000 --> 00:15:11,430
+If you go on to the
+create use case page, you can see that
+
+758
+00:15:11,430 --> 00:15:11,440
+create use case page, you can see that
+ 
+
+759
+00:15:11,440 --> 00:15:14,350
+create use case page, you can see that
+we can define a name, a description, the
+
+760
+00:15:14,350 --> 00:15:14,360
+we can define a name, a description, the
+ 
+
+761
+00:15:14,360 --> 00:15:17,550
+we can define a name, a description, the
+status of the use case, the ownership,
+
+762
+00:15:17,550 --> 00:15:17,560
+status of the use case, the ownership,
+ 
+
+763
+00:15:17,560 --> 00:15:21,390
+status of the use case, the ownership,
+and also the assets linked to that.
+
+764
+00:15:21,390 --> 00:15:21,400
+and also the assets linked to that.
+ 
+
+765
+00:15:21,400 --> 00:15:24,870
+and also the assets linked to that.
+If we move to the AI tool section, so
+
+766
+00:15:24,870 --> 00:15:24,880
+If we move to the AI tool section, so
+ 
+
+767
+00:15:24,880 --> 00:15:26,829
+If we move to the AI tool section, so
+MCP servers,
+
+768
+00:15:26,829 --> 00:15:26,839
+MCP servers,
+ 
+
+769
+00:15:26,839 --> 00:15:31,550
+MCP servers,
+you can see that we have two sample
+
+770
+00:15:31,550 --> 00:15:31,560
+you can see that we have two sample
+ 
+
+771
+00:15:31,560 --> 00:15:34,510
+you can see that we have two sample
+MCP servers. So,
+
+772
+00:15:34,510 --> 00:15:34,520
+MCP servers. So,
+ 
+
+773
+00:15:34,520 --> 00:15:38,110
+MCP servers. So,
+the actual server JSON is is described
+
+774
+00:15:38,110 --> 00:15:38,120
+the actual server JSON is is described
+ 
+
+775
+00:15:38,120 --> 00:15:41,430
+the actual server JSON is is described
+here. We can also see into the eight way
+
+776
+00:15:41,430 --> 00:15:41,440
+here. We can also see into the eight way
+ 
+
+777
+00:15:41,440 --> 00:15:43,270
+here. We can also see into the eight way
+agents the same
+
+778
+00:15:43,270 --> 00:15:43,280
+agents the same
+ 
+
+779
+00:15:43,280 --> 00:15:46,670
+agents the same
+thing for agent cards. So, for instance,
+
+780
+00:15:46,670 --> 00:15:46,680
+thing for agent cards. So, for instance,
+ 
+
+781
+00:15:46,680 --> 00:15:49,750
+thing for agent cards. So, for instance,
+here we can define the we can have the
+
+782
+00:15:49,750 --> 00:15:49,760
+here we can define the we can have the
+ 
+
+783
+00:15:49,760 --> 00:15:52,910
+here we can define the we can have the
+long chain test agent that test these
+
+784
+00:15:52,910 --> 00:15:52,920
+long chain test agent that test these
+ 
+
+785
+00:15:52,920 --> 00:15:54,590
+long chain test agent that test these
+capabilities and description from the
+
+786
+00:15:54,590 --> 00:15:54,600
+capabilities and description from the
+ 
+
+787
+00:15:54,600 --> 00:15:56,270
+capabilities and description from the
+agent card.
+
+788
+00:15:56,270 --> 00:15:56,280
+agent card.
+ 
+
+789
+00:15:56,280 --> 00:15:59,310
+agent card.
+We also define the inspector page where
+
+790
+00:15:59,310 --> 00:15:59,320
+We also define the inspector page where
+ 
+
+791
+00:15:59,320 --> 00:16:01,750
+We also define the inspector page where
+you can
+
+792
+00:16:01,750 --> 00:16:01,760
+you can
+ 
+
+793
+00:16:01,760 --> 00:16:03,190
+you can
+select
+
+794
+00:16:03,190 --> 00:16:03,200
+select
+ 
+
+795
+00:16:03,200 --> 00:16:05,630
+select
+an MCP server and you can launch the
+
+796
+00:16:05,630 --> 00:16:05,640
+an MCP server and you can launch the
+ 
+
+797
+00:16:05,640 --> 00:16:08,550
+an MCP server and you can launch the
+inspector in another tab. So, you can
+
+798
+00:16:08,550 --> 00:16:08,560
+inspector in another tab. So, you can
+ 
+
+799
+00:16:08,560 --> 00:16:12,710
+inspector in another tab. So, you can
+also connect and check what that MCP is
+
+800
+00:16:12,710 --> 00:16:12,720
+also connect and check what that MCP is
+ 
+
+801
+00:16:12,720 --> 00:16:14,430
+also connect and check what that MCP is
+providing you.
+
+802
+00:16:14,430 --> 00:16:14,440
+providing you.
+ 
+
+803
+00:16:14,440 --> 00:16:17,670
+providing you.
+We also have the same inspector that is
+
+804
+00:16:17,670 --> 00:16:17,680
+We also have the same inspector that is
+ 
+
+805
+00:16:17,680 --> 00:16:20,470
+We also have the same inspector that is
+just checking for
+
+806
+00:16:20,470 --> 00:16:20,480
+just checking for
+ 
+
+807
+00:16:20,480 --> 00:16:23,829
+just checking for
+compatibility with the eight way agent
+
+808
+00:16:23,829 --> 00:16:23,839
+compatibility with the eight way agent
+ 
+
+809
+00:16:23,839 --> 00:16:25,230
+compatibility with the eight way agent
+card.
+
+810
+00:16:25,230 --> 00:16:25,240
+card.
+ 
+
+811
+00:16:25,240 --> 00:16:27,190
+card.
+And you can do the same here.
+
+812
+00:16:27,190 --> 00:16:27,200
+And you can do the same here.
+ 
+
+813
+00:16:27,200 --> 00:16:29,230
+And you can do the same here.
+We also have widgets.
+
+814
+00:16:29,230 --> 00:16:29,240
+We also have widgets.
+ 
+
+815
+00:16:29,240 --> 00:16:33,069
+We also have widgets.
+So, you can in order to make the life of
+
+816
+00:16:33,069 --> 00:16:33,079
+So, you can in order to make the life of
+ 
+
+817
+00:16:33,079 --> 00:16:35,350
+So, you can in order to make the life of
+the developer easier,
+
+818
+00:16:35,350 --> 00:16:35,360
+the developer easier,
+ 
+
+819
+00:16:35,360 --> 00:16:39,310
+the developer easier,
+define the server.json for MCP and the
+
+820
+00:16:39,310 --> 00:16:39,320
+define the server.json for MCP and the
+ 
+
+821
+00:16:39,320 --> 00:16:42,590
+define the server.json for MCP and the
+agent card for eight way with a form
+
+822
+00:16:42,590 --> 00:16:42,600
+agent card for eight way with a form
+ 
+
+823
+00:16:42,600 --> 00:16:45,110
+agent card for eight way with a form
+and then preview it here instead of
+
+824
+00:16:45,110 --> 00:16:45,120
+and then preview it here instead of
+ 
+
+825
+00:16:45,120 --> 00:16:48,470
+and then preview it here instead of
+starting from the actual JSON on the
+
+826
+00:16:48,470 --> 00:16:48,480
+starting from the actual JSON on the
+ 
+
+827
+00:16:48,480 --> 00:16:50,949
+starting from the actual JSON on the
+repo if it's the first, let's say,
+
+828
+00:16:50,949 --> 00:16:50,959
+repo if it's the first, let's say,
+ 
+
+829
+00:16:50,959 --> 00:16:54,430
+repo if it's the first, let's say,
+server for you.
+
+830
+00:16:54,430 --> 00:16:54,440
+
+ 
+
+831
+00:16:54,440 --> 00:16:55,390
+
+We can
+
+832
+00:16:55,390 --> 00:16:55,400
+We can
+ 
+
+833
+00:16:55,400 --> 00:16:58,270
+We can
+also check the lineage
+
+834
+00:16:58,270 --> 00:16:58,280
+also check the lineage
+ 
+
+835
+00:16:58,280 --> 00:17:00,030
+also check the lineage
+because, for instance, you can go on to
+
+836
+00:17:00,030 --> 00:17:00,040
+because, for instance, you can go on to
+ 
+
+837
+00:17:00,040 --> 00:17:02,350
+because, for instance, you can go on to
+the use case, open
+
+838
+00:17:02,350 --> 00:17:02,360
+the use case, open
+ 
+
+839
+00:17:02,360 --> 00:17:04,230
+the use case, open
+a use case that you want to check, open
+
+840
+00:17:04,230 --> 00:17:04,240
+a use case that you want to check, open
+ 
+
+841
+00:17:04,240 --> 00:17:05,790
+a use case that you want to check, open
+the object lineage.
+
+842
+00:17:05,790 --> 00:17:05,800
+the object lineage.
+ 
+
+843
+00:17:05,800 --> 00:17:08,350
+the object lineage.
+In this lineage view, you can see that,
+
+844
+00:17:08,350 --> 00:17:08,360
+In this lineage view, you can see that,
+ 
+
+845
+00:17:08,360 --> 00:17:12,790
+In this lineage view, you can see that,
+for instance, the use case
+
+846
+00:17:12,790 --> 00:17:12,800
+for instance, the use case
+ 
+
+847
+00:17:12,800 --> 00:17:16,390
+for instance, the use case
+here that is ticket optimization with AI
+
+848
+00:17:16,390 --> 00:17:16,400
+here that is ticket optimization with AI
+ 
+
+849
+00:17:16,400 --> 00:17:19,390
+here that is ticket optimization with AI
+is connected to an agent, is connected
+
+850
+00:17:19,390 --> 00:17:19,400
+is connected to an agent, is connected
+ 
+
+851
+00:17:19,400 --> 00:17:22,870
+is connected to an agent, is connected
+to another agent here, and also has AI
+
+852
+00:17:22,870 --> 00:17:22,880
+to another agent here, and also has AI
+ 
+
+853
+00:17:22,880 --> 00:17:26,630
+to another agent here, and also has AI
+models connected to it. So, we can have
+
+854
+00:17:26,630 --> 00:17:26,640
+models connected to it. So, we can have
+ 
+
+855
+00:17:26,640 --> 00:17:27,630
+models connected to it. So, we can have
+the
+
+856
+00:17:27,630 --> 00:17:27,640
+the
+ 
+
+857
+00:17:27,640 --> 00:17:30,350
+the
+full lineage of the use case and also be
+
+858
+00:17:30,350 --> 00:17:30,360
+full lineage of the use case and also be
+ 
+
+859
+00:17:30,360 --> 00:17:35,270
+full lineage of the use case and also be
+able, as Maurice said before, to
+
+860
+00:17:35,270 --> 00:17:35,280
+
+ 
+
+861
+00:17:35,280 --> 00:17:38,390
+
+be sure and also make modifications in
+
+862
+00:17:38,390 --> 00:17:38,400
+be sure and also make modifications in
+ 
+
+863
+00:17:38,400 --> 00:17:40,950
+be sure and also make modifications in
+case some parts of the lineage are
+
+864
+00:17:40,950 --> 00:17:40,960
+case some parts of the lineage are
+ 
+
+865
+00:17:40,960 --> 00:17:43,830
+case some parts of the lineage are
+affected by an outage or a problem and
+
+866
+00:17:43,830 --> 00:17:43,840
+affected by an outage or a problem and
+ 
+
+867
+00:17:43,840 --> 00:17:47,390
+affected by an outage or a problem and
+go back to the use case affected.
+
+868
+00:17:47,390 --> 00:17:47,400
+go back to the use case affected.
+ 
+
+869
+00:17:47,400 --> 00:17:49,950
+go back to the use case affected.
+So, moving into the enterprise
+
+870
+00:17:49,950 --> 00:17:49,960
+So, moving into the enterprise
+ 
+
+871
+00:17:49,960 --> 00:17:52,710
+So, moving into the enterprise
+development cycle, so we talked a lot
+
+872
+00:17:52,710 --> 00:17:52,720
+development cycle, so we talked a lot
+ 
+
+873
+00:17:52,720 --> 00:17:53,750
+development cycle, so we talked a lot
+about
+
+874
+00:17:53,750 --> 00:17:53,760
+about
+ 
+
+875
+00:17:53,760 --> 00:17:56,430
+about
+metadata and registries,
+
+876
+00:17:56,430 --> 00:17:56,440
+metadata and registries,
+ 
+
+877
+00:17:56,440 --> 00:18:00,470
+metadata and registries,
+but how do actually Amplifone developers
+
+878
+00:18:00,470 --> 00:18:00,480
+but how do actually Amplifone developers
+ 
+
+879
+00:18:00,480 --> 00:18:04,070
+but how do actually Amplifone developers
+develop MCP servers and agent to agent
+
+880
+00:18:04,070 --> 00:18:04,080
+develop MCP servers and agent to agent
+ 
+
+881
+00:18:04,080 --> 00:18:06,030
+develop MCP servers and agent to agent
+servers to
+
+882
+00:18:06,030 --> 00:18:06,040
+servers to
+ 
+
+883
+00:18:06,040 --> 00:18:09,510
+servers to
+deploy them in production? We deployed
+
+884
+00:18:09,510 --> 00:18:09,520
+deploy them in production? We deployed
+ 
+
+885
+00:18:09,520 --> 00:18:12,669
+deploy them in production? We deployed
+and developed two repositories, one for
+
+886
+00:18:12,669 --> 00:18:12,679
+and developed two repositories, one for
+ 
+
+887
+00:18:12,679 --> 00:18:16,470
+and developed two repositories, one for
+MCP and one for agent to agent protocol.
+
+888
+00:18:16,470 --> 00:18:16,480
+MCP and one for agent to agent protocol.
+ 
+
+889
+00:18:16,480 --> 00:18:18,310
+MCP and one for agent to agent protocol.
+These two repositories are template
+
+890
+00:18:18,310 --> 00:18:18,320
+These two repositories are template
+ 
+
+891
+00:18:18,320 --> 00:18:20,830
+These two repositories are template
+repositories on GitHub. So, then
+
+892
+00:18:20,830 --> 00:18:20,840
+repositories on GitHub. So, then
+ 
+
+893
+00:18:20,840 --> 00:18:23,790
+repositories on GitHub. So, then
+developers and teams can start from from
+
+894
+00:18:23,790 --> 00:18:23,800
+developers and teams can start from from
+ 
+
+895
+00:18:23,800 --> 00:18:27,710
+developers and teams can start from from
+them and work their way up to production
+
+896
+00:18:27,710 --> 00:18:27,720
+them and work their way up to production
+ 
+
+897
+00:18:27,720 --> 00:18:31,190
+them and work their way up to production
+environment. The idea is that these two
+
+898
+00:18:31,190 --> 00:18:31,200
+environment. The idea is that these two
+ 
+
+899
+00:18:31,200 --> 00:18:34,230
+environment. The idea is that these two
+blueprints actually have boilerplate
+
+900
+00:18:34,230 --> 00:18:34,240
+blueprints actually have boilerplate
+ 
+
+901
+00:18:34,240 --> 00:18:35,590
+blueprints actually have boilerplate
+provided
+
+902
+00:18:35,590 --> 00:18:35,600
+provided
+ 
+
+903
+00:18:35,600 --> 00:18:37,630
+provided
+and also
+
+904
+00:18:37,630 --> 00:18:37,640
+and also
+ 
+
+905
+00:18:37,640 --> 00:18:39,710
+and also
+infrastructure and tooling
+
+906
+00:18:39,710 --> 00:18:39,720
+infrastructure and tooling
+ 
+
+907
+00:18:39,720 --> 00:18:41,470
+infrastructure and tooling
+already present. So, for instance,
+
+908
+00:18:41,470 --> 00:18:41,480
+already present. So, for instance,
+ 
+
+909
+00:18:41,480 --> 00:18:42,990
+already present. So, for instance,
+Docker files,
+
+910
+00:18:42,990 --> 00:18:43,000
+Docker files,
+ 
+
+911
+00:18:43,000 --> 00:18:44,790
+Docker files,
+package manager,
+
+912
+00:18:44,790 --> 00:18:44,800
+package manager,
+ 
+
+913
+00:18:44,800 --> 00:18:47,430
+package manager,
+both are fast API servers, so they are
+
+914
+00:18:47,430 --> 00:18:47,440
+both are fast API servers, so they are
+ 
+
+915
+00:18:47,440 --> 00:18:49,790
+both are fast API servers, so they are
+exposed in the same way.
+
+916
+00:18:49,790 --> 00:18:49,800
+exposed in the same way.
+ 
+
+917
+00:18:49,800 --> 00:18:52,390
+exposed in the same way.
+And also the authentication
+
+918
+00:18:52,390 --> 00:18:52,400
+And also the authentication
+ 
+
+919
+00:18:52,400 --> 00:18:54,430
+And also the authentication
+and cost tracking cost tracking is
+
+920
+00:18:54,430 --> 00:18:54,440
+and cost tracking cost tracking is
+ 
+
+921
+00:18:54,440 --> 00:18:57,030
+and cost tracking cost tracking is
+handled inside the blueprint.
+
+922
+00:18:57,030 --> 00:18:57,040
+handled inside the blueprint.
+ 
+
+923
+00:18:57,040 --> 00:18:59,030
+handled inside the blueprint.
+We also have an integration
+
+924
+00:18:59,030 --> 00:18:59,040
+We also have an integration
+ 
+
+925
+00:18:59,040 --> 00:19:01,110
+We also have an integration
+to LongFuse, which is an observability
+
+926
+00:19:01,110 --> 00:19:01,120
+to LongFuse, which is an observability
+ 
+
+927
+00:19:01,120 --> 00:19:03,830
+to LongFuse, which is an observability
+tool that we deployed at the platform
+
+928
+00:19:03,830 --> 00:19:03,840
+tool that we deployed at the platform
+ 
+
+929
+00:19:03,840 --> 00:19:04,830
+tool that we deployed at the platform
+level.
+
+930
+00:19:04,830 --> 00:19:04,840
+level.
+ 
+
+931
+00:19:04,840 --> 00:19:06,390
+level.
+So,
+
+932
+00:19:06,390 --> 00:19:06,400
+So,
+ 
+
+933
+00:19:06,400 --> 00:19:10,550
+So,
+the development teams can also trace
+
+934
+00:19:10,550 --> 00:19:10,560
+the development teams can also trace
+ 
+
+935
+00:19:10,560 --> 00:19:12,310
+the development teams can also trace
+their agents,
+
+936
+00:19:12,310 --> 00:19:12,320
+their agents,
+ 
+
+937
+00:19:12,320 --> 00:19:15,950
+their agents,
+run evaluations, and check how the agent
+
+938
+00:19:15,950 --> 00:19:15,960
+run evaluations, and check how the agent
+ 
+
+939
+00:19:15,960 --> 00:19:17,470
+run evaluations, and check how the agent
+is performing.
+
+940
+00:19:17,470 --> 00:19:17,480
+is performing.
+ 
+
+941
+00:19:17,480 --> 00:19:20,590
+is performing.
+Also, the
+
+942
+00:19:20,590 --> 00:19:20,600
+Also, the
+ 
+
+943
+00:19:20,600 --> 00:19:22,950
+Also, the
+eight way server blueprint is agnostic,
+
+944
+00:19:22,950 --> 00:19:22,960
+eight way server blueprint is agnostic,
+ 
+
+945
+00:19:22,960 --> 00:19:24,710
+eight way server blueprint is agnostic,
+so it's not based on a particular
+
+946
+00:19:24,710 --> 00:19:24,720
+so it's not based on a particular
+ 
+
+947
+00:19:24,720 --> 00:19:29,110
+so it's not based on a particular
+framework, so LongChain or Agno or
+
+948
+00:19:29,110 --> 00:19:29,120
+framework, so LongChain or Agno or
+ 
+
+949
+00:19:29,120 --> 00:19:31,390
+framework, so LongChain or Agno or
+any other framework, but actually is
+
+950
+00:19:31,390 --> 00:19:31,400
+any other framework, but actually is
+ 
+
+951
+00:19:31,400 --> 00:19:34,149
+any other framework, but actually is
+composed of interfaces and
+
+952
+00:19:34,149 --> 00:19:34,159
+composed of interfaces and
+ 
+
+953
+00:19:34,159 --> 00:19:36,710
+composed of interfaces and
+ports so that every team can implement
+
+954
+00:19:36,710 --> 00:19:36,720
+ports so that every team can implement
+ 
+
+955
+00:19:36,720 --> 00:19:39,070
+ports so that every team can implement
+their own solution
+
+956
+00:19:39,070 --> 00:19:39,080
+their own solution
+ 
+
+957
+00:19:39,080 --> 00:19:42,190
+their own solution
+in their framework of choice.
+
+958
+00:19:42,190 --> 00:19:42,200
+in their framework of choice.
+ 
+
+959
+00:19:42,200 --> 00:19:44,390
+in their framework of choice.
+The important thing is that they provide
+
+960
+00:19:44,390 --> 00:19:44,400
+The important thing is that they provide
+ 
+
+961
+00:19:44,400 --> 00:19:46,550
+The important thing is that they provide
+the same interface
+
+962
+00:19:46,550 --> 00:19:46,560
+the same interface
+ 
+
+963
+00:19:46,560 --> 00:19:48,270
+the same interface
+that we
+
+964
+00:19:48,270 --> 00:19:48,280
+that we
+ 
+
+965
+00:19:48,280 --> 00:19:50,750
+that we
+saved in the in the blueprint.
+
+966
+00:19:50,750 --> 00:19:50,760
+saved in the in the blueprint.
+ 
+
+967
+00:19:50,760 --> 00:19:54,350
+saved in the in the blueprint.
+So, that uh the development is uh easy
+
+968
+00:19:54,350 --> 00:19:54,360
+So, that uh the development is uh easy
+ 
+
+969
+00:19:54,360 --> 00:19:56,630
+So, that uh the development is uh easy
+on the developers and they can focus on
+
+970
+00:19:56,630 --> 00:19:56,640
+on the developers and they can focus on
+ 
+
+971
+00:19:56,640 --> 00:20:00,150
+on the developers and they can focus on
+the actual value of the agent.
+
+972
+00:20:00,150 --> 00:20:00,160
+the actual value of the agent.
+ 
+
+973
+00:20:00,160 --> 00:20:01,230
+the actual value of the agent.
+So um
+
+974
+00:20:01,230 --> 00:20:01,240
+So um
+ 
+
+975
+00:20:01,240 --> 00:20:04,990
+So um
+Mauro talked about the um CICD uh that
+
+976
+00:20:04,990 --> 00:20:05,000
+Mauro talked about the um CICD uh that
+ 
+
+977
+00:20:05,000 --> 00:20:07,390
+Mauro talked about the um CICD uh that
+is in place in the um
+
+978
+00:20:07,390 --> 00:20:07,400
+is in place in the um
+ 
+
+979
+00:20:07,400 --> 00:20:08,030
+is in place in the um
+uh
+
+980
+00:20:08,030 --> 00:20:08,040
+uh
+ 
+
+981
+00:20:08,040 --> 00:20:11,230
+uh
+A2A uh blueprint and also the MCP
+
+982
+00:20:11,230 --> 00:20:11,240
+A2A uh blueprint and also the MCP
+ 
+
+983
+00:20:11,240 --> 00:20:12,470
+A2A uh blueprint and also the MCP
+blueprint.
+
+984
+00:20:12,470 --> 00:20:12,480
+blueprint.
+ 
+
+985
+00:20:12,480 --> 00:20:15,910
+blueprint.
+Uh the idea is that uh once you are
+
+986
+00:20:15,910 --> 00:20:15,920
+Uh the idea is that uh once you are
+ 
+
+987
+00:20:15,920 --> 00:20:19,110
+Uh the idea is that uh once you are
+ready with your development, uh you can
+
+988
+00:20:19,110 --> 00:20:19,120
+ready with your development, uh you can
+ 
+
+989
+00:20:19,120 --> 00:20:22,470
+ready with your development, uh you can
+tag um a certain branch and uh GitHub
+
+990
+00:20:22,470 --> 00:20:22,480
+tag um a certain branch and uh GitHub
+ 
+
+991
+00:20:22,480 --> 00:20:24,470
+tag um a certain branch and uh GitHub
+action so uh
+
+992
+00:20:24,470 --> 00:20:24,480
+action so uh
+ 
+
+993
+00:20:24,480 --> 00:20:28,790
+action so uh
+starts and uh uh all not only publishes
+
+994
+00:20:28,790 --> 00:20:28,800
+starts and uh uh all not only publishes
+ 
+
+995
+00:20:28,800 --> 00:20:30,990
+starts and uh uh all not only publishes
+the Docker image on our artifact
+
+996
+00:20:30,990 --> 00:20:31,000
+the Docker image on our artifact
+ 
+
+997
+00:20:31,000 --> 00:20:32,310
+the Docker image on our artifact
+repository,
+
+998
+00:20:32,310 --> 00:20:32,320
+repository,
+ 
+
+999
+00:20:32,320 --> 00:20:35,230
+repository,
+uh but also publishes the metadata of
+
+1000
+00:20:35,230 --> 00:20:35,240
+uh but also publishes the metadata of
+ 
+
+1001
+00:20:35,240 --> 00:20:38,470
+uh but also publishes the metadata of
+that agent so the agent card for uh
+
+1002
+00:20:38,470 --> 00:20:38,480
+that agent so the agent card for uh
+ 
+
+1003
+00:20:38,480 --> 00:20:40,390
+that agent so the agent card for uh
+agent-to-agent protocol and the
+
+1004
+00:20:40,390 --> 00:20:40,400
+agent-to-agent protocol and the
+ 
+
+1005
+00:20:40,400 --> 00:20:41,990
+agent-to-agent protocol and the
+server.json
+
+1006
+00:20:41,990 --> 00:20:42,000
+server.json
+ 
+
+1007
+00:20:42,000 --> 00:20:43,550
+server.json
+uh for MCP
+
+1008
+00:20:43,550 --> 00:20:43,560
+uh for MCP
+ 
+
+1009
+00:20:43,560 --> 00:20:46,390
+uh for MCP
+uh onto the uh backend uh let's say
+
+1010
+00:20:46,390 --> 00:20:46,400
+uh onto the uh backend uh let's say
+ 
+
+1011
+00:20:46,400 --> 00:20:48,950
+uh onto the uh backend uh let's say
+proxy of the the catalog of the
+
+1012
+00:20:48,950 --> 00:20:48,960
+proxy of the the catalog of the
+ 
+
+1013
+00:20:48,960 --> 00:20:50,390
+proxy of the the catalog of the
+registries.
+
+1014
+00:20:50,390 --> 00:20:50,400
+registries.
+ 
+
+1015
+00:20:50,400 --> 00:20:51,670
+registries.
+Um
+
+1016
+00:20:51,670 --> 00:20:51,680
+Um
+ 
+
+1017
+00:20:51,680 --> 00:20:54,750
+Um
+in this image we can also see that um
+
+1018
+00:20:54,750 --> 00:20:54,760
+in this image we can also see that um
+ 
+
+1019
+00:20:54,760 --> 00:20:58,910
+in this image we can also see that um
+in case any AI agents uh needs to call
+
+1020
+00:20:58,910 --> 00:20:58,920
+in case any AI agents uh needs to call
+ 
+
+1021
+00:20:58,920 --> 00:21:02,870
+in case any AI agents uh needs to call
+either an MCP or an A2A proxy, um
+
+1022
+00:21:02,870 --> 00:21:02,880
+either an MCP or an A2A proxy, um
+ 
+
+1023
+00:21:02,880 --> 00:21:06,070
+either an MCP or an A2A proxy, um
+the idea is that they can go through the
+
+1024
+00:21:06,070 --> 00:21:06,080
+the idea is that they can go through the
+ 
+
+1025
+00:21:06,080 --> 00:21:07,150
+the idea is that they can go through the
+um
+
+1026
+00:21:07,150 --> 00:21:07,160
+um
+ 
+
+1027
+00:21:07,160 --> 00:21:11,310
+um
+APG AI gateway that we deployed and um
+
+1028
+00:21:11,310 --> 00:21:11,320
+APG AI gateway that we deployed and um
+ 
+
+1029
+00:21:11,320 --> 00:21:14,430
+APG AI gateway that we deployed and um
+these two proxies, so the MCP one and
+
+1030
+00:21:14,430 --> 00:21:14,440
+these two proxies, so the MCP one and
+ 
+
+1031
+00:21:14,440 --> 00:21:16,870
+these two proxies, so the MCP one and
+the uh A2A one,
+
+1032
+00:21:16,870 --> 00:21:16,880
+the uh A2A one,
+ 
+
+1033
+00:21:16,880 --> 00:21:17,950
+the uh A2A one,
+um
+
+1034
+00:21:17,950 --> 00:21:17,960
+um
+ 
+
+1035
+00:21:17,960 --> 00:21:21,550
+um
+go uh look up into the uh actual catalog
+
+1036
+00:21:21,550 --> 00:21:21,560
+go uh look up into the uh actual catalog
+ 
+
+1037
+00:21:21,560 --> 00:21:25,150
+go uh look up into the uh actual catalog
+of uh agents and MCPs to retrieve the
+
+1038
+00:21:25,150 --> 00:21:25,160
+of uh agents and MCPs to retrieve the
+ 
+
+1039
+00:21:25,160 --> 00:21:28,950
+of uh agents and MCPs to retrieve the
+actual URL of the backend that the agent
+
+1040
+00:21:28,950 --> 00:21:28,960
+actual URL of the backend that the agent
+ 
+
+1041
+00:21:28,960 --> 00:21:31,150
+actual URL of the backend that the agent
+uh wants to call and then the agent
+
+1042
+00:21:31,150 --> 00:21:31,160
+uh wants to call and then the agent
+ 
+
+1043
+00:21:31,160 --> 00:21:33,550
+uh wants to call and then the agent
+authenticate itself uh
+
+1044
+00:21:33,550 --> 00:21:33,560
+authenticate itself uh
+ 
+
+1045
+00:21:33,560 --> 00:21:35,350
+authenticate itself uh
+with another header
+
+1046
+00:21:35,350 --> 00:21:35,360
+with another header
+ 
+
+1047
+00:21:35,360 --> 00:21:36,190
+with another header
+um
+
+1048
+00:21:36,190 --> 00:21:36,200
+um
+ 
+
+1049
+00:21:36,200 --> 00:21:38,830
+um
+onto the the actual server.
+
+1050
+00:21:38,830 --> 00:21:38,840
+onto the the actual server.
+ 
+
+1051
+00:21:38,840 --> 00:21:40,230
+onto the the actual server.
+So to bring it back to the business
+
+1052
+00:21:40,230 --> 00:21:40,240
+So to bring it back to the business
+ 
+
+1053
+00:21:40,240 --> 00:21:42,310
+So to bring it back to the business
+perspective, what we achieved with the
+
+1054
+00:21:42,310 --> 00:21:42,320
+perspective, what we achieved with the
+ 
+
+1055
+00:21:42,320 --> 00:21:44,870
+perspective, what we achieved with the
+amplify platform and the registry uh we
+
+1056
+00:21:44,870 --> 00:21:44,880
+amplify platform and the registry uh we
+ 
+
+1057
+00:21:44,880 --> 00:21:47,670
+amplify platform and the registry uh we
+developed, we have right now a catalog
+
+1058
+00:21:47,670 --> 00:21:47,680
+developed, we have right now a catalog
+ 
+
+1059
+00:21:47,680 --> 00:21:49,950
+developed, we have right now a catalog
+uh to to make the governance happen. So
+
+1060
+00:21:49,950 --> 00:21:49,960
+uh to to make the governance happen. So
+ 
+
+1061
+00:21:49,960 --> 00:21:52,470
+uh to to make the governance happen. So
+we see the MCP and A2A server that we
+
+1062
+00:21:52,470 --> 00:21:52,480
+we see the MCP and A2A server that we
+ 
+
+1063
+00:21:52,480 --> 00:21:53,990
+we see the MCP and A2A server that we
+deploy across the organization and
+
+1064
+00:21:53,990 --> 00:21:54,000
+deploy across the organization and
+ 
+
+1065
+00:21:54,000 --> 00:21:55,910
+deploy across the organization and
+across multiple teams.
+
+1066
+00:21:55,910 --> 00:21:55,920
+across multiple teams.
+ 
+
+1067
+00:21:55,920 --> 00:21:58,590
+across multiple teams.
+Uh we have a full traceability of the
+
+1068
+00:21:58,590 --> 00:21:58,600
+Uh we have a full traceability of the
+ 
+
+1069
+00:21:58,600 --> 00:22:01,390
+Uh we have a full traceability of the
+use cases, agents, tools, and also
+
+1070
+00:22:01,390 --> 00:22:01,400
+use cases, agents, tools, and also
+ 
+
+1071
+00:22:01,400 --> 00:22:04,750
+use cases, agents, tools, and also
+models adopted um across across the use
+
+1072
+00:22:04,750 --> 00:22:04,760
+models adopted um across across the use
+ 
+
+1073
+00:22:04,760 --> 00:22:06,990
+models adopted um across across the use
+cases. Then we have the production ready
+
+1074
+00:22:06,990 --> 00:22:07,000
+cases. Then we have the production ready
+ 
+
+1075
+00:22:07,000 --> 00:22:08,950
+cases. Then we have the production ready
+blueprints for developers to start from
+
+1076
+00:22:08,950 --> 00:22:08,960
+blueprints for developers to start from
+ 
+
+1077
+00:22:08,960 --> 00:22:11,150
+blueprints for developers to start from
+something standard across across teams,
+
+1078
+00:22:11,150 --> 00:22:11,160
+something standard across across teams,
+ 
+
+1079
+00:22:11,160 --> 00:22:13,910
+something standard across across teams,
+but uh ready for building and focusing
+
+1080
+00:22:13,910 --> 00:22:13,920
+but uh ready for building and focusing
+ 
+
+1081
+00:22:13,920 --> 00:22:14,790
+but uh ready for building and focusing
+on
+
+1082
+00:22:14,790 --> 00:22:14,800
+on
+ 
+
+1083
+00:22:14,800 --> 00:22:17,270
+on
+um the business logic in the use cases.
+
+1084
+00:22:17,270 --> 00:22:17,280
+um the business logic in the use cases.
+ 
+
+1085
+00:22:17,280 --> 00:22:20,110
+um the business logic in the use cases.
+Then we have the CICD pipelines that
+
+1086
+00:22:20,110 --> 00:22:20,120
+Then we have the CICD pipelines that
+ 
+
+1087
+00:22:20,120 --> 00:22:22,590
+Then we have the CICD pipelines that
+ties for deploying the servers to
+
+1088
+00:22:22,590 --> 00:22:22,600
+ties for deploying the servers to
+ 
+
+1089
+00:22:22,600 --> 00:22:24,270
+ties for deploying the servers to
+production, but also the metadata into
+
+1090
+00:22:24,270 --> 00:22:24,280
+production, but also the metadata into
+ 
+
+1091
+00:22:24,280 --> 00:22:26,870
+production, but also the metadata into
+the registry. Of course, it is still in
+
+1092
+00:22:26,870 --> 00:22:26,880
+the registry. Of course, it is still in
+ 
+
+1093
+00:22:26,880 --> 00:22:28,870
+the registry. Of course, it is still in
+progress the the work on this platform,
+
+1094
+00:22:28,870 --> 00:22:28,880
+progress the the work on this platform,
+ 
+
+1095
+00:22:28,880 --> 00:22:32,230
+progress the the work on this platform,
+so we are keep growing the capabilities.
+
+1096
+00:22:32,230 --> 00:22:32,240
+so we are keep growing the capabilities.
+ 
+
+1097
+00:22:32,240 --> 00:22:34,390
+so we are keep growing the capabilities.
+Uh so feel free to to reach out to us
+
+1098
+00:22:34,390 --> 00:22:34,400
+Uh so feel free to to reach out to us
+ 
+
+1099
+00:22:34,400 --> 00:22:36,390
+Uh so feel free to to reach out to us
+and keep in touch if you have any
+
+1100
+00:22:36,390 --> 00:22:36,400
+and keep in touch if you have any
+ 
+
+1101
+00:22:36,400 --> 00:22:39,310
+and keep in touch if you have any
+similar uh point of view or also
+
+1102
+00:22:39,310 --> 00:22:39,320
+similar uh point of view or also
+ 
+
+1103
+00:22:39,320 --> 00:22:40,710
+similar uh point of view or also
+uh something different that you want to
+
+1104
+00:22:40,710 --> 00:22:40,720
+uh something different that you want to
+ 
+
+1105
+00:22:40,720 --> 00:22:42,990
+uh something different that you want to
+discuss, more than welcome.
+
+1106
+00:22:42,990 --> 00:22:43,000
+discuss, more than welcome.
+ 
+
+1107
+00:22:43,000 --> 00:22:46,840
+discuss, more than welcome.
+Thank you. Feel free to reach out.
+

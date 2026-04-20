@@ -1,0 +1,4095 @@
+1
+00:00:15,360 --> 00:00:18,790
+
+welcome. Um, so
+
+2
+00:00:18,790 --> 00:00:18,800
+welcome. Um, so
+ 
+
+3
+00:00:18,800 --> 00:00:21,510
+welcome. Um, so
+the talk is building on ACP on uh at
+
+4
+00:00:21,510 --> 00:00:21,520
+the talk is building on ACP on uh at
+ 
+
+5
+00:00:21,520 --> 00:00:24,790
+the talk is building on ACP on uh at
+OpenCloud. It's uh also about other
+
+6
+00:00:24,790 --> 00:00:24,800
+OpenCloud. It's uh also about other
+ 
+
+7
+00:00:24,800 --> 00:00:28,710
+OpenCloud. It's uh also about other
+things like how to uh put open source
+
+8
+00:00:28,710 --> 00:00:28,720
+things like how to uh put open source
+ 
+
+9
+00:00:28,720 --> 00:00:30,870
+things like how to uh put open source
+agents on open source agent frameworks
+
+10
+00:00:30,870 --> 00:00:30,880
+agents on open source agent frameworks
+ 
+
+11
+00:00:30,880 --> 00:00:33,670
+agents on open source agent frameworks
+on Kubernetes and stuff. So I'm I'm I
+
+12
+00:00:33,670 --> 00:00:33,680
+on Kubernetes and stuff. So I'm I'm I
+ 
+
+13
+00:00:33,680 --> 00:00:37,430
+on Kubernetes and stuff. So I'm I'm I
+hope uh to I will today share in a nice
+
+14
+00:00:37,430 --> 00:00:37,440
+hope uh to I will today share in a nice
+ 
+
+15
+00:00:37,440 --> 00:00:38,790
+hope uh to I will today share in a nice
+way what I've been working on in the
+
+16
+00:00:38,790 --> 00:00:38,800
+way what I've been working on in the
+ 
+
+17
+00:00:38,800 --> 00:00:42,310
+way what I've been working on in the
+last two months. Um a little bit about
+
+18
+00:00:42,310 --> 00:00:42,320
+last two months. Um a little bit about
+ 
+
+19
+00:00:42,320 --> 00:00:46,310
+last two months. Um a little bit about
+me very brief my ah a little bit about
+
+20
+00:00:46,310 --> 00:00:46,320
+me very brief my ah a little bit about
+ 
+
+21
+00:00:46,320 --> 00:00:48,549
+me very brief my ah a little bit about
+me. I've been building harnesses since a
+
+22
+00:00:48,549 --> 00:00:48,559
+me. I've been building harnesses since a
+ 
+
+23
+00:00:48,559 --> 00:00:50,549
+me. I've been building harnesses since a
+few months before chat GPD came out. I
+
+24
+00:00:50,549 --> 00:00:50,559
+few months before chat GPD came out. I
+ 
+
+25
+00:00:50,559 --> 00:00:53,750
+few months before chat GPD came out. I
+built a Jupyter lab extension over OG
+
+26
+00:00:53,750 --> 00:00:53,760
+built a Jupyter lab extension over OG
+ 
+
+27
+00:00:53,760 --> 00:00:56,869
+built a Jupyter lab extension over OG
+codeex model like Dainci code 2 um back
+
+28
+00:00:56,869 --> 00:00:56,879
+codeex model like Dainci code 2 um back
+ 
+
+29
+00:00:56,879 --> 00:00:59,110
+codeex model like Dainci code 2 um back
+in the days that eventually so I'm
+
+30
+00:00:59,110 --> 00:00:59,120
+in the days that eventually so I'm
+ 
+
+31
+00:00:59,120 --> 00:01:02,229
+in the days that eventually so I'm
+currently working for a startup and that
+
+32
+00:01:02,229 --> 00:01:02,239
+currently working for a startup and that
+ 
+
+33
+00:01:02,239 --> 00:01:05,750
+currently working for a startup and that
+that initial coding harness turned into
+
+34
+00:01:05,750 --> 00:01:05,760
+that initial coding harness turned into
+ 
+
+35
+00:01:05,760 --> 00:01:08,230
+that initial coding harness turned into
+its current harness over time like a
+
+36
+00:01:08,230 --> 00:01:08,240
+its current harness over time like a
+ 
+
+37
+00:01:08,240 --> 00:01:10,310
+its current harness over time like a
+ship of thesis it got ripped apart and
+
+38
+00:01:10,310 --> 00:01:10,320
+ship of thesis it got ripped apart and
+ 
+
+39
+00:01:10,320 --> 00:01:13,190
+ship of thesis it got ripped apart and
+put back together so many times and uh
+
+40
+00:01:13,190 --> 00:01:13,200
+put back together so many times and uh
+ 
+
+41
+00:01:13,200 --> 00:01:14,950
+put back together so many times and uh
+yeah I'm a founding engineer there I've
+
+42
+00:01:14,950 --> 00:01:14,960
+yeah I'm a founding engineer there I've
+ 
+
+43
+00:01:14,960 --> 00:01:18,149
+yeah I'm a founding engineer there I've
+been uh in the industry since three and
+
+44
+00:01:18,149 --> 00:01:18,159
+been uh in the industry since three and
+ 
+
+45
+00:01:18,159 --> 00:01:21,030
+been uh in the industry since three and
+a half four years I using open clause
+
+46
+00:01:21,030 --> 00:01:21,040
+a half four years I using open clause
+ 
+
+47
+00:01:21,040 --> 00:01:23,990
+a half four years I using open clause
+since cloudbot uh first dropped in
+
+48
+00:01:23,990 --> 00:01:24,000
+since cloudbot uh first dropped in
+ 
+
+49
+00:01:24,000 --> 00:01:26,469
+since cloudbot uh first dropped in
+discord. I went in there. I've been
+
+50
+00:01:26,469 --> 00:01:26,479
+discord. I went in there. I've been
+ 
+
+51
+00:01:26,479 --> 00:01:29,590
+discord. I went in there. I've been
+following Peter since he wrote uh cloud
+
+52
+00:01:29,590 --> 00:01:29,600
+following Peter since he wrote uh cloud
+ 
+
+53
+00:01:29,600 --> 00:01:32,630
+following Peter since he wrote uh cloud
+code is my computer. I was like this guy
+
+54
+00:01:32,630 --> 00:01:32,640
+code is my computer. I was like this guy
+ 
+
+55
+00:01:32,640 --> 00:01:34,310
+code is my computer. I was like this guy
+is crazy
+
+56
+00:01:34,310 --> 00:01:34,320
+is crazy
+ 
+
+57
+00:01:34,320 --> 00:01:36,390
+is crazy
+because uh cloud force on it like I
+
+58
+00:01:36,390 --> 00:01:36,400
+because uh cloud force on it like I
+ 
+
+59
+00:01:36,400 --> 00:01:38,390
+because uh cloud force on it like I
+wouldn't give my machine to it but he he
+
+60
+00:01:38,390 --> 00:01:38,400
+wouldn't give my machine to it but he he
+ 
+
+61
+00:01:38,400 --> 00:01:40,789
+wouldn't give my machine to it but he he
+went he ventured forth and he's paved
+
+62
+00:01:40,789 --> 00:01:40,799
+went he ventured forth and he's paved
+ 
+
+63
+00:01:40,799 --> 00:01:43,429
+went he ventured forth and he's paved
+the way for us and when I saw uh
+
+64
+00:01:43,429 --> 00:01:43,439
+the way for us and when I saw uh
+ 
+
+65
+00:01:43,439 --> 00:01:46,230
+the way for us and when I saw uh
+cloudbot in discord my mind was blown.
+
+66
+00:01:46,230 --> 00:01:46,240
+cloudbot in discord my mind was blown.
+ 
+
+67
+00:01:46,240 --> 00:01:48,950
+cloudbot in discord my mind was blown.
+The next day I installed it uh at the
+
+68
+00:01:48,950 --> 00:01:48,960
+The next day I installed it uh at the
+ 
+
+69
+00:01:48,960 --> 00:01:53,190
+The next day I installed it uh at the
+company uh in our like cluster and it
+
+70
+00:01:53,190 --> 00:01:53,200
+company uh in our like cluster and it
+ 
+
+71
+00:01:53,200 --> 00:01:55,510
+company uh in our like cluster and it
+was basically talking to people on
+
+72
+00:01:55,510 --> 00:01:55,520
+was basically talking to people on
+ 
+
+73
+00:01:55,520 --> 00:01:57,670
+was basically talking to people on
+discore and also everybody else's minds
+
+74
+00:01:57,670 --> 00:01:57,680
+discore and also everybody else's minds
+ 
+
+75
+00:01:57,680 --> 00:02:00,950
+discore and also everybody else's minds
+were blown and we are like we have we're
+
+76
+00:02:00,950 --> 00:02:00,960
+were blown and we are like we have we're
+ 
+
+77
+00:02:00,960 --> 00:02:02,789
+were blown and we are like we have we're
+used to selling the enterprise for a few
+
+78
+00:02:02,789 --> 00:02:02,799
+used to selling the enterprise for a few
+ 
+
+79
+00:02:02,799 --> 00:02:05,109
+used to selling the enterprise for a few
+uh years now. So that's why I started by
+
+80
+00:02:05,109 --> 00:02:05,119
+uh years now. So that's why I started by
+ 
+
+81
+00:02:05,119 --> 00:02:07,429
+uh years now. So that's why I started by
+adding an MS teams integration in case
+
+82
+00:02:07,429 --> 00:02:07,439
+adding an MS teams integration in case
+ 
+
+83
+00:02:07,439 --> 00:02:10,469
+adding an MS teams integration in case
+it might be useful at some point and I
+
+84
+00:02:10,469 --> 00:02:10,479
+it might be useful at some point and I
+ 
+
+85
+00:02:10,479 --> 00:02:12,790
+it might be useful at some point and I
+became a maintainer along the way. I was
+
+86
+00:02:12,790 --> 00:02:12,800
+became a maintainer along the way. I was
+ 
+
+87
+00:02:12,800 --> 00:02:16,229
+became a maintainer along the way. I was
+there when it was renamed two times. Um
+
+88
+00:02:16,229 --> 00:02:16,239
+there when it was renamed two times. Um
+ 
+
+89
+00:02:16,239 --> 00:02:18,790
+there when it was renamed two times. Um
+and today I I'm my focus is on agent
+
+90
+00:02:18,790 --> 00:02:18,800
+and today I I'm my focus is on agent
+ 
+
+91
+00:02:18,800 --> 00:02:21,830
+and today I I'm my focus is on agent
+interoperability and orchestration.
+
+92
+00:02:21,830 --> 00:02:21,840
+interoperability and orchestration.
+ 
+
+93
+00:02:21,840 --> 00:02:24,550
+interoperability and orchestration.
+Um like one of my goals is accelerate
+
+94
+00:02:24,550 --> 00:02:24,560
+Um like one of my goals is accelerate
+ 
+
+95
+00:02:24,560 --> 00:02:26,390
+Um like one of my goals is accelerate
+enterprise adoption of openlow and
+
+96
+00:02:26,390 --> 00:02:26,400
+enterprise adoption of openlow and
+ 
+
+97
+00:02:26,400 --> 00:02:28,390
+enterprise adoption of openlow and
+adjacent software and also address you
+
+98
+00:02:28,390 --> 00:02:28,400
+adjacent software and also address you
+ 
+
+99
+00:02:28,400 --> 00:02:31,110
+adjacent software and also address you
+know open glow is not secure. Well it
+
+100
+00:02:31,110 --> 00:02:31,120
+know open glow is not secure. Well it
+ 
+
+101
+00:02:31,120 --> 00:02:33,670
+know open glow is not secure. Well it
+will be secure or Peter talked a lot
+
+102
+00:02:33,670 --> 00:02:33,680
+will be secure or Peter talked a lot
+ 
+
+103
+00:02:33,680 --> 00:02:35,190
+will be secure or Peter talked a lot
+about that earlier so I don't have
+
+104
+00:02:35,190 --> 00:02:35,200
+about that earlier so I don't have
+ 
+
+105
+00:02:35,200 --> 00:02:36,869
+about that earlier so I don't have
+anything else to add on top of it like
+
+106
+00:02:36,869 --> 00:02:36,879
+anything else to add on top of it like
+ 
+
+107
+00:02:36,879 --> 00:02:47,350
+anything else to add on top of it like
+it's work in progress.
+
+108
+00:02:47,350 --> 00:02:47,360
+
+ 
+
+109
+00:02:47,360 --> 00:02:49,670
+
+Sorry,
+
+110
+00:02:49,670 --> 00:02:49,680
+Sorry,
+ 
+
+111
+00:02:49,680 --> 00:02:52,070
+Sorry,
+I'll use this.
+
+112
+00:02:52,070 --> 00:02:52,080
+I'll use this.
+ 
+
+113
+00:02:52,080 --> 00:02:55,270
+I'll use this.
+So, uh started by I started on developer
+
+114
+00:02:55,270 --> 00:02:55,280
+So, uh started by I started on developer
+ 
+
+115
+00:02:55,280 --> 00:02:58,390
+So, uh started by I started on developer
+workflows right away. So, I created a PR
+
+116
+00:02:58,390 --> 00:02:58,400
+workflows right away. So, I created a PR
+ 
+
+117
+00:02:58,400 --> 00:03:00,550
+workflows right away. So, I created a PR
+uh and then call it Discord driven
+
+118
+00:03:00,550 --> 00:03:00,560
+uh and then call it Discord driven
+ 
+
+119
+00:03:00,560 --> 00:03:02,869
+uh and then call it Discord driven
+development. Well, Telegram driven
+
+120
+00:03:02,869 --> 00:03:02,879
+development. Well, Telegram driven
+ 
+
+121
+00:03:02,879 --> 00:03:04,550
+development. Well, Telegram driven
+development suits better because it's
+
+122
+00:03:04,550 --> 00:03:04,560
+development suits better because it's
+ 
+
+123
+00:03:04,560 --> 00:03:10,710
+development suits better because it's
+TDD. So um and then uh right after I set
+
+124
+00:03:10,710 --> 00:03:10,720
+TDD. So um and then uh right after I set
+ 
+
+125
+00:03:10,720 --> 00:03:13,190
+TDD. So um and then uh right after I set
+it personally and I realized you know
+
+126
+00:03:13,190 --> 00:03:13,200
+it personally and I realized you know
+ 
+
+127
+00:03:13,200 --> 00:03:16,710
+it personally and I realized you know
+oppus is not so reliable for complex it
+
+128
+00:03:16,710 --> 00:03:16,720
+oppus is not so reliable for complex it
+ 
+
+129
+00:03:16,720 --> 00:03:18,470
+oppus is not so reliable for complex it
+wasn't back in the days it's now better
+
+130
+00:03:18,470 --> 00:03:18,480
+wasn't back in the days it's now better
+ 
+
+131
+00:03:18,480 --> 00:03:21,030
+wasn't back in the days it's now better
+it's agents are improving but codex was
+
+132
+00:03:21,030 --> 00:03:21,040
+it's agents are improving but codex was
+ 
+
+133
+00:03:21,040 --> 00:03:22,790
+it's agents are improving but codex was
+main my main harness and I wanted to use
+
+134
+00:03:22,790 --> 00:03:22,800
+main my main harness and I wanted to use
+ 
+
+135
+00:03:22,800 --> 00:03:26,149
+main my main harness and I wanted to use
+codex in discord but it was basic I was
+
+136
+00:03:26,149 --> 00:03:26,159
+codex in discord but it was basic I was
+ 
+
+137
+00:03:26,159 --> 00:03:27,830
+codex in discord but it was basic I was
+telling I was playing a telephone game I
+
+138
+00:03:27,830 --> 00:03:27,840
+telling I was playing a telephone game I
+ 
+
+139
+00:03:27,840 --> 00:03:29,910
+telling I was playing a telephone game I
+was telling us to tell codex to do
+
+140
+00:03:29,910 --> 00:03:29,920
+was telling us to tell codex to do
+ 
+
+141
+00:03:29,920 --> 00:03:31,670
+was telling us to tell codex to do
+something god knows what it's saying you
+
+142
+00:03:31,670 --> 00:03:31,680
+something god knows what it's saying you
+ 
+
+143
+00:03:31,680 --> 00:03:33,430
+something god knows what it's saying you
+know because wording matters when
+
+144
+00:03:33,430 --> 00:03:33,440
+know because wording matters when
+ 
+
+145
+00:03:33,440 --> 00:03:36,229
+know because wording matters when
+prompting but it was working somehow and
+
+146
+00:03:36,229 --> 00:03:36,239
+prompting but it was working somehow and
+ 
+
+147
+00:03:36,239 --> 00:03:38,550
+prompting but it was working somehow and
+I would go uh and then look at the codec
+
+148
+00:03:38,550 --> 00:03:38,560
+I would go uh and then look at the codec
+ 
+
+149
+00:03:38,560 --> 00:03:41,350
+I would go uh and then look at the codec
+session and then it paraphrased kind of
+
+150
+00:03:41,350 --> 00:03:41,360
+session and then it paraphrased kind of
+ 
+
+151
+00:03:41,360 --> 00:03:43,350
+session and then it paraphrased kind of
+what I was saying but eventually you
+
+152
+00:03:43,350 --> 00:03:43,360
+what I was saying but eventually you
+ 
+
+153
+00:03:43,360 --> 00:03:46,309
+what I was saying but eventually you
+know u I got some stuff done but I knew
+
+154
+00:03:46,309 --> 00:03:46,319
+know u I got some stuff done but I knew
+ 
+
+155
+00:03:46,319 --> 00:03:50,949
+know u I got some stuff done but I knew
+this could be done much easier um
+
+156
+00:03:50,949 --> 00:03:50,959
+this could be done much easier um
+ 
+
+157
+00:03:50,959 --> 00:03:53,270
+this could be done much easier um
+and today I'm running a full ID on
+
+158
+00:03:53,270 --> 00:03:53,280
+and today I'm running a full ID on
+ 
+
+159
+00:03:53,280 --> 00:03:55,350
+and today I'm running a full ID on
+discord like uh you know we have
+
+160
+00:03:55,350 --> 00:03:55,360
+discord like uh you know we have
+ 
+
+161
+00:03:55,360 --> 00:03:57,910
+discord like uh you know we have
+parallel workloads you have like one to
+
+162
+00:03:57,910 --> 00:03:57,920
+parallel workloads you have like one to
+ 
+
+163
+00:03:57,920 --> 00:03:59,509
+parallel workloads you have like one to
+like five channels at any point I'm
+
+164
+00:03:59,509 --> 00:03:59,519
+like five channels at any point I'm
+ 
+
+165
+00:03:59,519 --> 00:04:03,030
+like five channels at any point I'm
+working with one to five agents um so
+
+166
+00:04:03,030 --> 00:04:03,040
+working with one to five agents um so
+ 
+
+167
+00:04:03,040 --> 00:04:04,949
+working with one to five agents um so
+you see codeex one to and then close is
+
+168
+00:04:04,949 --> 00:04:04,959
+you see codeex one to and then close is
+ 
+
+169
+00:04:04,959 --> 00:04:08,229
+you see codeex one to and then close is
+for testing the open close ACP feature
+
+170
+00:04:08,229 --> 00:04:08,239
+for testing the open close ACP feature
+ 
+
+171
+00:04:08,239 --> 00:04:10,869
+for testing the open close ACP feature
+and then yeah basically that's how my
+
+172
+00:04:10,869 --> 00:04:10,879
+and then yeah basically that's how my
+ 
+
+173
+00:04:10,879 --> 00:04:12,949
+and then yeah basically that's how my
+some of my channels look like and it's
+
+174
+00:04:12,949 --> 00:04:12,959
+some of my channels look like and it's
+ 
+
+175
+00:04:12,959 --> 00:04:14,869
+some of my channels look like and it's
+very good for coding on the go because I
+
+176
+00:04:14,869 --> 00:04:14,879
+very good for coding on the go because I
+ 
+
+177
+00:04:14,879 --> 00:04:16,710
+very good for coding on the go because I
+have I'm a guy who's addicted to side
+
+178
+00:04:16,710 --> 00:04:16,720
+have I'm a guy who's addicted to side
+ 
+
+179
+00:04:16,720 --> 00:04:20,710
+have I'm a guy who's addicted to side
+projects and uh I I like to just you
+
+180
+00:04:20,710 --> 00:04:20,720
+projects and uh I I like to just you
+ 
+
+181
+00:04:20,720 --> 00:04:24,070
+projects and uh I I like to just you
+know uh AI is making things a making
+
+182
+00:04:24,070 --> 00:04:24,080
+know uh AI is making things a making
+ 
+
+183
+00:04:24,080 --> 00:04:26,870
+know uh AI is making things a making
+things a lot easier to do these sort of
+
+184
+00:04:26,870 --> 00:04:26,880
+things a lot easier to do these sort of
+ 
+
+185
+00:04:26,880 --> 00:04:28,390
+things a lot easier to do these sort of
+things like in parallel you have an
+
+186
+00:04:28,390 --> 00:04:28,400
+things like in parallel you have an
+ 
+
+187
+00:04:28,400 --> 00:04:30,310
+things like in parallel you have an
+inspiration you execute on a weekend and
+
+188
+00:04:30,310 --> 00:04:30,320
+inspiration you execute on a weekend and
+ 
+
+189
+00:04:30,320 --> 00:04:33,110
+inspiration you execute on a weekend and
+you just get it ready you ship it ACPX
+
+190
+00:04:33,110 --> 00:04:33,120
+you just get it ready you ship it ACPX
+ 
+
+191
+00:04:33,120 --> 00:04:34,790
+you just get it ready you ship it ACPX
+which I'm going to talk about is is like
+
+192
+00:04:34,790 --> 00:04:34,800
+which I'm going to talk about is is like
+ 
+
+193
+00:04:34,800 --> 00:04:37,909
+which I'm going to talk about is is like
+similar. I built it through uh discord
+
+194
+00:04:37,909 --> 00:04:37,919
+similar. I built it through uh discord
+ 
+
+195
+00:04:37,919 --> 00:04:41,590
+similar. I built it through uh discord
+and what you do is you bind the channel
+
+196
+00:04:41,590 --> 00:04:41,600
+and what you do is you bind the channel
+ 
+
+197
+00:04:41,600 --> 00:04:44,550
+and what you do is you bind the channel
+uh discord channel to codex through ACP.
+
+198
+00:04:44,550 --> 00:04:44,560
+uh discord channel to codex through ACP.
+ 
+
+199
+00:04:44,560 --> 00:04:46,070
+uh discord channel to codex through ACP.
+You can also use codex app server
+
+200
+00:04:46,070 --> 00:04:46,080
+You can also use codex app server
+ 
+
+201
+00:04:46,080 --> 00:04:48,150
+You can also use codex app server
+protocol. Harold, another maintainer,
+
+202
+00:04:48,150 --> 00:04:48,160
+protocol. Harold, another maintainer,
+ 
+
+203
+00:04:48,160 --> 00:04:50,790
+protocol. Harold, another maintainer,
+uh, developed it and here is me using it
+
+204
+00:04:50,790 --> 00:04:50,800
+uh, developed it and here is me using it
+ 
+
+205
+00:04:50,800 --> 00:04:53,830
+uh, developed it and here is me using it
+before I flying to London to create an
+
+206
+00:04:53,830 --> 00:04:53,840
+before I flying to London to create an
+ 
+
+207
+00:04:53,840 --> 00:04:56,310
+before I flying to London to create an
+PDF about like convert the docs of ACP
+
+208
+00:04:56,310 --> 00:04:56,320
+PDF about like convert the docs of ACP
+ 
+
+209
+00:04:56,320 --> 00:04:58,950
+PDF about like convert the docs of ACP
+into PDF and then I have to say put it
+
+210
+00:04:58,950 --> 00:04:58,960
+into PDF and then I have to say put it
+ 
+
+211
+00:04:58,960 --> 00:05:02,710
+into PDF and then I have to say put it
+in temp because open codex doesn't know
+
+212
+00:05:02,710 --> 00:05:02,720
+in temp because open codex doesn't know
+ 
+
+213
+00:05:02,720 --> 00:05:04,469
+in temp because open codex doesn't know
+about the harness and it cannot send me
+
+214
+00:05:04,469 --> 00:05:04,479
+about the harness and it cannot send me
+ 
+
+215
+00:05:04,479 --> 00:05:06,390
+about the harness and it cannot send me
+in discord. So then I go to another
+
+216
+00:05:06,390 --> 00:05:06,400
+in discord. So then I go to another
+ 
+
+217
+00:05:06,400 --> 00:05:08,150
+in discord. So then I go to another
+channel and tell it to send it to me on
+
+218
+00:05:08,150 --> 00:05:08,160
+channel and tell it to send it to me on
+ 
+
+219
+00:05:08,160 --> 00:05:11,270
+channel and tell it to send it to me on
+that channel. So we are developers and
+
+220
+00:05:11,270 --> 00:05:11,280
+that channel. So we are developers and
+ 
+
+221
+00:05:11,280 --> 00:05:13,430
+that channel. So we are developers and
+our tools we don't have time to polish
+
+222
+00:05:13,430 --> 00:05:13,440
+our tools we don't have time to polish
+ 
+
+223
+00:05:13,440 --> 00:05:16,710
+our tools we don't have time to polish
+them very well but we know the
+
+224
+00:05:16,710 --> 00:05:16,720
+them very well but we know the
+ 
+
+225
+00:05:16,720 --> 00:05:19,350
+them very well but we know the
+like advantages and disadvantages. What
+
+226
+00:05:19,350 --> 00:05:19,360
+like advantages and disadvantages. What
+ 
+
+227
+00:05:19,360 --> 00:05:23,189
+like advantages and disadvantages. What
+is ACP? So it's not most people say is
+
+228
+00:05:23,189 --> 00:05:23,199
+is ACP? So it's not most people say is
+ 
+
+229
+00:05:23,199 --> 00:05:26,150
+is ACP? So it's not most people say is
+it like MCP? MCP for is for giving tools
+
+230
+00:05:26,150 --> 00:05:26,160
+it like MCP? MCP for is for giving tools
+ 
+
+231
+00:05:26,160 --> 00:05:30,070
+it like MCP? MCP for is for giving tools
+to the model. ACP is for uh like
+
+232
+00:05:30,070 --> 00:05:30,080
+to the model. ACP is for uh like
+ 
+
+233
+00:05:30,080 --> 00:05:31,430
+to the model. ACP is for uh like
+standardizing agent to client
+
+234
+00:05:31,430 --> 00:05:31,440
+standardizing agent to client
+ 
+
+235
+00:05:31,440 --> 00:05:34,629
+standardizing agent to client
+interaction. It's uh shout out to Zed. I
+
+236
+00:05:34,629 --> 00:05:34,639
+interaction. It's uh shout out to Zed. I
+ 
+
+237
+00:05:34,639 --> 00:05:38,310
+interaction. It's uh shout out to Zed. I
+actually forgot to put Zed logo. Um
+
+238
+00:05:38,310 --> 00:05:38,320
+actually forgot to put Zed logo. Um
+ 
+
+239
+00:05:38,320 --> 00:05:40,710
+actually forgot to put Zed logo. Um
+Zed is building a new editor in Rust
+
+240
+00:05:40,710 --> 00:05:40,720
+Zed is building a new editor in Rust
+ 
+
+241
+00:05:40,720 --> 00:05:42,790
+Zed is building a new editor in Rust
+more efficient like lower memory usage
+
+242
+00:05:42,790 --> 00:05:42,800
+more efficient like lower memory usage
+ 
+
+243
+00:05:42,800 --> 00:05:46,230
+more efficient like lower memory usage
+not electron. So uh I'm using that also
+
+244
+00:05:46,230 --> 00:05:46,240
+not electron. So uh I'm using that also
+ 
+
+245
+00:05:46,240 --> 00:05:50,150
+not electron. So uh I'm using that also
+since like uh last fall and uh you know
+
+246
+00:05:50,150 --> 00:05:50,160
+since like uh last fall and uh you know
+ 
+
+247
+00:05:50,160 --> 00:05:52,390
+since like uh last fall and uh you know
+if you use codex on VS code or cloud
+
+248
+00:05:52,390 --> 00:05:52,400
+if you use codex on VS code or cloud
+ 
+
+249
+00:05:52,400 --> 00:05:53,590
+if you use codex on VS code or cloud
+code they are all building different
+
+250
+00:05:53,590 --> 00:05:53,600
+code they are all building different
+ 
+
+251
+00:05:53,600 --> 00:05:55,590
+code they are all building different
+plugins. It's not exactly it's like so
+
+252
+00:05:55,590 --> 00:05:55,600
+plugins. It's not exactly it's like so
+ 
+
+253
+00:05:55,600 --> 00:05:57,909
+plugins. It's not exactly it's like so
+much wasted work. If only you could just
+
+254
+00:05:57,909 --> 00:05:57,919
+much wasted work. If only you could just
+ 
+
+255
+00:05:57,919 --> 00:05:59,510
+much wasted work. If only you could just
+standardize them under one interface and
+
+256
+00:05:59,510 --> 00:05:59,520
+standardize them under one interface and
+ 
+
+257
+00:05:59,520 --> 00:06:01,430
+standardize them under one interface and
+you just build it once and then you you
+
+258
+00:06:01,430 --> 00:06:01,440
+you just build it once and then you you
+ 
+
+259
+00:06:01,440 --> 00:06:04,150
+you just build it once and then you you
+ship it. And that's what the the idea
+
+260
+00:06:04,150 --> 00:06:04,160
+ship it. And that's what the the idea
+ 
+
+261
+00:06:04,160 --> 00:06:07,189
+ship it. And that's what the the idea
+that's the idea they had. is also more
+
+262
+00:06:07,189 --> 00:06:07,199
+that's the idea they had. is also more
+ 
+
+263
+00:06:07,199 --> 00:06:09,909
+that's the idea they had. is also more
+it's it's much less duplicate duplicated
+
+264
+00:06:09,909 --> 00:06:09,919
+it's it's much less duplicate duplicated
+ 
+
+265
+00:06:09,919 --> 00:06:13,749
+it's it's much less duplicate duplicated
+work. Um there are competing standards.
+
+266
+00:06:13,749 --> 00:06:13,759
+work. Um there are competing standards.
+ 
+
+267
+00:06:13,759 --> 00:06:18,230
+work. Um there are competing standards.
+Um so agent like agent uh agent protocol
+
+268
+00:06:18,230 --> 00:06:18,240
+Um so agent like agent uh agent protocol
+ 
+
+269
+00:06:18,240 --> 00:06:20,870
+Um so agent like agent uh agent protocol
+that's for agent talking to agent. ACP
+
+270
+00:06:20,870 --> 00:06:20,880
+that's for agent talking to agent. ACP
+ 
+
+271
+00:06:20,880 --> 00:06:23,350
+that's for agent talking to agent. ACP
+agent client protocol is for a human
+
+272
+00:06:23,350 --> 00:06:23,360
+agent client protocol is for a human
+ 
+
+273
+00:06:23,360 --> 00:06:27,189
+agent client protocol is for a human
+talking to agent but agent can use the
+
+274
+00:06:27,189 --> 00:06:27,199
+talking to agent but agent can use the
+ 
+
+275
+00:06:27,199 --> 00:06:28,950
+talking to agent but agent can use the
+human one to talk to other agents as
+
+276
+00:06:28,950 --> 00:06:28,960
+human one to talk to other agents as
+ 
+
+277
+00:06:28,960 --> 00:06:31,430
+human one to talk to other agents as
+well. In the long run as as these
+
+278
+00:06:31,430 --> 00:06:31,440
+well. In the long run as as these
+ 
+
+279
+00:06:31,440 --> 00:06:33,270
+well. In the long run as as these
+protocols get adopted we will support
+
+280
+00:06:33,270 --> 00:06:33,280
+protocols get adopted we will support
+ 
+
+281
+00:06:33,280 --> 00:06:36,309
+protocols get adopted we will support
+all of them. they will weigh the you
+
+282
+00:06:36,309 --> 00:06:36,319
+all of them. they will weigh the you
+ 
+
+283
+00:06:36,319 --> 00:06:39,510
+all of them. they will weigh the you
+know advantages and then we will use
+
+284
+00:06:39,510 --> 00:06:39,520
+know advantages and then we will use
+ 
+
+285
+00:06:39,520 --> 00:06:42,469
+know advantages and then we will use
+them somehow but when I need so I chose
+
+286
+00:06:42,469 --> 00:06:42,479
+them somehow but when I need so I chose
+ 
+
+287
+00:06:42,479 --> 00:06:44,469
+them somehow but when I need so I chose
+ACP because when I needed the most I
+
+288
+00:06:44,469 --> 00:06:44,479
+ACP because when I needed the most I
+ 
+
+289
+00:06:44,479 --> 00:06:46,390
+ACP because when I needed the most I
+needed adapters for codecs and cloud
+
+290
+00:06:46,390 --> 00:06:46,400
+needed adapters for codecs and cloud
+ 
+
+291
+00:06:46,400 --> 00:06:48,710
+needed adapters for codecs and cloud
+code and only zed had built them and
+
+292
+00:06:48,710 --> 00:06:48,720
+code and only zed had built them and
+ 
+
+293
+00:06:48,720 --> 00:06:50,790
+code and only zed had built them and
+Google didn't have them back back back
+
+294
+00:06:50,790 --> 00:06:50,800
+Google didn't have them back back back
+ 
+
+295
+00:06:50,800 --> 00:06:55,830
+Google didn't have them back back back
+at the time so that's why I chose it
+
+296
+00:06:55,830 --> 00:06:55,840
+at the time so that's why I chose it
+ 
+
+297
+00:06:55,840 --> 00:06:58,629
+at the time so that's why I chose it
+u that so I when you're adding in
+
+298
+00:06:58,629 --> 00:06:58,639
+u that so I when you're adding in
+ 
+
+299
+00:06:58,639 --> 00:07:01,909
+u that so I when you're adding in
+functionality to open claw you do uh you
+
+300
+00:07:01,909 --> 00:07:01,919
+functionality to open claw you do uh you
+ 
+
+301
+00:07:01,919 --> 00:07:04,390
+functionality to open claw you do uh you
+use do it through a CLI
+
+302
+00:07:04,390 --> 00:07:04,400
+use do it through a CLI
+ 
+
+303
+00:07:04,400 --> 00:07:06,070
+use do it through a CLI
+Um
+
+304
+00:07:06,070 --> 00:07:06,080
+Um
+ 
+
+305
+00:07:06,080 --> 00:07:08,390
+Um
+so I said okay let's create a CLI for
+
+306
+00:07:08,390 --> 00:07:08,400
+so I said okay let's create a CLI for
+ 
+
+307
+00:07:08,400 --> 00:07:10,710
+so I said okay let's create a CLI for
+ACP let's an agent call any other agent
+
+308
+00:07:10,710 --> 00:07:10,720
+ACP let's an agent call any other agent
+ 
+
+309
+00:07:10,720 --> 00:07:13,270
+ACP let's an agent call any other agent
+over the command line. So that's that's
+
+310
+00:07:13,270 --> 00:07:13,280
+over the command line. So that's that's
+ 
+
+311
+00:07:13,280 --> 00:07:16,550
+over the command line. So that's that's
+how it started. Uh and it's slowly
+
+312
+00:07:16,550 --> 00:07:16,560
+how it started. Uh and it's slowly
+ 
+
+313
+00:07:16,560 --> 00:07:18,390
+how it started. Uh and it's slowly
+turning into a Swiss army knife for ACP
+
+314
+00:07:18,390 --> 00:07:18,400
+turning into a Swiss army knife for ACP
+ 
+
+315
+00:07:18,400 --> 00:07:26,070
+turning into a Swiss army knife for ACP
+as I will show in a bit.
+
+316
+00:07:26,070 --> 00:07:26,080
+
+ 
+
+317
+00:07:26,080 --> 00:07:29,110
+
+So in uh at openlow you have fire hoses
+
+318
+00:07:29,110 --> 00:07:29,120
+So in uh at openlow you have fire hoses
+ 
+
+319
+00:07:29,120 --> 00:07:34,390
+So in uh at openlow you have fire hoses
+uh we have 60 kprs uh over 60 kprs total
+
+320
+00:07:34,390 --> 00:07:34,400
+uh we have 60 kprs uh over 60 kprs total
+ 
+
+321
+00:07:34,400 --> 00:07:38,150
+uh we have 60 kprs uh over 60 kprs total
+300 to 500 per day on average are open
+
+322
+00:07:38,150 --> 00:07:38,160
+300 to 500 per day on average are open
+ 
+
+323
+00:07:38,160 --> 00:07:41,670
+300 to 500 per day on average are open
+and basically overnight people woke up
+
+324
+00:07:41,670 --> 00:07:41,680
+and basically overnight people woke up
+ 
+
+325
+00:07:41,680 --> 00:07:45,110
+and basically overnight people woke up
+and decided they want they like open. So
+
+326
+00:07:45,110 --> 00:07:45,120
+and decided they want they like open. So
+ 
+
+327
+00:07:45,120 --> 00:07:46,469
+and decided they want they like open. So
+we have tens of thousands of
+
+328
+00:07:46,469 --> 00:07:46,479
+we have tens of thousands of
+ 
+
+329
+00:07:46,479 --> 00:07:49,589
+we have tens of thousands of
+stakeholders who want to add features to
+
+330
+00:07:49,589 --> 00:07:49,599
+stakeholders who want to add features to
+ 
+
+331
+00:07:49,599 --> 00:07:51,909
+stakeholders who want to add features to
+open cloud and the biggest challenge of
+
+332
+00:07:51,909 --> 00:07:51,919
+open cloud and the biggest challenge of
+ 
+
+333
+00:07:51,919 --> 00:07:54,309
+open cloud and the biggest challenge of
+the project currently is how do you uh
+
+334
+00:07:54,309 --> 00:07:54,319
+the project currently is how do you uh
+ 
+
+335
+00:07:54,319 --> 00:07:56,150
+the project currently is how do you uh
+absorb all the needs and wants of these
+
+336
+00:07:56,150 --> 00:07:56,160
+absorb all the needs and wants of these
+ 
+
+337
+00:07:56,160 --> 00:07:58,390
+absorb all the needs and wants of these
+people and how do you balance them? How
+
+338
+00:07:58,390 --> 00:07:58,400
+people and how do you balance them? How
+ 
+
+339
+00:07:58,400 --> 00:08:00,869
+people and how do you balance them? How
+do you like you can't please everyone
+
+340
+00:08:00,869 --> 00:08:00,879
+do you like you can't please everyone
+ 
+
+341
+00:08:00,879 --> 00:08:03,270
+do you like you can't please everyone
+but how do you create an elegant system
+
+342
+00:08:03,270 --> 00:08:03,280
+but how do you create an elegant system
+ 
+
+343
+00:08:03,280 --> 00:08:07,350
+but how do you create an elegant system
+without uh creating AI slop
+
+344
+00:08:07,350 --> 00:08:07,360
+without uh creating AI slop
+ 
+
+345
+00:08:07,360 --> 00:08:11,990
+without uh creating AI slop
+that can cater everyone's needs and
+
+346
+00:08:11,990 --> 00:08:12,000
+that can cater everyone's needs and
+ 
+
+347
+00:08:12,000 --> 00:08:15,589
+that can cater everyone's needs and
+Peter's workflow uh gave me an idea so
+
+348
+00:08:15,589 --> 00:08:15,599
+Peter's workflow uh gave me an idea so
+ 
+
+349
+00:08:15,599 --> 00:08:17,909
+Peter's workflow uh gave me an idea so
+this is also something I do you go and
+
+350
+00:08:17,909 --> 00:08:17,919
+this is also something I do you go and
+ 
+
+351
+00:08:17,919 --> 00:08:20,710
+this is also something I do you go and
+you ask your clanker what is this so PR
+
+352
+00:08:20,710 --> 00:08:20,720
+you ask your clanker what is this so PR
+ 
+
+353
+00:08:20,720 --> 00:08:23,749
+you ask your clanker what is this so PR
+comes your way like most of the time
+
+354
+00:08:23,749 --> 00:08:23,759
+comes your way like most of the time
+ 
+
+355
+00:08:23,759 --> 00:08:25,670
+comes your way like most of the time
+it's AI generated description like what
+
+356
+00:08:25,670 --> 00:08:25,680
+it's AI generated description like what
+ 
+
+357
+00:08:25,680 --> 00:08:29,110
+it's AI generated description like what
+is this uh if the human put thought into
+
+358
+00:08:29,110 --> 00:08:29,120
+is this uh if the human put thought into
+ 
+
+359
+00:08:29,120 --> 00:08:31,029
+is this uh if the human put thought into
+it, great. But like, yeah, you need to
+
+360
+00:08:31,029 --> 00:08:31,039
+it, great. But like, yeah, you need to
+ 
+
+361
+00:08:31,039 --> 00:08:33,269
+it, great. But like, yeah, you need to
+ask what it's doing. You ask what is
+
+362
+00:08:33,269 --> 00:08:33,279
+ask what it's doing. You ask what is
+ 
+
+363
+00:08:33,279 --> 00:08:35,909
+ask what it's doing. You ask what is
+this the best possible fix. Most of the
+
+364
+00:08:35,909 --> 00:08:35,919
+this the best possible fix. Most of the
+ 
+
+365
+00:08:35,919 --> 00:08:38,949
+this the best possible fix. Most of the
+time it's no. And then you either
+
+366
+00:08:38,949 --> 00:08:38,959
+time it's no. And then you either
+ 
+
+367
+00:08:38,959 --> 00:08:41,909
+time it's no. And then you either
+continue disc like he he wrote it like
+
+368
+00:08:41,909 --> 00:08:41,919
+continue disc like he he wrote it like
+ 
+
+369
+00:08:41,919 --> 00:08:43,909
+continue disc like he he wrote it like
+you you do some back and forth with the
+
+370
+00:08:43,909 --> 00:08:43,919
+you you do some back and forth with the
+ 
+
+371
+00:08:43,919 --> 00:08:47,190
+you you do some back and forth with the
+agent. The reason is people just uh run
+
+372
+00:08:47,190 --> 00:08:47,200
+agent. The reason is people just uh run
+ 
+
+373
+00:08:47,200 --> 00:08:50,150
+agent. The reason is people just uh run
+into an issue with their open claw and
+
+374
+00:08:50,150 --> 00:08:50,160
+into an issue with their open claw and
+ 
+
+375
+00:08:50,160 --> 00:08:53,190
+into an issue with their open claw and
+it can use GitHub and then they just say
+
+376
+00:08:53,190 --> 00:08:53,200
+it can use GitHub and then they just say
+ 
+
+377
+00:08:53,200 --> 00:08:55,350
+it can use GitHub and then they just say
+uh please fix and then they just send
+
+378
+00:08:55,350 --> 00:08:55,360
+uh please fix and then they just send
+ 
+
+379
+00:08:55,360 --> 00:08:58,310
+uh please fix and then they just send
+some slop your way. You know this is you
+
+380
+00:08:58,310 --> 00:08:58,320
+some slop your way. You know this is you
+ 
+
+381
+00:08:58,320 --> 00:08:59,750
+some slop your way. You know this is you
+can't merge it but you can also fully
+
+382
+00:08:59,750 --> 00:08:59,760
+can't merge it but you can also fully
+ 
+
+383
+00:08:59,760 --> 00:09:01,190
+can't merge it but you can also fully
+discard. You need to take this data
+
+384
+00:09:01,190 --> 00:09:01,200
+discard. You need to take this data
+ 
+
+385
+00:09:01,200 --> 00:09:03,509
+discard. You need to take this data
+point you it's like crucial feedback
+
+386
+00:09:03,509 --> 00:09:03,519
+point you it's like crucial feedback
+ 
+
+387
+00:09:03,519 --> 00:09:06,230
+point you it's like crucial feedback
+from the user. Uh so you need to put it
+
+388
+00:09:06,230 --> 00:09:06,240
+from the user. Uh so you need to put it
+ 
+
+389
+00:09:06,240 --> 00:09:08,470
+from the user. Uh so you need to put it
+categorize it put it in a bin you know
+
+390
+00:09:08,470 --> 00:09:08,480
+categorize it put it in a bin you know
+ 
+
+391
+00:09:08,480 --> 00:09:10,389
+categorize it put it in a bin you know
+it it tells you when some part of the
+
+392
+00:09:10,389 --> 00:09:10,399
+it it tells you when some part of the
+ 
+
+393
+00:09:10,399 --> 00:09:13,269
+it it tells you when some part of the
+code is broken and Vincent also talked
+
+394
+00:09:13,269 --> 00:09:13,279
+code is broken and Vincent also talked
+ 
+
+395
+00:09:13,279 --> 00:09:17,990
+code is broken and Vincent also talked
+about that a bit uh and here is uh his
+
+396
+00:09:17,990 --> 00:09:18,000
+about that a bit uh and here is uh his
+ 
+
+397
+00:09:18,000 --> 00:09:20,150
+about that a bit uh and here is uh his
+his codeex session doing that on one
+
+398
+00:09:20,150 --> 00:09:20,160
+his codeex session doing that on one
+ 
+
+399
+00:09:20,160 --> 00:09:22,070
+his codeex session doing that on one
+side there's a one that says it's it's a
+
+400
+00:09:22,070 --> 00:09:22,080
+side there's a one that says it's it's a
+ 
+
+401
+00:09:22,080 --> 00:09:25,190
+side there's a one that says it's it's a
+good fix. Uh, and the on other side is
+
+402
+00:09:25,190 --> 00:09:25,200
+good fix. Uh, and the on other side is
+ 
+
+403
+00:09:25,200 --> 00:09:28,949
+good fix. Uh, and the on other side is
+just saying it's not bad. And yeah, this
+
+404
+00:09:28,949 --> 00:09:28,959
+just saying it's not bad. And yeah, this
+ 
+
+405
+00:09:28,959 --> 00:09:31,750
+just saying it's not bad. And yeah, this
+is so mechanical and you you once you do
+
+406
+00:09:31,750 --> 00:09:31,760
+is so mechanical and you you once you do
+ 
+
+407
+00:09:31,760 --> 00:09:33,190
+is so mechanical and you you once you do
+this over and over, you realize you're
+
+408
+00:09:33,190 --> 00:09:33,200
+this over and over, you realize you're
+ 
+
+409
+00:09:33,200 --> 00:09:35,269
+this over and over, you realize you're
+repeating something. If only you could
+
+410
+00:09:35,269 --> 00:09:35,279
+repeating something. If only you could
+ 
+
+411
+00:09:35,279 --> 00:09:37,110
+repeating something. If only you could
+program something to automate it. So
+
+412
+00:09:37,110 --> 00:09:37,120
+program something to automate it. So
+ 
+
+413
+00:09:37,120 --> 00:09:39,910
+program something to automate it. So
+you're automating the automator. Um, so
+
+414
+00:09:39,910 --> 00:09:39,920
+you're automating the automator. Um, so
+ 
+
+415
+00:09:39,920 --> 00:09:42,710
+you're automating the automator. Um, so
+I created I started uh to create like
+
+416
+00:09:42,710 --> 00:09:42,720
+I created I started uh to create like
+ 
+
+417
+00:09:42,720 --> 00:09:46,630
+I created I started uh to create like
+workflows uh in an abstract way. So uh
+
+418
+00:09:46,630 --> 00:09:46,640
+workflows uh in an abstract way. So uh
+ 
+
+419
+00:09:46,640 --> 00:09:49,190
+workflows uh in an abstract way. So uh
+item comes PR and then you find the
+
+420
+00:09:49,190 --> 00:09:49,200
+item comes PR and then you find the
+ 
+
+421
+00:09:49,200 --> 00:09:51,030
+item comes PR and then you find the
+intent you're judging implementation
+
+422
+00:09:51,030 --> 00:09:51,040
+intent you're judging implementation
+ 
+
+423
+00:09:51,040 --> 00:09:54,150
+intent you're judging implementation
+you're like uh looking in if has
+
+424
+00:09:54,150 --> 00:09:54,160
+you're like uh looking in if has
+ 
+
+425
+00:09:54,160 --> 00:09:58,150
+you're like uh looking in if has
+conflicts uh if reviews gives you like
+
+426
+00:09:58,150 --> 00:09:58,160
+conflicts uh if reviews gives you like
+ 
+
+427
+00:09:58,160 --> 00:10:01,590
+conflicts uh if reviews gives you like
+some issues that need to be addressed so
+
+428
+00:10:01,590 --> 00:10:01,600
+some issues that need to be addressed so
+ 
+
+429
+00:10:01,600 --> 00:10:03,350
+some issues that need to be addressed so
+you need to make the CI pass if it's not
+
+430
+00:10:03,350 --> 00:10:03,360
+you need to make the CI pass if it's not
+ 
+
+431
+00:10:03,360 --> 00:10:05,430
+you need to make the CI pass if it's not
+passing already most people just don't
+
+432
+00:10:05,430 --> 00:10:05,440
+passing already most people just don't
+ 
+
+433
+00:10:05,440 --> 00:10:08,150
+passing already most people just don't
+care about that all this mechanical work
+
+434
+00:10:08,150 --> 00:10:08,160
+care about that all this mechanical work
+ 
+
+435
+00:10:08,160 --> 00:10:11,430
+care about that all this mechanical work
+by the time the m the PR ends up in
+
+436
+00:10:11,430 --> 00:10:11,440
+by the time the m the PR ends up in
+ 
+
+437
+00:10:11,440 --> 00:10:13,590
+by the time the m the PR ends up in
+front of you should be resolved ideally
+
+438
+00:10:13,590 --> 00:10:13,600
+front of you should be resolved ideally
+ 
+
+439
+00:10:13,600 --> 00:10:15,269
+front of you should be resolved ideally
+and can be resolved and that's what I'm
+
+440
+00:10:15,269 --> 00:10:15,279
+and can be resolved and that's what I'm
+ 
+
+441
+00:10:15,279 --> 00:10:18,069
+and can be resolved and that's what I'm
+working on
+
+442
+00:10:18,069 --> 00:10:18,079
+working on
+ 
+
+443
+00:10:18,079 --> 00:10:20,870
+working on
+ah in the workflow we have the shameful
+
+444
+00:10:20,870 --> 00:10:20,880
+ah in the workflow we have the shameful
+ 
+
+445
+00:10:20,880 --> 00:10:24,069
+ah in the workflow we have the shameful
+uh Ralph review refactor loops uh I I'm
+
+446
+00:10:24,069 --> 00:10:24,079
+uh Ralph review refactor loops uh I I'm
+ 
+
+447
+00:10:24,079 --> 00:10:26,310
+uh Ralph review refactor loops uh I I'm
+a believer that you know when people say
+
+448
+00:10:26,310 --> 00:10:26,320
+a believer that you know when people say
+ 
+
+449
+00:10:26,320 --> 00:10:30,230
+a believer that you know when people say
+like give the
+
+450
+00:10:30,230 --> 00:10:30,240
+like give the
+ 
+
+451
+00:10:30,240 --> 00:10:32,710
+like give the
+just just run a running a agent in a
+
+452
+00:10:32,710 --> 00:10:32,720
+just just run a running a agent in a
+ 
+
+453
+00:10:32,720 --> 00:10:35,110
+just just run a running a agent in a
+loop does not not necessarily have to be
+
+454
+00:10:35,110 --> 00:10:35,120
+loop does not not necessarily have to be
+ 
+
+455
+00:10:35,120 --> 00:10:39,190
+loop does not not necessarily have to be
+a uh something that will create slope as
+
+456
+00:10:39,190 --> 00:10:39,200
+a uh something that will create slope as
+ 
+
+457
+00:10:39,200 --> 00:10:40,790
+a uh something that will create slope as
+long as you're not making it design
+
+458
+00:10:40,790 --> 00:10:40,800
+long as you're not making it design
+ 
+
+459
+00:10:40,800 --> 00:10:43,350
+long as you're not making it design
+something but you're making it uncover
+
+460
+00:10:43,350 --> 00:10:43,360
+something but you're making it uncover
+ 
+
+461
+00:10:43,360 --> 00:10:45,590
+something but you're making it uncover
+shallow bugs that can be easily fixed
+
+462
+00:10:45,590 --> 00:10:45,600
+shallow bugs that can be easily fixed
+ 
+
+463
+00:10:45,600 --> 00:10:48,870
+shallow bugs that can be easily fixed
+should be fine. So in the abstract
+
+464
+00:10:48,870 --> 00:10:48,880
+should be fine. So in the abstract
+ 
+
+465
+00:10:48,880 --> 00:10:51,829
+should be fine. So in the abstract
+workflow that I created u which is
+
+466
+00:10:51,829 --> 00:10:51,839
+workflow that I created u which is
+ 
+
+467
+00:10:51,839 --> 00:10:53,990
+workflow that I created u which is
+actually called like pro like turn into
+
+468
+00:10:53,990 --> 00:10:54,000
+actually called like pro like turn into
+ 
+
+469
+00:10:54,000 --> 00:10:57,430
+actually called like pro like turn into
+a program you can uh tell it to uh do
+
+470
+00:10:57,430 --> 00:10:57,440
+a program you can uh tell it to uh do
+ 
+
+471
+00:10:57,440 --> 00:10:59,030
+a program you can uh tell it to uh do
+superficial refactors and then you can
+
+472
+00:10:59,030 --> 00:10:59,040
+superficial refactors and then you can
+ 
+
+473
+00:10:59,040 --> 00:11:01,110
+superficial refactors and then you can
+tell if it's it needs a fundamental
+
+474
+00:11:01,110 --> 00:11:01,120
+tell if it's it needs a fundamental
+ 
+
+475
+00:11:01,120 --> 00:11:04,230
+tell if it's it needs a fundamental
+refactor relate to the human um
+
+476
+00:11:04,230 --> 00:11:04,240
+refactor relate to the human um
+ 
+
+477
+00:11:04,240 --> 00:11:06,150
+refactor relate to the human um
+resolving conflicts also doesn't need
+
+478
+00:11:06,150 --> 00:11:06,160
+resolving conflicts also doesn't need
+ 
+
+479
+00:11:06,160 --> 00:11:09,190
+resolving conflicts also doesn't need
+like no it was hard back in the days I
+
+480
+00:11:09,190 --> 00:11:09,200
+like no it was hard back in the days I
+ 
+
+481
+00:11:09,200 --> 00:11:10,630
+like no it was hard back in the days I
+don't think anyone is like resolving
+
+482
+00:11:10,630 --> 00:11:10,640
+don't think anyone is like resolving
+ 
+
+483
+00:11:10,640 --> 00:11:15,509
+don't think anyone is like resolving
+conflicts by hand by now um so we are
+
+484
+00:11:15,509 --> 00:11:15,519
+conflicts by hand by now um so we are
+ 
+
+485
+00:11:15,519 --> 00:11:17,750
+conflicts by hand by now um so we are
+basically creating uh standard operating
+
+486
+00:11:17,750 --> 00:11:17,760
+basically creating uh standard operating
+ 
+
+487
+00:11:17,760 --> 00:11:20,230
+basically creating uh standard operating
+procedures for agents is a fancy word
+
+488
+00:11:20,230 --> 00:11:20,240
+procedures for agents is a fancy word
+ 
+
+489
+00:11:20,240 --> 00:11:23,110
+procedures for agents is a fancy word
+for workflow. Um so that's what I built
+
+490
+00:11:23,110 --> 00:11:23,120
+for workflow. Um so that's what I built
+ 
+
+491
+00:11:23,120 --> 00:11:26,949
+for workflow. Um so that's what I built
+into ACPX. Uh it's a N10 like workflow
+
+492
+00:11:26,949 --> 00:11:26,959
+into ACPX. Uh it's a N10 like workflow
+ 
+
+493
+00:11:26,959 --> 00:11:29,670
+into ACPX. Uh it's a N10 like workflow
+engine. Uh but it's driving a codeex
+
+494
+00:11:29,670 --> 00:11:29,680
+engine. Uh but it's driving a codeex
+ 
+
+495
+00:11:29,680 --> 00:11:31,750
+engine. Uh but it's driving a codeex
+session. You can see on the right. Let
+
+496
+00:11:31,750 --> 00:11:31,760
+session. You can see on the right. Let
+ 
+
+497
+00:11:31,760 --> 00:11:37,750
+session. You can see on the right. Let
+me show you in action.
+
+498
+00:11:37,750 --> 00:11:37,760
+
+ 
+
+499
+00:11:37,760 --> 00:11:41,670
+
+So this was one PR.
+
+500
+00:11:41,670 --> 00:11:41,680
+So this was one PR.
+ 
+
+501
+00:11:41,680 --> 00:11:44,069
+So this was one PR.
+It's loading. Uh let's speed it up a
+
+502
+00:11:44,069 --> 00:11:44,079
+It's loading. Uh let's speed it up a
+ 
+
+503
+00:11:44,079 --> 00:11:47,110
+It's loading. Uh let's speed it up a
+bit. So there's some programmatic parts.
+
+504
+00:11:47,110 --> 00:11:47,120
+bit. So there's some programmatic parts.
+ 
+
+505
+00:11:47,120 --> 00:11:49,269
+bit. So there's some programmatic parts.
+So this is just replaying uh what it's
+
+506
+00:11:49,269 --> 00:11:49,279
+So this is just replaying uh what it's
+ 
+
+507
+00:11:49,279 --> 00:11:51,030
+So this is just replaying uh what it's
+doing.
+
+508
+00:11:51,030 --> 00:11:51,040
+doing.
+ 
+
+509
+00:11:51,040 --> 00:11:52,870
+doing.
+Uh it's reproducing the bug. It's
+
+510
+00:11:52,870 --> 00:11:52,880
+Uh it's reproducing the bug. It's
+ 
+
+511
+00:11:52,880 --> 00:11:55,350
+Uh it's reproducing the bug. It's
+judging refactor. It's reviewing. Now
+
+512
+00:11:55,350 --> 00:11:55,360
+judging refactor. It's reviewing. Now
+ 
+
+513
+00:11:55,360 --> 00:11:58,310
+judging refactor. It's reviewing. Now
+I'm doing a review loop and then review
+
+514
+00:11:58,310 --> 00:11:58,320
+I'm doing a review loop and then review
+ 
+
+515
+00:11:58,320 --> 00:12:00,790
+I'm doing a review loop and then review
+didn't uh bring anything. It it's it's
+
+516
+00:12:00,790 --> 00:12:00,800
+didn't uh bring anything. It it's it's
+ 
+
+517
+00:12:00,800 --> 00:12:03,829
+didn't uh bring anything. It it's it's
+what I do. Uh but I make it outputs like
+
+518
+00:12:03,829 --> 00:12:03,839
+what I do. Uh but I make it outputs like
+ 
+
+519
+00:12:03,839 --> 00:12:06,230
+what I do. Uh but I make it outputs like
+JSON structured data. So I can put in
+
+520
+00:12:06,230 --> 00:12:06,240
+JSON structured data. So I can put in
+ 
+
+521
+00:12:06,240 --> 00:12:10,069
+JSON structured data. So I can put in
+like an anon like workflow and I will
+
+522
+00:12:10,069 --> 00:12:10,079
+like an anon like workflow and I will
+ 
+
+523
+00:12:10,079 --> 00:12:12,629
+like an anon like workflow and I will
+talk you know this is a general workflow
+
+524
+00:12:12,629 --> 00:12:12,639
+talk you know this is a general workflow
+ 
+
+525
+00:12:12,639 --> 00:12:16,230
+talk you know this is a general workflow
+engine. Um you can use it on other
+
+526
+00:12:16,230 --> 00:12:16,240
+engine. Um you can use it on other
+ 
+
+527
+00:12:16,240 --> 00:12:18,629
+engine. Um you can use it on other
+things as well.
+
+528
+00:12:18,629 --> 00:12:18,639
+things as well.
+ 
+
+529
+00:12:18,639 --> 00:12:23,670
+things as well.
+Um like you need to apply agents
+
+530
+00:12:23,670 --> 00:12:23,680
+Um like you need to apply agents
+ 
+
+531
+00:12:23,680 --> 00:12:25,350
+Um like you need to apply agents
+generously
+
+532
+00:12:25,350 --> 00:12:25,360
+generously
+ 
+
+533
+00:12:25,360 --> 00:12:28,150
+generously
+on problems. So I see it is like an
+
+534
+00:12:28,150 --> 00:12:28,160
+on problems. So I see it is like an
+ 
+
+535
+00:12:28,160 --> 00:12:31,350
+on problems. So I see it is like an
+ointment uh that you apply generously on
+
+536
+00:12:31,350 --> 00:12:31,360
+ointment uh that you apply generously on
+ 
+
+537
+00:12:31,360 --> 00:12:32,949
+ointment uh that you apply generously on
+any problem that can be solved with
+
+538
+00:12:32,949 --> 00:12:32,959
+any problem that can be solved with
+ 
+
+539
+00:12:32,959 --> 00:12:35,269
+any problem that can be solved with
+agents. You need to take yourself out of
+
+540
+00:12:35,269 --> 00:12:35,279
+agents. You need to take yourself out of
+ 
+
+541
+00:12:35,279 --> 00:12:38,710
+agents. You need to take yourself out of
+the loop and solve it with agents. Um
+
+542
+00:12:38,710 --> 00:12:38,720
+the loop and solve it with agents. Um
+ 
+
+543
+00:12:38,720 --> 00:12:42,230
+the loop and solve it with agents. Um
+and personal agents I think uh are on a
+
+544
+00:12:42,230 --> 00:12:42,240
+and personal agents I think uh are on a
+ 
+
+545
+00:12:42,240 --> 00:12:43,990
+and personal agents I think uh are on a
+like there there's a spectrum enterprise
+
+546
+00:12:43,990 --> 00:12:44,000
+like there there's a spectrum enterprise
+ 
+
+547
+00:12:44,000 --> 00:12:47,670
+like there there's a spectrum enterprise
+and personal agent and normally you see
+
+548
+00:12:47,670 --> 00:12:47,680
+and personal agent and normally you see
+ 
+
+549
+00:12:47,680 --> 00:12:49,269
+and personal agent and normally you see
+you know the the work you use at the
+
+550
+00:12:49,269 --> 00:12:49,279
+you know the the work you use at the
+ 
+
+551
+00:12:49,279 --> 00:12:52,150
+you know the the work you use at the
+computer and then the PC the the PC you
+
+552
+00:12:52,150 --> 00:12:52,160
+computer and then the PC the the PC you
+ 
+
+553
+00:12:52,160 --> 00:12:55,430
+computer and then the PC the the PC you
+use at work and the PC you use at at the
+
+554
+00:12:55,430 --> 00:12:55,440
+use at work and the PC you use at at the
+ 
+
+555
+00:12:55,440 --> 00:12:58,150
+use at work and the PC you use at at the
+home used to be relatively similar but
+
+556
+00:12:58,150 --> 00:12:58,160
+home used to be relatively similar but
+ 
+
+557
+00:12:58,160 --> 00:12:59,670
+home used to be relatively similar but
+that will not be the case with agents
+
+558
+00:12:59,670 --> 00:12:59,680
+that will not be the case with agents
+ 
+
+559
+00:12:59,680 --> 00:13:02,389
+that will not be the case with agents
+because at at work you will be using
+
+560
+00:13:02,389 --> 00:13:02,399
+because at at work you will be using
+ 
+
+561
+00:13:02,399 --> 00:13:05,190
+because at at work you will be using
+consuming a lot more inference uh and
+
+562
+00:13:05,190 --> 00:13:05,200
+consuming a lot more inference uh and
+ 
+
+563
+00:13:05,200 --> 00:13:07,829
+consuming a lot more inference uh and
+that means in enterprise there will a
+
+564
+00:13:07,829 --> 00:13:07,839
+that means in enterprise there will a
+ 
+
+565
+00:13:07,839 --> 00:13:10,069
+that means in enterprise there will a
+lot more money to be made. So that's why
+
+566
+00:13:10,069 --> 00:13:10,079
+lot more money to be made. So that's why
+ 
+
+567
+00:13:10,079 --> 00:13:11,829
+lot more money to be made. So that's why
+I'm a bit also excited about enterprise
+
+568
+00:13:11,829 --> 00:13:11,839
+I'm a bit also excited about enterprise
+ 
+
+569
+00:13:11,839 --> 00:13:15,670
+I'm a bit also excited about enterprise
+agents and open close potential.
+
+570
+00:13:15,670 --> 00:13:15,680
+agents and open close potential.
+ 
+
+571
+00:13:15,680 --> 00:13:18,470
+agents and open close potential.
+That's why uh I I believe in uh on
+
+572
+00:13:18,470 --> 00:13:18,480
+That's why uh I I believe in uh on
+ 
+
+573
+00:13:18,480 --> 00:13:20,629
+That's why uh I I believe in uh on
+demand disposable agents. If you use
+
+574
+00:13:20,629 --> 00:13:20,639
+demand disposable agents. If you use
+ 
+
+575
+00:13:20,639 --> 00:13:23,990
+demand disposable agents. If you use
+openclaw on slack or teams or discord is
+
+576
+00:13:23,990 --> 00:13:24,000
+openclaw on slack or teams or discord is
+ 
+
+577
+00:13:24,000 --> 00:13:26,389
+openclaw on slack or teams or discord is
+one instance you create an app. The
+
+578
+00:13:26,389 --> 00:13:26,399
+one instance you create an app. The
+ 
+
+579
+00:13:26,399 --> 00:13:28,389
+one instance you create an app. The
+problem is you can't really talk to
+
+580
+00:13:28,389 --> 00:13:28,399
+problem is you can't really talk to
+ 
+
+581
+00:13:28,399 --> 00:13:33,990
+problem is you can't really talk to
+multiple instances of this. um
+
+582
+00:13:33,990 --> 00:13:34,000
+multiple instances of this. um
+ 
+
+583
+00:13:34,000 --> 00:13:35,590
+multiple instances of this. um
+like
+
+584
+00:13:35,590 --> 00:13:35,600
+like
+ 
+
+585
+00:13:35,600 --> 00:13:37,509
+like
+you create a connection, you create a
+
+586
+00:13:37,509 --> 00:13:37,519
+you create a connection, you create a
+ 
+
+587
+00:13:37,519 --> 00:13:39,990
+you create a connection, you create a
+Slack app to connect another agent and
+
+588
+00:13:39,990 --> 00:13:40,000
+Slack app to connect another agent and
+ 
+
+589
+00:13:40,000 --> 00:13:42,230
+Slack app to connect another agent and
+another name and another uh profile
+
+590
+00:13:42,230 --> 00:13:42,240
+another name and another uh profile
+ 
+
+591
+00:13:42,240 --> 00:13:43,670
+another name and another uh profile
+picture you need to create another app
+
+592
+00:13:43,670 --> 00:13:43,680
+picture you need to create another app
+ 
+
+593
+00:13:43,680 --> 00:13:45,670
+picture you need to create another app
+and you have to create an app manifest
+
+594
+00:13:45,670 --> 00:13:45,680
+and you have to create an app manifest
+ 
+
+595
+00:13:45,680 --> 00:13:48,710
+and you have to create an app manifest
+and it's it's it's something that
+
+596
+00:13:48,710 --> 00:13:48,720
+and it's it's it's something that
+ 
+
+597
+00:13:48,720 --> 00:13:50,629
+and it's it's it's something that
+shouldn't be managed manually by
+
+598
+00:13:50,629 --> 00:13:50,639
+shouldn't be managed manually by
+ 
+
+599
+00:13:50,639 --> 00:13:53,269
+shouldn't be managed manually by
+clicking and the platforms like chat
+
+600
+00:13:53,269 --> 00:13:53,279
+clicking and the platforms like chat
+ 
+
+601
+00:13:53,279 --> 00:13:55,030
+clicking and the platforms like chat
+apps don't have this standard yet where
+
+602
+00:13:55,030 --> 00:13:55,040
+apps don't have this standard yet where
+ 
+
+603
+00:13:55,040 --> 00:13:57,829
+apps don't have this standard yet where
+you can mult do multi- aent provisioning
+
+604
+00:13:57,829 --> 00:13:57,839
+you can mult do multi- aent provisioning
+ 
+
+605
+00:13:57,839 --> 00:13:59,509
+you can mult do multi- aent provisioning
+like cosmetically create different
+
+606
+00:13:59,509 --> 00:13:59,519
+like cosmetically create different
+ 
+
+607
+00:13:59,519 --> 00:14:01,750
+like cosmetically create different
+agents. This is what this is on on the
+
+608
+00:14:01,750 --> 00:14:01,760
+agents. This is what this is on on the
+ 
+
+609
+00:14:01,760 --> 00:14:03,910
+agents. This is what this is on on the
+screen. You see I asked chat GP to gen
+
+610
+00:14:03,910 --> 00:14:03,920
+screen. You see I asked chat GP to gen
+ 
+
+611
+00:14:03,920 --> 00:14:07,509
+screen. You see I asked chat GP to gen
+generate the idea. You agents uh and
+
+612
+00:14:07,509 --> 00:14:07,519
+generate the idea. You agents uh and
+ 
+
+613
+00:14:07,519 --> 00:14:09,990
+generate the idea. You agents uh and
+then the name can be generated by an
+
+614
+00:14:09,990 --> 00:14:10,000
+then the name can be generated by an
+ 
+
+615
+00:14:10,000 --> 00:14:11,829
+then the name can be generated by an
+underlying app and you can talk to them
+
+616
+00:14:11,829 --> 00:14:11,839
+underlying app and you can talk to them
+ 
+
+617
+00:14:11,839 --> 00:14:13,990
+underlying app and you can talk to them
+separately. This is not supported and
+
+618
+00:14:13,990 --> 00:14:14,000
+separately. This is not supported and
+ 
+
+619
+00:14:14,000 --> 00:14:16,230
+separately. This is not supported and
+this must be supported for this uh
+
+620
+00:14:16,230 --> 00:14:16,240
+this must be supported for this uh
+ 
+
+621
+00:14:16,240 --> 00:14:19,030
+this must be supported for this uh
+vision to work until it's supported. I'm
+
+622
+00:14:19,030 --> 00:14:19,040
+vision to work until it's supported. I'm
+ 
+
+623
+00:14:19,040 --> 00:14:22,230
+vision to work until it's supported. I'm
+using it on another UI because like we
+
+624
+00:14:22,230 --> 00:14:22,240
+using it on another UI because like we
+ 
+
+625
+00:14:22,240 --> 00:14:25,350
+using it on another UI because like we
+are all gonna start one uh agent per
+
+626
+00:14:25,350 --> 00:14:25,360
+are all gonna start one uh agent per
+ 
+
+627
+00:14:25,360 --> 00:14:28,389
+are all gonna start one uh agent per
+task and there will be uh they will work
+
+628
+00:14:28,389 --> 00:14:28,399
+task and there will be uh they will work
+ 
+
+629
+00:14:28,399 --> 00:14:31,910
+task and there will be uh they will work
+on these tasks and they will be creating
+
+630
+00:14:31,910 --> 00:14:31,920
+on these tasks and they will be creating
+ 
+
+631
+00:14:31,920 --> 00:14:34,069
+on these tasks and they will be creating
+files, editing files and it will all be
+
+632
+00:14:34,069 --> 00:14:34,079
+files, editing files and it will all be
+ 
+
+633
+00:14:34,079 --> 00:14:37,509
+files, editing files and it will all be
+synchronized. It will be it will be a
+
+634
+00:14:37,509 --> 00:14:37,519
+synchronized. It will be it will be a
+ 
+
+635
+00:14:37,519 --> 00:14:39,269
+synchronized. It will be it will be a
+tad bit different than what you're used
+
+636
+00:14:39,269 --> 00:14:39,279
+tad bit different than what you're used
+ 
+
+637
+00:14:39,279 --> 00:14:42,150
+tad bit different than what you're used
+to with your uh personal agent. And to
+
+638
+00:14:42,150 --> 00:14:42,160
+to with your uh personal agent. And to
+ 
+
+639
+00:14:42,160 --> 00:14:45,189
+to with your uh personal agent. And to
+do to have that you need to have like a
+
+640
+00:14:45,189 --> 00:14:45,199
+do to have that you need to have like a
+ 
+
+641
+00:14:45,199 --> 00:14:46,870
+do to have that you need to have like a
+few key components. You need to have
+
+642
+00:14:46,870 --> 00:14:46,880
+few key components. You need to have
+ 
+
+643
+00:14:46,880 --> 00:14:50,389
+few key components. You need to have
+Kubernetes. You need to uh have an agent
+
+644
+00:14:50,389 --> 00:14:50,399
+Kubernetes. You need to uh have an agent
+ 
+
+645
+00:14:50,399 --> 00:14:51,829
+Kubernetes. You need to uh have an agent
+harness. Open cloud could be one of
+
+646
+00:14:51,829 --> 00:14:51,839
+harness. Open cloud could be one of
+ 
+
+647
+00:14:51,839 --> 00:14:53,829
+harness. Open cloud could be one of
+them. Codex cloud code could be one of
+
+648
+00:14:53,829 --> 00:14:53,839
+them. Codex cloud code could be one of
+ 
+
+649
+00:14:53,839 --> 00:14:56,230
+them. Codex cloud code could be one of
+them. Could be ACP. It could be uh
+
+650
+00:14:56,230 --> 00:14:56,240
+them. Could be ACP. It could be uh
+ 
+
+651
+00:14:56,240 --> 00:14:57,829
+them. Could be ACP. It could be uh
+GitHub.
+
+652
+00:14:57,829 --> 00:14:57,839
+GitHub.
+ 
+
+653
+00:14:57,839 --> 00:15:00,949
+GitHub.
+uh you give read write access and you do
+
+654
+00:15:00,949 --> 00:15:00,959
+uh you give read write access and you do
+ 
+
+655
+00:15:00,959 --> 00:15:03,269
+uh you give read write access and you do
+like state data synchronization like you
+
+656
+00:15:03,269 --> 00:15:03,279
+like state data synchronization like you
+ 
+
+657
+00:15:03,279 --> 00:15:06,470
+like state data synchronization like you
+maybe you do something that's use rync
+
+658
+00:15:06,470 --> 00:15:06,480
+maybe you do something that's use rync
+ 
+
+659
+00:15:06,480 --> 00:15:08,470
+maybe you do something that's use rync
+some something like what whatever
+
+660
+00:15:08,470 --> 00:15:08,480
+some something like what whatever
+ 
+
+661
+00:15:08,480 --> 00:15:11,030
+some something like what whatever
+algorithm Dropbox is using and there are
+
+662
+00:15:11,030 --> 00:15:11,040
+algorithm Dropbox is using and there are
+ 
+
+663
+00:15:11,040 --> 00:15:13,430
+algorithm Dropbox is using and there are
+some projects that are uh taking this on
+
+664
+00:15:13,430 --> 00:15:13,440
+some projects that are uh taking this on
+ 
+
+665
+00:15:13,440 --> 00:15:15,189
+some projects that are uh taking this on
+I've been working on this uh this is
+
+666
+00:15:15,189 --> 00:15:15,199
+I've been working on this uh this is
+ 
+
+667
+00:15:15,199 --> 00:15:17,590
+I've been working on this uh this is
+outside of openlow this is my day job
+
+668
+00:15:17,590 --> 00:15:17,600
+outside of openlow this is my day job
+ 
+
+669
+00:15:17,600 --> 00:15:20,710
+outside of openlow this is my day job
+and uh it's an open source uh
+
+670
+00:15:20,710 --> 00:15:20,720
+and uh it's an open source uh
+ 
+
+671
+00:15:20,720 --> 00:15:22,790
+and uh it's an open source uh
+orchestrator
+
+672
+00:15:22,790 --> 00:15:22,800
+orchestrator
+ 
+
+673
+00:15:22,800 --> 00:15:25,990
+orchestrator
+uh it's a go operator that's uh
+
+674
+00:15:25,990 --> 00:15:26,000
+uh it's a go operator that's uh
+ 
+
+675
+00:15:26,000 --> 00:15:27,750
+uh it's a go operator that's uh
+basically handles
+
+676
+00:15:27,750 --> 00:15:27,760
+basically handles
+ 
+
+677
+00:15:27,760 --> 00:15:29,269
+basically handles
+the complicated parts. You know, there's
+
+678
+00:15:29,269 --> 00:15:29,279
+the complicated parts. You know, there's
+ 
+
+679
+00:15:29,279 --> 00:15:31,750
+the complicated parts. You know, there's
+a user experience. You want to create a
+
+680
+00:15:31,750 --> 00:15:31,760
+a user experience. You want to create a
+ 
+
+681
+00:15:31,760 --> 00:15:35,509
+a user experience. You want to create a
+concierge on Slack like concier agent
+
+682
+00:15:35,509 --> 00:15:35,519
+concierge on Slack like concier agent
+ 
+
+683
+00:15:35,519 --> 00:15:37,670
+concierge on Slack like concier agent
+and you're talking to it, but you get
+
+684
+00:15:37,670 --> 00:15:37,680
+and you're talking to it, but you get
+ 
+
+685
+00:15:37,680 --> 00:15:38,870
+and you're talking to it, but you get
+bottleneck because you have 100
+
+686
+00:15:38,870 --> 00:15:38,880
+bottleneck because you have 100
+ 
+
+687
+00:15:38,880 --> 00:15:41,189
+bottleneck because you have 100
+employees on Slack. So, you need to for
+
+688
+00:15:41,189 --> 00:15:41,199
+employees on Slack. So, you need to for
+ 
+
+689
+00:15:41,199 --> 00:15:43,110
+employees on Slack. So, you need to for
+for some other task you may you may need
+
+690
+00:15:43,110 --> 00:15:43,120
+for some other task you may you may need
+ 
+
+691
+00:15:43,120 --> 00:15:45,189
+for some other task you may you may need
+to create a new one and then it creates
+
+692
+00:15:45,189 --> 00:15:45,199
+to create a new one and then it creates
+ 
+
+693
+00:15:45,199 --> 00:15:49,350
+to create a new one and then it creates
+and gives you like a website link. Um,
+
+694
+00:15:49,350 --> 00:15:49,360
+and gives you like a website link. Um,
+ 
+
+695
+00:15:49,360 --> 00:15:52,230
+and gives you like a website link. Um,
+I'm going to skip the like shout outs to
+
+696
+00:15:52,230 --> 00:15:52,240
+I'm going to skip the like shout outs to
+ 
+
+697
+00:15:52,240 --> 00:15:55,590
+I'm going to skip the like shout outs to
+Cognition and Devon uh because uh yeah,
+
+698
+00:15:55,590 --> 00:15:55,600
+Cognition and Devon uh because uh yeah,
+ 
+
+699
+00:15:55,600 --> 00:15:57,030
+Cognition and Devon uh because uh yeah,
+they invented the category, but I'm
+
+700
+00:15:57,030 --> 00:15:57,040
+they invented the category, but I'm
+ 
+
+701
+00:15:57,040 --> 00:15:59,749
+they invented the category, but I'm
+running low on time. So, the repo is a
+
+702
+00:15:59,749 --> 00:15:59,759
+running low on time. So, the repo is a
+ 
+
+703
+00:15:59,759 --> 00:16:01,990
+running low on time. So, the repo is a
+text cortex spritz. I'm just going to
+
+704
+00:16:01,990 --> 00:16:02,000
+text cortex spritz. I'm just going to
+ 
+
+705
+00:16:02,000 --> 00:16:04,870
+text cortex spritz. I'm just going to
+demo it for our use case. We use it on
+
+706
+00:16:04,870 --> 00:16:04,880
+demo it for our use case. We use it on
+ 
+
+707
+00:16:04,880 --> 00:16:08,150
+demo it for our use case. We use it on
+error reporting. Uh currently, so if
+
+708
+00:16:08,150 --> 00:16:08,160
+error reporting. Uh currently, so if
+ 
+
+709
+00:16:08,160 --> 00:16:10,230
+error reporting. Uh currently, so if
+you're on Slack, you know, you can ask
+
+710
+00:16:10,230 --> 00:16:10,240
+you're on Slack, you know, you can ask
+ 
+
+711
+00:16:10,240 --> 00:16:12,150
+you're on Slack, you know, you can ask
+it to dispatch an agent to debug it. you
+
+712
+00:16:12,150 --> 00:16:12,160
+it to dispatch an agent to debug it. you
+ 
+
+713
+00:16:12,160 --> 00:16:14,629
+it to dispatch an agent to debug it. you
+know, you're like, I'm uh asking any new
+
+714
+00:16:14,629 --> 00:16:14,639
+know, you're like, I'm uh asking any new
+ 
+
+715
+00:16:14,639 --> 00:16:16,790
+know, you're like, I'm uh asking any new
+bugs after pro release and it's saying
+
+716
+00:16:16,790 --> 00:16:16,800
+bugs after pro release and it's saying
+ 
+
+717
+00:16:16,800 --> 00:16:20,069
+bugs after pro release and it's saying
+something and then you ask it to create
+
+718
+00:16:20,069 --> 00:16:20,079
+something and then you ask it to create
+ 
+
+719
+00:16:20,079 --> 00:16:22,230
+something and then you ask it to create
+an agent. Well, if I could put that
+
+720
+00:16:22,230 --> 00:16:22,240
+an agent. Well, if I could put that
+ 
+
+721
+00:16:22,240 --> 00:16:24,389
+an agent. Well, if I could put that
+agent into Slack, I would, but I can't
+
+722
+00:16:24,389 --> 00:16:24,399
+agent into Slack, I would, but I can't
+ 
+
+723
+00:16:24,399 --> 00:16:27,990
+agent into Slack, I would, but I can't
+do that. So, I have to put it in another
+
+724
+00:16:27,990 --> 00:16:28,000
+do that. So, I have to put it in another
+ 
+
+725
+00:16:28,000 --> 00:16:31,110
+do that. So, I have to put it in another
+UI. And this is an open source project.
+
+726
+00:16:31,110 --> 00:16:31,120
+UI. And this is an open source project.
+ 
+
+727
+00:16:31,120 --> 00:16:35,670
+UI. And this is an open source project.
+You can take this UI is also uh like a
+
+728
+00:16:35,670 --> 00:16:35,680
+You can take this UI is also uh like a
+ 
+
+729
+00:16:35,680 --> 00:16:37,749
+You can take this UI is also uh like a
+React app hosted in the cluster that
+
+730
+00:16:37,749 --> 00:16:37,759
+React app hosted in the cluster that
+ 
+
+731
+00:16:37,759 --> 00:16:39,590
+React app hosted in the cluster that
+you're deploying this these Helm charts
+
+732
+00:16:39,590 --> 00:16:39,600
+you're deploying this these Helm charts
+ 
+
+733
+00:16:39,600 --> 00:16:43,430
+you're deploying this these Helm charts
+to. And uh yeah you it starts the
+
+734
+00:16:43,430 --> 00:16:43,440
+to. And uh yeah you it starts the
+ 
+
+735
+00:16:43,440 --> 00:16:45,990
+to. And uh yeah you it starts the
+conversation there. It starts working on
+
+736
+00:16:45,990 --> 00:16:46,000
+conversation there. It starts working on
+ 
+
+737
+00:16:46,000 --> 00:16:48,629
+conversation there. It starts working on
+the uh problem. This is like codex web
+
+738
+00:16:48,629 --> 00:16:48,639
+the uh problem. This is like codex web
+ 
+
+739
+00:16:48,639 --> 00:16:51,110
+the uh problem. This is like codex web
+or devon or anything but it's actually
+
+740
+00:16:51,110 --> 00:16:51,120
+or devon or anything but it's actually
+ 
+
+741
+00:16:51,120 --> 00:16:55,269
+or devon or anything but it's actually
+using like a full kubernetes pod
+
+742
+00:16:55,269 --> 00:16:55,279
+using like a full kubernetes pod
+ 
+
+743
+00:16:55,279 --> 00:16:57,269
+using like a full kubernetes pod
+wasteful but I think it's the better
+
+744
+00:16:57,269 --> 00:16:57,279
+wasteful but I think it's the better
+ 
+
+745
+00:16:57,279 --> 00:17:00,310
+wasteful but I think it's the better
+abstraction because open close showed
+
+746
+00:17:00,310 --> 00:17:00,320
+abstraction because open close showed
+ 
+
+747
+00:17:00,320 --> 00:17:02,629
+abstraction because open close showed
+the power you know when you give a full
+
+748
+00:17:02,629 --> 00:17:02,639
+the power you know when you give a full
+ 
+
+749
+00:17:02,639 --> 00:17:04,870
+the power you know when you give a full
+computer to an agent it's a lot more
+
+750
+00:17:04,870 --> 00:17:04,880
+computer to an agent it's a lot more
+ 
+
+751
+00:17:04,880 --> 00:17:07,829
+computer to an agent it's a lot more
+powerful. Um and I I believe that as
+
+752
+00:17:07,829 --> 00:17:07,839
+powerful. Um and I I believe that as
+ 
+
+753
+00:17:07,839 --> 00:17:12,870
+powerful. Um and I I believe that as
+well. um u like I think uh open hands
+
+754
+00:17:12,870 --> 00:17:12,880
+well. um u like I think uh open hands
+ 
+
+755
+00:17:12,880 --> 00:17:16,949
+well. um u like I think uh open hands
+uses firecracker so I'm also uh not so
+
+756
+00:17:16,949 --> 00:17:16,959
+uses firecracker so I'm also uh not so
+ 
+
+757
+00:17:16,959 --> 00:17:18,470
+uses firecracker so I'm also uh not so
+uh wellversed on all the different
+
+758
+00:17:18,470 --> 00:17:18,480
+uh wellversed on all the different
+ 
+
+759
+00:17:18,480 --> 00:17:22,470
+uh wellversed on all the different
+virtualization frameworks uh so it's I'm
+
+760
+00:17:22,470 --> 00:17:22,480
+virtualization frameworks uh so it's I'm
+ 
+
+761
+00:17:22,480 --> 00:17:24,630
+virtualization frameworks uh so it's I'm
+also learning along the way but I have a
+
+762
+00:17:24,630 --> 00:17:24,640
+also learning along the way but I have a
+ 
+
+763
+00:17:24,640 --> 00:17:26,309
+also learning along the way but I have a
+working product that's uh running on
+
+764
+00:17:26,309 --> 00:17:26,319
+working product that's uh running on
+ 
+
+765
+00:17:26,319 --> 00:17:28,470
+working product that's uh running on
+kubernetes
+
+766
+00:17:28,470 --> 00:17:28,480
+kubernetes
+ 
+
+767
+00:17:28,480 --> 00:17:33,350
+kubernetes
+uh and you can use this uh product uh
+
+768
+00:17:33,350 --> 00:17:33,360
+uh and you can use this uh product uh
+ 
+
+769
+00:17:33,360 --> 00:17:34,789
+uh and you can use this uh product uh
+you can if you're interested in
+
+770
+00:17:34,789 --> 00:17:34,799
+you can if you're interested in
+ 
+
+771
+00:17:34,799 --> 00:17:37,590
+you can if you're interested in
+deploying internally and uh using codex
+
+772
+00:17:37,590 --> 00:17:37,600
+deploying internally and uh using codex
+ 
+
+773
+00:17:37,600 --> 00:17:38,950
+deploying internally and uh using codex
+on the
+
+774
+00:17:38,950 --> 00:17:38,960
+on the
+ 
+
+775
+00:17:38,960 --> 00:17:41,110
+on the
+uh and then you just spin things off. If
+
+776
+00:17:41,110 --> 00:17:41,120
+uh and then you just spin things off. If
+ 
+
+777
+00:17:41,120 --> 00:17:43,510
+uh and then you just spin things off. If
+you have like I don't know a back end uh
+
+778
+00:17:43,510 --> 00:17:43,520
+you have like I don't know a back end uh
+ 
+
+779
+00:17:43,520 --> 00:17:44,950
+you have like I don't know a back end uh
+if if you have an open source project
+
+780
+00:17:44,950 --> 00:17:44,960
+if if you have an open source project
+ 
+
+781
+00:17:44,960 --> 00:17:46,950
+if if you have an open source project
+first of all I can help you set this up.
+
+782
+00:17:46,950 --> 00:17:46,960
+first of all I can help you set this up.
+ 
+
+783
+00:17:46,960 --> 00:17:49,909
+first of all I can help you set this up.
+If you have a system like inlet of just
+
+784
+00:17:49,909 --> 00:17:49,919
+If you have a system like inlet of just
+ 
+
+785
+00:17:49,919 --> 00:17:51,830
+If you have a system like inlet of just
+hundred of hundreds of issues per day I
+
+786
+00:17:51,830 --> 00:17:51,840
+hundred of hundreds of issues per day I
+ 
+
+787
+00:17:51,840 --> 00:17:57,750
+hundred of hundreds of issues per day I
+can help you process it. Um this is um
+
+788
+00:17:57,750 --> 00:17:57,760
+can help you process it. Um this is um
+ 
+
+789
+00:17:57,760 --> 00:18:00,470
+can help you process it. Um this is um
+does all the wiring around Slack and
+
+790
+00:18:00,470 --> 00:18:00,480
+does all the wiring around Slack and
+ 
+
+791
+00:18:00,480 --> 00:18:04,150
+does all the wiring around Slack and
+like keeping those agents uh like on and
+
+792
+00:18:04,150 --> 00:18:04,160
+like keeping those agents uh like on and
+ 
+
+793
+00:18:04,160 --> 00:18:06,630
+like keeping those agents uh like on and
+the user experience and then the the
+
+794
+00:18:06,630 --> 00:18:06,640
+the user experience and then the the
+ 
+
+795
+00:18:06,640 --> 00:18:08,710
+the user experience and then the the
+interro like you're not locked in in any
+
+796
+00:18:08,710 --> 00:18:08,720
+interro like you're not locked in in any
+ 
+
+797
+00:18:08,720 --> 00:18:10,710
+interro like you're not locked in in any
+agent you can switch it's all abstract
+
+798
+00:18:10,710 --> 00:18:10,720
+agent you can switch it's all abstract
+ 
+
+799
+00:18:10,720 --> 00:18:15,669
+agent you can switch it's all abstract
+the way bel uh with ACP yeah that was my
+
+800
+00:18:15,669 --> 00:18:15,679
+the way bel uh with ACP yeah that was my
+ 
+
+801
+00:18:15,679 --> 00:18:17,830
+the way bel uh with ACP yeah that was my
+talk uh thank you for listening some
+
+802
+00:18:17,830 --> 00:18:17,840
+talk uh thank you for listening some
+ 
+
+803
+00:18:17,840 --> 00:18:21,110
+talk uh thank you for listening some
+social links in case you want to uh get
+
+804
+00:18:21,110 --> 00:18:21,120
+social links in case you want to uh get
+ 
+
+805
+00:18:21,120 --> 00:18:23,590
+social links in case you want to uh get
+in contact with me I just want to clear
+
+806
+00:18:23,590 --> 00:18:23,600
+in contact with me I just want to clear
+ 
+
+807
+00:18:23,600 --> 00:18:27,510
+in contact with me I just want to clear
+like of my uh their open uh side and the
+
+808
+00:18:27,510 --> 00:18:27,520
+like of my uh their open uh side and the
+ 
+
+809
+00:18:27,520 --> 00:18:30,710
+like of my uh their open uh side and the
+text cortex site. Um so this the last
+
+810
+00:18:30,710 --> 00:18:30,720
+text cortex site. Um so this the last
+ 
+
+811
+00:18:30,720 --> 00:18:33,590
+text cortex site. Um so this the last
+part was text about the work I do at
+
+812
+00:18:33,590 --> 00:18:33,600
+part was text about the work I do at
+ 
+
+813
+00:18:33,600 --> 00:18:35,909
+part was text about the work I do at
+text cortex.
+
+814
+00:18:35,909 --> 00:18:35,919
+text cortex.
+ 
+
+815
+00:18:35,919 --> 00:18:39,350
+text cortex.
+Just to give a disclaimer
+
+816
+00:18:39,350 --> 00:18:39,360
+Just to give a disclaimer
+ 
+
+817
+00:18:39,360 --> 00:18:48,950
+Just to give a disclaimer
+um thank you for listening I guess.
+
+818
+00:18:48,950 --> 00:18:48,960
+
+ 
+
+819
+00:18:48,960 --> 00:18:51,960
+
+Heat. Heat.
+

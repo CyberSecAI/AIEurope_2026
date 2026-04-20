@@ -1,0 +1,9325 @@
+1
+00:00:00,719 --> 00:00:03,429
+
+Hello everyone and welcome to my talk
+
+2
+00:00:03,429 --> 00:00:03,439
+Hello everyone and welcome to my talk
+ 
+
+3
+00:00:03,439 --> 00:00:06,309
+Hello everyone and welcome to my talk
+slashworkshop judge the judge and today
+
+4
+00:00:06,309 --> 00:00:06,319
+slashworkshop judge the judge and today
+ 
+
+5
+00:00:06,319 --> 00:00:09,110
+slashworkshop judge the judge and today
+we're going to talk about LLM as a judge
+
+6
+00:00:09,110 --> 00:00:09,120
+we're going to talk about LLM as a judge
+ 
+
+7
+00:00:09,120 --> 00:00:11,190
+we're going to talk about LLM as a judge
+quite sure you know this scenario you
+
+8
+00:00:11,190 --> 00:00:11,200
+quite sure you know this scenario you
+ 
+
+9
+00:00:11,200 --> 00:00:12,950
+quite sure you know this scenario you
+have an agent in production and someone
+
+10
+00:00:12,950 --> 00:00:12,960
+have an agent in production and someone
+ 
+
+11
+00:00:12,960 --> 00:00:14,950
+have an agent in production and someone
+from the team says we need to monitor
+
+12
+00:00:14,950 --> 00:00:14,960
+from the team says we need to monitor
+ 
+
+13
+00:00:14,960 --> 00:00:17,430
+from the team says we need to monitor
+the reliability so you go to one of the
+
+14
+00:00:17,430 --> 00:00:17,440
+the reliability so you go to one of the
+ 
+
+15
+00:00:17,440 --> 00:00:19,590
+the reliability so you go to one of the
+libraries and maybe use the
+
+16
+00:00:19,590 --> 00:00:19,600
+libraries and maybe use the
+ 
+
+17
+00:00:19,600 --> 00:00:22,630
+libraries and maybe use the
+hallucination LM as a judge you put it
+
+18
+00:00:22,630 --> 00:00:22,640
+hallucination LM as a judge you put it
+ 
+
+19
+00:00:22,640 --> 00:00:24,710
+hallucination LM as a judge you put it
+in production within your observability
+
+20
+00:00:24,710 --> 00:00:24,720
+in production within your observability
+ 
+
+21
+00:00:24,720 --> 00:00:29,589
+in production within your observability
+platform and things looks fine But
+
+22
+00:00:29,589 --> 00:00:29,599
+platform and things looks fine But
+ 
+
+23
+00:00:29,599 --> 00:00:31,349
+platform and things looks fine But
+customers are actually saying that the
+
+24
+00:00:31,349 --> 00:00:31,359
+customers are actually saying that the
+ 
+
+25
+00:00:31,359 --> 00:00:33,030
+customers are actually saying that the
+agent is not working and you look at the
+
+26
+00:00:33,030 --> 00:00:33,040
+agent is not working and you look at the
+ 
+
+27
+00:00:33,040 --> 00:00:35,590
+agent is not working and you look at the
+traces, it's not working. You look now
+
+28
+00:00:35,590 --> 00:00:35,600
+traces, it's not working. You look now
+ 
+
+29
+00:00:35,600 --> 00:00:38,150
+traces, it's not working. You look now
+under the hood about this hallucination
+
+30
+00:00:38,150 --> 00:00:38,160
+under the hood about this hallucination
+ 
+
+31
+00:00:38,160 --> 00:00:40,790
+under the hood about this hallucination
+LLM as a judge and you'll find a prompt
+
+32
+00:00:40,790 --> 00:00:40,800
+LLM as a judge and you'll find a prompt
+ 
+
+33
+00:00:40,800 --> 00:00:42,790
+LLM as a judge and you'll find a prompt
+not very far from this one. You'll be
+
+34
+00:00:42,790 --> 00:00:42,800
+not very far from this one. You'll be
+ 
+
+35
+00:00:42,800 --> 00:00:45,030
+not very far from this one. You'll be
+given an LLM output rate whether it's in
+
+36
+00:00:45,030 --> 00:00:45,040
+given an LLM output rate whether it's in
+ 
+
+37
+00:00:45,040 --> 00:00:47,670
+given an LLM output rate whether it's in
+a hallucination. Make no mistakes. Now,
+
+38
+00:00:47,670 --> 00:00:47,680
+a hallucination. Make no mistakes. Now,
+ 
+
+39
+00:00:47,680 --> 00:00:49,990
+a hallucination. Make no mistakes. Now,
+obviously, how the hell would the agent
+
+40
+00:00:49,990 --> 00:00:50,000
+obviously, how the hell would the agent
+ 
+
+41
+00:00:50,000 --> 00:00:51,910
+obviously, how the hell would the agent
+know whether it's a hallucination? If it
+
+42
+00:00:51,910 --> 00:00:51,920
+know whether it's a hallucination? If it
+ 
+
+43
+00:00:51,920 --> 00:00:53,430
+know whether it's a hallucination? If it
+could, then your app would have worked
+
+44
+00:00:53,430 --> 00:00:53,440
+could, then your app would have worked
+ 
+
+45
+00:00:53,440 --> 00:00:56,069
+could, then your app would have worked
+from the day one. So today we're going
+
+46
+00:00:56,069 --> 00:00:56,079
+from the day one. So today we're going
+ 
+
+47
+00:00:56,079 --> 00:00:58,389
+from the day one. So today we're going
+to talk about how can we build
+
+48
+00:00:58,389 --> 00:00:58,399
+to talk about how can we build
+ 
+
+49
+00:00:58,399 --> 00:01:01,189
+to talk about how can we build
+calibrated LLM that as a judge that
+
+50
+00:01:01,189 --> 00:01:01,199
+calibrated LLM that as a judge that
+ 
+
+51
+00:01:01,199 --> 00:01:04,310
+calibrated LLM that as a judge that
+works calibrated mean calibrated with
+
+52
+00:01:04,310 --> 00:01:04,320
+works calibrated mean calibrated with
+ 
+
+53
+00:01:04,320 --> 00:01:06,390
+works calibrated mean calibrated with
+human annotation and the way we're going
+
+54
+00:01:06,390 --> 00:01:06,400
+human annotation and the way we're going
+ 
+
+55
+00:01:06,400 --> 00:01:08,390
+human annotation and the way we're going
+to calibrate them is by using
+
+56
+00:01:08,390 --> 00:01:08,400
+to calibrate them is by using
+ 
+
+57
+00:01:08,400 --> 00:01:10,710
+to calibrate them is by using
+optimization or prompt optimization
+
+58
+00:01:10,710 --> 00:01:10,720
+optimization or prompt optimization
+ 
+
+59
+00:01:10,720 --> 00:01:13,590
+optimization or prompt optimization
+specifically we're going to use GAPA
+
+60
+00:01:13,590 --> 00:01:13,600
+specifically we're going to use GAPA
+ 
+
+61
+00:01:13,600 --> 00:01:16,149
+specifically we're going to use GAPA
+quite good algorithm for optimizing
+
+62
+00:01:16,149 --> 00:01:16,159
+quite good algorithm for optimizing
+ 
+
+63
+00:01:16,159 --> 00:01:18,070
+quite good algorithm for optimizing
+prompts
+
+64
+00:01:18,070 --> 00:01:18,080
+prompts
+ 
+
+65
+00:01:18,080 --> 00:01:20,230
+prompts
+now why do we want this why do we want
+
+66
+00:01:20,230 --> 00:01:20,240
+now why do we want this why do we want
+ 
+
+67
+00:01:20,240 --> 00:01:24,070
+now why do we want this why do we want
+calibrated LM charges or good LM charges
+
+68
+00:01:24,070 --> 00:01:24,080
+calibrated LM charges or good LM charges
+ 
+
+69
+00:01:24,080 --> 00:01:26,710
+calibrated LM charges or good LM charges
+first thing is for our off our offline
+
+70
+00:01:26,710 --> 00:01:26,720
+first thing is for our off our offline
+ 
+
+71
+00:01:26,720 --> 00:01:28,230
+first thing is for our off our offline
+evaluations.
+
+72
+00:01:28,230 --> 00:01:28,240
+evaluations.
+ 
+
+73
+00:01:28,240 --> 00:01:31,590
+evaluations.
+As you know like usually to create uh a
+
+74
+00:01:31,590 --> 00:01:31,600
+As you know like usually to create uh a
+ 
+
+75
+00:01:31,600 --> 00:01:33,590
+As you know like usually to create uh a
+good agent or a good prompt the way you
+
+76
+00:01:33,590 --> 00:01:33,600
+good agent or a good prompt the way you
+ 
+
+77
+00:01:33,600 --> 00:01:36,069
+good agent or a good prompt the way you
+do is you try to experiment with a
+
+78
+00:01:36,069 --> 00:01:36,079
+do is you try to experiment with a
+ 
+
+79
+00:01:36,079 --> 00:01:38,710
+do is you try to experiment with a
+prompt then run your AV valves see if it
+
+80
+00:01:38,710 --> 00:01:38,720
+prompt then run your AV valves see if it
+ 
+
+81
+00:01:38,720 --> 00:01:42,390
+prompt then run your AV valves see if it
+improves things or not. If it does good
+
+82
+00:01:42,390 --> 00:01:42,400
+improves things or not. If it does good
+ 
+
+83
+00:01:42,400 --> 00:01:43,910
+improves things or not. If it does good
+if it does not you go back and you
+
+84
+00:01:43,910 --> 00:01:43,920
+if it does not you go back and you
+ 
+
+85
+00:01:43,920 --> 00:01:45,350
+if it does not you go back and you
+improve it a little bit. Prove the
+
+86
+00:01:45,350 --> 00:01:45,360
+improve it a little bit. Prove the
+ 
+
+87
+00:01:45,360 --> 00:01:47,109
+improve it a little bit. Prove the
+harness the prompt and do it again and
+
+88
+00:01:47,109 --> 00:01:47,119
+harness the prompt and do it again and
+ 
+
+89
+00:01:47,119 --> 00:01:49,749
+harness the prompt and do it again and
+again. And the speed in which you move
+
+90
+00:01:49,749 --> 00:01:49,759
+again. And the speed in which you move
+ 
+
+91
+00:01:49,759 --> 00:01:51,350
+again. And the speed in which you move
+to production or add features is
+
+92
+00:01:51,350 --> 00:01:51,360
+to production or add features is
+ 
+
+93
+00:01:51,360 --> 00:01:53,190
+to production or add features is
+actually the speed into which you can
+
+94
+00:01:53,190 --> 00:01:53,200
+actually the speed into which you can
+ 
+
+95
+00:01:53,200 --> 00:01:56,069
+actually the speed into which you can
+complete this loop. And the bottleneck
+
+96
+00:01:56,069 --> 00:01:56,079
+complete this loop. And the bottleneck
+ 
+
+97
+00:01:56,079 --> 00:01:59,670
+complete this loop. And the bottleneck
+in this loop is actually the evaluation.
+
+98
+00:01:59,670 --> 00:01:59,680
+in this loop is actually the evaluation.
+ 
+
+99
+00:01:59,680 --> 00:02:02,709
+in this loop is actually the evaluation.
+How fast can you evaluate? Obviously the
+
+100
+00:02:02,709 --> 00:02:02,719
+How fast can you evaluate? Obviously the
+ 
+
+101
+00:02:02,719 --> 00:02:05,030
+How fast can you evaluate? Obviously the
+slowest possible evaluation is having
+
+102
+00:02:05,030 --> 00:02:05,040
+slowest possible evaluation is having
+ 
+
+103
+00:02:05,040 --> 00:02:07,030
+slowest possible evaluation is having
+human annotator really look at your
+
+104
+00:02:07,030 --> 00:02:07,040
+human annotator really look at your
+ 
+
+105
+00:02:07,040 --> 00:02:09,430
+human annotator really look at your
+whole test set and annotate it manually.
+
+106
+00:02:09,430 --> 00:02:09,440
+whole test set and annotate it manually.
+ 
+
+107
+00:02:09,440 --> 00:02:12,470
+whole test set and annotate it manually.
+Um the quality is quite good but then
+
+108
+00:02:12,470 --> 00:02:12,480
+Um the quality is quite good but then
+ 
+
+109
+00:02:12,480 --> 00:02:15,990
+Um the quality is quite good but then
+each iteration will take a lot. um you
+
+110
+00:02:15,990 --> 00:02:16,000
+each iteration will take a lot. um you
+ 
+
+111
+00:02:16,000 --> 00:02:18,710
+each iteration will take a lot. um you
+can have faster ones by using an LLM as
+
+112
+00:02:18,710 --> 00:02:18,720
+can have faster ones by using an LLM as
+ 
+
+113
+00:02:18,720 --> 00:02:22,630
+can have faster ones by using an LLM as
+a judge. But then if that LLM as a judge
+
+114
+00:02:22,630 --> 00:02:22,640
+a judge. But then if that LLM as a judge
+ 
+
+115
+00:02:22,640 --> 00:02:26,150
+a judge. But then if that LLM as a judge
+does not um correlate with a human
+
+116
+00:02:26,150 --> 00:02:26,160
+does not um correlate with a human
+ 
+
+117
+00:02:26,160 --> 00:02:29,589
+does not um correlate with a human
+annotation, then you'll end up with
+
+118
+00:02:29,589 --> 00:02:29,599
+annotation, then you'll end up with
+ 
+
+119
+00:02:29,599 --> 00:02:32,229
+annotation, then you'll end up with
+useless signal and although this loop
+
+120
+00:02:32,229 --> 00:02:32,239
+useless signal and although this loop
+ 
+
+121
+00:02:32,239 --> 00:02:35,589
+useless signal and although this loop
+will move fast, it won't go anywhere. So
+
+122
+00:02:35,589 --> 00:02:35,599
+will move fast, it won't go anywhere. So
+ 
+
+123
+00:02:35,599 --> 00:02:38,790
+will move fast, it won't go anywhere. So
+having calibrated LM as a judge with a
+
+124
+00:02:38,790 --> 00:02:38,800
+having calibrated LM as a judge with a
+ 
+
+125
+00:02:38,800 --> 00:02:40,550
+having calibrated LM as a judge with a
+similar quality let's say as human
+
+126
+00:02:40,550 --> 00:02:40,560
+similar quality let's say as human
+ 
+
+127
+00:02:40,560 --> 00:02:42,390
+similar quality let's say as human
+annotator will make your development
+
+128
+00:02:42,390 --> 00:02:42,400
+annotator will make your development
+ 
+
+129
+00:02:42,400 --> 00:02:44,949
+annotator will make your development
+much faster. The second second thing is
+
+130
+00:02:44,949 --> 00:02:44,959
+much faster. The second second thing is
+ 
+
+131
+00:02:44,959 --> 00:02:46,630
+much faster. The second second thing is
+basically the online eval like our
+
+132
+00:02:46,630 --> 00:02:46,640
+basically the online eval like our
+ 
+
+133
+00:02:46,640 --> 00:02:48,630
+basically the online eval like our
+example from the beginning. If you have
+
+134
+00:02:48,630 --> 00:02:48,640
+example from the beginning. If you have
+ 
+
+135
+00:02:48,640 --> 00:02:50,869
+example from the beginning. If you have
+an online eval and you want to see
+
+136
+00:02:50,869 --> 00:02:50,879
+an online eval and you want to see
+ 
+
+137
+00:02:50,879 --> 00:02:52,710
+an online eval and you want to see
+basically in production if things are
+
+138
+00:02:52,710 --> 00:02:52,720
+basically in production if things are
+ 
+
+139
+00:02:52,720 --> 00:02:55,190
+basically in production if things are
+improving or not improving same thing if
+
+140
+00:02:55,190 --> 00:02:55,200
+improving or not improving same thing if
+ 
+
+141
+00:02:55,200 --> 00:02:56,790
+improving or not improving same thing if
+you have LLM as a jobs that are
+
+142
+00:02:56,790 --> 00:02:56,800
+you have LLM as a jobs that are
+ 
+
+143
+00:02:56,800 --> 00:03:00,229
+you have LLM as a jobs that are
+calibrated with your business goals then
+
+144
+00:03:00,229 --> 00:03:00,239
+calibrated with your business goals then
+ 
+
+145
+00:03:00,239 --> 00:03:01,990
+calibrated with your business goals then
+you can quickly see whether changes that
+
+146
+00:03:01,990 --> 00:03:02,000
+you can quickly see whether changes that
+ 
+
+147
+00:03:02,000 --> 00:03:03,910
+you can quickly see whether changes that
+you've made are improving not
+
+148
+00:03:03,910 --> 00:03:03,920
+you've made are improving not
+ 
+
+149
+00:03:03,920 --> 00:03:06,550
+you've made are improving not
+improvement whether um there is some
+
+150
+00:03:06,550 --> 00:03:06,560
+improvement whether um there is some
+ 
+
+151
+00:03:06,560 --> 00:03:08,630
+improvement whether um there is some
+change in the distribution of the data
+
+152
+00:03:08,630 --> 00:03:08,640
+change in the distribution of the data
+ 
+
+153
+00:03:08,640 --> 00:03:11,589
+change in the distribution of the data
+how people are interacting uh with with
+
+154
+00:03:11,589 --> 00:03:11,599
+how people are interacting uh with with
+ 
+
+155
+00:03:11,599 --> 00:03:14,390
+how people are interacting uh with with
+your agent or model and basically react
+
+156
+00:03:14,390 --> 00:03:14,400
+your agent or model and basically react
+ 
+
+157
+00:03:14,400 --> 00:03:18,149
+your agent or model and basically react
+rapidly and finally and I would All this
+
+158
+00:03:18,149 --> 00:03:18,159
+rapidly and finally and I would All this
+ 
+
+159
+00:03:18,159 --> 00:03:21,030
+rapidly and finally and I would All this
+is the holy grail of AI engineering is
+
+160
+00:03:21,030 --> 00:03:21,040
+is the holy grail of AI engineering is
+ 
+
+161
+00:03:21,040 --> 00:03:23,990
+is the holy grail of AI engineering is
+really to build this data flywheel where
+
+162
+00:03:23,990 --> 00:03:24,000
+really to build this data flywheel where
+ 
+
+163
+00:03:24,000 --> 00:03:26,550
+really to build this data flywheel where
+you optimize your harness, observe some
+
+164
+00:03:26,550 --> 00:03:26,560
+you optimize your harness, observe some
+ 
+
+165
+00:03:26,560 --> 00:03:28,949
+you optimize your harness, observe some
+traces and then add new a valves based
+
+166
+00:03:28,949 --> 00:03:28,959
+traces and then add new a valves based
+ 
+
+167
+00:03:28,959 --> 00:03:31,509
+traces and then add new a valves based
+on these traces the edge cases and do it
+
+168
+00:03:31,509 --> 00:03:31,519
+on these traces the edge cases and do it
+ 
+
+169
+00:03:31,519 --> 00:03:34,789
+on these traces the edge cases and do it
+again and again and again here if if you
+
+170
+00:03:34,789 --> 00:03:34,799
+again and again and again here if if you
+ 
+
+171
+00:03:34,799 --> 00:03:36,789
+again and again and again here if if you
+have a way to kind of add new
+
+172
+00:03:36,789 --> 00:03:36,799
+have a way to kind of add new
+ 
+
+173
+00:03:36,799 --> 00:03:39,190
+have a way to kind of add new
+evaluations quickly obviously automatic
+
+174
+00:03:39,190 --> 00:03:39,200
+evaluations quickly obviously automatic
+ 
+
+175
+00:03:39,200 --> 00:03:40,949
+evaluations quickly obviously automatic
+evaluations
+
+176
+00:03:40,949 --> 00:03:40,959
+evaluations
+ 
+
+177
+00:03:40,959 --> 00:03:43,110
+evaluations
+um from the traces from kind of the
+
+178
+00:03:43,110 --> 00:03:43,120
+um from the traces from kind of the
+ 
+
+179
+00:03:43,120 --> 00:03:45,589
+um from the traces from kind of the
+annotations and data you can go through
+
+180
+00:03:45,589 --> 00:03:45,599
+annotations and data you can go through
+ 
+
+181
+00:03:45,599 --> 00:03:47,509
+annotations and data you can go through
+this loop faster and faster to to the
+
+182
+00:03:47,509 --> 00:03:47,519
+this loop faster and faster to to the
+ 
+
+183
+00:03:47,519 --> 00:03:49,350
+this loop faster and faster to to the
+moment or to the point that you can
+
+184
+00:03:49,350 --> 00:03:49,360
+moment or to the point that you can
+ 
+
+185
+00:03:49,360 --> 00:03:51,350
+moment or to the point that you can
+think of it as an automatic loop, right?
+
+186
+00:03:51,350 --> 00:03:51,360
+think of it as an automatic loop, right?
+ 
+
+187
+00:03:51,360 --> 00:03:53,990
+think of it as an automatic loop, right?
+Because you can optimize the harnesses
+
+188
+00:03:53,990 --> 00:03:54,000
+Because you can optimize the harnesses
+ 
+
+189
+00:03:54,000 --> 00:03:56,070
+Because you can optimize the harnesses
+with optimization techniques like GIA
+
+190
+00:03:56,070 --> 00:03:56,080
+with optimization techniques like GIA
+ 
+
+191
+00:03:56,080 --> 00:03:57,429
+with optimization techniques like GIA
+what we're going to use here. But the
+
+192
+00:03:57,429 --> 00:03:57,439
+what we're going to use here. But the
+ 
+
+193
+00:03:57,439 --> 00:03:59,110
+what we're going to use here. But the
+same thing you can do it for the eval.
+
+194
+00:03:59,110 --> 00:03:59,120
+same thing you can do it for the eval.
+ 
+
+195
+00:03:59,120 --> 00:04:02,070
+same thing you can do it for the eval.
+And basically over time your application
+
+196
+00:04:02,070 --> 00:04:02,080
+And basically over time your application
+ 
+
+197
+00:04:02,080 --> 00:04:04,470
+And basically over time your application
+will improve just with uh new
+
+198
+00:04:04,470 --> 00:04:04,480
+will improve just with uh new
+ 
+
+199
+00:04:04,480 --> 00:04:07,429
+will improve just with uh new
+observations. So today we're going to
+
+200
+00:04:07,429 --> 00:04:07,439
+observations. So today we're going to
+ 
+
+201
+00:04:07,439 --> 00:04:11,030
+observations. So today we're going to
+build and optimize these LLM as judges
+
+202
+00:04:11,030 --> 00:04:11,040
+build and optimize these LLM as judges
+ 
+
+203
+00:04:11,040 --> 00:04:12,630
+build and optimize these LLM as judges
+that are calibrated with human
+
+204
+00:04:12,630 --> 00:04:12,640
+that are calibrated with human
+ 
+
+205
+00:04:12,640 --> 00:04:16,069
+that are calibrated with human
+annotations. Uh but before going there a
+
+206
+00:04:16,069 --> 00:04:16,079
+annotations. Uh but before going there a
+ 
+
+207
+00:04:16,079 --> 00:04:17,830
+annotations. Uh but before going there a
+small intro about myself. My name is
+
+208
+00:04:17,830 --> 00:04:17,840
+small intro about myself. My name is
+ 
+
+209
+00:04:17,840 --> 00:04:19,909
+small intro about myself. My name is
+Mahmud. I'm the co-founder and CEO of
+
+210
+00:04:19,909 --> 00:04:19,919
+Mahmud. I'm the co-founder and CEO of
+ 
+
+211
+00:04:19,919 --> 00:04:22,550
+Mahmud. I'm the co-founder and CEO of
+Agenta. Uh Agenta is an open-source
+
+212
+00:04:22,550 --> 00:04:22,560
+Agenta. Uh Agenta is an open-source
+ 
+
+213
+00:04:22,560 --> 00:04:24,870
+Agenta. Uh Agenta is an open-source
+Lenomops platform. Uh basically
+
+214
+00:04:24,870 --> 00:04:24,880
+Lenomops platform. Uh basically
+ 
+
+215
+00:04:24,880 --> 00:04:26,390
+Lenomops platform. Uh basically
+providing you all the tools from
+
+216
+00:04:26,390 --> 00:04:26,400
+providing you all the tools from
+ 
+
+217
+00:04:26,400 --> 00:04:28,390
+providing you all the tools from
+observability, prompt management,
+
+218
+00:04:28,390 --> 00:04:28,400
+observability, prompt management,
+ 
+
+219
+00:04:28,400 --> 00:04:30,790
+observability, prompt management,
+evaluation covering the whole life cycle
+
+220
+00:04:30,790 --> 00:04:30,800
+evaluation covering the whole life cycle
+ 
+
+221
+00:04:30,800 --> 00:04:34,469
+evaluation covering the whole life cycle
+of building reliable agents. Um my
+
+222
+00:04:34,469 --> 00:04:34,479
+of building reliable agents. Um my
+ 
+
+223
+00:04:34,479 --> 00:04:36,469
+of building reliable agents. Um my
+experience is in machine learning. I
+
+224
+00:04:36,469 --> 00:04:36,479
+experience is in machine learning. I
+ 
+
+225
+00:04:36,479 --> 00:04:38,150
+experience is in machine learning. I
+have more than 15 years experience in
+
+226
+00:04:38,150 --> 00:04:38,160
+have more than 15 years experience in
+ 
+
+227
+00:04:38,160 --> 00:04:40,230
+have more than 15 years experience in
+that. In a previous life, I was in
+
+228
+00:04:40,230 --> 00:04:40,240
+that. In a previous life, I was in
+ 
+
+229
+00:04:40,240 --> 00:04:43,270
+that. In a previous life, I was in
+academia. uh worked on machine learning
+
+230
+00:04:43,270 --> 00:04:43,280
+academia. uh worked on machine learning
+ 
+
+231
+00:04:43,280 --> 00:04:44,950
+academia. uh worked on machine learning
+applied to computational biology,
+
+232
+00:04:44,950 --> 00:04:44,960
+applied to computational biology,
+ 
+
+233
+00:04:44,960 --> 00:04:47,270
+applied to computational biology,
+protein structure prediction. And right
+
+234
+00:04:47,270 --> 00:04:47,280
+protein structure prediction. And right
+ 
+
+235
+00:04:47,280 --> 00:04:49,350
+protein structure prediction. And right
+now we're working a lot on these
+
+236
+00:04:49,350 --> 00:04:49,360
+now we're working a lot on these
+ 
+
+237
+00:04:49,360 --> 00:04:52,550
+now we're working a lot on these
+sampling and autooptimization workflows.
+
+238
+00:04:52,550 --> 00:04:52,560
+sampling and autooptimization workflows.
+ 
+
+239
+00:04:52,560 --> 00:04:54,790
+sampling and autooptimization workflows.
+So uh if you're interested in that,
+
+240
+00:04:54,790 --> 00:04:54,800
+So uh if you're interested in that,
+ 
+
+241
+00:04:54,800 --> 00:04:56,469
+So uh if you're interested in that,
+please reach out. We'd love to have a
+
+242
+00:04:56,469 --> 00:04:56,479
+please reach out. We'd love to have a
+ 
+
+243
+00:04:56,479 --> 00:04:58,390
+please reach out. We'd love to have a
+conversation and show you also what
+
+244
+00:04:58,390 --> 00:04:58,400
+conversation and show you also what
+ 
+
+245
+00:04:58,400 --> 00:05:00,230
+conversation and show you also what
+we're building. So what's the plan for
+
+246
+00:05:00,230 --> 00:05:00,240
+we're building. So what's the plan for
+ 
+
+247
+00:05:00,240 --> 00:05:02,070
+we're building. So what's the plan for
+this talk? Basically, we're going to
+
+248
+00:05:02,070 --> 00:05:02,080
+this talk? Basically, we're going to
+ 
+
+249
+00:05:02,080 --> 00:05:04,390
+this talk? Basically, we're going to
+work on a practical use case. It's a
+
+250
+00:05:04,390 --> 00:05:04,400
+work on a practical use case. It's a
+ 
+
+251
+00:05:04,400 --> 00:05:06,390
+work on a practical use case. It's a
+customer support agent that we want to
+
+252
+00:05:06,390 --> 00:05:06,400
+customer support agent that we want to
+ 
+
+253
+00:05:06,400 --> 00:05:09,830
+customer support agent that we want to
+evaluate and we are going to build an
+
+254
+00:05:09,830 --> 00:05:09,840
+evaluate and we are going to build an
+ 
+
+255
+00:05:09,840 --> 00:05:13,189
+evaluate and we are going to build an
+LLM as a judge that is calibrated with
+
+256
+00:05:13,189 --> 00:05:13,199
+LLM as a judge that is calibrated with
+ 
+
+257
+00:05:13,199 --> 00:05:15,029
+LLM as a judge that is calibrated with
+the annotations basically human
+
+258
+00:05:15,029 --> 00:05:15,039
+the annotations basically human
+ 
+
+259
+00:05:15,039 --> 00:05:17,830
+the annotations basically human
+annotations for that customer support.
+
+260
+00:05:17,830 --> 00:05:17,840
+annotations for that customer support.
+ 
+
+261
+00:05:17,840 --> 00:05:20,150
+annotations for that customer support.
+The plan would be really to go over the
+
+262
+00:05:20,150 --> 00:05:20,160
+The plan would be really to go over the
+ 
+
+263
+00:05:20,160 --> 00:05:21,990
+The plan would be really to go over the
+whole process of building this starting
+
+264
+00:05:21,990 --> 00:05:22,000
+whole process of building this starting
+ 
+
+265
+00:05:22,000 --> 00:05:25,029
+whole process of building this starting
+with how we design the metrics, how to
+
+266
+00:05:25,029 --> 00:05:25,039
+with how we design the metrics, how to
+ 
+
+267
+00:05:25,039 --> 00:05:26,790
+with how we design the metrics, how to
+think about the data curation, the
+
+268
+00:05:26,790 --> 00:05:26,800
+think about the data curation, the
+ 
+
+269
+00:05:26,800 --> 00:05:29,270
+think about the data curation, the
+labeling, but the main focus would be
+
+270
+00:05:29,270 --> 00:05:29,280
+labeling, but the main focus would be
+ 
+
+271
+00:05:29,280 --> 00:05:32,230
+labeling, but the main focus would be
+really about um the part about
+
+272
+00:05:32,230 --> 00:05:32,240
+really about um the part about
+ 
+
+273
+00:05:32,240 --> 00:05:35,029
+really about um the part about
+optimizing the LM as a judge using GPA
+
+274
+00:05:35,029 --> 00:05:35,039
+optimizing the LM as a judge using GPA
+ 
+
+275
+00:05:35,039 --> 00:05:36,790
+optimizing the LM as a judge using GPA
+and obviously then validating the
+
+276
+00:05:36,790 --> 00:05:36,800
+and obviously then validating the
+ 
+
+277
+00:05:36,800 --> 00:05:39,990
+and obviously then validating the
+results. All the code and the data used
+
+278
+00:05:39,990 --> 00:05:40,000
+results. All the code and the data used
+ 
+
+279
+00:05:40,000 --> 00:05:43,110
+results. All the code and the data used
+in this uh will be found in GitHub and
+
+280
+00:05:43,110 --> 00:05:43,120
+in this uh will be found in GitHub and
+ 
+
+281
+00:05:43,120 --> 00:05:45,670
+in this uh will be found in GitHub and
+you can find them in the links in this
+
+282
+00:05:45,670 --> 00:05:45,680
+you can find them in the links in this
+ 
+
+283
+00:05:45,680 --> 00:05:48,629
+you can find them in the links in this
+video and the last slide. So let's start
+
+284
+00:05:48,629 --> 00:05:48,639
+video and the last slide. So let's start
+ 
+
+285
+00:05:48,639 --> 00:05:50,710
+video and the last slide. So let's start
+with the data set. We're going to use
+
+286
+00:05:50,710 --> 00:05:50,720
+with the data set. We're going to use
+ 
+
+287
+00:05:50,720 --> 00:05:54,629
+with the data set. We're going to use
+Towbench. TBench is a benchmark in a
+
+288
+00:05:54,629 --> 00:05:54,639
+Towbench. TBench is a benchmark in a
+ 
+
+289
+00:05:54,639 --> 00:05:57,749
+Towbench. TBench is a benchmark in a
+large data set built by Sierra uh
+
+290
+00:05:57,749 --> 00:05:57,759
+large data set built by Sierra uh
+ 
+
+291
+00:05:57,759 --> 00:06:02,629
+large data set built by Sierra uh
+customer support um scaleup I think and
+
+292
+00:06:02,629 --> 00:06:02,639
+customer support um scaleup I think and
+ 
+
+293
+00:06:02,639 --> 00:06:04,710
+customer support um scaleup I think and
+they have like multiple benchmark for
+
+294
+00:06:04,710 --> 00:06:04,720
+they have like multiple benchmark for
+ 
+
+295
+00:06:04,720 --> 00:06:06,629
+they have like multiple benchmark for
+real world scenarios for customer
+
+296
+00:06:06,629 --> 00:06:06,639
+real world scenarios for customer
+ 
+
+297
+00:06:06,639 --> 00:06:09,749
+real world scenarios for customer
+support agents. Uh one of them is the
+
+298
+00:06:09,749 --> 00:06:09,759
+support agents. Uh one of them is the
+ 
+
+299
+00:06:09,759 --> 00:06:12,629
+support agents. Uh one of them is the
+airline agent which we are going to use
+
+300
+00:06:12,629 --> 00:06:12,639
+airline agent which we are going to use
+ 
+
+301
+00:06:12,639 --> 00:06:15,029
+airline agent which we are going to use
+um in this example. And basically what
+
+302
+00:06:15,029 --> 00:06:15,039
+um in this example. And basically what
+ 
+
+303
+00:06:15,039 --> 00:06:16,950
+um in this example. And basically what
+they have is an airline customer support
+
+304
+00:06:16,950 --> 00:06:16,960
+they have is an airline customer support
+ 
+
+305
+00:06:16,960 --> 00:06:19,510
+they have is an airline customer support
+agent that has access to multiple tools
+
+306
+00:06:19,510 --> 00:06:19,520
+agent that has access to multiple tools
+ 
+
+307
+00:06:19,520 --> 00:06:22,230
+agent that has access to multiple tools
+to manage reservations, access flight
+
+308
+00:06:22,230 --> 00:06:22,240
+to manage reservations, access flight
+ 
+
+309
+00:06:22,240 --> 00:06:24,870
+to manage reservations, access flight
+information, access user information and
+
+310
+00:06:24,870 --> 00:06:24,880
+information, access user information and
+ 
+
+311
+00:06:24,880 --> 00:06:27,189
+information, access user information and
+has a quite complex policy to be held to
+
+312
+00:06:27,189 --> 00:06:27,199
+has a quite complex policy to be held to
+ 
+
+313
+00:06:27,199 --> 00:06:30,710
+has a quite complex policy to be held to
+like when to change a reservation
+
+314
+00:06:30,710 --> 00:06:30,720
+like when to change a reservation
+ 
+
+315
+00:06:30,720 --> 00:06:33,670
+like when to change a reservation
+uh when to provide information and so on
+
+316
+00:06:33,670 --> 00:06:33,680
+uh when to provide information and so on
+ 
+
+317
+00:06:33,680 --> 00:06:35,830
+uh when to provide information and so on
+so forth just like a customer support
+
+318
+00:06:35,830 --> 00:06:35,840
+so forth just like a customer support
+ 
+
+319
+00:06:35,840 --> 00:06:38,070
+so forth just like a customer support
+agent, a human one. And the data that we
+
+320
+00:06:38,070 --> 00:06:38,080
+agent, a human one. And the data that we
+ 
+
+321
+00:06:38,080 --> 00:06:41,430
+agent, a human one. And the data that we
+have is is the agent itself. about most
+
+322
+00:06:41,430 --> 00:06:41,440
+have is is the agent itself. about most
+ 
+
+323
+00:06:41,440 --> 00:06:45,990
+have is is the agent itself. about most
+most importantly um 599 conversation
+
+324
+00:06:45,990 --> 00:06:46,000
+most importantly um 599 conversation
+ 
+
+325
+00:06:46,000 --> 00:06:49,110
+most importantly um 599 conversation
+traces that are generated with
+
+326
+00:06:49,110 --> 00:06:49,120
+traces that are generated with
+ 
+
+327
+00:06:49,120 --> 00:06:50,790
+traces that are generated with
+annotations.
+
+328
+00:06:50,790 --> 00:06:50,800
+annotations.
+ 
+
+329
+00:06:50,800 --> 00:06:52,469
+annotations.
+uh now the format the original format of
+
+330
+00:06:52,469 --> 00:06:52,479
+uh now the format the original format of
+ 
+
+331
+00:06:52,479 --> 00:06:54,550
+uh now the format the original format of
+the annotations is like in the format of
+
+332
+00:06:54,550 --> 00:06:54,560
+the annotations is like in the format of
+ 
+
+333
+00:06:54,560 --> 00:06:57,510
+the annotations is like in the format of
+assertion but uh I pre-processed or by
+
+334
+00:06:57,510 --> 00:06:57,520
+assertion but uh I pre-processed or by
+ 
+
+335
+00:06:57,520 --> 00:06:59,909
+assertion but uh I pre-processed or by
+post-processed the data so that we have
+
+336
+00:06:59,909 --> 00:06:59,919
+post-processed the data so that we have
+ 
+
+337
+00:06:59,919 --> 00:07:02,230
+post-processed the data so that we have
+for each trace an annotation like a
+
+338
+00:07:02,230 --> 00:07:02,240
+for each trace an annotation like a
+ 
+
+339
+00:07:02,240 --> 00:07:04,950
+for each trace an annotation like a
+human annotation uh where it says for
+
+340
+00:07:04,950 --> 00:07:04,960
+human annotation uh where it says for
+ 
+
+341
+00:07:04,960 --> 00:07:07,510
+human annotation uh where it says for
+example like in this case you have the
+
+342
+00:07:07,510 --> 00:07:07,520
+example like in this case you have the
+ 
+
+343
+00:07:07,520 --> 00:07:09,189
+example like in this case you have the
+conversation that you see here and then
+
+344
+00:07:09,189 --> 00:07:09,199
+conversation that you see here and then
+ 
+
+345
+00:07:09,199 --> 00:07:11,510
+conversation that you see here and then
+you have an annotation that the agent is
+
+346
+00:07:11,510 --> 00:07:11,520
+you have an annotation that the agent is
+ 
+
+347
+00:07:11,520 --> 00:07:13,830
+you have an annotation that the agent is
+not compliant because it improved
+
+348
+00:07:13,830 --> 00:07:13,840
+not compliant because it improved
+ 
+
+349
+00:07:13,840 --> 00:07:15,270
+not compliant because it improved
+approved the cancellation without
+
+350
+00:07:15,270 --> 00:07:15,280
+approved the cancellation without
+ 
+
+351
+00:07:15,280 --> 00:07:17,589
+approved the cancellation without
+verifying that the reservation met the
+
+352
+00:07:17,589 --> 00:07:17,599
+verifying that the reservation met the
+ 
+
+353
+00:07:17,599 --> 00:07:20,150
+verifying that the reservation met the
+airline cancellation rule. So basically
+
+354
+00:07:20,150 --> 00:07:20,160
+airline cancellation rule. So basically
+ 
+
+355
+00:07:20,160 --> 00:07:23,670
+airline cancellation rule. So basically
+the evaluation failed and the reason is
+
+356
+00:07:23,670 --> 00:07:23,680
+the evaluation failed and the reason is
+ 
+
+357
+00:07:23,680 --> 00:07:26,950
+the evaluation failed and the reason is
+because the agent uh um canceled the
+
+358
+00:07:26,950 --> 00:07:26,960
+because the agent uh um canceled the
+ 
+
+359
+00:07:26,960 --> 00:07:28,710
+because the agent uh um canceled the
+reservation without verifying something.
+
+360
+00:07:28,710 --> 00:07:28,720
+reservation without verifying something.
+ 
+
+361
+00:07:28,720 --> 00:07:31,350
+reservation without verifying something.
+So basically uh it did not behold to the
+
+362
+00:07:31,350 --> 00:07:31,360
+So basically uh it did not behold to the
+ 
+
+363
+00:07:31,360 --> 00:07:35,589
+So basically uh it did not behold to the
+policy and the data is is more or less
+
+364
+00:07:35,589 --> 00:07:35,599
+policy and the data is is more or less
+ 
+
+365
+00:07:35,599 --> 00:07:40,230
+policy and the data is is more or less
+uh kind of um not very skewed. It's 62%
+
+366
+00:07:40,230 --> 00:07:40,240
+uh kind of um not very skewed. It's 62%
+ 
+
+367
+00:07:40,240 --> 00:07:42,870
+uh kind of um not very skewed. It's 62%
+compliant, 38% compliant and it's
+
+368
+00:07:42,870 --> 00:07:42,880
+compliant, 38% compliant and it's
+ 
+
+369
+00:07:42,880 --> 00:07:45,029
+compliant, 38% compliant and it's
+generated with multiple models and
+
+370
+00:07:45,029 --> 00:07:45,039
+generated with multiple models and
+ 
+
+371
+00:07:45,039 --> 00:07:48,790
+generated with multiple models and
+trials. Overall the data is is kind of
+
+372
+00:07:48,790 --> 00:07:48,800
+trials. Overall the data is is kind of
+ 
+
+373
+00:07:48,800 --> 00:07:50,710
+trials. Overall the data is is kind of
+the problem is quite complex because the
+
+374
+00:07:50,710 --> 00:07:50,720
+the problem is quite complex because the
+ 
+
+375
+00:07:50,720 --> 00:07:53,430
+the problem is quite complex because the
+policy is quite complex. The data has
+
+376
+00:07:53,430 --> 00:07:53,440
+policy is quite complex. The data has
+ 
+
+377
+00:07:53,440 --> 00:07:56,950
+policy is quite complex. The data has
+caveats honestly it's not very clean um
+
+378
+00:07:56,950 --> 00:07:56,960
+caveats honestly it's not very clean um
+ 
+
+379
+00:07:56,960 --> 00:07:58,550
+caveats honestly it's not very clean um
+due to the reasons how it's also
+
+380
+00:07:58,550 --> 00:07:58,560
+due to the reasons how it's also
+ 
+
+381
+00:07:58,560 --> 00:08:01,270
+due to the reasons how it's also
+generated but for our use case I think
+
+382
+00:08:01,270 --> 00:08:01,280
+generated but for our use case I think
+ 
+
+383
+00:08:01,280 --> 00:08:03,990
+generated but for our use case I think
+it's very um interesting use case to
+
+384
+00:08:03,990 --> 00:08:04,000
+it's very um interesting use case to
+ 
+
+385
+00:08:04,000 --> 00:08:07,189
+it's very um interesting use case to
+test uh GIA and to kind of demo how it
+
+386
+00:08:07,189 --> 00:08:07,199
+test uh GIA and to kind of demo how it
+ 
+
+387
+00:08:07,199 --> 00:08:10,390
+test uh GIA and to kind of demo how it
+would work uh in a real uh test case.
+
+388
+00:08:10,390 --> 00:08:10,400
+would work uh in a real uh test case.
+ 
+
+389
+00:08:10,400 --> 00:08:13,749
+would work uh in a real uh test case.
+The workflow that we have is four steps.
+
+390
+00:08:13,749 --> 00:08:13,759
+The workflow that we have is four steps.
+ 
+
+391
+00:08:13,759 --> 00:08:16,390
+The workflow that we have is four steps.
+First thing is designing the metrics
+
+392
+00:08:16,390 --> 00:08:16,400
+First thing is designing the metrics
+ 
+
+393
+00:08:16,400 --> 00:08:20,230
+First thing is designing the metrics
+that is deciding what will the LLM as a
+
+394
+00:08:20,230 --> 00:08:20,240
+that is deciding what will the LLM as a
+ 
+
+395
+00:08:20,240 --> 00:08:23,029
+that is deciding what will the LLM as a
+judge measure. What are the different
+
+396
+00:08:23,029 --> 00:08:23,039
+judge measure. What are the different
+ 
+
+397
+00:08:23,039 --> 00:08:25,909
+judge measure. What are the different
+axis that it would look to the second
+
+398
+00:08:25,909 --> 00:08:25,919
+axis that it would look to the second
+ 
+
+399
+00:08:25,919 --> 00:08:29,270
+axis that it would look to the second
+thing is annotating the data uh and then
+
+400
+00:08:29,270 --> 00:08:29,280
+thing is annotating the data uh and then
+ 
+
+401
+00:08:29,280 --> 00:08:31,270
+thing is annotating the data uh and then
+we will optimize the judge and validate
+
+402
+00:08:31,270 --> 00:08:31,280
+we will optimize the judge and validate
+ 
+
+403
+00:08:31,280 --> 00:08:33,589
+we will optimize the judge and validate
+the results. Now the most important
+
+404
+00:08:33,589 --> 00:08:33,599
+the results. Now the most important
+ 
+
+405
+00:08:33,599 --> 00:08:36,550
+the results. Now the most important
+thing to take here is that the metrics
+
+406
+00:08:36,550 --> 00:08:36,560
+thing to take here is that the metrics
+ 
+
+407
+00:08:36,560 --> 00:08:39,190
+thing to take here is that the metrics
+need to come from uh the use case
+
+408
+00:08:39,190 --> 00:08:39,200
+need to come from uh the use case
+ 
+
+409
+00:08:39,200 --> 00:08:41,990
+need to come from uh the use case
+itself. it does not make sense to have
+
+410
+00:08:41,990 --> 00:08:42,000
+itself. it does not make sense to have
+ 
+
+411
+00:08:42,000 --> 00:08:45,030
+itself. it does not make sense to have
+general metrics like hallucination
+
+412
+00:08:45,030 --> 00:08:45,040
+general metrics like hallucination
+ 
+
+413
+00:08:45,040 --> 00:08:47,350
+general metrics like hallucination
+uh when you're evaluating your AI agent.
+
+414
+00:08:47,350 --> 00:08:47,360
+uh when you're evaluating your AI agent.
+ 
+
+415
+00:08:47,360 --> 00:08:49,110
+uh when you're evaluating your AI agent.
+It really depends on kind of the
+
+416
+00:08:49,110 --> 00:08:49,120
+It really depends on kind of the
+ 
+
+417
+00:08:49,120 --> 00:08:50,949
+It really depends on kind of the
+business use case and the best person
+
+418
+00:08:50,949 --> 00:08:50,959
+business use case and the best person
+ 
+
+419
+00:08:50,959 --> 00:08:54,790
+business use case and the best person
+the best people to to um to determine
+
+420
+00:08:54,790 --> 00:08:54,800
+the best people to to um to determine
+ 
+
+421
+00:08:54,800 --> 00:08:56,470
+the best people to to um to determine
+these metrics are the subject matter
+
+422
+00:08:56,470 --> 00:08:56,480
+these metrics are the subject matter
+ 
+
+423
+00:08:56,480 --> 00:08:58,470
+these metrics are the subject matter
+experts. For example, in the case of a
+
+424
+00:08:58,470 --> 00:08:58,480
+experts. For example, in the case of a
+ 
+
+425
+00:08:58,480 --> 00:09:01,030
+experts. For example, in the case of a
+customer support agent, you need you
+
+426
+00:09:01,030 --> 00:09:01,040
+customer support agent, you need you
+ 
+
+427
+00:09:01,040 --> 00:09:04,070
+customer support agent, you need you
+need to have um a subject matter expert
+
+428
+00:09:04,070 --> 00:09:04,080
+need to have um a subject matter expert
+ 
+
+429
+00:09:04,080 --> 00:09:06,150
+need to have um a subject matter expert
+look at the conversation, provide the
+
+430
+00:09:06,150 --> 00:09:06,160
+look at the conversation, provide the
+ 
+
+431
+00:09:06,160 --> 00:09:08,630
+look at the conversation, provide the
+feedback, and I think the the workflow
+
+432
+00:09:08,630 --> 00:09:08,640
+feedback, and I think the the workflow
+ 
+
+433
+00:09:08,640 --> 00:09:10,470
+feedback, and I think the the workflow
+to do that, the best one that described
+
+434
+00:09:10,470 --> 00:09:10,480
+to do that, the best one that described
+ 
+
+435
+00:09:10,480 --> 00:09:14,470
+to do that, the best one that described
+it is Hamill uh from Ham Dev. Um I'm
+
+436
+00:09:14,470 --> 00:09:14,480
+it is Hamill uh from Ham Dev. Um I'm
+ 
+
+437
+00:09:14,480 --> 00:09:17,590
+it is Hamill uh from Ham Dev. Um I'm
+going to share his uh blog and uh in the
+
+438
+00:09:17,590 --> 00:09:17,600
+going to share his uh blog and uh in the
+ 
+
+439
+00:09:17,600 --> 00:09:20,230
+going to share his uh blog and uh in the
+YouTube video and really describe this
+
+440
+00:09:20,230 --> 00:09:20,240
+YouTube video and really describe this
+ 
+
+441
+00:09:20,240 --> 00:09:23,110
+YouTube video and really describe this
+idea of error analysis very well but but
+
+442
+00:09:23,110 --> 00:09:23,120
+idea of error analysis very well but but
+ 
+
+443
+00:09:23,120 --> 00:09:25,030
+idea of error analysis very well but but
+I'm going to go over it very quickly and
+
+444
+00:09:25,030 --> 00:09:25,040
+I'm going to go over it very quickly and
+ 
+
+445
+00:09:25,040 --> 00:09:26,790
+I'm going to go over it very quickly and
+also the annotation workflow very
+
+446
+00:09:26,790 --> 00:09:26,800
+also the annotation workflow very
+ 
+
+447
+00:09:26,800 --> 00:09:31,350
+also the annotation workflow very
+quickly. So the idea is that you you
+
+448
+00:09:31,350 --> 00:09:31,360
+quickly. So the idea is that you you
+ 
+
+449
+00:09:31,360 --> 00:09:33,430
+quickly. So the idea is that you you
+provide your subject matter expert with
+
+450
+00:09:33,430 --> 00:09:33,440
+provide your subject matter expert with
+ 
+
+451
+00:09:33,440 --> 00:09:36,630
+provide your subject matter expert with
+all these traces of uh the trajectories
+
+452
+00:09:36,630 --> 00:09:36,640
+all these traces of uh the trajectories
+ 
+
+453
+00:09:36,640 --> 00:09:38,630
+all these traces of uh the trajectories
+of the conversation and they would
+
+454
+00:09:38,630 --> 00:09:38,640
+of the conversation and they would
+ 
+
+455
+00:09:38,640 --> 00:09:42,310
+of the conversation and they would
+annotate them first by commenting what
+
+456
+00:09:42,310 --> 00:09:42,320
+annotate them first by commenting what
+ 
+
+457
+00:09:42,320 --> 00:09:45,990
+annotate them first by commenting what
+did work or what did not work but then
+
+458
+00:09:45,990 --> 00:09:46,000
+did work or what did not work but then
+ 
+
+459
+00:09:46,000 --> 00:09:48,389
+did work or what did not work but then
+uh kind of slowly trying to cluster
+
+460
+00:09:48,389 --> 00:09:48,399
+uh kind of slowly trying to cluster
+ 
+
+461
+00:09:48,399 --> 00:09:51,750
+uh kind of slowly trying to cluster
+create clusters of the error types like
+
+462
+00:09:51,750 --> 00:09:51,760
+create clusters of the error types like
+ 
+
+463
+00:09:51,760 --> 00:09:55,269
+create clusters of the error types like
+when it's failing why is it failing and
+
+464
+00:09:55,269 --> 00:09:55,279
+when it's failing why is it failing and
+ 
+
+465
+00:09:55,279 --> 00:09:57,350
+when it's failing why is it failing and
+uh here I'm showing an agenda how it's
+
+466
+00:09:57,350 --> 00:09:57,360
+uh here I'm showing an agenda how it's
+ 
+
+467
+00:09:57,360 --> 00:10:00,550
+uh here I'm showing an agenda how it's
+done. And basically here I have like
+
+468
+00:10:00,550 --> 00:10:00,560
+done. And basically here I have like
+ 
+
+469
+00:10:00,560 --> 00:10:03,190
+done. And basically here I have like
+these I I discovered kind of these four
+
+470
+00:10:03,190 --> 00:10:03,200
+these I I discovered kind of these four
+ 
+
+471
+00:10:03,200 --> 00:10:06,070
+these I I discovered kind of these four
+error types while going through these uh
+
+472
+00:10:06,070 --> 00:10:06,080
+error types while going through these uh
+ 
+
+473
+00:10:06,080 --> 00:10:08,310
+error types while going through these uh
+traces. So there is sometimes issues
+
+474
+00:10:08,310 --> 00:10:08,320
+traces. So there is sometimes issues
+ 
+
+475
+00:10:08,320 --> 00:10:11,190
+traces. So there is sometimes issues
+with policy adherance uh sometimes issue
+
+476
+00:10:11,190 --> 00:10:11,200
+with policy adherance uh sometimes issue
+ 
+
+477
+00:10:11,200 --> 00:10:13,750
+with policy adherance uh sometimes issue
+with the response style. Uh information
+
+478
+00:10:13,750 --> 00:10:13,760
+with the response style. Uh information
+ 
+
+479
+00:10:13,760 --> 00:10:16,550
+with the response style. Uh information
+delivery basically the agent is not
+
+480
+00:10:16,550 --> 00:10:16,560
+delivery basically the agent is not
+ 
+
+481
+00:10:16,560 --> 00:10:18,470
+delivery basically the agent is not
+informing the customer that they made
+
+482
+00:10:18,470 --> 00:10:18,480
+informing the customer that they made
+ 
+
+483
+00:10:18,480 --> 00:10:20,949
+informing the customer that they made
+the change or something like that. And
+
+484
+00:10:20,949 --> 00:10:20,959
+the change or something like that. And
+ 
+
+485
+00:10:20,959 --> 00:10:23,430
+the change or something like that. And
+finally some tools has not been colle
+
+486
+00:10:23,430 --> 00:10:23,440
+finally some tools has not been colle
+ 
+
+487
+00:10:23,440 --> 00:10:26,230
+finally some tools has not been colle
+called correctly. And the idea is that
+
+488
+00:10:26,230 --> 00:10:26,240
+called correctly. And the idea is that
+ 
+
+489
+00:10:26,240 --> 00:10:29,350
+called correctly. And the idea is that
+we're going to take these four error
+
+490
+00:10:29,350 --> 00:10:29,360
+we're going to take these four error
+ 
+
+491
+00:10:29,360 --> 00:10:31,829
+we're going to take these four error
+types and then we're going to build four
+
+492
+00:10:31,829 --> 00:10:31,839
+types and then we're going to build four
+ 
+
+493
+00:10:31,839 --> 00:10:34,630
+types and then we're going to build four
+LLM as judges for these. So it does not
+
+494
+00:10:34,630 --> 00:10:34,640
+LLM as judges for these. So it does not
+ 
+
+495
+00:10:34,640 --> 00:10:36,710
+LLM as judges for these. So it does not
+make sense to have one LLM as a judge
+
+496
+00:10:36,710 --> 00:10:36,720
+make sense to have one LLM as a judge
+ 
+
+497
+00:10:36,720 --> 00:10:38,630
+make sense to have one LLM as a judge
+which is success.
+
+498
+00:10:38,630 --> 00:10:38,640
+which is success.
+ 
+
+499
+00:10:38,640 --> 00:10:42,150
+which is success.
+Um uh basically try to evaluate all of
+
+500
+00:10:42,150 --> 00:10:42,160
+Um uh basically try to evaluate all of
+ 
+
+501
+00:10:42,160 --> 00:10:44,550
+Um uh basically try to evaluate all of
+these. it will make it too complex and
+
+502
+00:10:44,550 --> 00:10:44,560
+these. it will make it too complex and
+ 
+
+503
+00:10:44,560 --> 00:10:46,389
+these. it will make it too complex and
+it's very hard to learn and you will see
+
+504
+00:10:46,389 --> 00:10:46,399
+it's very hard to learn and you will see
+ 
+
+505
+00:10:46,399 --> 00:10:48,550
+it's very hard to learn and you will see
+a little bit later that even with a
+
+506
+00:10:48,550 --> 00:10:48,560
+a little bit later that even with a
+ 
+
+507
+00:10:48,560 --> 00:10:50,550
+a little bit later that even with a
+simple like when we're going to simplify
+
+508
+00:10:50,550 --> 00:10:50,560
+simple like when we're going to simplify
+ 
+
+509
+00:10:50,560 --> 00:10:53,350
+simple like when we're going to simplify
+it it's still hard to learn a calibrated
+
+510
+00:10:53,350 --> 00:10:53,360
+it it's still hard to learn a calibrated
+ 
+
+511
+00:10:53,360 --> 00:10:55,509
+it it's still hard to learn a calibrated
+LLM as a church or optimize a cal
+
+512
+00:10:55,509 --> 00:10:55,519
+LLM as a church or optimize a cal
+ 
+
+513
+00:10:55,519 --> 00:10:58,230
+LLM as a church or optimize a cal
+calibrated LLM as a church so it makes a
+
+514
+00:10:58,230 --> 00:10:58,240
+calibrated LLM as a church so it makes a
+ 
+
+515
+00:10:58,240 --> 00:11:00,790
+calibrated LLM as a church so it makes a
+lot of sense to make things very
+
+516
+00:11:00,790 --> 00:11:00,800
+lot of sense to make things very
+ 
+
+517
+00:11:00,800 --> 00:11:04,630
+lot of sense to make things very
+specific in these metrics uh that we
+
+518
+00:11:04,630 --> 00:11:04,640
+specific in these metrics uh that we
+ 
+
+519
+00:11:04,640 --> 00:11:07,509
+specific in these metrics uh that we
+want to evaluate and the second thing is
+
+520
+00:11:07,509 --> 00:11:07,519
+want to evaluate and the second thing is
+ 
+
+521
+00:11:07,519 --> 00:11:10,630
+want to evaluate and the second thing is
+to move away from one to five scores or
+
+522
+00:11:10,630 --> 00:11:10,640
+to move away from one to five scores or
+ 
+
+523
+00:11:10,640 --> 00:11:13,430
+to move away from one to five scores or
+like percentages and instead have like
+
+524
+00:11:13,430 --> 00:11:13,440
+like percentages and instead have like
+ 
+
+525
+00:11:13,440 --> 00:11:16,310
+like percentages and instead have like
+really binary solution like whether it
+
+526
+00:11:16,310 --> 00:11:16,320
+really binary solution like whether it
+ 
+
+527
+00:11:16,320 --> 00:11:19,110
+really binary solution like whether it
+adhereed to policy or not um with
+
+528
+00:11:19,110 --> 00:11:19,120
+adhereed to policy or not um with
+ 
+
+529
+00:11:19,120 --> 00:11:21,590
+adhereed to policy or not um with
+obviously some reasoning um and the
+
+530
+00:11:21,590 --> 00:11:21,600
+obviously some reasoning um and the
+ 
+
+531
+00:11:21,600 --> 00:11:23,990
+obviously some reasoning um and the
+reason it's again it's already quite
+
+532
+00:11:23,990 --> 00:11:24,000
+reason it's again it's already quite
+ 
+
+533
+00:11:24,000 --> 00:11:26,310
+reason it's again it's already quite
+hard to calibrate an LLM as a judge with
+
+534
+00:11:26,310 --> 00:11:26,320
+hard to calibrate an LLM as a judge with
+ 
+
+535
+00:11:26,320 --> 00:11:29,509
+hard to calibrate an LLM as a judge with
+a true false like binary classification
+
+536
+00:11:29,509 --> 00:11:29,519
+a true false like binary classification
+ 
+
+537
+00:11:29,519 --> 00:11:31,430
+a true false like binary classification
+adding another layer and saying okay it
+
+538
+00:11:31,430 --> 00:11:31,440
+adding another layer and saying okay it
+ 
+
+539
+00:11:31,440 --> 00:11:33,670
+adding another layer and saying okay it
+should be a number between one and five
+
+540
+00:11:33,670 --> 00:11:33,680
+should be a number between one and five
+ 
+
+541
+00:11:33,680 --> 00:11:36,150
+should be a number between one and five
+it's it's hard it's even hard for human
+
+542
+00:11:36,150 --> 00:11:36,160
+it's it's hard it's even hard for human
+ 
+
+543
+00:11:36,160 --> 00:11:37,750
+it's it's hard it's even hard for human
+annotator like to have two human
+
+544
+00:11:37,750 --> 00:11:37,760
+annotator like to have two human
+ 
+
+545
+00:11:37,760 --> 00:11:39,269
+annotator like to have two human
+annotator
+
+546
+00:11:39,269 --> 00:11:39,279
+annotator
+ 
+
+547
+00:11:39,279 --> 00:11:41,829
+annotator
+agree on the same score. So the moment
+
+548
+00:11:41,829 --> 00:11:41,839
+agree on the same score. So the moment
+ 
+
+549
+00:11:41,839 --> 00:11:43,430
+agree on the same score. So the moment
+that we have defined these different
+
+550
+00:11:43,430 --> 00:11:43,440
+that we have defined these different
+ 
+
+551
+00:11:43,440 --> 00:11:45,430
+that we have defined these different
+metrics uh start the point of
+
+552
+00:11:45,430 --> 00:11:45,440
+metrics uh start the point of
+ 
+
+553
+00:11:45,440 --> 00:11:48,310
+metrics uh start the point of
+annotation. Um here again I'm using uh
+
+554
+00:11:48,310 --> 00:11:48,320
+annotation. Um here again I'm using uh
+ 
+
+555
+00:11:48,320 --> 00:11:52,310
+annotation. Um here again I'm using uh
+agenta basically um uh you would take
+
+556
+00:11:52,310 --> 00:11:52,320
+agenta basically um uh you would take
+ 
+
+557
+00:11:52,320 --> 00:11:54,630
+agenta basically um uh you would take
+your traces create an annotation queue
+
+558
+00:11:54,630 --> 00:11:54,640
+your traces create an annotation queue
+ 
+
+559
+00:11:54,640 --> 00:11:57,110
+your traces create an annotation queue
+and and kind of specify for your
+
+560
+00:11:57,110 --> 00:11:57,120
+and and kind of specify for your
+ 
+
+561
+00:11:57,120 --> 00:12:00,870
+and and kind of specify for your
+annotator like uh the name of the um the
+
+562
+00:12:00,870 --> 00:12:00,880
+annotator like uh the name of the um the
+ 
+
+563
+00:12:00,880 --> 00:12:02,630
+annotator like uh the name of the um the
+feedback or the evaluator policy
+
+564
+00:12:02,630 --> 00:12:02,640
+feedback or the evaluator policy
+ 
+
+565
+00:12:02,640 --> 00:12:05,110
+feedback or the evaluator policy
+adherance here and then providing like
+
+566
+00:12:05,110 --> 00:12:05,120
+adherance here and then providing like
+ 
+
+567
+00:12:05,120 --> 00:12:06,470
+adherance here and then providing like
+they should provide each one with
+
+568
+00:12:06,470 --> 00:12:06,480
+they should provide each one with
+ 
+
+569
+00:12:06,480 --> 00:12:08,629
+they should provide each one with
+whether it adears to the policy whether
+
+570
+00:12:08,629 --> 00:12:08,639
+whether it adears to the policy whether
+ 
+
+571
+00:12:08,639 --> 00:12:11,750
+whether it adears to the policy whether
+it does not and provide the reasoning
+
+572
+00:12:11,750 --> 00:12:11,760
+it does not and provide the reasoning
+ 
+
+573
+00:12:11,760 --> 00:12:14,629
+it does not and provide the reasoning
+and the reasoning here is very important
+
+574
+00:12:14,629 --> 00:12:14,639
+and the reasoning here is very important
+ 
+
+575
+00:12:14,639 --> 00:12:17,509
+and the reasoning here is very important
+uh because without the reasoning we will
+
+576
+00:12:17,509 --> 00:12:17,519
+uh because without the reasoning we will
+ 
+
+577
+00:12:17,519 --> 00:12:20,470
+uh because without the reasoning we will
+see uh the optimization algorithm will
+
+578
+00:12:20,470 --> 00:12:20,480
+see uh the optimization algorithm will
+ 
+
+579
+00:12:20,480 --> 00:12:23,750
+see uh the optimization algorithm will
+need to discover itself like why it
+
+580
+00:12:23,750 --> 00:12:23,760
+need to discover itself like why it
+ 
+
+581
+00:12:23,760 --> 00:12:26,949
+need to discover itself like why it
+failed and it's going to be very hard
+
+582
+00:12:26,949 --> 00:12:26,959
+failed and it's going to be very hard
+ 
+
+583
+00:12:26,959 --> 00:12:31,110
+failed and it's going to be very hard
+like in unless it's a very specific uh
+
+584
+00:12:31,110 --> 00:12:31,120
+like in unless it's a very specific uh
+ 
+
+585
+00:12:31,120 --> 00:12:34,629
+like in unless it's a very specific uh
+kind of feedback for example tool um
+
+586
+00:12:34,629 --> 00:12:34,639
+kind of feedback for example tool um
+ 
+
+587
+00:12:34,639 --> 00:12:37,750
+kind of feedback for example tool um
+failure where it can infer things. It's
+
+588
+00:12:37,750 --> 00:12:37,760
+failure where it can infer things. It's
+ 
+
+589
+00:12:37,760 --> 00:12:39,350
+failure where it can infer things. It's
+very hard to see for example from a
+
+590
+00:12:39,350 --> 00:12:39,360
+very hard to see for example from a
+ 
+
+591
+00:12:39,360 --> 00:12:41,990
+very hard to see for example from a
+conversation why it did not adhere to
+
+592
+00:12:41,990 --> 00:12:42,000
+conversation why it did not adhere to
+ 
+
+593
+00:12:42,000 --> 00:12:43,750
+conversation why it did not adhere to
+policy without someone providing
+
+594
+00:12:43,750 --> 00:12:43,760
+policy without someone providing
+ 
+
+595
+00:12:43,760 --> 00:12:45,750
+policy without someone providing
+information in the beginning about it.
+
+596
+00:12:45,750 --> 00:12:45,760
+information in the beginning about it.
+ 
+
+597
+00:12:45,760 --> 00:12:47,590
+information in the beginning about it.
+So having that reasoning is very
+
+598
+00:12:47,590 --> 00:12:47,600
+So having that reasoning is very
+ 
+
+599
+00:12:47,600 --> 00:12:49,990
+So having that reasoning is very
+important later for the LLM as a judge
+
+600
+00:12:49,990 --> 00:12:50,000
+important later for the LLM as a judge
+ 
+
+601
+00:12:50,000 --> 00:12:53,269
+important later for the LLM as a judge
+to learn. And again this reasoning as
+
+602
+00:12:53,269 --> 00:12:53,279
+to learn. And again this reasoning as
+ 
+
+603
+00:12:53,279 --> 00:12:54,470
+to learn. And again this reasoning as
+I've shown previously with the
+
+604
+00:12:54,470 --> 00:12:54,480
+I've shown previously with the
+ 
+
+605
+00:12:54,480 --> 00:12:58,790
+I've shown previously with the
+annotation uh it it kind of describe why
+
+606
+00:12:58,790 --> 00:12:58,800
+annotation uh it it kind of describe why
+ 
+
+607
+00:12:58,800 --> 00:13:00,069
+annotation uh it it kind of describe why
+for example the agent here is
+
+608
+00:13:00,069 --> 00:13:00,079
+for example the agent here is
+ 
+
+609
+00:13:00,079 --> 00:13:01,829
+for example the agent here is
+non-compliant
+
+610
+00:13:01,829 --> 00:13:01,839
+non-compliant
+ 
+
+611
+00:13:01,839 --> 00:13:04,790
+non-compliant
+uh because uh it approved the
+
+612
+00:13:04,790 --> 00:13:04,800
+uh because uh it approved the
+ 
+
+613
+00:13:04,800 --> 00:13:07,910
+uh because uh it approved the
+cancellation without before verifying
+
+614
+00:13:07,910 --> 00:13:07,920
+cancellation without before verifying
+ 
+
+615
+00:13:07,920 --> 00:13:10,710
+cancellation without before verifying
+um that the reservation met the
+
+616
+00:13:10,710 --> 00:13:10,720
+um that the reservation met the
+ 
+
+617
+00:13:10,720 --> 00:13:13,509
+um that the reservation met the
+cancellation rules. So now that we have
+
+618
+00:13:13,509 --> 00:13:13,519
+cancellation rules. So now that we have
+ 
+
+619
+00:13:13,519 --> 00:13:15,750
+cancellation rules. So now that we have
+So now that we have the annotations, we
+
+620
+00:13:15,750 --> 00:13:15,760
+So now that we have the annotations, we
+ 
+
+621
+00:13:15,760 --> 00:13:18,150
+So now that we have the annotations, we
+can go to the optimization. But before
+
+622
+00:13:18,150 --> 00:13:18,160
+can go to the optimization. But before
+ 
+
+623
+00:13:18,160 --> 00:13:21,910
+can go to the optimization. But before
+going there, I want to add a small note.
+
+624
+00:13:21,910 --> 00:13:21,920
+going there, I want to add a small note.
+ 
+
+625
+00:13:21,920 --> 00:13:23,670
+going there, I want to add a small note.
+Although we went very quickly through
+
+626
+00:13:23,670 --> 00:13:23,680
+Although we went very quickly through
+ 
+
+627
+00:13:23,680 --> 00:13:26,389
+Although we went very quickly through
+the first step and the second step,
+
+628
+00:13:26,389 --> 00:13:26,399
+the first step and the second step,
+ 
+
+629
+00:13:26,399 --> 00:13:28,230
+the first step and the second step,
+these are actually the hardest part of
+
+630
+00:13:28,230 --> 00:13:28,240
+these are actually the hardest part of
+ 
+
+631
+00:13:28,240 --> 00:13:31,030
+these are actually the hardest part of
+the problem. Like in reality, as every
+
+632
+00:13:31,030 --> 00:13:31,040
+the problem. Like in reality, as every
+ 
+
+633
+00:13:31,040 --> 00:13:35,670
+the problem. Like in reality, as every
+data scientist know, getting your data
+
+634
+00:13:35,670 --> 00:13:35,680
+data scientist know, getting your data
+ 
+
+635
+00:13:35,680 --> 00:13:39,509
+data scientist know, getting your data
+um is the hardest thing. And you need to
+
+636
+00:13:39,509 --> 00:13:39,519
+um is the hardest thing. And you need to
+ 
+
+637
+00:13:39,519 --> 00:13:42,230
+um is the hardest thing. And you need to
+make sure to look at the data. Look at
+
+638
+00:13:42,230 --> 00:13:42,240
+make sure to look at the data. Look at
+ 
+
+639
+00:13:42,240 --> 00:13:44,870
+make sure to look at the data. Look at
+the annotation. Make sure that the
+
+640
+00:13:44,870 --> 00:13:44,880
+the annotation. Make sure that the
+ 
+
+641
+00:13:44,880 --> 00:13:48,710
+the annotation. Make sure that the
+distribution is is good. Uh that uh the
+
+642
+00:13:48,710 --> 00:13:48,720
+distribution is is good. Uh that uh the
+ 
+
+643
+00:13:48,720 --> 00:13:50,470
+distribution is is good. Uh that uh the
+annotation and the information within
+
+644
+00:13:50,470 --> 00:13:50,480
+annotation and the information within
+ 
+
+645
+00:13:50,480 --> 00:13:53,750
+annotation and the information within
+the data is enough for the algorithm to
+
+646
+00:13:53,750 --> 00:13:53,760
+the data is enough for the algorithm to
+ 
+
+647
+00:13:53,760 --> 00:13:56,389
+the data is enough for the algorithm to
+learn a representation of the LLM as a
+
+648
+00:13:56,389 --> 00:13:56,399
+learn a representation of the LLM as a
+ 
+
+649
+00:13:56,399 --> 00:14:00,310
+learn a representation of the LLM as a
+meaningful. Uh in our case here, the
+
+650
+00:14:00,310 --> 00:14:00,320
+meaningful. Uh in our case here, the
+ 
+
+651
+00:14:00,320 --> 00:14:03,350
+meaningful. Uh in our case here, the
+data is not that good. The number of
+
+652
+00:14:03,350 --> 00:14:03,360
+data is not that good. The number of
+ 
+
+653
+00:14:03,360 --> 00:14:05,509
+data is not that good. The number of
+traces is small. The problem is quite
+
+654
+00:14:05,509 --> 00:14:05,519
+traces is small. The problem is quite
+ 
+
+655
+00:14:05,519 --> 00:14:07,670
+traces is small. The problem is quite
+complex. uh they're not very well
+
+656
+00:14:07,670 --> 00:14:07,680
+complex. uh they're not very well
+ 
+
+657
+00:14:07,680 --> 00:14:09,430
+complex. uh they're not very well
+distributed because of the reason they
+
+658
+00:14:09,430 --> 00:14:09,440
+distributed because of the reason they
+ 
+
+659
+00:14:09,440 --> 00:14:12,550
+distributed because of the reason they
+have been generated. Also the annotation
+
+660
+00:14:12,550 --> 00:14:12,560
+have been generated. Also the annotation
+ 
+
+661
+00:14:12,560 --> 00:14:15,350
+have been generated. Also the annotation
+is actually uh kind of AI generated
+
+662
+00:14:15,350 --> 00:14:15,360
+is actually uh kind of AI generated
+ 
+
+663
+00:14:15,360 --> 00:14:17,670
+is actually uh kind of AI generated
+based on the assertion in the original
+
+664
+00:14:17,670 --> 00:14:17,680
+based on the assertion in the original
+ 
+
+665
+00:14:17,680 --> 00:14:19,189
+based on the assertion in the original
+data. You can see a little bit more how
+
+666
+00:14:19,189 --> 00:14:19,199
+data. You can see a little bit more how
+ 
+
+667
+00:14:19,199 --> 00:14:24,710
+data. You can see a little bit more how
+it's done in um in the repository. Um so
+
+668
+00:14:24,710 --> 00:14:24,720
+it's done in um in the repository. Um so
+ 
+
+669
+00:14:24,720 --> 00:14:26,710
+it's done in um in the repository. Um so
+it makes things uh quite complex for
+
+670
+00:14:26,710 --> 00:14:26,720
+it makes things uh quite complex for
+ 
+
+671
+00:14:26,720 --> 00:14:29,670
+it makes things uh quite complex for
+this problem. Um but it's still quite a
+
+672
+00:14:29,670 --> 00:14:29,680
+this problem. Um but it's still quite a
+ 
+
+673
+00:14:29,680 --> 00:14:32,230
+this problem. Um but it's still quite a
+good demonstration of how it would work.
+
+674
+00:14:32,230 --> 00:14:32,240
+good demonstration of how it would work.
+ 
+
+675
+00:14:32,240 --> 00:14:34,470
+good demonstration of how it would work.
+So now that we have the annotated data,
+
+676
+00:14:34,470 --> 00:14:34,480
+So now that we have the annotated data,
+ 
+
+677
+00:14:34,480 --> 00:14:36,629
+So now that we have the annotated data,
+we can start with the optimization. And
+
+678
+00:14:36,629 --> 00:14:36,639
+we can start with the optimization. And
+ 
+
+679
+00:14:36,639 --> 00:14:38,470
+we can start with the optimization. And
+for the optimization, we are going to
+
+680
+00:14:38,470 --> 00:14:38,480
+for the optimization, we are going to
+ 
+
+681
+00:14:38,480 --> 00:14:40,310
+for the optimization, we are going to
+use the GI algorithm. So I'm going to
+
+682
+00:14:40,310 --> 00:14:40,320
+use the GI algorithm. So I'm going to
+ 
+
+683
+00:14:40,320 --> 00:14:41,829
+use the GI algorithm. So I'm going to
+explain in the beginning how the GI
+
+684
+00:14:41,829 --> 00:14:41,839
+explain in the beginning how the GI
+ 
+
+685
+00:14:41,839 --> 00:14:44,310
+explain in the beginning how the GI
+algorithm works and then we can jump to
+
+686
+00:14:44,310 --> 00:14:44,320
+algorithm works and then we can jump to
+ 
+
+687
+00:14:44,320 --> 00:14:46,069
+algorithm works and then we can jump to
+the Jupyter notebook and start
+
+688
+00:14:46,069 --> 00:14:46,079
+the Jupyter notebook and start
+ 
+
+689
+00:14:46,079 --> 00:14:49,350
+the Jupyter notebook and start
+optimizing based on the annotated data.
+
+690
+00:14:49,350 --> 00:14:49,360
+optimizing based on the annotated data.
+ 
+
+691
+00:14:49,360 --> 00:14:51,189
+optimizing based on the annotated data.
+It's very important to understand how
+
+692
+00:14:51,189 --> 00:14:51,199
+It's very important to understand how
+ 
+
+693
+00:14:51,199 --> 00:14:52,949
+It's very important to understand how
+the algorithm works because you will see
+
+694
+00:14:52,949 --> 00:14:52,959
+the algorithm works because you will see
+ 
+
+695
+00:14:52,959 --> 00:14:55,910
+the algorithm works because you will see
+that practically you need to play around
+
+696
+00:14:55,910 --> 00:14:55,920
+that practically you need to play around
+ 
+
+697
+00:14:55,920 --> 00:14:58,230
+that practically you need to play around
+a little bit with the parameters and to
+
+698
+00:14:58,230 --> 00:14:58,240
+a little bit with the parameters and to
+ 
+
+699
+00:14:58,240 --> 00:15:00,629
+a little bit with the parameters and to
+get it to work and it's very hard
+
+700
+00:15:00,629 --> 00:15:00,639
+get it to work and it's very hard
+ 
+
+701
+00:15:00,639 --> 00:15:02,069
+get it to work and it's very hard
+obviously to play around with the
+
+702
+00:15:02,069 --> 00:15:02,079
+obviously to play around with the
+ 
+
+703
+00:15:02,079 --> 00:15:03,750
+obviously to play around with the
+parameters if you don't understand what
+
+704
+00:15:03,750 --> 00:15:03,760
+parameters if you don't understand what
+ 
+
+705
+00:15:03,760 --> 00:15:06,949
+parameters if you don't understand what
+do they do. Uh the algorithm is um
+
+706
+00:15:06,949 --> 00:15:06,959
+do they do. Uh the algorithm is um
+ 
+
+707
+00:15:06,959 --> 00:15:09,990
+do they do. Uh the algorithm is um
+similar to genetic uh algorithm. So
+
+708
+00:15:09,990 --> 00:15:10,000
+similar to genetic uh algorithm. So
+ 
+
+709
+00:15:10,000 --> 00:15:11,750
+similar to genetic uh algorithm. So
+basically the idea is that you start
+
+710
+00:15:11,750 --> 00:15:11,760
+basically the idea is that you start
+ 
+
+711
+00:15:11,760 --> 00:15:14,629
+basically the idea is that you start
+with a seat prompt and then at each
+
+712
+00:15:14,629 --> 00:15:14,639
+with a seat prompt and then at each
+ 
+
+713
+00:15:14,639 --> 00:15:17,509
+with a seat prompt and then at each
+iteration you try to sample new prompts
+
+714
+00:15:17,509 --> 00:15:17,519
+iteration you try to sample new prompts
+ 
+
+715
+00:15:17,519 --> 00:15:20,069
+iteration you try to sample new prompts
+see which one works and then basically
+
+716
+00:15:20,069 --> 00:15:20,079
+see which one works and then basically
+ 
+
+717
+00:15:20,079 --> 00:15:21,990
+see which one works and then basically
+select the new ones and and kind of
+
+718
+00:15:21,990 --> 00:15:22,000
+select the new ones and and kind of
+ 
+
+719
+00:15:22,000 --> 00:15:24,550
+select the new ones and and kind of
+improve over time. Uh that's kind of the
+
+720
+00:15:24,550 --> 00:15:24,560
+improve over time. Uh that's kind of the
+ 
+
+721
+00:15:24,560 --> 00:15:28,150
+improve over time. Uh that's kind of the
+general shape of uh the algorithm and
+
+722
+00:15:28,150 --> 00:15:28,160
+general shape of uh the algorithm and
+ 
+
+723
+00:15:28,160 --> 00:15:30,310
+general shape of uh the algorithm and
+we're going to go uh and look at each
+
+724
+00:15:30,310 --> 00:15:30,320
+we're going to go uh and look at each
+ 
+
+725
+00:15:30,320 --> 00:15:33,269
+we're going to go uh and look at each
+step. So it's three steps basically you
+
+726
+00:15:33,269 --> 00:15:33,279
+step. So it's three steps basically you
+ 
+
+727
+00:15:33,279 --> 00:15:36,069
+step. So it's three steps basically you
+sample new candidate each times evaluate
+
+728
+00:15:36,069 --> 00:15:36,079
+sample new candidate each times evaluate
+ 
+
+729
+00:15:36,079 --> 00:15:38,470
+sample new candidate each times evaluate
+them see which one good work well and
+
+730
+00:15:38,470 --> 00:15:38,480
+them see which one good work well and
+ 
+
+731
+00:15:38,480 --> 00:15:41,189
+them see which one good work well and
+then do some filtering using this kind
+
+732
+00:15:41,189 --> 00:15:41,199
+then do some filtering using this kind
+ 
+
+733
+00:15:41,199 --> 00:15:43,110
+then do some filtering using this kind
+of parto frontier I'm going to talk
+
+734
+00:15:43,110 --> 00:15:43,120
+of parto frontier I'm going to talk
+ 
+
+735
+00:15:43,120 --> 00:15:45,509
+of parto frontier I'm going to talk
+about and then do it again and again. So
+
+736
+00:15:45,509 --> 00:15:45,519
+about and then do it again and again. So
+ 
+
+737
+00:15:45,519 --> 00:15:48,069
+about and then do it again and again. So
+let's see how it works. So the way uh it
+
+738
+00:15:48,069 --> 00:15:48,079
+let's see how it works. So the way uh it
+ 
+
+739
+00:15:48,079 --> 00:15:50,470
+let's see how it works. So the way uh it
+works is first you start with a seat
+
+740
+00:15:50,470 --> 00:15:50,480
+works is first you start with a seat
+ 
+
+741
+00:15:50,480 --> 00:15:53,110
+works is first you start with a seat
+candidate here in our case we're going
+
+742
+00:15:53,110 --> 00:15:53,120
+candidate here in our case we're going
+ 
+
+743
+00:15:53,120 --> 00:15:56,230
+candidate here in our case we're going
+to use kind of a a very simple LLM as a
+
+744
+00:15:56,230 --> 00:15:56,240
+to use kind of a a very simple LLM as a
+ 
+
+745
+00:15:56,240 --> 00:15:58,150
+to use kind of a a very simple LLM as a
+judge like evaluate whether this
+
+746
+00:15:58,150 --> 00:15:58,160
+judge like evaluate whether this
+ 
+
+747
+00:15:58,160 --> 00:16:00,470
+judge like evaluate whether this
+customer service agent violated policy
+
+748
+00:16:00,470 --> 00:16:00,480
+customer service agent violated policy
+ 
+
+749
+00:16:00,480 --> 00:16:03,350
+customer service agent violated policy
+and start with assuming is the agent is
+
+750
+00:16:03,350 --> 00:16:03,360
+and start with assuming is the agent is
+ 
+
+751
+00:16:03,360 --> 00:16:06,710
+and start with assuming is the agent is
+compliant and now in each iteration we
+
+752
+00:16:06,710 --> 00:16:06,720
+compliant and now in each iteration we
+ 
+
+753
+00:16:06,720 --> 00:16:09,509
+compliant and now in each iteration we
+are going to sample new candidates from
+
+754
+00:16:09,509 --> 00:16:09,519
+are going to sample new candidates from
+ 
+
+755
+00:16:09,519 --> 00:16:11,350
+are going to sample new candidates from
+the filtered candidates from the last
+
+756
+00:16:11,350 --> 00:16:11,360
+the filtered candidates from the last
+ 
+
+757
+00:16:11,360 --> 00:16:13,670
+the filtered candidates from the last
+iteration. Now here in the first one we
+
+758
+00:16:13,670 --> 00:16:13,680
+iteration. Now here in the first one we
+ 
+
+759
+00:16:13,680 --> 00:16:16,230
+iteration. Now here in the first one we
+have only one seat candidate but in in
+
+760
+00:16:16,230 --> 00:16:16,240
+have only one seat candidate but in in
+ 
+
+761
+00:16:16,240 --> 00:16:19,269
+have only one seat candidate but in in
+the next iteration we will have a larger
+
+762
+00:16:19,269 --> 00:16:19,279
+the next iteration we will have a larger
+ 
+
+763
+00:16:19,279 --> 00:16:21,509
+the next iteration we will have a larger
+bag of candidates.
+
+764
+00:16:21,509 --> 00:16:21,519
+bag of candidates.
+ 
+
+765
+00:16:21,519 --> 00:16:24,389
+bag of candidates.
+So GPA has two strategies to sample new
+
+766
+00:16:24,389 --> 00:16:24,399
+So GPA has two strategies to sample new
+ 
+
+767
+00:16:24,399 --> 00:16:27,990
+So GPA has two strategies to sample new
+candidates. Uh one is prompt mutation
+
+768
+00:16:27,990 --> 00:16:28,000
+candidates. Uh one is prompt mutation
+ 
+
+769
+00:16:28,000 --> 00:16:30,629
+candidates. Uh one is prompt mutation
+and the other one is merging multiple
+
+770
+00:16:30,629 --> 00:16:30,639
+and the other one is merging multiple
+ 
+
+771
+00:16:30,639 --> 00:16:33,110
+and the other one is merging multiple
+candidates. For prompt mutation which is
+
+772
+00:16:33,110 --> 00:16:33,120
+candidates. For prompt mutation which is
+ 
+
+773
+00:16:33,120 --> 00:16:35,110
+candidates. For prompt mutation which is
+what we're going to use in the beginning
+
+774
+00:16:35,110 --> 00:16:35,120
+what we're going to use in the beginning
+ 
+
+775
+00:16:35,120 --> 00:16:37,670
+what we're going to use in the beginning
+since we have only one candidate. The
+
+776
+00:16:37,670 --> 00:16:37,680
+since we have only one candidate. The
+ 
+
+777
+00:16:37,680 --> 00:16:41,269
+since we have only one candidate. The
+idea is that you would run the first LLM
+
+778
+00:16:41,269 --> 00:16:41,279
+idea is that you would run the first LLM
+ 
+
+779
+00:16:41,279 --> 00:16:44,310
+idea is that you would run the first LLM
+as a judge here um whether the
+
+780
+00:16:44,310 --> 00:16:44,320
+as a judge here um whether the
+ 
+
+781
+00:16:44,320 --> 00:16:49,670
+as a judge here um whether the
+trajectory and uh if it fails uh it's
+
+782
+00:16:49,670 --> 00:16:49,680
+trajectory and uh if it fails uh it's
+ 
+
+783
+00:16:49,680 --> 00:16:52,470
+trajectory and uh if it fails uh it's
+like this LLM as a judge will reflect
+
+784
+00:16:52,470 --> 00:16:52,480
+like this LLM as a judge will reflect
+ 
+
+785
+00:16:52,480 --> 00:16:54,710
+like this LLM as a judge will reflect
+and propose a new prompt. Basically
+
+786
+00:16:54,710 --> 00:16:54,720
+and propose a new prompt. Basically
+ 
+
+787
+00:16:54,720 --> 00:16:57,269
+and propose a new prompt. Basically
+there will be some kind of reflection
+
+788
+00:16:57,269 --> 00:16:57,279
+there will be some kind of reflection
+ 
+
+789
+00:16:57,279 --> 00:16:59,749
+there will be some kind of reflection
+which means basically we're using the
+
+790
+00:16:59,749 --> 00:16:59,759
+which means basically we're using the
+ 
+
+791
+00:16:59,759 --> 00:17:02,069
+which means basically we're using the
+intelligence of the LLM to try to
+
+792
+00:17:02,069 --> 00:17:02,079
+intelligence of the LLM to try to
+ 
+
+793
+00:17:02,079 --> 00:17:04,069
+intelligence of the LLM to try to
+improve the problem because it looks at
+
+794
+00:17:04,069 --> 00:17:04,079
+improve the problem because it looks at
+ 
+
+795
+00:17:04,079 --> 00:17:06,549
+improve the problem because it looks at
+the input looks at the outputs looks at
+
+796
+00:17:06,549 --> 00:17:06,559
+the input looks at the outputs looks at
+ 
+
+797
+00:17:06,559 --> 00:17:08,390
+the input looks at the outputs looks at
+the results and try to infer how to make
+
+798
+00:17:08,390 --> 00:17:08,400
+the results and try to infer how to make
+ 
+
+799
+00:17:08,400 --> 00:17:11,350
+the results and try to infer how to make
+it better. The other strategy is the
+
+800
+00:17:11,350 --> 00:17:11,360
+it better. The other strategy is the
+ 
+
+801
+00:17:11,360 --> 00:17:12,870
+it better. The other strategy is the
+merge strategy which we're going to use
+
+802
+00:17:12,870 --> 00:17:12,880
+merge strategy which we're going to use
+ 
+
+803
+00:17:12,880 --> 00:17:15,110
+merge strategy which we're going to use
+in the next iteration. And basically
+
+804
+00:17:15,110 --> 00:17:15,120
+in the next iteration. And basically
+ 
+
+805
+00:17:15,120 --> 00:17:17,829
+in the next iteration. And basically
+here it takes two prompts and then kind
+
+806
+00:17:17,829 --> 00:17:17,839
+here it takes two prompts and then kind
+ 
+
+807
+00:17:17,839 --> 00:17:19,350
+here it takes two prompts and then kind
+of put them together. And if you think
+
+808
+00:17:19,350 --> 00:17:19,360
+of put them together. And if you think
+ 
+
+809
+00:17:19,360 --> 00:17:21,429
+of put them together. And if you think
+about it with an LLM as a judge, usually
+
+810
+00:17:21,429 --> 00:17:21,439
+about it with an LLM as a judge, usually
+ 
+
+811
+00:17:21,439 --> 00:17:23,909
+about it with an LLM as a judge, usually
+you have like these guidelines and
+
+812
+00:17:23,909 --> 00:17:23,919
+you have like these guidelines and
+ 
+
+813
+00:17:23,919 --> 00:17:25,590
+you have like these guidelines and
+basically probably what's going to try
+
+814
+00:17:25,590 --> 00:17:25,600
+basically probably what's going to try
+ 
+
+815
+00:17:25,600 --> 00:17:27,510
+basically probably what's going to try
+to do is to take guidelines from prompt
+
+816
+00:17:27,510 --> 00:17:27,520
+to do is to take guidelines from prompt
+ 
+
+817
+00:17:27,520 --> 00:17:30,310
+to do is to take guidelines from prompt
+A, prompt B and put them together. So
+
+818
+00:17:30,310 --> 00:17:30,320
+A, prompt B and put them together. So
+ 
+
+819
+00:17:30,320 --> 00:17:34,390
+A, prompt B and put them together. So
+now after we generated a lot of samples,
+
+820
+00:17:34,390 --> 00:17:34,400
+now after we generated a lot of samples,
+ 
+
+821
+00:17:34,400 --> 00:17:36,230
+now after we generated a lot of samples,
+uh we need to select which one are good.
+
+822
+00:17:36,230 --> 00:17:36,240
+uh we need to select which one are good.
+ 
+
+823
+00:17:36,240 --> 00:17:38,070
+uh we need to select which one are good.
+And basically the way it works is that
+
+824
+00:17:38,070 --> 00:17:38,080
+And basically the way it works is that
+ 
+
+825
+00:17:38,080 --> 00:17:40,630
+And basically the way it works is that
+it would evaluate these new prompts
+
+826
+00:17:40,630 --> 00:17:40,640
+it would evaluate these new prompts
+ 
+
+827
+00:17:40,640 --> 00:17:43,590
+it would evaluate these new prompts
+against many batches of the event. So
+
+828
+00:17:43,590 --> 00:17:43,600
+against many batches of the event. So
+ 
+
+829
+00:17:43,600 --> 00:17:46,950
+against many batches of the event. So
+not everything. Um and if they improve
+
+830
+00:17:46,950 --> 00:17:46,960
+not everything. Um and if they improve
+ 
+
+831
+00:17:46,960 --> 00:17:50,230
+not everything. Um and if they improve
+the performance uh compared to the
+
+832
+00:17:50,230 --> 00:17:50,240
+the performance uh compared to the
+ 
+
+833
+00:17:50,240 --> 00:17:54,470
+the performance uh compared to the
+starting point uh then we select them
+
+834
+00:17:54,470 --> 00:17:54,480
+starting point uh then we select them
+ 
+
+835
+00:17:54,480 --> 00:17:58,310
+starting point uh then we select them
+and uh they will be added to our bag of
+
+836
+00:17:58,310 --> 00:17:58,320
+and uh they will be added to our bag of
+ 
+
+837
+00:17:58,320 --> 00:18:01,270
+and uh they will be added to our bag of
+prompts and then starts the next
+
+838
+00:18:01,270 --> 00:18:01,280
+prompts and then starts the next
+ 
+
+839
+00:18:01,280 --> 00:18:06,470
+prompts and then starts the next
+iteration which is the other uh
+
+840
+00:18:06,470 --> 00:18:06,480
+iteration which is the other uh
+ 
+
+841
+00:18:06,480 --> 00:18:08,230
+iteration which is the other uh
+innovation of this algorithm which is
+
+842
+00:18:08,230 --> 00:18:08,240
+innovation of this algorithm which is
+ 
+
+843
+00:18:08,240 --> 00:18:11,029
+innovation of this algorithm which is
+the idea of the paral frontier.
+
+844
+00:18:11,029 --> 00:18:11,039
+the idea of the paral frontier.
+ 
+
+845
+00:18:11,039 --> 00:18:13,430
+the idea of the paral frontier.
+Basically, the way we select which
+
+846
+00:18:13,430 --> 00:18:13,440
+Basically, the way we select which
+ 
+
+847
+00:18:13,440 --> 00:18:15,750
+Basically, the way we select which
+prompts or which candidates we're going
+
+848
+00:18:15,750 --> 00:18:15,760
+prompts or which candidates we're going
+ 
+
+849
+00:18:15,760 --> 00:18:17,750
+prompts or which candidates we're going
+to use as a seed for the new iteration
+
+850
+00:18:17,750 --> 00:18:17,760
+to use as a seed for the new iteration
+ 
+
+851
+00:18:17,760 --> 00:18:20,070
+to use as a seed for the new iteration
+is not that we select the ones that have
+
+852
+00:18:20,070 --> 00:18:20,080
+is not that we select the ones that have
+ 
+
+853
+00:18:20,080 --> 00:18:22,230
+is not that we select the ones that have
+the average best score. Like that would
+
+854
+00:18:22,230 --> 00:18:22,240
+the average best score. Like that would
+ 
+
+855
+00:18:22,240 --> 00:18:25,270
+the average best score. Like that would
+be the trivial um
+
+856
+00:18:25,270 --> 00:18:25,280
+be the trivial um
+ 
+
+857
+00:18:25,280 --> 00:18:28,390
+be the trivial um
+solution, right? Look at my my prompt,
+
+858
+00:18:28,390 --> 00:18:28,400
+solution, right? Look at my my prompt,
+ 
+
+859
+00:18:28,400 --> 00:18:31,350
+solution, right? Look at my my prompt,
+see which one work most by looking at
+
+860
+00:18:31,350 --> 00:18:31,360
+see which one work most by looking at
+ 
+
+861
+00:18:31,360 --> 00:18:32,950
+see which one work most by looking at
+the average over everything and then
+
+862
+00:18:32,950 --> 00:18:32,960
+the average over everything and then
+ 
+
+863
+00:18:32,960 --> 00:18:36,070
+the average over everything and then
+select these. Uh instead what they do is
+
+864
+00:18:36,070 --> 00:18:36,080
+select these. Uh instead what they do is
+ 
+
+865
+00:18:36,080 --> 00:18:41,110
+select these. Uh instead what they do is
+that they um try to add diversity by
+
+866
+00:18:41,110 --> 00:18:41,120
+that they um try to add diversity by
+ 
+
+867
+00:18:41,120 --> 00:18:43,669
+that they um try to add diversity by
+trying to look at what are the best
+
+868
+00:18:43,669 --> 00:18:43,679
+trying to look at what are the best
+ 
+
+869
+00:18:43,679 --> 00:18:45,830
+trying to look at what are the best
+candidate per task. Right? You have like
+
+870
+00:18:45,830 --> 00:18:45,840
+candidate per task. Right? You have like
+ 
+
+871
+00:18:45,840 --> 00:18:47,990
+candidate per task. Right? You have like
+a set of kind of tasks in your
+
+872
+00:18:47,990 --> 00:18:48,000
+a set of kind of tasks in your
+ 
+
+873
+00:18:48,000 --> 00:18:49,990
+a set of kind of tasks in your
+evaluation like in our case set of
+
+874
+00:18:49,990 --> 00:18:50,000
+evaluation like in our case set of
+ 
+
+875
+00:18:50,000 --> 00:18:53,029
+evaluation like in our case set of
+trajectories and you look for each of
+
+876
+00:18:53,029 --> 00:18:53,039
+trajectories and you look for each of
+ 
+
+877
+00:18:53,039 --> 00:18:55,750
+trajectories and you look for each of
+these trajectory which is the best
+
+878
+00:18:55,750 --> 00:18:55,760
+these trajectory which is the best
+ 
+
+879
+00:18:55,760 --> 00:18:58,549
+these trajectory which is the best
+candidate and that is kind of the parto
+
+880
+00:18:58,549 --> 00:18:58,559
+candidate and that is kind of the parto
+ 
+
+881
+00:18:58,559 --> 00:19:01,990
+candidate and that is kind of the parto
+frontier. Um and then you try to select
+
+882
+00:19:01,990 --> 00:19:02,000
+frontier. Um and then you try to select
+ 
+
+883
+00:19:02,000 --> 00:19:05,029
+frontier. Um and then you try to select
+from these and basically what you do is
+
+884
+00:19:05,029 --> 00:19:05,039
+from these and basically what you do is
+ 
+
+885
+00:19:05,039 --> 00:19:07,110
+from these and basically what you do is
+you try to select a set at the end of
+
+886
+00:19:07,110 --> 00:19:07,120
+you try to select a set at the end of
+ 
+
+887
+00:19:07,120 --> 00:19:09,590
+you try to select a set at the end of
+the day that covers your whole test
+
+888
+00:19:09,590 --> 00:19:09,600
+the day that covers your whole test
+ 
+
+889
+00:19:09,600 --> 00:19:13,110
+the day that covers your whole test
+case. So basically for for each test
+
+890
+00:19:13,110 --> 00:19:13,120
+case. So basically for for each test
+ 
+
+891
+00:19:13,120 --> 00:19:14,870
+case. So basically for for each test
+case there is at least one candidate
+
+892
+00:19:14,870 --> 00:19:14,880
+case there is at least one candidate
+ 
+
+893
+00:19:14,880 --> 00:19:17,110
+case there is at least one candidate
+that solves it and obviously you see
+
+894
+00:19:17,110 --> 00:19:17,120
+that solves it and obviously you see
+ 
+
+895
+00:19:17,120 --> 00:19:19,430
+that solves it and obviously you see
+there that the idea is that you get like
+
+896
+00:19:19,430 --> 00:19:19,440
+there that the idea is that you get like
+ 
+
+897
+00:19:19,440 --> 00:19:21,830
+there that the idea is that you get like
+a good par frontier and then you start
+
+898
+00:19:21,830 --> 00:19:21,840
+a good par frontier and then you start
+ 
+
+899
+00:19:21,840 --> 00:19:23,350
+a good par frontier and then you start
+merging things and at the end of the day
+
+900
+00:19:23,350 --> 00:19:23,360
+merging things and at the end of the day
+ 
+
+901
+00:19:23,360 --> 00:19:24,710
+merging things and at the end of the day
+you have this prompt that solves
+
+902
+00:19:24,710 --> 00:19:24,720
+you have this prompt that solves
+ 
+
+903
+00:19:24,720 --> 00:19:26,390
+you have this prompt that solves
+everything in your training. Now that
+
+904
+00:19:26,390 --> 00:19:26,400
+everything in your training. Now that
+ 
+
+905
+00:19:26,400 --> 00:19:28,310
+everything in your training. Now that
+you have like this filtered set of
+
+906
+00:19:28,310 --> 00:19:28,320
+you have like this filtered set of
+ 
+
+907
+00:19:28,320 --> 00:19:30,390
+you have like this filtered set of
+candidate again we sample new candidates
+
+908
+00:19:30,390 --> 00:19:30,400
+candidate again we sample new candidates
+ 
+
+909
+00:19:30,400 --> 00:19:33,430
+candidate again we sample new candidates
+from these uh these ones using uh kind
+
+910
+00:19:33,430 --> 00:19:33,440
+from these uh these ones using uh kind
+ 
+
+911
+00:19:33,440 --> 00:19:35,350
+from these uh these ones using uh kind
+of the mutation and the merge strategy
+
+912
+00:19:35,350 --> 00:19:35,360
+of the mutation and the merge strategy
+ 
+
+913
+00:19:35,360 --> 00:19:38,950
+of the mutation and the merge strategy
+and we keep doing these um until
+
+914
+00:19:38,950 --> 00:19:38,960
+and we keep doing these um until
+ 
+
+915
+00:19:38,960 --> 00:19:42,549
+and we keep doing these um until
+basically the compute uh budget uh
+
+916
+00:19:42,549 --> 00:19:42,559
+basically the compute uh budget uh
+ 
+
+917
+00:19:42,559 --> 00:19:44,390
+basically the compute uh budget uh
+finishes.
+
+918
+00:19:44,390 --> 00:19:44,400
+finishes.
+ 
+
+919
+00:19:44,400 --> 00:19:46,549
+finishes.
+Now there's a lot of libraries that
+
+920
+00:19:46,549 --> 00:19:46,559
+Now there's a lot of libraries that
+ 
+
+921
+00:19:46,559 --> 00:19:48,789
+Now there's a lot of libraries that
+implement this algorithm. I think the
+
+922
+00:19:48,789 --> 00:19:48,799
+implement this algorithm. I think the
+ 
+
+923
+00:19:48,799 --> 00:19:51,669
+implement this algorithm. I think the
+most known is despite it popularized the
+
+924
+00:19:51,669 --> 00:19:51,679
+most known is despite it popularized the
+ 
+
+925
+00:19:51,679 --> 00:19:55,750
+most known is despite it popularized the
+idea of optimizing prompts or harnesses.
+
+926
+00:19:55,750 --> 00:19:55,760
+idea of optimizing prompts or harnesses.
+ 
+
+927
+00:19:55,760 --> 00:19:59,270
+idea of optimizing prompts or harnesses.
+uh but now there's uh I think a new
+
+928
+00:19:59,270 --> 00:19:59,280
+uh but now there's uh I think a new
+ 
+
+929
+00:19:59,280 --> 00:20:02,150
+uh but now there's uh I think a new
+library by the authors of GAPA an open
+
+930
+00:20:02,150 --> 00:20:02,160
+library by the authors of GAPA an open
+ 
+
+931
+00:20:02,160 --> 00:20:04,950
+library by the authors of GAPA an open
+source one called GPA and they have
+
+932
+00:20:04,950 --> 00:20:04,960
+source one called GPA and they have
+ 
+
+933
+00:20:04,960 --> 00:20:08,310
+source one called GPA and they have
+implemented uh in the last month uh new
+
+934
+00:20:08,310 --> 00:20:08,320
+implemented uh in the last month uh new
+ 
+
+935
+00:20:08,320 --> 00:20:11,510
+implemented uh in the last month uh new
+interface called optimize anything a new
+
+936
+00:20:11,510 --> 00:20:11,520
+interface called optimize anything a new
+ 
+
+937
+00:20:11,520 --> 00:20:14,710
+interface called optimize anything a new
+API which is what we're going to use and
+
+938
+00:20:14,710 --> 00:20:14,720
+API which is what we're going to use and
+ 
+
+939
+00:20:14,720 --> 00:20:16,549
+API which is what we're going to use and
+which can be used not only to optimize
+
+940
+00:20:16,549 --> 00:20:16,559
+which can be used not only to optimize
+ 
+
+941
+00:20:16,559 --> 00:20:19,270
+which can be used not only to optimize
+prompts but really to optimize
+
+942
+00:20:19,270 --> 00:20:19,280
+prompts but really to optimize
+ 
+
+943
+00:20:19,280 --> 00:20:22,150
+prompts but really to optimize
+um any almost any algorithm using this
+
+944
+00:20:22,150 --> 00:20:22,160
+um any almost any algorithm using this
+ 
+
+945
+00:20:22,160 --> 00:20:25,350
+um any almost any algorithm using this
+same idea it's quite powerful uh let Let
+
+946
+00:20:25,350 --> 00:20:25,360
+same idea it's quite powerful uh let Let
+ 
+
+947
+00:20:25,360 --> 00:20:27,430
+same idea it's quite powerful uh let Let
+me show you how it works. So basically
+
+948
+00:20:27,430 --> 00:20:27,440
+me show you how it works. So basically
+ 
+
+949
+00:20:27,440 --> 00:20:29,909
+me show you how it works. So basically
+uh the API here is called optimize
+
+950
+00:20:29,909 --> 00:20:29,919
+uh the API here is called optimize
+ 
+
+951
+00:20:29,919 --> 00:20:32,390
+uh the API here is called optimize
+anything. You see this function and what
+
+952
+00:20:32,390 --> 00:20:32,400
+anything. You see this function and what
+ 
+
+953
+00:20:32,400 --> 00:20:34,310
+anything. You see this function and what
+it takes is a seat candidate. The
+
+954
+00:20:34,310 --> 00:20:34,320
+it takes is a seat candidate. The
+ 
+
+955
+00:20:34,320 --> 00:20:36,789
+it takes is a seat candidate. The
+candidate is the configuration that you
+
+956
+00:20:36,789 --> 00:20:36,799
+candidate is the configuration that you
+ 
+
+957
+00:20:36,799 --> 00:20:39,029
+candidate is the configuration that you
+want to optimize. In our case that would
+
+958
+00:20:39,029 --> 00:20:39,039
+want to optimize. In our case that would
+ 
+
+959
+00:20:39,039 --> 00:20:42,390
+want to optimize. In our case that would
+be the LLM as a judge prompt, right? We
+
+960
+00:20:42,390 --> 00:20:42,400
+be the LLM as a judge prompt, right? We
+ 
+
+961
+00:20:42,400 --> 00:20:44,789
+be the LLM as a judge prompt, right? We
+can make it even a dict if we want. So
+
+962
+00:20:44,789 --> 00:20:44,799
+can make it even a dict if we want. So
+ 
+
+963
+00:20:44,799 --> 00:20:46,549
+can make it even a dict if we want. So
+it's kind of for example the LLM as a
+
+964
+00:20:46,549 --> 00:20:46,559
+it's kind of for example the LLM as a
+ 
+
+965
+00:20:46,559 --> 00:20:49,590
+it's kind of for example the LLM as a
+judge uh prompt plus temperature let's
+
+966
+00:20:49,590 --> 00:20:49,600
+judge uh prompt plus temperature let's
+ 
+
+967
+00:20:49,600 --> 00:20:52,070
+judge uh prompt plus temperature let's
+say. So or it could be chain of prompt
+
+968
+00:20:52,070 --> 00:20:52,080
+say. So or it could be chain of prompt
+ 
+
+969
+00:20:52,080 --> 00:20:55,510
+say. So or it could be chain of prompt
+and so on so forth. So it's not limited.
+
+970
+00:20:55,510 --> 00:20:55,520
+and so on so forth. So it's not limited.
+ 
+
+971
+00:20:55,520 --> 00:20:59,270
+and so on so forth. So it's not limited.
+Then we have uh the evaluator which is
+
+972
+00:20:59,270 --> 00:20:59,280
+Then we have uh the evaluator which is
+ 
+
+973
+00:20:59,280 --> 00:21:00,789
+Then we have uh the evaluator which is
+basically the thing that would be used
+
+974
+00:21:00,789 --> 00:21:00,799
+basically the thing that would be used
+ 
+
+975
+00:21:00,799 --> 00:21:04,789
+basically the thing that would be used
+by GAP to optimize and the expectation
+
+976
+00:21:04,789 --> 00:21:04,799
+by GAP to optimize and the expectation
+ 
+
+977
+00:21:04,799 --> 00:21:07,990
+by GAP to optimize and the expectation
+from the evaluator is that um it would
+
+978
+00:21:07,990 --> 00:21:08,000
+from the evaluator is that um it would
+ 
+
+979
+00:21:08,000 --> 00:21:09,669
+from the evaluator is that um it would
+obviously run the system. In our case,
+
+980
+00:21:09,669 --> 00:21:09,679
+obviously run the system. In our case,
+ 
+
+981
+00:21:09,679 --> 00:21:12,950
+obviously run the system. In our case,
+it would run the LLM as a judge uh
+
+982
+00:21:12,950 --> 00:21:12,960
+it would run the LLM as a judge uh
+ 
+
+983
+00:21:12,960 --> 00:21:16,549
+it would run the LLM as a judge uh
+parameterized by the candidate
+
+984
+00:21:16,549 --> 00:21:16,559
+parameterized by the candidate
+ 
+
+985
+00:21:16,559 --> 00:21:22,070
+parameterized by the candidate
+uh and then it would uh log uh kind of
+
+986
+00:21:22,070 --> 00:21:22,080
+uh and then it would uh log uh kind of
+ 
+
+987
+00:21:22,080 --> 00:21:25,350
+uh and then it would uh log uh kind of
+diagnostic not only the output uh but
+
+988
+00:21:25,350 --> 00:21:25,360
+diagnostic not only the output uh but
+ 
+
+989
+00:21:25,360 --> 00:21:28,470
+diagnostic not only the output uh but
+also the error the reasoning and and the
+
+990
+00:21:28,470 --> 00:21:28,480
+also the error the reasoning and and the
+ 
+
+991
+00:21:28,480 --> 00:21:30,950
+also the error the reasoning and and the
+idea you can add as much as you want and
+
+992
+00:21:30,950 --> 00:21:30,960
+idea you can add as much as you want and
+ 
+
+993
+00:21:30,960 --> 00:21:32,549
+idea you can add as much as you want and
+you see you'll see this is how we're
+
+994
+00:21:32,549 --> 00:21:32,559
+you see you'll see this is how we're
+ 
+
+995
+00:21:32,559 --> 00:21:33,750
+you see you'll see this is how we're
+going to do it with with our
+
+996
+00:21:33,750 --> 00:21:33,760
+going to do it with with our
+ 
+
+997
+00:21:33,760 --> 00:21:36,710
+going to do it with with our
+optimization for the LLM as a judge. Uh
+
+998
+00:21:36,710 --> 00:21:36,720
+optimization for the LLM as a judge. Uh
+ 
+
+999
+00:21:36,720 --> 00:21:39,669
+optimization for the LLM as a judge. Uh
+but the idea is that Uh if you remember
+
+1000
+00:21:39,669 --> 00:21:39,679
+but the idea is that Uh if you remember
+ 
+
+1001
+00:21:39,679 --> 00:21:43,669
+but the idea is that Uh if you remember
+here we used some kind of uh reflection
+
+1002
+00:21:43,669 --> 00:21:43,679
+here we used some kind of uh reflection
+ 
+
+1003
+00:21:43,679 --> 00:21:48,390
+here we used some kind of uh reflection
+and and uh um reasoning to improve our
+
+1004
+00:21:48,390 --> 00:21:48,400
+and and uh um reasoning to improve our
+ 
+
+1005
+00:21:48,400 --> 00:21:49,990
+and and uh um reasoning to improve our
+prompt and that reasoning is something
+
+1006
+00:21:49,990 --> 00:21:50,000
+prompt and that reasoning is something
+ 
+
+1007
+00:21:50,000 --> 00:21:52,470
+prompt and that reasoning is something
+that we oursself will build uh through
+
+1008
+00:21:52,470 --> 00:21:52,480
+that we oursself will build uh through
+ 
+
+1009
+00:21:52,480 --> 00:21:54,230
+that we oursself will build uh through
+this evaluate
+
+1010
+00:21:54,230 --> 00:21:54,240
+this evaluate
+ 
+
+1011
+00:21:54,240 --> 00:21:55,909
+this evaluate
+and then other than that there is ways
+
+1012
+00:21:55,909 --> 00:21:55,919
+and then other than that there is ways
+ 
+
+1013
+00:21:55,919 --> 00:21:58,230
+and then other than that there is ways
+in the configuration for example to
+
+1014
+00:21:58,230 --> 00:21:58,240
+in the configuration for example to
+ 
+
+1015
+00:21:58,240 --> 00:22:00,470
+in the configuration for example to
+configure how many calls to do per
+
+1016
+00:22:00,470 --> 00:22:00,480
+configure how many calls to do per
+ 
+
+1017
+00:22:00,480 --> 00:22:02,310
+configure how many calls to do per
+iteration.
+
+1018
+00:22:02,310 --> 00:22:02,320
+iteration.
+ 
+
+1019
+00:22:02,320 --> 00:22:05,590
+iteration.
+um the objective basically providing
+
+1020
+00:22:05,590 --> 00:22:05,600
+um the objective basically providing
+ 
+
+1021
+00:22:05,600 --> 00:22:08,950
+um the objective basically providing
+context for uh the refinement prompt on
+
+1022
+00:22:08,950 --> 00:22:08,960
+context for uh the refinement prompt on
+ 
+
+1023
+00:22:08,960 --> 00:22:12,470
+context for uh the refinement prompt on
+how to uh improve and so on and so
+
+1024
+00:22:12,470 --> 00:22:12,480
+how to uh improve and so on and so
+ 
+
+1025
+00:22:12,480 --> 00:22:17,029
+how to uh improve and so on and so
+forth. But but the um the corn uh flow
+
+1026
+00:22:17,029 --> 00:22:17,039
+forth. But but the um the corn uh flow
+ 
+
+1027
+00:22:17,039 --> 00:22:20,230
+forth. But but the um the corn uh flow
+is actually quite simple. So now let's
+
+1028
+00:22:20,230 --> 00:22:20,240
+is actually quite simple. So now let's
+ 
+
+1029
+00:22:20,240 --> 00:22:22,070
+is actually quite simple. So now let's
+jump to the Jupyter notebook and really
+
+1030
+00:22:22,070 --> 00:22:22,080
+jump to the Jupyter notebook and really
+ 
+
+1031
+00:22:22,080 --> 00:22:26,710
+jump to the Jupyter notebook and really
+look into how to do it uh step by step.
+
+1032
+00:22:26,710 --> 00:22:26,720
+look into how to do it uh step by step.
+ 
+
+1033
+00:22:26,720 --> 00:22:28,710
+look into how to do it uh step by step.
+So you'll find this Jupyter notebook in
+
+1034
+00:22:28,710 --> 00:22:28,720
+So you'll find this Jupyter notebook in
+ 
+
+1035
+00:22:28,720 --> 00:22:30,310
+So you'll find this Jupyter notebook in
+the GitHub repository that you'll find
+
+1036
+00:22:30,310 --> 00:22:30,320
+the GitHub repository that you'll find
+ 
+
+1037
+00:22:30,320 --> 00:22:33,110
+the GitHub repository that you'll find
+in the links and in the last slide. So
+
+1038
+00:22:33,110 --> 00:22:33,120
+in the links and in the last slide. So
+ 
+
+1039
+00:22:33,120 --> 00:22:35,750
+in the links and in the last slide. So
+we start by installing the library. So
+
+1040
+00:22:35,750 --> 00:22:35,760
+we start by installing the library. So
+ 
+
+1041
+00:22:35,760 --> 00:22:40,390
+we start by installing the library. So
+it's flight lm and u ga. I'm not
+
+1042
+00:22:40,390 --> 00:22:40,400
+it's flight lm and u ga. I'm not
+ 
+
+1043
+00:22:40,400 --> 00:22:42,230
+it's flight lm and u ga. I'm not
+installing here ga because I did the
+
+1044
+00:22:42,230 --> 00:22:42,240
+installing here ga because I did the
+ 
+
+1045
+00:22:42,240 --> 00:22:44,549
+installing here ga because I did the
+optimization. It takes uh kind of quite
+
+1046
+00:22:44,549 --> 00:22:44,559
+optimization. It takes uh kind of quite
+ 
+
+1047
+00:22:44,559 --> 00:22:47,430
+optimization. It takes uh kind of quite
+a time. I think a couple of hours uh
+
+1048
+00:22:47,430 --> 00:22:47,440
+a time. I think a couple of hours uh
+ 
+
+1049
+00:22:47,440 --> 00:22:49,990
+a time. I think a couple of hours uh
+before so I'm going to jump this step.
+
+1050
+00:22:49,990 --> 00:22:50,000
+before so I'm going to jump this step.
+ 
+
+1051
+00:22:50,000 --> 00:22:52,390
+before so I'm going to jump this step.
+Um, but obviously if you want to run it
+
+1052
+00:22:52,390 --> 00:22:52,400
+Um, but obviously if you want to run it
+ 
+
+1053
+00:22:52,400 --> 00:22:54,310
+Um, but obviously if you want to run it
+within the reposi within the Jupyter
+
+1054
+00:22:54,310 --> 00:22:54,320
+within the reposi within the Jupyter
+ 
+
+1055
+00:22:54,320 --> 00:22:56,710
+within the reposi within the Jupyter
+notebook, you should also install it. So
+
+1056
+00:22:56,710 --> 00:22:56,720
+notebook, you should also install it. So
+ 
+
+1057
+00:22:56,720 --> 00:22:59,510
+notebook, you should also install it. So
+we install this and we kind of do our
+
+1058
+00:22:59,510 --> 00:22:59,520
+we install this and we kind of do our
+ 
+
+1059
+00:22:59,520 --> 00:23:03,270
+we install this and we kind of do our
+imports. We have kind of a couple of um
+
+1060
+00:23:03,270 --> 00:23:03,280
+imports. We have kind of a couple of um
+ 
+
+1061
+00:23:03,280 --> 00:23:05,350
+imports. We have kind of a couple of um
+of functions that that I extracted
+
+1062
+00:23:05,350 --> 00:23:05,360
+of functions that that I extracted
+ 
+
+1063
+00:23:05,360 --> 00:23:06,710
+of functions that that I extracted
+outside. We're going to look at them
+
+1064
+00:23:06,710 --> 00:23:06,720
+outside. We're going to look at them
+ 
+
+1065
+00:23:06,720 --> 00:23:08,549
+outside. We're going to look at them
+later.
+
+1066
+00:23:08,549 --> 00:23:08,559
+later.
+ 
+
+1067
+00:23:08,559 --> 00:23:10,870
+later.
+And we start by loading the data. Uh, as
+
+1068
+00:23:10,870 --> 00:23:10,880
+And we start by loading the data. Uh, as
+ 
+
+1069
+00:23:10,880 --> 00:23:12,710
+And we start by loading the data. Uh, as
+I mentioned, so we're using the data
+
+1070
+00:23:12,710 --> 00:23:12,720
+I mentioned, so we're using the data
+ 
+
+1071
+00:23:12,720 --> 00:23:14,630
+I mentioned, so we're using the data
+from TaBench.
+
+1072
+00:23:14,630 --> 00:23:14,640
+from TaBench.
+ 
+
+1073
+00:23:14,640 --> 00:23:17,510
+from TaBench.
+uh I just kind of uh pre-processed
+
+1074
+00:23:17,510 --> 00:23:17,520
+uh I just kind of uh pre-processed
+ 
+
+1075
+00:23:17,520 --> 00:23:20,070
+uh I just kind of uh pre-processed
+processed it in the beginning to change
+
+1076
+00:23:20,070 --> 00:23:20,080
+processed it in the beginning to change
+ 
+
+1077
+00:23:20,080 --> 00:23:21,909
+processed it in the beginning to change
+the type of the assertion so that they
+
+1078
+00:23:21,909 --> 00:23:21,919
+the type of the assertion so that they
+ 
+
+1079
+00:23:21,919 --> 00:23:23,669
+the type of the assertion so that they
+look like the annotation I showed in the
+
+1080
+00:23:23,669 --> 00:23:23,679
+look like the annotation I showed in the
+ 
+
+1081
+00:23:23,679 --> 00:23:24,981
+look like the annotation I showed in the
+presentation.
+
+1082
+00:23:24,981 --> 00:23:24,991
+presentation.
+ 
+
+1083
+00:23:24,991 --> 00:23:25,029
+presentation.
+>> [snorts]
+
+1084
+00:23:25,029 --> 00:23:25,039
+>> [snorts]
+ 
+
+1085
+00:23:25,039 --> 00:23:27,350
+>> [snorts]
+>> So I've already kind of split uh the
+
+1086
+00:23:27,350 --> 00:23:27,360
+>> So I've already kind of split uh the
+ 
+
+1087
+00:23:27,360 --> 00:23:31,350
+>> So I've already kind of split uh the
+data into a training and a validation um
+
+1088
+00:23:31,350 --> 00:23:31,360
+data into a training and a validation um
+ 
+
+1089
+00:23:31,360 --> 00:23:35,270
+data into a training and a validation um
+uh data sets. Uh so one which we'll use
+
+1090
+00:23:35,270 --> 00:23:35,280
+uh data sets. Uh so one which we'll use
+ 
+
+1091
+00:23:35,280 --> 00:23:37,590
+uh data sets. Uh so one which we'll use
+with the GAPA and the other one the
+
+1092
+00:23:37,590 --> 00:23:37,600
+with the GAPA and the other one the
+ 
+
+1093
+00:23:37,600 --> 00:23:39,510
+with the GAPA and the other one the
+second one to validate the result at the
+
+1094
+00:23:39,510 --> 00:23:39,520
+second one to validate the result at the
+ 
+
+1095
+00:23:39,520 --> 00:23:43,270
+second one to validate the result at the
+end. And the way I did the split is uh
+
+1096
+00:23:43,270 --> 00:23:43,280
+end. And the way I did the split is uh
+ 
+
+1097
+00:23:43,280 --> 00:23:45,190
+end. And the way I did the split is uh
+based on different tasks that are
+
+1098
+00:23:45,190 --> 00:23:45,200
+based on different tasks that are
+ 
+
+1099
+00:23:45,200 --> 00:23:49,510
+based on different tasks that are
+created in um uh in the tow bench. And
+
+1100
+00:23:49,510 --> 00:23:49,520
+created in um uh in the tow bench. And
+ 
+
+1101
+00:23:49,520 --> 00:23:51,909
+created in um uh in the tow bench. And
+if we look here is basically we have a a
+
+1102
+00:23:51,909 --> 00:23:51,919
+if we look here is basically we have a a
+ 
+
+1103
+00:23:51,919 --> 00:23:55,350
+if we look here is basically we have a a
+training set with 480 traces
+
+1104
+00:23:55,350 --> 00:23:55,360
+training set with 480 traces
+ 
+
+1105
+00:23:55,360 --> 00:23:57,590
+training set with 480 traces
+uh with with around 2/3 uh that are
+
+1106
+00:23:57,590 --> 00:23:57,600
+uh with with around 2/3 uh that are
+ 
+
+1107
+00:23:57,600 --> 00:24:01,350
+uh with with around 2/3 uh that are
+compliant and a validation set with 112
+
+1108
+00:24:01,350 --> 00:24:01,360
+compliant and a validation set with 112
+ 
+
+1109
+00:24:01,360 --> 00:24:03,830
+compliant and a validation set with 112
+traces that are compliant. As I
+
+1110
+00:24:03,830 --> 00:24:03,840
+traces that are compliant. As I
+ 
+
+1111
+00:24:03,840 --> 00:24:06,149
+traces that are compliant. As I
+mentioned the data here is not not very
+
+1112
+00:24:06,149 --> 00:24:06,159
+mentioned the data here is not not very
+ 
+
+1113
+00:24:06,159 --> 00:24:08,230
+mentioned the data here is not not very
+very nice because there are some
+
+1114
+00:24:08,230 --> 00:24:08,240
+very nice because there are some
+ 
+
+1115
+00:24:08,240 --> 00:24:10,070
+very nice because there are some
+redundancies. So there are sometimes the
+
+1116
+00:24:10,070 --> 00:24:10,080
+redundancies. So there are sometimes the
+ 
+
+1117
+00:24:10,080 --> 00:24:14,950
+redundancies. So there are sometimes the
+same task uh that is um being run with
+
+1118
+00:24:14,950 --> 00:24:14,960
+same task uh that is um being run with
+ 
+
+1119
+00:24:14,960 --> 00:24:16,710
+same task uh that is um being run with
+with the same model multiple times. So
+
+1120
+00:24:16,710 --> 00:24:16,720
+with the same model multiple times. So
+ 
+
+1121
+00:24:16,720 --> 00:24:18,230
+with the same model multiple times. So
+there is a little bit of redundancies
+
+1122
+00:24:18,230 --> 00:24:18,240
+there is a little bit of redundancies
+ 
+
+1123
+00:24:18,240 --> 00:24:19,909
+there is a little bit of redundancies
+but there are no redundancies between
+
+1124
+00:24:19,909 --> 00:24:19,919
+but there are no redundancies between
+ 
+
+1125
+00:24:19,919 --> 00:24:22,549
+but there are no redundancies between
+the training and the validation set. So
+
+1126
+00:24:22,549 --> 00:24:22,559
+the training and the validation set. So
+ 
+
+1127
+00:24:22,559 --> 00:24:25,510
+the training and the validation set. So
+we look here how the annotation uh looks
+
+1128
+00:24:25,510 --> 00:24:25,520
+we look here how the annotation uh looks
+ 
+
+1129
+00:24:25,520 --> 00:24:27,990
+we look here how the annotation uh looks
+like and again uh basically we have an
+
+1130
+00:24:27,990 --> 00:24:28,000
+like and again uh basically we have an
+ 
+
+1131
+00:24:28,000 --> 00:24:30,070
+like and again uh basically we have an
+example of a compliant annotation or
+
+1132
+00:24:30,070 --> 00:24:30,080
+example of a compliant annotation or
+ 
+
+1133
+00:24:30,080 --> 00:24:32,390
+example of a compliant annotation or
+non-compliant annotation basically a
+
+1134
+00:24:32,390 --> 00:24:32,400
+non-compliant annotation basically a
+ 
+
+1135
+00:24:32,400 --> 00:24:35,430
+non-compliant annotation basically a
+trajectory that uh that kind of adheres
+
+1136
+00:24:35,430 --> 00:24:35,440
+trajectory that uh that kind of adheres
+ 
+
+1137
+00:24:35,440 --> 00:24:37,909
+trajectory that uh that kind of adheres
+to the policy that's the LM as a charge
+
+1138
+00:24:37,909 --> 00:24:37,919
+to the policy that's the LM as a charge
+ 
+
+1139
+00:24:37,919 --> 00:24:39,909
+to the policy that's the LM as a charge
+that we want to learn another one that
+
+1140
+00:24:39,909 --> 00:24:39,919
+that we want to learn another one that
+ 
+
+1141
+00:24:39,919 --> 00:24:42,789
+that we want to learn another one that
+does not and we can see here basically
+
+1142
+00:24:42,789 --> 00:24:42,799
+does not and we can see here basically
+ 
+
+1143
+00:24:42,799 --> 00:24:45,029
+does not and we can see here basically
+it describes like okay it's compliant
+
+1144
+00:24:45,029 --> 00:24:45,039
+it describes like okay it's compliant
+ 
+
+1145
+00:24:45,039 --> 00:24:49,029
+it describes like okay it's compliant
+because uh it correctly identified uh
+
+1146
+00:24:49,029 --> 00:24:49,039
+because uh it correctly identified uh
+ 
+
+1147
+00:24:49,039 --> 00:24:51,510
+because uh it correctly identified uh
+the basic economy reservation while here
+
+1148
+00:24:51,510 --> 00:24:51,520
+the basic economy reservation while here
+ 
+
+1149
+00:24:51,520 --> 00:24:55,190
+the basic economy reservation while here
+did not identify uh the user membersh
+
+1150
+00:24:55,190 --> 00:24:55,200
+did not identify uh the user membersh
+ 
+
+1151
+00:24:55,200 --> 00:24:58,070
+did not identify uh the user membersh
+membership as a regular and and this
+
+1152
+00:24:58,070 --> 00:24:58,080
+membership as a regular and and this
+ 
+
+1153
+00:24:58,080 --> 00:24:59,909
+membership as a regular and and this
+annotation is actually quite important
+
+1154
+00:24:59,909 --> 00:24:59,919
+annotation is actually quite important
+ 
+
+1155
+00:24:59,919 --> 00:25:02,630
+annotation is actually quite important
+for us for the LLM as a judge to learn
+
+1156
+00:25:02,630 --> 00:25:02,640
+for us for the LLM as a judge to learn
+ 
+
+1157
+00:25:02,640 --> 00:25:04,710
+for us for the LLM as a judge to learn
+uh the policy especially in the case
+
+1158
+00:25:04,710 --> 00:25:04,720
+uh the policy especially in the case
+ 
+
+1159
+00:25:04,720 --> 00:25:07,830
+uh the policy especially in the case
+here um this policy adurance it's kind
+
+1160
+00:25:07,830 --> 00:25:07,840
+here um this policy adurance it's kind
+ 
+
+1161
+00:25:07,840 --> 00:25:10,710
+here um this policy adurance it's kind
+of very complex system uh that the LLM
+
+1162
+00:25:10,710 --> 00:25:10,720
+of very complex system uh that the LLM
+ 
+
+1163
+00:25:10,720 --> 00:25:13,669
+of very complex system uh that the LLM
+as a judge need to uh to learn and
+
+1164
+00:25:13,669 --> 00:25:13,679
+as a judge need to uh to learn and
+ 
+
+1165
+00:25:13,679 --> 00:25:18,149
+as a judge need to uh to learn and
+without kind of information about uh
+
+1166
+00:25:18,149 --> 00:25:18,159
+without kind of information about uh
+ 
+
+1167
+00:25:18,159 --> 00:25:20,549
+without kind of information about uh
+what is compliant like why is something
+
+1168
+00:25:20,549 --> 00:25:20,559
+what is compliant like why is something
+ 
+
+1169
+00:25:20,559 --> 00:25:23,029
+what is compliant like why is something
+uh correct correct or not correct, it
+
+1170
+00:25:23,029 --> 00:25:23,039
+uh correct correct or not correct, it
+ 
+
+1171
+00:25:23,039 --> 00:25:27,269
+uh correct correct or not correct, it
+would be quite impossible for the u gape
+
+1172
+00:25:27,269 --> 00:25:27,279
+would be quite impossible for the u gape
+ 
+
+1173
+00:25:27,279 --> 00:25:31,750
+would be quite impossible for the u gape
+algorithm to to reach uh a good NLM as a
+
+1174
+00:25:31,750 --> 00:25:31,760
+algorithm to to reach uh a good NLM as a
+ 
+
+1175
+00:25:31,760 --> 00:25:33,510
+algorithm to to reach uh a good NLM as a
+judge, right? I mean, it would be the
+
+1176
+00:25:33,510 --> 00:25:33,520
+judge, right? I mean, it would be the
+ 
+
+1177
+00:25:33,520 --> 00:25:34,870
+judge, right? I mean, it would be the
+same for a human, right? If you gave me
+
+1178
+00:25:34,870 --> 00:25:34,880
+same for a human, right? If you gave me
+ 
+
+1179
+00:25:34,880 --> 00:25:37,590
+same for a human, right? If you gave me
+all these trajectories, told me this is
+
+1180
+00:25:37,590 --> 00:25:37,600
+all these trajectories, told me this is
+ 
+
+1181
+00:25:37,600 --> 00:25:39,909
+all these trajectories, told me this is
+kind of correct. This is nonconformed to
+
+1182
+00:25:39,909 --> 00:25:39,919
+kind of correct. This is nonconformed to
+ 
+
+1183
+00:25:39,919 --> 00:25:42,549
+kind of correct. This is nonconformed to
+policy, but you did not give me uh more
+
+1184
+00:25:42,549 --> 00:25:42,559
+policy, but you did not give me uh more
+ 
+
+1185
+00:25:42,559 --> 00:25:44,230
+policy, but you did not give me uh more
+information, it would be very hard for
+
+1186
+00:25:44,230 --> 00:25:44,240
+information, it would be very hard for
+ 
+
+1187
+00:25:44,240 --> 00:25:47,990
+information, it would be very hard for
+me to um to basically make a judgment,
+
+1188
+00:25:47,990 --> 00:25:48,000
+me to um to basically make a judgment,
+ 
+
+1189
+00:25:48,000 --> 00:25:50,950
+me to um to basically make a judgment,
+learn how to assess policies. So having
+
+1190
+00:25:50,950 --> 00:25:50,960
+learn how to assess policies. So having
+ 
+
+1191
+00:25:50,960 --> 00:25:52,549
+learn how to assess policies. So having
+this information and the quality of the
+
+1192
+00:25:52,549 --> 00:25:52,559
+this information and the quality of the
+ 
+
+1193
+00:25:52,559 --> 00:25:54,950
+this information and the quality of the
+annotation as I mentioned quality of the
+
+1194
+00:25:54,950 --> 00:25:54,960
+annotation as I mentioned quality of the
+ 
+
+1195
+00:25:54,960 --> 00:25:57,669
+annotation as I mentioned quality of the
+data is really paramount of being able
+
+1196
+00:25:57,669 --> 00:25:57,679
+data is really paramount of being able
+ 
+
+1197
+00:25:57,679 --> 00:26:00,870
+data is really paramount of being able
+to learn this and again obviously this
+
+1198
+00:26:00,870 --> 00:26:00,880
+to learn this and again obviously this
+ 
+
+1199
+00:26:00,880 --> 00:26:04,789
+to learn this and again obviously this
+is kind of bit of a complex um LLM as a
+
+1200
+00:26:04,789 --> 00:26:04,799
+is kind of bit of a complex um LLM as a
+ 
+
+1201
+00:26:04,799 --> 00:26:09,110
+is kind of bit of a complex um LLM as a
+judge to learn. So uh first thing we
+
+1202
+00:26:09,110 --> 00:26:09,120
+judge to learn. So uh first thing we
+ 
+
+1203
+00:26:09,120 --> 00:26:13,190
+judge to learn. So uh first thing we
+start is is with a naive uh judge and uh
+
+1204
+00:26:13,190 --> 00:26:13,200
+start is is with a naive uh judge and uh
+ 
+
+1205
+00:26:13,200 --> 00:26:15,269
+start is is with a naive uh judge and uh
+basically this is the seed judge uh we
+
+1206
+00:26:15,269 --> 00:26:15,279
+basically this is the seed judge uh we
+ 
+
+1207
+00:26:15,279 --> 00:26:19,510
+basically this is the seed judge uh we
+start with um and and it's it's
+
+1208
+00:26:19,510 --> 00:26:19,520
+start with um and and it's it's
+ 
+
+1209
+00:26:19,520 --> 00:26:21,510
+start with um and and it's it's
+something that that actually I engineer
+
+1210
+00:26:21,510 --> 00:26:21,520
+something that that actually I engineer
+ 
+
+1211
+00:26:21,520 --> 00:26:23,430
+something that that actually I engineer
+engineered I'm going to talk a little
+
+1212
+00:26:23,430 --> 00:26:23,440
+engineered I'm going to talk a little
+ 
+
+1213
+00:26:23,440 --> 00:26:26,230
+engineered I'm going to talk a little
+bit about it later with the learnings on
+
+1214
+00:26:26,230 --> 00:26:26,240
+bit about it later with the learnings on
+ 
+
+1215
+00:26:26,240 --> 00:26:29,909
+bit about it later with the learnings on
+like how exactly did we reach this and
+
+1216
+00:26:29,909 --> 00:26:29,919
+like how exactly did we reach this and
+ 
+
+1217
+00:26:29,919 --> 00:26:31,590
+like how exactly did we reach this and
+basically you can see here is like it
+
+1218
+00:26:31,590 --> 00:26:31,600
+basically you can see here is like it
+ 
+
+1219
+00:26:31,600 --> 00:26:33,909
+basically you can see here is like it
+evaluates whether the customer service
+
+1220
+00:26:33,909 --> 00:26:33,919
+evaluates whether the customer service
+ 
+
+1221
+00:26:33,919 --> 00:26:38,230
+evaluates whether the customer service
+agent violated policy And it tells that
+
+1222
+00:26:38,230 --> 00:26:38,240
+agent violated policy And it tells that
+ 
+
+1223
+00:26:38,240 --> 00:26:40,070
+agent violated policy And it tells that
+you should start by assuming that the
+
+1224
+00:26:40,070 --> 00:26:40,080
+you should start by assuming that the
+ 
+
+1225
+00:26:40,080 --> 00:26:44,710
+you should start by assuming that the
+agent is compliant and uh only change to
+
+1226
+00:26:44,710 --> 00:26:44,720
+agent is compliant and uh only change to
+ 
+
+1227
+00:26:44,720 --> 00:26:46,470
+agent is compliant and uh only change to
+non-compliant if there is a specific
+
+1228
+00:26:46,470 --> 00:26:46,480
+non-compliant if there is a specific
+ 
+
+1229
+00:26:46,480 --> 00:26:48,870
+non-compliant if there is a specific
+reason right I mean here we we are
+
+1230
+00:26:48,870 --> 00:26:48,880
+reason right I mean here we we are
+ 
+
+1231
+00:26:48,880 --> 00:26:51,750
+reason right I mean here we we are
+starting with an LLM as a judge which
+
+1232
+00:26:51,750 --> 00:26:51,760
+starting with an LLM as a judge which
+ 
+
+1233
+00:26:51,760 --> 00:26:55,269
+starting with an LLM as a judge which
+means that um like the seed judge the
+
+1234
+00:26:55,269 --> 00:26:55,279
+means that um like the seed judge the
+ 
+
+1235
+00:26:55,279 --> 00:26:58,549
+means that um like the seed judge the
+initial judge should actually in my
+
+1236
+00:26:58,549 --> 00:26:58,559
+initial judge should actually in my
+ 
+
+1237
+00:26:58,559 --> 00:27:00,470
+initial judge should actually in my
+opinion start by by saying everything is
+
+1238
+00:27:00,470 --> 00:27:00,480
+opinion start by by saying everything is
+ 
+
+1239
+00:27:00,480 --> 00:27:01,990
+opinion start by by saying everything is
+all right I mean if I don't have any
+
+1240
+00:27:01,990 --> 00:27:02,000
+all right I mean if I don't have any
+ 
+
+1241
+00:27:02,000 --> 00:27:04,230
+all right I mean if I don't have any
+rules it should said everything is all
+
+1242
+00:27:04,230 --> 00:27:04,240
+rules it should said everything is all
+ 
+
+1243
+00:27:04,240 --> 00:27:06,070
+rules it should said everything is all
+right I started
+
+1244
+00:27:06,070 --> 00:27:06,080
+right I started
+ 
+
+1245
+00:27:06,080 --> 00:27:07,909
+right I started
+Like in another example when I started
+
+1246
+00:27:07,909 --> 00:27:07,919
+Like in another example when I started
+ 
+
+1247
+00:27:07,919 --> 00:27:09,990
+Like in another example when I started
+as I created an LLM as a judge that says
+
+1248
+00:27:09,990 --> 00:27:10,000
+as I created an LLM as a judge that says
+ 
+
+1249
+00:27:10,000 --> 00:27:12,310
+as I created an LLM as a judge that says
+okay you should check whether the agent
+
+1250
+00:27:12,310 --> 00:27:12,320
+okay you should check whether the agent
+ 
+
+1251
+00:27:12,320 --> 00:27:14,870
+okay you should check whether the agent
+violated policy and what you end up
+
+1252
+00:27:14,870 --> 00:27:14,880
+violated policy and what you end up
+ 
+
+1253
+00:27:14,880 --> 00:27:18,950
+violated policy and what you end up
+being is basically the LLM with its own
+
+1254
+00:27:18,950 --> 00:27:18,960
+being is basically the LLM with its own
+ 
+
+1255
+00:27:18,960 --> 00:27:20,870
+being is basically the LLM with its own
+biases trying to make that decision by
+
+1256
+00:27:20,870 --> 00:27:20,880
+biases trying to make that decision by
+ 
+
+1257
+00:27:20,880 --> 00:27:22,870
+biases trying to make that decision by
+itself says okay this is violates this
+
+1258
+00:27:22,870 --> 00:27:22,880
+itself says okay this is violates this
+ 
+
+1259
+00:27:22,880 --> 00:27:24,470
+itself says okay this is violates this
+doesn't violate without having any
+
+1260
+00:27:24,470 --> 00:27:24,480
+doesn't violate without having any
+ 
+
+1261
+00:27:24,480 --> 00:27:27,269
+doesn't violate without having any
+information so without telling it in the
+
+1262
+00:27:27,269 --> 00:27:27,279
+information so without telling it in the
+ 
+
+1263
+00:27:27,279 --> 00:27:29,590
+information so without telling it in the
+beginning that you should start assuming
+
+1264
+00:27:29,590 --> 00:27:29,600
+beginning that you should start assuming
+ 
+
+1265
+00:27:29,600 --> 00:27:31,269
+beginning that you should start assuming
+that it's compliant I mean if you don't
+
+1266
+00:27:31,269 --> 00:27:31,279
+that it's compliant I mean if you don't
+ 
+
+1267
+00:27:31,279 --> 00:27:33,029
+that it's compliant I mean if you don't
+have any reason to to believe it's
+
+1268
+00:27:33,029 --> 00:27:33,039
+have any reason to to believe it's
+ 
+
+1269
+00:27:33,039 --> 00:27:35,430
+have any reason to to believe it's
+non-compliant it should be compliant
+
+1270
+00:27:35,430 --> 00:27:35,440
+non-compliant it should be compliant
+ 
+
+1271
+00:27:35,440 --> 00:27:39,510
+non-compliant it should be compliant
+Um then uh basically you start with with
+
+1272
+00:27:39,510 --> 00:27:39,520
+Um then uh basically you start with with
+ 
+
+1273
+00:27:39,520 --> 00:27:43,190
+Um then uh basically you start with with
+some kind of random LLM as a judge that
+
+1274
+00:27:43,190 --> 00:27:43,200
+some kind of random LLM as a judge that
+ 
+
+1275
+00:27:43,200 --> 00:27:46,390
+some kind of random LLM as a judge that
+would be very hard to fix later unless
+
+1276
+00:27:46,390 --> 00:27:46,400
+would be very hard to fix later unless
+ 
+
+1277
+00:27:46,400 --> 00:27:48,470
+would be very hard to fix later unless
+you end up with one prompt that
+
+1278
+00:27:48,470 --> 00:27:48,480
+you end up with one prompt that
+ 
+
+1279
+00:27:48,480 --> 00:27:50,789
+you end up with one prompt that
+discovered this thing right start with
+
+1280
+00:27:50,789 --> 00:27:50,799
+discovered this thing right start with
+ 
+
+1281
+00:27:50,799 --> 00:27:53,110
+discovered this thing right start with
+the compliance. So the I discovered here
+
+1282
+00:27:53,110 --> 00:27:53,120
+the compliance. So the I discovered here
+ 
+
+1283
+00:27:53,120 --> 00:27:55,029
+the compliance. So the I discovered here
+that the initial seed is actually very
+
+1284
+00:27:55,029 --> 00:27:55,039
+that the initial seed is actually very
+ 
+
+1285
+00:27:55,039 --> 00:27:57,350
+that the initial seed is actually very
+important in this case. There might be
+
+1286
+00:27:57,350 --> 00:27:57,360
+important in this case. There might be
+ 
+
+1287
+00:27:57,360 --> 00:27:58,870
+important in this case. There might be
+simpler scenarios where you don't need
+
+1288
+00:27:58,870 --> 00:27:58,880
+simpler scenarios where you don't need
+ 
+
+1289
+00:27:58,880 --> 00:28:01,190
+simpler scenarios where you don't need
+this but in this case it's kind of uh
+
+1290
+00:28:01,190 --> 00:28:01,200
+this but in this case it's kind of uh
+ 
+
+1291
+00:28:01,200 --> 00:28:03,669
+this but in this case it's kind of uh
+quite important. So if we take this and
+
+1292
+00:28:03,669 --> 00:28:03,679
+quite important. So if we take this and
+ 
+
+1293
+00:28:03,679 --> 00:28:06,310
+quite important. So if we take this and
+we run this on the validation set like
+
+1294
+00:28:06,310 --> 00:28:06,320
+we run this on the validation set like
+ 
+
+1295
+00:28:06,320 --> 00:28:11,110
+we run this on the validation set like
+this uh initial uh LLM as a judge uh we
+
+1296
+00:28:11,110 --> 00:28:11,120
+this uh initial uh LLM as a judge uh we
+ 
+
+1297
+00:28:11,120 --> 00:28:14,310
+this uh initial uh LLM as a judge uh we
+basically find 61% accuracy but but we
+
+1298
+00:28:14,310 --> 00:28:14,320
+basically find 61% accuracy but but we
+ 
+
+1299
+00:28:14,320 --> 00:28:16,230
+basically find 61% accuracy but but we
+look like the bias it's actually most of
+
+1300
+00:28:16,230 --> 00:28:16,240
+look like the bias it's actually most of
+ 
+
+1301
+00:28:16,240 --> 00:28:17,830
+look like the bias it's actually most of
+the time saying it's compliant which is
+
+1302
+00:28:17,830 --> 00:28:17,840
+the time saying it's compliant which is
+ 
+
+1303
+00:28:17,840 --> 00:28:20,149
+the time saying it's compliant which is
+actually what we want right I mean if
+
+1304
+00:28:20,149 --> 00:28:20,159
+actually what we want right I mean if
+ 
+
+1305
+00:28:20,159 --> 00:28:23,029
+actually what we want right I mean if
+that's I would say saying it's compliant
+
+1306
+00:28:23,029 --> 00:28:23,039
+that's I would say saying it's compliant
+ 
+
+1307
+00:28:23,039 --> 00:28:25,750
+that's I would say saying it's compliant
+98% of the time is actually the unbiased
+
+1308
+00:28:25,750 --> 00:28:25,760
+98% of the time is actually the unbiased
+ 
+
+1309
+00:28:25,760 --> 00:28:26,939
+98% of the time is actually the unbiased
+thing to do
+
+1310
+00:28:26,939 --> 00:28:26,949
+thing to do
+ 
+
+1311
+00:28:26,949 --> 00:28:27,029
+thing to do
+>> [snorts]
+
+1312
+00:28:27,029 --> 00:28:27,039
+>> [snorts]
+ 
+
+1313
+00:28:27,039 --> 00:28:31,669
+>> [snorts]
+>> uh the logical place where to start. Um
+
+1314
+00:28:31,669 --> 00:28:31,679
+>> uh the logical place where to start. Um
+ 
+
+1315
+00:28:31,679 --> 00:28:34,310
+>> uh the logical place where to start. Um
+so uh we run the metrics in the
+
+1316
+00:28:34,310 --> 00:28:34,320
+so uh we run the metrics in the
+ 
+
+1317
+00:28:34,320 --> 00:28:37,190
+so uh we run the metrics in the
+beginning right the accuracy 61% 98% is
+
+1318
+00:28:37,190 --> 00:28:37,200
+beginning right the accuracy 61% 98% is
+ 
+
+1319
+00:28:37,200 --> 00:28:39,669
+beginning right the accuracy 61% 98% is
+saying like the recall of of compliance
+
+1320
+00:28:39,669 --> 00:28:39,679
+saying like the recall of of compliance
+ 
+
+1321
+00:28:39,679 --> 00:28:41,510
+saying like the recall of of compliance
+with very low to recall full
+
+1322
+00:28:41,510 --> 00:28:41,520
+with very low to recall full
+ 
+
+1323
+00:28:41,520 --> 00:28:44,389
+with very low to recall full
+non-compliance
+
+1324
+00:28:44,389 --> 00:28:44,399
+non-compliance
+ 
+
+1325
+00:28:44,399 --> 00:28:47,110
+non-compliance
+um and I think as I mentioned this is
+
+1326
+00:28:47,110 --> 00:28:47,120
+um and I think as I mentioned this is
+ 
+
+1327
+00:28:47,120 --> 00:28:49,190
+um and I think as I mentioned this is
+quite all right it's biased towards
+
+1328
+00:28:49,190 --> 00:28:49,200
+quite all right it's biased towards
+ 
+
+1329
+00:28:49,200 --> 00:28:51,669
+quite all right it's biased towards
+compliance and I've had experiments in
+
+1330
+00:28:51,669 --> 00:28:51,679
+compliance and I've had experiments in
+ 
+
+1331
+00:28:51,679 --> 00:28:53,350
+compliance and I've had experiments in
+the beginning where it was kind of
+
+1332
+00:28:53,350 --> 00:28:53,360
+the beginning where it was kind of
+ 
+
+1333
+00:28:53,360 --> 00:28:55,590
+the beginning where it was kind of
+almost random but then it doesn't learn
+
+1334
+00:28:55,590 --> 00:28:55,600
+almost random but then it doesn't learn
+ 
+
+1335
+00:28:55,600 --> 00:28:59,110
+almost random but then it doesn't learn
+at all and we can look into why or where
+
+1336
+00:28:59,110 --> 00:28:59,120
+at all and we can look into why or where
+ 
+
+1337
+00:28:59,120 --> 00:29:02,149
+at all and we can look into why or where
+it goes who's wrong and uh basically by
+
+1338
+00:29:02,149 --> 00:29:02,159
+it goes who's wrong and uh basically by
+ 
+
+1339
+00:29:02,159 --> 00:29:04,630
+it goes who's wrong and uh basically by
+looking at the places where does does
+
+1340
+00:29:04,630 --> 00:29:04,640
+looking at the places where does does
+ 
+
+1341
+00:29:04,640 --> 00:29:06,389
+looking at the places where does does
+work and we see like it says compliant
+
+1342
+00:29:06,389 --> 00:29:06,399
+work and we see like it says compliant
+ 
+
+1343
+00:29:06,399 --> 00:29:07,750
+work and we see like it says compliant
+but it's not compliant because it
+
+1344
+00:29:07,750 --> 00:29:07,760
+but it's not compliant because it
+ 
+
+1345
+00:29:07,760 --> 00:29:10,230
+but it's not compliant because it
+doesn't know the policy right so we
+
+1346
+00:29:10,230 --> 00:29:10,240
+doesn't know the policy right so we
+ 
+
+1347
+00:29:10,240 --> 00:29:12,470
+doesn't know the policy right so we
+start here like the main code of kind of
+
+1348
+00:29:12,470 --> 00:29:12,480
+start here like the main code of kind of
+ 
+
+1349
+00:29:12,480 --> 00:29:15,510
+start here like the main code of kind of
+optimizing the judge with gapa and what
+
+1350
+00:29:15,510 --> 00:29:15,520
+optimizing the judge with gapa and what
+ 
+
+1351
+00:29:15,520 --> 00:29:20,310
+optimizing the judge with gapa and what
+you will see is that I have actually um
+
+1352
+00:29:20,310 --> 00:29:20,320
+you will see is that I have actually um
+ 
+
+1353
+00:29:20,320 --> 00:29:24,070
+you will see is that I have actually um
+wrote um a reflection template so that
+
+1354
+00:29:24,070 --> 00:29:24,080
+wrote um a reflection template so that
+ 
+
+1355
+00:29:24,080 --> 00:29:27,590
+wrote um a reflection template so that
+prompt that gi uses to reflect and to
+
+1356
+00:29:27,590 --> 00:29:27,600
+prompt that gi uses to reflect and to
+ 
+
+1357
+00:29:27,600 --> 00:29:31,269
+prompt that gi uses to reflect and to
+improve uh to sample new candidates. I
+
+1358
+00:29:31,269 --> 00:29:31,279
+improve uh to sample new candidates. I
+ 
+
+1359
+00:29:31,279 --> 00:29:33,190
+improve uh to sample new candidates. I
+did not use their default but actually I
+
+1360
+00:29:33,190 --> 00:29:33,200
+did not use their default but actually I
+ 
+
+1361
+00:29:33,200 --> 00:29:35,269
+did not use their default but actually I
+wrote one. Uh I tried in the beginning
+
+1362
+00:29:35,269 --> 00:29:35,279
+wrote one. Uh I tried in the beginning
+ 
+
+1363
+00:29:35,279 --> 00:29:39,590
+wrote one. Uh I tried in the beginning
+by using the default prompt in in um in
+
+1364
+00:29:39,590 --> 00:29:39,600
+by using the default prompt in in um in
+ 
+
+1365
+00:29:39,600 --> 00:29:43,750
+by using the default prompt in in um in
+uh in GIA but the results were not uh as
+
+1366
+00:29:43,750 --> 00:29:43,760
+uh in GIA but the results were not uh as
+ 
+
+1367
+00:29:43,760 --> 00:29:45,669
+uh in GIA but the results were not uh as
+good as I expected. It was very hard for
+
+1368
+00:29:45,669 --> 00:29:45,679
+good as I expected. It was very hard for
+ 
+
+1369
+00:29:45,679 --> 00:29:49,430
+good as I expected. It was very hard for
+it to uh to learn and what I tried to do
+
+1370
+00:29:49,430 --> 00:29:49,440
+it to uh to learn and what I tried to do
+ 
+
+1371
+00:29:49,440 --> 00:29:54,470
+it to uh to learn and what I tried to do
+is is to provide um basically a bias and
+
+1372
+00:29:54,470 --> 00:29:54,480
+is is to provide um basically a bias and
+ 
+
+1373
+00:29:54,480 --> 00:29:58,630
+is is to provide um basically a bias and
+prior within the reflection uh template.
+
+1374
+00:29:58,630 --> 00:29:58,640
+prior within the reflection uh template.
+ 
+
+1375
+00:29:58,640 --> 00:30:00,789
+prior within the reflection uh template.
+So you see here for example I mentioned
+
+1376
+00:30:00,789 --> 00:30:00,799
+So you see here for example I mentioned
+ 
+
+1377
+00:30:00,799 --> 00:30:03,430
+So you see here for example I mentioned
+obviously that uh it's basically the
+
+1378
+00:30:03,430 --> 00:30:03,440
+obviously that uh it's basically the
+ 
+
+1379
+00:30:03,440 --> 00:30:05,269
+obviously that uh it's basically the
+judge is reading an airline customer
+
+1380
+00:30:05,269 --> 00:30:05,279
+judge is reading an airline customer
+ 
+
+1381
+00:30:05,279 --> 00:30:06,789
+judge is reading an airline customer
+service
+
+1382
+00:30:06,789 --> 00:30:06,799
+service
+ 
+
+1383
+00:30:06,799 --> 00:30:09,190
+service
+um and it needs to kind of decide which
+
+1384
+00:30:09,190 --> 00:30:09,200
+um and it needs to kind of decide which
+ 
+
+1385
+00:30:09,200 --> 00:30:12,230
+um and it needs to kind of decide which
+is the basics but then you can look at
+
+1386
+00:30:12,230 --> 00:30:12,240
+is the basics but then you can look at
+ 
+
+1387
+00:30:12,240 --> 00:30:14,870
+is the basics but then you can look at
+um more information for example that our
+
+1388
+00:30:14,870 --> 00:30:14,880
+um more information for example that our
+ 
+
+1389
+00:30:14,880 --> 00:30:18,149
+um more information for example that our
+annotation that this uh kind of
+
+1390
+00:30:18,149 --> 00:30:18,159
+annotation that this uh kind of
+ 
+
+1391
+00:30:18,159 --> 00:30:21,510
+annotation that this uh kind of
+reflection template sees includes also
+
+1392
+00:30:21,510 --> 00:30:21,520
+reflection template sees includes also
+ 
+
+1393
+00:30:21,520 --> 00:30:23,430
+reflection template sees includes also
+uh the judge verdict the ground truth
+
+1394
+00:30:23,430 --> 00:30:23,440
+uh the judge verdict the ground truth
+ 
+
+1395
+00:30:23,440 --> 00:30:25,430
+uh the judge verdict the ground truth
+like the annotation like this is an
+
+1396
+00:30:25,430 --> 00:30:25,440
+like the annotation like this is an
+ 
+
+1397
+00:30:25,440 --> 00:30:26,630
+like the annotation like this is an
+important information that the
+
+1398
+00:30:26,630 --> 00:30:26,640
+important information that the
+ 
+
+1399
+00:30:26,640 --> 00:30:29,669
+important information that the
+reflection template should look into and
+
+1400
+00:30:29,669 --> 00:30:29,679
+reflection template should look into and
+ 
+
+1401
+00:30:29,679 --> 00:30:34,870
+reflection template should look into and
+improve. Um and uh basically I explain
+
+1402
+00:30:34,870 --> 00:30:34,880
+improve. Um and uh basically I explain
+ 
+
+1403
+00:30:34,880 --> 00:30:37,750
+improve. Um and uh basically I explain
+to to to the LLM how to do this. You can
+
+1404
+00:30:37,750 --> 00:30:37,760
+to to to the LLM how to do this. You can
+ 
+
+1405
+00:30:37,760 --> 00:30:40,630
+to to to the LLM how to do this. You can
+add rules, restructure existing one, uh
+
+1406
+00:30:40,630 --> 00:30:40,640
+add rules, restructure existing one, uh
+ 
+
+1407
+00:30:40,640 --> 00:30:44,389
+add rules, restructure existing one, uh
+reward things for clarity um and and try
+
+1408
+00:30:44,389 --> 00:30:44,399
+reward things for clarity um and and try
+ 
+
+1409
+00:30:44,399 --> 00:30:48,070
+reward things for clarity um and and try
+to think about it that the um the
+
+1410
+00:30:48,070 --> 00:30:48,080
+to think about it that the um the
+ 
+
+1411
+00:30:48,080 --> 00:30:50,389
+to think about it that the um the
+reflection template should basically
+
+1412
+00:30:50,389 --> 00:30:50,399
+reflection template should basically
+ 
+
+1413
+00:30:50,399 --> 00:30:52,870
+reflection template should basically
+create some real policy rules, right? It
+
+1414
+00:30:52,870 --> 00:30:52,880
+create some real policy rules, right? It
+ 
+
+1415
+00:30:52,880 --> 00:30:54,789
+create some real policy rules, right? It
+should find the right policies and
+
+1416
+00:30:54,789 --> 00:30:54,799
+should find the right policies and
+ 
+
+1417
+00:30:54,799 --> 00:30:58,149
+should find the right policies and
+abilities. And I think adding that was
+
+1418
+00:30:58,149 --> 00:30:58,159
+abilities. And I think adding that was
+ 
+
+1419
+00:30:58,159 --> 00:31:01,830
+abilities. And I think adding that was
+very um important to kind of improve the
+
+1420
+00:31:01,830 --> 00:31:01,840
+very um important to kind of improve the
+ 
+
+1421
+00:31:01,840 --> 00:31:04,389
+very um important to kind of improve the
+quality. Otherwise the default
+
+1422
+00:31:04,389 --> 00:31:04,399
+quality. Otherwise the default
+ 
+
+1423
+00:31:04,399 --> 00:31:07,990
+quality. Otherwise the default
+reflection template did not understand
+
+1424
+00:31:07,990 --> 00:31:08,000
+reflection template did not understand
+ 
+
+1425
+00:31:08,000 --> 00:31:11,750
+reflection template did not understand
+uh that that it should kind of try to uh
+
+1426
+00:31:11,750 --> 00:31:11,760
+uh that that it should kind of try to uh
+ 
+
+1427
+00:31:11,760 --> 00:31:14,789
+uh that that it should kind of try to uh
+learn the the policy more or less right
+
+1428
+00:31:14,789 --> 00:31:14,799
+learn the the policy more or less right
+ 
+
+1429
+00:31:14,799 --> 00:31:19,269
+learn the the policy more or less right
+with the LLM judge uh to some degree. Um
+
+1430
+00:31:19,269 --> 00:31:19,279
+with the LLM judge uh to some degree. Um
+ 
+
+1431
+00:31:19,279 --> 00:31:21,350
+with the LLM judge uh to some degree. Um
+so that's the second thing uh kind of I
+
+1432
+00:31:21,350 --> 00:31:21,360
+so that's the second thing uh kind of I
+ 
+
+1433
+00:31:21,360 --> 00:31:23,430
+so that's the second thing uh kind of I
+changed and I mean honestly I iterated
+
+1434
+00:31:23,430 --> 00:31:23,440
+changed and I mean honestly I iterated
+ 
+
+1435
+00:31:23,440 --> 00:31:25,510
+changed and I mean honestly I iterated
+only a little bit on it and then we run
+
+1436
+00:31:25,510 --> 00:31:25,520
+only a little bit on it and then we run
+ 
+
+1437
+00:31:25,520 --> 00:31:27,990
+only a little bit on it and then we run
+the optimization a run optimization is
+
+1438
+00:31:27,990 --> 00:31:28,000
+the optimization a run optimization is
+ 
+
+1439
+00:31:28,000 --> 00:31:31,029
+the optimization a run optimization is
+basically a wrapper around optimize
+
+1440
+00:31:31,029 --> 00:31:31,039
+basically a wrapper around optimize
+ 
+
+1441
+00:31:31,039 --> 00:31:34,870
+basically a wrapper around optimize
+anything and it just uh kind of
+
+1442
+00:31:34,870 --> 00:31:34,880
+anything and it just uh kind of
+ 
+
+1443
+00:31:34,880 --> 00:31:36,710
+anything and it just uh kind of
+parameterize it since I run like
+
+1444
+00:31:36,710 --> 00:31:36,720
+parameterize it since I run like
+ 
+
+1445
+00:31:36,720 --> 00:31:39,430
+parameterize it since I run like
+multiple experiments to find the one and
+
+1446
+00:31:39,430 --> 00:31:39,440
+multiple experiments to find the one and
+ 
+
+1447
+00:31:39,440 --> 00:31:41,750
+multiple experiments to find the one and
+it's actually uh it would be part of the
+
+1448
+00:31:41,750 --> 00:31:41,760
+it's actually uh it would be part of the
+ 
+
+1449
+00:31:41,760 --> 00:31:43,269
+it's actually uh it would be part of the
+GitHub repository and it's actually
+
+1450
+00:31:43,269 --> 00:31:43,279
+GitHub repository and it's actually
+ 
+
+1451
+00:31:43,279 --> 00:31:45,430
+GitHub repository and it's actually
+something that you can play around with
+
+1452
+00:31:45,430 --> 00:31:45,440
+something that you can play around with
+ 
+
+1453
+00:31:45,440 --> 00:31:47,830
+something that you can play around with
+and start with when you're exploring uh
+
+1454
+00:31:47,830 --> 00:31:47,840
+and start with when you're exploring uh
+ 
+
+1455
+00:31:47,840 --> 00:31:50,470
+and start with when you're exploring uh
+the space of design and gapan. You can
+
+1456
+00:31:50,470 --> 00:31:50,480
+the space of design and gapan. You can
+ 
+
+1457
+00:31:50,480 --> 00:31:54,230
+the space of design and gapan. You can
+see here it basically tries um to build
+
+1458
+00:31:54,230 --> 00:31:54,240
+see here it basically tries um to build
+ 
+
+1459
+00:31:54,240 --> 00:31:56,389
+see here it basically tries um to build
+um the configuration based on the
+
+1460
+00:31:56,389 --> 00:31:56,399
+um the configuration based on the
+ 
+
+1461
+00:31:56,399 --> 00:31:59,110
+um the configuration based on the
+parameters like the quarks and then
+
+1462
+00:31:59,110 --> 00:31:59,120
+parameters like the quarks and then
+ 
+
+1463
+00:31:59,120 --> 00:32:01,830
+parameters like the quarks and then
+calls optimize anything with these and
+
+1464
+00:32:01,830 --> 00:32:01,840
+calls optimize anything with these and
+ 
+
+1465
+00:32:01,840 --> 00:32:05,269
+calls optimize anything with these and
+for the uh kind of the make evaluator
+
+1466
+00:32:05,269 --> 00:32:05,279
+for the uh kind of the make evaluator
+ 
+
+1467
+00:32:05,279 --> 00:32:07,590
+for the uh kind of the make evaluator
+it's basically it calls the llm as a
+
+1468
+00:32:07,590 --> 00:32:07,600
+it's basically it calls the llm as a
+ 
+
+1469
+00:32:07,600 --> 00:32:09,269
+it's basically it calls the llm as a
+charge and all adds all the side
+
+1470
+00:32:09,269 --> 00:32:09,279
+charge and all adds all the side
+ 
+
+1471
+00:32:09,279 --> 00:32:11,830
+charge and all adds all the side
+information. So it doesn't only provide
+
+1472
+00:32:11,830 --> 00:32:11,840
+information. So it doesn't only provide
+ 
+
+1473
+00:32:11,840 --> 00:32:13,430
+information. So it doesn't only provide
+the trajectory but also kind of the
+
+1474
+00:32:13,430 --> 00:32:13,440
+the trajectory but also kind of the
+ 
+
+1475
+00:32:13,440 --> 00:32:16,389
+the trajectory but also kind of the
+annotation which is quite important.
+
+1476
+00:32:16,389 --> 00:32:16,399
+annotation which is quite important.
+ 
+
+1477
+00:32:16,399 --> 00:32:19,350
+annotation which is quite important.
+Um and then we run this um as I
+
+1478
+00:32:19,350 --> 00:32:19,360
+Um and then we run this um as I
+ 
+
+1479
+00:32:19,360 --> 00:32:21,029
+Um and then we run this um as I
+mentioned it takes around an hour to
+
+1480
+00:32:21,029 --> 00:32:21,039
+mentioned it takes around an hour to
+ 
+
+1481
+00:32:21,039 --> 00:32:23,430
+mentioned it takes around an hour to
+run. Um
+
+1482
+00:32:23,430 --> 00:32:23,440
+run. Um
+ 
+
+1483
+00:32:23,440 --> 00:32:26,149
+run. Um
+and you can see here the uh basically uh
+
+1484
+00:32:26,149 --> 00:32:26,159
+and you can see here the uh basically uh
+ 
+
+1485
+00:32:26,159 --> 00:32:30,389
+and you can see here the uh basically uh
+the results this is the optimized rubric
+
+1486
+00:32:30,389 --> 00:32:30,399
+the results this is the optimized rubric
+ 
+
+1487
+00:32:30,399 --> 00:32:32,470
+the results this is the optimized rubric
+and you can see compared to the default
+
+1488
+00:32:32,470 --> 00:32:32,480
+and you can see compared to the default
+ 
+
+1489
+00:32:32,480 --> 00:32:35,669
+and you can see compared to the default
+where we started it's it learned part of
+
+1490
+00:32:35,669 --> 00:32:35,679
+where we started it's it learned part of
+ 
+
+1491
+00:32:35,679 --> 00:32:37,909
+where we started it's it learned part of
+the policy criteria like the flight
+
+1492
+00:32:37,909 --> 00:32:37,919
+the policy criteria like the flight
+ 
+
+1493
+00:32:37,919 --> 00:32:40,310
+the policy criteria like the flight
+cancellation and refines flight
+
+1494
+00:32:40,310 --> 00:32:40,320
+cancellation and refines flight
+ 
+
+1495
+00:32:40,320 --> 00:32:42,070
+cancellation and refines flight
+modification
+
+1496
+00:32:42,070 --> 00:32:42,080
+modification
+ 
+
+1497
+00:32:42,080 --> 00:32:44,630
+modification
+um uh how to communicate and so on and
+
+1498
+00:32:44,630 --> 00:32:44,640
+um uh how to communicate and so on and
+ 
+
+1499
+00:32:44,640 --> 00:32:45,909
+um uh how to communicate and so on and
+so forth.
+
+1500
+00:32:45,909 --> 00:32:45,919
+so forth.
+ 
+
+1501
+00:32:45,919 --> 00:32:48,389
+so forth.
+Now if we look at the results like with
+
+1502
+00:32:48,389 --> 00:32:48,399
+Now if we look at the results like with
+ 
+
+1503
+00:32:48,399 --> 00:32:51,269
+Now if we look at the results like with
+the kind of evaluate uh rubric to
+
+1504
+00:32:51,269 --> 00:32:51,279
+the kind of evaluate uh rubric to
+ 
+
+1505
+00:32:51,279 --> 00:32:53,029
+the kind of evaluate uh rubric to
+evaluate it we see that the accuracy
+
+1506
+00:32:53,029 --> 00:32:53,039
+evaluate it we see that the accuracy
+ 
+
+1507
+00:32:53,039 --> 00:32:57,110
+evaluate it we see that the accuracy
+increased from 69% to 74%.
+
+1508
+00:32:57,110 --> 00:32:57,120
+increased from 69% to 74%.
+ 
+
+1509
+00:32:57,120 --> 00:33:00,870
+increased from 69% to 74%.
+And uh we removed the bias right so what
+
+1510
+00:33:00,870 --> 00:33:00,880
+And uh we removed the bias right so what
+ 
+
+1511
+00:33:00,880 --> 00:33:03,110
+And uh we removed the bias right so what
+especially changed is the recall for the
+
+1512
+00:33:03,110 --> 00:33:03,120
+especially changed is the recall for the
+ 
+
+1513
+00:33:03,120 --> 00:33:05,430
+especially changed is the recall for the
+non-compliant and the precision for the
+
+1514
+00:33:05,430 --> 00:33:05,440
+non-compliant and the precision for the
+ 
+
+1515
+00:33:05,440 --> 00:33:07,350
+non-compliant and the precision for the
+non-compliant which was basically zero
+
+1516
+00:33:07,350 --> 00:33:07,360
+non-compliant which was basically zero
+ 
+
+1517
+00:33:07,360 --> 00:33:10,630
+non-compliant which was basically zero
+in the beginning. Now uh the LLM as a
+
+1518
+00:33:10,630 --> 00:33:10,640
+in the beginning. Now uh the LLM as a
+ 
+
+1519
+00:33:10,640 --> 00:33:13,990
+in the beginning. Now uh the LLM as a
+judge is uh has less bias at 64%. So
+
+1520
+00:33:13,990 --> 00:33:14,000
+judge is uh has less bias at 64%. So
+ 
+
+1521
+00:33:14,000 --> 00:33:17,269
+judge is uh has less bias at 64%. So
+previously it was 98% and it's really
+
+1522
+00:33:17,269 --> 00:33:17,279
+previously it was 98% and it's really
+ 
+
+1523
+00:33:17,279 --> 00:33:19,590
+previously it was 98% and it's really
+learned parts of the policy. So looking
+
+1524
+00:33:19,590 --> 00:33:19,600
+learned parts of the policy. So looking
+ 
+
+1525
+00:33:19,600 --> 00:33:21,750
+learned parts of the policy. So looking
+at the results as I mentioned like for
+
+1526
+00:33:21,750 --> 00:33:21,760
+at the results as I mentioned like for
+ 
+
+1527
+00:33:21,760 --> 00:33:24,789
+at the results as I mentioned like for
+the validation set we had a quite a lot
+
+1528
+00:33:24,789 --> 00:33:24,799
+the validation set we had a quite a lot
+ 
+
+1529
+00:33:24,799 --> 00:33:27,350
+the validation set we had a quite a lot
+of improvement like 14%.
+
+1530
+00:33:27,350 --> 00:33:27,360
+of improvement like 14%.
+ 
+
+1531
+00:33:27,360 --> 00:33:29,750
+of improvement like 14%.
+And uh for the training accuracy it
+
+1532
+00:33:29,750 --> 00:33:29,760
+And uh for the training accuracy it
+ 
+
+1533
+00:33:29,760 --> 00:33:31,909
+And uh for the training accuracy it
+improved by nine points and we can see
+
+1534
+00:33:31,909 --> 00:33:31,919
+improved by nine points and we can see
+ 
+
+1535
+00:33:31,919 --> 00:33:34,549
+improved by nine points and we can see
+that the parto frontier interestingly
+
+1536
+00:33:34,549 --> 00:33:34,559
+that the parto frontier interestingly
+ 
+
+1537
+00:33:34,559 --> 00:33:37,750
+that the parto frontier interestingly
+accuracy is now 100%. Meaning that for
+
+1538
+00:33:37,750 --> 00:33:37,760
+accuracy is now 100%. Meaning that for
+ 
+
+1539
+00:33:37,760 --> 00:33:40,950
+accuracy is now 100%. Meaning that for
+each task there is one candidate that we
+
+1540
+00:33:40,950 --> 00:33:40,960
+each task there is one candidate that we
+ 
+
+1541
+00:33:40,960 --> 00:33:43,190
+each task there is one candidate that we
+generated that solved it. uh the issue
+
+1542
+00:33:43,190 --> 00:33:43,200
+generated that solved it. uh the issue
+ 
+
+1543
+00:33:43,200 --> 00:33:45,830
+generated that solved it. uh the issue
+the algorithm faced is how to merge all
+
+1544
+00:33:45,830 --> 00:33:45,840
+the algorithm faced is how to merge all
+ 
+
+1545
+00:33:45,840 --> 00:33:47,430
+the algorithm faced is how to merge all
+these candidates and all the information
+
+1546
+00:33:47,430 --> 00:33:47,440
+these candidates and all the information
+ 
+
+1547
+00:33:47,440 --> 00:33:49,110
+these candidates and all the information
+to have one prompt that solves
+
+1548
+00:33:49,110 --> 00:33:49,120
+to have one prompt that solves
+ 
+
+1549
+00:33:49,120 --> 00:33:51,750
+to have one prompt that solves
+everything. Um and it struggled to do
+
+1550
+00:33:51,750 --> 00:33:51,760
+everything. Um and it struggled to do
+ 
+
+1551
+00:33:51,760 --> 00:33:53,509
+everything. Um and it struggled to do
+this. So at the end of the day we
+
+1552
+00:33:53,509 --> 00:33:53,519
+this. So at the end of the day we
+ 
+
+1553
+00:33:53,519 --> 00:33:56,149
+this. So at the end of the day we
+improved the LLM as a judge. We improved
+
+1554
+00:33:56,149 --> 00:33:56,159
+improved the LLM as a judge. We improved
+ 
+
+1555
+00:33:56,159 --> 00:33:59,990
+improved the LLM as a judge. We improved
+its accuracy but it's very still quite
+
+1556
+00:33:59,990 --> 00:34:00,000
+its accuracy but it's very still quite
+ 
+
+1557
+00:34:00,000 --> 00:34:03,269
+its accuracy but it's very still quite
+far from kind of 95% accuracy or
+
+1558
+00:34:03,269 --> 00:34:03,279
+far from kind of 95% accuracy or
+ 
+
+1559
+00:34:03,279 --> 00:34:05,430
+far from kind of 95% accuracy or
+something that is really well aligned
+
+1560
+00:34:05,430 --> 00:34:05,440
+something that is really well aligned
+ 
+
+1561
+00:34:05,440 --> 00:34:07,430
+something that is really well aligned
+with the human judgment. Obviously here
+
+1562
+00:34:07,430 --> 00:34:07,440
+with the human judgment. Obviously here
+ 
+
+1563
+00:34:07,440 --> 00:34:09,589
+with the human judgment. Obviously here
+I didn't invest extreme amount of time
+
+1564
+00:34:09,589 --> 00:34:09,599
+I didn't invest extreme amount of time
+ 
+
+1565
+00:34:09,599 --> 00:34:11,349
+I didn't invest extreme amount of time
+in it and as I mentioned in the
+
+1566
+00:34:11,349 --> 00:34:11,359
+in it and as I mentioned in the
+ 
+
+1567
+00:34:11,359 --> 00:34:12,950
+in it and as I mentioned in the
+beginning the quality of the data is
+
+1568
+00:34:12,950 --> 00:34:12,960
+beginning the quality of the data is
+ 
+
+1569
+00:34:12,960 --> 00:34:17,669
+beginning the quality of the data is
+also um would be better I would guess in
+
+1570
+00:34:17,669 --> 00:34:17,679
+also um would be better I would guess in
+ 
+
+1571
+00:34:17,679 --> 00:34:20,230
+also um would be better I would guess in
+other cases it's really a tricky uh
+
+1572
+00:34:20,230 --> 00:34:20,240
+other cases it's really a tricky uh
+ 
+
+1573
+00:34:20,240 --> 00:34:21,990
+other cases it's really a tricky uh
+example
+
+1574
+00:34:21,990 --> 00:34:22,000
+example
+ 
+
+1575
+00:34:22,000 --> 00:34:24,710
+example
+um but but nevertheless it took actually
+
+1576
+00:34:24,710 --> 00:34:24,720
+um but but nevertheless it took actually
+ 
+
+1577
+00:34:24,720 --> 00:34:26,790
+um but but nevertheless it took actually
+quite a number of iteration I think
+
+1578
+00:34:26,790 --> 00:34:26,800
+quite a number of iteration I think
+ 
+
+1579
+00:34:26,800 --> 00:34:29,750
+quite a number of iteration I think
+that's the biggest learning to uh to
+
+1580
+00:34:29,750 --> 00:34:29,760
+that's the biggest learning to uh to
+ 
+
+1581
+00:34:29,760 --> 00:34:32,470
+that's the biggest learning to uh to
+reach this LLM as a judge it's not an
+
+1582
+00:34:32,470 --> 00:34:32,480
+reach this LLM as a judge it's not an
+ 
+
+1583
+00:34:32,480 --> 00:34:34,230
+reach this LLM as a judge it's not an
+algorithm that you just take and it
+
+1584
+00:34:34,230 --> 00:34:34,240
+algorithm that you just take and it
+ 
+
+1585
+00:34:34,240 --> 00:34:36,950
+algorithm that you just take and it
+works from from day one unless for kind
+
+1586
+00:34:36,950 --> 00:34:36,960
+works from from day one unless for kind
+ 
+
+1587
+00:34:36,960 --> 00:34:41,909
+works from from day one unless for kind
+of toy examples and uh I wanted to show
+
+1588
+00:34:41,909 --> 00:34:41,919
+of toy examples and uh I wanted to show
+ 
+
+1589
+00:34:41,919 --> 00:34:44,069
+of toy examples and uh I wanted to show
+a little bit in the end like what are
+
+1590
+00:34:44,069 --> 00:34:44,079
+a little bit in the end like what are
+ 
+
+1591
+00:34:44,079 --> 00:34:46,389
+a little bit in the end like what are
+the experiments I I tried in the
+
+1592
+00:34:46,389 --> 00:34:46,399
+the experiments I I tried in the
+ 
+
+1593
+00:34:46,399 --> 00:34:49,109
+the experiments I I tried in the
+beginning uh that failed and how did I
+
+1594
+00:34:49,109 --> 00:34:49,119
+beginning uh that failed and how did I
+ 
+
+1595
+00:34:49,119 --> 00:34:52,149
+beginning uh that failed and how did I
+think about fixing them. Um the first
+
+1596
+00:34:52,149 --> 00:34:52,159
+think about fixing them. Um the first
+ 
+
+1597
+00:34:52,159 --> 00:34:55,829
+think about fixing them. Um the first
+thing was actually uh using smaller or
+
+1598
+00:34:55,829 --> 00:34:55,839
+thing was actually uh using smaller or
+ 
+
+1599
+00:34:55,839 --> 00:34:59,349
+thing was actually uh using smaller or
+older model like using GPD40
+
+1600
+00:34:59,349 --> 00:34:59,359
+older model like using GPD40
+ 
+
+1601
+00:34:59,359 --> 00:35:02,230
+older model like using GPD40
+uh for both the refiner and the LLM as a
+
+1602
+00:35:02,230 --> 00:35:02,240
+uh for both the refiner and the LLM as a
+ 
+
+1603
+00:35:02,240 --> 00:35:04,390
+uh for both the refiner and the LLM as a
+judge and that was a complete failure
+
+1604
+00:35:04,390 --> 00:35:04,400
+judge and that was a complete failure
+ 
+
+1605
+00:35:04,400 --> 00:35:08,790
+judge and that was a complete failure
+like uh smaller models really are very
+
+1606
+00:35:08,790 --> 00:35:08,800
+like uh smaller models really are very
+ 
+
+1607
+00:35:08,800 --> 00:35:10,470
+like uh smaller models really are very
+bad at least in this example to be
+
+1608
+00:35:10,470 --> 00:35:10,480
+bad at least in this example to be
+ 
+
+1609
+00:35:10,480 --> 00:35:13,589
+bad at least in this example to be
+either an LLM as a judge or a refiner.
+
+1610
+00:35:13,589 --> 00:35:13,599
+either an LLM as a judge or a refiner.
+ 
+
+1611
+00:35:13,599 --> 00:35:16,470
+either an LLM as a judge or a refiner.
+um uh for the LLM as a judge providing
+
+1612
+00:35:16,470 --> 00:35:16,480
+um uh for the LLM as a judge providing
+ 
+
+1613
+00:35:16,480 --> 00:35:18,390
+um uh for the LLM as a judge providing
+all this policy especially it has a lot
+
+1614
+00:35:18,390 --> 00:35:18,400
+all this policy especially it has a lot
+ 
+
+1615
+00:35:18,400 --> 00:35:21,430
+all this policy especially it has a lot
+of kind of complicated logic it just
+
+1616
+00:35:21,430 --> 00:35:21,440
+of kind of complicated logic it just
+ 
+
+1617
+00:35:21,440 --> 00:35:23,990
+of kind of complicated logic it just
+failed and could not improve it. I tried
+
+1618
+00:35:23,990 --> 00:35:24,000
+failed and could not improve it. I tried
+ 
+
+1619
+00:35:24,000 --> 00:35:27,270
+failed and could not improve it. I tried
+other models. I tried mini and nano and
+
+1620
+00:35:27,270 --> 00:35:27,280
+other models. I tried mini and nano and
+ 
+
+1621
+00:35:27,280 --> 00:35:30,310
+other models. I tried mini and nano and
+gemini and deepsek and and you see that
+
+1622
+00:35:30,310 --> 00:35:30,320
+gemini and deepsek and and you see that
+ 
+
+1623
+00:35:30,320 --> 00:35:32,230
+gemini and deepsek and and you see that
+the best kind of results with this kind
+
+1624
+00:35:32,230 --> 00:35:32,240
+the best kind of results with this kind
+ 
+
+1625
+00:35:32,240 --> 00:35:35,670
+the best kind of results with this kind
+of uh using uh Gemini for reflection and
+
+1626
+00:35:35,670 --> 00:35:35,680
+of uh using uh Gemini for reflection and
+ 
+
+1627
+00:35:35,680 --> 00:35:38,150
+of uh using uh Gemini for reflection and
+uh Grock for a judge. But I would say
+
+1628
+00:35:38,150 --> 00:35:38,160
+uh Grock for a judge. But I would say
+ 
+
+1629
+00:35:38,160 --> 00:35:41,430
+uh Grock for a judge. But I would say
+also using uh GPT4 mini for both is
+
+1630
+00:35:41,430 --> 00:35:41,440
+also using uh GPT4 mini for both is
+ 
+
+1631
+00:35:41,440 --> 00:35:43,270
+also using uh GPT4 mini for both is
+actually quite good and the results
+
+1632
+00:35:43,270 --> 00:35:43,280
+actually quite good and the results
+ 
+
+1633
+00:35:43,280 --> 00:35:46,950
+actually quite good and the results
+quite well. The other thing was actually
+
+1634
+00:35:46,950 --> 00:35:46,960
+quite well. The other thing was actually
+ 
+
+1635
+00:35:46,960 --> 00:35:50,069
+quite well. The other thing was actually
+trying how to try to debug it and and
+
+1636
+00:35:50,069 --> 00:35:50,079
+trying how to try to debug it and and
+ 
+
+1637
+00:35:50,079 --> 00:35:52,310
+trying how to try to debug it and and
+what I tried to do from the beginning is
+
+1638
+00:35:52,310 --> 00:35:52,320
+what I tried to do from the beginning is
+ 
+
+1639
+00:35:52,320 --> 00:35:56,069
+what I tried to do from the beginning is
+really to not start sampling doing big
+
+1640
+00:35:56,069 --> 00:35:56,079
+really to not start sampling doing big
+ 
+
+1641
+00:35:56,079 --> 00:35:58,470
+really to not start sampling doing big
+experiments from the beginning but
+
+1642
+00:35:58,470 --> 00:35:58,480
+experiments from the beginning but
+ 
+
+1643
+00:35:58,480 --> 00:36:00,790
+experiments from the beginning but
+trying first uh kind of a small
+
+1644
+00:36:00,790 --> 00:36:00,800
+trying first uh kind of a small
+ 
+
+1645
+00:36:00,800 --> 00:36:03,750
+trying first uh kind of a small
+iterations looking at the reasoning LLM
+
+1646
+00:36:03,750 --> 00:36:03,760
+iterations looking at the reasoning LLM
+ 
+
+1647
+00:36:03,760 --> 00:36:05,750
+iterations looking at the reasoning LLM
+looking at the candidate how do they
+
+1648
+00:36:05,750 --> 00:36:05,760
+looking at the candidate how do they
+ 
+
+1649
+00:36:05,760 --> 00:36:07,910
+looking at the candidate how do they
+improve how many improved and
+
+1650
+00:36:07,910 --> 00:36:07,920
+improve how many improved and
+ 
+
+1651
+00:36:07,920 --> 00:36:10,470
+improve how many improved and
+understanding what's happening and that
+
+1652
+00:36:10,470 --> 00:36:10,480
+understanding what's happening and that
+ 
+
+1653
+00:36:10,480 --> 00:36:14,310
+understanding what's happening and that
+actually what uh what allowed me to kind
+
+1654
+00:36:14,310 --> 00:36:14,320
+actually what uh what allowed me to kind
+ 
+
+1655
+00:36:14,320 --> 00:36:16,550
+actually what uh what allowed me to kind
+of think about improving the refined
+
+1656
+00:36:16,550 --> 00:36:16,560
+of think about improving the refined
+ 
+
+1657
+00:36:16,560 --> 00:36:20,950
+of think about improving the refined
+prompts um and and basically adding some
+
+1658
+00:36:20,950 --> 00:36:20,960
+prompts um and and basically adding some
+ 
+
+1659
+00:36:20,960 --> 00:36:24,230
+prompts um and and basically adding some
+uh prior there to to kind of help solve
+
+1660
+00:36:24,230 --> 00:36:24,240
+uh prior there to to kind of help solve
+ 
+
+1661
+00:36:24,240 --> 00:36:26,230
+uh prior there to to kind of help solve
+it. Basically what I did is I stopped at
+
+1662
+00:36:26,230 --> 00:36:26,240
+it. Basically what I did is I stopped at
+ 
+
+1663
+00:36:26,240 --> 00:36:28,790
+it. Basically what I did is I stopped at
+the first iteration, found some example
+
+1664
+00:36:28,790 --> 00:36:28,800
+the first iteration, found some example
+ 
+
+1665
+00:36:28,800 --> 00:36:30,470
+the first iteration, found some example
+and then looked a little bit kind of
+
+1666
+00:36:30,470 --> 00:36:30,480
+and then looked a little bit kind of
+ 
+
+1667
+00:36:30,480 --> 00:36:31,990
+and then looked a little bit kind of
+fine-tuned
+
+1668
+00:36:31,990 --> 00:36:32,000
+fine-tuned
+ 
+
+1669
+00:36:32,000 --> 00:36:35,430
+fine-tuned
+um in closed code. Uh that refinement
+
+1670
+00:36:35,430 --> 00:36:35,440
+um in closed code. Uh that refinement
+ 
+
+1671
+00:36:35,440 --> 00:36:38,550
+um in closed code. Uh that refinement
+prompt to uh to basically allow it to
+
+1672
+00:36:38,550 --> 00:36:38,560
+prompt to uh to basically allow it to
+ 
+
+1673
+00:36:38,560 --> 00:36:42,310
+prompt to uh to basically allow it to
+improve um the candidates and and as
+
+1674
+00:36:42,310 --> 00:36:42,320
+improve um the candidates and and as
+ 
+
+1675
+00:36:42,320 --> 00:36:43,990
+improve um the candidates and and as
+always in machine learning like what you
+
+1676
+00:36:43,990 --> 00:36:44,000
+always in machine learning like what you
+ 
+
+1677
+00:36:44,000 --> 00:36:45,990
+always in machine learning like what you
+always try to do is to overfitit for the
+
+1678
+00:36:45,990 --> 00:36:46,000
+always try to do is to overfitit for the
+ 
+
+1679
+00:36:46,000 --> 00:36:47,990
+always try to do is to overfitit for the
+training data. Not trying to run the old
+
+1680
+00:36:47,990 --> 00:36:48,000
+training data. Not trying to run the old
+ 
+
+1681
+00:36:48,000 --> 00:36:50,550
+training data. Not trying to run the old
+algorithm but really trying to find a
+
+1682
+00:36:50,550 --> 00:36:50,560
+algorithm but really trying to find a
+ 
+
+1683
+00:36:50,560 --> 00:36:52,390
+algorithm but really trying to find a
+way so that it works. And I think what
+
+1684
+00:36:52,390 --> 00:36:52,400
+way so that it works. And I think what
+ 
+
+1685
+00:36:52,400 --> 00:36:54,310
+way so that it works. And I think what
+we saw with the par to frontier reaching
+
+1686
+00:36:54,310 --> 00:36:54,320
+we saw with the par to frontier reaching
+ 
+
+1687
+00:36:54,320 --> 00:36:58,150
+we saw with the par to frontier reaching
+100% is we almost overfit to the
+
+1688
+00:36:58,150 --> 00:36:58,160
+100% is we almost overfit to the
+ 
+
+1689
+00:36:58,160 --> 00:37:00,390
+100% is we almost overfit to the
+training data but obviously for the
+
+1690
+00:37:00,390 --> 00:37:00,400
+training data but obviously for the
+ 
+
+1691
+00:37:00,400 --> 00:37:02,150
+training data but obviously for the
+merge there are like things I think we
+
+1692
+00:37:02,150 --> 00:37:02,160
+merge there are like things I think we
+ 
+
+1693
+00:37:02,160 --> 00:37:05,109
+merge there are like things I think we
+can do to improve and the final thing
+
+1694
+00:37:05,109 --> 00:37:05,119
+can do to improve and the final thing
+ 
+
+1695
+00:37:05,119 --> 00:37:07,750
+can do to improve and the final thing
+was kind of this iteration on the seat
+
+1696
+00:37:07,750 --> 00:37:07,760
+was kind of this iteration on the seat
+ 
+
+1697
+00:37:07,760 --> 00:37:10,630
+was kind of this iteration on the seat
+prompt there I actually iterated on
+
+1698
+00:37:10,630 --> 00:37:10,640
+prompt there I actually iterated on
+ 
+
+1699
+00:37:10,640 --> 00:37:12,870
+prompt there I actually iterated on
+multiple seat prompts and there were two
+
+1700
+00:37:12,870 --> 00:37:12,880
+multiple seat prompts and there were two
+ 
+
+1701
+00:37:12,880 --> 00:37:15,670
+multiple seat prompts and there were two
+families one which as you have seen here
+
+1702
+00:37:15,670 --> 00:37:15,680
+families one which as you have seen here
+ 
+
+1703
+00:37:15,680 --> 00:37:20,550
+families one which as you have seen here
+is uh kind of was not did not include
+
+1704
+00:37:20,550 --> 00:37:20,560
+is uh kind of was not did not include
+ 
+
+1705
+00:37:20,560 --> 00:37:23,190
+is uh kind of was not did not include
+any information about the agent prompt
+
+1706
+00:37:23,190 --> 00:37:23,200
+any information about the agent prompt
+ 
+
+1707
+00:37:23,200 --> 00:37:25,190
+any information about the agent prompt
+because we have access to that right and
+
+1708
+00:37:25,190 --> 00:37:25,200
+because we have access to that right and
+ 
+
+1709
+00:37:25,200 --> 00:37:27,430
+because we have access to that right and
+the agent prompt does have access to the
+
+1710
+00:37:27,430 --> 00:37:27,440
+the agent prompt does have access to the
+ 
+
+1711
+00:37:27,440 --> 00:37:30,870
+the agent prompt does have access to the
+policy and one which had access to the
+
+1712
+00:37:30,870 --> 00:37:30,880
+policy and one which had access to the
+ 
+
+1713
+00:37:30,880 --> 00:37:32,710
+policy and one which had access to the
+policy so basically it was this prompt
+
+1714
+00:37:32,710 --> 00:37:32,720
+policy so basically it was this prompt
+ 
+
+1715
+00:37:32,720 --> 00:37:35,910
+policy so basically it was this prompt
+that I've shown uh but then the policy
+
+1716
+00:37:35,910 --> 00:37:35,920
+that I've shown uh but then the policy
+ 
+
+1717
+00:37:35,920 --> 00:37:38,790
+that I've shown uh but then the policy
+of the agent like really copypasted and
+
+1718
+00:37:38,790 --> 00:37:38,800
+of the agent like really copypasted and
+ 
+
+1719
+00:37:38,800 --> 00:37:40,310
+of the agent like really copypasted and
+interestingly
+
+1720
+00:37:40,310 --> 00:37:40,320
+interestingly
+ 
+
+1721
+00:37:40,320 --> 00:37:42,310
+interestingly
+uh the uh prompt that did not have
+
+1722
+00:37:42,310 --> 00:37:42,320
+uh the uh prompt that did not have
+ 
+
+1723
+00:37:42,320 --> 00:37:45,270
+uh the uh prompt that did not have
+access to the policy did uh better
+
+1724
+00:37:45,270 --> 00:37:45,280
+access to the policy did uh better
+ 
+
+1725
+00:37:45,280 --> 00:37:48,630
+access to the policy did uh better
+because my hypothesis is that if you
+
+1726
+00:37:48,630 --> 00:37:48,640
+because my hypothesis is that if you
+ 
+
+1727
+00:37:48,640 --> 00:37:50,710
+because my hypothesis is that if you
+have access to the agent policy from the
+
+1728
+00:37:50,710 --> 00:37:50,720
+have access to the agent policy from the
+ 
+
+1729
+00:37:50,720 --> 00:37:52,870
+have access to the agent policy from the
+beginning then it's very hard to
+
+1730
+00:37:52,870 --> 00:37:52,880
+beginning then it's very hard to
+ 
+
+1731
+00:37:52,880 --> 00:37:55,750
+beginning then it's very hard to
+fine-tune it. You're already stuck in a
+
+1732
+00:37:55,750 --> 00:37:55,760
+fine-tune it. You're already stuck in a
+ 
+
+1733
+00:37:55,760 --> 00:37:57,670
+fine-tune it. You're already stuck in a
+local minima that you can not improve
+
+1734
+00:37:57,670 --> 00:37:57,680
+local minima that you can not improve
+ 
+
+1735
+00:37:57,680 --> 00:38:00,790
+local minima that you can not improve
+on. But if you don't have access to the
+
+1736
+00:38:00,790 --> 00:38:00,800
+on. But if you don't have access to the
+ 
+
+1737
+00:38:00,800 --> 00:38:03,589
+on. But if you don't have access to the
+policy and yet obviously you have access
+
+1738
+00:38:03,589 --> 00:38:03,599
+policy and yet obviously you have access
+ 
+
+1739
+00:38:03,599 --> 00:38:05,430
+policy and yet obviously you have access
+to the annotations
+
+1740
+00:38:05,430 --> 00:38:05,440
+to the annotations
+ 
+
+1741
+00:38:05,440 --> 00:38:07,910
+to the annotations
+that describe in this case all the
+
+1742
+00:38:07,910 --> 00:38:07,920
+that describe in this case all the
+ 
+
+1743
+00:38:07,920 --> 00:38:12,310
+that describe in this case all the
+policy uh or a large part of the policy
+
+1744
+00:38:12,310 --> 00:38:12,320
+policy uh or a large part of the policy
+ 
+
+1745
+00:38:12,320 --> 00:38:16,790
+policy uh or a large part of the policy
+then you you are able uh to um to
+
+1746
+00:38:16,790 --> 00:38:16,800
+then you you are able uh to um to
+ 
+
+1747
+00:38:16,800 --> 00:38:19,589
+then you you are able uh to um to
+explore the space of the prompts much
+
+1748
+00:38:19,589 --> 00:38:19,599
+explore the space of the prompts much
+ 
+
+1749
+00:38:19,599 --> 00:38:20,630
+explore the space of the prompts much
+better.
+
+1750
+00:38:20,630 --> 00:38:20,640
+better.
+ 
+
+1751
+00:38:20,640 --> 00:38:23,829
+better.
+Um and finally the last point is beware
+
+1752
+00:38:23,829 --> 00:38:23,839
+Um and finally the last point is beware
+ 
+
+1753
+00:38:23,839 --> 00:38:27,030
+Um and finally the last point is beware
+of the cost. I mean um even these small
+
+1754
+00:38:27,030 --> 00:38:27,040
+of the cost. I mean um even these small
+ 
+
+1755
+00:38:27,040 --> 00:38:28,870
+of the cost. I mean um even these small
+experiments I've done I think they cost
+
+1756
+00:38:28,870 --> 00:38:28,880
+experiments I've done I think they cost
+ 
+
+1757
+00:38:28,880 --> 00:38:31,190
+experiments I've done I think they cost
+like $2 $300
+
+1758
+00:38:31,190 --> 00:38:31,200
+like $2 $300
+ 
+
+1759
+00:38:31,200 --> 00:38:35,030
+like $2 $300
+uh in tokens especially since uh the
+
+1760
+00:38:35,030 --> 00:38:35,040
+uh in tokens especially since uh the
+ 
+
+1761
+00:38:35,040 --> 00:38:36,870
+uh in tokens especially since uh the
+trajectories are long. So there is a lot
+
+1762
+00:38:36,870 --> 00:38:36,880
+trajectories are long. So there is a lot
+ 
+
+1763
+00:38:36,880 --> 00:38:41,510
+trajectories are long. So there is a lot
+of input tokens uh in this case. Uh but
+
+1764
+00:38:41,510 --> 00:38:41,520
+of input tokens uh in this case. Uh but
+ 
+
+1765
+00:38:41,520 --> 00:38:45,589
+of input tokens uh in this case. Uh but
+um the models that are used
+
+1766
+00:38:45,589 --> 00:38:45,599
+um the models that are used
+ 
+
+1767
+00:38:45,599 --> 00:38:48,310
+um the models that are used
+um are actually quite expensive, right?
+
+1768
+00:38:48,310 --> 00:38:48,320
+um are actually quite expensive, right?
+ 
+
+1769
+00:38:48,320 --> 00:38:51,190
+um are actually quite expensive, right?
+Uh GPT4, I mean I tried a little bit to
+
+1770
+00:38:51,190 --> 00:38:51,200
+Uh GPT4, I mean I tried a little bit to
+ 
+
+1771
+00:38:51,200 --> 00:38:53,270
+Uh GPT4, I mean I tried a little bit to
+play around with GP4, but that ate a lot
+
+1772
+00:38:53,270 --> 00:38:53,280
+play around with GP4, but that ate a lot
+ 
+
+1773
+00:38:53,280 --> 00:38:55,510
+play around with GP4, but that ate a lot
+of money. So I stopped the experiment.
+
+1774
+00:38:55,510 --> 00:38:55,520
+of money. So I stopped the experiment.
+ 
+
+1775
+00:38:55,520 --> 00:38:59,030
+of money. So I stopped the experiment.
+But even GP4 mini is quite expensive to
+
+1776
+00:38:59,030 --> 00:38:59,040
+But even GP4 mini is quite expensive to
+ 
+
+1777
+00:38:59,040 --> 00:39:02,550
+But even GP4 mini is quite expensive to
+some degree. And then if you go uh nano,
+
+1778
+00:39:02,550 --> 00:39:02,560
+some degree. And then if you go uh nano,
+ 
+
+1779
+00:39:02,560 --> 00:39:03,990
+some degree. And then if you go uh nano,
+at least from what I seen, it doesn't
+
+1780
+00:39:03,990 --> 00:39:04,000
+at least from what I seen, it doesn't
+ 
+
+1781
+00:39:04,000 --> 00:39:06,230
+at least from what I seen, it doesn't
+work right. So you you go to kind of
+
+1782
+00:39:06,230 --> 00:39:06,240
+work right. So you you go to kind of
+ 
+
+1783
+00:39:06,240 --> 00:39:08,550
+work right. So you you go to kind of
+smaller model, cheaper model, it does
+
+1784
+00:39:08,550 --> 00:39:08,560
+smaller model, cheaper model, it does
+ 
+
+1785
+00:39:08,560 --> 00:39:10,310
+smaller model, cheaper model, it does
+not work. Usually what they say you
+
+1786
+00:39:10,310 --> 00:39:10,320
+not work. Usually what they say you
+ 
+
+1787
+00:39:10,320 --> 00:39:12,550
+not work. Usually what they say you
+should use uh kind of a bigger model for
+
+1788
+00:39:12,550 --> 00:39:12,560
+should use uh kind of a bigger model for
+ 
+
+1789
+00:39:12,560 --> 00:39:15,030
+should use uh kind of a bigger model for
+the refinement prompt and smaller model
+
+1790
+00:39:15,030 --> 00:39:15,040
+the refinement prompt and smaller model
+ 
+
+1791
+00:39:15,040 --> 00:39:17,349
+the refinement prompt and smaller model
+for the LLM as a judge. I think it makes
+
+1792
+00:39:17,349 --> 00:39:17,359
+for the LLM as a judge. I think it makes
+ 
+
+1793
+00:39:17,359 --> 00:39:19,510
+for the LLM as a judge. I think it makes
+sense especially if you're running LM as
+
+1794
+00:39:19,510 --> 00:39:19,520
+sense especially if you're running LM as
+ 
+
+1795
+00:39:19,520 --> 00:39:21,990
+sense especially if you're running LM as
+a judge against a lot of traces like in
+
+1796
+00:39:21,990 --> 00:39:22,000
+a judge against a lot of traces like in
+ 
+
+1797
+00:39:22,000 --> 00:39:24,069
+a judge against a lot of traces like in
+the case of online evaluation. It's
+
+1798
+00:39:24,069 --> 00:39:24,079
+the case of online evaluation. It's
+ 
+
+1799
+00:39:24,079 --> 00:39:26,470
+the case of online evaluation. It's
+obvious that it's it's worthwhile the
+
+1800
+00:39:26,470 --> 00:39:26,480
+obvious that it's it's worthwhile the
+ 
+
+1801
+00:39:26,480 --> 00:39:30,150
+obvious that it's it's worthwhile the
+investment of spending money on the
+
+1802
+00:39:30,150 --> 00:39:30,160
+investment of spending money on the
+ 
+
+1803
+00:39:30,160 --> 00:39:32,310
+investment of spending money on the
+optimization to lower the cost on the
+
+1804
+00:39:32,310 --> 00:39:32,320
+optimization to lower the cost on the
+ 
+
+1805
+00:39:32,320 --> 00:39:34,630
+optimization to lower the cost on the
+long term. And I think there is a lot of
+
+1806
+00:39:34,630 --> 00:39:34,640
+long term. And I think there is a lot of
+ 
+
+1807
+00:39:34,640 --> 00:39:37,510
+long term. And I think there is a lot of
+use cases where it worked. So again
+
+1808
+00:39:37,510 --> 00:39:37,520
+use cases where it worked. So again
+ 
+
+1809
+00:39:37,520 --> 00:39:40,550
+use cases where it worked. So again
+first uh overfitit to the training data
+
+1810
+00:39:40,550 --> 00:39:40,560
+first uh overfitit to the training data
+ 
+
+1811
+00:39:40,560 --> 00:39:42,870
+first uh overfitit to the training data
+start with a small iteration uh
+
+1812
+00:39:42,870 --> 00:39:42,880
+start with a small iteration uh
+ 
+
+1813
+00:39:42,880 --> 00:39:45,270
+start with a small iteration uh
+visualize. So basically instrument the
+
+1814
+00:39:45,270 --> 00:39:45,280
+visualize. So basically instrument the
+ 
+
+1815
+00:39:45,280 --> 00:39:48,150
+visualize. So basically instrument the
+traces I instrumented them using agenta
+
+1816
+00:39:48,150 --> 00:39:48,160
+traces I instrumented them using agenta
+ 
+
+1817
+00:39:48,160 --> 00:39:50,550
+traces I instrumented them using agenta
+in this case uh try to look at them try
+
+1818
+00:39:50,550 --> 00:39:50,560
+in this case uh try to look at them try
+ 
+
+1819
+00:39:50,560 --> 00:39:51,990
+in this case uh try to look at them try
+to look at the prompts that have been
+
+1820
+00:39:51,990 --> 00:39:52,000
+to look at the prompts that have been
+ 
+
+1821
+00:39:52,000 --> 00:39:53,910
+to look at the prompts that have been
+generated and understand how the
+
+1822
+00:39:53,910 --> 00:39:53,920
+generated and understand how the
+ 
+
+1823
+00:39:53,920 --> 00:39:56,230
+generated and understand how the
+algorithm is working before uh
+
+1824
+00:39:56,230 --> 00:39:56,240
+algorithm is working before uh
+ 
+
+1825
+00:39:56,240 --> 00:39:57,750
+algorithm is working before uh
+increasing the sampling. And in this
+
+1826
+00:39:57,750 --> 00:39:57,760
+increasing the sampling. And in this
+ 
+
+1827
+00:39:57,760 --> 00:40:01,910
+increasing the sampling. And in this
+case I think we had u around 200 300
+
+1828
+00:40:01,910 --> 00:40:01,920
+case I think we had u around 200 300
+ 
+
+1829
+00:40:01,920 --> 00:40:05,109
+case I think we had u around 200 300
+iterations per experiment. Um in
+
+1830
+00:40:05,109 --> 00:40:05,119
+iterations per experiment. Um in
+ 
+
+1831
+00:40:05,119 --> 00:40:06,550
+iterations per experiment. Um in
+addition to that there is actually a
+
+1832
+00:40:06,550 --> 00:40:06,560
+addition to that there is actually a
+ 
+
+1833
+00:40:06,560 --> 00:40:08,390
+addition to that there is actually a
+number of parameters like the batch size
+
+1834
+00:40:08,390 --> 00:40:08,400
+number of parameters like the batch size
+ 
+
+1835
+00:40:08,400 --> 00:40:10,790
+number of parameters like the batch size
+and so on that you need to uh fine-tune
+
+1836
+00:40:10,790 --> 00:40:10,800
+and so on that you need to uh fine-tune
+ 
+
+1837
+00:40:10,800 --> 00:40:13,510
+and so on that you need to uh fine-tune
+to get the algorithm to work. So that's
+
+1838
+00:40:13,510 --> 00:40:13,520
+to get the algorithm to work. So that's
+ 
+
+1839
+00:40:13,520 --> 00:40:15,030
+to get the algorithm to work. So that's
+it.
+
+1840
+00:40:15,030 --> 00:40:15,040
+it.
+ 
+
+1841
+00:40:15,040 --> 00:40:17,109
+it.
+Thanks a lot for watching. I hope that
+
+1842
+00:40:17,109 --> 00:40:17,119
+Thanks a lot for watching. I hope that
+ 
+
+1843
+00:40:17,119 --> 00:40:19,990
+Thanks a lot for watching. I hope that
+has been helpful and that you'll build
+
+1844
+00:40:19,990 --> 00:40:20,000
+has been helpful and that you'll build
+ 
+
+1845
+00:40:20,000 --> 00:40:22,150
+has been helpful and that you'll build
+good LLM as a judges that helps you to
+
+1846
+00:40:22,150 --> 00:40:22,160
+good LLM as a judges that helps you to
+ 
+
+1847
+00:40:22,160 --> 00:40:24,310
+good LLM as a judges that helps you to
+improve your applications.
+
+1848
+00:40:24,310 --> 00:40:24,320
+improve your applications.
+ 
+
+1849
+00:40:24,320 --> 00:40:26,870
+improve your applications.
+Uh, I'd love if you check out Agenta,
+
+1850
+00:40:26,870 --> 00:40:26,880
+Uh, I'd love if you check out Agenta,
+ 
+
+1851
+00:40:26,880 --> 00:40:31,030
+Uh, I'd love if you check out Agenta,
+our open source LMOPS uh platform. Um,
+
+1852
+00:40:31,030 --> 00:40:31,040
+our open source LMOPS uh platform. Um,
+ 
+
+1853
+00:40:31,040 --> 00:40:33,589
+our open source LMOPS uh platform. Um,
+and you can follow me both on LinkedIn
+
+1854
+00:40:33,589 --> 00:40:33,599
+and you can follow me both on LinkedIn
+ 
+
+1855
+00:40:33,599 --> 00:40:36,710
+and you can follow me both on LinkedIn
+and X. And finally, if you're thinking
+
+1856
+00:40:36,710 --> 00:40:36,720
+and X. And finally, if you're thinking
+ 
+
+1857
+00:40:36,720 --> 00:40:39,990
+and X. And finally, if you're thinking
+and working about autooptimization
+
+1858
+00:40:39,990 --> 00:40:40,000
+and working about autooptimization
+ 
+
+1859
+00:40:40,000 --> 00:40:44,390
+and working about autooptimization
+uh about how to uh optimize prompts, uh
+
+1860
+00:40:44,390 --> 00:40:44,400
+uh about how to uh optimize prompts, uh
+ 
+
+1861
+00:40:44,400 --> 00:40:46,950
+uh about how to uh optimize prompts, uh
+feel free to reach out or to write in
+
+1862
+00:40:46,950 --> 00:40:46,960
+feel free to reach out or to write in
+ 
+
+1863
+00:40:46,960 --> 00:40:49,190
+feel free to reach out or to write in
+the comments in YouTube. Have a great
+
+1864
+00:40:49,190 --> 00:40:49,200
+the comments in YouTube. Have a great
+ 
+
+1865
+00:40:49,200 --> 00:40:52,480
+the comments in YouTube. Have a great
+day. Thank you.
+

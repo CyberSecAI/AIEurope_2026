@@ -1,0 +1,5975 @@
+1
+00:00:03,280 --> 00:00:05,430
+
+Welcome. I am Iana Fortuna, a product
+
+2
+00:00:05,430 --> 00:00:05,440
+Welcome. I am Iana Fortuna, a product
+ 
+
+3
+00:00:05,440 --> 00:00:07,590
+Welcome. I am Iana Fortuna, a product
+manager in Aessa. And today we're going
+
+4
+00:00:07,590 --> 00:00:07,600
+manager in Aessa. And today we're going
+ 
+
+5
+00:00:07,600 --> 00:00:09,589
+manager in Aessa. And today we're going
+to dive into a topic that I personally
+
+6
+00:00:09,589 --> 00:00:09,599
+to dive into a topic that I personally
+ 
+
+7
+00:00:09,599 --> 00:00:12,390
+to dive into a topic that I personally
+find uncomfortable, but which most
+
+8
+00:00:12,390 --> 00:00:12,400
+find uncomfortable, but which most
+ 
+
+9
+00:00:12,400 --> 00:00:14,230
+find uncomfortable, but which most
+probably development teams considered
+
+10
+00:00:14,230 --> 00:00:14,240
+probably development teams considered
+ 
+
+11
+00:00:14,240 --> 00:00:16,630
+probably development teams considered
+already solved. The topic is called
+
+12
+00:00:16,630 --> 00:00:16,640
+already solved. The topic is called
+ 
+
+13
+00:00:16,640 --> 00:00:19,189
+already solved. The topic is called
+architecturally ready, behaviorally
+
+14
+00:00:19,189 --> 00:00:19,199
+architecturally ready, behaviorally
+ 
+
+15
+00:00:19,199 --> 00:00:21,750
+architecturally ready, behaviorally
+unvalidated. And today with me I have
+
+16
+00:00:21,750 --> 00:00:21,760
+unvalidated. And today with me I have
+ 
+
+17
+00:00:21,760 --> 00:00:24,630
+unvalidated. And today with me I have
+Yana Gita who is an AI architect and who
+
+18
+00:00:24,630 --> 00:00:24,640
+Yana Gita who is an AI architect and who
+ 
+
+19
+00:00:24,640 --> 00:00:27,189
+Yana Gita who is an AI architect and who
+claims that you can technically build
+
+20
+00:00:27,189 --> 00:00:27,199
+claims that you can technically build
+ 
+
+21
+00:00:27,199 --> 00:00:29,589
+claims that you can technically build
+systems that are flawless but still have
+
+22
+00:00:29,589 --> 00:00:29,599
+systems that are flawless but still have
+ 
+
+23
+00:00:29,599 --> 00:00:32,229
+systems that are flawless but still have
+them fail tremendously in production. So
+
+24
+00:00:32,229 --> 00:00:32,239
+them fail tremendously in production. So
+ 
+
+25
+00:00:32,239 --> 00:00:35,590
+them fail tremendously in production. So
+Yana welcome and tell us more. Hello
+
+26
+00:00:35,590 --> 00:00:35,600
+Yana welcome and tell us more. Hello
+ 
+
+27
+00:00:35,600 --> 00:00:38,950
+Yana welcome and tell us more. Hello
+Yana. Yes that is right and I would add
+
+28
+00:00:38,950 --> 00:00:38,960
+Yana. Yes that is right and I would add
+ 
+
+29
+00:00:38,960 --> 00:00:41,590
+Yana. Yes that is right and I would add
+something uh in here. It does not just
+
+30
+00:00:41,590 --> 00:00:41,600
+something uh in here. It does not just
+ 
+
+31
+00:00:41,600 --> 00:00:45,190
+something uh in here. It does not just
+happen that it will uh it can fail. It
+
+32
+00:00:45,190 --> 00:00:45,200
+happen that it will uh it can fail. It
+ 
+
+33
+00:00:45,200 --> 00:00:48,389
+happen that it will uh it can fail. It
+will really fail. Yeah. quite
+
+34
+00:00:48,389 --> 00:00:48,399
+will really fail. Yeah. quite
+ 
+
+35
+00:00:48,399 --> 00:00:51,430
+will really fail. Yeah. quite
+predictably. In fact, and that is the
+
+36
+00:00:51,430 --> 00:00:51,440
+predictably. In fact, and that is the
+ 
+
+37
+00:00:51,440 --> 00:00:53,670
+predictably. In fact, and that is the
+part that surprised me the most when I
+
+38
+00:00:53,670 --> 00:00:53,680
+part that surprised me the most when I
+ 
+
+39
+00:00:53,680 --> 00:00:56,310
+part that surprised me the most when I
+started to work with aic systems in
+
+40
+00:00:56,310 --> 00:00:56,320
+started to work with aic systems in
+ 
+
+41
+00:00:56,320 --> 00:01:00,229
+started to work with aic systems in
+production. It is not about not knowing
+
+42
+00:01:00,229 --> 00:01:00,239
+production. It is not about not knowing
+ 
+
+43
+00:01:00,239 --> 00:01:03,349
+production. It is not about not knowing
+how to build. It is about the fact that
+
+44
+00:01:03,349 --> 00:01:03,359
+how to build. It is about the fact that
+ 
+
+45
+00:01:03,359 --> 00:01:05,590
+how to build. It is about the fact that
+what you have built has not been
+
+46
+00:01:05,590 --> 00:01:05,600
+what you have built has not been
+ 
+
+47
+00:01:05,600 --> 00:01:08,310
+what you have built has not been
+validated for what it is about to
+
+48
+00:01:08,310 --> 00:01:08,320
+validated for what it is about to
+ 
+
+49
+00:01:08,320 --> 00:01:12,630
+validated for what it is about to
+encounter out there. Okay. But before we
+
+50
+00:01:12,630 --> 00:01:12,640
+encounter out there. Okay. But before we
+ 
+
+51
+00:01:12,640 --> 00:01:16,149
+encounter out there. Okay. But before we
+dive deeper, why is it behaviorally
+
+52
+00:01:16,149 --> 00:01:16,159
+dive deeper, why is it behaviorally
+ 
+
+53
+00:01:16,159 --> 00:01:18,630
+dive deeper, why is it behaviorally
+unvalidated and not just simply
+
+54
+00:01:18,630 --> 00:01:18,640
+unvalidated and not just simply
+ 
+
+55
+00:01:18,640 --> 00:01:19,830
+unvalidated and not just simply
+untested?
+
+56
+00:01:19,830 --> 00:01:19,840
+untested?
+ 
+
+57
+00:01:19,840 --> 00:01:22,550
+untested?
+>> Tested means you have run a set of
+
+58
+00:01:22,550 --> 00:01:22,560
+>> Tested means you have run a set of
+ 
+
+59
+00:01:22,560 --> 00:01:24,789
+>> Tested means you have run a set of
+scenarios. Yeah. And probably you passed
+
+60
+00:01:24,789 --> 00:01:24,799
+scenarios. Yeah. And probably you passed
+ 
+
+61
+00:01:24,799 --> 00:01:26,630
+scenarios. Yeah. And probably you passed
+that scenarios because this is why you
+
+62
+00:01:26,630 --> 00:01:26,640
+that scenarios because this is why you
+ 
+
+63
+00:01:26,640 --> 00:01:28,789
+that scenarios because this is why you
+are in production. Behaviorally
+
+64
+00:01:28,789 --> 00:01:28,799
+are in production. Behaviorally
+ 
+
+65
+00:01:28,799 --> 00:01:31,429
+are in production. Behaviorally
+unvalidated means something different.
+
+66
+00:01:31,429 --> 00:01:31,439
+unvalidated means something different.
+ 
+
+67
+00:01:31,439 --> 00:01:34,069
+unvalidated means something different.
+It means you have not verified how the
+
+68
+00:01:34,069 --> 00:01:34,079
+It means you have not verified how the
+ 
+
+69
+00:01:34,079 --> 00:01:36,870
+It means you have not verified how the
+system behaves when the real world
+
+70
+00:01:36,870 --> 00:01:36,880
+system behaves when the real world
+ 
+
+71
+00:01:36,880 --> 00:01:40,230
+system behaves when the real world
+scenarios um are not following your test
+
+72
+00:01:40,230 --> 00:01:40,240
+scenarios um are not following your test
+ 
+
+73
+00:01:40,240 --> 00:01:44,870
+scenarios um are not following your test
+cases. Yeah. And um this is happening
+
+74
+00:01:44,870 --> 00:01:44,880
+cases. Yeah. And um this is happening
+ 
+
+75
+00:01:44,880 --> 00:01:48,630
+cases. Yeah. And um this is happening
+when a user does something with did not
+
+76
+00:01:48,630 --> 00:01:48,640
+when a user does something with did not
+ 
+
+77
+00:01:48,640 --> 00:01:51,429
+when a user does something with did not
+anticipate. When an input comes in a
+
+78
+00:01:51,429 --> 00:01:51,439
+anticipate. When an input comes in a
+ 
+
+79
+00:01:51,439 --> 00:01:54,389
+anticipate. When an input comes in a
+format that you were not modeling when a
+
+80
+00:01:54,389 --> 00:01:54,399
+format that you were not modeling when a
+ 
+
+81
+00:01:54,399 --> 00:01:57,030
+format that you were not modeling when a
+technically correct decision it's wrong
+
+82
+00:01:57,030 --> 00:01:57,040
+technically correct decision it's wrong
+ 
+
+83
+00:01:57,040 --> 00:01:59,510
+technically correct decision it's wrong
+from business perspective. So testing
+
+84
+00:01:59,510 --> 00:01:59,520
+from business perspective. So testing
+ 
+
+85
+00:01:59,520 --> 00:02:03,350
+from business perspective. So testing
+verifies what you have thought of and
+
+86
+00:02:03,350 --> 00:02:03,360
+verifies what you have thought of and
+ 
+
+87
+00:02:03,360 --> 00:02:06,389
+verifies what you have thought of and
+behaviorally validation verifies what
+
+88
+00:02:06,389 --> 00:02:06,399
+behaviorally validation verifies what
+ 
+
+89
+00:02:06,399 --> 00:02:09,910
+behaviorally validation verifies what
+you do not think of.
+
+90
+00:02:09,910 --> 00:02:09,920
+you do not think of.
+ 
+
+91
+00:02:09,920 --> 00:02:12,710
+you do not think of.
+Okay. So I'm a product manager right? So
+
+92
+00:02:12,710 --> 00:02:12,720
+Okay. So I'm a product manager right? So
+ 
+
+93
+00:02:12,720 --> 00:02:15,510
+Okay. So I'm a product manager right? So
+let us start with the why. Let's say you
+
+94
+00:02:15,510 --> 00:02:15,520
+let us start with the why. Let's say you
+ 
+
+95
+00:02:15,520 --> 00:02:16,710
+let us start with the why. Let's say you
+have the system, you have the
+
+96
+00:02:16,710 --> 00:02:16,720
+have the system, you have the
+ 
+
+97
+00:02:16,720 --> 00:02:18,390
+have the system, you have the
+architecture, you have the pipelines,
+
+98
+00:02:18,390 --> 00:02:18,400
+architecture, you have the pipelines,
+ 
+
+99
+00:02:18,400 --> 00:02:20,630
+architecture, you have the pipelines,
+you have the deployment.
+
+100
+00:02:20,630 --> 00:02:20,640
+you have the deployment.
+ 
+
+101
+00:02:20,640 --> 00:02:22,309
+you have the deployment.
+What is missing?
+
+102
+00:02:22,309 --> 00:02:22,319
+What is missing?
+ 
+
+103
+00:02:22,319 --> 00:02:25,190
+What is missing?
+>> What is missing is validation of what I
+
+104
+00:02:25,190 --> 00:02:25,200
+>> What is missing is validation of what I
+ 
+
+105
+00:02:25,200 --> 00:02:27,750
+>> What is missing is validation of what I
+call the gray zone. Yeah. Look in
+
+106
+00:02:27,750 --> 00:02:27,760
+call the gray zone. Yeah. Look in
+ 
+
+107
+00:02:27,760 --> 00:02:29,990
+call the gray zone. Yeah. Look in
+traditionally software development you
+
+108
+00:02:29,990 --> 00:02:30,000
+traditionally software development you
+ 
+
+109
+00:02:30,000 --> 00:02:32,550
+traditionally software development you
+have a relatively clear line.
+
+110
+00:02:32,550 --> 00:02:32,560
+have a relatively clear line.
+ 
+
+111
+00:02:32,560 --> 00:02:35,670
+have a relatively clear line.
+Development, testing, production. Super
+
+112
+00:02:35,670 --> 00:02:35,680
+Development, testing, production. Super
+ 
+
+113
+00:02:35,680 --> 00:02:38,470
+Development, testing, production. Super
+easy. Yeah. In Aentic AI, there is an
+
+114
+00:02:38,470 --> 00:02:38,480
+easy. Yeah. In Aentic AI, there is an
+ 
+
+115
+00:02:38,480 --> 00:02:41,030
+easy. Yeah. In Aentic AI, there is an
+intermediate zone. the zone between
+
+116
+00:02:41,030 --> 00:02:41,040
+intermediate zone. the zone between
+ 
+
+117
+00:02:41,040 --> 00:02:44,309
+intermediate zone. the zone between
+product testing and development where
+
+118
+00:02:44,309 --> 00:02:44,319
+product testing and development where
+ 
+
+119
+00:02:44,319 --> 00:02:47,910
+product testing and development where
+the truly dangerous things are happening
+
+120
+00:02:47,910 --> 00:02:47,920
+the truly dangerous things are happening
+ 
+
+121
+00:02:47,920 --> 00:02:50,790
+the truly dangerous things are happening
+and it is a zone that very few are
+
+122
+00:02:50,790 --> 00:02:50,800
+and it is a zone that very few are
+ 
+
+123
+00:02:50,800 --> 00:02:52,630
+and it is a zone that very few are
+willing to step into because they are
+
+124
+00:02:52,630 --> 00:02:52,640
+willing to step into because they are
+ 
+
+125
+00:02:52,640 --> 00:02:54,869
+willing to step into because they are
+considering it just development. Yeah.
+
+126
+00:02:54,869 --> 00:02:54,879
+considering it just development. Yeah.
+ 
+
+127
+00:02:54,879 --> 00:02:56,390
+considering it just development. Yeah.
+Evaluations.
+
+128
+00:02:56,390 --> 00:02:56,400
+Evaluations.
+ 
+
+129
+00:02:56,400 --> 00:02:58,869
+Evaluations.
+>> Okay. So why is that?
+
+130
+00:02:58,869 --> 00:02:58,879
+>> Okay. So why is that?
+ 
+
+131
+00:02:58,879 --> 00:03:01,430
+>> Okay. So why is that?
+>> Because it involves a type of work that
+
+132
+00:03:01,430 --> 00:03:01,440
+>> Because it involves a type of work that
+ 
+
+133
+00:03:01,440 --> 00:03:03,990
+>> Because it involves a type of work that
+do not easily recognize as work on the
+
+134
+00:03:03,990 --> 00:03:04,000
+do not easily recognize as work on the
+ 
+
+135
+00:03:04,000 --> 00:03:06,550
+do not easily recognize as work on the
+product side on the testing side. Yeah.
+
+136
+00:03:06,550 --> 00:03:06,560
+product side on the testing side. Yeah.
+ 
+
+137
+00:03:06,560 --> 00:03:09,509
+product side on the testing side. Yeah.
+like I said is purely development and it
+
+138
+00:03:09,509 --> 00:03:09,519
+like I said is purely development and it
+ 
+
+139
+00:03:09,519 --> 00:03:14,550
+like I said is purely development and it
+is not it is not just code. Um
+
+140
+00:03:14,550 --> 00:03:14,560
+is not it is not just code. Um
+ 
+
+141
+00:03:14,560 --> 00:03:17,509
+is not it is not just code. Um
+it is not an automated test. Yeah. Um it
+
+142
+00:03:17,509 --> 00:03:17,519
+it is not an automated test. Yeah. Um it
+ 
+
+143
+00:03:17,519 --> 00:03:19,990
+it is not an automated test. Yeah. Um it
+is not a Jet. It is a conversation
+
+144
+00:03:19,990 --> 00:03:20,000
+is not a Jet. It is a conversation
+ 
+
+145
+00:03:20,000 --> 00:03:23,270
+is not a Jet. It is a conversation
+between product owner developers and
+
+146
+00:03:23,270 --> 00:03:23,280
+between product owner developers and
+ 
+
+147
+00:03:23,280 --> 00:03:25,990
+between product owner developers and
+someone from the business side. Um where
+
+148
+00:03:25,990 --> 00:03:26,000
+someone from the business side. Um where
+ 
+
+149
+00:03:26,000 --> 00:03:29,350
+someone from the business side. Um where
+you ask what happens when the agent
+
+150
+00:03:29,350 --> 00:03:29,360
+you ask what happens when the agent
+ 
+
+151
+00:03:29,360 --> 00:03:32,710
+you ask what happens when the agent
+receives something that we do not think
+
+152
+00:03:32,710 --> 00:03:32,720
+receives something that we do not think
+ 
+
+153
+00:03:32,720 --> 00:03:35,589
+receives something that we do not think
+of? And the honest answer most of the
+
+154
+00:03:35,589 --> 00:03:35,599
+of? And the honest answer most of the
+ 
+
+155
+00:03:35,599 --> 00:03:38,390
+of? And the honest answer most of the
+time it's we do not know we did not
+
+156
+00:03:38,390 --> 00:03:38,400
+time it's we do not know we did not
+ 
+
+157
+00:03:38,400 --> 00:03:40,789
+time it's we do not know we did not
+model that scenarios and this is the
+
+158
+00:03:40,789 --> 00:03:40,799
+model that scenarios and this is the
+ 
+
+159
+00:03:40,799 --> 00:03:42,309
+model that scenarios and this is the
+problem.
+
+160
+00:03:42,309 --> 00:03:42,319
+problem.
+ 
+
+161
+00:03:42,319 --> 00:03:45,190
+problem.
+>> Okay. But isn't that called insufficient
+
+162
+00:03:45,190 --> 00:03:45,200
+>> Okay. But isn't that called insufficient
+ 
+
+163
+00:03:45,200 --> 00:03:46,710
+>> Okay. But isn't that called insufficient
+testing?
+
+164
+00:03:46,710 --> 00:03:46,720
+testing?
+ 
+
+165
+00:03:46,720 --> 00:03:48,470
+testing?
+>> No. And that is the important
+
+166
+00:03:48,470 --> 00:03:48,480
+>> No. And that is the important
+ 
+
+167
+00:03:48,480 --> 00:03:50,949
+>> No. And that is the important
+distinction. We are calling them
+
+168
+00:03:50,949 --> 00:03:50,959
+distinction. We are calling them
+ 
+
+169
+00:03:50,959 --> 00:03:53,670
+distinction. We are calling them
+evaluations. Everyone knows them like
+
+170
+00:03:53,670 --> 00:03:53,680
+evaluations. Everyone knows them like
+ 
+
+171
+00:03:53,680 --> 00:03:56,149
+evaluations. Everyone knows them like
+this. Um let me give you a concrete
+
+172
+00:03:56,149 --> 00:03:56,159
+this. Um let me give you a concrete
+ 
+
+173
+00:03:56,159 --> 00:03:58,949
+this. Um let me give you a concrete
+example. We have um a communication
+
+174
+00:03:58,949 --> 00:03:58,959
+example. We have um a communication
+ 
+
+175
+00:03:58,959 --> 00:04:01,750
+example. We have um a communication
+agent. Yeah. And in the beginning it
+
+176
+00:04:01,750 --> 00:04:01,760
+agent. Yeah. And in the beginning it
+ 
+
+177
+00:04:01,760 --> 00:04:04,149
+agent. Yeah. And in the beginning it
+processed the conversation generated
+
+178
+00:04:04,149 --> 00:04:04,159
+processed the conversation generated
+ 
+
+179
+00:04:04,159 --> 00:04:07,509
+processed the conversation generated
+structure response in a JSON format.
+
+180
+00:04:07,509 --> 00:04:07,519
+structure response in a JSON format.
+ 
+
+181
+00:04:07,519 --> 00:04:10,949
+structure response in a JSON format.
+During testing hundreds of conversation
+
+182
+00:04:10,949 --> 00:04:10,959
+During testing hundreds of conversation
+ 
+
+183
+00:04:10,959 --> 00:04:13,030
+During testing hundreds of conversation
+everything worked perfectly in
+
+184
+00:04:13,030 --> 00:04:13,040
+everything worked perfectly in
+ 
+
+185
+00:04:13,040 --> 00:04:17,349
+everything worked perfectly in
+production. After few weeks parsing
+
+186
+00:04:17,349 --> 00:04:17,359
+production. After few weeks parsing
+ 
+
+187
+00:04:17,359 --> 00:04:21,590
+production. After few weeks parsing
+errors starting appearing. Why? Because
+
+188
+00:04:21,590 --> 00:04:21,600
+errors starting appearing. Why? Because
+ 
+
+189
+00:04:21,600 --> 00:04:25,110
+errors starting appearing. Why? Because
+real users
+
+190
+00:04:25,110 --> 00:04:25,120
+
+ 
+
+191
+00:04:25,120 --> 00:04:28,310
+
+typed long conversation, emojis,
+
+192
+00:04:28,310 --> 00:04:28,320
+typed long conversation, emojis,
+ 
+
+193
+00:04:28,320 --> 00:04:31,110
+typed long conversation, emojis,
+multiple languages, it was a combination
+
+194
+00:04:31,110 --> 00:04:31,120
+multiple languages, it was a combination
+ 
+
+195
+00:04:31,120 --> 00:04:34,070
+multiple languages, it was a combination
+of basically everything. Even if we
+
+196
+00:04:34,070 --> 00:04:34,080
+of basically everything. Even if we
+ 
+
+197
+00:04:34,080 --> 00:04:35,909
+of basically everything. Even if we
+evaluated it,
+
+198
+00:04:35,909 --> 00:04:35,919
+evaluated it,
+ 
+
+199
+00:04:35,919 --> 00:04:38,629
+evaluated it,
+>> we were evaluating them separately and
+
+200
+00:04:38,629 --> 00:04:38,639
+>> we were evaluating them separately and
+ 
+
+201
+00:04:38,639 --> 00:04:41,670
+>> we were evaluating them separately and
+exactly this this was the problem. Um
+
+202
+00:04:41,670 --> 00:04:41,680
+exactly this this was the problem. Um
+ 
+
+203
+00:04:41,680 --> 00:04:44,390
+exactly this this was the problem. Um
+the model was doing what it was told to
+
+204
+00:04:44,390 --> 00:04:44,400
+the model was doing what it was told to
+ 
+
+205
+00:04:44,400 --> 00:04:47,189
+the model was doing what it was told to
+do. It was a lack of behavioral
+
+206
+00:04:47,189 --> 00:04:47,199
+do. It was a lack of behavioral
+ 
+
+207
+00:04:47,199 --> 00:04:49,830
+do. It was a lack of behavioral
+validation. So we had not verified how
+
+208
+00:04:49,830 --> 00:04:49,840
+validation. So we had not verified how
+ 
+
+209
+00:04:49,840 --> 00:04:53,670
+validation. So we had not verified how
+the system reacts to the real complexity
+
+210
+00:04:53,670 --> 00:04:53,680
+the system reacts to the real complexity
+ 
+
+211
+00:04:53,680 --> 00:04:55,749
+the system reacts to the real complexity
+from the real world.
+
+212
+00:04:55,749 --> 00:04:55,759
+from the real world.
+ 
+
+213
+00:04:55,759 --> 00:04:57,670
+from the real world.
+>> And is there anything that could have
+
+214
+00:04:57,670 --> 00:04:57,680
+>> And is there anything that could have
+ 
+
+215
+00:04:57,680 --> 00:05:00,310
+>> And is there anything that could have
+been done to avoid these issues from
+
+216
+00:05:00,310 --> 00:05:00,320
+been done to avoid these issues from
+ 
+
+217
+00:05:00,320 --> 00:05:01,990
+been done to avoid these issues from
+happening in production?
+
+218
+00:05:01,990 --> 00:05:02,000
+happening in production?
+ 
+
+219
+00:05:02,000 --> 00:05:04,710
+happening in production?
+>> Yes, behavioral evaluations on input
+
+220
+00:05:04,710 --> 00:05:04,720
+>> Yes, behavioral evaluations on input
+ 
+
+221
+00:05:04,720 --> 00:05:07,990
+>> Yes, behavioral evaluations on input
+variability. So specifically a set of
+
+222
+00:05:07,990 --> 00:05:08,000
+variability. So specifically a set of
+ 
+
+223
+00:05:08,000 --> 00:05:11,029
+variability. So specifically a set of
+evaluations with real world messages
+
+224
+00:05:11,029 --> 00:05:11,039
+evaluations with real world messages
+ 
+
+225
+00:05:11,039 --> 00:05:13,350
+evaluations with real world messages
+long multilingual with emojis with
+
+226
+00:05:13,350 --> 00:05:13,360
+long multilingual with emojis with
+ 
+
+227
+00:05:13,360 --> 00:05:15,749
+long multilingual with emojis with
+chaotic structure where you are not
+
+228
+00:05:15,749 --> 00:05:15,759
+chaotic structure where you are not
+ 
+
+229
+00:05:15,759 --> 00:05:18,950
+chaotic structure where you are not
+checking whether the agent response but
+
+230
+00:05:18,950 --> 00:05:18,960
+checking whether the agent response but
+ 
+
+231
+00:05:18,960 --> 00:05:20,950
+checking whether the agent response but
+whether the output it's structurally
+
+232
+00:05:20,950 --> 00:05:20,960
+whether the output it's structurally
+ 
+
+233
+00:05:20,960 --> 00:05:24,629
+whether the output it's structurally
+valid yeah so can the JSON be parsed is
+
+234
+00:05:24,629 --> 00:05:24,639
+valid yeah so can the JSON be parsed is
+ 
+
+235
+00:05:24,639 --> 00:05:27,749
+valid yeah so can the JSON be parsed is
+the schema respected are the required
+
+236
+00:05:27,749 --> 00:05:27,759
+the schema respected are the required
+ 
+
+237
+00:05:27,759 --> 00:05:32,150
+the schema respected are the required
+fields really present so these are not
+
+238
+00:05:32,150 --> 00:05:32,160
+fields really present so these are not
+ 
+
+239
+00:05:32,160 --> 00:05:34,950
+fields really present so these are not
+unit tests uh these are evaluations that
+
+240
+00:05:34,950 --> 00:05:34,960
+unit tests uh these are evaluations that
+ 
+
+241
+00:05:34,960 --> 00:05:37,189
+unit tests uh these are evaluations that
+simulate what the agent actually
+
+242
+00:05:37,189 --> 00:05:37,199
+simulate what the agent actually
+ 
+
+243
+00:05:37,199 --> 00:05:40,230
+simulate what the agent actually
+encounters in production and you build
+
+244
+00:05:40,230 --> 00:05:40,240
+encounters in production and you build
+ 
+
+245
+00:05:40,240 --> 00:05:43,110
+encounters in production and you build
+them together with product people with
+
+246
+00:05:43,110 --> 00:05:43,120
+them together with product people with
+ 
+
+247
+00:05:43,120 --> 00:05:45,510
+them together with product people with
+business people with testers because
+
+248
+00:05:45,510 --> 00:05:45,520
+business people with testers because
+ 
+
+249
+00:05:45,520 --> 00:05:48,629
+business people with testers because
+they know what a real user looks like.
+
+250
+00:05:48,629 --> 00:05:48,639
+they know what a real user looks like.
+ 
+
+251
+00:05:48,639 --> 00:05:51,590
+they know what a real user looks like.
+We will come back to to evaluations in
+
+252
+00:05:51,590 --> 00:05:51,600
+We will come back to to evaluations in
+ 
+
+253
+00:05:51,600 --> 00:05:54,390
+We will come back to to evaluations in
+in our discussion. they are the bridge
+
+254
+00:05:54,390 --> 00:05:54,400
+in our discussion. they are the bridge
+ 
+
+255
+00:05:54,400 --> 00:05:58,070
+in our discussion. they are the bridge
+that ties um everything
+
+256
+00:05:58,070 --> 00:05:58,080
+that ties um everything
+ 
+
+257
+00:05:58,080 --> 00:06:01,350
+that ties um everything
+even if we are discussing um re related
+
+258
+00:06:01,350 --> 00:06:01,360
+even if we are discussing um re related
+ 
+
+259
+00:06:01,360 --> 00:06:06,390
+even if we are discussing um re related
+to behaviorals or with reactions of of
+
+260
+00:06:06,390 --> 00:06:06,400
+to behaviorals or with reactions of of
+ 
+
+261
+00:06:06,400 --> 00:06:07,590
+to behaviorals or with reactions of of
+the agents.
+
+262
+00:06:07,590 --> 00:06:07,600
+the agents.
+ 
+
+263
+00:06:07,600 --> 00:06:10,150
+the agents.
+>> So what I hear is that the system it's
+
+264
+00:06:10,150 --> 00:06:10,160
+>> So what I hear is that the system it's
+ 
+
+265
+00:06:10,160 --> 00:06:12,790
+>> So what I hear is that the system it's
+not poorly built. It's just that it
+
+266
+00:06:12,790 --> 00:06:12,800
+not poorly built. It's just that it
+ 
+
+267
+00:06:12,800 --> 00:06:14,870
+not poorly built. It's just that it
+doesn't mirror the real world scenario
+
+268
+00:06:14,870 --> 00:06:14,880
+doesn't mirror the real world scenario
+ 
+
+269
+00:06:14,880 --> 00:06:17,670
+doesn't mirror the real world scenario
+and what happens in reality actually.
+
+270
+00:06:17,670 --> 00:06:17,680
+and what happens in reality actually.
+ 
+
+271
+00:06:17,680 --> 00:06:20,469
+and what happens in reality actually.
+>> Exactly. And that is frustrating because
+
+272
+00:06:20,469 --> 00:06:20,479
+>> Exactly. And that is frustrating because
+ 
+
+273
+00:06:20,479 --> 00:06:23,110
+>> Exactly. And that is frustrating because
+the engineering team did evaluations,
+
+274
+00:06:23,110 --> 00:06:23,120
+the engineering team did evaluations,
+ 
+
+275
+00:06:23,120 --> 00:06:25,830
+the engineering team did evaluations,
+did testing, did everything perfectly.
+
+276
+00:06:25,830 --> 00:06:25,840
+did testing, did everything perfectly.
+ 
+
+277
+00:06:25,840 --> 00:06:28,629
+did testing, did everything perfectly.
+Yeah. But actually it was not so
+
+278
+00:06:28,629 --> 00:06:28,639
+Yeah. But actually it was not so
+ 
+
+279
+00:06:28,639 --> 00:06:31,830
+Yeah. But actually it was not so
+perfectly because not they were not
+
+280
+00:06:31,830 --> 00:06:31,840
+perfectly because not they were not
+ 
+
+281
+00:06:31,840 --> 00:06:36,150
+perfectly because not they were not
+taking the time to ask what does the
+
+282
+00:06:36,150 --> 00:06:36,160
+taking the time to ask what does the
+ 
+
+283
+00:06:36,160 --> 00:06:39,350
+taking the time to ask what does the
+agent do when it receives something
+
+284
+00:06:39,350 --> 00:06:39,360
+agent do when it receives something
+ 
+
+285
+00:06:39,360 --> 00:06:42,710
+agent do when it receives something
+completely unexpected? And the implicit
+
+286
+00:06:42,710 --> 00:06:42,720
+completely unexpected? And the implicit
+ 
+
+287
+00:06:42,720 --> 00:06:44,629
+completely unexpected? And the implicit
+answer from the product side, from the
+
+288
+00:06:44,629 --> 00:06:44,639
+answer from the product side, from the
+ 
+
+289
+00:06:44,639 --> 00:06:47,189
+answer from the product side, from the
+development side, was it will probably
+
+290
+00:06:47,189 --> 00:06:47,199
+development side, was it will probably
+ 
+
+291
+00:06:47,199 --> 00:06:51,029
+development side, was it will probably
+figure it out. Oh yeah, spoiler alert,
+
+292
+00:06:51,029 --> 00:06:51,039
+figure it out. Oh yeah, spoiler alert,
+ 
+
+293
+00:06:51,039 --> 00:06:54,550
+figure it out. Oh yeah, spoiler alert,
+it's not figuring it out. You mentioned
+
+294
+00:06:54,550 --> 00:06:54,560
+it's not figuring it out. You mentioned
+ 
+
+295
+00:06:54,560 --> 00:06:56,950
+it's not figuring it out. You mentioned
+something interesting a few days ago.
+
+296
+00:06:56,950 --> 00:06:56,960
+something interesting a few days ago.
+ 
+
+297
+00:06:56,960 --> 00:06:59,909
+something interesting a few days ago.
+Um, you said that a system can still
+
+298
+00:06:59,909 --> 00:06:59,919
+Um, you said that a system can still
+ 
+
+299
+00:06:59,919 --> 00:07:02,710
+Um, you said that a system can still
+fail and this failure can be invisible
+
+300
+00:07:02,710 --> 00:07:02,720
+fail and this failure can be invisible
+ 
+
+301
+00:07:02,720 --> 00:07:04,390
+fail and this failure can be invisible
+from a monitoring and infrastructure
+
+302
+00:07:04,390 --> 00:07:04,400
+from a monitoring and infrastructure
+ 
+
+303
+00:07:04,400 --> 00:07:06,790
+from a monitoring and infrastructure
+perspective. So, how does that look in
+
+304
+00:07:06,790 --> 00:07:06,800
+perspective. So, how does that look in
+ 
+
+305
+00:07:06,800 --> 00:07:07,830
+perspective. So, how does that look in
+practice?
+
+306
+00:07:07,830 --> 00:07:07,840
+practice?
+ 
+
+307
+00:07:07,840 --> 00:07:10,390
+practice?
+>> Yeah, this means that your dashboard is
+
+308
+00:07:10,390 --> 00:07:10,400
+>> Yeah, this means that your dashboard is
+ 
+
+309
+00:07:10,400 --> 00:07:13,830
+>> Yeah, this means that your dashboard is
+green. Yeah, latency is fine. Zero
+
+310
+00:07:13,830 --> 00:07:13,840
+green. Yeah, latency is fine. Zero
+ 
+
+311
+00:07:13,840 --> 00:07:17,430
+green. Yeah, latency is fine. Zero
+errors. Respond code 200. Okay. And yet
+
+312
+00:07:17,430 --> 00:07:17,440
+errors. Respond code 200. Okay. And yet
+ 
+
+313
+00:07:17,440 --> 00:07:20,150
+errors. Respond code 200. Okay. And yet
+the business level at the business level
+
+314
+00:07:20,150 --> 00:07:20,160
+the business level at the business level
+ 
+
+315
+00:07:20,160 --> 00:07:23,189
+the business level at the business level
+something it's fundamentally wrong. Let
+
+316
+00:07:23,189 --> 00:07:23,199
+something it's fundamentally wrong. Let
+ 
+
+317
+00:07:23,199 --> 00:07:25,670
+something it's fundamentally wrong. Let
+me give you an example that frustrate me
+
+318
+00:07:25,670 --> 00:07:25,680
+me give you an example that frustrate me
+ 
+
+319
+00:07:25,680 --> 00:07:30,230
+me give you an example that frustrate me
+a lot. Um an assessment agent. Yeah. It
+
+320
+00:07:30,230 --> 00:07:30,240
+a lot. Um an assessment agent. Yeah. It
+ 
+
+321
+00:07:30,240 --> 00:07:33,350
+a lot. Um an assessment agent. Yeah. It
+uh talked to candidates um evaluate
+
+322
+00:07:33,350 --> 00:07:33,360
+uh talked to candidates um evaluate
+ 
+
+323
+00:07:33,360 --> 00:07:36,230
+uh talked to candidates um evaluate
+responses. At one point the candidate
+
+324
+00:07:36,230 --> 00:07:36,240
+responses. At one point the candidate
+ 
+
+325
+00:07:36,240 --> 00:07:39,830
+responses. At one point the candidate
+was uh giving an completely unexpected
+
+326
+00:07:39,830 --> 00:07:39,840
+was uh giving an completely unexpected
+ 
+
+327
+00:07:39,840 --> 00:07:43,589
+was uh giving an completely unexpected
+answer. The agent attempt to an action
+
+328
+00:07:43,589 --> 00:07:43,599
+answer. The agent attempt to an action
+ 
+
+329
+00:07:43,599 --> 00:07:47,430
+answer. The agent attempt to an action
+that did not exist and the orchestrator
+
+330
+00:07:47,430 --> 00:07:47,440
+that did not exist and the orchestrator
+ 
+
+331
+00:07:47,440 --> 00:07:50,230
+that did not exist and the orchestrator
+caught that exception, executed a fall
+
+332
+00:07:50,230 --> 00:07:50,240
+caught that exception, executed a fall
+ 
+
+333
+00:07:50,240 --> 00:07:52,870
+caught that exception, executed a fall
+back and continued. From a technical
+
+334
+00:07:52,870 --> 00:07:52,880
+back and continued. From a technical
+ 
+
+335
+00:07:52,880 --> 00:07:56,790
+back and continued. From a technical
+perspective, it was flawless. Um the
+
+336
+00:07:56,790 --> 00:07:56,800
+perspective, it was flawless. Um the
+ 
+
+337
+00:07:56,800 --> 00:08:00,550
+perspective, it was flawless. Um the
+candidate was looped for 40 minutes in
+
+338
+00:08:00,550 --> 00:08:00,560
+candidate was looped for 40 minutes in
+ 
+
+339
+00:08:00,560 --> 00:08:03,110
+candidate was looped for 40 minutes in
+the assessment and we received the
+
+340
+00:08:03,110 --> 00:08:03,120
+the assessment and we received the
+ 
+
+341
+00:08:03,120 --> 00:08:05,189
+the assessment and we received the
+feedback from his side not from the
+
+342
+00:08:05,189 --> 00:08:05,199
+feedback from his side not from the
+ 
+
+343
+00:08:05,199 --> 00:08:06,550
+feedback from his side not from the
+monitoring system.
+
+344
+00:08:06,550 --> 00:08:06,560
+monitoring system.
+ 
+
+345
+00:08:06,560 --> 00:08:09,830
+monitoring system.
+>> Oh wow. But doesn't that mean that you
+
+346
+00:08:09,830 --> 00:08:09,840
+>> Oh wow. But doesn't that mean that you
+ 
+
+347
+00:08:09,840 --> 00:08:12,150
+>> Oh wow. But doesn't that mean that you
+have just insufficient monitoring?
+
+348
+00:08:12,150 --> 00:08:12,160
+have just insufficient monitoring?
+ 
+
+349
+00:08:12,160 --> 00:08:14,070
+have just insufficient monitoring?
+>> Not necessarily insufficient but
+
+350
+00:08:14,070 --> 00:08:14,080
+>> Not necessarily insufficient but
+ 
+
+351
+00:08:14,080 --> 00:08:16,950
+>> Not necessarily insufficient but
+insufficient calibrated in agentic
+
+352
+00:08:16,950 --> 00:08:16,960
+insufficient calibrated in agentic
+ 
+
+353
+00:08:16,960 --> 00:08:19,589
+insufficient calibrated in agentic
+systems. Observability does not mean
+
+354
+00:08:19,589 --> 00:08:19,599
+systems. Observability does not mean
+ 
+
+355
+00:08:19,599 --> 00:08:23,189
+systems. Observability does not mean
+logging actions. It means logging the
+
+356
+00:08:23,189 --> 00:08:23,199
+logging actions. It means logging the
+ 
+
+357
+00:08:23,199 --> 00:08:26,070
+logging actions. It means logging the
+reasoning what the agent observed, what
+
+358
+00:08:26,070 --> 00:08:26,080
+reasoning what the agent observed, what
+ 
+
+359
+00:08:26,080 --> 00:08:30,309
+reasoning what the agent observed, what
+plan it formed, why it choose action X
+
+360
+00:08:30,309 --> 00:08:30,319
+plan it formed, why it choose action X
+ 
+
+361
+00:08:30,319 --> 00:08:34,790
+plan it formed, why it choose action X
+instead of action W. So why not only log
+
+362
+00:08:34,790 --> 00:08:34,800
+instead of action W. So why not only log
+ 
+
+363
+00:08:34,800 --> 00:08:36,790
+instead of action W. So why not only log
+actions?
+
+364
+00:08:36,790 --> 00:08:36,800
+actions?
+ 
+
+365
+00:08:36,800 --> 00:08:38,790
+actions?
+>> Because you will see that everything
+
+366
+00:08:38,790 --> 00:08:38,800
+>> Because you will see that everything
+ 
+
+367
+00:08:38,800 --> 00:08:41,909
+>> Because you will see that everything
+went fine. Green dashboard, zero errors.
+
+368
+00:08:41,909 --> 00:08:41,919
+went fine. Green dashboard, zero errors.
+ 
+
+369
+00:08:41,919 --> 00:08:43,829
+went fine. Green dashboard, zero errors.
+But if you log the reasoning, you see
+
+370
+00:08:43,829 --> 00:08:43,839
+But if you log the reasoning, you see
+ 
+
+371
+00:08:43,839 --> 00:08:46,310
+But if you log the reasoning, you see
+that the agent made a decision based on
+
+372
+00:08:46,310 --> 00:08:46,320
+that the agent made a decision based on
+ 
+
+373
+00:08:46,320 --> 00:08:49,829
+that the agent made a decision based on
+a scenario that nobody had anticipated.
+
+374
+00:08:49,829 --> 00:08:49,839
+a scenario that nobody had anticipated.
+ 
+
+375
+00:08:49,839 --> 00:08:51,750
+a scenario that nobody had anticipated.
+And the difference between the two is
+
+376
+00:08:51,750 --> 00:08:51,760
+And the difference between the two is
+ 
+
+377
+00:08:51,760 --> 00:08:53,350
+And the difference between the two is
+the difference between a system you
+
+378
+00:08:53,350 --> 00:08:53,360
+the difference between a system you
+ 
+
+379
+00:08:53,360 --> 00:08:56,870
+the difference between a system you
+control and one that merily appears to
+
+380
+00:08:56,870 --> 00:08:56,880
+control and one that merily appears to
+ 
+
+381
+00:08:56,880 --> 00:08:58,310
+control and one that merily appears to
+be working.
+
+382
+00:08:58,310 --> 00:08:58,320
+be working.
+ 
+
+383
+00:08:58,320 --> 00:09:00,150
+be working.
+>> That sounds like an enormous volume of
+
+384
+00:09:00,150 --> 00:09:00,160
+>> That sounds like an enormous volume of
+ 
+
+385
+00:09:00,160 --> 00:09:03,590
+>> That sounds like an enormous volume of
+logging. Is that technically feasible?
+
+386
+00:09:03,590 --> 00:09:03,600
+logging. Is that technically feasible?
+ 
+
+387
+00:09:03,600 --> 00:09:05,990
+logging. Is that technically feasible?
+>> You do not need to log everything. You
+
+388
+00:09:05,990 --> 00:09:06,000
+>> You do not need to log everything. You
+ 
+
+389
+00:09:06,000 --> 00:09:09,910
+>> You do not need to log everything. You
+log at the checkpoints. So think of it
+
+390
+00:09:09,910 --> 00:09:09,920
+log at the checkpoints. So think of it
+ 
+
+391
+00:09:09,920 --> 00:09:12,550
+log at the checkpoints. So think of it
+into this way. If we have an agentic
+
+392
+00:09:12,550 --> 00:09:12,560
+into this way. If we have an agentic
+ 
+
+393
+00:09:12,560 --> 00:09:16,310
+into this way. If we have an agentic
+flow from with 10 to 15 steps, you do
+
+394
+00:09:16,310 --> 00:09:16,320
+flow from with 10 to 15 steps, you do
+ 
+
+395
+00:09:16,320 --> 00:09:18,710
+flow from with 10 to 15 steps, you do
+not need logging at every step. You need
+
+396
+00:09:18,710 --> 00:09:18,720
+not need logging at every step. You need
+ 
+
+397
+00:09:18,720 --> 00:09:21,110
+not need logging at every step. You need
+it at the decision points where the
+
+398
+00:09:21,110 --> 00:09:21,120
+it at the decision points where the
+ 
+
+399
+00:09:21,120 --> 00:09:24,470
+it at the decision points where the
+agent choose a pet not where it simply
+
+400
+00:09:24,470 --> 00:09:24,480
+agent choose a pet not where it simply
+ 
+
+401
+00:09:24,480 --> 00:09:27,829
+agent choose a pet not where it simply
+execute an instruction and you need an
+
+402
+00:09:27,829 --> 00:09:27,839
+execute an instruction and you need an
+ 
+
+403
+00:09:27,839 --> 00:09:30,470
+execute an instruction and you need an
+end to end trace ID that allows you to
+
+404
+00:09:30,470 --> 00:09:30,480
+end to end trace ID that allows you to
+ 
+
+405
+00:09:30,480 --> 00:09:33,190
+end to end trace ID that allows you to
+reconstruct the entire decision chain
+
+406
+00:09:33,190 --> 00:09:33,200
+reconstruct the entire decision chain
+ 
+
+407
+00:09:33,200 --> 00:09:35,509
+reconstruct the entire decision chain
+after the fact that is not an
+
+408
+00:09:35,509 --> 00:09:35,519
+after the fact that is not an
+ 
+
+409
+00:09:35,519 --> 00:09:38,310
+after the fact that is not an
+implementation detail. It is the minimum
+
+410
+00:09:38,310 --> 00:09:38,320
+implementation detail. It is the minimum
+ 
+
+411
+00:09:38,320 --> 00:09:41,350
+implementation detail. It is the minimum
+requirement for an agentic system in
+
+412
+00:09:41,350 --> 00:09:41,360
+requirement for an agentic system in
+ 
+
+413
+00:09:41,360 --> 00:09:45,190
+requirement for an agentic system in
+production. So let's talk more about
+
+414
+00:09:45,190 --> 00:09:45,200
+production. So let's talk more about
+ 
+
+415
+00:09:45,200 --> 00:09:47,670
+production. So let's talk more about
+this gray zone that you call behavioral
+
+416
+00:09:47,670 --> 00:09:47,680
+this gray zone that you call behavioral
+ 
+
+417
+00:09:47,680 --> 00:09:49,829
+this gray zone that you call behavioral
+validation. You mentioned that it sits
+
+418
+00:09:49,829 --> 00:09:49,839
+validation. You mentioned that it sits
+ 
+
+419
+00:09:49,839 --> 00:09:52,710
+validation. You mentioned that it sits
+at the crosswalk between products
+
+420
+00:09:52,710 --> 00:09:52,720
+at the crosswalk between products
+ 
+
+421
+00:09:52,720 --> 00:09:55,030
+at the crosswalk between products
+definition, product testing and product
+
+422
+00:09:55,030 --> 00:09:55,040
+definition, product testing and product
+ 
+
+423
+00:09:55,040 --> 00:09:57,990
+definition, product testing and product
+development. Um who is responsible for
+
+424
+00:09:57,990 --> 00:09:58,000
+development. Um who is responsible for
+ 
+
+425
+00:09:58,000 --> 00:09:58,710
+development. Um who is responsible for
+it?
+
+426
+00:09:58,710 --> 00:09:58,720
+it?
+ 
+
+427
+00:09:58,720 --> 00:10:01,190
+it?
+>> Everyone. And that is the problem.
+
+428
+00:10:01,190 --> 00:10:01,200
+>> Everyone. And that is the problem.
+ 
+
+429
+00:10:01,200 --> 00:10:04,389
+>> Everyone. And that is the problem.
+>> Okay. Traditionally development builds,
+
+430
+00:10:04,389 --> 00:10:04,399
+>> Okay. Traditionally development builds,
+ 
+
+431
+00:10:04,399 --> 00:10:08,230
+>> Okay. Traditionally development builds,
+testers tests and uh product defines.
+
+432
+00:10:08,230 --> 00:10:08,240
+testers tests and uh product defines.
+ 
+
+433
+00:10:08,240 --> 00:10:12,070
+testers tests and uh product defines.
+Yeah. In aentic AI, those boundaries no
+
+434
+00:10:12,070 --> 00:10:12,080
+Yeah. In aentic AI, those boundaries no
+ 
+
+435
+00:10:12,080 --> 00:10:15,430
+Yeah. In aentic AI, those boundaries no
+longer hold clearly. And I will let you
+
+436
+00:10:15,430 --> 00:10:15,440
+longer hold clearly. And I will let you
+ 
+
+437
+00:10:15,440 --> 00:10:18,550
+longer hold clearly. And I will let you
+know why. Because an agent is not just
+
+438
+00:10:18,550 --> 00:10:18,560
+know why. Because an agent is not just
+ 
+
+439
+00:10:18,560 --> 00:10:23,430
+know why. Because an agent is not just
+code. It is code that makes decisions.
+
+440
+00:10:23,430 --> 00:10:23,440
+code. It is code that makes decisions.
+ 
+
+441
+00:10:23,440 --> 00:10:26,389
+code. It is code that makes decisions.
+And um those decisions
+
+442
+00:10:26,389 --> 00:10:26,399
+And um those decisions
+ 
+
+443
+00:10:26,399 --> 00:10:29,350
+And um those decisions
+must be validated not just technically
+
+444
+00:10:29,350 --> 00:10:29,360
+must be validated not just technically
+ 
+
+445
+00:10:29,360 --> 00:10:31,590
+must be validated not just technically
+but also semantically and from a
+
+446
+00:10:31,590 --> 00:10:31,600
+but also semantically and from a
+ 
+
+447
+00:10:31,600 --> 00:10:34,630
+but also semantically and from a
+business perspective. And no single team
+
+448
+00:10:34,630 --> 00:10:34,640
+business perspective. And no single team
+ 
+
+449
+00:10:34,640 --> 00:10:36,870
+business perspective. And no single team
+can do that alone.
+
+450
+00:10:36,870 --> 00:10:36,880
+can do that alone.
+ 
+
+451
+00:10:36,880 --> 00:10:39,110
+can do that alone.
+>> Okay. So as a product manager that
+
+452
+00:10:39,110 --> 00:10:39,120
+>> Okay. So as a product manager that
+ 
+
+453
+00:10:39,120 --> 00:10:42,710
+>> Okay. So as a product manager that
+sounds great in theory but in practice
+
+454
+00:10:42,710 --> 00:10:42,720
+sounds great in theory but in practice
+ 
+
+455
+00:10:42,720 --> 00:10:45,430
+sounds great in theory but in practice
+how do I convince a developer to sit in
+
+456
+00:10:45,430 --> 00:10:45,440
+how do I convince a developer to sit in
+ 
+
+457
+00:10:45,440 --> 00:10:47,590
+how do I convince a developer to sit in
+the same room with myself and somebody
+
+458
+00:10:47,590 --> 00:10:47,600
+the same room with myself and somebody
+ 
+
+459
+00:10:47,600 --> 00:10:49,110
+the same room with myself and somebody
+from the business side to discuss
+
+460
+00:10:49,110 --> 00:10:49,120
+from the business side to discuss
+ 
+
+461
+00:10:49,120 --> 00:10:51,670
+from the business side to discuss
+behavioral evaluations?
+
+462
+00:10:51,670 --> 00:10:51,680
+behavioral evaluations?
+ 
+
+463
+00:10:51,680 --> 00:10:54,790
+behavioral evaluations?
+You show them why it is necessary and
+
+464
+00:10:54,790 --> 00:10:54,800
+You show them why it is necessary and
+ 
+
+465
+00:10:54,800 --> 00:10:58,150
+You show them why it is necessary and
+the best argument it's a real failure.
+
+466
+00:10:58,150 --> 00:10:58,160
+the best argument it's a real failure.
+ 
+
+467
+00:10:58,160 --> 00:11:00,630
+the best argument it's a real failure.
+We had a situation with an agent that
+
+468
+00:11:00,630 --> 00:11:00,640
+We had a situation with an agent that
+ 
+
+469
+00:11:00,640 --> 00:11:04,069
+We had a situation with an agent that
+was producing strategic decisions for
+
+470
+00:11:04,069 --> 00:11:04,079
+was producing strategic decisions for
+ 
+
+471
+00:11:04,079 --> 00:11:05,750
+was producing strategic decisions for
+manufacturing.
+
+472
+00:11:05,750 --> 00:11:05,760
+manufacturing.
+ 
+
+473
+00:11:05,760 --> 00:11:09,670
+manufacturing.
+It correctly detected a major anomaly, a
+
+474
+00:11:09,670 --> 00:11:09,680
+It correctly detected a major anomaly, a
+ 
+
+475
+00:11:09,680 --> 00:11:12,230
+It correctly detected a major anomaly, a
+significant spike in the data. Yeah, it
+
+476
+00:11:12,230 --> 00:11:12,240
+significant spike in the data. Yeah, it
+ 
+
+477
+00:11:12,240 --> 00:11:15,110
+significant spike in the data. Yeah, it
+labeled it correctly. Everything was
+
+478
+00:11:15,110 --> 00:11:15,120
+labeled it correctly. Everything was
+ 
+
+479
+00:11:15,120 --> 00:11:18,389
+labeled it correctly. Everything was
+technically perfect. And uh the problem
+
+480
+00:11:18,389 --> 00:11:18,399
+technically perfect. And uh the problem
+ 
+
+481
+00:11:18,399 --> 00:11:21,269
+technically perfect. And uh the problem
+for that specific label, there was no
+
+482
+00:11:21,269 --> 00:11:21,279
+for that specific label, there was no
+ 
+
+483
+00:11:21,279 --> 00:11:23,910
+for that specific label, there was no
+decision fallback. Nobody had modeled
+
+484
+00:11:23,910 --> 00:11:23,920
+decision fallback. Nobody had modeled
+ 
+
+485
+00:11:23,920 --> 00:11:26,790
+decision fallback. Nobody had modeled
+the scenario. The downstream agent, the
+
+486
+00:11:26,790 --> 00:11:26,800
+the scenario. The downstream agent, the
+ 
+
+487
+00:11:26,800 --> 00:11:29,910
+the scenario. The downstream agent, the
+one making the strategic decisions,
+
+488
+00:11:29,910 --> 00:11:29,920
+one making the strategic decisions,
+ 
+
+489
+00:11:29,920 --> 00:11:33,430
+one making the strategic decisions,
+received a valid label for which it had
+
+490
+00:11:33,430 --> 00:11:33,440
+received a valid label for which it had
+ 
+
+491
+00:11:33,440 --> 00:11:37,030
+received a valid label for which it had
+no instruction and it made the decision
+
+492
+00:11:37,030 --> 00:11:37,040
+no instruction and it made the decision
+ 
+
+493
+00:11:37,040 --> 00:11:40,310
+no instruction and it made the decision
+a decision in order in the order of
+
+494
+00:11:40,310 --> 00:11:40,320
+a decision in order in the order of
+ 
+
+495
+00:11:40,320 --> 00:11:44,389
+a decision in order in the order of
+hundreds of millions of euros. It was
+
+496
+00:11:44,389 --> 00:11:44,399
+hundreds of millions of euros. It was
+ 
+
+497
+00:11:44,399 --> 00:11:47,829
+hundreds of millions of euros. It was
+strategically completely wrong. But it
+
+498
+00:11:47,829 --> 00:11:47,839
+strategically completely wrong. But it
+ 
+
+499
+00:11:47,839 --> 00:11:49,509
+strategically completely wrong. But it
+was not a bug. It was not a
+
+500
+00:11:49,509 --> 00:11:49,519
+was not a bug. It was not a
+ 
+
+501
+00:11:49,519 --> 00:11:51,670
+was not a bug. It was not a
+hallucination. It was a lack of
+
+502
+00:11:51,670 --> 00:11:51,680
+hallucination. It was a lack of
+ 
+
+503
+00:11:51,680 --> 00:11:54,710
+hallucination. It was a lack of
+behavioral modeling, a real scenario
+
+504
+00:11:54,710 --> 00:11:54,720
+behavioral modeling, a real scenario
+ 
+
+505
+00:11:54,720 --> 00:11:57,269
+behavioral modeling, a real scenario
+that nobody had anticipated
+
+506
+00:11:57,269 --> 00:11:57,279
+that nobody had anticipated
+ 
+
+507
+00:11:57,279 --> 00:11:58,870
+that nobody had anticipated
+>> and who should have anticipated that
+
+508
+00:11:58,870 --> 00:11:58,880
+>> and who should have anticipated that
+ 
+
+509
+00:11:58,880 --> 00:12:00,310
+>> and who should have anticipated that
+scenario.
+
+510
+00:12:00,310 --> 00:12:00,320
+scenario.
+ 
+
+511
+00:12:00,320 --> 00:12:03,030
+scenario.
+>> This is a key question and the answer is
+
+512
+00:12:03,030 --> 00:12:03,040
+>> This is a key question and the answer is
+ 
+
+513
+00:12:03,040 --> 00:12:06,230
+>> This is a key question and the answer is
+the team not one person and that is why
+
+514
+00:12:06,230 --> 00:12:06,240
+the team not one person and that is why
+ 
+
+515
+00:12:06,240 --> 00:12:08,230
+the team not one person and that is why
+I insist on crossf functional
+
+516
+00:12:08,230 --> 00:12:08,240
+I insist on crossf functional
+ 
+
+517
+00:12:08,240 --> 00:12:11,110
+I insist on crossf functional
+collaboration. The solution of this
+
+518
+00:12:11,110 --> 00:12:11,120
+collaboration. The solution of this
+ 
+
+519
+00:12:11,120 --> 00:12:15,350
+collaboration. The solution of this
+issue or this uh bug let's say it's the
+
+520
+00:12:15,350 --> 00:12:15,360
+issue or this uh bug let's say it's the
+ 
+
+521
+00:12:15,360 --> 00:12:18,069
+issue or this uh bug let's say it's the
+agent orchestration flow. The complete
+
+522
+00:12:18,069 --> 00:12:18,079
+agent orchestration flow. The complete
+ 
+
+523
+00:12:18,079 --> 00:12:20,870
+agent orchestration flow. The complete
+flow of decisions that an agent or a
+
+524
+00:12:20,870 --> 00:12:20,880
+flow of decisions that an agent or a
+ 
+
+525
+00:12:20,880 --> 00:12:23,670
+flow of decisions that an agent or a
+system of agents uh makes must be built
+
+526
+00:12:23,670 --> 00:12:23,680
+system of agents uh makes must be built
+ 
+
+527
+00:12:23,680 --> 00:12:26,870
+system of agents uh makes must be built
+with the rigor of a contract and it's a
+
+528
+00:12:26,870 --> 00:12:26,880
+with the rigor of a contract and it's a
+ 
+
+529
+00:12:26,880 --> 00:12:30,069
+with the rigor of a contract and it's a
+flow contract. It's not um technical
+
+530
+00:12:30,069 --> 00:12:30,079
+flow contract. It's not um technical
+ 
+
+531
+00:12:30,079 --> 00:12:31,990
+flow contract. It's not um technical
+artic art artifact. It's a product
+
+532
+00:12:31,990 --> 00:12:32,000
+artic art artifact. It's a product
+ 
+
+533
+00:12:32,000 --> 00:12:35,030
+artic art artifact. It's a product
+artifact. Business people know which
+
+534
+00:12:35,030 --> 00:12:35,040
+artifact. Business people know which
+ 
+
+535
+00:12:35,040 --> 00:12:37,670
+artifact. Business people know which
+scenarios are critical. Product people
+
+536
+00:12:37,670 --> 00:12:37,680
+scenarios are critical. Product people
+ 
+
+537
+00:12:37,680 --> 00:12:41,829
+scenarios are critical. Product people
+know um what experience it's acceptable.
+
+538
+00:12:41,829 --> 00:12:41,839
+know um what experience it's acceptable.
+ 
+
+539
+00:12:41,839 --> 00:12:45,509
+know um what experience it's acceptable.
+developers know how to uh we what is
+
+540
+00:12:45,509 --> 00:12:45,519
+developers know how to uh we what is
+ 
+
+541
+00:12:45,519 --> 00:12:48,310
+developers know how to uh we what is
+technically fasible and the testers know
+
+542
+00:12:48,310 --> 00:12:48,320
+technically fasible and the testers know
+ 
+
+543
+00:12:48,320 --> 00:12:51,269
+technically fasible and the testers know
+how to find the gaps. So if you do not
+
+544
+00:12:51,269 --> 00:12:51,279
+how to find the gaps. So if you do not
+ 
+
+545
+00:12:51,279 --> 00:12:54,230
+how to find the gaps. So if you do not
+have all of them to the same table in
+
+546
+00:12:54,230 --> 00:12:54,240
+have all of them to the same table in
+ 
+
+547
+00:12:54,240 --> 00:12:56,870
+have all of them to the same table in
+the same room, you will always have
+
+548
+00:12:56,870 --> 00:12:56,880
+the same room, you will always have
+ 
+
+549
+00:12:56,880 --> 00:12:58,230
+the same room, you will always have
+blind spots.
+
+550
+00:12:58,230 --> 00:12:58,240
+blind spots.
+ 
+
+551
+00:12:58,240 --> 00:13:01,030
+blind spots.
+>> Okay. So what's the role of an architect
+
+552
+00:13:01,030 --> 00:13:01,040
+>> Okay. So what's the role of an architect
+ 
+
+553
+00:13:01,040 --> 00:13:03,910
+>> Okay. So what's the role of an architect
+in this whole landscape? Am I guessing
+
+554
+00:13:03,910 --> 00:13:03,920
+in this whole landscape? Am I guessing
+ 
+
+555
+00:13:03,920 --> 00:13:05,670
+in this whole landscape? Am I guessing
+it right that the architect is playing
+
+556
+00:13:05,670 --> 00:13:05,680
+it right that the architect is playing
+ 
+
+557
+00:13:05,680 --> 00:13:08,470
+it right that the architect is playing
+the role of a facilitator in this
+
+558
+00:13:08,470 --> 00:13:08,480
+the role of a facilitator in this
+ 
+
+559
+00:13:08,480 --> 00:13:09,750
+the role of a facilitator in this
+scenario?
+
+560
+00:13:09,750 --> 00:13:09,760
+scenario?
+ 
+
+561
+00:13:09,760 --> 00:13:14,949
+scenario?
+>> Yes. In 2026, the AI architect is not um
+
+562
+00:13:14,949 --> 00:13:14,959
+>> Yes. In 2026, the AI architect is not um
+ 
+
+563
+00:13:14,959 --> 00:13:19,670
+>> Yes. In 2026, the AI architect is not um
+in place just to draw diagrams. Yeah. So
+
+564
+00:13:19,670 --> 00:13:19,680
+in place just to draw diagrams. Yeah. So
+ 
+
+565
+00:13:19,680 --> 00:13:22,310
+in place just to draw diagrams. Yeah. So
+the the role is more complex because you
+
+566
+00:13:22,310 --> 00:13:22,320
+the the role is more complex because you
+ 
+
+567
+00:13:22,320 --> 00:13:24,150
+the the role is more complex because you
+need to bring the people to the same
+
+568
+00:13:24,150 --> 00:13:24,160
+need to bring the people to the same
+ 
+
+569
+00:13:24,160 --> 00:13:26,230
+need to bring the people to the same
+table and to discuss what it really
+
+570
+00:13:26,230 --> 00:13:26,240
+table and to discuss what it really
+ 
+
+571
+00:13:26,240 --> 00:13:28,470
+table and to discuss what it really
+matters to connect the dots. The
+
+572
+00:13:28,470 --> 00:13:28,480
+matters to connect the dots. The
+ 
+
+573
+00:13:28,480 --> 00:13:31,430
+matters to connect the dots. The
+question it's very important how you ask
+
+574
+00:13:31,430 --> 00:13:31,440
+question it's very important how you ask
+ 
+
+575
+00:13:31,440 --> 00:13:34,470
+question it's very important how you ask
+the correct questions. Yeah. So instead
+
+576
+00:13:34,470 --> 00:13:34,480
+the correct questions. Yeah. So instead
+ 
+
+577
+00:13:34,480 --> 00:13:37,829
+the correct questions. Yeah. So instead
+of asking how to build something an
+
+578
+00:13:37,829 --> 00:13:37,839
+of asking how to build something an
+ 
+
+579
+00:13:37,839 --> 00:13:40,069
+of asking how to build something an
+application an agentic system something
+
+580
+00:13:40,069 --> 00:13:40,079
+application an agentic system something
+ 
+
+581
+00:13:40,079 --> 00:13:42,069
+application an agentic system something
+that you can find out on the internet
+
+582
+00:13:42,069 --> 00:13:42,079
+that you can find out on the internet
+ 
+
+583
+00:13:42,079 --> 00:13:44,230
+that you can find out on the internet
+very easily and with a little bit of
+
+584
+00:13:44,230 --> 00:13:44,240
+very easily and with a little bit of
+ 
+
+585
+00:13:44,240 --> 00:13:47,110
+very easily and with a little bit of
+practice you will know what to choose.
+
+586
+00:13:47,110 --> 00:13:47,120
+practice you will know what to choose.
+ 
+
+587
+00:13:47,120 --> 00:13:51,110
+practice you will know what to choose.
+The correct uh question is more like
+
+588
+00:13:51,110 --> 00:13:51,120
+The correct uh question is more like
+ 
+
+589
+00:13:51,120 --> 00:13:54,230
+The correct uh question is more like
+what we are expecting from this agent
+
+590
+00:13:54,230 --> 00:13:54,240
+what we are expecting from this agent
+ 
+
+591
+00:13:54,240 --> 00:13:57,829
+what we are expecting from this agent
+when something goes wrong or fails or
+
+592
+00:13:57,829 --> 00:13:57,839
+when something goes wrong or fails or
+ 
+
+593
+00:13:57,839 --> 00:14:00,310
+when something goes wrong or fails or
+it's not as not in acceptance criteria
+
+594
+00:14:00,310 --> 00:14:00,320
+it's not as not in acceptance criteria
+ 
+
+595
+00:14:00,320 --> 00:14:04,069
+it's not as not in acceptance criteria
+let's say. Yeah, you understood right.
+
+596
+00:14:04,069 --> 00:14:04,079
+let's say. Yeah, you understood right.
+ 
+
+597
+00:14:04,079 --> 00:14:06,629
+let's say. Yeah, you understood right.
+>> You mentioned principles. So let's get
+
+598
+00:14:06,629 --> 00:14:06,639
+>> You mentioned principles. So let's get
+ 
+
+599
+00:14:06,639 --> 00:14:09,590
+>> You mentioned principles. So let's get
+specific. What principles do you apply?
+
+600
+00:14:09,590 --> 00:14:09,600
+specific. What principles do you apply?
+ 
+
+601
+00:14:09,600 --> 00:14:12,230
+specific. What principles do you apply?
+>> Yes, I have a few that I have learned
+
+602
+00:14:12,230 --> 00:14:12,240
+>> Yes, I have a few that I have learned
+ 
+
+603
+00:14:12,240 --> 00:14:16,230
+>> Yes, I have a few that I have learned
+even into the hard way. So uh the most
+
+604
+00:14:16,230 --> 00:14:16,240
+even into the hard way. So uh the most
+ 
+
+605
+00:14:16,240 --> 00:14:18,949
+even into the hard way. So uh the most
+important for me always design for
+
+606
+00:14:18,949 --> 00:14:18,959
+important for me always design for
+ 
+
+607
+00:14:18,959 --> 00:14:22,870
+important for me always design for
+failure. Um
+
+608
+00:14:22,870 --> 00:14:22,880
+failure. Um
+ 
+
+609
+00:14:22,880 --> 00:14:25,590
+failure. Um
+remember that the failure is never a
+
+610
+00:14:25,590 --> 00:14:25,600
+remember that the failure is never a
+ 
+
+611
+00:14:25,600 --> 00:14:29,189
+remember that the failure is never a
+single event. In an agentic system, the
+
+612
+00:14:29,189 --> 00:14:29,199
+single event. In an agentic system, the
+ 
+
+613
+00:14:29,199 --> 00:14:31,590
+single event. In an agentic system, the
+worst case scenario is not a failed uh
+
+614
+00:14:31,590 --> 00:14:31,600
+worst case scenario is not a failed uh
+ 
+
+615
+00:14:31,600 --> 00:14:35,110
+worst case scenario is not a failed uh
+request. It's a chain of wrong decisions
+
+616
+00:14:35,110 --> 00:14:35,120
+request. It's a chain of wrong decisions
+ 
+
+617
+00:14:35,120 --> 00:14:38,949
+request. It's a chain of wrong decisions
+each build on the previous one. Each
+
+618
+00:14:38,949 --> 00:14:38,959
+each build on the previous one. Each
+ 
+
+619
+00:14:38,959 --> 00:14:43,350
+each build on the previous one. Each
+amplifying the error before it. And uh
+
+620
+00:14:43,350 --> 00:14:43,360
+amplifying the error before it. And uh
+ 
+
+621
+00:14:43,360 --> 00:14:45,910
+amplifying the error before it. And uh
+an agent does not fail in isolation. An
+
+622
+00:14:45,910 --> 00:14:45,920
+an agent does not fail in isolation. An
+ 
+
+623
+00:14:45,920 --> 00:14:49,430
+an agent does not fail in isolation. An
+agent it's failing in cascade.
+
+624
+00:14:49,430 --> 00:14:49,440
+agent it's failing in cascade.
+ 
+
+625
+00:14:49,440 --> 00:14:52,150
+agent it's failing in cascade.
+>> That sounds alarming. So how do you
+
+626
+00:14:52,150 --> 00:14:52,160
+>> That sounds alarming. So how do you
+ 
+
+627
+00:14:52,160 --> 00:14:54,150
+>> That sounds alarming. So how do you
+contain that cascading
+
+628
+00:14:54,150 --> 00:14:54,160
+contain that cascading
+ 
+
+629
+00:14:54,160 --> 00:14:55,590
+contain that cascading
+>> through boundaries
+
+630
+00:14:55,590 --> 00:14:55,600
+>> through boundaries
+ 
+
+631
+00:14:55,600 --> 00:14:58,389
+>> through boundaries
+>> and that leads to the second principle
+
+632
+00:14:58,389 --> 00:14:58,399
+>> and that leads to the second principle
+ 
+
+633
+00:14:58,399 --> 00:15:02,629
+>> and that leads to the second principle
+that I have clearly define what is input
+
+634
+00:15:02,629 --> 00:15:02,639
+that I have clearly define what is input
+ 
+
+635
+00:15:02,639 --> 00:15:05,590
+that I have clearly define what is input
+data, what are the instructions and
+
+636
+00:15:05,590 --> 00:15:05,600
+data, what are the instructions and
+ 
+
+637
+00:15:05,600 --> 00:15:08,150
+data, what are the instructions and
+where the boundaries are. An agent
+
+638
+00:15:08,150 --> 00:15:08,160
+where the boundaries are. An agent
+ 
+
+639
+00:15:08,160 --> 00:15:11,910
+where the boundaries are. An agent
+operates within um three spaces. What is
+
+640
+00:15:11,910 --> 00:15:11,920
+operates within um three spaces. What is
+ 
+
+641
+00:15:11,920 --> 00:15:15,189
+operates within um three spaces. What is
+told to do, what is what received as
+
+642
+00:15:15,189 --> 00:15:15,199
+told to do, what is what received as
+ 
+
+643
+00:15:15,199 --> 00:15:19,509
+told to do, what is what received as
+data and what is forbidden from doing.
+
+644
+00:15:19,509 --> 00:15:19,519
+data and what is forbidden from doing.
+ 
+
+645
+00:15:19,519 --> 00:15:23,110
+data and what is forbidden from doing.
+When you blur those uh spaces,
+
+646
+00:15:23,110 --> 00:15:23,120
+When you blur those uh spaces,
+ 
+
+647
+00:15:23,120 --> 00:15:28,069
+When you blur those uh spaces,
+the most serious problems emerge.
+
+648
+00:15:28,069 --> 00:15:28,079
+the most serious problems emerge.
+ 
+
+649
+00:15:28,079 --> 00:15:32,069
+the most serious problems emerge.
+Blur them. How? Who blurs them?
+
+650
+00:15:32,069 --> 00:15:32,079
+Blur them. How? Who blurs them?
+ 
+
+651
+00:15:32,079 --> 00:15:35,350
+Blur them. How? Who blurs them?
+Sometimes we do as a team, but sometimes
+
+652
+00:15:35,350 --> 00:15:35,360
+Sometimes we do as a team, but sometimes
+ 
+
+653
+00:15:35,360 --> 00:15:40,069
+Sometimes we do as a team, but sometimes
+someone else um does it uh deliberately
+
+654
+00:15:40,069 --> 00:15:40,079
+someone else um does it uh deliberately
+ 
+
+655
+00:15:40,079 --> 00:15:44,389
+someone else um does it uh deliberately
+and uh that is less obvious uh part when
+
+656
+00:15:44,389 --> 00:15:44,399
+and uh that is less obvious uh part when
+ 
+
+657
+00:15:44,399 --> 00:15:47,350
+and uh that is less obvious uh part when
+external data can contain in
+
+658
+00:15:47,350 --> 00:15:47,360
+external data can contain in
+ 
+
+659
+00:15:47,360 --> 00:15:50,710
+external data can contain in
+instructions. an email, a document, a
+
+660
+00:15:50,710 --> 00:15:50,720
+instructions. an email, a document, a
+ 
+
+661
+00:15:50,720 --> 00:15:54,389
+instructions. an email, a document, a
+web page, even advertising. Um, anything
+
+662
+00:15:54,389 --> 00:15:54,399
+web page, even advertising. Um, anything
+ 
+
+663
+00:15:54,399 --> 00:15:57,829
+web page, even advertising. Um, anything
+that enter everything that enters uh in
+
+664
+00:15:57,829 --> 00:15:57,839
+that enter everything that enters uh in
+ 
+
+665
+00:15:57,839 --> 00:16:01,430
+that enter everything that enters uh in
+the agent context can be intentionally
+
+666
+00:16:01,430 --> 00:16:01,440
+the agent context can be intentionally
+ 
+
+667
+00:16:01,440 --> 00:16:06,389
+the agent context can be intentionally
+crafted to alter its behavior. It is
+
+668
+00:16:06,389 --> 00:16:06,399
+crafted to alter its behavior. It is
+ 
+
+669
+00:16:06,399 --> 00:16:08,629
+crafted to alter its behavior. It is
+called prompt injection. Everyone knows
+
+670
+00:16:08,629 --> 00:16:08,639
+called prompt injection. Everyone knows
+ 
+
+671
+00:16:08,639 --> 00:16:11,269
+called prompt injection. Everyone knows
+about it. It's not theoretically. It's
+
+672
+00:16:11,269 --> 00:16:11,279
+about it. It's not theoretically. It's
+ 
+
+673
+00:16:11,279 --> 00:16:13,990
+about it. It's not theoretically. It's
+real. It's in production and it's
+
+674
+00:16:13,990 --> 00:16:14,000
+real. It's in production and it's
+ 
+
+675
+00:16:14,000 --> 00:16:15,590
+real. It's in production and it's
+various.
+
+676
+00:16:15,590 --> 00:16:15,600
+various.
+ 
+
+677
+00:16:15,600 --> 00:16:18,470
+various.
+And how do you prepare the system for
+
+678
+00:16:18,470 --> 00:16:18,480
+And how do you prepare the system for
+ 
+
+679
+00:16:18,480 --> 00:16:20,470
+And how do you prepare the system for
+scale in this case? Because we are
+
+680
+00:16:20,470 --> 00:16:20,480
+scale in this case? Because we are
+ 
+
+681
+00:16:20,480 --> 00:16:22,310
+scale in this case? Because we are
+talking about multiple agents and
+
+682
+00:16:22,310 --> 00:16:22,320
+talking about multiple agents and
+ 
+
+683
+00:16:22,320 --> 00:16:24,949
+talking about multiple agents and
+multiple possible failure points, right?
+
+684
+00:16:24,949 --> 00:16:24,959
+multiple possible failure points, right?
+ 
+
+685
+00:16:24,959 --> 00:16:27,110
+multiple possible failure points, right?
+>> Yes. This is uh the third principle.
+
+686
+00:16:27,110 --> 00:16:27,120
+>> Yes. This is uh the third principle.
+ 
+
+687
+00:16:27,120 --> 00:16:30,389
+>> Yes. This is uh the third principle.
+Basically I I stress constantly
+
+688
+00:16:30,389 --> 00:16:30,399
+Basically I I stress constantly
+ 
+
+689
+00:16:30,399 --> 00:16:33,030
+Basically I I stress constantly
+multi-agent increase complexity
+
+690
+00:16:33,030 --> 00:16:33,040
+multi-agent increase complexity
+ 
+
+691
+00:16:33,040 --> 00:16:35,829
+multi-agent increase complexity
+exponentially and uh before you add
+
+692
+00:16:35,829 --> 00:16:35,839
+exponentially and uh before you add
+ 
+
+693
+00:16:35,839 --> 00:16:41,189
+exponentially and uh before you add
+another agent you really need to know if
+
+694
+00:16:41,189 --> 00:16:41,199
+another agent you really need to know if
+ 
+
+695
+00:16:41,199 --> 00:16:43,910
+another agent you really need to know if
+the that agent that new agent it's
+
+696
+00:16:43,910 --> 00:16:43,920
+the that agent that new agent it's
+ 
+
+697
+00:16:43,920 --> 00:16:47,189
+the that agent that new agent it's
+mandatory maybe a normal workflow or uh
+
+698
+00:16:47,189 --> 00:16:47,199
+mandatory maybe a normal workflow or uh
+ 
+
+699
+00:16:47,199 --> 00:16:50,069
+mandatory maybe a normal workflow or uh
+a backend solution it's enough. Yeah. So
+
+700
+00:16:50,069 --> 00:16:50,079
+a backend solution it's enough. Yeah. So
+ 
+
+701
+00:16:50,079 --> 00:16:53,430
+a backend solution it's enough. Yeah. So
+we are not adding multiple agents if are
+
+702
+00:16:53,430 --> 00:16:53,440
+we are not adding multiple agents if are
+ 
+
+703
+00:16:53,440 --> 00:16:57,509
+we are not adding multiple agents if are
+not really um mandatory. Every new agent
+
+704
+00:16:57,509 --> 00:16:57,519
+not really um mandatory. Every new agent
+ 
+
+705
+00:16:57,519 --> 00:17:00,150
+not really um mandatory. Every new agent
+is an additional point of failure, a
+
+706
+00:17:00,150 --> 00:17:00,160
+is an additional point of failure, a
+ 
+
+707
+00:17:00,160 --> 00:17:03,749
+is an additional point of failure, a
+source of latency and um an entity that
+
+708
+00:17:03,749 --> 00:17:03,759
+source of latency and um an entity that
+ 
+
+709
+00:17:03,759 --> 00:17:06,630
+source of latency and um an entity that
+can make decisions that contradict the
+
+710
+00:17:06,630 --> 00:17:06,640
+can make decisions that contradict the
+ 
+
+711
+00:17:06,640 --> 00:17:09,110
+can make decisions that contradict the
+rest of the of the system.
+
+712
+00:17:09,110 --> 00:17:09,120
+rest of the of the system.
+ 
+
+713
+00:17:09,120 --> 00:17:11,669
+rest of the of the system.
+>> Okay. But however, we are moving into
+
+714
+00:17:11,669 --> 00:17:11,679
+>> Okay. But however, we are moving into
+ 
+
+715
+00:17:11,679 --> 00:17:14,150
+>> Okay. But however, we are moving into
+multi- aent setups, environments,
+
+716
+00:17:14,150 --> 00:17:14,160
+multi- aent setups, environments,
+ 
+
+717
+00:17:14,160 --> 00:17:15,110
+multi- aent setups, environments,
+spaces.
+
+718
+00:17:15,110 --> 00:17:15,120
+spaces.
+ 
+
+719
+00:17:15,120 --> 00:17:15,429
+spaces.
+>> Yes.
+
+720
+00:17:15,429 --> 00:17:15,439
+>> Yes.
+ 
+
+721
+00:17:15,439 --> 00:17:18,150
+>> Yes.
+>> Right. Yes. And I'm not so saying you
+
+722
+00:17:18,150 --> 00:17:18,160
+>> Right. Yes. And I'm not so saying you
+ 
+
+723
+00:17:18,160 --> 00:17:21,350
+>> Right. Yes. And I'm not so saying you
+should not uh use them. Yeah. Um I'm
+
+724
+00:17:21,350 --> 00:17:21,360
+should not uh use them. Yeah. Um I'm
+ 
+
+725
+00:17:21,360 --> 00:17:23,510
+should not uh use them. Yeah. Um I'm
+saying you should be aware of what you
+
+726
+00:17:23,510 --> 00:17:23,520
+saying you should be aware of what you
+ 
+
+727
+00:17:23,520 --> 00:17:27,510
+saying you should be aware of what you
+are taking on when you have multiple
+
+728
+00:17:27,510 --> 00:17:27,520
+are taking on when you have multiple
+ 
+
+729
+00:17:27,520 --> 00:17:30,070
+are taking on when you have multiple
+agents the agent orchestration flow
+
+730
+00:17:30,070 --> 00:17:30,080
+agents the agent orchestration flow
+ 
+
+731
+00:17:30,080 --> 00:17:33,430
+agents the agent orchestration flow
+grows not exponentially but grows a lot.
+
+732
+00:17:33,430 --> 00:17:33,440
+grows not exponentially but grows a lot.
+ 
+
+733
+00:17:33,440 --> 00:17:36,230
+grows not exponentially but grows a lot.
+And for now we are not able every time
+
+734
+00:17:36,230 --> 00:17:36,240
+And for now we are not able every time
+ 
+
+735
+00:17:36,240 --> 00:17:38,710
+And for now we are not able every time
+to stay in the same room to collaborate
+
+736
+00:17:38,710 --> 00:17:38,720
+to stay in the same room to collaborate
+ 
+
+737
+00:17:38,720 --> 00:17:42,310
+to stay in the same room to collaborate
+and of course you need to take this into
+
+738
+00:17:42,310 --> 00:17:42,320
+and of course you need to take this into
+ 
+
+739
+00:17:42,320 --> 00:17:46,070
+and of course you need to take this into
+consideration. Um each agent has an own
+
+740
+00:17:46,070 --> 00:17:46,080
+consideration. Um each agent has an own
+ 
+
+741
+00:17:46,080 --> 00:17:48,710
+consideration. Um each agent has an own
+decision, its own states, its own
+
+742
+00:17:48,710 --> 00:17:48,720
+decision, its own states, its own
+ 
+
+743
+00:17:48,720 --> 00:17:52,310
+decision, its own states, its own
+failure nodes. The the combinations uh
+
+744
+00:17:52,310 --> 00:17:52,320
+failure nodes. The the combinations uh
+ 
+
+745
+00:17:52,320 --> 00:17:54,870
+failure nodes. The the combinations uh
+explode. That is why I insist that the
+
+746
+00:17:54,870 --> 00:17:54,880
+explode. That is why I insist that the
+ 
+
+747
+00:17:54,880 --> 00:17:57,909
+explode. That is why I insist that the
+flow must be treated as a contract
+
+748
+00:17:57,909 --> 00:17:57,919
+flow must be treated as a contract
+ 
+
+749
+00:17:57,919 --> 00:18:01,270
+flow must be treated as a contract
+built, validated and signed by the
+
+750
+00:18:01,270 --> 00:18:01,280
+built, validated and signed by the
+ 
+
+751
+00:18:01,280 --> 00:18:04,470
+built, validated and signed by the
+entire team. It is the only way of
+
+752
+00:18:04,470 --> 00:18:04,480
+entire team. It is the only way of
+ 
+
+753
+00:18:04,480 --> 00:18:07,990
+entire team. It is the only way of
+capturing the complexity.
+
+754
+00:18:07,990 --> 00:18:08,000
+capturing the complexity.
+ 
+
+755
+00:18:08,000 --> 00:18:09,270
+capturing the complexity.
+You mentioned something interesting
+
+756
+00:18:09,270 --> 00:18:09,280
+You mentioned something interesting
+ 
+
+757
+00:18:09,280 --> 00:18:11,669
+You mentioned something interesting
+earlier. uh you said that an agent
+
+758
+00:18:11,669 --> 00:18:11,679
+earlier. uh you said that an agent
+ 
+
+759
+00:18:11,679 --> 00:18:14,150
+earlier. uh you said that an agent
+doesn't know what it does not know. So
+
+760
+00:18:14,150 --> 00:18:14,160
+doesn't know what it does not know. So
+ 
+
+761
+00:18:14,160 --> 00:18:15,510
+doesn't know what it does not know. So
+can you expand on that?
+
+762
+00:18:15,510 --> 00:18:15,520
+can you expand on that?
+ 
+
+763
+00:18:15,520 --> 00:18:18,310
+can you expand on that?
+>> Yes, maybe is the most underestimated
+
+764
+00:18:18,310 --> 00:18:18,320
+>> Yes, maybe is the most underestimated
+ 
+
+765
+00:18:18,320 --> 00:18:21,669
+>> Yes, maybe is the most underestimated
+aspect. Unlike a human who senses
+
+766
+00:18:21,669 --> 00:18:21,679
+aspect. Unlike a human who senses
+ 
+
+767
+00:18:21,679 --> 00:18:24,150
+aspect. Unlike a human who senses
+uncertainty, a language model produce
+
+768
+00:18:24,150 --> 00:18:24,160
+uncertainty, a language model produce
+ 
+
+769
+00:18:24,160 --> 00:18:26,950
+uncertainty, a language model produce
+output with the same fluency and the
+
+770
+00:18:26,950 --> 00:18:26,960
+output with the same fluency and the
+ 
+
+771
+00:18:26,960 --> 00:18:29,510
+output with the same fluency and the
+same confidence tone regardless of
+
+772
+00:18:29,510 --> 00:18:29,520
+same confidence tone regardless of
+ 
+
+773
+00:18:29,520 --> 00:18:31,990
+same confidence tone regardless of
+whether it has a solid information or
+
+774
+00:18:31,990 --> 00:18:32,000
+whether it has a solid information or
+ 
+
+775
+00:18:32,000 --> 00:18:34,390
+whether it has a solid information or
+just making things up. And uh there is
+
+776
+00:18:34,390 --> 00:18:34,400
+just making things up. And uh there is
+ 
+
+777
+00:18:34,400 --> 00:18:37,830
+just making things up. And uh there is
+no natural signal for I do not know. So
+
+778
+00:18:37,830 --> 00:18:37,840
+no natural signal for I do not know. So
+ 
+
+779
+00:18:37,840 --> 00:18:41,029
+no natural signal for I do not know. So
+you as the architect need to define when
+
+780
+00:18:41,029 --> 00:18:41,039
+you as the architect need to define when
+ 
+
+781
+00:18:41,039 --> 00:18:44,549
+you as the architect need to define when
+the agent must uh stop and ask for
+
+782
+00:18:44,549 --> 00:18:44,559
+the agent must uh stop and ask for
+ 
+
+783
+00:18:44,559 --> 00:18:47,190
+the agent must uh stop and ask for
+clarification. We are using basically a
+
+784
+00:18:47,190 --> 00:18:47,200
+clarification. We are using basically a
+ 
+
+785
+00:18:47,200 --> 00:18:50,390
+clarification. We are using basically a
+tool inside the pro prompt request
+
+786
+00:18:50,390 --> 00:18:50,400
+tool inside the pro prompt request
+ 
+
+787
+00:18:50,400 --> 00:18:53,110
+tool inside the pro prompt request
+clarification. Yeah, you explicitly
+
+788
+00:18:53,110 --> 00:18:53,120
+clarification. Yeah, you explicitly
+ 
+
+789
+00:18:53,120 --> 00:18:56,310
+clarification. Yeah, you explicitly
+instruct. It is better to ask than to
+
+790
+00:18:56,310 --> 00:18:56,320
+instruct. It is better to ask than to
+ 
+
+791
+00:18:56,320 --> 00:19:00,789
+instruct. It is better to ask than to
+guess. That's it. So sounds simple in
+
+792
+00:19:00,789 --> 00:19:00,799
+guess. That's it. So sounds simple in
+ 
+
+793
+00:19:00,799 --> 00:19:03,510
+guess. That's it. So sounds simple in
+practice. It's easy. Um, but it's easy
+
+794
+00:19:03,510 --> 00:19:03,520
+practice. It's easy. Um, but it's easy
+ 
+
+795
+00:19:03,520 --> 00:19:07,830
+practice. It's easy. Um, but it's easy
+also to forget or to um
+
+796
+00:19:07,830 --> 00:19:07,840
+also to forget or to um
+ 
+
+797
+00:19:07,840 --> 00:19:11,669
+also to forget or to um
+to say it's too hard to to test. Okay,
+
+798
+00:19:11,669 --> 00:19:11,679
+to say it's too hard to to test. Okay,
+ 
+
+799
+00:19:11,679 --> 00:19:14,230
+to say it's too hard to to test. Okay,
+I'm smiling because I'm just remembering
+
+800
+00:19:14,230 --> 00:19:14,240
+I'm smiling because I'm just remembering
+ 
+
+801
+00:19:14,240 --> 00:19:16,390
+I'm smiling because I'm just remembering
+about the question about how many Rs are
+
+802
+00:19:16,390 --> 00:19:16,400
+about the question about how many Rs are
+ 
+
+803
+00:19:16,400 --> 00:19:19,669
+about the question about how many Rs are
+in strawberry. So, yeah. Um, but what
+
+804
+00:19:19,669 --> 00:19:19,679
+in strawberry. So, yeah. Um, but what
+ 
+
+805
+00:19:19,679 --> 00:19:22,789
+in strawberry. So, yeah. Um, but what
+you said um sounds quite difficult to
+
+806
+00:19:22,789 --> 00:19:22,799
+you said um sounds quite difficult to
+ 
+
+807
+00:19:22,799 --> 00:19:24,950
+you said um sounds quite difficult to
+test. So, how do you test it? Because,
+
+808
+00:19:24,950 --> 00:19:24,960
+test. So, how do you test it? Because,
+ 
+
+809
+00:19:24,960 --> 00:19:26,390
+test. So, how do you test it? Because,
+uh, from my point of view, it doesn't
+
+810
+00:19:26,390 --> 00:19:26,400
+uh, from my point of view, it doesn't
+ 
+
+811
+00:19:26,400 --> 00:19:28,230
+uh, from my point of view, it doesn't
+fit into a unit test.
+
+812
+00:19:28,230 --> 00:19:28,240
+fit into a unit test.
+ 
+
+813
+00:19:28,240 --> 00:19:31,750
+fit into a unit test.
+>> It does not. And uh this brings uh us
+
+814
+00:19:31,750 --> 00:19:31,760
+>> It does not. And uh this brings uh us
+ 
+
+815
+00:19:31,760 --> 00:19:34,630
+>> It does not. And uh this brings uh us
+back to the importance of crossf
+
+816
+00:19:34,630 --> 00:19:34,640
+back to the importance of crossf
+ 
+
+817
+00:19:34,640 --> 00:19:37,430
+back to the importance of crossf
+functional collaboration. Product people
+
+818
+00:19:37,430 --> 00:19:37,440
+functional collaboration. Product people
+ 
+
+819
+00:19:37,440 --> 00:19:40,870
+functional collaboration. Product people
+know um what questions the agent should
+
+820
+00:19:40,870 --> 00:19:40,880
+know um what questions the agent should
+ 
+
+821
+00:19:40,880 --> 00:19:43,990
+know um what questions the agent should
+be asking. Developers know how uh to
+
+822
+00:19:43,990 --> 00:19:44,000
+be asking. Developers know how uh to
+ 
+
+823
+00:19:44,000 --> 00:19:46,549
+be asking. Developers know how uh to
+implement the the mechanism and the
+
+824
+00:19:46,549 --> 00:19:46,559
+implement the the mechanism and the
+ 
+
+825
+00:19:46,559 --> 00:19:48,310
+implement the the mechanism and the
+testers know how to simulate the
+
+826
+00:19:48,310 --> 00:19:48,320
+testers know how to simulate the
+ 
+
+827
+00:19:48,320 --> 00:19:52,789
+testers know how to simulate the
+uncertainty. uh so no one of from these
+
+828
+00:19:52,789 --> 00:19:52,799
+uncertainty. uh so no one of from these
+ 
+
+829
+00:19:52,799 --> 00:19:56,789
+uncertainty. uh so no one of from these
+perspectives can um or it's sufficient
+
+830
+00:19:56,789 --> 00:19:56,799
+perspectives can um or it's sufficient
+ 
+
+831
+00:19:56,799 --> 00:20:01,270
+perspectives can um or it's sufficient
+on on its own and this validation is not
+
+832
+00:20:01,270 --> 00:20:01,280
+on on its own and this validation is not
+ 
+
+833
+00:20:01,280 --> 00:20:05,990
+on on its own and this validation is not
+one um time effort um it is continuous
+
+834
+00:20:05,990 --> 00:20:06,000
+one um time effort um it is continuous
+ 
+
+835
+00:20:06,000 --> 00:20:09,270
+one um time effort um it is continuous
+as as you discover new scenarios in
+
+836
+00:20:09,270 --> 00:20:09,280
+as as you discover new scenarios in
+ 
+
+837
+00:20:09,280 --> 00:20:13,350
+as as you discover new scenarios in
+production almost each mount I will I
+
+838
+00:20:13,350 --> 00:20:13,360
+production almost each mount I will I
+ 
+
+839
+00:20:13,360 --> 00:20:15,990
+production almost each mount I will I
+will not say each day I was thinking
+
+840
+00:20:15,990 --> 00:20:16,000
+will not say each day I was thinking
+ 
+
+841
+00:20:16,000 --> 00:20:18,070
+will not say each day I was thinking
+about every day
+
+842
+00:20:18,070 --> 00:20:18,080
+about every day
+ 
+
+843
+00:20:18,080 --> 00:20:21,750
+about every day
+so let us Take one step back. Let's say
+
+844
+00:20:21,750 --> 00:20:21,760
+so let us Take one step back. Let's say
+ 
+
+845
+00:20:21,760 --> 00:20:24,630
+so let us Take one step back. Let's say
+somebody who is listening right now is
+
+846
+00:20:24,630 --> 00:20:24,640
+somebody who is listening right now is
+ 
+
+847
+00:20:24,640 --> 00:20:27,990
+somebody who is listening right now is
+at the stage of building an MVP uh for
+
+848
+00:20:27,990 --> 00:20:28,000
+at the stage of building an MVP uh for
+ 
+
+849
+00:20:28,000 --> 00:20:31,830
+at the stage of building an MVP uh for
+an agentic system. What would be top
+
+850
+00:20:31,830 --> 00:20:31,840
+an agentic system. What would be top
+ 
+
+851
+00:20:31,840 --> 00:20:33,750
+an agentic system. What would be top
+three things that they need to keep into
+
+852
+00:20:33,750 --> 00:20:33,760
+three things that they need to keep into
+ 
+
+853
+00:20:33,760 --> 00:20:36,149
+three things that they need to keep into
+account while building it?
+
+854
+00:20:36,149 --> 00:20:36,159
+account while building it?
+ 
+
+855
+00:20:36,159 --> 00:20:39,029
+account while building it?
+First, do not wait for production to
+
+856
+00:20:39,029 --> 00:20:39,039
+First, do not wait for production to
+ 
+
+857
+00:20:39,039 --> 00:20:42,310
+First, do not wait for production to
+discover how your agent uh behaves. Put
+
+858
+00:20:42,310 --> 00:20:42,320
+discover how your agent uh behaves. Put
+ 
+
+859
+00:20:42,320 --> 00:20:45,669
+discover how your agent uh behaves. Put
+it in front of real users as fast as
+
+860
+00:20:45,669 --> 00:20:45,679
+it in front of real users as fast as
+ 
+
+861
+00:20:45,679 --> 00:20:47,990
+it in front of real users as fast as
+possible. 10 users are enough. You don't
+
+862
+00:20:47,990 --> 00:20:48,000
+possible. 10 users are enough. You don't
+ 
+
+863
+00:20:48,000 --> 00:20:51,270
+possible. 10 users are enough. You don't
+need more. You don't need it to make it
+
+864
+00:20:51,270 --> 00:20:51,280
+need more. You don't need it to make it
+ 
+
+865
+00:20:51,280 --> 00:20:53,190
+need more. You don't need it to make it
+at scale.
+
+866
+00:20:53,190 --> 00:20:53,200
+at scale.
+ 
+
+867
+00:20:53,200 --> 00:20:56,390
+at scale.
+10 users will you will find more from
+
+868
+00:20:56,390 --> 00:20:56,400
+10 users will you will find more from
+ 
+
+869
+00:20:56,400 --> 00:21:00,630
+10 users will you will find more from
+them than from 500 tests. Yeah. So it's
+
+870
+00:21:00,630 --> 00:21:00,640
+them than from 500 tests. Yeah. So it's
+ 
+
+871
+00:21:00,640 --> 00:21:04,390
+them than from 500 tests. Yeah. So it's
+really a game changer. Second um build
+
+872
+00:21:04,390 --> 00:21:04,400
+really a game changer. Second um build
+ 
+
+873
+00:21:04,400 --> 00:21:08,070
+really a game changer. Second um build
+semantic fallbacks uh mechanism not just
+
+874
+00:21:08,070 --> 00:21:08,080
+semantic fallbacks uh mechanism not just
+ 
+
+875
+00:21:08,080 --> 00:21:10,310
+semantic fallbacks uh mechanism not just
+technical ones. Yeah. It is not enough
+
+876
+00:21:10,310 --> 00:21:10,320
+technical ones. Yeah. It is not enough
+ 
+
+877
+00:21:10,320 --> 00:21:13,909
+technical ones. Yeah. It is not enough
+to catch um the exception and retry. You
+
+878
+00:21:13,909 --> 00:21:13,919
+to catch um the exception and retry. You
+ 
+
+879
+00:21:13,919 --> 00:21:16,950
+to catch um the exception and retry. You
+need to define what the agent does when
+
+880
+00:21:16,950 --> 00:21:16,960
+need to define what the agent does when
+ 
+
+881
+00:21:16,960 --> 00:21:20,230
+need to define what the agent does when
+it receives something valid but
+
+882
+00:21:20,230 --> 00:21:20,240
+it receives something valid but
+ 
+
+883
+00:21:20,240 --> 00:21:22,230
+it receives something valid but
+unexpected.
+
+884
+00:21:22,230 --> 00:21:22,240
+unexpected.
+ 
+
+885
+00:21:22,240 --> 00:21:25,190
+unexpected.
+Exception caught fallback executed. The
+
+886
+00:21:25,190 --> 00:21:25,200
+Exception caught fallback executed. The
+ 
+
+887
+00:21:25,200 --> 00:21:27,990
+Exception caught fallback executed. The
+conversation continues sounds great but
+
+888
+00:21:27,990 --> 00:21:28,000
+conversation continues sounds great but
+ 
+
+889
+00:21:28,000 --> 00:21:32,149
+conversation continues sounds great but
+in a log. Um if the user is stuck for 40
+
+890
+00:21:32,149 --> 00:21:32,159
+in a log. Um if the user is stuck for 40
+ 
+
+891
+00:21:32,159 --> 00:21:34,549
+in a log. Um if the user is stuck for 40
+minutes in a loop you have a business
+
+892
+00:21:34,549 --> 00:21:34,559
+minutes in a loop you have a business
+ 
+
+893
+00:21:34,559 --> 00:21:37,029
+minutes in a loop you have a business
+problem not an infrastructure one.
+
+894
+00:21:37,029 --> 00:21:37,039
+problem not an infrastructure one.
+ 
+
+895
+00:21:37,039 --> 00:21:40,390
+problem not an infrastructure one.
+>> And the third the agent state lives
+
+896
+00:21:40,390 --> 00:21:40,400
+>> And the third the agent state lives
+ 
+
+897
+00:21:40,400 --> 00:21:43,750
+>> And the third the agent state lives
+outside the model. An LLM it's stateless
+
+898
+00:21:43,750 --> 00:21:43,760
+outside the model. An LLM it's stateless
+ 
+
+899
+00:21:43,760 --> 00:21:47,270
+outside the model. An LLM it's stateless
+by the nature. If progress intermediate
+
+900
+00:21:47,270 --> 00:21:47,280
+by the nature. If progress intermediate
+ 
+
+901
+00:21:47,280 --> 00:21:50,149
+by the nature. If progress intermediate
+decisions and relevant context leave
+
+902
+00:21:50,149 --> 00:21:50,159
+decisions and relevant context leave
+ 
+
+903
+00:21:50,159 --> 00:21:53,590
+decisions and relevant context leave
+only in the prompt they will be lost or
+
+904
+00:21:53,590 --> 00:21:53,600
+only in the prompt they will be lost or
+ 
+
+905
+00:21:53,600 --> 00:21:56,310
+only in the prompt they will be lost or
+disorted over time. So you need an
+
+906
+00:21:56,310 --> 00:21:56,320
+disorted over time. So you need an
+ 
+
+907
+00:21:56,320 --> 00:21:59,590
+disorted over time. So you need an
+external state store. Um and you need to
+
+908
+00:21:59,590 --> 00:21:59,600
+external state store. Um and you need to
+ 
+
+909
+00:21:59,600 --> 00:22:02,390
+external state store. Um and you need to
+save the progress at every important
+
+910
+00:22:02,390 --> 00:22:02,400
+save the progress at every important
+ 
+
+911
+00:22:02,400 --> 00:22:05,590
+save the progress at every important
+checkpoint. Otherwise um I like to say
+
+912
+00:22:05,590 --> 00:22:05,600
+checkpoint. Otherwise um I like to say
+ 
+
+913
+00:22:05,600 --> 00:22:08,390
+checkpoint. Otherwise um I like to say
+that you will have an amnesiac with
+
+914
+00:22:08,390 --> 00:22:08,400
+that you will have an amnesiac with
+ 
+
+915
+00:22:08,400 --> 00:22:09,510
+that you will have an amnesiac with
+permissions.
+
+916
+00:22:09,510 --> 00:22:09,520
+permissions.
+ 
+
+917
+00:22:09,520 --> 00:22:11,510
+permissions.
+>> An amnesiac with permissions. That's
+
+918
+00:22:11,510 --> 00:22:11,520
+>> An amnesiac with permissions. That's
+ 
+
+919
+00:22:11,520 --> 00:22:12,870
+>> An amnesiac with permissions. That's
+quite vivid.
+
+920
+00:22:12,870 --> 00:22:12,880
+quite vivid.
+ 
+
+921
+00:22:12,880 --> 00:22:15,669
+quite vivid.
+>> Yes. But it's accurate. So an agent that
+
+922
+00:22:15,669 --> 00:22:15,679
+>> Yes. But it's accurate. So an agent that
+ 
+
+923
+00:22:15,679 --> 00:22:20,310
+>> Yes. But it's accurate. So an agent that
+does doesn't know what has done and has
+
+924
+00:22:20,310 --> 00:22:20,320
+does doesn't know what has done and has
+ 
+
+925
+00:22:20,320 --> 00:22:23,110
+does doesn't know what has done and has
+permissions to execute to keep acting.
+
+926
+00:22:23,110 --> 00:22:23,120
+permissions to execute to keep acting.
+ 
+
+927
+00:22:23,120 --> 00:22:25,110
+permissions to execute to keep acting.
+It's exactly that. It's an amnesiac with
+
+928
+00:22:25,110 --> 00:22:25,120
+It's exactly that. It's an amnesiac with
+ 
+
+929
+00:22:25,120 --> 00:22:26,310
+It's exactly that. It's an amnesiac with
+permissions.
+
+930
+00:22:26,310 --> 00:22:26,320
+permissions.
+ 
+
+931
+00:22:26,320 --> 00:22:29,430
+permissions.
+>> All right. Um so to summarize up until
+
+932
+00:22:29,430 --> 00:22:29,440
+>> All right. Um so to summarize up until
+ 
+
+933
+00:22:29,440 --> 00:22:32,230
+>> All right. Um so to summarize up until
+now, right, we talked about how to
+
+934
+00:22:32,230 --> 00:22:32,240
+now, right, we talked about how to
+ 
+
+935
+00:22:32,240 --> 00:22:34,950
+now, right, we talked about how to
+design, how to think, what to do at MVP
+
+936
+00:22:34,950 --> 00:22:34,960
+design, how to think, what to do at MVP
+ 
+
+937
+00:22:34,960 --> 00:22:38,710
+design, how to think, what to do at MVP
+stage. Now if we are to think about
+
+938
+00:22:38,710 --> 00:22:38,720
+stage. Now if we are to think about
+ 
+
+939
+00:22:38,720 --> 00:22:41,190
+stage. Now if we are to think about
+behaviorally validating
+
+940
+00:22:41,190 --> 00:22:41,200
+behaviorally validating
+ 
+
+941
+00:22:41,200 --> 00:22:42,789
+behaviorally validating
+all of these aspects, how do you do
+
+942
+00:22:42,789 --> 00:22:42,799
+all of these aspects, how do you do
+ 
+
+943
+00:22:42,799 --> 00:22:44,950
+all of these aspects, how do you do
+that? How do you measure it? Also
+
+944
+00:22:44,950 --> 00:22:44,960
+that? How do you measure it? Also
+ 
+
+945
+00:22:44,960 --> 00:22:48,070
+that? How do you measure it? Also
+>> hopefully everyone knows the the good
+
+946
+00:22:48,070 --> 00:22:48,080
+>> hopefully everyone knows the the good
+ 
+
+947
+00:22:48,080 --> 00:22:50,149
+>> hopefully everyone knows the the good
+answer from the technical side. Yeah. So
+
+948
+00:22:50,149 --> 00:22:50,159
+answer from the technical side. Yeah. So
+ 
+
+949
+00:22:50,159 --> 00:22:53,510
+answer from the technical side. Yeah. So
+I'm talking here about evaluations um
+
+950
+00:22:53,510 --> 00:22:53,520
+I'm talking here about evaluations um
+ 
+
+951
+00:22:53,520 --> 00:22:55,510
+I'm talking here about evaluations um
+evolves
+
+952
+00:22:55,510 --> 00:22:55,520
+evolves
+ 
+
+953
+00:22:55,520 --> 00:22:58,149
+evolves
+and this is the loop that close
+
+954
+00:22:58,149 --> 00:22:58,159
+and this is the loop that close
+ 
+
+955
+00:22:58,159 --> 00:23:02,630
+and this is the loop that close
+everything we have um just discussed all
+
+956
+00:23:02,630 --> 00:23:02,640
+everything we have um just discussed all
+ 
+
+957
+00:23:02,640 --> 00:23:05,270
+everything we have um just discussed all
+of this crossf functional work the
+
+958
+00:23:05,270 --> 00:23:05,280
+of this crossf functional work the
+ 
+
+959
+00:23:05,280 --> 00:23:07,430
+of this crossf functional work the
+conversations with the business the
+
+960
+00:23:07,430 --> 00:23:07,440
+conversations with the business the
+ 
+
+961
+00:23:07,440 --> 00:23:10,470
+conversations with the business the
+scenarios from uh the product the edge
+
+962
+00:23:10,470 --> 00:23:10,480
+scenarios from uh the product the edge
+ 
+
+963
+00:23:10,480 --> 00:23:13,029
+scenarios from uh the product the edge
+cases discovered in in production does
+
+964
+00:23:13,029 --> 00:23:13,039
+cases discovered in in production does
+ 
+
+965
+00:23:13,039 --> 00:23:16,149
+cases discovered in in production does
+not stay on a whiteboard it turns into
+
+966
+00:23:16,149 --> 00:23:16,159
+not stay on a whiteboard it turns into
+ 
+
+967
+00:23:16,159 --> 00:23:19,190
+not stay on a whiteboard it turns into
+concrete evaluations every behavioral
+
+968
+00:23:19,190 --> 00:23:19,200
+concrete evaluations every behavioral
+ 
+
+969
+00:23:19,200 --> 00:23:23,350
+concrete evaluations every behavioral
+scenario you identify becomes um an eval
+
+970
+00:23:23,350 --> 00:23:23,360
+scenario you identify becomes um an eval
+ 
+
+971
+00:23:23,360 --> 00:23:27,350
+scenario you identify becomes um an eval
+that you run, measure and track over
+
+972
+00:23:27,350 --> 00:23:27,360
+that you run, measure and track over
+ 
+
+973
+00:23:27,360 --> 00:23:29,029
+that you run, measure and track over
+time.
+
+974
+00:23:29,029 --> 00:23:29,039
+time.
+ 
+
+975
+00:23:29,039 --> 00:23:32,870
+time.
+So aren't eval just tests then?
+
+976
+00:23:32,870 --> 00:23:32,880
+So aren't eval just tests then?
+ 
+
+977
+00:23:32,880 --> 00:23:35,430
+So aren't eval just tests then?
+>> Not in the traditional sense. A
+
+978
+00:23:35,430 --> 00:23:35,440
+>> Not in the traditional sense. A
+ 
+
+979
+00:23:35,440 --> 00:23:38,470
+>> Not in the traditional sense. A
+technical test verifies did the agent
+
+980
+00:23:38,470 --> 00:23:38,480
+technical test verifies did the agent
+ 
+
+981
+00:23:38,480 --> 00:23:41,990
+technical test verifies did the agent
+return a valid JSON? Yes. No. Yeah. A
+
+982
+00:23:41,990 --> 00:23:42,000
+return a valid JSON? Yes. No. Yeah. A
+ 
+
+983
+00:23:42,000 --> 00:23:45,750
+return a valid JSON? Yes. No. Yeah. A
+behav behavioral evol verifies did the
+
+984
+00:23:45,750 --> 00:23:45,760
+behav behavioral evol verifies did the
+ 
+
+985
+00:23:45,760 --> 00:23:48,789
+behav behavioral evol verifies did the
+agent make the right decision in this
+
+986
+00:23:48,789 --> 00:23:48,799
+agent make the right decision in this
+ 
+
+987
+00:23:48,799 --> 00:23:52,230
+agent make the right decision in this
+specific context. Did it know when to
+
+988
+00:23:52,230 --> 00:23:52,240
+specific context. Did it know when to
+ 
+
+989
+00:23:52,240 --> 00:23:55,590
+specific context. Did it know when to
+stop? Did it ask for clarification when
+
+990
+00:23:55,590 --> 00:23:55,600
+stop? Did it ask for clarification when
+ 
+
+991
+00:23:55,600 --> 00:23:58,630
+stop? Did it ask for clarification when
+it should uh have did it stay aligned
+
+992
+00:23:58,630 --> 00:23:58,640
+it should uh have did it stay aligned
+ 
+
+993
+00:23:58,640 --> 00:24:02,149
+it should uh have did it stay aligned
+with the original objective after 15
+
+994
+00:24:02,149 --> 00:24:02,159
+with the original objective after 15
+ 
+
+995
+00:24:02,159 --> 00:24:04,950
+with the original objective after 15
+steps? Yeah. So these are the things you
+
+996
+00:24:04,950 --> 00:24:04,960
+steps? Yeah. So these are the things you
+ 
+
+997
+00:24:04,960 --> 00:24:07,350
+steps? Yeah. So these are the things you
+cannot verify with a unit test. Um and
+
+998
+00:24:07,350 --> 00:24:07,360
+cannot verify with a unit test. Um and
+ 
+
+999
+00:24:07,360 --> 00:24:09,510
+cannot verify with a unit test. Um and
+those scenarios come exactly from the
+
+1000
+00:24:09,510 --> 00:24:09,520
+those scenarios come exactly from the
+ 
+
+1001
+00:24:09,520 --> 00:24:12,149
+those scenarios come exactly from the
+collaboration we have been talking about
+
+1002
+00:24:12,149 --> 00:24:12,159
+collaboration we have been talking about
+ 
+
+1003
+00:24:12,159 --> 00:24:16,070
+collaboration we have been talking about
+today. In practice the process looks
+
+1004
+00:24:16,070 --> 00:24:16,080
+today. In practice the process looks
+ 
+
+1005
+00:24:16,080 --> 00:24:18,710
+today. In practice the process looks
+like you collaborate cross functional to
+
+1006
+00:24:18,710 --> 00:24:18,720
+like you collaborate cross functional to
+ 
+
+1007
+00:24:18,720 --> 00:24:22,470
+like you collaborate cross functional to
+identify what you should be validating.
+
+1008
+00:24:22,470 --> 00:24:22,480
+identify what you should be validating.
+ 
+
+1009
+00:24:22,480 --> 00:24:25,590
+identify what you should be validating.
+You turn those scenarios into evals. You
+
+1010
+00:24:25,590 --> 00:24:25,600
+You turn those scenarios into evals. You
+ 
+
+1011
+00:24:25,600 --> 00:24:29,669
+You turn those scenarios into evals. You
+run the evals continuously uh not once
+
+1012
+00:24:29,669 --> 00:24:29,679
+run the evals continuously uh not once
+ 
+
+1013
+00:24:29,679 --> 00:24:32,549
+run the evals continuously uh not once
+but at every iteration. Yeah. every
+
+1014
+00:24:32,549 --> 00:24:32,559
+but at every iteration. Yeah. every
+ 
+
+1015
+00:24:32,559 --> 00:24:35,510
+but at every iteration. Yeah. every
+model change, every prompt modification
+
+1016
+00:24:35,510 --> 00:24:35,520
+model change, every prompt modification
+ 
+
+1017
+00:24:35,520 --> 00:24:39,750
+model change, every prompt modification
+that you have um done that is the bridge
+
+1018
+00:24:39,750 --> 00:24:39,760
+that you have um done that is the bridge
+ 
+
+1019
+00:24:39,760 --> 00:24:44,230
+that you have um done that is the bridge
+that is how you go from I hope it works
+
+1020
+00:24:44,230 --> 00:24:44,240
+that is how you go from I hope it works
+ 
+
+1021
+00:24:44,240 --> 00:24:47,830
+that is how you go from I hope it works
+to I know it works and I can prove it
+
+1022
+00:24:47,830 --> 00:24:47,840
+to I know it works and I can prove it
+ 
+
+1023
+00:24:47,840 --> 00:24:50,470
+to I know it works and I can prove it
+and this is also one of the way into
+
+1024
+00:24:50,470 --> 00:24:50,480
+and this is also one of the way into
+ 
+
+1025
+00:24:50,480 --> 00:24:53,510
+and this is also one of the way into
+which you can give the assurance. Yeah.
+
+1026
+00:24:53,510 --> 00:24:53,520
+which you can give the assurance. Yeah.
+ 
+
+1027
+00:24:53,520 --> 00:24:56,710
+which you can give the assurance. Yeah.
+Agent insurance. Can you insure an agent
+
+1028
+00:24:56,710 --> 00:24:56,720
+Agent insurance. Can you insure an agent
+ 
+
+1029
+00:24:56,720 --> 00:24:58,310
+Agent insurance. Can you insure an agent
+and what's the relationship between
+
+1030
+00:24:58,310 --> 00:24:58,320
+and what's the relationship between
+ 
+
+1031
+00:24:58,320 --> 00:25:00,870
+and what's the relationship between
+insurance agent insurance actually and
+
+1032
+00:25:00,870 --> 00:25:00,880
+insurance agent insurance actually and
+ 
+
+1033
+00:25:00,880 --> 00:25:02,230
+insurance agent insurance actually and
+evals?
+
+1034
+00:25:02,230 --> 00:25:02,240
+evals?
+ 
+
+1035
+00:25:02,240 --> 00:25:05,510
+evals?
+>> Yes. So what we are making normally with
+
+1036
+00:25:05,510 --> 00:25:05,520
+>> Yes. So what we are making normally with
+ 
+
+1037
+00:25:05,520 --> 00:25:08,789
+>> Yes. So what we are making normally with
+evaluations we are controlling we are
+
+1038
+00:25:08,789 --> 00:25:08,799
+evaluations we are controlling we are
+ 
+
+1039
+00:25:08,799 --> 00:25:11,510
+evaluations we are controlling we are
+giving the stability and the speed of
+
+1040
+00:25:11,510 --> 00:25:11,520
+giving the stability and the speed of
+ 
+
+1041
+00:25:11,520 --> 00:25:13,430
+giving the stability and the speed of
+our agents. Yeah we are controlling
+
+1042
+00:25:13,430 --> 00:25:13,440
+our agents. Yeah we are controlling
+ 
+
+1043
+00:25:13,440 --> 00:25:16,950
+our agents. Yeah we are controlling
+them. Um now there is uh this
+
+1044
+00:25:16,950 --> 00:25:16,960
+them. Um now there is uh this
+ 
+
+1045
+00:25:16,960 --> 00:25:20,230
+them. Um now there is uh this
+certifications of the agents of of the
+
+1046
+00:25:20,230 --> 00:25:20,240
+certifications of the agents of of the
+ 
+
+1047
+00:25:20,240 --> 00:25:22,789
+certifications of the agents of of the
+companies that are producing uh agents.
+
+1048
+00:25:22,789 --> 00:25:22,799
+companies that are producing uh agents.
+ 
+
+1049
+00:25:22,799 --> 00:25:26,070
+companies that are producing uh agents.
+Yeah. And what is required? Risk
+
+1050
+00:25:26,070 --> 00:25:26,080
+Yeah. And what is required? Risk
+ 
+
+1051
+00:25:26,080 --> 00:25:28,870
+Yeah. And what is required? Risk
+quantification, predictability and
+
+1052
+00:25:28,870 --> 00:25:28,880
+quantification, predictability and
+ 
+
+1053
+00:25:28,880 --> 00:25:32,390
+quantification, predictability and
+audit. How you are giving this with
+
+1054
+00:25:32,390 --> 00:25:32,400
+audit. How you are giving this with
+ 
+
+1055
+00:25:32,400 --> 00:25:35,590
+audit. How you are giving this with
+evaluations. Not the only thing yeah
+
+1056
+00:25:35,590 --> 00:25:35,600
+evaluations. Not the only thing yeah
+ 
+
+1057
+00:25:35,600 --> 00:25:39,350
+evaluations. Not the only thing yeah
+required for the certification but three
+
+1058
+00:25:39,350 --> 00:25:39,360
+required for the certification but three
+ 
+
+1059
+00:25:39,360 --> 00:25:42,390
+required for the certification but three
+very important characteristics
+
+1060
+00:25:42,390 --> 00:25:42,400
+very important characteristics
+ 
+
+1061
+00:25:42,400 --> 00:25:45,190
+very important characteristics
+with which you can ensure that your
+
+1062
+00:25:45,190 --> 00:25:45,200
+with which you can ensure that your
+ 
+
+1063
+00:25:45,200 --> 00:25:49,029
+with which you can ensure that your
+agent it's doing something specifically.
+
+1064
+00:25:49,029 --> 00:25:49,039
+agent it's doing something specifically.
+ 
+
+1065
+00:25:49,039 --> 00:25:51,029
+agent it's doing something specifically.
+>> That's very interesting. This sounds
+
+1066
+00:25:51,029 --> 00:25:51,039
+>> That's very interesting. This sounds
+ 
+
+1067
+00:25:51,039 --> 00:25:53,430
+>> That's very interesting. This sounds
+like the next step in the evolution of a
+
+1068
+00:25:53,430 --> 00:25:53,440
+like the next step in the evolution of a
+ 
+
+1069
+00:25:53,440 --> 00:25:54,630
+like the next step in the evolution of a
+gentic systems.
+
+1070
+00:25:54,630 --> 00:25:54,640
+gentic systems.
+ 
+
+1071
+00:25:54,640 --> 00:25:59,510
+gentic systems.
+>> Yes. Um we invent them, we build them,
+
+1072
+00:25:59,510 --> 00:25:59,520
+>> Yes. Um we invent them, we build them,
+ 
+
+1073
+00:25:59,520 --> 00:26:02,789
+>> Yes. Um we invent them, we build them,
+we scale them and now we are ensuring
+
+1074
+00:26:02,789 --> 00:26:02,799
+we scale them and now we are ensuring
+ 
+
+1075
+00:26:02,799 --> 00:26:05,669
+we scale them and now we are ensuring
+that they are making what are supposed
+
+1076
+00:26:05,669 --> 00:26:05,679
+that they are making what are supposed
+ 
+
+1077
+00:26:05,679 --> 00:26:08,789
+that they are making what are supposed
+to do. Okay. So looks like we've got a
+
+1078
+00:26:08,789 --> 00:26:08,799
+to do. Okay. So looks like we've got a
+ 
+
+1079
+00:26:08,799 --> 00:26:12,390
+to do. Okay. So looks like we've got a
+lot of work to do. Now the question is
+
+1080
+00:26:12,390 --> 00:26:12,400
+lot of work to do. Now the question is
+ 
+
+1081
+00:26:12,400 --> 00:26:15,430
+lot of work to do. Now the question is
+when and how will we achieve it? I'm
+
+1082
+00:26:15,430 --> 00:26:15,440
+when and how will we achieve it? I'm
+ 
+
+1083
+00:26:15,440 --> 00:26:17,430
+when and how will we achieve it? I'm
+talking about that big amount of work
+
+1084
+00:26:17,430 --> 00:26:17,440
+talking about that big amount of work
+ 
+
+1085
+00:26:17,440 --> 00:26:19,190
+talking about that big amount of work
+that we need to do in order to really
+
+1086
+00:26:19,190 --> 00:26:19,200
+that we need to do in order to really
+ 
+
+1087
+00:26:19,200 --> 00:26:21,669
+that we need to do in order to really
+build robust agentic systems.
+
+1088
+00:26:21,669 --> 00:26:21,679
+build robust agentic systems.
+ 
+
+1089
+00:26:21,679 --> 00:26:27,750
+build robust agentic systems.
+>> Yes. When each day Yeah. Uh with what
+
+1090
+00:26:27,750 --> 00:26:27,760
+>> Yes. When each day Yeah. Uh with what
+ 
+
+1091
+00:26:27,760 --> 00:26:31,190
+>> Yes. When each day Yeah. Uh with what
+we are using AI tools and uh I'm happy
+
+1092
+00:26:31,190 --> 00:26:31,200
+we are using AI tools and uh I'm happy
+ 
+
+1093
+00:26:31,200 --> 00:26:34,950
+we are using AI tools and uh I'm happy
+to say that sometimes we receive a help
+
+1094
+00:26:34,950 --> 00:26:34,960
+to say that sometimes we receive a help
+ 
+
+1095
+00:26:34,960 --> 00:26:38,310
+to say that sometimes we receive a help
+or uh we improve our pace with even
+
+1096
+00:26:38,310 --> 00:26:38,320
+or uh we improve our pace with even
+ 
+
+1097
+00:26:38,320 --> 00:26:41,830
+or uh we improve our pace with even
+50%age. Sometimes it's not 50 can be a
+
+1098
+00:26:41,830 --> 00:26:41,840
+50%age. Sometimes it's not 50 can be a
+ 
+
+1099
+00:26:41,840 --> 00:26:45,110
+50%age. Sometimes it's not 50 can be a
+30. It's the most common let's say but
+
+1100
+00:26:45,110 --> 00:26:45,120
+30. It's the most common let's say but
+ 
+
+1101
+00:26:45,120 --> 00:26:48,310
+30. It's the most common let's say but
+with really difficult uh things or
+
+1102
+00:26:48,310 --> 00:26:48,320
+with really difficult uh things or
+ 
+
+1103
+00:26:48,320 --> 00:26:50,470
+with really difficult uh things or
+complex better to say things to
+
+1104
+00:26:50,470 --> 00:26:50,480
+complex better to say things to
+ 
+
+1105
+00:26:50,480 --> 00:26:54,549
+complex better to say things to
+implement um even with 10%age uh we are
+
+1106
+00:26:54,549 --> 00:26:54,559
+implement um even with 10%age uh we are
+ 
+
+1107
+00:26:54,559 --> 00:26:57,590
+implement um even with 10%age uh we are
+happy. It's a help that it's required
+
+1108
+00:26:57,590 --> 00:26:57,600
+happy. It's a help that it's required
+ 
+
+1109
+00:26:57,600 --> 00:26:59,590
+happy. It's a help that it's required
+because exactly like you said the amount
+
+1110
+00:26:59,590 --> 00:26:59,600
+because exactly like you said the amount
+ 
+
+1111
+00:26:59,600 --> 00:27:02,390
+because exactly like you said the amount
+of work the amount of things that almost
+
+1112
+00:27:02,390 --> 00:27:02,400
+of work the amount of things that almost
+ 
+
+1113
+00:27:02,400 --> 00:27:04,950
+of work the amount of things that almost
+each day we need to come back and to add
+
+1114
+00:27:04,950 --> 00:27:04,960
+each day we need to come back and to add
+ 
+
+1115
+00:27:04,960 --> 00:27:06,950
+each day we need to come back and to add
+and not because the system was not
+
+1116
+00:27:06,950 --> 00:27:06,960
+and not because the system was not
+ 
+
+1117
+00:27:06,960 --> 00:27:09,350
+and not because the system was not
+correct but for the system to be correct
+
+1118
+00:27:09,350 --> 00:27:09,360
+correct but for the system to be correct
+ 
+
+1119
+00:27:09,360 --> 00:27:11,669
+correct but for the system to be correct
+also in the future in the near future.
+
+1120
+00:27:11,669 --> 00:27:11,679
+also in the future in the near future.
+ 
+
+1121
+00:27:11,679 --> 00:27:15,909
+also in the future in the near future.
+the things are evolving into oh yeah the
+
+1122
+00:27:15,909 --> 00:27:15,919
+the things are evolving into oh yeah the
+ 
+
+1123
+00:27:15,919 --> 00:27:18,390
+the things are evolving into oh yeah the
+pace it's incredible I'm I'm very happy
+
+1124
+00:27:18,390 --> 00:27:18,400
+pace it's incredible I'm I'm very happy
+ 
+
+1125
+00:27:18,400 --> 00:27:20,789
+pace it's incredible I'm I'm very happy
+actually that I'm living this this
+
+1126
+00:27:20,789 --> 00:27:20,799
+actually that I'm living this this
+ 
+
+1127
+00:27:20,799 --> 00:27:22,070
+actually that I'm living this this
+period yeah
+
+1128
+00:27:22,070 --> 00:27:22,080
+period yeah
+ 
+
+1129
+00:27:22,080 --> 00:27:25,350
+period yeah
+>> so uh we are coming to an end uh but
+
+1130
+00:27:25,350 --> 00:27:25,360
+>> so uh we are coming to an end uh but
+ 
+
+1131
+00:27:25,360 --> 00:27:27,909
+>> so uh we are coming to an end uh but
+Dana if you had to leave the audience
+
+1132
+00:27:27,909 --> 00:27:27,919
+Dana if you had to leave the audience
+ 
+
+1133
+00:27:27,919 --> 00:27:31,909
+Dana if you had to leave the audience
+with some thoughts what would those be
+
+1134
+00:27:31,909 --> 00:27:31,919
+with some thoughts what would those be
+ 
+
+1135
+00:27:31,919 --> 00:27:34,789
+with some thoughts what would those be
+>> technically we can build anything almost
+
+1136
+00:27:34,789 --> 00:27:34,799
+>> technically we can build anything almost
+ 
+
+1137
+00:27:34,799 --> 00:27:37,750
+>> technically we can build anything almost
+anything right now that is no longer the
+
+1138
+00:27:37,750 --> 00:27:37,760
+anything right now that is no longer the
+ 
+
+1139
+00:27:37,760 --> 00:27:40,310
+anything right now that is no longer the
+the challenge the challenge is that what
+
+1140
+00:27:40,310 --> 00:27:40,320
+the challenge the challenge is that what
+ 
+
+1141
+00:27:40,320 --> 00:27:42,789
+the challenge the challenge is that what
+we have built beh behave correctly when
+
+1142
+00:27:42,789 --> 00:27:42,799
+we have built beh behave correctly when
+ 
+
+1143
+00:27:42,799 --> 00:27:47,430
+we have built beh behave correctly when
+we plan uh no longer holds and um you do
+
+1144
+00:27:47,430 --> 00:27:47,440
+we plan uh no longer holds and um you do
+ 
+
+1145
+00:27:47,440 --> 00:27:49,750
+we plan uh no longer holds and um you do
+not learn that from uh the architecture,
+
+1146
+00:27:49,750 --> 00:27:49,760
+not learn that from uh the architecture,
+ 
+
+1147
+00:27:49,760 --> 00:27:51,750
+not learn that from uh the architecture,
+you do not learn it from uh the
+
+1148
+00:27:51,750 --> 00:27:51,760
+you do not learn it from uh the
+ 
+
+1149
+00:27:51,760 --> 00:27:54,310
+you do not learn it from uh the
+pipelines or um you don't learn it from
+
+1150
+00:27:54,310 --> 00:27:54,320
+pipelines or um you don't learn it from
+ 
+
+1151
+00:27:54,320 --> 00:27:56,950
+pipelines or um you don't learn it from
+the green dashboards. You learn it only
+
+1152
+00:27:56,950 --> 00:27:56,960
+the green dashboards. You learn it only
+ 
+
+1153
+00:27:56,960 --> 00:28:00,389
+the green dashboards. You learn it only
+by putting the agent in front of reality
+
+1154
+00:28:00,389 --> 00:28:00,399
+by putting the agent in front of reality
+ 
+
+1155
+00:28:00,399 --> 00:28:03,909
+by putting the agent in front of reality
+and having the right people in the room
+
+1156
+00:28:03,909 --> 00:28:03,919
+and having the right people in the room
+ 
+
+1157
+00:28:03,919 --> 00:28:08,070
+and having the right people in the room
+when things breaks and even better if
+
+1158
+00:28:08,070 --> 00:28:08,080
+when things breaks and even better if
+ 
+
+1159
+00:28:08,080 --> 00:28:10,230
+when things breaks and even better if
+it's possible before the things to
+
+1160
+00:28:10,230 --> 00:28:10,240
+it's possible before the things to
+ 
+
+1161
+00:28:10,240 --> 00:28:11,350
+it's possible before the things to
+break.
+
+1162
+00:28:11,350 --> 00:28:11,360
+break.
+ 
+
+1163
+00:28:11,360 --> 00:28:13,830
+break.
+>> So what if that doesn't happen?
+
+1164
+00:28:13,830 --> 00:28:13,840
+>> So what if that doesn't happen?
+ 
+
+1165
+00:28:13,840 --> 00:28:17,350
+>> So what if that doesn't happen?
+>> They have ancient permissions um in
+
+1166
+00:28:17,350 --> 00:28:17,360
+>> They have ancient permissions um in
+ 
+
+1167
+00:28:17,360 --> 00:28:20,950
+>> They have ancient permissions um in
+production and they will find out from
+
+1168
+00:28:20,950 --> 00:28:20,960
+production and they will find out from
+ 
+
+1169
+00:28:20,960 --> 00:28:23,990
+production and they will find out from
+from their users um not from their
+
+1170
+00:28:23,990 --> 00:28:24,000
+from their users um not from their
+ 
+
+1171
+00:28:24,000 --> 00:28:27,510
+from their users um not from their
+monitoring. I really hope that we are
+
+1172
+00:28:27,510 --> 00:28:27,520
+monitoring. I really hope that we are
+ 
+
+1173
+00:28:27,520 --> 00:28:29,830
+monitoring. I really hope that we are
+improving the way in which we are using
+
+1174
+00:28:29,830 --> 00:28:29,840
+improving the way in which we are using
+ 
+
+1175
+00:28:29,840 --> 00:28:32,230
+improving the way in which we are using
+the evaluations. Everyone is doing them,
+
+1176
+00:28:32,230 --> 00:28:32,240
+the evaluations. Everyone is doing them,
+ 
+
+1177
+00:28:32,240 --> 00:28:36,389
+the evaluations. Everyone is doing them,
+don't get me wrong. But there is a super
+
+1178
+00:28:36,389 --> 00:28:36,399
+don't get me wrong. But there is a super
+ 
+
+1179
+00:28:36,399 --> 00:28:39,430
+don't get me wrong. But there is a super
+super fine line between just having
+
+1180
+00:28:39,430 --> 00:28:39,440
+super fine line between just having
+ 
+
+1181
+00:28:39,440 --> 00:28:42,630
+super fine line between just having
+evaluations and having the correct ones.
+
+1182
+00:28:42,630 --> 00:28:42,640
+evaluations and having the correct ones.
+ 
+
+1183
+00:28:42,640 --> 00:28:45,510
+evaluations and having the correct ones.
+>> I see. So perhaps some closing thoughts
+
+1184
+00:28:45,510 --> 00:28:45,520
+>> I see. So perhaps some closing thoughts
+ 
+
+1185
+00:28:45,520 --> 00:28:47,990
+>> I see. So perhaps some closing thoughts
+here would be that perhaps everyone
+
+1186
+00:28:47,990 --> 00:28:48,000
+here would be that perhaps everyone
+ 
+
+1187
+00:28:48,000 --> 00:28:50,789
+here would be that perhaps everyone
+should think about what questions to ask
+
+1188
+00:28:50,789 --> 00:28:50,799
+should think about what questions to ask
+ 
+
+1189
+00:28:50,799 --> 00:28:52,310
+should think about what questions to ask
+their agent.
+
+1190
+00:28:52,310 --> 00:28:52,320
+their agent.
+ 
+
+1191
+00:28:52,320 --> 00:28:53,029
+their agent.
+>> Yes,
+
+1192
+00:28:53,029 --> 00:28:53,039
+>> Yes,
+ 
+
+1193
+00:28:53,039 --> 00:28:54,789
+>> Yes,
+>> you Thank you very much. Thank you,
+
+1194
+00:28:54,789 --> 00:28:54,799
+>> you Thank you very much. Thank you,
+ 
+
+1195
+00:28:54,799 --> 00:28:57,799
+>> you Thank you very much. Thank you,
+Yana.
+

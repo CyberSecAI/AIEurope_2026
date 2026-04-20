@@ -1,0 +1,4115 @@
+1
+00:00:15,120 --> 00:00:17,109
+
+Hello everyone and welcome to this talk
+
+2
+00:00:17,109 --> 00:00:17,119
+Hello everyone and welcome to this talk
+ 
+
+3
+00:00:17,119 --> 00:00:20,550
+Hello everyone and welcome to this talk
+in open agent uh ecosystem and uh I
+
+4
+00:00:20,550 --> 00:00:20,560
+in open agent uh ecosystem and uh I
+ 
+
+5
+00:00:20,560 --> 00:00:22,150
+in open agent uh ecosystem and uh I
+would like to call it having an AI
+
+6
+00:00:22,150 --> 00:00:22,160
+would like to call it having an AI
+ 
+
+7
+00:00:22,160 --> 00:00:25,109
+would like to call it having an AI
+engineer at your fingertips.
+
+8
+00:00:25,109 --> 00:00:25,119
+engineer at your fingertips.
+ 
+
+9
+00:00:25,119 --> 00:00:27,109
+engineer at your fingertips.
+Um I'm Marvia and I work in the open
+
+10
+00:00:27,109 --> 00:00:27,119
+Um I'm Marvia and I work in the open
+ 
+
+11
+00:00:27,119 --> 00:00:29,189
+Um I'm Marvia and I work in the open
+source team of hugging face. How many of
+
+12
+00:00:29,189 --> 00:00:29,199
+source team of hugging face. How many of
+ 
+
+13
+00:00:29,199 --> 00:00:31,349
+source team of hugging face. How many of
+you are hugging using hugging face on
+
+14
+00:00:31,349 --> 00:00:31,359
+you are hugging using hugging face on
+ 
+
+15
+00:00:31,359 --> 00:00:33,750
+you are hugging using hugging face on
+daily basis?
+
+16
+00:00:33,750 --> 00:00:33,760
+daily basis?
+ 
+
+17
+00:00:33,760 --> 00:00:37,110
+daily basis?
+Oh, let's change that. This is not okay.
+
+18
+00:00:37,110 --> 00:00:37,120
+Oh, let's change that. This is not okay.
+ 
+
+19
+00:00:37,120 --> 00:00:39,910
+Oh, let's change that. This is not okay.
+Um but first let's talk a bit about open
+
+20
+00:00:39,910 --> 00:00:39,920
+Um but first let's talk a bit about open
+ 
+
+21
+00:00:39,920 --> 00:00:41,750
+Um but first let's talk a bit about open
+source and what it is. So when it comes
+
+22
+00:00:41,750 --> 00:00:41,760
+source and what it is. So when it comes
+ 
+
+23
+00:00:41,760 --> 00:00:43,590
+source and what it is. So when it comes
+to machine learning, open source is
+
+24
+00:00:43,590 --> 00:00:43,600
+to machine learning, open source is
+ 
+
+25
+00:00:43,600 --> 00:00:46,470
+to machine learning, open source is
+absolutely differential. Basically you
+
+26
+00:00:46,470 --> 00:00:46,480
+absolutely differential. Basically you
+ 
+
+27
+00:00:46,480 --> 00:00:48,950
+absolutely differential. Basically you
+have the open weight models
+
+28
+00:00:48,950 --> 00:00:48,960
+have the open weight models
+ 
+
+29
+00:00:48,960 --> 00:00:51,350
+have the open weight models
+um that go in with non-commercial
+
+30
+00:00:51,350 --> 00:00:51,360
+um that go in with non-commercial
+ 
+
+31
+00:00:51,360 --> 00:00:53,350
+um that go in with non-commercial
+licenses. we call them open weight and
+
+32
+00:00:53,350 --> 00:00:53,360
+licenses. we call them open weight and
+ 
+
+33
+00:00:53,360 --> 00:00:55,270
+licenses. we call them open weight and
+then we have open source models that
+
+34
+00:00:55,270 --> 00:00:55,280
+then we have open source models that
+ 
+
+35
+00:00:55,280 --> 00:00:58,310
+then we have open source models that
+have uh commercially available licenses
+
+36
+00:00:58,310 --> 00:00:58,320
+have uh commercially available licenses
+ 
+
+37
+00:00:58,320 --> 00:01:00,790
+have uh commercially available licenses
+such as this one from deepseek it's
+
+38
+00:01:00,790 --> 00:01:00,800
+such as this one from deepseek it's
+ 
+
+39
+00:01:00,800 --> 00:01:04,149
+such as this one from deepseek it's
+called MIT license or Apache 2.0 And
+
+40
+00:01:04,149 --> 00:01:04,159
+called MIT license or Apache 2.0 And
+ 
+
+41
+00:01:04,159 --> 00:01:06,870
+called MIT license or Apache 2.0 And
+then there is like even more open models
+
+42
+00:01:06,870 --> 00:01:06,880
+then there is like even more open models
+ 
+
+43
+00:01:06,880 --> 00:01:09,590
+then there is like even more open models
+that have the code open. If you have
+
+44
+00:01:09,590 --> 00:01:09,600
+that have the code open. If you have
+ 
+
+45
+00:01:09,600 --> 00:01:12,390
+that have the code open. If you have
+like agents there, the harness is open,
+
+46
+00:01:12,390 --> 00:01:12,400
+like agents there, the harness is open,
+ 
+
+47
+00:01:12,400 --> 00:01:14,550
+like agents there, the harness is open,
+everything is open. And this matters
+
+48
+00:01:14,550 --> 00:01:14,560
+everything is open. And this matters
+ 
+
+49
+00:01:14,560 --> 00:01:16,950
+everything is open. And this matters
+even more by the fact that like
+
+50
+00:01:16,950 --> 00:01:16,960
+even more by the fact that like
+ 
+
+51
+00:01:16,960 --> 00:01:19,270
+even more by the fact that like
+yesterday or the other day it was
+
+52
+00:01:19,270 --> 00:01:19,280
+yesterday or the other day it was
+ 
+
+53
+00:01:19,280 --> 00:01:21,749
+yesterday or the other day it was
+revealed that the cloud uh performance
+
+54
+00:01:21,749 --> 00:01:21,759
+revealed that the cloud uh performance
+ 
+
+55
+00:01:21,759 --> 00:01:26,390
+revealed that the cloud uh performance
+was going down. Uh so if you if you have
+
+56
+00:01:26,390 --> 00:01:26,400
+was going down. Uh so if you if you have
+ 
+
+57
+00:01:26,400 --> 00:01:28,390
+was going down. Uh so if you if you have
+everything in the open, nothing changes
+
+58
+00:01:28,390 --> 00:01:28,400
+everything in the open, nothing changes
+ 
+
+59
+00:01:28,400 --> 00:01:30,149
+everything in the open, nothing changes
+without you knowing. no performance
+
+60
+00:01:30,149 --> 00:01:30,159
+without you knowing. no performance
+ 
+
+61
+00:01:30,159 --> 00:01:32,069
+without you knowing. no performance
+degradation without you knowing
+
+62
+00:01:32,069 --> 00:01:32,079
+degradation without you knowing
+ 
+
+63
+00:01:32,079 --> 00:01:35,830
+degradation without you knowing
+everything's great. Uh but on top of it,
+
+64
+00:01:35,830 --> 00:01:35,840
+everything's great. Uh but on top of it,
+ 
+
+65
+00:01:35,840 --> 00:01:38,469
+everything's great. Uh but on top of it,
+if you have access to the weights, you
+
+66
+00:01:38,469 --> 00:01:38,479
+if you have access to the weights, you
+ 
+
+67
+00:01:38,479 --> 00:01:41,109
+if you have access to the weights, you
+can shrink them, you can quantise them,
+
+68
+00:01:41,109 --> 00:01:41,119
+can shrink them, you can quantise them,
+ 
+
+69
+00:01:41,119 --> 00:01:43,109
+can shrink them, you can quantise them,
+you can fine-tune them if you feel like
+
+70
+00:01:43,109 --> 00:01:43,119
+you can fine-tune them if you feel like
+ 
+
+71
+00:01:43,119 --> 00:01:46,389
+you can fine-tune them if you feel like
+it. And it's absolute guaranteed privacy
+
+72
+00:01:46,389 --> 00:01:46,399
+it. And it's absolute guaranteed privacy
+ 
+
+73
+00:01:46,399 --> 00:01:49,590
+it. And it's absolute guaranteed privacy
+for your end user because uh you can
+
+74
+00:01:49,590 --> 00:01:49,600
+for your end user because uh you can
+ 
+
+75
+00:01:49,600 --> 00:01:51,990
+for your end user because uh you can
+deploy it to edge devices, browsers
+
+76
+00:01:51,990 --> 00:01:52,000
+deploy it to edge devices, browsers
+ 
+
+77
+00:01:52,000 --> 00:01:54,469
+deploy it to edge devices, browsers
+without the data going somewhere else.
+
+78
+00:01:54,469 --> 00:01:54,479
+without the data going somewhere else.
+ 
+
+79
+00:01:54,479 --> 00:01:57,429
+without the data going somewhere else.
+uh this matters a lot in my opinion even
+
+80
+00:01:57,429 --> 00:01:57,439
+uh this matters a lot in my opinion even
+ 
+
+81
+00:01:57,439 --> 00:01:59,590
+uh this matters a lot in my opinion even
+more these days with the security
+
+82
+00:01:59,590 --> 00:01:59,600
+more these days with the security
+ 
+
+83
+00:01:59,600 --> 00:02:01,910
+more these days with the security
+breaches and everything
+
+84
+00:02:01,910 --> 00:02:01,920
+breaches and everything
+ 
+
+85
+00:02:01,920 --> 00:02:04,069
+breaches and everything
+and there was this argument maybe few
+
+86
+00:02:04,069 --> 00:02:04,079
+and there was this argument maybe few
+ 
+
+87
+00:02:04,079 --> 00:02:05,910
+and there was this argument maybe few
+years ago that open source models aren't
+
+88
+00:02:05,910 --> 00:02:05,920
+years ago that open source models aren't
+ 
+
+89
+00:02:05,920 --> 00:02:09,430
+years ago that open source models aren't
+as good as no no this is not the case
+
+90
+00:02:09,430 --> 00:02:09,440
+as good as no no this is not the case
+ 
+
+91
+00:02:09,440 --> 00:02:11,990
+as good as no no this is not the case
+like you see for instance the latest GLM
+
+92
+00:02:11,990 --> 00:02:12,000
+like you see for instance the latest GLM
+ 
+
+93
+00:02:12,000 --> 00:02:14,949
+like you see for instance the latest GLM
+5.1 is absolutely crashing it and I'm
+
+94
+00:02:14,949 --> 00:02:14,959
+5.1 is absolutely crashing it and I'm
+ 
+
+95
+00:02:14,959 --> 00:02:17,750
+5.1 is absolutely crashing it and I'm
+actually using it in my coding setup uh
+
+96
+00:02:17,750 --> 00:02:17,760
+actually using it in my coding setup uh
+ 
+
+97
+00:02:17,760 --> 00:02:20,949
+actually using it in my coding setup uh
+the this is the uh artificial analysis
+
+98
+00:02:20,949 --> 00:02:20,959
+the this is the uh artificial analysis
+ 
+
+99
+00:02:20,959 --> 00:02:23,670
+the this is the uh artificial analysis
+intelligence index and the green ones
+
+100
+00:02:23,670 --> 00:02:23,680
+intelligence index and the green ones
+ 
+
+101
+00:02:23,680 --> 00:02:25,750
+intelligence index and the green ones
+ones are open models. Meanwhile, the
+
+102
+00:02:25,750 --> 00:02:25,760
+ones are open models. Meanwhile, the
+ 
+
+103
+00:02:25,760 --> 00:02:28,470
+ones are open models. Meanwhile, the
+black ones are the closed models. And we
+
+104
+00:02:28,470 --> 00:02:28,480
+black ones are the closed models. And we
+ 
+
+105
+00:02:28,480 --> 00:02:31,510
+black ones are the closed models. And we
+are we just catched up and we will catch
+
+106
+00:02:31,510 --> 00:02:31,520
+are we just catched up and we will catch
+ 
+
+107
+00:02:31,520 --> 00:02:33,350
+are we just catched up and we will catch
+up even more with the upcoming models
+
+108
+00:02:33,350 --> 00:02:33,360
+up even more with the upcoming models
+ 
+
+109
+00:02:33,360 --> 00:02:36,790
+up even more with the upcoming models
+and stuff. And let's go back to hugging
+
+110
+00:02:36,790 --> 00:02:36,800
+and stuff. And let's go back to hugging
+ 
+
+111
+00:02:36,800 --> 00:02:40,150
+and stuff. And let's go back to hugging
+face hub. So everything is facilitated
+
+112
+00:02:40,150 --> 00:02:40,160
+face hub. So everything is facilitated
+ 
+
+113
+00:02:40,160 --> 00:02:41,910
+face hub. So everything is facilitated
+through hugging face hub. All of the
+
+114
+00:02:41,910 --> 00:02:41,920
+through hugging face hub. All of the
+ 
+
+115
+00:02:41,920 --> 00:02:44,470
+through hugging face hub. All of the
+open releases. It's the inferral layer
+
+116
+00:02:44,470 --> 00:02:44,480
+open releases. It's the inferral layer
+ 
+
+117
+00:02:44,480 --> 00:02:46,550
+open releases. It's the inferral layer
+for all of your open source uh
+
+118
+00:02:46,550 --> 00:02:46,560
+for all of your open source uh
+ 
+
+119
+00:02:46,560 --> 00:02:48,229
+for all of your open source uh
+workflows.
+
+120
+00:02:48,229 --> 00:02:48,239
+workflows.
+ 
+
+121
+00:02:48,239 --> 00:02:50,309
+workflows.
+And as of now, it's hosting even more
+
+122
+00:02:50,309 --> 00:02:50,319
+And as of now, it's hosting even more
+ 
+
+123
+00:02:50,319 --> 00:02:52,150
+And as of now, it's hosting even more
+models. I should have updated the
+
+124
+00:02:52,150 --> 00:02:52,160
+models. I should have updated the
+ 
+
+125
+00:02:52,160 --> 00:02:54,309
+models. I should have updated the
+number. It's probably close to three
+
+126
+00:02:54,309 --> 00:02:54,319
+number. It's probably close to three
+ 
+
+127
+00:02:54,319 --> 00:02:57,350
+number. It's probably close to three
+million a lot of data sets spaces and
+
+128
+00:02:57,350 --> 00:02:57,360
+million a lot of data sets spaces and
+ 
+
+129
+00:02:57,360 --> 00:02:58,949
+million a lot of data sets spaces and
+everything but that's not all when it
+
+130
+00:02:58,949 --> 00:02:58,959
+everything but that's not all when it
+ 
+
+131
+00:02:58,959 --> 00:03:01,110
+everything but that's not all when it
+comes to the agentic ecosystem and this
+
+132
+00:03:01,110 --> 00:03:01,120
+comes to the agentic ecosystem and this
+ 
+
+133
+00:03:01,120 --> 00:03:02,550
+comes to the agentic ecosystem and this
+is what we are going to talk about
+
+134
+00:03:02,550 --> 00:03:02,560
+is what we are going to talk about
+ 
+
+135
+00:03:02,560 --> 00:03:06,309
+is what we are going to talk about
+today. So when you go to the models uh
+
+136
+00:03:06,309 --> 00:03:06,319
+today. So when you go to the models uh
+ 
+
+137
+00:03:06,319 --> 00:03:09,350
+today. So when you go to the models uh
+you can filter for aentic models. Uh
+
+138
+00:03:09,350 --> 00:03:09,360
+you can filter for aentic models. Uh
+ 
+
+139
+00:03:09,360 --> 00:03:13,110
+you can filter for aentic models. Uh
+they are mostly the trending ones and
+
+140
+00:03:13,110 --> 00:03:13,120
+they are mostly the trending ones and
+ 
+
+141
+00:03:13,120 --> 00:03:15,350
+they are mostly the trending ones and
+there is like two types of models in my
+
+142
+00:03:15,350 --> 00:03:15,360
+there is like two types of models in my
+ 
+
+143
+00:03:15,360 --> 00:03:18,149
+there is like two types of models in my
+opinion. There is the v vision LMS and
+
+144
+00:03:18,149 --> 00:03:18,159
+opinion. There is the v vision LMS and
+ 
+
+145
+00:03:18,159 --> 00:03:19,750
+opinion. There is the v vision LMS and
+then there is the LLMs and the vision
+
+146
+00:03:19,750 --> 00:03:19,760
+then there is the LLMs and the vision
+ 
+
+147
+00:03:19,760 --> 00:03:22,949
+then there is the LLMs and the vision
+LMS can also act as like a computer use
+
+148
+00:03:22,949 --> 00:03:22,959
+LMS can also act as like a computer use
+ 
+
+149
+00:03:22,959 --> 00:03:24,869
+LMS can also act as like a computer use
+agent over the screenshots. They know
+
+150
+00:03:24,869 --> 00:03:24,879
+agent over the screenshots. They know
+ 
+
+151
+00:03:24,879 --> 00:03:26,869
+agent over the screenshots. They know
+where to click etc. which is pretty
+
+152
+00:03:26,869 --> 00:03:26,879
+where to click etc. which is pretty
+ 
+
+153
+00:03:26,879 --> 00:03:29,750
+where to click etc. which is pretty
+cool. And one trend I have recently
+
+154
+00:03:29,750 --> 00:03:29,760
+cool. And one trend I have recently
+ 
+
+155
+00:03:29,760 --> 00:03:33,750
+cool. And one trend I have recently
+noticed is the fact that you have uh
+
+156
+00:03:33,750 --> 00:03:33,760
+noticed is the fact that you have uh
+ 
+
+157
+00:03:33,760 --> 00:03:37,750
+noticed is the fact that you have uh
+labs releasing their LLMs as vision uh
+
+158
+00:03:37,750 --> 00:03:37,760
+labs releasing their LLMs as vision uh
+ 
+
+159
+00:03:37,760 --> 00:03:39,910
+labs releasing their LLMs as vision uh
+with vision capabilities day zero like
+
+160
+00:03:39,910 --> 00:03:39,920
+with vision capabilities day zero like
+ 
+
+161
+00:03:39,920 --> 00:03:43,030
+with vision capabilities day zero like
+for instance the Gemma 4 was an omni
+
+162
+00:03:43,030 --> 00:03:43,040
+for instance the Gemma 4 was an omni
+ 
+
+163
+00:03:43,040 --> 00:03:45,750
+for instance the Gemma 4 was an omni
+model and still it's an agentic model
+
+164
+00:03:45,750 --> 00:03:45,760
+model and still it's an agentic model
+ 
+
+165
+00:03:45,760 --> 00:03:50,390
+model and still it's an agentic model
+there is Q1 3.5 uh there is Kimik Kimik
+
+166
+00:03:50,390 --> 00:03:50,400
+there is Q1 3.5 uh there is Kimik Kimik
+ 
+
+167
+00:03:50,400 --> 00:03:54,309
+there is Q1 3.5 uh there is Kimik Kimik
+2.5 these were VLMs so I foresee that
+
+168
+00:03:54,309 --> 00:03:54,319
+2.5 these were VLMs so I foresee that
+ 
+
+169
+00:03:54,319 --> 00:03:57,270
+2.5 these were VLMs so I foresee that
+all of these models will be over time
+
+170
+00:03:57,270 --> 00:03:57,280
+all of these models will be over time
+ 
+
+171
+00:03:57,280 --> 00:03:59,030
+all of these models will be over time
+release day zero with vision
+
+172
+00:03:59,030 --> 00:03:59,040
+release day zero with vision
+ 
+
+173
+00:03:59,040 --> 00:04:00,869
+release day zero with vision
+capabilities
+
+174
+00:04:00,869 --> 00:04:00,879
+capabilities
+ 
+
+175
+00:04:00,879 --> 00:04:03,110
+capabilities
+and uh it's super easy to run this
+
+176
+00:04:03,110 --> 00:04:03,120
+and uh it's super easy to run this
+ 
+
+177
+00:04:03,120 --> 00:04:07,190
+and uh it's super easy to run this
+actually like you can just use like VLM
+
+178
+00:04:07,190 --> 00:04:07,200
+actually like you can just use like VLM
+ 
+
+179
+00:04:07,200 --> 00:04:11,190
+actually like you can just use like VLM
+ML or like llama CPP llama server uh
+
+180
+00:04:11,190 --> 00:04:11,200
+ML or like llama CPP llama server uh
+ 
+
+181
+00:04:11,200 --> 00:04:13,270
+ML or like llama CPP llama server uh
+from the get-go with like few lines of
+
+182
+00:04:13,270 --> 00:04:13,280
+from the get-go with like few lines of
+ 
+
+183
+00:04:13,280 --> 00:04:16,469
+from the get-go with like few lines of
+code like it used to be much more um
+
+184
+00:04:16,469 --> 00:04:16,479
+code like it used to be much more um
+ 
+
+185
+00:04:16,479 --> 00:04:19,509
+code like it used to be much more um
+frictiony but these days this is a not a
+
+186
+00:04:19,509 --> 00:04:19,519
+frictiony but these days this is a not a
+ 
+
+187
+00:04:19,519 --> 00:04:21,749
+frictiony but these days this is a not a
+big deal
+
+188
+00:04:21,749 --> 00:04:21,759
+big deal
+ 
+
+189
+00:04:21,759 --> 00:04:24,950
+big deal
+and if you want to compare open models
+
+190
+00:04:24,950 --> 00:04:24,960
+and if you want to compare open models
+ 
+
+191
+00:04:24,960 --> 00:04:26,950
+and if you want to compare open models
+we have recently launched this feature
+
+192
+00:04:26,950 --> 00:04:26,960
+we have recently launched this feature
+ 
+
+193
+00:04:26,960 --> 00:04:29,590
+we have recently launched this feature
+called benchmark data sets. So when you
+
+194
+00:04:29,590 --> 00:04:29,600
+called benchmark data sets. So when you
+ 
+
+195
+00:04:29,600 --> 00:04:31,670
+called benchmark data sets. So when you
+go to the data sets on the left hand
+
+196
+00:04:31,670 --> 00:04:31,680
+go to the data sets on the left hand
+ 
+
+197
+00:04:31,680 --> 00:04:34,070
+go to the data sets on the left hand
+side there is like on the bottom there
+
+198
+00:04:34,070 --> 00:04:34,080
+side there is like on the bottom there
+ 
+
+199
+00:04:34,080 --> 00:04:36,310
+side there is like on the bottom there
+is a bunch benchmark button you just
+
+200
+00:04:36,310 --> 00:04:36,320
+is a bunch benchmark button you just
+ 
+
+201
+00:04:36,320 --> 00:04:38,310
+is a bunch benchmark button you just
+click it and then you can see the
+
+202
+00:04:38,310 --> 00:04:38,320
+click it and then you can see the
+ 
+
+203
+00:04:38,320 --> 00:04:41,670
+click it and then you can see the
+popular benchmarks such as S sw ebench
+
+204
+00:04:41,670 --> 00:04:41,680
+popular benchmarks such as S sw ebench
+ 
+
+205
+00:04:41,680 --> 00:04:45,749
+popular benchmarks such as S sw ebench
+pro or humanities last exam or aime and
+
+206
+00:04:45,749 --> 00:04:45,759
+pro or humanities last exam or aime and
+ 
+
+207
+00:04:45,759 --> 00:04:48,070
+pro or humanities last exam or aime and
+others and when you go to for instance
+
+208
+00:04:48,070 --> 00:04:48,080
+others and when you go to for instance
+ 
+
+209
+00:04:48,080 --> 00:04:51,350
+others and when you go to for instance
+swb bench to see like how your agent is
+
+210
+00:04:51,350 --> 00:04:51,360
+swb bench to see like how your agent is
+ 
+
+211
+00:04:51,360 --> 00:04:55,110
+swb bench to see like how your agent is
+like good in coding and stuff uh you see
+
+212
+00:04:55,110 --> 00:04:55,120
+like good in coding and stuff uh you see
+ 
+
+213
+00:04:55,120 --> 00:04:58,469
+like good in coding and stuff uh you see
+the open models ranked according to the
+
+214
+00:04:58,469 --> 00:04:58,479
+the open models ranked according to the
+ 
+
+215
+00:04:58,479 --> 00:05:01,909
+the open models ranked according to the
+scores. So like currently GLM 5.1 is top
+
+216
+00:05:01,909 --> 00:05:01,919
+scores. So like currently GLM 5.1 is top
+ 
+
+217
+00:05:01,919 --> 00:05:04,469
+scores. So like currently GLM 5.1 is top
+of the list.
+
+218
+00:05:04,469 --> 00:05:04,479
+of the list.
+ 
+
+219
+00:05:04,479 --> 00:05:06,790
+of the list.
+So it's also easy to pick an open model
+
+220
+00:05:06,790 --> 00:05:06,800
+So it's also easy to pick an open model
+ 
+
+221
+00:05:06,800 --> 00:05:08,390
+So it's also easy to pick an open model
+these days because there's 3 million
+
+222
+00:05:08,390 --> 00:05:08,400
+these days because there's 3 million
+ 
+
+223
+00:05:08,400 --> 00:05:10,150
+these days because there's 3 million
+models out there and it used to be a
+
+224
+00:05:10,150 --> 00:05:10,160
+models out there and it used to be a
+ 
+
+225
+00:05:10,160 --> 00:05:14,550
+models out there and it used to be a
+challenge to pick different models.
+
+226
+00:05:14,550 --> 00:05:14,560
+challenge to pick different models.
+ 
+
+227
+00:05:14,560 --> 00:05:16,469
+challenge to pick different models.
+And if you actually want to vibe check
+
+228
+00:05:16,469 --> 00:05:16,479
+And if you actually want to vibe check
+ 
+
+229
+00:05:16,479 --> 00:05:18,950
+And if you actually want to vibe check
+it, HuggingFace has this ser uh service
+
+230
+00:05:18,950 --> 00:05:18,960
+it, HuggingFace has this ser uh service
+ 
+
+231
+00:05:18,960 --> 00:05:21,590
+it, HuggingFace has this ser uh service
+called inference providers uh which does
+
+232
+00:05:21,590 --> 00:05:21,600
+called inference providers uh which does
+ 
+
+233
+00:05:21,600 --> 00:05:24,790
+called inference providers uh which does
+routing for the best models to best
+
+234
+00:05:24,790 --> 00:05:24,800
+routing for the best models to best
+ 
+
+235
+00:05:24,800 --> 00:05:26,710
+routing for the best models to best
+providers like all of the providers are
+
+236
+00:05:26,710 --> 00:05:26,720
+providers like all of the providers are
+ 
+
+237
+00:05:26,720 --> 00:05:30,230
+providers like all of the providers are
+there. There's gro cerebras I don't know
+
+238
+00:05:30,230 --> 00:05:30,240
+there. There's gro cerebras I don't know
+ 
+
+239
+00:05:30,240 --> 00:05:32,950
+there. There's gro cerebras I don't know
+and everything and then it's super easy
+
+240
+00:05:32,950 --> 00:05:32,960
+and everything and then it's super easy
+ 
+
+241
+00:05:32,960 --> 00:05:35,350
+and everything and then it's super easy
+to compare them as well if you see like
+
+242
+00:05:35,350 --> 00:05:35,360
+to compare them as well if you see like
+ 
+
+243
+00:05:35,360 --> 00:05:38,070
+to compare them as well if you see like
+uh you have the cheapest or the fastest
+
+244
+00:05:38,070 --> 00:05:38,080
+uh you have the cheapest or the fastest
+ 
+
+245
+00:05:38,080 --> 00:05:40,950
+uh you have the cheapest or the fastest
+option actually I had to truncate it but
+
+246
+00:05:40,950 --> 00:05:40,960
+option actually I had to truncate it but
+ 
+
+247
+00:05:40,960 --> 00:05:43,189
+option actually I had to truncate it but
+also there is the tool used column so
+
+248
+00:05:43,189 --> 00:05:43,199
+also there is the tool used column so
+ 
+
+249
+00:05:43,199 --> 00:05:44,870
+also there is the tool used column so
+you can actually pick one of the open
+
+250
+00:05:44,870 --> 00:05:44,880
+you can actually pick one of the open
+ 
+
+251
+00:05:44,880 --> 00:05:47,350
+you can actually pick one of the open
+source models for the agentic use case
+
+252
+00:05:47,350 --> 00:05:47,360
+source models for the agentic use case
+ 
+
+253
+00:05:47,360 --> 00:05:50,870
+source models for the agentic use case
+and stuff and going back to agents after
+
+254
+00:05:50,870 --> 00:05:50,880
+and stuff and going back to agents after
+ 
+
+255
+00:05:50,880 --> 00:05:54,629
+and stuff and going back to agents after
+all of these uh hugging face hub shill
+
+256
+00:05:54,629 --> 00:05:54,639
+all of these uh hugging face hub shill
+ 
+
+257
+00:05:54,639 --> 00:05:57,189
+all of these uh hugging face hub shill
+uh hugging face hub actually recently
+
+258
+00:05:57,189 --> 00:05:57,199
+uh hugging face hub actually recently
+ 
+
+259
+00:05:57,199 --> 00:06:00,390
+uh hugging face hub actually recently
+has shipped a ton of uh features for you
+
+260
+00:06:00,390 --> 00:06:00,400
+has shipped a ton of uh features for you
+ 
+
+261
+00:06:00,400 --> 00:06:02,950
+has shipped a ton of uh features for you
+to use open models with agents agents
+
+262
+00:06:02,950 --> 00:06:02,960
+to use open models with agents agents
+ 
+
+263
+00:06:02,960 --> 00:06:06,230
+to use open models with agents agents
+and stuff and first off like there is
+
+264
+00:06:06,230 --> 00:06:06,240
+and stuff and first off like there is
+ 
+
+265
+00:06:06,240 --> 00:06:09,350
+and stuff and first off like there is
+the MCP server where you can plug hub
+
+266
+00:06:09,350 --> 00:06:09,360
+the MCP server where you can plug hub
+ 
+
+267
+00:06:09,360 --> 00:06:11,510
+the MCP server where you can plug hub
+into your LLM
+
+268
+00:06:11,510 --> 00:06:11,520
+into your LLM
+ 
+
+269
+00:06:11,520 --> 00:06:14,790
+into your LLM
+and there is uh skills uh which allow
+
+270
+00:06:14,790 --> 00:06:14,800
+and there is uh skills uh which allow
+ 
+
+271
+00:06:14,800 --> 00:06:16,950
+and there is uh skills uh which allow
+you to even wipe train models like you
+
+272
+00:06:16,950 --> 00:06:16,960
+you to even wipe train models like you
+ 
+
+273
+00:06:16,960 --> 00:06:20,629
+you to even wipe train models like you
+just go to your agent and say train Q1
+
+274
+00:06:20,629 --> 00:06:20,639
+just go to your agent and say train Q1
+ 
+
+275
+00:06:20,639 --> 00:06:23,749
+just go to your agent and say train Q1
+3.5 on this data set for me and then it
+
+276
+00:06:23,749 --> 00:06:23,759
+3.5 on this data set for me and then it
+ 
+
+277
+00:06:23,759 --> 00:06:26,469
+3.5 on this data set for me and then it
+just trains which to me is like a sci-fi
+
+278
+00:06:26,469 --> 00:06:26,479
+just trains which to me is like a sci-fi
+ 
+
+279
+00:06:26,479 --> 00:06:28,550
+just trains which to me is like a sci-fi
+at this point because it used to not
+
+280
+00:06:28,550 --> 00:06:28,560
+at this point because it used to not
+ 
+
+281
+00:06:28,560 --> 00:06:30,870
+at this point because it used to not
+exist and like there is so many things
+
+282
+00:06:30,870 --> 00:06:30,880
+exist and like there is so many things
+ 
+
+283
+00:06:30,880 --> 00:06:33,830
+exist and like there is so many things
+going on in the back end and the agent
+
+284
+00:06:33,830 --> 00:06:33,840
+going on in the back end and the agent
+ 
+
+285
+00:06:33,840 --> 00:06:36,550
+going on in the back end and the agent
+actually handles them very well. And
+
+286
+00:06:36,550 --> 00:06:36,560
+actually handles them very well. And
+ 
+
+287
+00:06:36,560 --> 00:06:39,110
+actually handles them very well. And
+then there is the local agent. So you
+
+288
+00:06:39,110 --> 00:06:39,120
+then there is the local agent. So you
+ 
+
+289
+00:06:39,120 --> 00:06:42,070
+then there is the local agent. So you
+can run full coding agents uh locally
+
+290
+00:06:42,070 --> 00:06:42,080
+can run full coding agents uh locally
+ 
+
+291
+00:06:42,080 --> 00:06:43,990
+can run full coding agents uh locally
+from models with hugging face hub
+
+292
+00:06:43,990 --> 00:06:44,000
+from models with hugging face hub
+ 
+
+293
+00:06:44,000 --> 00:06:48,550
+from models with hugging face hub
+because we integrate very well to them.
+
+294
+00:06:48,550 --> 00:06:48,560
+because we integrate very well to them.
+ 
+
+295
+00:06:48,560 --> 00:06:50,870
+because we integrate very well to them.
+And coming to the first one so basically
+
+296
+00:06:50,870 --> 00:06:50,880
+And coming to the first one so basically
+ 
+
+297
+00:06:50,880 --> 00:06:52,790
+And coming to the first one so basically
+my talk will be consisting about all of
+
+298
+00:06:52,790 --> 00:06:52,800
+my talk will be consisting about all of
+ 
+
+299
+00:06:52,800 --> 00:06:54,710
+my talk will be consisting about all of
+these. Uh coming to the first one, there
+
+300
+00:06:54,710 --> 00:06:54,720
+these. Uh coming to the first one, there
+ 
+
+301
+00:06:54,720 --> 00:06:57,270
+these. Uh coming to the first one, there
+is the local coding agents
+
+302
+00:06:57,270 --> 00:06:57,280
+is the local coding agents
+ 
+
+303
+00:06:57,280 --> 00:06:59,830
+is the local coding agents
+and your options. You have like actually
+
+304
+00:06:59,830 --> 00:06:59,840
+and your options. You have like actually
+ 
+
+305
+00:06:59,840 --> 00:07:02,070
+and your options. You have like actually
+many many options but like one of my
+
+306
+00:07:02,070 --> 00:07:02,080
+many many options but like one of my
+ 
+
+307
+00:07:02,080 --> 00:07:04,230
+many many options but like one of my
+favorites is Pi because it's like super
+
+308
+00:07:04,230 --> 00:07:04,240
+favorites is Pi because it's like super
+ 
+
+309
+00:07:04,240 --> 00:07:08,150
+favorites is Pi because it's like super
+simple to set up. Uh basically you can I
+
+310
+00:07:08,150 --> 00:07:08,160
+simple to set up. Uh basically you can I
+ 
+
+311
+00:07:08,160 --> 00:07:09,589
+simple to set up. Uh basically you can I
+I think you can also use it with
+
+312
+00:07:09,589 --> 00:07:09,599
+I think you can also use it with
+ 
+
+313
+00:07:09,599 --> 00:07:11,749
+I think you can also use it with
+inference providers remotely but also if
+
+314
+00:07:11,749 --> 00:07:11,759
+inference providers remotely but also if
+ 
+
+315
+00:07:11,759 --> 00:07:14,230
+inference providers remotely but also if
+you want to serve like a local coding
+
+316
+00:07:14,230 --> 00:07:14,240
+you want to serve like a local coding
+ 
+
+317
+00:07:14,240 --> 00:07:16,790
+you want to serve like a local coding
+agent you can use llama CPP to serve it
+
+318
+00:07:16,790 --> 00:07:16,800
+agent you can use llama CPP to serve it
+ 
+
+319
+00:07:16,800 --> 00:07:19,990
+agent you can use llama CPP to serve it
+and then pi will directly consume that.
+
+320
+00:07:19,990 --> 00:07:20,000
+and then pi will directly consume that.
+ 
+
+321
+00:07:20,000 --> 00:07:22,790
+and then pi will directly consume that.
+And uh something very cool is also llama
+
+322
+00:07:22,790 --> 00:07:22,800
+And uh something very cool is also llama
+ 
+
+323
+00:07:22,800 --> 00:07:25,589
+And uh something very cool is also llama
+agent which is baked into llama CPP as a
+
+324
+00:07:25,589 --> 00:07:25,599
+agent which is baked into llama CPP as a
+ 
+
+325
+00:07:25,599 --> 00:07:27,350
+agent which is baked into llama CPP as a
+binary that you can just directly
+
+326
+00:07:27,350 --> 00:07:27,360
+binary that you can just directly
+ 
+
+327
+00:07:27,360 --> 00:07:29,990
+binary that you can just directly
+execute and start a model by giving
+
+328
+00:07:29,990 --> 00:07:30,000
+execute and start a model by giving
+ 
+
+329
+00:07:30,000 --> 00:07:33,670
+execute and start a model by giving
+hugging face hub ID. So it's super easy
+
+330
+00:07:33,670 --> 00:07:33,680
+hugging face hub ID. So it's super easy
+ 
+
+331
+00:07:33,680 --> 00:07:38,150
+hugging face hub ID. So it's super easy
+as well to get an local agent running.
+
+332
+00:07:38,150 --> 00:07:38,160
+as well to get an local agent running.
+ 
+
+333
+00:07:38,160 --> 00:07:41,350
+as well to get an local agent running.
+Uh I will share my slides on my Twitter
+
+334
+00:07:41,350 --> 00:07:41,360
+Uh I will share my slides on my Twitter
+ 
+
+335
+00:07:41,360 --> 00:07:42,950
+Uh I will share my slides on my Twitter
+account after so no need to take
+
+336
+00:07:42,950 --> 00:07:42,960
+account after so no need to take
+ 
+
+337
+00:07:42,960 --> 00:07:44,550
+account after so no need to take
+pictures.
+
+338
+00:07:44,550 --> 00:07:44,560
+pictures.
+ 
+
+339
+00:07:44,560 --> 00:07:46,469
+pictures.
+My one of my most favorite things these
+
+340
+00:07:46,469 --> 00:07:46,479
+My one of my most favorite things these
+ 
+
+341
+00:07:46,479 --> 00:07:48,950
+My one of my most favorite things these
+days is Hermes agents and I will just
+
+342
+00:07:48,950 --> 00:07:48,960
+days is Hermes agents and I will just
+ 
+
+343
+00:07:48,960 --> 00:07:52,150
+days is Hermes agents and I will just
+die on this hill. So this is like this
+
+344
+00:07:52,150 --> 00:07:52,160
+die on this hill. So this is like this
+ 
+
+345
+00:07:52,160 --> 00:07:55,510
+die on this hill. So this is like this
+is a bit one step even further to from
+
+346
+00:07:55,510 --> 00:07:55,520
+is a bit one step even further to from
+ 
+
+347
+00:07:55,520 --> 00:07:58,230
+is a bit one step even further to from
+the open claw by means of memory
+
+348
+00:07:58,230 --> 00:07:58,240
+the open claw by means of memory
+ 
+
+349
+00:07:58,240 --> 00:08:00,550
+the open claw by means of memory
+management and everything and it's
+
+350
+00:08:00,550 --> 00:08:00,560
+management and everything and it's
+ 
+
+351
+00:08:00,560 --> 00:08:02,710
+management and everything and it's
+actually super easy to get started with
+
+352
+00:08:02,710 --> 00:08:02,720
+actually super easy to get started with
+ 
+
+353
+00:08:02,720 --> 00:08:06,629
+actually super easy to get started with
+that and uh it is you can either use it
+
+354
+00:08:06,629 --> 00:08:06,639
+that and uh it is you can either use it
+ 
+
+355
+00:08:06,639 --> 00:08:09,029
+that and uh it is you can either use it
+locally or with hugging face inference
+
+356
+00:08:09,029 --> 00:08:09,039
+locally or with hugging face inference
+ 
+
+357
+00:08:09,039 --> 00:08:11,029
+locally or with hugging face inference
+provider. So for instance, I was playing
+
+358
+00:08:11,029 --> 00:08:11,039
+provider. So for instance, I was playing
+ 
+
+359
+00:08:11,039 --> 00:08:12,869
+provider. So for instance, I was playing
+with that
+
+360
+00:08:12,869 --> 00:08:12,879
+with that
+ 
+
+361
+00:08:12,879 --> 00:08:15,189
+with that
+uh like the setup wizard does everything
+
+362
+00:08:15,189 --> 00:08:15,199
+uh like the setup wizard does everything
+ 
+
+363
+00:08:15,199 --> 00:08:17,029
+uh like the setup wizard does everything
+for you. You just give the keys and
+
+364
+00:08:17,029 --> 00:08:17,039
+for you. You just give the keys and
+ 
+
+365
+00:08:17,039 --> 00:08:19,510
+for you. You just give the keys and
+stuff and then integrate into your Slack
+
+366
+00:08:19,510 --> 00:08:19,520
+stuff and then integrate into your Slack
+ 
+
+367
+00:08:19,520 --> 00:08:21,749
+stuff and then integrate into your Slack
+or WhatsApp or whatever and you're good
+
+368
+00:08:21,749 --> 00:08:21,759
+or WhatsApp or whatever and you're good
+ 
+
+369
+00:08:21,759 --> 00:08:25,350
+or WhatsApp or whatever and you're good
+to go. And I absolutely recommend using
+
+370
+00:08:25,350 --> 00:08:25,360
+to go. And I absolutely recommend using
+ 
+
+371
+00:08:25,360 --> 00:08:27,189
+to go. And I absolutely recommend using
+this if you want to use it with an open
+
+372
+00:08:27,189 --> 00:08:27,199
+this if you want to use it with an open
+ 
+
+373
+00:08:27,199 --> 00:08:29,589
+this if you want to use it with an open
+model. I absolutely recommend GL GLM
+
+374
+00:08:29,589 --> 00:08:29,599
+model. I absolutely recommend GL GLM
+ 
+
+375
+00:08:29,599 --> 00:08:32,550
+model. I absolutely recommend GL GLM
+5.1. For instance, I actually failed
+
+376
+00:08:32,550 --> 00:08:32,560
+5.1. For instance, I actually failed
+ 
+
+377
+00:08:32,560 --> 00:08:34,709
+5.1. For instance, I actually failed
+initially to integrate into Slack. I
+
+378
+00:08:34,709 --> 00:08:34,719
+initially to integrate into Slack. I
+ 
+
+379
+00:08:34,719 --> 00:08:37,430
+initially to integrate into Slack. I
+have witnesses in here my colleague uh
+
+380
+00:08:37,430 --> 00:08:37,440
+have witnesses in here my colleague uh
+ 
+
+381
+00:08:37,440 --> 00:08:42,790
+have witnesses in here my colleague uh
+Neils this year and um I asked GLM 5.1
+
+382
+00:08:42,790 --> 00:08:42,800
+Neils this year and um I asked GLM 5.1
+ 
+
+383
+00:08:42,800 --> 00:08:46,230
+Neils this year and um I asked GLM 5.1
+to fix it with the Hermes agent and it's
+
+384
+00:08:46,230 --> 00:08:46,240
+to fix it with the Hermes agent and it's
+ 
+
+385
+00:08:46,240 --> 00:08:48,949
+to fix it with the Hermes agent and it's
+fixed on its own and it's it's uh it was
+
+386
+00:08:48,949 --> 00:08:48,959
+fixed on its own and it's it's uh it was
+ 
+
+387
+00:08:48,959 --> 00:08:53,750
+fixed on its own and it's it's uh it was
+a good day like uh I I think GLM 5.1 is
+
+388
+00:08:53,750 --> 00:08:53,760
+a good day like uh I I think GLM 5.1 is
+ 
+
+389
+00:08:53,760 --> 00:08:56,389
+a good day like uh I I think GLM 5.1 is
+a very good model and I cannot I can't
+
+390
+00:08:56,389 --> 00:08:56,399
+a very good model and I cannot I can't
+ 
+
+391
+00:08:56,399 --> 00:09:00,070
+a very good model and I cannot I can't
+absolutely wait to use it with Gemma 4
+
+392
+00:09:00,070 --> 00:09:00,080
+absolutely wait to use it with Gemma 4
+ 
+
+393
+00:09:00,080 --> 00:09:02,710
+absolutely wait to use it with Gemma 4
+but also this weekend there is like on
+
+394
+00:09:02,710 --> 00:09:02,720
+but also this weekend there is like on
+ 
+
+395
+00:09:02,720 --> 00:09:04,710
+but also this weekend there is like on
+Twitter there was a rumor ignored uh
+
+396
+00:09:04,710 --> 00:09:04,720
+Twitter there was a rumor ignored uh
+ 
+
+397
+00:09:04,720 --> 00:09:07,829
+Twitter there was a rumor ignored uh
+minimax model coming up. So I will also
+
+398
+00:09:07,829 --> 00:09:07,839
+minimax model coming up. So I will also
+ 
+
+399
+00:09:07,839 --> 00:09:09,750
+minimax model coming up. So I will also
+probably try with that and share my
+
+400
+00:09:09,750 --> 00:09:09,760
+probably try with that and share my
+ 
+
+401
+00:09:09,760 --> 00:09:12,550
+probably try with that and share my
+findings. So I absolutely recommend
+
+402
+00:09:12,550 --> 00:09:12,560
+findings. So I absolutely recommend
+ 
+
+403
+00:09:12,560 --> 00:09:17,750
+findings. So I absolutely recommend
+using her agent with the open models.
+
+404
+00:09:17,750 --> 00:09:17,760
+using her agent with the open models.
+ 
+
+405
+00:09:17,760 --> 00:09:20,949
+using her agent with the open models.
+And one more thing so basically uh
+
+406
+00:09:20,949 --> 00:09:20,959
+And one more thing so basically uh
+ 
+
+407
+00:09:20,959 --> 00:09:23,350
+And one more thing so basically uh
+hugging face hub now has a new data set
+
+408
+00:09:23,350 --> 00:09:23,360
+hugging face hub now has a new data set
+ 
+
+409
+00:09:23,360 --> 00:09:26,389
+hugging face hub now has a new data set
+repository type called traces. And this
+
+410
+00:09:26,389 --> 00:09:26,399
+repository type called traces. And this
+ 
+
+411
+00:09:26,399 --> 00:09:29,670
+repository type called traces. And this
+is basically all of your uh codeex uh
+
+412
+00:09:29,670 --> 00:09:29,680
+is basically all of your uh codeex uh
+ 
+
+413
+00:09:29,680 --> 00:09:33,590
+is basically all of your uh codeex uh
+cloud code or pi traces they host it.
+
+414
+00:09:33,590 --> 00:09:33,600
+cloud code or pi traces they host it.
+ 
+
+415
+00:09:33,600 --> 00:09:37,430
+cloud code or pi traces they host it.
+And for instance if you go to your um if
+
+416
+00:09:37,430 --> 00:09:37,440
+And for instance if you go to your um if
+ 
+
+417
+00:09:37,440 --> 00:09:41,430
+And for instance if you go to your um if
+you pushed uh a trace uh and then you go
+
+418
+00:09:41,430 --> 00:09:41,440
+you pushed uh a trace uh and then you go
+ 
+
+419
+00:09:41,440 --> 00:09:43,430
+you pushed uh a trace uh and then you go
+over there you will see in the data set
+
+420
+00:09:43,430 --> 00:09:43,440
+over there you will see in the data set
+ 
+
+421
+00:09:43,440 --> 00:09:48,310
+over there you will see in the data set
+viewer if you click on the traces column
+
+422
+00:09:48,310 --> 00:09:48,320
+viewer if you click on the traces column
+ 
+
+423
+00:09:48,320 --> 00:09:51,030
+viewer if you click on the traces column
+uh it pops up like this. It is very
+
+424
+00:09:51,030 --> 00:09:51,040
+uh it pops up like this. It is very
+ 
+
+425
+00:09:51,040 --> 00:09:53,670
+uh it pops up like this. It is very
+nicely parsed and you can just explore
+
+426
+00:09:53,670 --> 00:09:53,680
+nicely parsed and you can just explore
+ 
+
+427
+00:09:53,680 --> 00:09:55,910
+nicely parsed and you can just explore
+your data and then later if you want you
+
+428
+00:09:55,910 --> 00:09:55,920
+your data and then later if you want you
+ 
+
+429
+00:09:55,920 --> 00:09:58,389
+your data and then later if you want you
+can even train a model on that which is
+
+430
+00:09:58,389 --> 00:09:58,399
+can even train a model on that which is
+ 
+
+431
+00:09:58,399 --> 00:10:00,870
+can even train a model on that which is
+pretty cool in my opinion.
+
+432
+00:10:00,870 --> 00:10:00,880
+pretty cool in my opinion.
+ 
+
+433
+00:10:00,880 --> 00:10:03,269
+pretty cool in my opinion.
+And uh if you want to push your agent
+
+434
+00:10:03,269 --> 00:10:03,279
+And uh if you want to push your agent
+ 
+
+435
+00:10:03,279 --> 00:10:05,990
+And uh if you want to push your agent
+traces you can just upload your sessions
+
+436
+00:10:05,990 --> 00:10:06,000
+traces you can just upload your sessions
+ 
+
+437
+00:10:06,000 --> 00:10:08,949
+traces you can just upload your sessions
+from uh these uh paths and nothing else
+
+438
+00:10:08,949 --> 00:10:08,959
+from uh these uh paths and nothing else
+ 
+
+439
+00:10:08,959 --> 00:10:11,509
+from uh these uh paths and nothing else
+is needed. And we will also probably
+
+440
+00:10:11,509 --> 00:10:11,519
+is needed. And we will also probably
+ 
+
+441
+00:10:11,519 --> 00:10:15,670
+is needed. And we will also probably
+have Hermes agent very soon for traces.
+
+442
+00:10:15,670 --> 00:10:15,680
+have Hermes agent very soon for traces.
+ 
+
+443
+00:10:15,680 --> 00:10:18,630
+have Hermes agent very soon for traces.
+uh going back if you want to use if you
+
+444
+00:10:18,630 --> 00:10:18,640
+uh going back if you want to use if you
+ 
+
+445
+00:10:18,640 --> 00:10:20,550
+uh going back if you want to use if you
+want more options to serve LLM behind
+
+446
+00:10:20,550 --> 00:10:20,560
+want more options to serve LLM behind
+ 
+
+447
+00:10:20,560 --> 00:10:22,710
+want more options to serve LLM behind
+the agent locally.
+
+448
+00:10:22,710 --> 00:10:22,720
+the agent locally.
+ 
+
+449
+00:10:22,720 --> 00:10:25,110
+the agent locally.
+So some tips and tricks in finding a
+
+450
+00:10:25,110 --> 00:10:25,120
+So some tips and tricks in finding a
+ 
+
+451
+00:10:25,120 --> 00:10:27,910
+So some tips and tricks in finding a
+good model. You just go to hugging face.
+
+452
+00:10:27,910 --> 00:10:27,920
+good model. You just go to hugging face.
+ 
+
+453
+00:10:27,920 --> 00:10:30,630
+good model. You just go to hugging face.
+There is an other tab. Under the other
+
+454
+00:10:30,630 --> 00:10:30,640
+There is an other tab. Under the other
+ 
+
+455
+00:10:30,640 --> 00:10:33,030
+There is an other tab. Under the other
+tab there is the apps. So these apps are
+
+456
+00:10:33,030 --> 00:10:33,040
+tab there is the apps. So these apps are
+ 
+
+457
+00:10:33,040 --> 00:10:37,030
+tab there is the apps. So these apps are
+like lm studio, jean, um, llama, cpp
+
+458
+00:10:37,030 --> 00:10:37,040
+like lm studio, jean, um, llama, cpp
+ 
+
+459
+00:10:37,040 --> 00:10:39,990
+like lm studio, jean, um, llama, cpp
+everything that is for local serving is
+
+460
+00:10:39,990 --> 00:10:40,000
+everything that is for local serving is
+ 
+
+461
+00:10:40,000 --> 00:10:41,829
+everything that is for local serving is
+over there. And when you filter for
+
+462
+00:10:41,829 --> 00:10:41,839
+over there. And when you filter for
+ 
+
+463
+00:10:41,839 --> 00:10:44,389
+over there. And when you filter for
+them, you have the models that are
+
+464
+00:10:44,389 --> 00:10:44,399
+them, you have the models that are
+ 
+
+465
+00:10:44,399 --> 00:10:48,310
+them, you have the models that are
+supported by these uh by these uh local
+
+466
+00:10:48,310 --> 00:10:48,320
+supported by these uh by these uh local
+ 
+
+467
+00:10:48,320 --> 00:10:50,949
+supported by these uh by these uh local
+apps. So whatever you want to serve, we
+
+468
+00:10:50,949 --> 00:10:50,959
+apps. So whatever you want to serve, we
+ 
+
+469
+00:10:50,959 --> 00:10:53,829
+apps. So whatever you want to serve, we
+have you covered. And when you go to the
+
+470
+00:10:53,829 --> 00:10:53,839
+have you covered. And when you go to the
+ 
+
+471
+00:10:53,839 --> 00:10:55,829
+have you covered. And when you go to the
+model repository, something very cool in
+
+472
+00:10:55,829 --> 00:10:55,839
+model repository, something very cool in
+ 
+
+473
+00:10:55,839 --> 00:10:58,230
+model repository, something very cool in
+my opinion is that on the left and right
+
+474
+00:10:58,230 --> 00:10:58,240
+my opinion is that on the left and right
+ 
+
+475
+00:10:58,240 --> 00:11:01,750
+my opinion is that on the left and right
+hand side there is GGUF uh section. So
+
+476
+00:11:01,750 --> 00:11:01,760
+hand side there is GGUF uh section. So
+ 
+
+477
+00:11:01,760 --> 00:11:03,590
+hand side there is GGUF uh section. So
+basically GGF if you don't know it's
+
+478
+00:11:03,590 --> 00:11:03,600
+basically GGF if you don't know it's
+ 
+
+479
+00:11:03,600 --> 00:11:06,389
+basically GGF if you don't know it's
+supported it's it's basically comes in
+
+480
+00:11:06,389 --> 00:11:06,399
+supported it's it's basically comes in
+ 
+
+481
+00:11:06,399 --> 00:11:10,310
+supported it's it's basically comes in
+llama CPP the file uh format uh that is
+
+482
+00:11:10,310 --> 00:11:10,320
+llama CPP the file uh format uh that is
+ 
+
+483
+00:11:10,320 --> 00:11:12,470
+llama CPP the file uh format uh that is
+supported in many things like all llama
+
+484
+00:11:12,470 --> 00:11:12,480
+supported in many things like all llama
+ 
+
+485
+00:11:12,480 --> 00:11:15,509
+supported in many things like all llama
+LM studio everything and
+
+486
+00:11:15,509 --> 00:11:15,519
+LM studio everything and
+ 
+
+487
+00:11:15,519 --> 00:11:18,069
+LM studio everything and
+you have the hardware compatibility for
+
+488
+00:11:18,069 --> 00:11:18,079
+you have the hardware compatibility for
+ 
+
+489
+00:11:18,079 --> 00:11:21,590
+you have the hardware compatibility for
+instance the Gemma 4 larger model if you
+
+490
+00:11:21,590 --> 00:11:21,600
+instance the Gemma 4 larger model if you
+ 
+
+491
+00:11:21,600 --> 00:11:24,630
+instance the Gemma 4 larger model if you
+quantize it to 4bit it fits inside an L4
+
+492
+00:11:24,630 --> 00:11:24,640
+quantize it to 4bit it fits inside an L4
+ 
+
+493
+00:11:24,640 --> 00:11:29,509
+quantize it to 4bit it fits inside an L4
+GPU uh with the 24 GB of VRAM.
+
+494
+00:11:29,509 --> 00:11:29,519
+GPU uh with the 24 GB of VRAM.
+ 
+
+495
+00:11:29,519 --> 00:11:31,269
+GPU uh with the 24 GB of VRAM.
+So I think this is very cool and this is
+
+496
+00:11:31,269 --> 00:11:31,279
+So I think this is very cool and this is
+ 
+
+497
+00:11:31,279 --> 00:11:35,269
+So I think this is very cool and this is
+also served to uh MLX repositories as
+
+498
+00:11:35,269 --> 00:11:35,279
+also served to uh MLX repositories as
+ 
+
+499
+00:11:35,279 --> 00:11:36,870
+also served to uh MLX repositories as
+well. And when you go to the again to
+
+500
+00:11:36,870 --> 00:11:36,880
+well. And when you go to the again to
+ 
+
+501
+00:11:36,880 --> 00:11:38,389
+well. And when you go to the again to
+the model repository if you have
+
+502
+00:11:38,389 --> 00:11:38,399
+the model repository if you have
+ 
+
+503
+00:11:38,399 --> 00:11:40,550
+the model repository if you have
+absolutely zero clue on how to serve
+
+504
+00:11:40,550 --> 00:11:40,560
+absolutely zero clue on how to serve
+ 
+
+505
+00:11:40,560 --> 00:11:43,110
+absolutely zero clue on how to serve
+this model on top right there is use
+
+506
+00:11:43,110 --> 00:11:43,120
+this model on top right there is use
+ 
+
+507
+00:11:43,120 --> 00:11:45,350
+this model on top right there is use
+this model and you have the options of
+
+508
+00:11:45,350 --> 00:11:45,360
+this model and you have the options of
+ 
+
+509
+00:11:45,360 --> 00:11:47,590
+this model and you have the options of
+the local apps that the model is
+
+510
+00:11:47,590 --> 00:11:47,600
+the local apps that the model is
+ 
+
+511
+00:11:47,600 --> 00:11:49,910
+the local apps that the model is
+supported in. And when you click that
+
+512
+00:11:49,910 --> 00:11:49,920
+supported in. And when you click that
+ 
+
+513
+00:11:49,920 --> 00:11:52,069
+supported in. And when you click that
+you see like only with few lines of
+
+514
+00:11:52,069 --> 00:11:52,079
+you see like only with few lines of
+ 
+
+515
+00:11:52,079 --> 00:11:55,030
+you see like only with few lines of
+command uh that you can run you install
+
+516
+00:11:55,030 --> 00:11:55,040
+command uh that you can run you install
+ 
+
+517
+00:11:55,040 --> 00:11:58,230
+command uh that you can run you install
+you get the model served and voila. It's
+
+518
+00:11:58,230 --> 00:11:58,240
+you get the model served and voila. It's
+ 
+
+519
+00:11:58,240 --> 00:12:00,949
+you get the model served and voila. It's
+very very convenient to run the open
+
+520
+00:12:00,949 --> 00:12:00,959
+very very convenient to run the open
+ 
+
+521
+00:12:00,959 --> 00:12:03,509
+very very convenient to run the open
+models these days
+
+522
+00:12:03,509 --> 00:12:03,519
+models these days
+ 
+
+523
+00:12:03,519 --> 00:12:07,430
+models these days
+and lastly supercharging your coding
+
+524
+00:12:07,430 --> 00:12:07,440
+and lastly supercharging your coding
+ 
+
+525
+00:12:07,440 --> 00:12:10,710
+and lastly supercharging your coding
+agents using hugging face skills.
+
+526
+00:12:10,710 --> 00:12:10,720
+agents using hugging face skills.
+ 
+
+527
+00:12:10,720 --> 00:12:13,350
+agents using hugging face skills.
+So there is we have like bunch of skills
+
+528
+00:12:13,350 --> 00:12:13,360
+So there is we have like bunch of skills
+ 
+
+529
+00:12:13,360 --> 00:12:15,110
+So there is we have like bunch of skills
+in order to get you started with
+
+530
+00:12:15,110 --> 00:12:15,120
+in order to get you started with
+ 
+
+531
+00:12:15,120 --> 00:12:17,990
+in order to get you started with
+training uh I don't know inferring with
+
+532
+00:12:17,990 --> 00:12:18,000
+training uh I don't know inferring with
+ 
+
+533
+00:12:18,000 --> 00:12:20,150
+training uh I don't know inferring with
+the open models using open models
+
+534
+00:12:20,150 --> 00:12:20,160
+the open models using open models
+ 
+
+535
+00:12:20,160 --> 00:12:23,030
+the open models using open models
+exploring open data sets using AI apps
+
+536
+00:12:23,030 --> 00:12:23,040
+exploring open data sets using AI apps
+ 
+
+537
+00:12:23,040 --> 00:12:26,069
+exploring open data sets using AI apps
+everything and uh we have this thing
+
+538
+00:12:26,069 --> 00:12:26,079
+everything and uh we have this thing
+ 
+
+539
+00:12:26,079 --> 00:12:28,310
+everything and uh we have this thing
+called hugging face CLI skill which
+
+540
+00:12:28,310 --> 00:12:28,320
+called hugging face CLI skill which
+ 
+
+541
+00:12:28,320 --> 00:12:29,990
+called hugging face CLI skill which
+allows coding agents to manage
+
+542
+00:12:29,990 --> 00:12:30,000
+allows coding agents to manage
+ 
+
+543
+00:12:30,000 --> 00:12:31,829
+allows coding agents to manage
+repositories
+
+544
+00:12:31,829 --> 00:12:31,839
+repositories
+ 
+
+545
+00:12:31,839 --> 00:12:35,190
+repositories
+uh run jobs launch demos and everything
+
+546
+00:12:35,190 --> 00:12:35,200
+uh run jobs launch demos and everything
+ 
+
+547
+00:12:35,200 --> 00:12:37,590
+uh run jobs launch demos and everything
+and this is how you can install it uh
+
+548
+00:12:37,590 --> 00:12:37,600
+and this is how you can install it uh
+ 
+
+549
+00:12:37,600 --> 00:12:40,150
+and this is how you can install it uh
+you can just uh type HF skills on Google
+
+550
+00:12:40,150 --> 00:12:40,160
+you can just uh type HF skills on Google
+ 
+
+551
+00:12:40,160 --> 00:12:43,829
+you can just uh type HF skills on Google
+and you will find the uh commands. Uh
+
+552
+00:12:43,829 --> 00:12:43,839
+and you will find the uh commands. Uh
+ 
+
+553
+00:12:43,839 --> 00:12:45,829
+and you will find the uh commands. Uh
+but we have more skills than that. So
+
+554
+00:12:45,829 --> 00:12:45,839
+but we have more skills than that. So
+ 
+
+555
+00:12:45,839 --> 00:12:48,069
+but we have more skills than that. So
+basically this allows you to plug hub in
+
+556
+00:12:48,069 --> 00:12:48,079
+basically this allows you to plug hub in
+ 
+
+557
+00:12:48,079 --> 00:12:51,269
+basically this allows you to plug hub in
+into your agents like give you all of
+
+558
+00:12:51,269 --> 00:12:51,279
+into your agents like give you all of
+ 
+
+559
+00:12:51,279 --> 00:12:54,230
+into your agents like give you all of
+the uh hugging face hub exploration. But
+
+560
+00:12:54,230 --> 00:12:54,240
+the uh hugging face hub exploration. But
+ 
+
+561
+00:12:54,240 --> 00:12:56,550
+the uh hugging face hub exploration. But
+rest of the skills are super cool. There
+
+562
+00:12:56,550 --> 00:12:56,560
+rest of the skills are super cool. There
+ 
+
+563
+00:12:56,560 --> 00:13:00,310
+rest of the skills are super cool. There
+is LLM trainer skill. Basically this is
+
+564
+00:13:00,310 --> 00:13:00,320
+is LLM trainer skill. Basically this is
+ 
+
+565
+00:13:00,320 --> 00:13:02,150
+is LLM trainer skill. Basically this is
+uh this is not only for LLMs but also
+
+566
+00:13:02,150 --> 00:13:02,160
+uh this is not only for LLMs but also
+ 
+
+567
+00:13:02,160 --> 00:13:03,829
+uh this is not only for LLMs but also
+visual language models. You can just
+
+568
+00:13:03,829 --> 00:13:03,839
+visual language models. You can just
+ 
+
+569
+00:13:03,839 --> 00:13:06,949
+visual language models. You can just
+tell the model to okay train this model
+
+570
+00:13:06,949 --> 00:13:06,959
+tell the model to okay train this model
+ 
+
+571
+00:13:06,959 --> 00:13:09,190
+tell the model to okay train this model
+on this data set and it will just kick
+
+572
+00:13:09,190 --> 00:13:09,200
+on this data set and it will just kick
+ 
+
+573
+00:13:09,200 --> 00:13:12,870
+on this data set and it will just kick
+off the job remotely uh on our infra or
+
+574
+00:13:12,870 --> 00:13:12,880
+off the job remotely uh on our infra or
+ 
+
+575
+00:13:12,880 --> 00:13:16,790
+off the job remotely uh on our infra or
+like locally wherever you want.
+
+576
+00:13:16,790 --> 00:13:16,800
+like locally wherever you want.
+ 
+
+577
+00:13:16,800 --> 00:13:19,509
+like locally wherever you want.
+And there is gradu skill which allows
+
+578
+00:13:19,509 --> 00:13:19,519
+And there is gradu skill which allows
+ 
+
+579
+00:13:19,519 --> 00:13:22,150
+And there is gradu skill which allows
+you to build demos. And there is hugging
+
+580
+00:13:22,150 --> 00:13:22,160
+you to build demos. And there is hugging
+ 
+
+581
+00:13:22,160 --> 00:13:25,430
+you to build demos. And there is hugging
+face data set skill which allows you to
+
+582
+00:13:25,430 --> 00:13:25,440
+face data set skill which allows you to
+ 
+
+583
+00:13:25,440 --> 00:13:28,870
+face data set skill which allows you to
+uh explore data sets through our data
+
+584
+00:13:28,870 --> 00:13:28,880
+uh explore data sets through our data
+ 
+
+585
+00:13:28,880 --> 00:13:32,150
+uh explore data sets through our data
+set viewer API and you can install it
+
+586
+00:13:32,150 --> 00:13:32,160
+set viewer API and you can install it
+ 
+
+587
+00:13:32,160 --> 00:13:34,550
+set viewer API and you can install it
+very easily. Again we come with more
+
+588
+00:13:34,550 --> 00:13:34,560
+very easily. Again we come with more
+ 
+
+589
+00:13:34,560 --> 00:13:36,790
+very easily. Again we come with more
+integrations. I just put cloud and
+
+590
+00:13:36,790 --> 00:13:36,800
+integrations. I just put cloud and
+ 
+
+591
+00:13:36,800 --> 00:13:39,269
+integrations. I just put cloud and
+gemini here.
+
+592
+00:13:39,269 --> 00:13:39,279
+gemini here.
+ 
+
+593
+00:13:39,279 --> 00:13:41,990
+gemini here.
+So putting this into action for instance
+
+594
+00:13:41,990 --> 00:13:42,000
+So putting this into action for instance
+ 
+
+595
+00:13:42,000 --> 00:13:45,190
+So putting this into action for instance
+I asked the model uh to I asked cloud
+
+596
+00:13:45,190 --> 00:13:45,200
+I asked the model uh to I asked cloud
+ 
+
+597
+00:13:45,200 --> 00:13:49,910
+I asked the model uh to I asked cloud
+code to say hey can you train qan2vl on
+
+598
+00:13:49,910 --> 00:13:49,920
+code to say hey can you train qan2vl on
+ 
+
+599
+00:13:49,920 --> 00:13:52,550
+code to say hey can you train qan2vl on
+lava instruct mix which is like a vision
+
+600
+00:13:52,550 --> 00:13:52,560
+lava instruct mix which is like a vision
+ 
+
+601
+00:13:52,560 --> 00:13:55,590
+lava instruct mix which is like a vision
+language data set and it asked me a few
+
+602
+00:13:55,590 --> 00:13:55,600
+language data set and it asked me a few
+ 
+
+603
+00:13:55,600 --> 00:13:58,470
+language data set and it asked me a few
+questions. It said okay which instance
+
+604
+00:13:58,470 --> 00:13:58,480
+questions. It said okay which instance
+ 
+
+605
+00:13:58,480 --> 00:14:00,870
+questions. It said okay which instance
+would you like this to go in because you
+
+606
+00:14:00,870 --> 00:14:00,880
+would you like this to go in because you
+ 
+
+607
+00:14:00,880 --> 00:14:03,350
+would you like this to go in because you
+have multiple options. uh the model
+
+608
+00:14:03,350 --> 00:14:03,360
+have multiple options. uh the model
+ 
+
+609
+00:14:03,360 --> 00:14:05,829
+have multiple options. uh the model
+actually like in the back end the agent
+
+610
+00:14:05,829 --> 00:14:05,839
+actually like in the back end the agent
+ 
+
+611
+00:14:05,839 --> 00:14:08,710
+actually like in the back end the agent
+actually uh calculates the amount of
+
+612
+00:14:08,710 --> 00:14:08,720
+actually uh calculates the amount of
+ 
+
+613
+00:14:08,720 --> 00:14:11,910
+actually uh calculates the amount of
+VRAM required to run fine-tune that
+
+614
+00:14:11,910 --> 00:14:11,920
+VRAM required to run fine-tune that
+ 
+
+615
+00:14:11,920 --> 00:14:13,430
+VRAM required to run fine-tune that
+model in a given batch size and
+
+616
+00:14:13,430 --> 00:14:13,440
+model in a given batch size and
+ 
+
+617
+00:14:13,440 --> 00:14:15,350
+model in a given batch size and
+everything. So it handles everything for
+
+618
+00:14:15,350 --> 00:14:15,360
+everything. So it handles everything for
+ 
+
+619
+00:14:15,360 --> 00:14:17,509
+everything. So it handles everything for
+you. It just asks you a few questions.
+
+620
+00:14:17,509 --> 00:14:17,519
+you. It just asks you a few questions.
+ 
+
+621
+00:14:17,519 --> 00:14:19,110
+you. It just asks you a few questions.
+Okay, what is your validation split?
+
+622
+00:14:19,110 --> 00:14:19,120
+Okay, what is your validation split?
+ 
+
+623
+00:14:19,120 --> 00:14:22,389
+Okay, what is your validation split?
+Blah blah. And then it just launches the
+
+624
+00:14:22,389 --> 00:14:22,399
+Blah blah. And then it just launches the
+ 
+
+625
+00:14:22,399 --> 00:14:25,030
+Blah blah. And then it just launches the
+job which to me is absolute sci-fi still
+
+626
+00:14:25,030 --> 00:14:25,040
+job which to me is absolute sci-fi still
+ 
+
+627
+00:14:25,040 --> 00:14:26,790
+job which to me is absolute sci-fi still
+to this day as a person who have been
+
+628
+00:14:26,790 --> 00:14:26,800
+to this day as a person who have been
+ 
+
+629
+00:14:26,800 --> 00:14:29,030
+to this day as a person who have been
+training models since I don't know
+
+630
+00:14:29,030 --> 00:14:29,040
+training models since I don't know
+ 
+
+631
+00:14:29,040 --> 00:14:31,750
+training models since I don't know
+beginning of my career like six six
+
+632
+00:14:31,750 --> 00:14:31,760
+beginning of my career like six six
+ 
+
+633
+00:14:31,760 --> 00:14:33,750
+beginning of my career like six six
+years
+
+634
+00:14:33,750 --> 00:14:33,760
+years
+ 
+
+635
+00:14:33,760 --> 00:14:36,310
+years
+and you at the end you just find your
+
+636
+00:14:36,310 --> 00:14:36,320
+and you at the end you just find your
+ 
+
+637
+00:14:36,320 --> 00:14:38,550
+and you at the end you just find your
+model on hub
+
+638
+00:14:38,550 --> 00:14:38,560
+model on hub
+ 
+
+639
+00:14:38,560 --> 00:14:41,030
+model on hub
+and this is not limited to LLMs and VLMs
+
+640
+00:14:41,030 --> 00:14:41,040
+and this is not limited to LLMs and VLMs
+ 
+
+641
+00:14:41,040 --> 00:14:44,550
+and this is not limited to LLMs and VLMs
+I have recently shipped um skills for
+
+642
+00:14:44,550 --> 00:14:44,560
+I have recently shipped um skills for
+ 
+
+643
+00:14:44,560 --> 00:14:46,790
+I have recently shipped um skills for
+for instance training object detectors
+
+644
+00:14:46,790 --> 00:14:46,800
+for instance training object detectors
+ 
+
+645
+00:14:46,800 --> 00:14:49,910
+for instance training object detectors
+or I don't know segmenting model and
+
+646
+00:14:49,910 --> 00:14:49,920
+or I don't know segmenting model and
+ 
+
+647
+00:14:49,920 --> 00:14:52,550
+or I don't know segmenting model and
+everything for vision. It handles for
+
+648
+00:14:52,550 --> 00:14:52,560
+everything for vision. It handles for
+ 
+
+649
+00:14:52,560 --> 00:14:54,150
+everything for vision. It handles for
+instance different bounding box types
+
+650
+00:14:54,150 --> 00:14:54,160
+instance different bounding box types
+ 
+
+651
+00:14:54,160 --> 00:14:55,670
+instance different bounding box types
+and everything. You just give the
+
+652
+00:14:55,670 --> 00:14:55,680
+and everything. You just give the
+ 
+
+653
+00:14:55,680 --> 00:15:00,629
+and everything. You just give the
+command and let it handle everything.
+
+654
+00:15:00,629 --> 00:15:00,639
+command and let it handle everything.
+ 
+
+655
+00:15:00,639 --> 00:15:03,670
+command and let it handle everything.
+And going back to MCP, what do we serve?
+
+656
+00:15:03,670 --> 00:15:03,680
+And going back to MCP, what do we serve?
+ 
+
+657
+00:15:03,680 --> 00:15:06,710
+And going back to MCP, what do we serve?
+Uh we have models, data set spaces,
+
+658
+00:15:06,710 --> 00:15:06,720
+Uh we have models, data set spaces,
+ 
+
+659
+00:15:06,720 --> 00:15:09,509
+Uh we have models, data set spaces,
+search for your task, uh semantic search
+
+660
+00:15:09,509 --> 00:15:09,519
+search for your task, uh semantic search
+ 
+
+661
+00:15:09,519 --> 00:15:11,670
+search for your task, uh semantic search
+for spaces. So if you don't know spaces,
+
+662
+00:15:11,670 --> 00:15:11,680
+for spaces. So if you don't know spaces,
+ 
+
+663
+00:15:11,680 --> 00:15:14,069
+for spaces. So if you don't know spaces,
+it's like the app store of AI. You have
+
+664
+00:15:14,069 --> 00:15:14,079
+it's like the app store of AI. You have
+ 
+
+665
+00:15:14,079 --> 00:15:17,030
+it's like the app store of AI. You have
+a ton of uh apps over there for
+
+666
+00:15:17,030 --> 00:15:17,040
+a ton of uh apps over there for
+ 
+
+667
+00:15:17,040 --> 00:15:20,550
+a ton of uh apps over there for
+absolutely everything you could see. And
+
+668
+00:15:20,550 --> 00:15:20,560
+absolutely everything you could see. And
+ 
+
+669
+00:15:20,560 --> 00:15:22,550
+absolutely everything you could see. And
+also we have something called jobs which
+
+670
+00:15:22,550 --> 00:15:22,560
+also we have something called jobs which
+ 
+
+671
+00:15:22,560 --> 00:15:25,350
+also we have something called jobs which
+allows you to kick off uh one of jobs
+
+672
+00:15:25,350 --> 00:15:25,360
+allows you to kick off uh one of jobs
+ 
+
+673
+00:15:25,360 --> 00:15:28,150
+allows you to kick off uh one of jobs
+that ends like uh if it fails or if it
+
+674
+00:15:28,150 --> 00:15:28,160
+that ends like uh if it fails or if it
+ 
+
+675
+00:15:28,160 --> 00:15:30,710
+that ends like uh if it fails or if it
+succeeds and you pay for the amount of
+
+676
+00:15:30,710 --> 00:15:30,720
+succeeds and you pay for the amount of
+ 
+
+677
+00:15:30,720 --> 00:15:33,990
+succeeds and you pay for the amount of
+time it was up. And also you can query
+
+678
+00:15:33,990 --> 00:15:34,000
+time it was up. And also you can query
+ 
+
+679
+00:15:34,000 --> 00:15:37,189
+time it was up. And also you can query
+these apps from MCP like I'm going to
+
+680
+00:15:37,189 --> 00:15:37,199
+these apps from MCP like I'm going to
+ 
+
+681
+00:15:37,199 --> 00:15:39,829
+these apps from MCP like I'm going to
+show you shortly. But it plays nicely
+
+682
+00:15:39,829 --> 00:15:39,839
+show you shortly. But it plays nicely
+ 
+
+683
+00:15:39,839 --> 00:15:43,509
+show you shortly. But it plays nicely
+with all of your favorite platforms.
+
+684
+00:15:43,509 --> 00:15:43,519
+with all of your favorite platforms.
+ 
+
+685
+00:15:43,519 --> 00:15:46,310
+with all of your favorite platforms.
+And so for instance in here I ask the
+
+686
+00:15:46,310 --> 00:15:46,320
+And so for instance in here I ask the
+ 
+
+687
+00:15:46,320 --> 00:15:48,550
+And so for instance in here I ask the
+model generate image of a bakl lava made
+
+688
+00:15:48,550 --> 00:15:48,560
+model generate image of a bakl lava made
+ 
+
+689
+00:15:48,560 --> 00:15:52,230
+model generate image of a bakl lava made
+of yarn and then it will call uh the
+
+690
+00:15:52,230 --> 00:15:52,240
+of yarn and then it will call uh the
+ 
+
+691
+00:15:52,240 --> 00:15:54,949
+of yarn and then it will call uh the
+hugging face of qan image which is an
+
+692
+00:15:54,949 --> 00:15:54,959
+hugging face of qan image which is an
+ 
+
+693
+00:15:54,959 --> 00:15:57,749
+hugging face of qan image which is an
+image generation model hosted remotely
+
+694
+00:15:57,749 --> 00:15:57,759
+image generation model hosted remotely
+ 
+
+695
+00:15:57,759 --> 00:16:00,389
+image generation model hosted remotely
+and then it will query that and it will
+
+696
+00:16:00,389 --> 00:16:00,399
+and then it will query that and it will
+ 
+
+697
+00:16:00,399 --> 00:16:03,590
+and then it will query that and it will
+bring um the output of that. It works
+
+698
+00:16:03,590 --> 00:16:03,600
+bring um the output of that. It works
+ 
+
+699
+00:16:03,600 --> 00:16:07,189
+bring um the output of that. It works
+very nice look.
+
+700
+00:16:07,189 --> 00:16:07,199
+
+ 
+
+701
+00:16:07,199 --> 00:16:09,110
+
+But you need to turn on there is a
+
+702
+00:16:09,110 --> 00:16:09,120
+But you need to turn on there is a
+ 
+
+703
+00:16:09,120 --> 00:16:11,590
+But you need to turn on there is a
+setting in the MCP called dynamic
+
+704
+00:16:11,590 --> 00:16:11,600
+setting in the MCP called dynamic
+ 
+
+705
+00:16:11,600 --> 00:16:14,310
+setting in the MCP called dynamic
+spaces. If you want more options of like
+
+706
+00:16:14,310 --> 00:16:14,320
+spaces. If you want more options of like
+ 
+
+707
+00:16:14,320 --> 00:16:15,990
+spaces. If you want more options of like
+if you want absolutely all of the
+
+708
+00:16:15,990 --> 00:16:16,000
+if you want absolutely all of the
+ 
+
+709
+00:16:16,000 --> 00:16:18,389
+if you want absolutely all of the
+spaces, you need to turn that on which
+
+710
+00:16:18,389 --> 00:16:18,399
+spaces, you need to turn that on which
+ 
+
+711
+00:16:18,399 --> 00:16:21,990
+spaces, you need to turn that on which
+is a bit of bit experimental.
+
+712
+00:16:21,990 --> 00:16:22,000
+is a bit of bit experimental.
+ 
+
+713
+00:16:22,000 --> 00:16:24,310
+is a bit of bit experimental.
+And here is some few ideas that you can
+
+714
+00:16:24,310 --> 00:16:24,320
+And here is some few ideas that you can
+ 
+
+715
+00:16:24,320 --> 00:16:27,670
+And here is some few ideas that you can
+use spaces MCP. Uh but you're absolutely
+
+716
+00:16:27,670 --> 00:16:27,680
+use spaces MCP. Uh but you're absolutely
+ 
+
+717
+00:16:27,680 --> 00:16:30,310
+use spaces MCP. Uh but you're absolutely
+not limited to those. And tying it all
+
+718
+00:16:30,310 --> 00:16:30,320
+not limited to those. And tying it all
+ 
+
+719
+00:16:30,320 --> 00:16:33,269
+not limited to those. And tying it all
+together, my colleague Neils has built
+
+720
+00:16:33,269 --> 00:16:33,279
+together, my colleague Neils has built
+ 
+
+721
+00:16:33,279 --> 00:16:35,430
+together, my colleague Neils has built
+something I which I found cool so I
+
+722
+00:16:35,430 --> 00:16:35,440
+something I which I found cool so I
+ 
+
+723
+00:16:35,440 --> 00:16:38,389
+something I which I found cool so I
+wanted to share. So basically on hugging
+
+724
+00:16:38,389 --> 00:16:38,399
+wanted to share. So basically on hugging
+ 
+
+725
+00:16:38,399 --> 00:16:40,629
+wanted to share. So basically on hugging
+face hub there is papers and these
+
+726
+00:16:40,629 --> 00:16:40,639
+face hub there is papers and these
+ 
+
+727
+00:16:40,639 --> 00:16:44,069
+face hub there is papers and these
+papers basically AI related papers. We
+
+728
+00:16:44,069 --> 00:16:44,079
+papers basically AI related papers. We
+ 
+
+729
+00:16:44,079 --> 00:16:46,230
+papers basically AI related papers. We
+want people to be able to ask questions
+
+730
+00:16:46,230 --> 00:16:46,240
+want people to be able to ask questions
+ 
+
+731
+00:16:46,240 --> 00:16:49,590
+want people to be able to ask questions
+to these papers or share h but not all
+
+732
+00:16:49,590 --> 00:16:49,600
+to these papers or share h but not all
+ 
+
+733
+00:16:49,600 --> 00:16:52,790
+to these papers or share h but not all
+of the papers come with markdown uh
+
+734
+00:16:52,790 --> 00:16:52,800
+of the papers come with markdown uh
+ 
+
+735
+00:16:52,800 --> 00:16:55,269
+of the papers come with markdown uh
+which the model which we can index and
+
+736
+00:16:55,269 --> 00:16:55,279
+which the model which we can index and
+ 
+
+737
+00:16:55,279 --> 00:16:59,829
+which the model which we can index and
+stuff. So we OCR 30 30,000 papers uh
+
+738
+00:16:59,829 --> 00:16:59,839
+stuff. So we OCR 30 30,000 papers uh
+ 
+
+739
+00:16:59,839 --> 00:17:02,310
+stuff. So we OCR 30 30,000 papers uh
+using codecs open OCR models and jobs
+
+740
+00:17:02,310 --> 00:17:02,320
+using codecs open OCR models and jobs
+ 
+
+741
+00:17:02,320 --> 00:17:04,870
+using codecs open OCR models and jobs
+all through prompting which is a bit
+
+742
+00:17:04,870 --> 00:17:04,880
+all through prompting which is a bit
+ 
+
+743
+00:17:04,880 --> 00:17:07,750
+all through prompting which is a bit
+crazy. So the steps to do that is
+
+744
+00:17:07,750 --> 00:17:07,760
+crazy. So the steps to do that is
+ 
+
+745
+00:17:07,760 --> 00:17:09,909
+crazy. So the steps to do that is
+firstly pick an OCR model that is cheap
+
+746
+00:17:09,909 --> 00:17:09,919
+firstly pick an OCR model that is cheap
+ 
+
+747
+00:17:09,919 --> 00:17:13,350
+firstly pick an OCR model that is cheap
+and nice and performance. Ask the LLM to
+
+748
+00:17:13,350 --> 00:17:13,360
+and nice and performance. Ask the LLM to
+ 
+
+749
+00:17:13,360 --> 00:17:15,669
+and nice and performance. Ask the LLM to
+kick off a processing job and actually
+
+750
+00:17:15,669 --> 00:17:15,679
+kick off a processing job and actually
+ 
+
+751
+00:17:15,679 --> 00:17:18,069
+kick off a processing job and actually
+write the code for that and then kick it
+
+752
+00:17:18,069 --> 00:17:18,079
+write the code for that and then kick it
+ 
+
+753
+00:17:18,079 --> 00:17:21,029
+write the code for that and then kick it
+off on hugging face infra and then let
+
+754
+00:17:21,029 --> 00:17:21,039
+off on hugging face infra and then let
+ 
+
+755
+00:17:21,039 --> 00:17:24,470
+off on hugging face infra and then let
+the skill set up the instance of hosting
+
+756
+00:17:24,470 --> 00:17:24,480
+the skill set up the instance of hosting
+ 
+
+757
+00:17:24,480 --> 00:17:26,470
+the skill set up the instance of hosting
+that model and everything without you
+
+758
+00:17:26,470 --> 00:17:26,480
+that model and everything without you
+ 
+
+759
+00:17:26,480 --> 00:17:28,470
+that model and everything without you
+going through the pain of the napkin
+
+760
+00:17:28,470 --> 00:17:28,480
+going through the pain of the napkin
+ 
+
+761
+00:17:28,480 --> 00:17:31,830
+going through the pain of the napkin
+math and then profit.
+
+762
+00:17:31,830 --> 00:17:31,840
+math and then profit.
+ 
+
+763
+00:17:31,840 --> 00:17:34,870
+math and then profit.
+So to pick an OCR model you need to um
+
+764
+00:17:34,870 --> 00:17:34,880
+So to pick an OCR model you need to um
+ 
+
+765
+00:17:34,880 --> 00:17:37,270
+So to pick an OCR model you need to um
+you need you can go to OCR bench which
+
+766
+00:17:37,270 --> 00:17:37,280
+you need you can go to OCR bench which
+ 
+
+767
+00:17:37,280 --> 00:17:38,870
+you need you can go to OCR bench which
+is a benchmark data set that I have
+
+768
+00:17:38,870 --> 00:17:38,880
+is a benchmark data set that I have
+ 
+
+769
+00:17:38,880 --> 00:17:41,350
+is a benchmark data set that I have
+previously shown you. The first result
+
+770
+00:17:41,350 --> 00:17:41,360
+previously shown you. The first result
+ 
+
+771
+00:17:41,360 --> 00:17:44,470
+previously shown you. The first result
+is Chandra OCR but don't be fooled by
+
+772
+00:17:44,470 --> 00:17:44,480
+is Chandra OCR but don't be fooled by
+ 
+
+773
+00:17:44,480 --> 00:17:48,070
+is Chandra OCR but don't be fooled by
+this. We have just today shipped a skill
+
+774
+00:17:48,070 --> 00:17:48,080
+this. We have just today shipped a skill
+ 
+
+775
+00:17:48,080 --> 00:17:50,310
+this. We have just today shipped a skill
+that you can just ask the model okay
+
+776
+00:17:50,310 --> 00:17:50,320
+that you can just ask the model okay
+ 
+
+777
+00:17:50,320 --> 00:17:52,950
+that you can just ask the model okay
+what is the best model on OCR for
+
+778
+00:17:52,950 --> 00:17:52,960
+what is the best model on OCR for
+ 
+
+779
+00:17:52,960 --> 00:17:55,350
+what is the best model on OCR for
+fine-tuning and it will also make
+
+780
+00:17:55,350 --> 00:17:55,360
+fine-tuning and it will also make
+ 
+
+781
+00:17:55,360 --> 00:17:57,270
+fine-tuning and it will also make
+recommendations around finetuning and
+
+782
+00:17:57,270 --> 00:17:57,280
+recommendations around finetuning and
+ 
+
+783
+00:17:57,280 --> 00:17:59,270
+recommendations around finetuning and
+stuff. So if you need like smaller
+
+784
+00:17:59,270 --> 00:17:59,280
+stuff. So if you need like smaller
+ 
+
+785
+00:17:59,280 --> 00:18:02,310
+stuff. So if you need like smaller
+models etc it will handle everything for
+
+786
+00:18:02,310 --> 00:18:02,320
+models etc it will handle everything for
+ 
+
+787
+00:18:02,320 --> 00:18:04,549
+models etc it will handle everything for
+you with this skill. So it's pretty
+
+788
+00:18:04,549 --> 00:18:04,559
+you with this skill. So it's pretty
+ 
+
+789
+00:18:04,559 --> 00:18:08,470
+you with this skill. So it's pretty
+cool. Check it out. Um once you pick the
+
+790
+00:18:08,470 --> 00:18:08,480
+cool. Check it out. Um once you pick the
+ 
+
+791
+00:18:08,480 --> 00:18:10,390
+cool. Check it out. Um once you pick the
+model okay we in this case we use
+
+792
+00:18:10,390 --> 00:18:10,400
+model okay we in this case we use
+ 
+
+793
+00:18:10,400 --> 00:18:12,070
+model okay we in this case we use
+Chandram.
+
+794
+00:18:12,070 --> 00:18:12,080
+Chandram.
+ 
+
+795
+00:18:12,080 --> 00:18:14,549
+Chandram.
+uh we asked model to write the script
+
+796
+00:18:14,549 --> 00:18:14,559
+uh we asked model to write the script
+ 
+
+797
+00:18:14,559 --> 00:18:18,789
+uh we asked model to write the script
+and it did and then the agent just does
+
+798
+00:18:18,789 --> 00:18:18,799
+and it did and then the agent just does
+ 
+
+799
+00:18:18,799 --> 00:18:22,150
+and it did and then the agent just does
+the napkin math for the instance and uh
+
+800
+00:18:22,150 --> 00:18:22,160
+the napkin math for the instance and uh
+ 
+
+801
+00:18:22,160 --> 00:18:24,230
+the napkin math for the instance and uh
+calculates the cost of the running job
+
+802
+00:18:24,230 --> 00:18:24,240
+calculates the cost of the running job
+ 
+
+803
+00:18:24,240 --> 00:18:26,630
+calculates the cost of the running job
+and everything and then these jobs will
+
+804
+00:18:26,630 --> 00:18:26,640
+and everything and then these jobs will
+ 
+
+805
+00:18:26,640 --> 00:18:29,590
+and everything and then these jobs will
+be so so basically these jobs will be
+
+806
+00:18:29,590 --> 00:18:29,600
+be so so basically these jobs will be
+ 
+
+807
+00:18:29,600 --> 00:18:32,150
+be so so basically these jobs will be
+rerun. So we have recently launched this
+
+808
+00:18:32,150 --> 00:18:32,160
+rerun. So we have recently launched this
+ 
+
+809
+00:18:32,160 --> 00:18:35,270
+rerun. So we have recently launched this
+infra product called buckets which is
+
+810
+00:18:35,270 --> 00:18:35,280
+infra product called buckets which is
+ 
+
+811
+00:18:35,280 --> 00:18:37,909
+infra product called buckets which is
+like a A3 buckets but much cheaper and
+
+812
+00:18:37,909 --> 00:18:37,919
+like a A3 buckets but much cheaper and
+ 
+
+813
+00:18:37,919 --> 00:18:39,510
+like a A3 buckets but much cheaper and
+faster
+
+814
+00:18:39,510 --> 00:18:39,520
+faster
+ 
+
+815
+00:18:39,520 --> 00:18:43,350
+faster
+um that you can use with mounting and
+
+816
+00:18:43,350 --> 00:18:43,360
+um that you can use with mounting and
+ 
+
+817
+00:18:43,360 --> 00:18:47,510
+um that you can use with mounting and
+yeah basically um you can just use that
+
+818
+00:18:47,510 --> 00:18:47,520
+yeah basically um you can just use that
+ 
+
+819
+00:18:47,520 --> 00:18:49,830
+yeah basically um you can just use that
+and you can get started uh in these
+
+820
+00:18:49,830 --> 00:18:49,840
+and you can get started uh in these
+ 
+
+821
+00:18:49,840 --> 00:18:51,590
+and you can get started uh in these
+links. I hope you like this talk. Thank
+
+822
+00:18:51,590 --> 00:18:51,600
+links. I hope you like this talk. Thank
+ 
+
+823
+00:18:51,600 --> 00:18:54,919
+links. I hope you like this talk. Thank
+you so much.
+

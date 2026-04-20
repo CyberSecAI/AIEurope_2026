@@ -1,0 +1,8795 @@
+1
+00:00:06,960 --> 00:00:09,870
+
+Hello everybody and welcome to Let's
+
+2
+00:00:09,870 --> 00:00:09,880
+Hello everybody and welcome to Let's
+ 
+
+3
+00:00:09,880 --> 00:00:12,550
+Hello everybody and welcome to Let's
+Learn Wander engineering reinforcement
+
+4
+00:00:12,550 --> 00:00:12,560
+Learn Wander engineering reinforcement
+ 
+
+5
+00:00:12,560 --> 00:00:14,790
+Learn Wander engineering reinforcement
+learning environments.
+
+6
+00:00:14,790 --> 00:00:14,800
+learning environments.
+ 
+
+7
+00:00:14,800 --> 00:00:16,950
+learning environments.
+A few words about me. I am Stefano
+
+8
+00:00:16,950 --> 00:00:16,960
+A few words about me. I am Stefano
+ 
+
+9
+00:00:16,960 --> 00:00:19,510
+A few words about me. I am Stefano
+Fiorucci, a AI and software engineer. By
+
+10
+00:00:19,510 --> 00:00:19,520
+Fiorucci, a AI and software engineer. By
+ 
+
+11
+00:00:19,520 --> 00:00:21,910
+Fiorucci, a AI and software engineer. By
+day, I work on AI orchestration at
+
+12
+00:00:21,910 --> 00:00:21,920
+day, I work on AI orchestration at
+ 
+
+13
+00:00:21,920 --> 00:00:24,710
+day, I work on AI orchestration at
+Deepset, where I develop Haystack, an
+
+14
+00:00:24,710 --> 00:00:24,720
+Deepset, where I develop Haystack, an
+ 
+
+15
+00:00:24,720 --> 00:00:27,910
+Deepset, where I develop Haystack, an
+open-source LLM framework. By night, I
+
+16
+00:00:27,910 --> 00:00:27,920
+open-source LLM framework. By night, I
+ 
+
+17
+00:00:27,920 --> 00:00:29,750
+open-source LLM framework. By night, I
+love tinkering with small language
+
+18
+00:00:29,750 --> 00:00:29,760
+love tinkering with small language
+ 
+
+19
+00:00:29,760 --> 00:00:32,030
+love tinkering with small language
+models, fine-tuning, and reinforcement
+
+20
+00:00:32,030 --> 00:00:32,040
+models, fine-tuning, and reinforcement
+ 
+
+21
+00:00:32,040 --> 00:00:34,150
+models, fine-tuning, and reinforcement
+learning.
+
+22
+00:00:34,150 --> 00:00:34,160
+learning.
+ 
+
+23
+00:00:34,160 --> 00:00:35,910
+learning.
+Today, I'm going to talk about
+
+24
+00:00:35,910 --> 00:00:35,920
+Today, I'm going to talk about
+ 
+
+25
+00:00:35,920 --> 00:00:37,990
+Today, I'm going to talk about
+reinforcement learning environments for
+
+26
+00:00:37,990 --> 00:00:38,000
+reinforcement learning environments for
+ 
+
+27
+00:00:38,000 --> 00:00:40,710
+reinforcement learning environments for
+language models evaluation and training.
+
+28
+00:00:40,710 --> 00:00:40,720
+language models evaluation and training.
+ 
+
+29
+00:00:40,720 --> 00:00:43,030
+language models evaluation and training.
+This has been a hot topic over the past
+
+30
+00:00:43,030 --> 00:00:43,040
+This has been a hot topic over the past
+ 
+
+31
+00:00:43,040 --> 00:00:45,350
+This has been a hot topic over the past
+year, and I find it fascinating for
+
+32
+00:00:45,350 --> 00:00:45,360
+year, and I find it fascinating for
+ 
+
+33
+00:00:45,360 --> 00:00:48,110
+year, and I find it fascinating for
+several reasons. These environments let
+
+34
+00:00:48,110 --> 00:00:48,120
+several reasons. These environments let
+ 
+
+35
+00:00:48,120 --> 00:00:51,430
+several reasons. These environments let
+models learn by interacting, exploring,
+
+36
+00:00:51,430 --> 00:00:51,440
+models learn by interacting, exploring,
+ 
+
+37
+00:00:51,440 --> 00:00:53,430
+models learn by interacting, exploring,
+and improving from feedback. They are
+
+38
+00:00:53,430 --> 00:00:53,440
+and improving from feedback. They are
+ 
+
+39
+00:00:53,440 --> 00:00:56,830
+and improving from feedback. They are
+natural gyms for LLM agents that can use
+
+40
+00:00:56,830 --> 00:00:56,840
+natural gyms for LLM agents that can use
+ 
+
+41
+00:00:56,840 --> 00:00:59,630
+natural gyms for LLM agents that can use
+tools, run code, and solve multi-step
+
+42
+00:00:59,630 --> 00:00:59,640
+tools, run code, and solve multi-step
+ 
+
+43
+00:00:59,640 --> 00:01:02,870
+tools, run code, and solve multi-step
+tasks. In addition, startups building RL
+
+44
+00:01:02,870 --> 00:01:02,880
+tasks. In addition, startups building RL
+ 
+
+45
+00:01:02,880 --> 00:01:05,590
+tasks. In addition, startups building RL
+environments are getting major funding
+
+46
+00:01:05,590 --> 00:01:05,600
+environments are getting major funding
+ 
+
+47
+00:01:05,600 --> 00:01:10,790
+environments are getting major funding
+and working directly with big AI labs.
+
+48
+00:01:10,790 --> 00:01:10,800
+
+ 
+
+49
+00:01:10,800 --> 00:01:13,950
+
+Recent technical reports by DeepSeek and
+
+50
+00:01:13,950 --> 00:01:13,960
+Recent technical reports by DeepSeek and
+ 
+
+51
+00:01:13,960 --> 00:01:16,830
+Recent technical reports by DeepSeek and
+MiniMax showed that they are effectively
+
+52
+00:01:16,830 --> 00:01:16,840
+MiniMax showed that they are effectively
+ 
+
+53
+00:01:16,840 --> 00:01:19,550
+MiniMax showed that they are effectively
+using thousands of reinforcement
+
+54
+00:01:19,550 --> 00:01:19,560
+using thousands of reinforcement
+ 
+
+55
+00:01:19,560 --> 00:01:22,270
+using thousands of reinforcement
+learning environments to improve model
+
+56
+00:01:22,270 --> 00:01:22,280
+learning environments to improve model
+ 
+
+57
+00:01:22,280 --> 00:01:24,790
+learning environments to improve model
+performance on challenging tasks and
+
+58
+00:01:24,790 --> 00:01:24,800
+performance on challenging tasks and
+ 
+
+59
+00:01:24,800 --> 00:01:26,470
+performance on challenging tasks and
+scale intelligence.
+
+60
+00:01:26,470 --> 00:01:26,480
+scale intelligence.
+ 
+
+61
+00:01:26,480 --> 00:01:29,270
+scale intelligence.
+Don't worry if you know nothing about RL
+
+62
+00:01:29,270 --> 00:01:29,280
+Don't worry if you know nothing about RL
+ 
+
+63
+00:01:29,280 --> 00:01:33,590
+Don't worry if you know nothing about RL
+environments. I'll cover that soon.
+
+64
+00:01:33,590 --> 00:01:33,600
+
+ 
+
+65
+00:01:33,600 --> 00:01:36,350
+
+Here is the agenda for the talk. We'll
+
+66
+00:01:36,350 --> 00:01:36,360
+Here is the agenda for the talk. We'll
+ 
+
+67
+00:01:36,360 --> 00:01:38,390
+Here is the agenda for the talk. We'll
+first review classic reinforcement
+
+68
+00:01:38,390 --> 00:01:38,400
+first review classic reinforcement
+ 
+
+69
+00:01:38,400 --> 00:01:41,470
+first review classic reinforcement
+learning concepts and see how they map
+
+70
+00:01:41,470 --> 00:01:41,480
+learning concepts and see how they map
+ 
+
+71
+00:01:41,480 --> 00:01:43,870
+learning concepts and see how they map
+to the language models domain. We'll
+
+72
+00:01:43,870 --> 00:01:43,880
+to the language models domain. We'll
+ 
+
+73
+00:01:43,880 --> 00:01:46,430
+to the language models domain. We'll
+then introduce Verifiers, an open-source
+
+74
+00:01:46,430 --> 00:01:46,440
+then introduce Verifiers, an open-source
+ 
+
+75
+00:01:46,440 --> 00:01:48,430
+then introduce Verifiers, an open-source
+library to build environments as
+
+76
+00:01:48,430 --> 00:01:48,440
+library to build environments as
+ 
+
+77
+00:01:48,440 --> 00:01:50,830
+library to build environments as
+software artifacts, and explore some
+
+78
+00:01:50,830 --> 00:01:50,840
+software artifacts, and explore some
+ 
+
+79
+00:01:50,840 --> 00:01:53,670
+software artifacts, and explore some
+common patterns to implement them.
+
+80
+00:01:53,670 --> 00:01:53,680
+common patterns to implement them.
+ 
+
+81
+00:01:53,680 --> 00:01:55,390
+common patterns to implement them.
+Finally, I'll walk you through an
+
+82
+00:01:55,390 --> 00:01:55,400
+Finally, I'll walk you through an
+ 
+
+83
+00:01:55,400 --> 00:01:58,270
+Finally, I'll walk you through an
+experiment where we take a small model
+
+84
+00:01:58,270 --> 00:01:58,280
+experiment where we take a small model
+ 
+
+85
+00:01:58,280 --> 00:02:01,190
+experiment where we take a small model
+that can barely play tic-tac-toe against
+
+86
+00:02:01,190 --> 00:02:01,200
+that can barely play tic-tac-toe against
+ 
+
+87
+00:02:01,200 --> 00:02:03,870
+that can barely play tic-tac-toe against
+a random player and transform it into a
+
+88
+00:02:03,870 --> 00:02:03,880
+a random player and transform it into a
+ 
+
+89
+00:02:03,880 --> 00:02:06,150
+a random player and transform it into a
+master using a reinforcement learning
+
+90
+00:02:06,150 --> 00:02:06,160
+master using a reinforcement learning
+ 
+
+91
+00:02:06,160 --> 00:02:11,029
+master using a reinforcement learning
+environment. Let's start.
+
+92
+00:02:11,029 --> 00:02:11,039
+
+ 
+
+93
+00:02:11,039 --> 00:02:13,750
+
+First, a quick refresher on
+
+94
+00:02:13,750 --> 00:02:13,760
+First, a quick refresher on
+ 
+
+95
+00:02:13,760 --> 00:02:16,830
+First, a quick refresher on
+reinforcement learning.
+
+96
+00:02:16,830 --> 00:02:16,840
+reinforcement learning.
+ 
+
+97
+00:02:16,840 --> 00:02:18,870
+reinforcement learning.
+In reinforcement learning, there are two
+
+98
+00:02:18,870 --> 00:02:18,880
+In reinforcement learning, there are two
+ 
+
+99
+00:02:18,880 --> 00:02:21,310
+In reinforcement learning, there are two
+main characters, the agent and the
+
+100
+00:02:21,310 --> 00:02:21,320
+main characters, the agent and the
+ 
+
+101
+00:02:21,320 --> 00:02:23,190
+main characters, the agent and the
+environment.
+
+102
+00:02:23,190 --> 00:02:23,200
+environment.
+ 
+
+103
+00:02:23,200 --> 00:02:25,870
+environment.
+The environment is the world the agent
+
+104
+00:02:25,870 --> 00:02:25,880
+The environment is the world the agent
+ 
+
+105
+00:02:25,880 --> 00:02:29,270
+The environment is the world the agent
+interacts with. At each step, the agent
+
+106
+00:02:29,270 --> 00:02:29,280
+interacts with. At each step, the agent
+ 
+
+107
+00:02:29,280 --> 00:02:31,470
+interacts with. At each step, the agent
+sees the current state of the world and
+
+108
+00:02:31,470 --> 00:02:31,480
+sees the current state of the world and
+ 
+
+109
+00:02:31,480 --> 00:02:33,750
+sees the current state of the world and
+takes an action. The state of the
+
+110
+00:02:33,750 --> 00:02:33,760
+takes an action. The state of the
+ 
+
+111
+00:02:33,760 --> 00:02:36,470
+takes an action. The state of the
+environment then changes in response to
+
+112
+00:02:36,470 --> 00:02:36,480
+environment then changes in response to
+ 
+
+113
+00:02:36,480 --> 00:02:39,510
+environment then changes in response to
+that action. The agent also receives a
+
+114
+00:02:39,510 --> 00:02:39,520
+that action. The agent also receives a
+ 
+
+115
+00:02:39,520 --> 00:02:42,030
+that action. The agent also receives a
+reward from the environment, a number
+
+116
+00:02:42,030 --> 00:02:42,040
+reward from the environment, a number
+ 
+
+117
+00:02:42,040 --> 00:02:45,990
+reward from the environment, a number
+indicating how good or bad the state is.
+
+118
+00:02:45,990 --> 00:02:46,000
+indicating how good or bad the state is.
+ 
+
+119
+00:02:46,000 --> 00:02:48,950
+indicating how good or bad the state is.
+The agent's goal is to maximize its
+
+120
+00:02:48,950 --> 00:02:48,960
+The agent's goal is to maximize its
+ 
+
+121
+00:02:48,960 --> 00:02:51,910
+The agent's goal is to maximize its
+cumulative reward over time, and to do
+
+122
+00:02:51,910 --> 00:02:51,920
+cumulative reward over time, and to do
+ 
+
+123
+00:02:51,920 --> 00:02:55,230
+cumulative reward over time, and to do
+this, it has to balance exploration,
+
+124
+00:02:55,230 --> 00:02:55,240
+this, it has to balance exploration,
+ 
+
+125
+00:02:55,240 --> 00:02:57,990
+this, it has to balance exploration,
+so trying new actions to discover better
+
+126
+00:02:57,990 --> 00:02:58,000
+so trying new actions to discover better
+ 
+
+127
+00:02:58,000 --> 00:03:01,030
+so trying new actions to discover better
+strategies, and exploitation, using
+
+128
+00:03:01,030 --> 00:03:01,040
+strategies, and exploitation, using
+ 
+
+129
+00:03:01,040 --> 00:03:04,030
+strategies, and exploitation, using
+actions known to work. By interacting
+
+130
+00:03:04,030 --> 00:03:04,040
+actions known to work. By interacting
+ 
+
+131
+00:03:04,040 --> 00:03:06,430
+actions known to work. By interacting
+with the environment, the agent learns
+
+132
+00:03:06,430 --> 00:03:06,440
+with the environment, the agent learns
+ 
+
+133
+00:03:06,440 --> 00:03:08,790
+with the environment, the agent learns
+from experience and improves its
+
+134
+00:03:08,790 --> 00:03:08,800
+from experience and improves its
+ 
+
+135
+00:03:08,800 --> 00:03:10,670
+from experience and improves its
+behavior.
+
+136
+00:03:10,670 --> 00:03:10,680
+behavior.
+ 
+
+137
+00:03:10,680 --> 00:03:13,350
+behavior.
+A trajectory, or rollout, is the
+
+138
+00:03:13,350 --> 00:03:13,360
+A trajectory, or rollout, is the
+ 
+
+139
+00:03:13,360 --> 00:03:16,390
+A trajectory, or rollout, is the
+sequence of states, actions, and rewards
+
+140
+00:03:16,390 --> 00:03:16,400
+sequence of states, actions, and rewards
+ 
+
+141
+00:03:16,400 --> 00:03:18,190
+sequence of states, actions, and rewards
+that the agent goes through while
+
+142
+00:03:18,190 --> 00:03:18,200
+that the agent goes through while
+ 
+
+143
+00:03:18,200 --> 00:03:20,750
+that the agent goes through while
+interacting with the environment. It's a
+
+144
+00:03:20,750 --> 00:03:20,760
+interacting with the environment. It's a
+ 
+
+145
+00:03:20,760 --> 00:03:22,990
+interacting with the environment. It's a
+record of the experience.
+
+146
+00:03:22,990 --> 00:03:23,000
+record of the experience.
+ 
+
+147
+00:03:23,000 --> 00:03:24,990
+record of the experience.
+In this presentation, I'll use
+
+148
+00:03:24,990 --> 00:03:25,000
+In this presentation, I'll use
+ 
+
+149
+00:03:25,000 --> 00:03:28,110
+In this presentation, I'll use
+trajectory to mean a complete episode,
+
+150
+00:03:28,110 --> 00:03:28,120
+trajectory to mean a complete episode,
+ 
+
+151
+00:03:28,120 --> 00:03:32,510
+trajectory to mean a complete episode,
+like one entire game.
+
+152
+00:03:32,510 --> 00:03:32,520
+
+ 
+
+153
+00:03:32,520 --> 00:03:36,310
+
+Let's take a look at LLM's training.
+
+154
+00:03:36,310 --> 00:03:36,320
+Let's take a look at LLM's training.
+ 
+
+155
+00:03:36,320 --> 00:03:38,990
+Let's take a look at LLM's training.
+Language model is a a statistical model
+
+156
+00:03:38,990 --> 00:03:39,000
+Language model is a a statistical model
+ 
+
+157
+00:03:39,000 --> 00:03:41,510
+Language model is a a statistical model
+that, given some text, the prompt,
+
+158
+00:03:41,510 --> 00:03:41,520
+that, given some text, the prompt,
+ 
+
+159
+00:03:41,520 --> 00:03:44,710
+that, given some text, the prompt,
+returns a text completion.
+
+160
+00:03:44,710 --> 00:03:44,720
+returns a text completion.
+ 
+
+161
+00:03:44,720 --> 00:03:47,350
+returns a text completion.
+The standard training recipe is divided
+
+162
+00:03:47,350 --> 00:03:47,360
+The standard training recipe is divided
+ 
+
+163
+00:03:47,360 --> 00:03:49,630
+The standard training recipe is divided
+into three phases.
+
+164
+00:03:49,630 --> 00:03:49,640
+into three phases.
+ 
+
+165
+00:03:49,640 --> 00:03:52,270
+into three phases.
+First, pre-training on a massive amount
+
+166
+00:03:52,270 --> 00:03:52,280
+First, pre-training on a massive amount
+ 
+
+167
+00:03:52,280 --> 00:03:55,430
+First, pre-training on a massive amount
+of internet text. Here, the model learns
+
+168
+00:03:55,430 --> 00:03:55,440
+of internet text. Here, the model learns
+ 
+
+169
+00:03:55,440 --> 00:03:58,110
+of internet text. Here, the model learns
+to create text completions. The base
+
+170
+00:03:58,110 --> 00:03:58,120
+to create text completions. The base
+ 
+
+171
+00:03:58,120 --> 00:04:00,870
+to create text completions. The base
+model is knowledgeable, but can't follow
+
+172
+00:04:00,870 --> 00:04:00,880
+model is knowledgeable, but can't follow
+ 
+
+173
+00:04:00,880 --> 00:04:03,550
+model is knowledgeable, but can't follow
+instructions and is hardly usable in
+
+174
+00:04:03,550 --> 00:04:03,560
+instructions and is hardly usable in
+ 
+
+175
+00:04:03,560 --> 00:04:05,470
+instructions and is hardly usable in
+applications.
+
+176
+00:04:05,470 --> 00:04:05,480
+applications.
+ 
+
+177
+00:04:05,480 --> 00:04:07,470
+applications.
+During supervised fine-tuning on
+
+178
+00:04:07,470 --> 00:04:07,480
+During supervised fine-tuning on
+ 
+
+179
+00:04:07,480 --> 00:04:10,270
+During supervised fine-tuning on
+conversational examples, the model is
+
+180
+00:04:10,270 --> 00:04:10,280
+conversational examples, the model is
+ 
+
+181
+00:04:10,280 --> 00:04:12,350
+conversational examples, the model is
+trained to follow instruction and can
+
+182
+00:04:12,350 --> 00:04:12,360
+trained to follow instruction and can
+ 
+
+183
+00:04:12,360 --> 00:04:14,750
+trained to follow instruction and can
+learn new tasks.
+
+184
+00:04:14,750 --> 00:04:14,760
+learn new tasks.
+ 
+
+185
+00:04:14,760 --> 00:04:17,069
+learn new tasks.
+In the third step, reinforcement
+
+186
+00:04:17,069 --> 00:04:17,079
+In the third step, reinforcement
+ 
+
+187
+00:04:17,079 --> 00:04:19,390
+In the third step, reinforcement
+learning is often used with techniques
+
+188
+00:04:19,390 --> 00:04:19,400
+learning is often used with techniques
+ 
+
+189
+00:04:19,400 --> 00:04:21,789
+learning is often used with techniques
+like proximal policy optimization to
+
+190
+00:04:21,789 --> 00:04:21,799
+like proximal policy optimization to
+ 
+
+191
+00:04:21,799 --> 00:04:26,790
+like proximal policy optimization to
+align the model with human preferences.
+
+192
+00:04:26,790 --> 00:04:26,800
+
+ 
+
+193
+00:04:26,800 --> 00:04:29,190
+
+It's worth showing an example of
+
+194
+00:04:29,190 --> 00:04:29,200
+It's worth showing an example of
+ 
+
+195
+00:04:29,200 --> 00:04:31,790
+It's worth showing an example of
+supervised fine-tuning data, as later
+
+196
+00:04:31,790 --> 00:04:31,800
+supervised fine-tuning data, as later
+ 
+
+197
+00:04:31,800 --> 00:04:33,870
+supervised fine-tuning data, as later
+we'll frequently compare
+
+198
+00:04:33,870 --> 00:04:33,880
+we'll frequently compare
+ 
+
+199
+00:04:33,880 --> 00:04:36,190
+we'll frequently compare
+supervised fine-tuning learning with new
+
+200
+00:04:36,190 --> 00:04:36,200
+supervised fine-tuning learning with new
+ 
+
+201
+00:04:36,200 --> 00:04:38,510
+supervised fine-tuning learning with new
+reinforcement learning approaches.
+
+202
+00:04:38,510 --> 00:04:38,520
+reinforcement learning approaches.
+ 
+
+203
+00:04:38,520 --> 00:04:41,390
+reinforcement learning approaches.
+As you can see, we have pairs of prompt
+
+204
+00:04:41,390 --> 00:04:41,400
+As you can see, we have pairs of prompt
+ 
+
+205
+00:04:41,400 --> 00:04:44,110
+As you can see, we have pairs of prompt
+and responses, and during this phase,
+
+206
+00:04:44,110 --> 00:04:44,120
+and responses, and during this phase,
+ 
+
+207
+00:04:44,120 --> 00:04:46,030
+and responses, and during this phase,
+the model learns by statistical
+
+208
+00:04:46,030 --> 00:04:46,040
+the model learns by statistical
+ 
+
+209
+00:04:46,040 --> 00:04:47,390
+the model learns by statistical
+imitation.
+
+210
+00:04:47,390 --> 00:04:47,400
+imitation.
+ 
+
+211
+00:04:47,400 --> 00:04:49,630
+imitation.
+It's essentially trying to mimic the
+
+212
+00:04:49,630 --> 00:04:49,640
+It's essentially trying to mimic the
+ 
+
+213
+00:04:49,640 --> 00:04:54,790
+It's essentially trying to mimic the
+examples provided.
+
+214
+00:04:54,790 --> 00:04:54,800
+
+ 
+
+215
+00:04:54,800 --> 00:04:57,830
+
+You might remember Ilya Sutskever talk
+
+216
+00:04:57,830 --> 00:04:57,840
+You might remember Ilya Sutskever talk
+ 
+
+217
+00:04:57,840 --> 00:05:00,590
+You might remember Ilya Sutskever talk
+at NeurIPS 2024.
+
+218
+00:05:00,590 --> 00:05:00,600
+at NeurIPS 2024.
+ 
+
+219
+00:05:00,600 --> 00:05:03,830
+at NeurIPS 2024.
+He pointed out that the LLM training
+
+220
+00:05:03,830 --> 00:05:03,840
+He pointed out that the LLM training
+ 
+
+221
+00:05:03,840 --> 00:05:06,230
+He pointed out that the LLM training
+paradigm we just saw has starting
+
+222
+00:05:06,230 --> 00:05:06,240
+paradigm we just saw has starting
+ 
+
+223
+00:05:06,240 --> 00:05:08,230
+paradigm we just saw has starting
+showing its limits.
+
+224
+00:05:08,230 --> 00:05:08,240
+showing its limits.
+ 
+
+225
+00:05:08,240 --> 00:05:10,510
+showing its limits.
+In particular, pre-training no longer
+
+226
+00:05:10,510 --> 00:05:10,520
+In particular, pre-training no longer
+ 
+
+227
+00:05:10,520 --> 00:05:12,990
+In particular, pre-training no longer
+seems to be enough to keep improving
+
+228
+00:05:12,990 --> 00:05:13,000
+seems to be enough to keep improving
+ 
+
+229
+00:05:13,000 --> 00:05:15,590
+seems to be enough to keep improving
+model quality at the same rate. We
+
+230
+00:05:15,590 --> 00:05:15,600
+model quality at the same rate. We
+ 
+
+231
+00:05:15,600 --> 00:05:21,430
+model quality at the same rate. We
+needed a new way to scale.
+
+232
+00:05:21,430 --> 00:05:21,440
+
+ 
+
+233
+00:05:21,440 --> 00:05:24,990
+
+Then, OpenAI published its O1 model
+
+234
+00:05:24,990 --> 00:05:25,000
+Then, OpenAI published its O1 model
+ 
+
+235
+00:05:25,000 --> 00:05:26,750
+Then, OpenAI published its O1 model
+series.
+
+236
+00:05:26,750 --> 00:05:26,760
+series.
+ 
+
+237
+00:05:26,760 --> 00:05:28,750
+series.
+In their release blog post, they
+
+238
+00:05:28,750 --> 00:05:28,760
+In their release blog post, they
+ 
+
+239
+00:05:28,760 --> 00:05:30,350
+In their release blog post, they
+mentioned reinforcement learning
+
+240
+00:05:30,350 --> 00:05:30,360
+mentioned reinforcement learning
+ 
+
+241
+00:05:30,360 --> 00:05:33,030
+mentioned reinforcement learning
+training to make models use chain of
+
+242
+00:05:33,030 --> 00:05:33,040
+training to make models use chain of
+ 
+
+243
+00:05:33,040 --> 00:05:35,030
+training to make models use chain of
+thought effectively.
+
+244
+00:05:35,030 --> 00:05:35,040
+thought effectively.
+ 
+
+245
+00:05:35,040 --> 00:05:36,670
+thought effectively.
+They also underlined that the
+
+246
+00:05:36,670 --> 00:05:36,680
+They also underlined that the
+ 
+
+247
+00:05:36,680 --> 00:05:39,790
+They also underlined that the
+performance of O1 consistently improved
+
+248
+00:05:39,790 --> 00:05:39,800
+performance of O1 consistently improved
+ 
+
+249
+00:05:39,800 --> 00:05:42,030
+performance of O1 consistently improved
+with more reinforcement learning train
+
+250
+00:05:42,030 --> 00:05:42,040
+with more reinforcement learning train
+ 
+
+251
+00:05:42,040 --> 00:05:44,910
+with more reinforcement learning train
+time compute and with more time spent
+
+252
+00:05:44,910 --> 00:05:44,920
+time compute and with more time spent
+ 
+
+253
+00:05:44,920 --> 00:05:47,990
+time compute and with more time spent
+thinking, test time compute.
+
+254
+00:05:47,990 --> 00:05:48,000
+thinking, test time compute.
+ 
+
+255
+00:05:48,000 --> 00:05:50,310
+thinking, test time compute.
+Unfortunately, they did not share many
+
+256
+00:05:50,310 --> 00:05:50,320
+Unfortunately, they did not share many
+ 
+
+257
+00:05:50,320 --> 00:05:53,350
+Unfortunately, they did not share many
+details on how this model was actually
+
+258
+00:05:53,350 --> 00:05:53,360
+details on how this model was actually
+ 
+
+259
+00:05:53,360 --> 00:05:56,190
+details on how this model was actually
+trained.
+
+260
+00:05:56,190 --> 00:05:56,200
+
+ 
+
+261
+00:05:56,200 --> 00:05:58,950
+
+The release of DeepSeek R1 shed some
+
+262
+00:05:58,950 --> 00:05:58,960
+The release of DeepSeek R1 shed some
+ 
+
+263
+00:05:58,960 --> 00:06:01,710
+The release of DeepSeek R1 shed some
+light on how you can possibly achieve
+
+264
+00:06:01,710 --> 00:06:01,720
+light on how you can possibly achieve
+ 
+
+265
+00:06:01,720 --> 00:06:04,670
+light on how you can possibly achieve
+those results. First, they recognized
+
+266
+00:06:04,670 --> 00:06:04,680
+those results. First, they recognized
+ 
+
+267
+00:06:04,680 --> 00:06:07,590
+those results. First, they recognized
+that reasoning and chain of thought can
+
+268
+00:06:07,590 --> 00:06:07,600
+that reasoning and chain of thought can
+ 
+
+269
+00:06:07,600 --> 00:06:09,990
+that reasoning and chain of thought can
+improve the performance of models, but
+
+270
+00:06:09,990 --> 00:06:10,000
+improve the performance of models, but
+ 
+
+271
+00:06:10,000 --> 00:06:12,190
+improve the performance of models, but
+teaching these behaviors to models using
+
+272
+00:06:12,190 --> 00:06:12,200
+teaching these behaviors to models using
+ 
+
+273
+00:06:12,200 --> 00:06:14,670
+teaching these behaviors to models using
+supervised fine-tuning requires curated
+
+274
+00:06:14,670 --> 00:06:14,680
+supervised fine-tuning requires curated
+ 
+
+275
+00:06:14,680 --> 00:06:17,950
+supervised fine-tuning requires curated
+data that is too expensive to produce at
+
+276
+00:06:17,950 --> 00:06:17,960
+data that is too expensive to produce at
+ 
+
+277
+00:06:17,960 --> 00:06:19,910
+data that is too expensive to produce at
+scale.
+
+278
+00:06:19,910 --> 00:06:19,920
+scale.
+ 
+
+279
+00:06:19,920 --> 00:06:22,070
+scale.
+They used reinforcement learning with
+
+280
+00:06:22,070 --> 00:06:22,080
+They used reinforcement learning with
+ 
+
+281
+00:06:22,080 --> 00:06:24,430
+They used reinforcement learning with
+verifiable rewards, which we'll see in a
+
+282
+00:06:24,430 --> 00:06:24,440
+verifiable rewards, which we'll see in a
+ 
+
+283
+00:06:24,440 --> 00:06:26,150
+verifiable rewards, which we'll see in a
+moment,
+
+284
+00:06:26,150 --> 00:06:26,160
+moment,
+ 
+
+285
+00:06:26,160 --> 00:06:29,550
+moment,
+and DeepSeek also used GRPO, a new
+
+286
+00:06:29,550 --> 00:06:29,560
+and DeepSeek also used GRPO, a new
+ 
+
+287
+00:06:29,560 --> 00:06:31,950
+and DeepSeek also used GRPO, a new
+reinforcement learning algorithm that
+
+288
+00:06:31,950 --> 00:06:31,960
+reinforcement learning algorithm that
+ 
+
+289
+00:06:31,960 --> 00:06:35,230
+reinforcement learning algorithm that
+offers a simple, lighter setup compared
+
+290
+00:06:35,230 --> 00:06:35,240
+offers a simple, lighter setup compared
+ 
+
+291
+00:06:35,240 --> 00:06:39,630
+offers a simple, lighter setup compared
+to techniques like PPO.
+
+292
+00:06:39,630 --> 00:06:39,640
+
+ 
+
+293
+00:06:39,640 --> 00:06:42,350
+
+So, what is reinforcement learning with
+
+294
+00:06:42,350 --> 00:06:42,360
+So, what is reinforcement learning with
+ 
+
+295
+00:06:42,360 --> 00:06:44,710
+So, what is reinforcement learning with
+verifiable rewards?
+
+296
+00:06:44,710 --> 00:06:44,720
+verifiable rewards?
+ 
+
+297
+00:06:44,720 --> 00:06:47,070
+verifiable rewards?
+In this paradigm, the model is asked the
+
+298
+00:06:47,070 --> 00:06:47,080
+In this paradigm, the model is asked the
+ 
+
+299
+00:06:47,080 --> 00:06:49,790
+In this paradigm, the model is asked the
+question and generates both a reasoning
+
+300
+00:06:49,790 --> 00:06:49,800
+question and generates both a reasoning
+ 
+
+301
+00:06:49,800 --> 00:06:51,990
+question and generates both a reasoning
+trace and an answer.
+
+302
+00:06:51,990 --> 00:06:52,000
+trace and an answer.
+ 
+
+303
+00:06:52,000 --> 00:06:54,310
+trace and an answer.
+The answer is then checked against the
+
+304
+00:06:54,310 --> 00:06:54,320
+The answer is then checked against the
+ 
+
+305
+00:06:54,320 --> 00:06:56,630
+The answer is then checked against the
+known correct answer.
+
+306
+00:06:56,630 --> 00:06:56,640
+known correct answer.
+ 
+
+307
+00:06:56,640 --> 00:06:59,190
+known correct answer.
+The reward is used for reinforcement
+
+308
+00:06:59,190 --> 00:06:59,200
+The reward is used for reinforcement
+ 
+
+309
+00:06:59,200 --> 00:07:00,990
+The reward is used for reinforcement
+learning training.
+
+310
+00:07:00,990 --> 00:07:01,000
+learning training.
+ 
+
+311
+00:07:01,000 --> 00:07:03,870
+learning training.
+The underlying idea is more general, and
+
+312
+00:07:03,870 --> 00:07:03,880
+The underlying idea is more general, and
+ 
+
+313
+00:07:03,880 --> 00:07:05,750
+The underlying idea is more general, and
+it does where the outcome can be
+
+314
+00:07:05,750 --> 00:07:05,760
+it does where the outcome can be
+ 
+
+315
+00:07:05,760 --> 00:07:07,790
+it does where the outcome can be
+verified automatically,
+
+316
+00:07:07,790 --> 00:07:07,800
+verified automatically,
+ 
+
+317
+00:07:07,800 --> 00:07:11,270
+verified automatically,
+like a correct answer, a won game, a
+
+318
+00:07:11,270 --> 00:07:11,280
+like a correct answer, a won game, a
+ 
+
+319
+00:07:11,280 --> 00:07:14,030
+like a correct answer, a won game, a
+successful tool call can serve as a
+
+320
+00:07:14,030 --> 00:07:14,040
+successful tool call can serve as a
+ 
+
+321
+00:07:14,040 --> 00:07:16,150
+successful tool call can serve as a
+training signal.
+
+322
+00:07:16,150 --> 00:07:16,160
+training signal.
+ 
+
+323
+00:07:16,160 --> 00:07:19,190
+training signal.
+And this is fundamentally different from
+
+324
+00:07:19,190 --> 00:07:19,200
+And this is fundamentally different from
+ 
+
+325
+00:07:19,200 --> 00:07:22,390
+And this is fundamentally different from
+supervised fine-tuning. In SFT, the
+
+326
+00:07:22,390 --> 00:07:22,400
+supervised fine-tuning. In SFT, the
+ 
+
+327
+00:07:22,400 --> 00:07:25,270
+supervised fine-tuning. In SFT, the
+model learns from curated examples, and
+
+328
+00:07:25,270 --> 00:07:25,280
+model learns from curated examples, and
+ 
+
+329
+00:07:25,280 --> 00:07:27,990
+model learns from curated examples, and
+its completions tend to stay close to
+
+330
+00:07:27,990 --> 00:07:28,000
+its completions tend to stay close to
+ 
+
+331
+00:07:28,000 --> 00:07:31,070
+its completions tend to stay close to
+the distribution of those examples.
+
+332
+00:07:31,070 --> 00:07:31,080
+the distribution of those examples.
+ 
+
+333
+00:07:31,080 --> 00:07:32,590
+the distribution of those examples.
+In reinforcement learning with
+
+334
+00:07:32,590 --> 00:07:32,600
+In reinforcement learning with
+ 
+
+335
+00:07:32,600 --> 00:07:35,710
+In reinforcement learning with
+verifiable rewards, the model explores
+
+336
+00:07:35,710 --> 00:07:35,720
+verifiable rewards, the model explores
+ 
+
+337
+00:07:35,720 --> 00:07:37,750
+verifiable rewards, the model explores
+different trajectories from its
+
+338
+00:07:37,750 --> 00:07:37,760
+different trajectories from its
+ 
+
+339
+00:07:37,760 --> 00:07:39,870
+different trajectories from its
+pre-training and learns to favor the
+
+340
+00:07:39,870 --> 00:07:39,880
+pre-training and learns to favor the
+ 
+
+341
+00:07:39,880 --> 00:07:42,870
+pre-training and learns to favor the
+ones that maximize rewards.
+
+342
+00:07:42,870 --> 00:07:42,880
+ones that maximize rewards.
+ 
+
+343
+00:07:42,880 --> 00:07:44,950
+ones that maximize rewards.
+And this is exciting because the model
+
+344
+00:07:44,950 --> 00:07:44,960
+And this is exciting because the model
+ 
+
+345
+00:07:44,960 --> 00:07:47,350
+And this is exciting because the model
+is no longer limited by the quality of
+
+346
+00:07:47,350 --> 00:07:47,360
+is no longer limited by the quality of
+ 
+
+347
+00:07:47,360 --> 00:07:50,310
+is no longer limited by the quality of
+human examples. Through trial and error,
+
+348
+00:07:50,310 --> 00:07:50,320
+human examples. Through trial and error,
+ 
+
+349
+00:07:50,320 --> 00:07:52,670
+human examples. Through trial and error,
+it can discover more efficient reasoning
+
+350
+00:07:52,670 --> 00:07:52,680
+it can discover more efficient reasoning
+ 
+
+351
+00:07:52,680 --> 00:07:57,830
+it can discover more efficient reasoning
+strategies.
+
+352
+00:07:57,830 --> 00:07:57,840
+
+ 
+
+353
+00:07:57,840 --> 00:08:00,230
+
+We can finally map the classic
+
+354
+00:08:00,230 --> 00:08:00,240
+We can finally map the classic
+ 
+
+355
+00:08:00,240 --> 00:08:04,110
+We can finally map the classic
+reinforcement learning concepts to LLMs.
+
+356
+00:08:04,110 --> 00:08:04,120
+reinforcement learning concepts to LLMs.
+ 
+
+357
+00:08:04,120 --> 00:08:08,470
+reinforcement learning concepts to LLMs.
+The language model acts as the agent.
+
+358
+00:08:08,470 --> 00:08:08,480
+The language model acts as the agent.
+ 
+
+359
+00:08:08,480 --> 00:08:11,510
+The language model acts as the agent.
+The environment for any task
+
+360
+00:08:11,510 --> 00:08:11,520
+The environment for any task
+ 
+
+361
+00:08:11,520 --> 00:08:13,230
+The environment for any task
+includes data,
+
+362
+00:08:13,230 --> 00:08:13,240
+includes data,
+ 
+
+363
+00:08:13,240 --> 00:08:16,270
+includes data,
+harnesses, and scoring rules, everything
+
+364
+00:08:16,270 --> 00:08:16,280
+harnesses, and scoring rules, everything
+ 
+
+365
+00:08:16,280 --> 00:08:18,430
+harnesses, and scoring rules, everything
+needed to check and possibly train the
+
+366
+00:08:18,430 --> 00:08:18,440
+needed to check and possibly train the
+ 
+
+367
+00:08:18,440 --> 00:08:21,270
+needed to check and possibly train the
+model on the task.
+
+368
+00:08:21,270 --> 00:08:21,280
+model on the task.
+ 
+
+369
+00:08:21,280 --> 00:08:23,510
+model on the task.
+From a software perspective, this marks
+
+370
+00:08:23,510 --> 00:08:23,520
+From a software perspective, this marks
+ 
+
+371
+00:08:23,520 --> 00:08:26,550
+From a software perspective, this marks
+a shift from supervised fine-tuning to
+
+372
+00:08:26,550 --> 00:08:26,560
+a shift from supervised fine-tuning to
+ 
+
+373
+00:08:26,560 --> 00:08:28,430
+a shift from supervised fine-tuning to
+reinforcement learning with verifiable
+
+374
+00:08:28,430 --> 00:08:28,440
+reinforcement learning with verifiable
+ 
+
+375
+00:08:28,440 --> 00:08:31,950
+reinforcement learning with verifiable
+rewards. While SFT mainly relies on
+
+376
+00:08:31,950 --> 00:08:31,960
+rewards. While SFT mainly relies on
+ 
+
+377
+00:08:31,960 --> 00:08:34,270
+rewards. While SFT mainly relies on
+conversational datasets, this new
+
+378
+00:08:34,270 --> 00:08:34,280
+conversational datasets, this new
+ 
+
+379
+00:08:34,280 --> 00:08:36,510
+conversational datasets, this new
+paradigm usually requires an
+
+380
+00:08:36,510 --> 00:08:36,520
+paradigm usually requires an
+ 
+
+381
+00:08:36,520 --> 00:08:39,110
+paradigm usually requires an
+environment, a dynamic system that the
+
+382
+00:08:39,110 --> 00:08:39,120
+environment, a dynamic system that the
+ 
+
+383
+00:08:39,120 --> 00:08:41,310
+environment, a dynamic system that the
+model can interact with.
+
+384
+00:08:41,310 --> 00:08:41,320
+model can interact with.
+ 
+
+385
+00:08:41,320 --> 00:08:43,270
+model can interact with.
+The definition of the agent is also
+
+386
+00:08:43,270 --> 00:08:43,280
+The definition of the agent is also
+ 
+
+387
+00:08:43,280 --> 00:08:45,990
+The definition of the agent is also
+expanding. Language models can now be
+
+388
+00:08:45,990 --> 00:08:46,000
+expanding. Language models can now be
+ 
+
+389
+00:08:46,000 --> 00:08:48,350
+expanding. Language models can now be
+given tools, from a weather API to a
+
+390
+00:08:48,350 --> 00:08:48,360
+given tools, from a weather API to a
+ 
+
+391
+00:08:48,360 --> 00:08:50,990
+given tools, from a weather API to a
+terminal, and this makes environments
+
+392
+00:08:50,990 --> 00:08:51,000
+terminal, and this makes environments
+ 
+
+393
+00:08:51,000 --> 00:08:53,630
+terminal, and this makes environments
+for training and evaluation more complex
+
+394
+00:08:53,630 --> 00:08:53,640
+for training and evaluation more complex
+ 
+
+395
+00:08:53,640 --> 00:08:54,990
+for training and evaluation more complex
+and critical.
+
+396
+00:08:54,990 --> 00:08:55,000
+and critical.
+ 
+
+397
+00:08:55,000 --> 00:08:57,190
+and critical.
+To make this more concrete, consider
+
+398
+00:08:57,190 --> 00:08:57,200
+To make this more concrete, consider
+ 
+
+399
+00:08:57,200 --> 00:08:59,950
+To make this more concrete, consider
+teaching a model to play tic-tac-toe.
+
+400
+00:08:59,950 --> 00:08:59,960
+teaching a model to play tic-tac-toe.
+ 
+
+401
+00:08:59,960 --> 00:09:02,790
+teaching a model to play tic-tac-toe.
+The agent is the language model. Its
+
+402
+00:09:02,790 --> 00:09:02,800
+The agent is the language model. Its
+ 
+
+403
+00:09:02,800 --> 00:09:05,590
+The agent is the language model. Its
+action is generating a text response
+
+404
+00:09:05,590 --> 00:09:05,600
+action is generating a text response
+ 
+
+405
+00:09:05,600 --> 00:09:08,110
+action is generating a text response
+with the specific move.
+
+406
+00:09:08,110 --> 00:09:08,120
+with the specific move.
+ 
+
+407
+00:09:08,120 --> 00:09:11,190
+with the specific move.
+The environment acts as the game engine.
+
+408
+00:09:11,190 --> 00:09:11,200
+The environment acts as the game engine.
+ 
+
+409
+00:09:11,200 --> 00:09:13,670
+The environment acts as the game engine.
+It handles prompting the model,
+
+410
+00:09:13,670 --> 00:09:13,680
+It handles prompting the model,
+ 
+
+411
+00:09:13,680 --> 00:09:15,870
+It handles prompting the model,
+tracking the board status, generating
+
+412
+00:09:15,870 --> 00:09:15,880
+tracking the board status, generating
+ 
+
+413
+00:09:15,880 --> 00:09:18,230
+tracking the board status, generating
+the opponent's move, and deciding when
+
+414
+00:09:18,230 --> 00:09:18,240
+the opponent's move, and deciding when
+ 
+
+415
+00:09:18,240 --> 00:09:20,150
+the opponent's move, and deciding when
+the game is over.
+
+416
+00:09:20,150 --> 00:09:20,160
+the game is over.
+ 
+
+417
+00:09:20,160 --> 00:09:22,110
+the game is over.
+The reward is the signal from the
+
+418
+00:09:22,110 --> 00:09:22,120
+The reward is the signal from the
+ 
+
+419
+00:09:22,120 --> 00:09:25,270
+The reward is the signal from the
+environment, for example, +1 for a win
+
+420
+00:09:25,270 --> 00:09:25,280
+environment, for example, +1 for a win
+ 
+
+421
+00:09:25,280 --> 00:09:28,430
+environment, for example, +1 for a win
+and zero for a loss. This reward guides
+
+422
+00:09:28,430 --> 00:09:28,440
+and zero for a loss. This reward guides
+ 
+
+423
+00:09:28,440 --> 00:09:31,390
+and zero for a loss. This reward guides
+the model to find winning strategies
+
+424
+00:09:31,390 --> 00:09:31,400
+the model to find winning strategies
+ 
+
+425
+00:09:31,400 --> 00:09:34,230
+the model to find winning strategies
+through trial and error.
+
+426
+00:09:34,230 --> 00:09:34,240
+through trial and error.
+ 
+
+427
+00:09:34,240 --> 00:09:36,950
+through trial and error.
+This setup allows the agent to discover
+
+428
+00:09:36,950 --> 00:09:36,960
+This setup allows the agent to discover
+ 
+
+429
+00:09:36,960 --> 00:09:39,590
+This setup allows the agent to discover
+strategies that maximize its score
+
+430
+00:09:39,590 --> 00:09:39,600
+strategies that maximize its score
+ 
+
+431
+00:09:39,600 --> 00:09:42,190
+strategies that maximize its score
+without needing pre-existing human
+
+432
+00:09:42,190 --> 00:09:42,200
+without needing pre-existing human
+ 
+
+433
+00:09:42,200 --> 00:09:46,830
+without needing pre-existing human
+examples.
+
+434
+00:09:46,830 --> 00:09:46,840
+
+ 
+
+435
+00:09:46,840 --> 00:09:49,110
+
+You have probably understood that I am
+
+436
+00:09:49,110 --> 00:09:49,120
+You have probably understood that I am
+ 
+
+437
+00:09:49,120 --> 00:09:51,870
+You have probably understood that I am
+enthusiastic about this topic, but let's
+
+438
+00:09:51,870 --> 00:09:51,880
+enthusiastic about this topic, but let's
+ 
+
+439
+00:09:51,880 --> 00:09:54,470
+enthusiastic about this topic, but let's
+also use Andrej Karpathy's words to
+
+440
+00:09:54,470 --> 00:09:54,480
+also use Andrej Karpathy's words to
+ 
+
+441
+00:09:54,480 --> 00:09:56,710
+also use Andrej Karpathy's words to
+describe the environments.
+
+442
+00:09:56,710 --> 00:09:56,720
+describe the environments.
+ 
+
+443
+00:09:56,720 --> 00:09:59,510
+describe the environments.
+They give the LLM an opportunity to
+
+444
+00:09:59,510 --> 00:09:59,520
+They give the LLM an opportunity to
+ 
+
+445
+00:09:59,520 --> 00:10:02,550
+They give the LLM an opportunity to
+actually interact, take actions, see
+
+446
+00:10:02,550 --> 00:10:02,560
+actually interact, take actions, see
+ 
+
+447
+00:10:02,560 --> 00:10:03,990
+actually interact, take actions, see
+outcomes.
+
+448
+00:10:03,990 --> 00:10:04,000
+outcomes.
+ 
+
+449
+00:10:04,000 --> 00:10:06,270
+outcomes.
+This means you can hope to do a lot
+
+450
+00:10:06,270 --> 00:10:06,280
+This means you can hope to do a lot
+ 
+
+451
+00:10:06,280 --> 00:10:08,270
+This means you can hope to do a lot
+better than statistical expert
+
+452
+00:10:08,270 --> 00:10:08,280
+better than statistical expert
+ 
+
+453
+00:10:08,280 --> 00:10:11,190
+better than statistical expert
+imitation.
+
+454
+00:10:11,190 --> 00:10:11,200
+
+ 
+
+455
+00:10:11,200 --> 00:10:13,310
+
+Now, let's see how to build these
+
+456
+00:10:13,310 --> 00:10:13,320
+Now, let's see how to build these
+ 
+
+457
+00:10:13,320 --> 00:10:19,150
+Now, let's see how to build these
+environments.
+
+458
+00:10:19,150 --> 00:10:19,160
+
+ 
+
+459
+00:10:19,160 --> 00:10:21,070
+
+To build the environments as software
+
+460
+00:10:21,070 --> 00:10:21,080
+To build the environments as software
+ 
+
+461
+00:10:21,080 --> 00:10:24,150
+To build the environments as software
+active X, we can use verifiers, an
+
+462
+00:10:24,150 --> 00:10:24,160
+active X, we can use verifiers, an
+ 
+
+463
+00:10:24,160 --> 00:10:28,750
+active X, we can use verifiers, an
+open-source library by Prime Intellect.
+
+464
+00:10:28,750 --> 00:10:28,760
+open-source library by Prime Intellect.
+ 
+
+465
+00:10:28,760 --> 00:10:31,670
+open-source library by Prime Intellect.
+Verifiers provides modular components to
+
+466
+00:10:31,670 --> 00:10:31,680
+Verifiers provides modular components to
+ 
+
+467
+00:10:31,680 --> 00:10:33,110
+Verifiers provides modular components to
+create reinforcement learning
+
+468
+00:10:33,110 --> 00:10:33,120
+create reinforcement learning
+ 
+
+469
+00:10:33,120 --> 00:10:36,350
+create reinforcement learning
+environments for LLM agents. These can
+
+470
+00:10:36,350 --> 00:10:36,360
+environments for LLM agents. These can
+ 
+
+471
+00:10:36,360 --> 00:10:38,670
+environments for LLM agents. These can
+be used for both evaluation and
+
+472
+00:10:38,670 --> 00:10:38,680
+be used for both evaluation and
+ 
+
+473
+00:10:38,680 --> 00:10:40,470
+be used for both evaluation and
+training.
+
+474
+00:10:40,470 --> 00:10:40,480
+training.
+ 
+
+475
+00:10:40,480 --> 00:10:42,870
+training.
+Environments are Python packages that
+
+476
+00:10:42,870 --> 00:10:42,880
+Environments are Python packages that
+ 
+
+477
+00:10:42,880 --> 00:10:46,190
+Environments are Python packages that
+can be easily installed and distributed.
+
+478
+00:10:46,190 --> 00:10:46,200
+can be easily installed and distributed.
+ 
+
+479
+00:10:46,200 --> 00:10:48,670
+can be easily installed and distributed.
+The library provides base classes for
+
+480
+00:10:48,670 --> 00:10:48,680
+The library provides base classes for
+ 
+
+481
+00:10:48,680 --> 00:10:51,750
+The library provides base classes for
+several setups, single-turn environments
+
+482
+00:10:51,750 --> 00:10:51,760
+several setups, single-turn environments
+ 
+
+483
+00:10:51,760 --> 00:10:54,110
+several setups, single-turn environments
+with just one interaction between the
+
+484
+00:10:54,110 --> 00:10:54,120
+with just one interaction between the
+ 
+
+485
+00:10:54,120 --> 00:10:55,950
+with just one interaction between the
+model and the end,
+
+486
+00:10:55,950 --> 00:10:55,960
+model and the end,
+ 
+
+487
+00:10:55,960 --> 00:10:57,950
+model and the end,
+multi-turn environments, tool
+
+488
+00:10:57,950 --> 00:10:57,960
+multi-turn environments, tool
+ 
+
+489
+00:10:57,960 --> 00:11:00,190
+multi-turn environments, tool
+environments where the model is equipped
+
+490
+00:11:00,190 --> 00:11:00,200
+environments where the model is equipped
+ 
+
+491
+00:11:00,200 --> 00:11:02,910
+environments where the model is equipped
+with tools, and several others.
+
+492
+00:11:02,910 --> 00:11:02,920
+with tools, and several others.
+ 
+
+493
+00:11:02,920 --> 00:11:05,110
+with tools, and several others.
+It also includes abstractions for
+
+494
+00:11:05,110 --> 00:11:05,120
+It also includes abstractions for
+ 
+
+495
+00:11:05,120 --> 00:11:07,430
+It also includes abstractions for
+parsing model responses and defining
+
+496
+00:11:07,430 --> 00:11:07,440
+parsing model responses and defining
+ 
+
+497
+00:11:07,440 --> 00:11:09,870
+parsing model responses and defining
+reward functions.
+
+498
+00:11:09,870 --> 00:11:09,880
+reward functions.
+ 
+
+499
+00:11:09,880 --> 00:11:12,829
+reward functions.
+Verifier abstracts model serving. It
+
+500
+00:11:12,829 --> 00:11:12,839
+Verifier abstracts model serving. It
+ 
+
+501
+00:11:12,839 --> 00:11:15,670
+Verifier abstracts model serving. It
+expects an OpenAI compatible API
+
+502
+00:11:15,670 --> 00:11:15,680
+expects an OpenAI compatible API
+ 
+
+503
+00:11:15,680 --> 00:11:18,630
+expects an OpenAI compatible API
+endpoint, so you can plug in OpenAI,
+
+504
+00:11:18,630 --> 00:11:18,640
+endpoint, so you can plug in OpenAI,
+ 
+
+505
+00:11:18,640 --> 00:11:21,750
+endpoint, so you can plug in OpenAI,
+open router, or local models via the
+
+506
+00:11:21,750 --> 00:11:21,760
+open router, or local models via the
+ 
+
+507
+00:11:21,760 --> 00:11:23,470
+open router, or local models via the
+LLM.
+
+508
+00:11:23,470 --> 00:11:23,480
+LLM.
+ 
+
+509
+00:11:23,480 --> 00:11:26,110
+LLM.
+It handles a single interaction and
+
+510
+00:11:26,110 --> 00:11:26,120
+It handles a single interaction and
+ 
+
+511
+00:11:26,120 --> 00:11:28,829
+It handles a single interaction and
+parallel trajectories, so you focus on
+
+512
+00:11:28,829 --> 00:11:28,839
+parallel trajectories, so you focus on
+ 
+
+513
+00:11:28,839 --> 00:11:31,430
+parallel trajectories, so you focus on
+the environment logic.
+
+514
+00:11:31,430 --> 00:11:31,440
+the environment logic.
+ 
+
+515
+00:11:31,440 --> 00:11:33,870
+the environment logic.
+For training, verifiers come with its
+
+516
+00:11:33,870 --> 00:11:33,880
+For training, verifiers come with its
+ 
+
+517
+00:11:33,880 --> 00:11:36,310
+For training, verifiers come with its
+own trainer and integrates with other
+
+518
+00:11:36,310 --> 00:11:36,320
+own trainer and integrates with other
+ 
+
+519
+00:11:36,320 --> 00:11:40,070
+own trainer and integrates with other
+frameworks such as Prime RL, Tinker, and
+
+520
+00:11:40,070 --> 00:11:40,080
+frameworks such as Prime RL, Tinker, and
+ 
+
+521
+00:11:40,080 --> 00:11:41,870
+frameworks such as Prime RL, Tinker, and
+Sky RL.
+
+522
+00:11:41,870 --> 00:11:41,880
+Sky RL.
+ 
+
+523
+00:11:41,880 --> 00:11:44,950
+Sky RL.
+In short, verifiers lets us focus on the
+
+524
+00:11:44,950 --> 00:11:44,960
+In short, verifiers lets us focus on the
+ 
+
+525
+00:11:44,960 --> 00:11:46,790
+In short, verifiers lets us focus on the
+task and the rewards [clears throat]
+
+526
+00:11:46,790 --> 00:11:46,800
+task and the rewards [clears throat]
+ 
+
+527
+00:11:46,800 --> 00:11:52,630
+task and the rewards [clears throat]
+rather than the infrastructure.
+
+528
+00:11:52,630 --> 00:11:52,640
+
+ 
+
+529
+00:11:52,640 --> 00:11:55,110
+
+Let's start with a single-turn
+
+530
+00:11:55,110 --> 00:11:55,120
+Let's start with a single-turn
+ 
+
+531
+00:11:55,120 --> 00:11:58,829
+Let's start with a single-turn
+environment. Reverse text is a a simple
+
+532
+00:11:58,829 --> 00:11:58,839
+environment. Reverse text is a a simple
+ 
+
+533
+00:11:58,839 --> 00:12:01,270
+environment. Reverse text is a a simple
+environment to evaluate or train
+
+534
+00:12:01,270 --> 00:12:01,280
+environment to evaluate or train
+ 
+
+535
+00:12:01,280 --> 00:12:03,870
+environment to evaluate or train
+language models on their ability to
+
+536
+00:12:03,870 --> 00:12:03,880
+language models on their ability to
+ 
+
+537
+00:12:03,880 --> 00:12:07,150
+language models on their ability to
+reverse a string of text.
+
+538
+00:12:07,150 --> 00:12:07,160
+reverse a string of text.
+ 
+
+539
+00:12:07,160 --> 00:12:09,470
+reverse a string of text.
+What's going on here?
+
+540
+00:12:09,470 --> 00:12:09,480
+What's going on here?
+ 
+
+541
+00:12:09,480 --> 00:12:11,070
+What's going on here?
+Load [clears throat] environment is the
+
+542
+00:12:11,070 --> 00:12:11,080
+Load [clears throat] environment is the
+ 
+
+543
+00:12:11,080 --> 00:12:13,510
+Load [clears throat] environment is the
+entry point for every verifiers
+
+544
+00:12:13,510 --> 00:12:13,520
+entry point for every verifiers
+ 
+
+545
+00:12:13,520 --> 00:12:16,550
+entry point for every verifiers
+environment. It contains all the setup
+
+546
+00:12:16,550 --> 00:12:16,560
+environment. It contains all the setup
+ 
+
+547
+00:12:16,560 --> 00:12:17,710
+environment. It contains all the setup
+logic.
+
+548
+00:12:17,710 --> 00:12:17,720
+logic.
+ 
+
+549
+00:12:17,720 --> 00:12:20,829
+logic.
+First, a dataset is loaded and mapped.
+
+550
+00:12:20,829 --> 00:12:20,839
+First, a dataset is loaded and mapped.
+ 
+
+551
+00:12:20,839 --> 00:12:23,470
+First, a dataset is loaded and mapped.
+The default dataset contains 1,000 text
+
+552
+00:12:23,470 --> 00:12:23,480
+The default dataset contains 1,000 text
+ 
+
+553
+00:12:23,480 --> 00:12:26,950
+The default dataset contains 1,000 text
+paragraphs stored in the prompt column.
+
+554
+00:12:26,950 --> 00:12:26,960
+paragraphs stored in the prompt column.
+ 
+
+555
+00:12:26,960 --> 00:12:29,110
+paragraphs stored in the prompt column.
+During the mapping step, we transform
+
+556
+00:12:29,110 --> 00:12:29,120
+During the mapping step, we transform
+ 
+
+557
+00:12:29,120 --> 00:12:31,750
+During the mapping step, we transform
+the original dataset. Question is the
+
+558
+00:12:31,750 --> 00:12:31,760
+the original dataset. Question is the
+ 
+
+559
+00:12:31,760 --> 00:12:34,470
+the original dataset. Question is the
+text paragraph, while answer is the
+
+560
+00:12:34,470 --> 00:12:34,480
+text paragraph, while answer is the
+ 
+
+561
+00:12:34,480 --> 00:12:37,870
+text paragraph, while answer is the
+reversed text.
+
+562
+00:12:37,870 --> 00:12:37,880
+
+ 
+
+563
+00:12:37,880 --> 00:12:39,270
+
+Next,
+
+564
+00:12:39,270 --> 00:12:39,280
+Next,
+ 
+
+565
+00:12:39,280 --> 00:12:43,270
+Next,
+XML parser is initialized. It extracts
+
+566
+00:12:43,270 --> 00:12:43,280
+XML parser is initialized. It extracts
+ 
+
+567
+00:12:43,280 --> 00:12:46,750
+XML parser is initialized. It extracts
+the text inside the reversed text tags
+
+568
+00:12:46,750 --> 00:12:46,760
+the text inside the reversed text tags
+ 
+
+569
+00:12:46,760 --> 00:12:50,070
+the text inside the reversed text tags
+as specified in the system prompt.
+
+570
+00:12:50,070 --> 00:12:50,080
+as specified in the system prompt.
+ 
+
+571
+00:12:50,080 --> 00:12:52,710
+as specified in the system prompt.
+We then define the reward function. This
+
+572
+00:12:52,710 --> 00:12:52,720
+We then define the reward function. This
+ 
+
+573
+00:12:52,720 --> 00:12:54,910
+We then define the reward function. This
+compares the model's output to the
+
+574
+00:12:54,910 --> 00:12:54,920
+compares the model's output to the
+ 
+
+575
+00:12:54,920 --> 00:12:57,510
+compares the model's output to the
+ground truth and returns a longest
+
+576
+00:12:57,510 --> 00:12:57,520
+ground truth and returns a longest
+ 
+
+577
+00:12:57,520 --> 00:13:00,270
+ground truth and returns a longest
+common subsequence ratio.
+
+578
+00:13:00,270 --> 00:13:00,280
+common subsequence ratio.
+ 
+
+579
+00:13:00,280 --> 00:13:03,270
+common subsequence ratio.
+Finally, we bundle this into a rubric, a
+
+580
+00:13:03,270 --> 00:13:03,280
+Finally, we bundle this into a rubric, a
+ 
+
+581
+00:13:03,280 --> 00:13:05,790
+Finally, we bundle this into a rubric, a
+collection of weighted rewards, and
+
+582
+00:13:05,790 --> 00:13:05,800
+collection of weighted rewards, and
+ 
+
+583
+00:13:05,800 --> 00:13:13,590
+collection of weighted rewards, and
+initialize the single-turn end.
+
+584
+00:13:13,590 --> 00:13:13,600
+
+ 
+
+585
+00:13:13,600 --> 00:13:16,590
+
+But, how does this come to life? Let me
+
+586
+00:13:16,590 --> 00:13:16,600
+But, how does this come to life? Let me
+ 
+
+587
+00:13:16,600 --> 00:13:24,350
+But, how does this come to life? Let me
+show you an evaluation run.
+
+588
+00:13:24,350 --> 00:13:24,360
+
+ 
+
+589
+00:13:24,360 --> 00:13:27,630
+
+Here is what happens under the hood.
+
+590
+00:13:27,630 --> 00:13:27,640
+Here is what happens under the hood.
+ 
+
+591
+00:13:27,640 --> 00:13:30,110
+Here is what happens under the hood.
+Load environment is invoked.
+
+592
+00:13:30,110 --> 00:13:30,120
+Load environment is invoked.
+ 
+
+593
+00:13:30,120 --> 00:13:32,070
+Load environment is invoked.
+Five examples are taken from the
+
+594
+00:13:32,070 --> 00:13:32,080
+Five examples are taken from the
+ 
+
+595
+00:13:32,080 --> 00:13:34,829
+Five examples are taken from the
+dataset, and each example is used three
+
+596
+00:13:34,829 --> 00:13:34,839
+dataset, and each example is used three
+ 
+
+597
+00:13:34,839 --> 00:13:37,870
+dataset, and each example is used three
+times for three rollouts. Each rollout
+
+598
+00:13:37,870 --> 00:13:37,880
+times for three rollouts. Each rollout
+ 
+
+599
+00:13:37,880 --> 00:13:40,150
+times for three rollouts. Each rollout
+gets the same question, but may produce
+
+600
+00:13:40,150 --> 00:13:40,160
+gets the same question, but may produce
+ 
+
+601
+00:13:40,160 --> 00:13:42,390
+gets the same question, but may produce
+different completions due to model
+
+602
+00:13:42,390 --> 00:13:42,400
+different completions due to model
+ 
+
+603
+00:13:42,400 --> 00:13:43,910
+different completions due to model
+randomness.
+
+604
+00:13:43,910 --> 00:13:43,920
+randomness.
+ 
+
+605
+00:13:43,920 --> 00:13:46,910
+randomness.
+We have 15 rollouts in total.
+
+606
+00:13:46,910 --> 00:13:46,920
+We have 15 rollouts in total.
+ 
+
+607
+00:13:46,920 --> 00:13:49,110
+We have 15 rollouts in total.
+For each rollout, a conversation is
+
+608
+00:13:49,110 --> 00:13:49,120
+For each rollout, a conversation is
+ 
+
+609
+00:13:49,120 --> 00:13:51,150
+For each rollout, a conversation is
+prepared with the system prompt and the
+
+610
+00:13:51,150 --> 00:13:51,160
+prepared with the system prompt and the
+ 
+
+611
+00:13:51,160 --> 00:13:53,870
+prepared with the system prompt and the
+question. The conversation is sent to
+
+612
+00:13:53,870 --> 00:13:53,880
+question. The conversation is sent to
+ 
+
+613
+00:13:53,880 --> 00:13:55,310
+question. The conversation is sent to
+the model.
+
+614
+00:13:55,310 --> 00:13:55,320
+the model.
+ 
+
+615
+00:13:55,320 --> 00:13:57,829
+the model.
+The model generates a response. The
+
+616
+00:13:57,829 --> 00:13:57,839
+The model generates a response. The
+ 
+
+617
+00:13:57,839 --> 00:13:59,950
+The model generates a response. The
+response is parsed, extracting the
+
+618
+00:13:59,950 --> 00:13:59,960
+response is parsed, extracting the
+ 
+
+619
+00:13:59,960 --> 00:14:02,870
+response is parsed, extracting the
+answer. The reward is computed, and
+
+620
+00:14:02,870 --> 00:14:02,880
+answer. The reward is computed, and
+ 
+
+621
+00:14:02,880 --> 00:14:05,590
+answer. The reward is computed, and
+results are saved. At the end of the
+
+622
+00:14:05,590 --> 00:14:05,600
+results are saved. At the end of the
+ 
+
+623
+00:14:05,600 --> 00:14:07,270
+results are saved. At the end of the
+evaluation,
+
+624
+00:14:07,270 --> 00:14:07,280
+evaluation,
+ 
+
+625
+00:14:07,280 --> 00:14:10,750
+evaluation,
+you get summary statistics
+
+626
+00:14:10,750 --> 00:14:10,760
+you get summary statistics
+ 
+
+627
+00:14:10,760 --> 00:14:13,910
+you get summary statistics
+and additional info about reward
+
+628
+00:14:13,910 --> 00:14:13,920
+and additional info about reward
+ 
+
+629
+00:14:13,920 --> 00:14:16,150
+and additional info about reward
+distribution.
+
+630
+00:14:16,150 --> 00:14:16,160
+distribution.
+ 
+
+631
+00:14:16,160 --> 00:14:18,750
+distribution.
+Training follows the same core mechanism
+
+632
+00:14:18,750 --> 00:14:18,760
+Training follows the same core mechanism
+ 
+
+633
+00:14:18,760 --> 00:14:20,790
+Training follows the same core mechanism
+with the additional step
+
+634
+00:14:20,790 --> 00:14:20,800
+with the additional step
+ 
+
+635
+00:14:20,800 --> 00:14:23,790
+with the additional step
+of updating model parameters. We look at
+
+636
+00:14:23,790 --> 00:14:23,800
+of updating model parameters. We look at
+ 
+
+637
+00:14:23,800 --> 00:14:32,030
+of updating model parameters. We look at
+at that in more detail later.
+
+638
+00:14:32,030 --> 00:14:32,040
+
+ 
+
+639
+00:14:32,040 --> 00:14:34,750
+
+Let's look at the different example from
+
+640
+00:14:34,750 --> 00:14:34,760
+Let's look at the different example from
+ 
+
+641
+00:14:34,760 --> 00:14:37,870
+Let's look at the different example from
+verifiers, the double-check environment.
+
+642
+00:14:37,870 --> 00:14:37,880
+verifiers, the double-check environment.
+ 
+
+643
+00:14:37,880 --> 00:14:40,990
+verifiers, the double-check environment.
+Here, the model answers a math question,
+
+644
+00:14:40,990 --> 00:14:41,000
+Here, the model answers a math question,
+ 
+
+645
+00:14:41,000 --> 00:14:43,150
+Here, the model answers a math question,
+and the environment then asks, "Are you
+
+646
+00:14:43,150 --> 00:14:43,160
+and the environment then asks, "Are you
+ 
+
+647
+00:14:43,160 --> 00:14:44,230
+and the environment then asks, "Are you
+sure?"
+
+648
+00:14:44,230 --> 00:14:44,240
+sure?"
+ 
+
+649
+00:14:44,240 --> 00:14:46,550
+sure?"
+This is a multi-turn environment,
+
+650
+00:14:46,550 --> 00:14:46,560
+This is a multi-turn environment,
+ 
+
+651
+00:14:46,560 --> 00:14:48,750
+This is a multi-turn environment,
+similar in spirit to Tic-Tac-Toe, in
+
+652
+00:14:48,750 --> 00:14:48,760
+similar in spirit to Tic-Tac-Toe, in
+ 
+
+653
+00:14:48,760 --> 00:14:51,430
+similar in spirit to Tic-Tac-Toe, in
+which each trajectory involves multiple
+
+654
+00:14:51,430 --> 00:14:51,440
+which each trajectory involves multiple
+ 
+
+655
+00:14:51,440 --> 00:14:53,390
+which each trajectory involves multiple
+interaction between the model and the
+
+656
+00:14:53,390 --> 00:14:53,400
+interaction between the model and the
+ 
+
+657
+00:14:53,400 --> 00:14:54,990
+interaction between the model and the
+environment.
+
+658
+00:14:54,990 --> 00:14:55,000
+environment.
+ 
+
+659
+00:14:55,000 --> 00:14:57,030
+environment.
+Let's look at what
+
+660
+00:14:57,030 --> 00:14:57,040
+Let's look at what
+ 
+
+661
+00:14:57,040 --> 00:15:00,150
+Let's look at what
+multi-turn end introduces.
+
+662
+00:15:00,150 --> 00:15:00,160
+multi-turn end introduces.
+ 
+
+663
+00:15:00,160 --> 00:15:03,910
+multi-turn end introduces.
+State makes its first appearance here.
+
+664
+00:15:03,910 --> 00:15:03,920
+State makes its first appearance here.
+ 
+
+665
+00:15:03,920 --> 00:15:05,949
+State makes its first appearance here.
+It's a dictionary that tracks
+
+666
+00:15:05,949 --> 00:15:05,959
+It's a dictionary that tracks
+ 
+
+667
+00:15:05,959 --> 00:15:08,750
+It's a dictionary that tracks
+information during a rollout. We can set
+
+668
+00:15:08,750 --> 00:15:08,760
+information during a rollout. We can set
+ 
+
+669
+00:15:08,760 --> 00:15:10,870
+information during a rollout. We can set
+the initial state through the setup
+
+670
+00:15:10,870 --> 00:15:10,880
+the initial state through the setup
+ 
+
+671
+00:15:10,880 --> 00:15:15,270
+the initial state through the setup
+state method, not used in this example.
+
+672
+00:15:15,270 --> 00:15:15,280
+state method, not used in this example.
+ 
+
+673
+00:15:15,280 --> 00:15:18,630
+state method, not used in this example.
+End response. Instead of the interaction
+
+674
+00:15:18,630 --> 00:15:18,640
+End response. Instead of the interaction
+ 
+
+675
+00:15:18,640 --> 00:15:21,710
+End response. Instead of the interaction
+ending after one turn, the environment
+
+676
+00:15:21,710 --> 00:15:21,720
+ending after one turn, the environment
+ 
+
+677
+00:15:21,720 --> 00:15:24,430
+ending after one turn, the environment
+can reply with a list of messages. Here,
+
+678
+00:15:24,430 --> 00:15:24,440
+can reply with a list of messages. Here,
+ 
+
+679
+00:15:24,440 --> 00:15:27,230
+can reply with a list of messages. Here,
+it just says, "Are you sure?"
+
+680
+00:15:27,230 --> 00:15:27,240
+it just says, "Are you sure?"
+ 
+
+681
+00:15:27,240 --> 00:15:29,030
+it just says, "Are you sure?"
+In more complex environments, the
+
+682
+00:15:29,030 --> 00:15:29,040
+In more complex environments, the
+ 
+
+683
+00:15:29,040 --> 00:15:31,990
+In more complex environments, the
+response can be dynamically generated
+
+684
+00:15:31,990 --> 00:15:32,000
+response can be dynamically generated
+ 
+
+685
+00:15:32,000 --> 00:15:35,430
+response can be dynamically generated
+based on the state.
+
+686
+00:15:35,430 --> 00:15:35,440
+based on the state.
+ 
+
+687
+00:15:35,440 --> 00:15:38,949
+based on the state.
+The via stop decorator marks a method as
+
+688
+00:15:38,949 --> 00:15:38,959
+The via stop decorator marks a method as
+ 
+
+689
+00:15:38,959 --> 00:15:41,790
+The via stop decorator marks a method as
+a stopping condition. This method runs
+
+690
+00:15:41,790 --> 00:15:41,800
+a stopping condition. This method runs
+ 
+
+691
+00:15:41,800 --> 00:15:44,430
+a stopping condition. This method runs
+at every turn of the agent-environment
+
+692
+00:15:44,430 --> 00:15:44,440
+at every turn of the agent-environment
+ 
+
+693
+00:15:44,440 --> 00:15:47,670
+at every turn of the agent-environment
+interaction. Once it returns true,
+
+694
+00:15:47,670 --> 00:15:47,680
+interaction. Once it returns true,
+ 
+
+695
+00:15:47,680 --> 00:15:49,870
+interaction. Once it returns true,
+the rollout terminates.
+
+696
+00:15:49,870 --> 00:15:49,880
+the rollout terminates.
+ 
+
+697
+00:15:49,880 --> 00:15:52,630
+the rollout terminates.
+Under the hood, verifiers runs a loop in
+
+698
+00:15:52,630 --> 00:15:52,640
+Under the hood, verifiers runs a loop in
+ 
+
+699
+00:15:52,640 --> 00:15:54,949
+Under the hood, verifiers runs a loop in
+which the model and environment take
+
+700
+00:15:54,949 --> 00:15:54,959
+which the model and environment take
+ 
+
+701
+00:15:54,959 --> 00:15:56,030
+which the model and environment take
+turns
+
+702
+00:15:56,030 --> 00:15:56,040
+turns
+ 
+
+703
+00:15:56,040 --> 00:15:58,590
+turns
+exchanging messages, updating shared
+
+704
+00:15:58,590 --> 00:15:58,600
+exchanging messages, updating shared
+ 
+
+705
+00:15:58,600 --> 00:16:01,910
+exchanging messages, updating shared
+state, until a stopping condition is met
+
+706
+00:16:01,910 --> 00:16:01,920
+state, until a stopping condition is met
+ 
+
+707
+00:16:01,920 --> 00:16:09,710
+state, until a stopping condition is met
+and a full trajectory can be evaluated.
+
+708
+00:16:09,710 --> 00:16:09,720
+
+ 
+
+709
+00:16:09,720 --> 00:16:12,310
+
+Another interesting type of environment
+
+710
+00:16:12,310 --> 00:16:12,320
+Another interesting type of environment
+ 
+
+711
+00:16:12,320 --> 00:16:15,350
+Another interesting type of environment
+is the tool environment. All environment
+
+712
+00:16:15,350 --> 00:16:15,360
+is the tool environment. All environment
+ 
+
+713
+00:16:15,360 --> 00:16:18,150
+is the tool environment. All environment
+types in verifiers are built on
+
+714
+00:16:18,150 --> 00:16:18,160
+types in verifiers are built on
+ 
+
+715
+00:16:18,160 --> 00:16:21,270
+types in verifiers are built on
+multi-turn end, which implements the
+
+716
+00:16:21,270 --> 00:16:21,280
+multi-turn end, which implements the
+ 
+
+717
+00:16:21,280 --> 00:16:24,550
+multi-turn end, which implements the
+core single-agent rollout loop. Tool end
+
+718
+00:16:24,550 --> 00:16:24,560
+core single-agent rollout loop. Tool end
+ 
+
+719
+00:16:24,560 --> 00:16:27,270
+core single-agent rollout loop. Tool end
+adds tool calling to this foundation. As
+
+720
+00:16:27,270 --> 00:16:27,280
+adds tool calling to this foundation. As
+ 
+
+721
+00:16:27,280 --> 00:16:29,870
+adds tool calling to this foundation. As
+you can see, tools are defined as Python
+
+722
+00:16:29,870 --> 00:16:29,880
+you can see, tools are defined as Python
+ 
+
+723
+00:16:29,880 --> 00:16:31,030
+you can see, tools are defined as Python
+functions.
+
+724
+00:16:31,030 --> 00:16:31,040
+functions.
+ 
+
+725
+00:16:31,040 --> 00:16:33,430
+functions.
+During rollouts, the model can call
+
+726
+00:16:33,430 --> 00:16:33,440
+During rollouts, the model can call
+ 
+
+727
+00:16:33,440 --> 00:16:36,350
+During rollouts, the model can call
+tools, receive results, and continue
+
+728
+00:16:36,350 --> 00:16:36,360
+tools, receive results, and continue
+ 
+
+729
+00:16:36,360 --> 00:16:39,030
+tools, receive results, and continue
+reasoning until it produces a response
+
+730
+00:16:39,030 --> 00:16:39,040
+reasoning until it produces a response
+ 
+
+731
+00:16:39,040 --> 00:16:40,829
+reasoning until it produces a response
+without tool calls.
+
+732
+00:16:40,829 --> 00:16:40,839
+without tool calls.
+ 
+
+733
+00:16:40,839 --> 00:16:42,270
+without tool calls.
+Each turn
+
+734
+00:16:42,270 --> 00:16:42,280
+Each turn
+ 
+
+735
+00:16:42,280 --> 00:16:44,910
+Each turn
+consists of a model's response followed
+
+736
+00:16:44,910 --> 00:16:44,920
+consists of a model's response followed
+ 
+
+737
+00:16:44,920 --> 00:16:48,710
+consists of a model's response followed
+by the environment's tool execution.
+
+738
+00:16:48,710 --> 00:16:48,720
+by the environment's tool execution.
+ 
+
+739
+00:16:48,720 --> 00:16:50,990
+by the environment's tool execution.
+For a more realistic example, I
+
+740
+00:16:50,990 --> 00:16:51,000
+For a more realistic example, I
+ 
+
+741
+00:16:51,000 --> 00:16:53,630
+For a more realistic example, I
+recommend checking out the Wiki search
+
+742
+00:16:53,630 --> 00:16:53,640
+recommend checking out the Wiki search
+ 
+
+743
+00:16:53,640 --> 00:16:59,990
+recommend checking out the Wiki search
+environment.
+
+744
+00:16:59,990 --> 00:17:00,000
+
+ 
+
+745
+00:17:00,000 --> 00:17:02,550
+
+Beyond the fundamental environments I
+
+746
+00:17:02,550 --> 00:17:02,560
+Beyond the fundamental environments I
+ 
+
+747
+00:17:02,560 --> 00:17:05,390
+Beyond the fundamental environments I
+just showed, verifiers provides more
+
+748
+00:17:05,390 --> 00:17:05,400
+just showed, verifiers provides more
+ 
+
+749
+00:17:05,400 --> 00:17:08,590
+just showed, verifiers provides more
+abstraction to build environments.
+
+750
+00:17:08,590 --> 00:17:08,600
+abstraction to build environments.
+ 
+
+751
+00:17:08,600 --> 00:17:11,310
+abstraction to build environments.
+The NCP environment automatically
+
+752
+00:17:11,310 --> 00:17:11,320
+The NCP environment automatically
+ 
+
+753
+00:17:11,320 --> 00:17:13,870
+The NCP environment automatically
+connects to model context protocol
+
+754
+00:17:13,870 --> 00:17:13,880
+connects to model context protocol
+ 
+
+755
+00:17:13,880 --> 00:17:18,750
+connects to model context protocol
+servers to expose their tools.
+
+756
+00:17:18,750 --> 00:17:18,760
+
+ 
+
+757
+00:17:18,760 --> 00:17:22,390
+
+Stateful tool end is for tools that need
+
+758
+00:17:22,390 --> 00:17:22,400
+Stateful tool end is for tools that need
+ 
+
+759
+00:17:22,400 --> 00:17:25,310
+Stateful tool end is for tools that need
+per-rollout persistent state, like
+
+760
+00:17:25,310 --> 00:17:25,320
+per-rollout persistent state, like
+ 
+
+761
+00:17:25,320 --> 00:17:28,910
+per-rollout persistent state, like
+database connection or session ID.
+
+762
+00:17:28,910 --> 00:17:28,920
+database connection or session ID.
+ 
+
+763
+00:17:28,920 --> 00:17:30,870
+database connection or session ID.
+There is also a class implementing
+
+764
+00:17:30,870 --> 00:17:30,880
+There is also a class implementing
+ 
+
+765
+00:17:30,880 --> 00:17:33,270
+There is also a class implementing
+recursive language models,
+
+766
+00:17:33,270 --> 00:17:33,280
+recursive language models,
+ 
+
+767
+00:17:33,280 --> 00:17:36,590
+recursive language models,
+a novel idea you might have heard of.
+
+768
+00:17:36,590 --> 00:17:36,600
+a novel idea you might have heard of.
+ 
+
+769
+00:17:36,600 --> 00:17:38,669
+a novel idea you might have heard of.
+It's an inference strategy where
+
+770
+00:17:38,669 --> 00:17:38,679
+It's an inference strategy where
+ 
+
+771
+00:17:38,679 --> 00:17:40,830
+It's an inference strategy where
+language models can decompose and
+
+772
+00:17:40,830 --> 00:17:40,840
+language models can decompose and
+ 
+
+773
+00:17:40,840 --> 00:17:44,030
+language models can decompose and
+recursively interact with input context
+
+774
+00:17:44,030 --> 00:17:44,040
+recursively interact with input context
+ 
+
+775
+00:17:44,040 --> 00:17:47,470
+recursively interact with input context
+of unbounded length through REPL
+
+776
+00:17:47,470 --> 00:17:47,480
+of unbounded length through REPL
+ 
+
+777
+00:17:47,480 --> 00:17:49,710
+of unbounded length through REPL
+environments.
+
+778
+00:17:49,710 --> 00:17:49,720
+environments.
+ 
+
+779
+00:17:49,720 --> 00:17:52,390
+environments.
+Verifiers also plays well with others,
+
+780
+00:17:52,390 --> 00:17:52,400
+Verifiers also plays well with others,
+ 
+
+781
+00:17:52,400 --> 00:17:54,310
+Verifiers also plays well with others,
+integrating with several third-party
+
+782
+00:17:54,310 --> 00:17:54,320
+integrating with several third-party
+ 
+
+783
+00:17:54,320 --> 00:18:01,070
+integrating with several third-party
+environment libraries.
+
+784
+00:18:01,070 --> 00:18:01,080
+
+ 
+
+785
+00:18:01,080 --> 00:18:04,030
+
+Verifiers is tightly integrated with the
+
+786
+00:18:04,030 --> 00:18:04,040
+Verifiers is tightly integrated with the
+ 
+
+787
+00:18:04,040 --> 00:18:06,950
+Verifiers is tightly integrated with the
+environments hub, a community space for
+
+788
+00:18:06,950 --> 00:18:06,960
+environments hub, a community space for
+ 
+
+789
+00:18:06,960 --> 00:18:10,630
+environments hub, a community space for
+sharing these RL environments. Verifiers
+
+790
+00:18:10,630 --> 00:18:10,640
+sharing these RL environments. Verifiers
+ 
+
+791
+00:18:10,640 --> 00:18:13,430
+sharing these RL environments. Verifiers
+and the environments hub are different
+
+792
+00:18:13,430 --> 00:18:13,440
+and the environments hub are different
+ 
+
+793
+00:18:13,440 --> 00:18:15,950
+and the environments hub are different
+faces of the same intent.
+
+794
+00:18:15,950 --> 00:18:15,960
+faces of the same intent.
+ 
+
+795
+00:18:15,960 --> 00:18:17,990
+faces of the same intent.
+They aim to fight environment
+
+796
+00:18:17,990 --> 00:18:18,000
+They aim to fight environment
+ 
+
+797
+00:18:18,000 --> 00:18:20,950
+They aim to fight environment
+fragmentation. Too often, environments
+
+798
+00:18:20,950 --> 00:18:20,960
+fragmentation. Too often, environments
+ 
+
+799
+00:18:20,960 --> 00:18:21,950
+fragmentation. Too often, environments
+are locked
+
+800
+00:18:21,950 --> 00:18:21,960
+are locked
+ 
+
+801
+00:18:21,960 --> 00:18:24,390
+are locked
+into specific training stack, making
+
+802
+00:18:24,390 --> 00:18:24,400
+into specific training stack, making
+ 
+
+803
+00:18:24,400 --> 00:18:26,470
+into specific training stack, making
+them difficult to reuse.
+
+804
+00:18:26,470 --> 00:18:26,480
+them difficult to reuse.
+ 
+
+805
+00:18:26,480 --> 00:18:28,909
+them difficult to reuse.
+And as a market for closed-source
+
+806
+00:18:28,909 --> 00:18:28,919
+And as a market for closed-source
+ 
+
+807
+00:18:28,919 --> 00:18:31,750
+And as a market for closed-source
+environments emerges, these open
+
+808
+00:18:31,750 --> 00:18:31,760
+environments emerges, these open
+ 
+
+809
+00:18:31,760 --> 00:18:34,590
+environments emerges, these open
+initiatives ensure we have a robust
+
+810
+00:18:34,590 --> 00:18:34,600
+initiatives ensure we have a robust
+ 
+
+811
+00:18:34,600 --> 00:18:36,870
+initiatives ensure we have a robust
+alternative. We don't want open-source
+
+812
+00:18:36,870 --> 00:18:36,880
+alternative. We don't want open-source
+ 
+
+813
+00:18:36,880 --> 00:18:39,550
+alternative. We don't want open-source
+models to lag behind just because they
+
+814
+00:18:39,550 --> 00:18:39,560
+models to lag behind just because they
+ 
+
+815
+00:18:39,560 --> 00:18:42,669
+models to lag behind just because they
+lack the right playgrounds to train it.
+
+816
+00:18:42,669 --> 00:18:42,679
+lack the right playgrounds to train it.
+ 
+
+817
+00:18:42,679 --> 00:18:45,669
+lack the right playgrounds to train it.
+Plus, beyond the serious side, it's just
+
+818
+00:18:45,669 --> 00:18:45,679
+Plus, beyond the serious side, it's just
+ 
+
+819
+00:18:45,679 --> 00:18:47,909
+Plus, beyond the serious side, it's just
+fun to explore the hub and see what
+
+820
+00:18:47,909 --> 00:18:47,919
+fun to explore the hub and see what
+ 
+
+821
+00:18:47,919 --> 00:18:52,310
+fun to explore the hub and see what
+people are building.
+
+822
+00:18:52,310 --> 00:18:52,320
+
+ 
+
+823
+00:18:52,320 --> 00:18:58,590
+
+Now, let's move on, Tic-Tac-Toe.
+
+824
+00:18:58,590 --> 00:18:58,600
+
+ 
+
+825
+00:18:58,600 --> 00:19:01,669
+
+We use verifiers to create a Tic-Tac-Toe
+
+826
+00:19:01,669 --> 00:19:01,679
+We use verifiers to create a Tic-Tac-Toe
+ 
+
+827
+00:19:01,679 --> 00:19:04,030
+We use verifiers to create a Tic-Tac-Toe
+environment for training and evaluating
+
+828
+00:19:04,030 --> 00:19:04,040
+environment for training and evaluating
+ 
+
+829
+00:19:04,040 --> 00:19:06,990
+environment for training and evaluating
+language models on this game.
+
+830
+00:19:06,990 --> 00:19:07,000
+language models on this game.
+ 
+
+831
+00:19:07,000 --> 00:19:09,270
+language models on this game.
+Now, why Tic-Tac-Toe?
+
+832
+00:19:09,270 --> 00:19:09,280
+Now, why Tic-Tac-Toe?
+ 
+
+833
+00:19:09,280 --> 00:19:11,630
+Now, why Tic-Tac-Toe?
+It's a simple game, but requires
+
+834
+00:19:11,630 --> 00:19:11,640
+It's a simple game, but requires
+ 
+
+835
+00:19:11,640 --> 00:19:14,110
+It's a simple game, but requires
+multi-turn interaction, and capturing
+
+836
+00:19:14,110 --> 00:19:14,120
+multi-turn interaction, and capturing
+ 
+
+837
+00:19:14,120 --> 00:19:17,030
+multi-turn interaction, and capturing
+its dynamics with a static dataset is
+
+838
+00:19:17,030 --> 00:19:17,040
+its dynamics with a static dataset is
+ 
+
+839
+00:19:17,040 --> 00:19:18,590
+its dynamics with a static dataset is
+challenging.
+
+840
+00:19:18,590 --> 00:19:18,600
+challenging.
+ 
+
+841
+00:19:18,600 --> 00:19:20,950
+challenging.
+Despite its small state space and
+
+842
+00:19:20,950 --> 00:19:20,960
+Despite its small state space and
+ 
+
+843
+00:19:20,960 --> 00:19:23,270
+Despite its small state space and
+deterministic solution, small language
+
+844
+00:19:23,270 --> 00:19:23,280
+deterministic solution, small language
+ 
+
+845
+00:19:23,280 --> 00:19:25,870
+deterministic solution, small language
+models often struggle with it.
+
+846
+00:19:25,870 --> 00:19:25,880
+models often struggle with it.
+ 
+
+847
+00:19:25,880 --> 00:19:28,070
+models often struggle with it.
+Let's see if reinforcement learning can
+
+848
+00:19:28,070 --> 00:19:28,080
+Let's see if reinforcement learning can
+ 
+
+849
+00:19:28,080 --> 00:19:28,523
+Let's see if reinforcement learning can
+help
+
+850
+00:19:28,523 --> 00:19:28,533
+help
+ 
+
+851
+00:19:28,533 --> 00:19:28,550
+help
+>> [clears throat]
+
+852
+00:19:28,550 --> 00:19:28,560
+>> [clears throat]
+ 
+
+853
+00:19:28,560 --> 00:19:37,430
+>> [clears throat]
+>> bridge that gap.
+
+854
+00:19:37,430 --> 00:19:37,440
+
+ 
+
+855
+00:19:37,440 --> 00:19:39,149
+
+It's best to start with a simple
+
+856
+00:19:39,149 --> 00:19:39,159
+It's best to start with a simple
+ 
+
+857
+00:19:39,159 --> 00:19:41,470
+It's best to start with a simple
+version, run evaluation to verify it
+
+858
+00:19:41,470 --> 00:19:41,480
+version, run evaluation to verify it
+ 
+
+859
+00:19:41,480 --> 00:19:43,909
+version, run evaluation to verify it
+works, and then iterate.
+
+860
+00:19:43,909 --> 00:19:43,919
+works, and then iterate.
+ 
+
+861
+00:19:43,919 --> 00:19:46,950
+works, and then iterate.
+To start, we make a few assumptions.
+
+862
+00:19:46,950 --> 00:19:46,960
+To start, we make a few assumptions.
+ 
+
+863
+00:19:46,960 --> 00:19:49,830
+To start, we make a few assumptions.
+The model always plays as X
+
+864
+00:19:49,830 --> 00:19:49,840
+The model always plays as X
+ 
+
+865
+00:19:49,840 --> 00:19:51,750
+The model always plays as X
+and goes first.
+
+866
+00:19:51,750 --> 00:19:51,760
+and goes first.
+ 
+
+867
+00:19:51,760 --> 00:19:55,390
+and goes first.
+It must output a number between 0 and 8
+
+868
+00:19:55,390 --> 00:19:55,400
+It must output a number between 0 and 8
+ 
+
+869
+00:19:55,400 --> 00:19:57,470
+It must output a number between 0 and 8
+inside move tags.
+
+870
+00:19:57,470 --> 00:19:57,480
+inside move tags.
+ 
+
+871
+00:19:57,480 --> 00:20:01,870
+inside move tags.
+And the opponent just plays randomly.
+
+872
+00:20:01,870 --> 00:20:01,880
+And the opponent just plays randomly.
+ 
+
+873
+00:20:01,880 --> 00:20:05,430
+And the opponent just plays randomly.
+In load environment, we create a data
+
+874
+00:20:05,430 --> 00:20:05,440
+In load environment, we create a data
+ 
+
+875
+00:20:05,440 --> 00:20:08,350
+In load environment, we create a data
+set containing the initial user message
+
+876
+00:20:08,350 --> 00:20:08,360
+set containing the initial user message
+ 
+
+877
+00:20:08,360 --> 00:20:11,790
+set containing the initial user message
+that starts each game.
+
+878
+00:20:11,790 --> 00:20:11,800
+that starts each game.
+ 
+
+879
+00:20:11,800 --> 00:20:15,710
+that starts each game.
+For each rollout, setup state populates
+
+880
+00:20:15,710 --> 00:20:15,720
+For each rollout, setup state populates
+ 
+
+881
+00:20:15,720 --> 00:20:17,870
+For each rollout, setup state populates
+the state dictionary with information
+
+882
+00:20:17,870 --> 00:20:17,880
+the state dictionary with information
+ 
+
+883
+00:20:17,880 --> 00:20:20,430
+the state dictionary with information
+used and updated during the game, such
+
+884
+00:20:20,430 --> 00:20:20,440
+used and updated during the game, such
+ 
+
+885
+00:20:20,440 --> 00:20:24,390
+used and updated during the game, such
+as the board and the winner.
+
+886
+00:20:24,390 --> 00:20:24,400
+
+ 
+
+887
+00:20:24,400 --> 00:20:26,950
+
+And response contains the core game
+
+888
+00:20:26,950 --> 00:20:26,960
+And response contains the core game
+ 
+
+889
+00:20:26,960 --> 00:20:31,950
+And response contains the core game
+logic. It parses the model last move,
+
+890
+00:20:31,950 --> 00:20:31,960
+logic. It parses the model last move,
+ 
+
+891
+00:20:31,960 --> 00:20:35,230
+logic. It parses the model last move,
+check if it's valid. Invalid moves are
+
+892
+00:20:35,230 --> 00:20:35,240
+check if it's valid. Invalid moves are
+ 
+
+893
+00:20:35,240 --> 00:20:37,870
+check if it's valid. Invalid moves are
+an immediate loss for now, and applies
+
+894
+00:20:37,870 --> 00:20:37,880
+an immediate loss for now, and applies
+ 
+
+895
+00:20:37,880 --> 00:20:40,870
+an immediate loss for now, and applies
+it to the board. Then, it applies a
+
+896
+00:20:40,870 --> 00:20:40,880
+it to the board. Then, it applies a
+ 
+
+897
+00:20:40,880 --> 00:20:43,310
+it to the board. Then, it applies a
+random opponent move and checks for a
+
+898
+00:20:43,310 --> 00:20:43,320
+random opponent move and checks for a
+ 
+
+899
+00:20:43,320 --> 00:20:46,710
+random opponent move and checks for a
+win or draw. If the game isn't finished,
+
+900
+00:20:46,710 --> 00:20:46,720
+win or draw. If the game isn't finished,
+ 
+
+901
+00:20:46,720 --> 00:20:48,790
+win or draw. If the game isn't finished,
+it returns a user message with the
+
+902
+00:20:48,790 --> 00:20:48,800
+it returns a user message with the
+ 
+
+903
+00:20:48,800 --> 00:20:50,910
+it returns a user message with the
+current board state and asks for the
+
+904
+00:20:50,910 --> 00:20:50,920
+current board state and asks for the
+ 
+
+905
+00:20:50,920 --> 00:20:52,350
+current board state and asks for the
+next move.
+
+906
+00:20:52,350 --> 00:20:52,360
+next move.
+ 
+
+907
+00:20:52,360 --> 00:20:54,830
+next move.
+We use two reward function,
+
+908
+00:20:54,830 --> 00:20:54,840
+We use two reward function,
+ 
+
+909
+00:20:54,840 --> 00:20:57,190
+We use two reward function,
+winner reward function
+
+910
+00:20:57,190 --> 00:20:57,200
+winner reward function
+ 
+
+911
+00:20:57,200 --> 00:20:58,990
+winner reward function
+with weight one,
+
+912
+00:20:58,990 --> 00:20:59,000
+with weight one,
+ 
+
+913
+00:20:59,000 --> 00:21:00,230
+with weight one,
+and
+
+914
+00:21:00,230 --> 00:21:00,240
+and
+ 
+
+915
+00:21:00,240 --> 00:21:04,750
+and
+format reward function with weight 0.2,
+
+916
+00:21:04,750 --> 00:21:04,760
+format reward function with weight 0.2,
+ 
+
+917
+00:21:04,760 --> 00:21:07,030
+format reward function with weight 0.2,
+which rewards the model for respecting
+
+918
+00:21:07,030 --> 00:21:07,040
+which rewards the model for respecting
+ 
+
+919
+00:21:07,040 --> 00:21:15,870
+which rewards the model for respecting
+the XML format.
+
+920
+00:21:15,870 --> 00:21:15,880
+
+ 
+
+921
+00:21:15,880 --> 00:21:18,350
+
+We can now make our environment more
+
+922
+00:21:18,350 --> 00:21:18,360
+We can now make our environment more
+ 
+
+923
+00:21:18,360 --> 00:21:21,070
+We can now make our environment more
+flexible, realistic, and suitable for
+
+924
+00:21:21,070 --> 00:21:21,080
+flexible, realistic, and suitable for
+ 
+
+925
+00:21:21,080 --> 00:21:23,550
+flexible, realistic, and suitable for
+both evaluation and training. I made
+
+926
+00:21:23,550 --> 00:21:23,560
+both evaluation and training. I made
+ 
+
+927
+00:21:23,560 --> 00:21:25,950
+both evaluation and training. I made
+some of these improvements gradually
+
+928
+00:21:25,950 --> 00:21:25,960
+some of these improvements gradually
+ 
+
+929
+00:21:25,960 --> 00:21:28,950
+some of these improvements gradually
+while eating was during training. First,
+
+930
+00:21:28,950 --> 00:21:28,960
+while eating was during training. First,
+ 
+
+931
+00:21:28,960 --> 00:21:30,990
+while eating was during training. First,
+we want the model to sometimes play
+
+932
+00:21:30,990 --> 00:21:31,000
+we want the model to sometimes play
+ 
+
+933
+00:21:31,000 --> 00:21:35,230
+we want the model to sometimes play
+first and sometimes play second.
+
+934
+00:21:35,230 --> 00:21:35,240
+first and sometimes play second.
+ 
+
+935
+00:21:35,240 --> 00:21:37,910
+first and sometimes play second.
+Let's now address opponent's skill.
+
+936
+00:21:37,910 --> 00:21:37,920
+Let's now address opponent's skill.
+ 
+
+937
+00:21:37,920 --> 00:21:40,350
+Let's now address opponent's skill.
+Always playing against a random opponent
+
+938
+00:21:40,350 --> 00:21:40,360
+Always playing against a random opponent
+ 
+
+939
+00:21:40,360 --> 00:21:43,230
+Always playing against a random opponent
+isn't realistic. So, we introduce an
+
+940
+00:21:43,230 --> 00:21:43,240
+isn't realistic. So, we introduce an
+ 
+
+941
+00:21:43,240 --> 00:21:45,510
+isn't realistic. So, we introduce an
+optimal opponent using the minimax
+
+942
+00:21:45,510 --> 00:21:45,520
+optimal opponent using the minimax
+ 
+
+943
+00:21:45,520 --> 00:21:46,590
+optimal opponent using the minimax
+algorithm.
+
+944
+00:21:46,590 --> 00:21:46,600
+algorithm.
+ 
+
+945
+00:21:46,600 --> 00:21:48,750
+algorithm.
+Against this opponent, a draw is the
+
+946
+00:21:48,750 --> 00:21:48,760
+Against this opponent, a draw is the
+ 
+
+947
+00:21:48,760 --> 00:21:51,350
+Against this opponent, a draw is the
+best achievable outcome.
+
+948
+00:21:51,350 --> 00:21:51,360
+best achievable outcome.
+ 
+
+949
+00:21:51,360 --> 00:21:52,950
+best achievable outcome.
+However, for training, we want the
+
+950
+00:21:52,950 --> 00:21:52,960
+However, for training, we want the
+ 
+
+951
+00:21:52,960 --> 00:21:55,710
+However, for training, we want the
+opponent's skill to be controllable. If
+
+952
+00:21:55,710 --> 00:21:55,720
+opponent's skill to be controllable. If
+ 
+
+953
+00:21:55,720 --> 00:21:58,190
+opponent's skill to be controllable. If
+the opponent is too perfect too early,
+
+954
+00:21:58,190 --> 00:21:58,200
+the opponent is too perfect too early,
+ 
+
+955
+00:21:58,200 --> 00:22:00,710
+the opponent is too perfect too early,
+the model might never see a win and fail
+
+956
+00:22:00,710 --> 00:22:00,720
+the model might never see a win and fail
+ 
+
+957
+00:22:00,720 --> 00:22:01,950
+the model might never see a win and fail
+to learn.
+
+958
+00:22:01,950 --> 00:22:01,960
+to learn.
+ 
+
+959
+00:22:01,960 --> 00:22:03,669
+to learn.
+We can do so by introducing a
+
+960
+00:22:03,669 --> 00:22:03,679
+We can do so by introducing a
+ 
+
+961
+00:22:03,679 --> 00:22:06,230
+We can do so by introducing a
+probability for the opponent to choose a
+
+962
+00:22:06,230 --> 00:22:06,240
+probability for the opponent to choose a
+ 
+
+963
+00:22:06,240 --> 00:22:09,710
+probability for the opponent to choose a
+random move instead of the optimal one.
+
+964
+00:22:09,710 --> 00:22:09,720
+random move instead of the optimal one.
+ 
+
+965
+00:22:09,720 --> 00:22:12,270
+random move instead of the optimal one.
+In load environment, we introduce mean
+
+966
+00:22:12,270 --> 00:22:12,280
+In load environment, we introduce mean
+ 
+
+967
+00:22:12,280 --> 00:22:14,950
+In load environment, we introduce mean
+random move prob and max random move
+
+968
+00:22:14,950 --> 00:22:14,960
+random move prob and max random move
+ 
+
+969
+00:22:14,960 --> 00:22:17,750
+random move prob and max random move
+prob varying from 0 to 1.
+
+970
+00:22:17,750 --> 00:22:17,760
+prob varying from 0 to 1.
+ 
+
+971
+00:22:17,760 --> 00:22:21,310
+prob varying from 0 to 1.
+If we set both to 0, all games will be
+
+972
+00:22:21,310 --> 00:22:21,320
+If we set both to 0, all games will be
+ 
+
+973
+00:22:21,320 --> 00:22:24,270
+If we set both to 0, all games will be
+against an optimal opponent. If we set
+
+974
+00:22:24,270 --> 00:22:24,280
+against an optimal opponent. If we set
+ 
+
+975
+00:22:24,280 --> 00:22:27,310
+against an optimal opponent. If we set
+both to 1, all games will be against a
+
+976
+00:22:27,310 --> 00:22:27,320
+both to 1, all games will be against a
+ 
+
+977
+00:22:27,320 --> 00:22:29,150
+both to 1, all games will be against a
+random opponent.
+
+978
+00:22:29,150 --> 00:22:29,160
+random opponent.
+ 
+
+979
+00:22:29,160 --> 00:22:31,310
+random opponent.
+Using these parameters allows us to
+
+980
+00:22:31,310 --> 00:22:31,320
+Using these parameters allows us to
+ 
+
+981
+00:22:31,320 --> 00:22:33,830
+Using these parameters allows us to
+control the opponent's skill across all
+
+982
+00:22:33,830 --> 00:22:33,840
+control the opponent's skill across all
+ 
+
+983
+00:22:33,840 --> 00:22:35,070
+control the opponent's skill across all
+games.
+
+984
+00:22:35,070 --> 00:22:35,080
+games.
+ 
+
+985
+00:22:35,080 --> 00:22:37,310
+games.
+For different rollouts originating from
+
+986
+00:22:37,310 --> 00:22:37,320
+For different rollouts originating from
+ 
+
+987
+00:22:37,320 --> 00:22:39,790
+For different rollouts originating from
+the same data set example, the opponent
+
+988
+00:22:39,790 --> 00:22:39,800
+the same data set example, the opponent
+ 
+
+989
+00:22:39,800 --> 00:22:41,790
+the same data set example, the opponent
+will always have the same probability of
+
+990
+00:22:41,790 --> 00:22:41,800
+will always have the same probability of
+ 
+
+991
+00:22:41,800 --> 00:22:44,270
+will always have the same probability of
+choosing random moves, ensuring fair
+
+992
+00:22:44,270 --> 00:22:44,280
+choosing random moves, ensuring fair
+ 
+
+993
+00:22:44,280 --> 00:22:47,870
+choosing random moves, ensuring fair
+comparison.
+
+994
+00:22:47,870 --> 00:22:47,880
+
+ 
+
+995
+00:22:47,880 --> 00:22:50,470
+
+Now, about reasoning.
+
+996
+00:22:50,470 --> 00:22:50,480
+Now, about reasoning.
+ 
+
+997
+00:22:50,480 --> 00:22:52,430
+Now, about reasoning.
+It's common to ask models to produce a
+
+998
+00:22:52,430 --> 00:22:52,440
+It's common to ask models to produce a
+ 
+
+999
+00:22:52,440 --> 00:22:55,070
+It's common to ask models to produce a
+thinking trace before the final answer.
+
+1000
+00:22:55,070 --> 00:22:55,080
+thinking trace before the final answer.
+ 
+
+1001
+00:22:55,080 --> 00:22:57,190
+thinking trace before the final answer.
+It can improve performance at inference
+
+1002
+00:22:57,190 --> 00:22:57,200
+It can improve performance at inference
+ 
+
+1003
+00:22:57,200 --> 00:22:59,550
+It can improve performance at inference
+time, but it's also instrumental to make
+
+1004
+00:22:59,550 --> 00:22:59,560
+time, but it's also instrumental to make
+ 
+
+1005
+00:22:59,560 --> 00:23:01,750
+time, but it's also instrumental to make
+models better during training.
+
+1006
+00:23:01,750 --> 00:23:01,760
+models better during training.
+ 
+
+1007
+00:23:01,760 --> 00:23:04,190
+models better during training.
+We define a new format reward function
+
+1008
+00:23:04,190 --> 00:23:04,200
+We define a new format reward function
+ 
+
+1009
+00:23:04,200 --> 00:23:06,790
+We define a new format reward function
+using a regular expression to also check
+
+1010
+00:23:06,790 --> 00:23:06,800
+using a regular expression to also check
+ 
+
+1011
+00:23:06,800 --> 00:23:12,150
+using a regular expression to also check
+the presence of think tags.
+
+1012
+00:23:12,150 --> 00:23:12,160
+
+ 
+
+1013
+00:23:12,160 --> 00:23:14,590
+
+Let's now cover invalid moves. While
+
+1014
+00:23:14,590 --> 00:23:14,600
+Let's now cover invalid moves. While
+ 
+
+1015
+00:23:14,600 --> 00:23:17,230
+Let's now cover invalid moves. While
+experimenting with small open models, I
+
+1016
+00:23:17,230 --> 00:23:17,240
+experimenting with small open models, I
+ 
+
+1017
+00:23:17,240 --> 00:23:19,790
+experimenting with small open models, I
+observed that many of them sometimes
+
+1018
+00:23:19,790 --> 00:23:19,800
+observed that many of them sometimes
+ 
+
+1019
+00:23:19,800 --> 00:23:21,950
+observed that many of them sometimes
+their output format was incorrect. Other
+
+1020
+00:23:21,950 --> 00:23:21,960
+their output format was incorrect. Other
+ 
+
+1021
+00:23:21,960 --> 00:23:25,510
+their output format was incorrect. Other
+times, the chosen cell was occupied.
+
+1022
+00:23:25,510 --> 00:23:25,520
+times, the chosen cell was occupied.
+ 
+
+1023
+00:23:25,520 --> 00:23:28,750
+times, the chosen cell was occupied.
+Ending the game immediately is harsh. It
+
+1024
+00:23:28,750 --> 00:23:28,760
+Ending the game immediately is harsh. It
+ 
+
+1025
+00:23:28,760 --> 00:23:31,190
+Ending the game immediately is harsh. It
+might stop smaller models from getting a
+
+1026
+00:23:31,190 --> 00:23:31,200
+might stop smaller models from getting a
+ 
+
+1027
+00:23:31,200 --> 00:23:33,350
+might stop smaller models from getting a
+useful learning signal.
+
+1028
+00:23:33,350 --> 00:23:33,360
+useful learning signal.
+ 
+
+1029
+00:23:33,360 --> 00:23:36,470
+useful learning signal.
+Instead, we now let the game continue
+
+1030
+00:23:36,470 --> 00:23:36,480
+Instead, we now let the game continue
+ 
+
+1031
+00:23:36,480 --> 00:23:40,830
+Instead, we now let the game continue
+and apply a flat minus 0.1 penalty,
+
+1032
+00:23:40,830 --> 00:23:40,840
+and apply a flat minus 0.1 penalty,
+ 
+
+1033
+00:23:40,840 --> 00:23:45,710
+and apply a flat minus 0.1 penalty,
+capping the turns at eight.
+
+1034
+00:23:45,710 --> 00:23:45,720
+
+ 
+
+1035
+00:23:45,720 --> 00:23:47,910
+
+Let's discuss reducing noise in
+
+1036
+00:23:47,910 --> 00:23:47,920
+Let's discuss reducing noise in
+ 
+
+1037
+00:23:47,920 --> 00:23:50,430
+Let's discuss reducing noise in
+group-based reinforcement learning.
+
+1038
+00:23:50,430 --> 00:23:50,440
+group-based reinforcement learning.
+ 
+
+1039
+00:23:50,440 --> 00:23:52,910
+group-based reinforcement learning.
+In GRPO
+
+1040
+00:23:52,910 --> 00:23:52,920
+In GRPO
+ 
+
+1041
+00:23:52,920 --> 00:23:55,430
+In GRPO
+learning, we compare several rollouts
+
+1042
+00:23:55,430 --> 00:23:55,440
+learning, we compare several rollouts
+ 
+
+1043
+00:23:55,440 --> 00:23:57,510
+learning, we compare several rollouts
+from the same starting point to see
+
+1044
+00:23:57,510 --> 00:23:57,520
+from the same starting point to see
+ 
+
+1045
+00:23:57,520 --> 00:23:59,430
+from the same starting point to see
+which ones to reinforce based on
+
+1046
+00:23:59,430 --> 00:23:59,440
+which ones to reinforce based on
+ 
+
+1047
+00:23:59,440 --> 00:24:02,150
+which ones to reinforce based on
+rewards. For this to work, differences
+
+1048
+00:24:02,150 --> 00:24:02,160
+rewards. For this to work, differences
+ 
+
+1049
+00:24:02,160 --> 00:24:03,470
+rewards. For this to work, differences
+in rewards
+
+1050
+00:24:03,470 --> 00:24:03,480
+in rewards
+ 
+
+1051
+00:24:03,480 --> 00:24:05,590
+in rewards
+should come from how the model plays,
+
+1052
+00:24:05,590 --> 00:24:05,600
+should come from how the model plays,
+ 
+
+1053
+00:24:05,600 --> 00:24:09,030
+should come from how the model plays,
+not from environment randomness. And how
+
+1054
+00:24:09,030 --> 00:24:09,040
+not from environment randomness. And how
+ 
+
+1055
+00:24:09,040 --> 00:24:10,910
+not from environment randomness. And how
+can we reduce noise
+
+1056
+00:24:10,910 --> 00:24:10,920
+can we reduce noise
+ 
+
+1057
+00:24:10,920 --> 00:24:13,470
+can we reduce noise
+in this setup?
+
+1058
+00:24:13,470 --> 00:24:13,480
+in this setup?
+ 
+
+1059
+00:24:13,480 --> 00:24:15,990
+in this setup?
+First, we set an example seed for each
+
+1060
+00:24:15,990 --> 00:24:16,000
+First, we set an example seed for each
+ 
+
+1061
+00:24:16,000 --> 00:24:18,510
+First, we set an example seed for each
+example in the data set to select the
+
+1062
+00:24:18,510 --> 00:24:18,520
+example in the data set to select the
+ 
+
+1063
+00:24:18,520 --> 00:24:21,870
+example in the data set to select the
+starting player. Then, for each turn, we
+
+1064
+00:24:21,870 --> 00:24:21,880
+starting player. Then, for each turn, we
+ 
+
+1065
+00:24:21,880 --> 00:24:25,070
+starting player. Then, for each turn, we
+derive a specific turn seed based on the
+
+1066
+00:24:25,070 --> 00:24:25,080
+derive a specific turn seed based on the
+ 
+
+1067
+00:24:25,080 --> 00:24:27,630
+derive a specific turn seed based on the
+example seed and board state. This
+
+1068
+00:24:27,630 --> 00:24:27,640
+example seed and board state. This
+ 
+
+1069
+00:24:27,640 --> 00:24:30,510
+example seed and board state. This
+guarantees that if two rollouts reach
+
+1070
+00:24:30,510 --> 00:24:30,520
+guarantees that if two rollouts reach
+ 
+
+1071
+00:24:30,520 --> 00:24:32,910
+guarantees that if two rollouts reach
+the same board position, the opponent
+
+1072
+00:24:32,910 --> 00:24:32,920
+the same board position, the opponent
+ 
+
+1073
+00:24:32,920 --> 00:24:37,669
+the same board position, the opponent
+will always respond the same way.
+
+1074
+00:24:37,669 --> 00:24:37,679
+
+ 
+
+1075
+00:24:37,679 --> 00:24:40,270
+
+Last point, reducing noise across
+
+1076
+00:24:40,270 --> 00:24:40,280
+Last point, reducing noise across
+ 
+
+1077
+00:24:40,280 --> 00:24:42,470
+Last point, reducing noise across
+batches.
+
+1078
+00:24:42,470 --> 00:24:42,480
+batches.
+ 
+
+1079
+00:24:42,480 --> 00:24:44,830
+batches.
+For our training, the batch size is the
+
+1080
+00:24:44,830 --> 00:24:44,840
+For our training, the batch size is the
+ 
+
+1081
+00:24:44,840 --> 00:24:47,590
+For our training, the batch size is the
+number of games taken into consideration
+
+1082
+00:24:47,590 --> 00:24:47,600
+number of games taken into consideration
+ 
+
+1083
+00:24:47,600 --> 00:24:51,790
+number of games taken into consideration
+before the model's weight are updated.
+
+1084
+00:24:51,790 --> 00:24:51,800
+before the model's weight are updated.
+ 
+
+1085
+00:24:51,800 --> 00:24:54,430
+before the model's weight are updated.
+In our setup, the opponent's skill
+
+1086
+00:24:54,430 --> 00:24:54,440
+In our setup, the opponent's skill
+ 
+
+1087
+00:24:54,440 --> 00:24:57,270
+In our setup, the opponent's skill
+varies across the data set according to
+
+1088
+00:24:57,270 --> 00:24:57,280
+varies across the data set according to
+ 
+
+1089
+00:24:57,280 --> 00:24:59,302
+varies across the data set according to
+mean random move prob and max random
+
+1090
+00:24:59,302 --> 00:24:59,312
+mean random move prob and max random
+ 
+
+1091
+00:24:59,312 --> 00:25:01,030
+mean random move prob and max random
+[clears throat] move prob.
+
+1092
+00:25:01,030 --> 00:25:01,040
+[clears throat] move prob.
+ 
+
+1093
+00:25:01,040 --> 00:25:03,510
+[clears throat] move prob.
+If we train with a small batch size and
+
+1094
+00:25:03,510 --> 00:25:03,520
+If we train with a small batch size and
+ 
+
+1095
+00:25:03,520 --> 00:25:05,510
+If we train with a small batch size and
+the random move probability is not
+
+1096
+00:25:05,510 --> 00:25:05,520
+the random move probability is not
+ 
+
+1097
+00:25:05,520 --> 00:25:08,190
+the random move probability is not
+fixed, we might sample a batch in which
+
+1098
+00:25:08,190 --> 00:25:08,200
+fixed, we might sample a batch in which
+ 
+
+1099
+00:25:08,200 --> 00:25:10,550
+fixed, we might sample a batch in which
+many opponents are hard or many are
+
+1100
+00:25:10,550 --> 00:25:10,560
+many opponents are hard or many are
+ 
+
+1101
+00:25:10,560 --> 00:25:13,750
+many opponents are hard or many are
+easy. This causes the average reward to
+
+1102
+00:25:13,750 --> 00:25:13,760
+easy. This causes the average reward to
+ 
+
+1103
+00:25:13,760 --> 00:25:15,950
+easy. This causes the average reward to
+fluctuate a lot, making training
+
+1104
+00:25:15,950 --> 00:25:15,960
+fluctuate a lot, making training
+ 
+
+1105
+00:25:15,960 --> 00:25:18,830
+fluctuate a lot, making training
+unstable. To fight this, I added
+
+1106
+00:25:18,830 --> 00:25:18,840
+unstable. To fight this, I added
+ 
+
+1107
+00:25:18,840 --> 00:25:20,870
+unstable. To fight this, I added
+stratified sampling.
+
+1108
+00:25:20,870 --> 00:25:20,880
+stratified sampling.
+ 
+
+1109
+00:25:20,880 --> 00:25:23,150
+stratified sampling.
+This forces every batch to contain a
+
+1110
+00:25:23,150 --> 00:25:23,160
+This forces every batch to contain a
+ 
+
+1111
+00:25:23,160 --> 00:25:25,510
+This forces every batch to contain a
+perfectly balanced mix of opponent
+
+1112
+00:25:25,510 --> 00:25:25,520
+perfectly balanced mix of opponent
+ 
+
+1113
+00:25:25,520 --> 00:25:29,990
+perfectly balanced mix of opponent
+difficulty spanning the chosen range.
+
+1114
+00:25:29,990 --> 00:25:30,000
+difficulty spanning the chosen range.
+ 
+
+1115
+00:25:30,000 --> 00:25:32,390
+difficulty spanning the chosen range.
+I know this slide is dense, but you can
+
+1116
+00:25:32,390 --> 00:25:32,400
+I know this slide is dense, but you can
+ 
+
+1117
+00:25:32,400 --> 00:25:34,669
+I know this slide is dense, but you can
+find all code and more details in the
+
+1118
+00:25:34,669 --> 00:25:34,679
+find all code and more details in the
+ 
+
+1119
+00:25:34,679 --> 00:25:42,550
+find all code and more details in the
+GitHub repository.
+
+1120
+00:25:42,550 --> 00:25:42,560
+
+ 
+
+1121
+00:25:42,560 --> 00:25:45,030
+
+Time to evaluate existing models. We
+
+1122
+00:25:45,030 --> 00:25:45,040
+Time to evaluate existing models. We
+ 
+
+1123
+00:25:45,040 --> 00:25:49,150
+Time to evaluate existing models. We
+choose GPT-5 mini and LFM-2 by Liquid
+
+1124
+00:25:49,150 --> 00:25:49,160
+choose GPT-5 mini and LFM-2 by Liquid
+ 
+
+1125
+00:25:49,160 --> 00:25:51,910
+choose GPT-5 mini and LFM-2 by Liquid
+AI, a small fast open model.
+
+1126
+00:25:51,910 --> 00:25:51,920
+AI, a small fast open model.
+ 
+
+1127
+00:25:51,920 --> 00:25:54,310
+AI, a small fast open model.
+Using Verifiers, evaluating models just
+
+1128
+00:25:54,310 --> 00:25:54,320
+Using Verifiers, evaluating models just
+ 
+
+1129
+00:25:54,320 --> 00:25:56,430
+Using Verifiers, evaluating models just
+requires a few commands.
+
+1130
+00:25:56,430 --> 00:25:56,440
+requires a few commands.
+ 
+
+1131
+00:25:56,440 --> 00:25:58,110
+requires a few commands.
+Allowing for some statistical
+
+1132
+00:25:58,110 --> 00:25:58,120
+Allowing for some statistical
+ 
+
+1133
+00:25:58,120 --> 00:26:01,470
+Allowing for some statistical
+variability, GPT-5 mini is excellent at
+
+1134
+00:26:01,470 --> 00:26:01,480
+variability, GPT-5 mini is excellent at
+ 
+
+1135
+00:26:01,480 --> 00:26:03,350
+variability, GPT-5 mini is excellent at
+following format and is a good
+
+1136
+00:26:03,350 --> 00:26:03,360
+following format and is a good
+ 
+
+1137
+00:26:03,360 --> 00:26:06,870
+following format and is a good
+Tic-Tac-Toe player, but not perfect.
+
+1138
+00:26:06,870 --> 00:26:06,880
+Tic-Tac-Toe player, but not perfect.
+ 
+
+1139
+00:26:06,880 --> 00:26:08,910
+Tic-Tac-Toe player, but not perfect.
+The small open model by Liquid AI
+
+1140
+00:26:08,910 --> 00:26:08,920
+The small open model by Liquid AI
+ 
+
+1141
+00:26:08,920 --> 00:26:11,430
+The small open model by Liquid AI
+struggles to follow format and to make
+
+1142
+00:26:11,430 --> 00:26:11,440
+struggles to follow format and to make
+ 
+
+1143
+00:26:11,440 --> 00:26:13,190
+struggles to follow format and to make
+valid moves.
+
+1144
+00:26:13,190 --> 00:26:13,200
+valid moves.
+ 
+
+1145
+00:26:13,200 --> 00:26:15,070
+valid moves.
+It's a weak Tic-Tac-Toe player,
+
+1146
+00:26:15,070 --> 00:26:15,080
+It's a weak Tic-Tac-Toe player,
+ 
+
+1147
+00:26:15,080 --> 00:26:16,870
+It's a weak Tic-Tac-Toe player,
+sometimes winning against a random
+
+1148
+00:26:16,870 --> 00:26:16,880
+sometimes winning against a random
+ 
+
+1149
+00:26:16,880 --> 00:26:20,230
+sometimes winning against a random
+opponent, but rarely surviving against
+
+1150
+00:26:20,230 --> 00:26:20,240
+opponent, but rarely surviving against
+ 
+
+1151
+00:26:20,240 --> 00:26:21,630
+opponent, but rarely surviving against
+an optimal one.
+
+1152
+00:26:21,630 --> 00:26:21,640
+an optimal one.
+ 
+
+1153
+00:26:21,640 --> 00:26:33,590
+an optimal one.
+There is a significant gap.
+
+1154
+00:26:33,590 --> 00:26:33,600
+
+ 
+
+1155
+00:26:33,600 --> 00:26:36,350
+
+We decide to train LFM-2 for some
+
+1156
+00:26:36,350 --> 00:26:36,360
+We decide to train LFM-2 for some
+ 
+
+1157
+00:26:36,360 --> 00:26:37,750
+We decide to train LFM-2 for some
+reasons.
+
+1158
+00:26:37,750 --> 00:26:37,760
+reasons.
+ 
+
+1159
+00:26:37,760 --> 00:26:40,390
+reasons.
+It's a good model for its size, and it's
+
+1160
+00:26:40,390 --> 00:26:40,400
+It's a good model for its size, and it's
+ 
+
+1161
+00:26:40,400 --> 00:26:42,870
+It's a good model for its size, and it's
+an instruct model ideal for transforming
+
+1162
+00:26:42,870 --> 00:26:42,880
+an instruct model ideal for transforming
+ 
+
+1163
+00:26:42,880 --> 00:26:45,669
+an instruct model ideal for transforming
+it into a reasoning model.
+
+1164
+00:26:45,669 --> 00:26:45,679
+it into a reasoning model.
+ 
+
+1165
+00:26:45,679 --> 00:26:47,669
+it into a reasoning model.
+How can we improve it?
+
+1166
+00:26:47,669 --> 00:26:47,679
+How can we improve it?
+ 
+
+1167
+00:26:47,679 --> 00:26:49,630
+How can we improve it?
+We saw that this model struggles to
+
+1168
+00:26:49,630 --> 00:26:49,640
+We saw that this model struggles to
+ 
+
+1169
+00:26:49,640 --> 00:26:52,310
+We saw that this model struggles to
+follow format and often provides invalid
+
+1170
+00:26:52,310 --> 00:26:52,320
+follow format and often provides invalid
+ 
+
+1171
+00:26:52,320 --> 00:26:55,270
+follow format and often provides invalid
+moves. We can use supervised fine-tuning
+
+1172
+00:26:55,270 --> 00:26:55,280
+moves. We can use supervised fine-tuning
+ 
+
+1173
+00:26:55,280 --> 00:26:58,110
+moves. We can use supervised fine-tuning
+for a warm-up phase, where we teach the
+
+1174
+00:26:58,110 --> 00:26:58,120
+for a warm-up phase, where we teach the
+ 
+
+1175
+00:26:58,120 --> 00:27:01,190
+for a warm-up phase, where we teach the
+model the format and valid moves syntax.
+
+1176
+00:27:01,190 --> 00:27:01,200
+model the format and valid moves syntax.
+ 
+
+1177
+00:27:01,200 --> 00:27:03,310
+model the format and valid moves syntax.
+We can then use reinforcement learning
+
+1178
+00:27:03,310 --> 00:27:03,320
+We can then use reinforcement learning
+ 
+
+1179
+00:27:03,320 --> 00:27:05,510
+We can then use reinforcement learning
+to build deeper capabilities.
+
+1180
+00:27:05,510 --> 00:27:05,520
+to build deeper capabilities.
+ 
+
+1181
+00:27:05,520 --> 00:27:08,230
+to build deeper capabilities.
+The first step is generating synthetic
+
+1182
+00:27:08,230 --> 00:27:08,240
+The first step is generating synthetic
+ 
+
+1183
+00:27:08,240 --> 00:27:12,430
+The first step is generating synthetic
+data for supervised fine-tuning.
+
+1184
+00:27:12,430 --> 00:27:12,440
+
+ 
+
+1185
+00:27:12,440 --> 00:27:14,150
+
+Once you have a good environment,
+
+1186
+00:27:14,150 --> 00:27:14,160
+Once you have a good environment,
+ 
+
+1187
+00:27:14,160 --> 00:27:16,270
+Once you have a good environment,
+generating data requires a single
+
+1188
+00:27:16,270 --> 00:27:16,280
+generating data requires a single
+ 
+
+1189
+00:27:16,280 --> 00:27:18,790
+generating data requires a single
+command.
+
+1190
+00:27:18,790 --> 00:27:18,800
+command.
+ 
+
+1191
+00:27:18,800 --> 00:27:21,350
+command.
+Here, we use GPT-5 mini since it
+
+1192
+00:27:21,350 --> 00:27:21,360
+Here, we use GPT-5 mini since it
+ 
+
+1193
+00:27:21,360 --> 00:27:24,270
+Here, we use GPT-5 mini since it
+followed format perfectly. And we don't
+
+1194
+00:27:24,270 --> 00:27:24,280
+followed format perfectly. And we don't
+ 
+
+1195
+00:27:24,280 --> 00:27:27,470
+followed format perfectly. And we don't
+need many examples. We generate 200 and
+
+1196
+00:27:27,470 --> 00:27:27,480
+need many examples. We generate 200 and
+ 
+
+1197
+00:27:27,480 --> 00:27:30,430
+need many examples. We generate 200 and
+filter out losing games to avoid baking
+
+1198
+00:27:30,430 --> 00:27:30,440
+filter out losing games to avoid baking
+ 
+
+1199
+00:27:30,440 --> 00:27:36,710
+filter out losing games to avoid baking
+in suboptimal strategies.
+
+1200
+00:27:36,710 --> 00:27:36,720
+
+ 
+
+1201
+00:27:36,720 --> 00:27:39,350
+
+With this synthetic data at hand, we can
+
+1202
+00:27:39,350 --> 00:27:39,360
+With this synthetic data at hand, we can
+ 
+
+1203
+00:27:39,360 --> 00:27:41,950
+With this synthetic data at hand, we can
+easily spin up a supervised fine-tuning
+
+1204
+00:27:41,950 --> 00:27:41,960
+easily spin up a supervised fine-tuning
+ 
+
+1205
+00:27:41,960 --> 00:27:44,790
+easily spin up a supervised fine-tuning
+run using Prime RL.
+
+1206
+00:27:44,790 --> 00:27:44,800
+run using Prime RL.
+ 
+
+1207
+00:27:44,800 --> 00:27:47,639
+run using Prime RL.
+In this example, I am using a a 96
+
+1208
+00:27:47,639 --> 00:27:47,649
+In this example, I am using a a 96
+ 
+
+1209
+00:27:47,649 --> 00:27:49,070
+In this example, I am using a a 96
+[clears throat] GB
+
+1210
+00:27:49,070 --> 00:27:49,080
+[clears throat] GB
+ 
+
+1211
+00:27:49,080 --> 00:27:52,310
+[clears throat] GB
+GPU, but you can use a smaller one.
+
+1212
+00:27:52,310 --> 00:27:52,320
+GPU, but you can use a smaller one.
+ 
+
+1213
+00:27:52,320 --> 00:27:59,390
+GPU, but you can use a smaller one.
+Training requires only a few minutes.
+
+1214
+00:27:59,390 --> 00:27:59,400
+
+ 
+
+1215
+00:27:59,400 --> 00:28:02,230
+
+Time to evaluate our fine-tuned model.
+
+1216
+00:28:02,230 --> 00:28:02,240
+Time to evaluate our fine-tuned model.
+ 
+
+1217
+00:28:02,240 --> 00:28:04,310
+Time to evaluate our fine-tuned model.
+Compared to the original model, it
+
+1218
+00:28:04,310 --> 00:28:04,320
+Compared to the original model, it
+ 
+
+1219
+00:28:04,320 --> 00:28:07,190
+Compared to the original model, it
+learned format almost perfectly and
+
+1220
+00:28:07,190 --> 00:28:07,200
+learned format almost perfectly and
+ 
+
+1221
+00:28:07,200 --> 00:28:10,270
+learned format almost perfectly and
+reduced the number of invalid moves.
+
+1222
+00:28:10,270 --> 00:28:10,280
+reduced the number of invalid moves.
+ 
+
+1223
+00:28:10,280 --> 00:28:12,830
+reduced the number of invalid moves.
+It also improved the game performance,
+
+1224
+00:28:12,830 --> 00:28:12,840
+It also improved the game performance,
+ 
+
+1225
+00:28:12,840 --> 00:28:15,350
+It also improved the game performance,
+but there is still significant work to
+
+1226
+00:28:15,350 --> 00:28:15,360
+but there is still significant work to
+ 
+
+1227
+00:28:15,360 --> 00:28:19,190
+but there is still significant work to
+do.
+
+1228
+00:28:19,190 --> 00:28:19,200
+
+ 
+
+1229
+00:28:19,200 --> 00:28:21,870
+
+Before jumping into RL training, let's
+
+1230
+00:28:21,870 --> 00:28:21,880
+Before jumping into RL training, let's
+ 
+
+1231
+00:28:21,880 --> 00:28:24,470
+Before jumping into RL training, let's
+do a quick recap of group relative
+
+1232
+00:28:24,470 --> 00:28:24,480
+do a quick recap of group relative
+ 
+
+1233
+00:28:24,480 --> 00:28:27,030
+do a quick recap of group relative
+policy optimization applied to
+
+1234
+00:28:27,030 --> 00:28:27,040
+policy optimization applied to
+ 
+
+1235
+00:28:27,040 --> 00:28:29,110
+policy optimization applied to
+Tic-Tac-Toe.
+
+1236
+00:28:29,110 --> 00:28:29,120
+Tic-Tac-Toe.
+ 
+
+1237
+00:28:29,120 --> 00:28:31,830
+Tic-Tac-Toe.
+Rollouts starting from the same initial
+
+1238
+00:28:31,830 --> 00:28:31,840
+Rollouts starting from the same initial
+ 
+
+1239
+00:28:31,840 --> 00:28:35,230
+Rollouts starting from the same initial
+board, the model plays several games via
+
+1240
+00:28:35,230 --> 00:28:35,240
+board, the model plays several games via
+ 
+
+1241
+00:28:35,240 --> 00:28:38,669
+board, the model plays several games via
+LLM sampling.
+
+1242
+00:28:38,669 --> 00:28:38,679
+
+ 
+
+1243
+00:28:38,679 --> 00:28:41,310
+
+Each rollout is evaluated using
+
+1244
+00:28:41,310 --> 00:28:41,320
+Each rollout is evaluated using
+ 
+
+1245
+00:28:41,320 --> 00:28:43,950
+Each rollout is evaluated using
+deterministic reward function, in our
+
+1246
+00:28:43,950 --> 00:28:43,960
+deterministic reward function, in our
+ 
+
+1247
+00:28:43,960 --> 00:28:47,830
+deterministic reward function, in our
+case, win, format, and invalid moves
+
+1248
+00:28:47,830 --> 00:28:47,840
+case, win, format, and invalid moves
+ 
+
+1249
+00:28:47,840 --> 00:28:50,470
+case, win, format, and invalid moves
+rewards.
+
+1250
+00:28:50,470 --> 00:28:50,480
+
+ 
+
+1251
+00:28:50,480 --> 00:28:52,990
+
+An average score is calculated across
+
+1252
+00:28:52,990 --> 00:28:53,000
+An average score is calculated across
+ 
+
+1253
+00:28:53,000 --> 00:28:55,430
+An average score is calculated across
+the group of rollouts,
+
+1254
+00:28:55,430 --> 00:28:55,440
+the group of rollouts,
+ 
+
+1255
+00:28:55,440 --> 00:28:57,950
+the group of rollouts,
+and each rollout is then compared
+
+1256
+00:28:57,950 --> 00:28:57,960
+and each rollout is then compared
+ 
+
+1257
+00:28:57,960 --> 00:29:01,149
+and each rollout is then compared
+against this average. Advantage
+
+1258
+00:29:01,149 --> 00:29:01,159
+against this average. Advantage
+ 
+
+1259
+00:29:01,159 --> 00:29:03,630
+against this average. Advantage
+computation.
+
+1260
+00:29:03,630 --> 00:29:03,640
+computation.
+ 
+
+1261
+00:29:03,640 --> 00:29:05,830
+computation.
+The model is updated to favor
+
+1262
+00:29:05,830 --> 00:29:05,840
+The model is updated to favor
+ 
+
+1263
+00:29:05,840 --> 00:29:08,310
+The model is updated to favor
+trajectories that did better than the
+
+1264
+00:29:08,310 --> 00:29:08,320
+trajectories that did better than the
+ 
+
+1265
+00:29:08,320 --> 00:29:12,190
+trajectories that did better than the
+group baseline.
+
+1266
+00:29:12,190 --> 00:29:12,200
+
+ 
+
+1267
+00:29:12,200 --> 00:29:16,110
+
+We'll use CISPO, which is an improvement
+
+1268
+00:29:16,110 --> 00:29:16,120
+We'll use CISPO, which is an improvement
+ 
+
+1269
+00:29:16,120 --> 00:29:20,310
+We'll use CISPO, which is an improvement
+over GRPO.
+
+1270
+00:29:20,310 --> 00:29:20,320
+
+ 
+
+1271
+00:29:20,320 --> 00:29:22,390
+
+For reinforcement learning training, I
+
+1272
+00:29:22,390 --> 00:29:22,400
+For reinforcement learning training, I
+ 
+
+1273
+00:29:22,400 --> 00:29:25,790
+For reinforcement learning training, I
+used Verifiers RL, simple trainer. Here,
+
+1274
+00:29:25,790 --> 00:29:25,800
+used Verifiers RL, simple trainer. Here,
+ 
+
+1275
+00:29:25,800 --> 00:29:28,870
+used Verifiers RL, simple trainer. Here,
+we use a GPU for inference and a GPU for
+
+1276
+00:29:28,870 --> 00:29:28,880
+we use a GPU for inference and a GPU for
+ 
+
+1277
+00:29:28,880 --> 00:29:30,149
+we use a GPU for inference and a GPU for
+training.
+
+1278
+00:29:30,149 --> 00:29:30,159
+training.
+ 
+
+1279
+00:29:30,159 --> 00:29:32,110
+training.
+Let's comment some parameters in the
+
+1280
+00:29:32,110 --> 00:29:32,120
+Let's comment some parameters in the
+ 
+
+1281
+00:29:32,120 --> 00:29:34,110
+Let's comment some parameters in the
+training configuration.
+
+1282
+00:29:34,110 --> 00:29:34,120
+training configuration.
+ 
+
+1283
+00:29:34,120 --> 00:29:36,030
+training configuration.
+In this training run, random move
+
+1284
+00:29:36,030 --> 00:29:36,040
+In this training run, random move
+ 
+
+1285
+00:29:36,040 --> 00:29:38,335
+In this training run, random move
+probability is ranging from 20
+
+1286
+00:29:38,335 --> 00:29:38,345
+probability is ranging from 20
+ 
+
+1287
+00:29:38,345 --> 00:29:40,990
+probability is ranging from 20
+[clears throat] to 70%. No purely random
+
+1288
+00:29:40,990 --> 00:29:41,000
+[clears throat] to 70%. No purely random
+ 
+
+1289
+00:29:41,000 --> 00:29:43,710
+[clears throat] to 70%. No purely random
+players and no optimal players. It's a
+
+1290
+00:29:43,710 --> 00:29:43,720
+players and no optimal players. It's a
+ 
+
+1291
+00:29:43,720 --> 00:29:46,149
+players and no optimal players. It's a
+good playground to get signal and learn
+
+1292
+00:29:46,149 --> 00:29:46,159
+good playground to get signal and learn
+ 
+
+1293
+00:29:46,159 --> 00:29:49,030
+good playground to get signal and learn
+both attack and defense.
+
+1294
+00:29:49,030 --> 00:29:49,040
+both attack and defense.
+ 
+
+1295
+00:29:49,040 --> 00:29:51,710
+both attack and defense.
+The num_groups parameter is used to set
+
+1296
+00:29:51,710 --> 00:29:51,720
+The num_groups parameter is used to set
+ 
+
+1297
+00:29:51,720 --> 00:29:53,870
+The num_groups parameter is used to set
+up stratified sampling.
+
+1298
+00:29:53,870 --> 00:29:53,880
+up stratified sampling.
+ 
+
+1299
+00:29:53,880 --> 00:29:56,070
+up stratified sampling.
+When it comes to trainer arguments, we
+
+1300
+00:29:56,070 --> 00:29:56,080
+When it comes to trainer arguments, we
+ 
+
+1301
+00:29:56,080 --> 00:29:57,550
+When it comes to trainer arguments, we
+want our model to learn [clears throat]
+
+1302
+00:29:57,550 --> 00:29:57,560
+want our model to learn [clears throat]
+ 
+
+1303
+00:29:57,560 --> 00:30:01,070
+want our model to learn [clears throat]
+stably while fully utilizing our GPUs
+
+1304
+00:30:01,070 --> 00:30:01,080
+stably while fully utilizing our GPUs
+ 
+
+1305
+00:30:01,080 --> 00:30:02,870
+stably while fully utilizing our GPUs
+without crashing.
+
+1306
+00:30:02,870 --> 00:30:02,880
+without crashing.
+ 
+
+1307
+00:30:02,880 --> 00:30:06,030
+without crashing.
+For tips on how to use the GPU without
+
+1308
+00:30:06,030 --> 00:30:06,040
+For tips on how to use the GPU without
+ 
+
+1309
+00:30:06,040 --> 00:30:08,150
+For tips on how to use the GPU without
+going out of memory, I recommend
+
+1310
+00:30:08,150 --> 00:30:08,160
+going out of memory, I recommend
+ 
+
+1311
+00:30:08,160 --> 00:30:10,430
+going out of memory, I recommend
+checking out the GitHub repo.
+
+1312
+00:30:10,430 --> 00:30:10,440
+checking out the GitHub repo.
+ 
+
+1313
+00:30:10,440 --> 00:30:12,710
+checking out the GitHub repo.
+Here, I want to stress that
+
+1314
+00:30:12,710 --> 00:30:12,720
+Here, I want to stress that
+ 
+
+1315
+00:30:12,720 --> 00:30:14,710
+Here, I want to stress that
+reinforcement learning training is
+
+1316
+00:30:14,710 --> 00:30:14,720
+reinforcement learning training is
+ 
+
+1317
+00:30:14,720 --> 00:30:17,190
+reinforcement learning training is
+sensitive to either parameters and can
+
+1318
+00:30:17,190 --> 00:30:17,200
+sensitive to either parameters and can
+ 
+
+1319
+00:30:17,200 --> 00:30:18,430
+sensitive to either parameters and can
+be unstable.
+
+1320
+00:30:18,430 --> 00:30:18,440
+be unstable.
+ 
+
+1321
+00:30:18,440 --> 00:30:20,710
+be unstable.
+I learned the hard way that batch size
+
+1322
+00:30:20,710 --> 00:30:20,720
+I learned the hard way that batch size
+ 
+
+1323
+00:30:20,720 --> 00:30:23,430
+I learned the hard way that batch size
+is a key parameter. In this environment,
+
+1324
+00:30:23,430 --> 00:30:23,440
+is a key parameter. In this environment,
+ 
+
+1325
+00:30:23,440 --> 00:30:25,790
+is a key parameter. In this environment,
+I observed unstable training and model
+
+1326
+00:30:25,790 --> 00:30:25,800
+I observed unstable training and model
+ 
+
+1327
+00:30:25,800 --> 00:30:28,910
+I observed unstable training and model
+collapse, and experimented with values
+
+1328
+00:30:28,910 --> 00:30:28,920
+collapse, and experimented with values
+ 
+
+1329
+00:30:28,920 --> 00:30:32,150
+collapse, and experimented with values
+lower than 256.
+
+1330
+00:30:32,150 --> 00:30:32,160
+lower than 256.
+ 
+
+1331
+00:30:32,160 --> 00:30:35,150
+lower than 256.
+The explanation is intuitive. Batch size
+
+1332
+00:30:35,150 --> 00:30:35,160
+The explanation is intuitive. Batch size
+ 
+
+1333
+00:30:35,160 --> 00:30:37,670
+The explanation is intuitive. Batch size
+is the number of games used to update
+
+1334
+00:30:37,670 --> 00:30:37,680
+is the number of games used to update
+ 
+
+1335
+00:30:37,680 --> 00:30:40,190
+is the number of games used to update
+the model's weights. If this number is
+
+1336
+00:30:40,190 --> 00:30:40,200
+the model's weights. If this number is
+ 
+
+1337
+00:30:40,200 --> 00:30:43,230
+the model's weights. If this number is
+low, this means learning to play from a
+
+1338
+00:30:43,230 --> 00:30:43,240
+low, this means learning to play from a
+ 
+
+1339
+00:30:43,240 --> 00:30:45,550
+low, this means learning to play from a
+very small number of matches and
+
+1340
+00:30:45,550 --> 00:30:45,560
+very small number of matches and
+ 
+
+1341
+00:30:45,560 --> 00:30:48,390
+very small number of matches and
+opponent types at once. And this likely
+
+1342
+00:30:48,390 --> 00:30:48,400
+opponent types at once. And this likely
+ 
+
+1343
+00:30:48,400 --> 00:30:55,470
+opponent types at once. And this likely
+leads to suboptimal strategies.
+
+1344
+00:30:55,470 --> 00:30:55,480
+
+ 
+
+1345
+00:30:55,480 --> 00:30:58,310
+
+Let's take a look at training plots.
+
+1346
+00:30:58,310 --> 00:30:58,320
+Let's take a look at training plots.
+ 
+
+1347
+00:30:58,320 --> 00:31:00,230
+Let's take a look at training plots.
+Winning reward function and the total
+
+1348
+00:31:00,230 --> 00:31:00,240
+Winning reward function and the total
+ 
+
+1349
+00:31:00,240 --> 00:31:03,310
+Winning reward function and the total
+reward constantly improved.
+
+1350
+00:31:03,310 --> 00:31:03,320
+reward constantly improved.
+ 
+
+1351
+00:31:03,320 --> 00:31:06,230
+reward constantly improved.
+Format reward function was already near
+
+1352
+00:31:06,230 --> 00:31:06,240
+Format reward function was already near
+ 
+
+1353
+00:31:06,240 --> 00:31:08,430
+Format reward function was already near
+perfect and did not change
+
+1354
+00:31:08,430 --> 00:31:08,440
+perfect and did not change
+ 
+
+1355
+00:31:08,440 --> 00:31:10,430
+perfect and did not change
+significantly.
+
+1356
+00:31:10,430 --> 00:31:10,440
+significantly.
+ 
+
+1357
+00:31:10,440 --> 00:31:13,590
+significantly.
+Invalid move penalty function started
+
+1358
+00:31:13,590 --> 00:31:13,600
+Invalid move penalty function started
+ 
+
+1359
+00:31:13,600 --> 00:31:16,310
+Invalid move penalty function started
+well and converged to zero towards the
+
+1360
+00:31:16,310 --> 00:31:16,320
+well and converged to zero towards the
+ 
+
+1361
+00:31:16,320 --> 00:31:18,390
+well and converged to zero towards the
+end of training. It suggests a good
+
+1362
+00:31:18,390 --> 00:31:18,400
+end of training. It suggests a good
+ 
+
+1363
+00:31:18,400 --> 00:31:20,950
+end of training. It suggests a good
+training run, but let's run proper
+
+1364
+00:31:20,950 --> 00:31:20,960
+training run, but let's run proper
+ 
+
+1365
+00:31:20,960 --> 00:31:26,630
+training run, but let's run proper
+evaluation.
+
+1366
+00:31:26,630 --> 00:31:26,640
+
+ 
+
+1367
+00:31:26,640 --> 00:31:28,230
+
+Impressive.
+
+1368
+00:31:28,230 --> 00:31:28,240
+Impressive.
+ 
+
+1369
+00:31:28,240 --> 00:31:30,270
+Impressive.
+Thanks to reinforcement learning, our
+
+1370
+00:31:30,270 --> 00:31:30,280
+Thanks to reinforcement learning, our
+ 
+
+1371
+00:31:30,280 --> 00:31:32,630
+Thanks to reinforcement learning, our
+model has become a very competent
+
+1372
+00:31:32,630 --> 00:31:32,640
+model has become a very competent
+ 
+
+1373
+00:31:32,640 --> 00:31:35,150
+model has become a very competent
+tic-tac-toe player. It dominates random
+
+1374
+00:31:35,150 --> 00:31:35,160
+tic-tac-toe player. It dominates random
+ 
+
+1375
+00:31:35,160 --> 00:31:39,070
+tic-tac-toe player. It dominates random
+players and draws 85% of the time
+
+1376
+00:31:39,070 --> 00:31:39,080
+players and draws 85% of the time
+ 
+
+1377
+00:31:39,080 --> 00:31:41,750
+players and draws 85% of the time
+against an optimal opponent. Invalid
+
+1378
+00:31:41,750 --> 00:31:41,760
+against an optimal opponent. Invalid
+ 
+
+1379
+00:31:41,760 --> 00:31:45,230
+against an optimal opponent. Invalid
+moves have dropped to near zero.
+
+1380
+00:31:45,230 --> 00:31:45,240
+moves have dropped to near zero.
+ 
+
+1381
+00:31:45,240 --> 00:31:48,190
+moves have dropped to near zero.
+These results are already satisfying,
+
+1382
+00:31:48,190 --> 00:31:48,200
+These results are already satisfying,
+ 
+
+1383
+00:31:48,200 --> 00:31:50,510
+These results are already satisfying,
+and one can say that not much more we
+
+1384
+00:31:50,510 --> 00:31:50,520
+and one can say that not much more we
+ 
+
+1385
+00:31:50,520 --> 00:31:57,110
+and one can say that not much more we
+can learn from this example.
+
+1386
+00:31:57,110 --> 00:31:57,120
+
+ 
+
+1387
+00:31:57,120 --> 00:31:59,162
+
+I am a perfectionist, and I'd
+
+1388
+00:31:59,162 --> 00:31:59,172
+I am a perfectionist, and I'd
+ 
+
+1389
+00:31:59,172 --> 00:32:00,510
+I am a perfectionist, and I'd
+[clears throat] like a perfect AI
+
+1390
+00:32:00,510 --> 00:32:00,520
+[clears throat] like a perfect AI
+ 
+
+1391
+00:32:00,520 --> 00:32:01,669
+[clears throat] like a perfect AI
+player.
+
+1392
+00:32:01,669 --> 00:32:01,679
+player.
+ 
+
+1393
+00:32:01,679 --> 00:32:03,910
+player.
+Inspecting the rollouts, I found some
+
+1394
+00:32:03,910 --> 00:32:03,920
+Inspecting the rollouts, I found some
+ 
+
+1395
+00:32:03,920 --> 00:32:06,710
+Inspecting the rollouts, I found some
+recurrent failure modes. In particular,
+
+1396
+00:32:06,710 --> 00:32:06,720
+recurrent failure modes. In particular,
+ 
+
+1397
+00:32:06,720 --> 00:32:09,030
+recurrent failure modes. In particular,
+our model sometimes falls into four
+
+1398
+00:32:09,030 --> 00:32:09,040
+our model sometimes falls into four
+ 
+
+1399
+00:32:09,040 --> 00:32:10,190
+our model sometimes falls into four
+traps.
+
+1400
+00:32:10,190 --> 00:32:10,200
+traps.
+ 
+
+1401
+00:32:10,200 --> 00:32:13,070
+traps.
+This example shows the end of the game.
+
+1402
+00:32:13,070 --> 00:32:13,080
+This example shows the end of the game.
+ 
+
+1403
+00:32:13,080 --> 00:32:16,190
+This example shows the end of the game.
+Our model is not playing ideally, but it
+
+1404
+00:32:16,190 --> 00:32:16,200
+Our model is not playing ideally, but it
+ 
+
+1405
+00:32:16,200 --> 00:32:18,470
+Our model is not playing ideally, but it
+had already lost the game by allowing
+
+1406
+00:32:18,470 --> 00:32:18,480
+had already lost the game by allowing
+ 
+
+1407
+00:32:18,480 --> 00:32:21,030
+had already lost the game by allowing
+the opponent to have two winning pass
+
+1408
+00:32:21,030 --> 00:32:21,040
+the opponent to have two winning pass
+ 
+
+1409
+00:32:21,040 --> 00:32:24,150
+the opponent to have two winning pass
+pass.
+
+1410
+00:32:24,150 --> 00:32:24,160
+
+ 
+
+1411
+00:32:24,160 --> 00:32:27,070
+
+Is it possible to use our RL environment
+
+1412
+00:32:27,070 --> 00:32:27,080
+Is it possible to use our RL environment
+ 
+
+1413
+00:32:27,080 --> 00:32:29,430
+Is it possible to use our RL environment
+to push our model further toward
+
+1414
+00:32:29,430 --> 00:32:29,440
+to push our model further toward
+ 
+
+1415
+00:32:29,440 --> 00:32:32,590
+to push our model further toward
+perfection?
+
+1416
+00:32:32,590 --> 00:32:32,600
+
+ 
+
+1417
+00:32:32,600 --> 00:32:34,110
+
+Let's try.
+
+1418
+00:32:34,110 --> 00:32:34,120
+Let's try.
+ 
+
+1419
+00:32:34,120 --> 00:32:36,150
+Let's try.
+We have to make some changes.
+
+1420
+00:32:36,150 --> 00:32:36,160
+We have to make some changes.
+ 
+
+1421
+00:32:36,160 --> 00:32:39,310
+We have to make some changes.
+In this run, I used the bigger GPUs just
+
+1422
+00:32:39,310 --> 00:32:39,320
+In this run, I used the bigger GPUs just
+ 
+
+1423
+00:32:39,320 --> 00:32:41,590
+In this run, I used the bigger GPUs just
+to experiment quickly. It's probably not
+
+1424
+00:32:41,590 --> 00:32:41,600
+to experiment quickly. It's probably not
+ 
+
+1425
+00:32:41,600 --> 00:32:43,390
+to experiment quickly. It's probably not
+required.
+
+1426
+00:32:43,390 --> 00:32:43,400
+required.
+ 
+
+1427
+00:32:43,400 --> 00:32:46,310
+required.
+First, let's discuss opponent skill.
+
+1428
+00:32:46,310 --> 00:32:46,320
+First, let's discuss opponent skill.
+ 
+
+1429
+00:32:46,320 --> 00:32:48,270
+First, let's discuss opponent skill.
+We increase opponent skill by setting
+
+1430
+00:32:48,270 --> 00:32:48,280
+We increase opponent skill by setting
+ 
+
+1431
+00:32:48,280 --> 00:32:50,590
+We increase opponent skill by setting
+the probability of a random move to
+
+1432
+00:32:50,590 --> 00:32:50,600
+the probability of a random move to
+ 
+
+1433
+00:32:50,600 --> 00:32:54,870
+the probability of a random move to
+range from 0% to 25%.
+
+1434
+00:32:54,870 --> 00:32:54,880
+range from 0% to 25%.
+ 
+
+1435
+00:32:54,880 --> 00:32:57,270
+range from 0% to 25%.
+I also tried making the model play again
+
+1436
+00:32:57,270 --> 00:32:57,280
+I also tried making the model play again
+ 
+
+1437
+00:32:57,280 --> 00:33:00,030
+I also tried making the model play again
+against perfect opponents only, but it
+
+1438
+00:33:00,030 --> 00:33:00,040
+against perfect opponents only, but it
+ 
+
+1439
+00:33:00,040 --> 00:33:02,590
+against perfect opponents only, but it
+didn't work. The model became overly
+
+1440
+00:33:02,590 --> 00:33:02,600
+didn't work. The model became overly
+ 
+
+1441
+00:33:02,600 --> 00:33:05,750
+didn't work. The model became overly
+defensive and failed to exploit errors
+
+1442
+00:33:05,750 --> 00:33:05,760
+defensive and failed to exploit errors
+ 
+
+1443
+00:33:05,760 --> 00:33:10,030
+defensive and failed to exploit errors
+when tested again random players.
+
+1444
+00:33:10,030 --> 00:33:10,040
+when tested again random players.
+ 
+
+1445
+00:33:10,040 --> 00:33:13,550
+when tested again random players.
+But how to make our model explore beyond
+
+1446
+00:33:13,550 --> 00:33:13,560
+But how to make our model explore beyond
+ 
+
+1447
+00:33:13,560 --> 00:33:16,110
+But how to make our model explore beyond
+learned strategies? I made several
+
+1448
+00:33:16,110 --> 00:33:16,120
+learned strategies? I made several
+ 
+
+1449
+00:33:16,120 --> 00:33:18,669
+learned strategies? I made several
+experiments where this model failed to
+
+1450
+00:33:18,669 --> 00:33:18,679
+experiments where this model failed to
+ 
+
+1451
+00:33:18,679 --> 00:33:20,950
+experiments where this model failed to
+improve and forget the suboptimal
+
+1452
+00:33:20,950 --> 00:33:20,960
+improve and forget the suboptimal
+ 
+
+1453
+00:33:20,960 --> 00:33:22,990
+improve and forget the suboptimal
+strategies. We want the model to
+
+1454
+00:33:22,990 --> 00:33:23,000
+strategies. We want the model to
+ 
+
+1455
+00:33:23,000 --> 00:33:25,550
+strategies. We want the model to
+experiment with new approaches.
+
+1456
+00:33:25,550 --> 00:33:25,560
+experiment with new approaches.
+ 
+
+1457
+00:33:25,560 --> 00:33:27,870
+experiment with new approaches.
+And temperature is the right parameter
+
+1458
+00:33:27,870 --> 00:33:27,880
+And temperature is the right parameter
+ 
+
+1459
+00:33:27,880 --> 00:33:29,669
+And temperature is the right parameter
+to tweak.
+
+1460
+00:33:29,669 --> 00:33:29,679
+to tweak.
+ 
+
+1461
+00:33:29,679 --> 00:33:31,870
+to tweak.
+But this is a bit risky. If the
+
+1462
+00:33:31,870 --> 00:33:31,880
+But this is a bit risky. If the
+ 
+
+1463
+00:33:31,880 --> 00:33:34,310
+But this is a bit risky. If the
+temperature is too high, the model can
+
+1464
+00:33:34,310 --> 00:33:34,320
+temperature is too high, the model can
+ 
+
+1465
+00:33:34,320 --> 00:33:36,870
+temperature is too high, the model can
+start generating gibberish.
+
+1466
+00:33:36,870 --> 00:33:36,880
+start generating gibberish.
+ 
+
+1467
+00:33:36,880 --> 00:33:40,390
+start generating gibberish.
+Let's train.
+
+1468
+00:33:40,390 --> 00:33:40,400
+
+ 
+
+1469
+00:33:40,400 --> 00:33:43,470
+
+Things get really interesting. There was
+
+1470
+00:33:43,470 --> 00:33:43,480
+Things get really interesting. There was
+ 
+
+1471
+00:33:43,480 --> 00:33:46,070
+Things get really interesting. There was
+a significant initial drop in winning
+
+1472
+00:33:46,070 --> 00:33:46,080
+a significant initial drop in winning
+ 
+
+1473
+00:33:46,080 --> 00:33:48,470
+a significant initial drop in winning
+reward function and total reward.
+
+1474
+00:33:48,470 --> 00:33:48,480
+reward function and total reward.
+ 
+
+1475
+00:33:48,480 --> 00:33:51,310
+reward function and total reward.
+I interpret this as an exploratory phase
+
+1476
+00:33:51,310 --> 00:33:51,320
+I interpret this as an exploratory phase
+ 
+
+1477
+00:33:51,320 --> 00:33:53,590
+I interpret this as an exploratory phase
+where the model tried new and random
+
+1478
+00:33:53,590 --> 00:33:53,600
+where the model tried new and random
+ 
+
+1479
+00:33:53,600 --> 00:33:55,990
+where the model tried new and random
+strategies, which underperformed at
+
+1480
+00:33:55,990 --> 00:33:56,000
+strategies, which underperformed at
+ 
+
+1481
+00:33:56,000 --> 00:33:59,110
+strategies, which underperformed at
+first, but over time it recovered and
+
+1482
+00:33:59,110 --> 00:33:59,120
+first, but over time it recovered and
+ 
+
+1483
+00:33:59,120 --> 00:34:01,550
+first, but over time it recovered and
+improved to new highs.
+
+1484
+00:34:01,550 --> 00:34:01,560
+improved to new highs.
+ 
+
+1485
+00:34:01,560 --> 00:34:04,190
+improved to new highs.
+Also, format reward function and invalid
+
+1486
+00:34:04,190 --> 00:34:04,200
+Also, format reward function and invalid
+ 
+
+1487
+00:34:04,200 --> 00:34:06,350
+Also, format reward function and invalid
+move penalty function had an initial
+
+1488
+00:34:06,350 --> 00:34:06,360
+move penalty function had an initial
+ 
+
+1489
+00:34:06,360 --> 00:34:09,669
+move penalty function had an initial
+drop, but overall always stayed around
+
+1490
+00:34:09,669 --> 00:34:09,679
+drop, but overall always stayed around
+ 
+
+1491
+00:34:09,679 --> 00:34:12,110
+drop, but overall always stayed around
+their maximum values. Let's move to
+
+1492
+00:34:12,110 --> 00:34:12,120
+their maximum values. Let's move to
+ 
+
+1493
+00:34:12,120 --> 00:34:15,030
+their maximum values. Let's move to
+proper evaluation.
+
+1494
+00:34:15,030 --> 00:34:15,040
+proper evaluation.
+ 
+
+1495
+00:34:15,040 --> 00:34:16,149
+proper evaluation.
+Oh,
+
+1496
+00:34:16,149 --> 00:34:16,159
+Oh,
+ 
+
+1497
+00:34:16,159 --> 00:34:19,030
+Oh,
+we finally got the tic-tac-toe master.
+
+1498
+00:34:19,030 --> 00:34:19,040
+we finally got the tic-tac-toe master.
+ 
+
+1499
+00:34:19,040 --> 00:34:20,030
+we finally got the tic-tac-toe master.
+But
+
+1500
+00:34:20,030 --> 00:34:20,040
+But
+ 
+
+1501
+00:34:20,040 --> 00:34:25,030
+But
+why not playing a game against it?
+
+1502
+00:34:25,030 --> 00:34:25,040
+
+ 
+
+1503
+00:34:25,040 --> 00:34:31,869
+
+Okay, let's make not a perfect move.
+
+1504
+00:34:31,869 --> 00:34:31,879
+
+ 
+
+1505
+00:34:31,879 --> 00:34:34,790
+
+Mhm, we now need to block
+
+1506
+00:34:34,790 --> 00:34:34,800
+Mhm, we now need to block
+ 
+
+1507
+00:34:34,800 --> 00:34:39,030
+Mhm, we now need to block
+the model.
+
+1508
+00:34:39,030 --> 00:34:39,040
+
+ 
+
+1509
+00:34:39,040 --> 00:34:43,310
+
+Let's block it again.
+
+1510
+00:34:43,310 --> 00:34:43,320
+
+ 
+
+1511
+00:34:43,320 --> 00:34:47,510
+
+Oh, no, we lost.
+
+1512
+00:34:47,510 --> 00:34:47,520
+
+ 
+
+1513
+00:34:47,520 --> 00:34:50,869
+
+It could be interesting now to compare
+
+1514
+00:34:50,869 --> 00:34:50,879
+It could be interesting now to compare
+ 
+
+1515
+00:34:50,879 --> 00:34:55,070
+It could be interesting now to compare
+our model performance with GPT-5 Mini,
+
+1516
+00:34:55,070 --> 00:34:55,080
+our model performance with GPT-5 Mini,
+ 
+
+1517
+00:34:55,080 --> 00:34:57,310
+our model performance with GPT-5 Mini,
+the teacher model we used to generate
+
+1518
+00:34:57,310 --> 00:34:57,320
+the teacher model we used to generate
+ 
+
+1519
+00:34:57,320 --> 00:35:00,430
+the teacher model we used to generate
+our synthetic data.
+
+1520
+00:35:00,430 --> 00:35:00,440
+our synthetic data.
+ 
+
+1521
+00:35:00,440 --> 00:35:03,190
+our synthetic data.
+Mhm, against a random opponent,
+
+1522
+00:35:03,190 --> 00:35:03,200
+Mhm, against a random opponent,
+ 
+
+1523
+00:35:03,200 --> 00:35:07,590
+Mhm, against a random opponent,
+performance is very similar.
+
+1524
+00:35:07,590 --> 00:35:07,600
+performance is very similar.
+ 
+
+1525
+00:35:07,600 --> 00:35:12,910
+performance is very similar.
+Let's see against an optimal opponent.
+
+1526
+00:35:12,910 --> 00:35:12,920
+
+ 
+
+1527
+00:35:12,920 --> 00:35:16,870
+
+Oh, in this case, our model is superior.
+
+1528
+00:35:16,870 --> 00:35:16,880
+Oh, in this case, our model is superior.
+ 
+
+1529
+00:35:16,880 --> 00:35:30,830
+Oh, in this case, our model is superior.
+This is a very nice achievement.
+
+1530
+00:35:30,830 --> 00:35:30,840
+
+ 
+
+1531
+00:35:30,840 --> 00:35:32,590
+
+To get these results, I went through
+
+1532
+00:35:32,590 --> 00:35:32,600
+To get these results, I went through
+ 
+
+1533
+00:35:32,600 --> 00:35:35,270
+To get these results, I went through
+several failed experiments, and I'd like
+
+1534
+00:35:35,270 --> 00:35:35,280
+several failed experiments, and I'd like
+ 
+
+1535
+00:35:35,280 --> 00:35:37,430
+several failed experiments, and I'd like
+to share the findings with you.
+
+1536
+00:35:37,430 --> 00:35:37,440
+to share the findings with you.
+ 
+
+1537
+00:35:37,440 --> 00:35:40,030
+to share the findings with you.
+First of all, batch size. If this value
+
+1538
+00:35:40,030 --> 00:35:40,040
+First of all, batch size. If this value
+ 
+
+1539
+00:35:40,040 --> 00:35:42,870
+First of all, batch size. If this value
+is large, yes, your model apparently
+
+1540
+00:35:42,870 --> 00:35:42,880
+is large, yes, your model apparently
+ 
+
+1541
+00:35:42,880 --> 00:35:45,830
+is large, yes, your model apparently
+learns slowly, but in exchange, you get
+
+1542
+00:35:45,830 --> 00:35:45,840
+learns slowly, but in exchange, you get
+ 
+
+1543
+00:35:45,840 --> 00:35:47,349
+learns slowly, but in exchange, you get
+stable training.
+
+1544
+00:35:47,349 --> 00:35:47,359
+stable training.
+ 
+
+1545
+00:35:47,359 --> 00:35:49,630
+stable training.
+If the batch size is small and your
+
+1546
+00:35:49,630 --> 00:35:49,640
+If the batch size is small and your
+ 
+
+1547
+00:35:49,640 --> 00:35:52,230
+If the batch size is small and your
+environment produces diverse matches and
+
+1548
+00:35:52,230 --> 00:35:52,240
+environment produces diverse matches and
+ 
+
+1549
+00:35:52,240 --> 00:35:54,510
+environment produces diverse matches and
+opponent skill, the model will learn
+
+1550
+00:35:54,510 --> 00:35:54,520
+opponent skill, the model will learn
+ 
+
+1551
+00:35:54,520 --> 00:35:57,430
+opponent skill, the model will learn
+from a small number of games at once.
+
+1552
+00:35:57,430 --> 00:35:57,440
+from a small number of games at once.
+ 
+
+1553
+00:35:57,440 --> 00:35:59,030
+from a small number of games at once.
+This can reinforce suboptimal
+
+1554
+00:35:59,030 --> 00:35:59,040
+This can reinforce suboptimal
+ 
+
+1555
+00:35:59,040 --> 00:36:01,430
+This can reinforce suboptimal
+strategies, and you may observe unstable
+
+1556
+00:36:01,430 --> 00:36:01,440
+strategies, and you may observe unstable
+ 
+
+1557
+00:36:01,440 --> 00:36:04,070
+strategies, and you may observe unstable
+training or model collapse.
+
+1558
+00:36:04,070 --> 00:36:04,080
+training or model collapse.
+ 
+
+1559
+00:36:04,080 --> 00:36:07,349
+training or model collapse.
+Second lesson. Watch for hidden biases
+
+1560
+00:36:07,349 --> 00:36:07,359
+Second lesson. Watch for hidden biases
+ 
+
+1561
+00:36:07,359 --> 00:36:09,950
+Second lesson. Watch for hidden biases
+in environments. Let me explain.
+
+1562
+00:36:09,950 --> 00:36:09,960
+in environments. Let me explain.
+ 
+
+1563
+00:36:09,960 --> 00:36:12,110
+in environments. Let me explain.
+In a previous experiment, I used a
+
+1564
+00:36:12,110 --> 00:36:12,120
+In a previous experiment, I used a
+ 
+
+1565
+00:36:12,120 --> 00:36:14,510
+In a previous experiment, I used a
+different minimax algorithm for the
+
+1566
+00:36:14,510 --> 00:36:14,520
+different minimax algorithm for the
+ 
+
+1567
+00:36:14,520 --> 00:36:16,750
+different minimax algorithm for the
+optimal opponent.
+
+1568
+00:36:16,750 --> 00:36:16,760
+optimal opponent.
+ 
+
+1569
+00:36:16,760 --> 00:36:18,110
+optimal opponent.
+I thought this was an implementation
+
+1570
+00:36:18,110 --> 00:36:18,120
+I thought this was an implementation
+ 
+
+1571
+00:36:18,120 --> 00:36:20,750
+I thought this was an implementation
+detail and let code handle it.
+
+1572
+00:36:20,750 --> 00:36:20,760
+detail and let code handle it.
+ 
+
+1573
+00:36:20,760 --> 00:36:23,270
+detail and let code handle it.
+I got great benchmark results, but then
+
+1574
+00:36:23,270 --> 00:36:23,280
+I got great benchmark results, but then
+ 
+
+1575
+00:36:23,280 --> 00:36:25,310
+I got great benchmark results, but then
+playing against the model, I realized
+
+1576
+00:36:25,310 --> 00:36:25,320
+playing against the model, I realized
+ 
+
+1577
+00:36:25,320 --> 00:36:27,550
+playing against the model, I realized
+that it was clueless.
+
+1578
+00:36:27,550 --> 00:36:27,560
+that it was clueless.
+ 
+
+1579
+00:36:27,560 --> 00:36:29,710
+that it was clueless.
+Looking better at minimax, this had a
+
+1580
+00:36:29,710 --> 00:36:29,720
+Looking better at minimax, this had a
+ 
+
+1581
+00:36:29,720 --> 00:36:32,190
+Looking better at minimax, this had a
+bias. If multiple moves had the same
+
+1582
+00:36:32,190 --> 00:36:32,200
+bias. If multiple moves had the same
+ 
+
+1583
+00:36:32,200 --> 00:36:34,990
+bias. If multiple moves had the same
+optimal scores, the first free position
+
+1584
+00:36:34,990 --> 00:36:35,000
+optimal scores, the first free position
+ 
+
+1585
+00:36:35,000 --> 00:36:37,550
+optimal scores, the first free position
+was always selected. I basically was
+
+1586
+00:36:37,550 --> 00:36:37,560
+was always selected. I basically was
+ 
+
+1587
+00:36:37,560 --> 00:36:39,670
+was always selected. I basically was
+training my model against a specific
+
+1588
+00:36:39,670 --> 00:36:39,680
+training my model against a specific
+ 
+
+1589
+00:36:39,680 --> 00:36:42,670
+training my model against a specific
+type of optimal player. Over many games,
+
+1590
+00:36:42,670 --> 00:36:42,680
+type of optimal player. Over many games,
+ 
+
+1591
+00:36:42,680 --> 00:36:47,750
+type of optimal player. Over many games,
+the model simply memorized it.
+
+1592
+00:36:47,750 --> 00:36:47,760
+
+ 
+
+1593
+00:36:47,760 --> 00:36:49,950
+
+Now, what about model choice? You can
+
+1594
+00:36:49,950 --> 00:36:49,960
+Now, what about model choice? You can
+ 
+
+1595
+00:36:49,960 --> 00:36:52,110
+Now, what about model choice? You can
+start from a model which is already
+
+1596
+00:36:52,110 --> 00:36:52,120
+start from a model which is already
+ 
+
+1597
+00:36:52,120 --> 00:36:54,310
+start from a model which is already
+trained for reasoning, but they tend to
+
+1598
+00:36:54,310 --> 00:36:54,320
+trained for reasoning, but they tend to
+ 
+
+1599
+00:36:54,320 --> 00:36:56,830
+trained for reasoning, but they tend to
+output long thinking traces.
+
+1600
+00:36:56,830 --> 00:36:56,840
+output long thinking traces.
+ 
+
+1601
+00:36:56,840 --> 00:36:59,030
+output long thinking traces.
+If you have limited GPU resources and
+
+1602
+00:36:59,030 --> 00:36:59,040
+If you have limited GPU resources and
+ 
+
+1603
+00:36:59,040 --> 00:37:01,630
+If you have limited GPU resources and
+time, you may end up truncating most of
+
+1604
+00:37:01,630 --> 00:37:01,640
+time, you may end up truncating most of
+ 
+
+1605
+00:37:01,640 --> 00:37:04,190
+time, you may end up truncating most of
+the longer completion at the beginning
+
+1606
+00:37:04,190 --> 00:37:04,200
+the longer completion at the beginning
+ 
+
+1607
+00:37:04,200 --> 00:37:06,910
+the longer completion at the beginning
+to fit the short limits. This means
+
+1608
+00:37:06,910 --> 00:37:06,920
+to fit the short limits. This means
+ 
+
+1609
+00:37:06,920 --> 00:37:09,150
+to fit the short limits. This means
+wasted budget and also the risk of
+
+1610
+00:37:09,150 --> 00:37:09,160
+wasted budget and also the risk of
+ 
+
+1611
+00:37:09,160 --> 00:37:11,790
+wasted budget and also the risk of
+damaging the model's intelligence.
+
+1612
+00:37:11,790 --> 00:37:11,800
+damaging the model's intelligence.
+ 
+
+1613
+00:37:11,800 --> 00:37:14,550
+damaging the model's intelligence.
+It might make more sense to start from
+
+1614
+00:37:14,550 --> 00:37:14,560
+It might make more sense to start from
+ 
+
+1615
+00:37:14,560 --> 00:37:17,110
+It might make more sense to start from
+an initial model and transform it to
+
+1616
+00:37:17,110 --> 00:37:17,120
+an initial model and transform it to
+ 
+
+1617
+00:37:17,120 --> 00:37:20,550
+an initial model and transform it to
+into a reasoning model for your task.
+
+1618
+00:37:20,550 --> 00:37:20,560
+into a reasoning model for your task.
+ 
+
+1619
+00:37:20,560 --> 00:37:23,550
+into a reasoning model for your task.
+Another point about models, it could be
+
+1620
+00:37:23,550 --> 00:37:23,560
+Another point about models, it could be
+ 
+
+1621
+00:37:23,560 --> 00:37:25,590
+Another point about models, it could be
+hard to push very small models to
+
+1622
+00:37:25,590 --> 00:37:25,600
+hard to push very small models to
+ 
+
+1623
+00:37:25,600 --> 00:37:27,030
+hard to push very small models to
+competency.
+
+1624
+00:37:27,030 --> 00:37:27,040
+competency.
+ 
+
+1625
+00:37:27,040 --> 00:37:29,630
+competency.
+This, of course, depends on the task.
+
+1626
+00:37:29,630 --> 00:37:29,640
+This, of course, depends on the task.
+ 
+
+1627
+00:37:29,640 --> 00:37:31,830
+This, of course, depends on the task.
+What I recommend, evaluate the base
+
+1628
+00:37:31,830 --> 00:37:31,840
+What I recommend, evaluate the base
+ 
+
+1629
+00:37:31,840 --> 00:37:34,349
+What I recommend, evaluate the base
+model in your environment, look at a few
+
+1630
+00:37:34,349 --> 00:37:34,359
+model in your environment, look at a few
+ 
+
+1631
+00:37:34,359 --> 00:37:36,870
+model in your environment, look at a few
+completions, choose a model that shows
+
+1632
+00:37:36,870 --> 00:37:36,880
+completions, choose a model that shows
+ 
+
+1633
+00:37:36,880 --> 00:37:39,550
+completions, choose a model that shows
+promising behaviors, even if the numbers
+
+1634
+00:37:39,550 --> 00:37:39,560
+promising behaviors, even if the numbers
+ 
+
+1635
+00:37:39,560 --> 00:37:45,550
+promising behaviors, even if the numbers
+are not satisfying yet.
+
+1636
+00:37:45,550 --> 00:37:45,560
+
+ 
+
+1637
+00:37:45,560 --> 00:37:48,390
+
+In general, it is always a good idea to
+
+1638
+00:37:48,390 --> 00:37:48,400
+In general, it is always a good idea to
+ 
+
+1639
+00:37:48,400 --> 00:37:50,830
+In general, it is always a good idea to
+inspect some rollouts to see the model
+
+1640
+00:37:50,830 --> 00:37:50,840
+inspect some rollouts to see the model
+ 
+
+1641
+00:37:50,840 --> 00:37:53,590
+inspect some rollouts to see the model
+evolve. Also, after training, do not
+
+1642
+00:37:53,590 --> 00:37:53,600
+evolve. Also, after training, do not
+ 
+
+1643
+00:37:53,600 --> 00:37:55,910
+evolve. Also, after training, do not
+stop at programmatic evaluation. Try the
+
+1644
+00:37:55,910 --> 00:37:55,920
+stop at programmatic evaluation. Try the
+ 
+
+1645
+00:37:55,920 --> 00:37:58,590
+stop at programmatic evaluation. Try the
+model in the real task.
+
+1646
+00:37:58,590 --> 00:37:58,600
+model in the real task.
+ 
+
+1647
+00:37:58,600 --> 00:38:01,230
+model in the real task.
+The final recommendation is natural to
+
+1648
+00:38:01,230 --> 00:38:01,240
+The final recommendation is natural to
+ 
+
+1649
+00:38:01,240 --> 00:38:03,349
+The final recommendation is natural to
+watch your logs and plots when you start
+
+1650
+00:38:03,349 --> 00:38:03,359
+watch your logs and plots when you start
+ 
+
+1651
+00:38:03,359 --> 00:38:06,430
+watch your logs and plots when you start
+training to identify early out of memory
+
+1652
+00:38:06,430 --> 00:38:06,440
+training to identify early out of memory
+ 
+
+1653
+00:38:06,440 --> 00:38:09,790
+training to identify early out of memory
+errors or instability. It's difficult
+
+1654
+00:38:09,790 --> 00:38:09,800
+errors or instability. It's difficult
+ 
+
+1655
+00:38:09,800 --> 00:38:12,030
+errors or instability. It's difficult
+for me, too, but once training begins
+
+1656
+00:38:12,030 --> 00:38:12,040
+for me, too, but once training begins
+ 
+
+1657
+00:38:12,040 --> 00:38:14,510
+for me, too, but once training begins
+well, I suggest stopping staring at
+
+1658
+00:38:14,510 --> 00:38:14,520
+well, I suggest stopping staring at
+ 
+
+1659
+00:38:14,520 --> 00:38:16,430
+well, I suggest stopping staring at
+plots for a while. Reinforcement
+
+1660
+00:38:16,430 --> 00:38:16,440
+plots for a while. Reinforcement
+ 
+
+1661
+00:38:16,440 --> 00:38:18,550
+plots for a while. Reinforcement
+learning is slow and takes time to see
+
+1662
+00:38:18,550 --> 00:38:18,560
+learning is slow and takes time to see
+ 
+
+1663
+00:38:18,560 --> 00:38:21,430
+learning is slow and takes time to see
+progress. If you continually monitor it,
+
+1664
+00:38:21,430 --> 00:38:21,440
+progress. If you continually monitor it,
+ 
+
+1665
+00:38:21,440 --> 00:38:23,670
+progress. If you continually monitor it,
+you risk the temptation to stop it and
+
+1666
+00:38:23,670 --> 00:38:23,680
+you risk the temptation to stop it and
+ 
+
+1667
+00:38:23,680 --> 00:38:26,750
+you risk the temptation to stop it and
+tweak something prematurely. While a
+
+1668
+00:38:26,750 --> 00:38:26,760
+tweak something prematurely. While a
+ 
+
+1669
+00:38:26,760 --> 00:38:29,110
+tweak something prematurely. While a
+slowly progressing run can be a
+
+1670
+00:38:29,110 --> 00:38:29,120
+slowly progressing run can be a
+ 
+
+1671
+00:38:29,120 --> 00:38:31,310
+slowly progressing run can be a
+surprisingly good well given enough
+
+1672
+00:38:31,310 --> 00:38:31,320
+surprisingly good well given enough
+ 
+
+1673
+00:38:31,320 --> 00:38:33,910
+surprisingly good well given enough
+time. So, start training and go for a
+
+1674
+00:38:33,910 --> 00:38:33,920
+time. So, start training and go for a
+ 
+
+1675
+00:38:33,920 --> 00:38:39,990
+time. So, start training and go for a
+walk.
+
+1676
+00:38:39,990 --> 00:38:40,000
+
+ 
+
+1677
+00:38:40,000 --> 00:38:42,750
+
+During this presentation, we mapped the
+
+1678
+00:38:42,750 --> 00:38:42,760
+During this presentation, we mapped the
+ 
+
+1679
+00:38:42,760 --> 00:38:44,710
+During this presentation, we mapped the
+reinforcement learning concept to the
+
+1680
+00:38:44,710 --> 00:38:44,720
+reinforcement learning concept to the
+ 
+
+1681
+00:38:44,720 --> 00:38:46,830
+reinforcement learning concept to the
+language models domain.
+
+1682
+00:38:46,830 --> 00:38:46,840
+language models domain.
+ 
+
+1683
+00:38:46,840 --> 00:38:48,990
+language models domain.
+Then, I introduced various files, an
+
+1684
+00:38:48,990 --> 00:38:49,000
+Then, I introduced various files, an
+ 
+
+1685
+00:38:49,000 --> 00:38:50,590
+Then, I introduced various files, an
+open-source library to build
+
+1686
+00:38:50,590 --> 00:38:50,600
+open-source library to build
+ 
+
+1687
+00:38:50,600 --> 00:38:53,110
+open-source library to build
+environments as of Flo R active base.
+
+1688
+00:38:53,110 --> 00:38:53,120
+environments as of Flo R active base.
+ 
+
+1689
+00:38:53,120 --> 00:38:55,310
+environments as of Flo R active base.
+Finally, I walked you through my
+
+1690
+00:38:55,310 --> 00:38:55,320
+Finally, I walked you through my
+ 
+
+1691
+00:38:55,320 --> 00:38:57,670
+Finally, I walked you through my
+experiments where I took a small model
+
+1692
+00:38:57,670 --> 00:38:57,680
+experiments where I took a small model
+ 
+
+1693
+00:38:57,680 --> 00:39:00,190
+experiments where I took a small model
+and turned it to into a tic-tac-toe
+
+1694
+00:39:00,190 --> 00:39:00,200
+and turned it to into a tic-tac-toe
+ 
+
+1695
+00:39:00,200 --> 00:39:02,510
+and turned it to into a tic-tac-toe
+master using supervised fine-tuning and
+
+1696
+00:39:02,510 --> 00:39:02,520
+master using supervised fine-tuning and
+ 
+
+1697
+00:39:02,520 --> 00:39:04,349
+master using supervised fine-tuning and
+reinforcement learning with verifiable
+
+1698
+00:39:04,349 --> 00:39:04,359
+reinforcement learning with verifiable
+ 
+
+1699
+00:39:04,359 --> 00:39:05,670
+reinforcement learning with verifiable
+rewards.
+
+1700
+00:39:05,670 --> 00:39:05,680
+rewards.
+ 
+
+1701
+00:39:05,680 --> 00:39:07,750
+rewards.
+We did not just show the model how to
+
+1702
+00:39:07,750 --> 00:39:07,760
+We did not just show the model how to
+ 
+
+1703
+00:39:07,760 --> 00:39:10,470
+We did not just show the model how to
+play. We gave it a space to play and
+
+1704
+00:39:10,470 --> 00:39:10,480
+play. We gave it a space to play and
+ 
+
+1705
+00:39:10,480 --> 00:39:13,950
+play. We gave it a space to play and
+guided it through rewards.
+
+1706
+00:39:13,950 --> 00:39:13,960
+guided it through rewards.
+ 
+
+1707
+00:39:13,960 --> 00:39:15,910
+guided it through rewards.
+Nowadays, reinforcement learning
+
+1708
+00:39:15,910 --> 00:39:15,920
+Nowadays, reinforcement learning
+ 
+
+1709
+00:39:15,920 --> 00:39:17,910
+Nowadays, reinforcement learning
+complements supervised fine-tuning in
+
+1710
+00:39:17,910 --> 00:39:17,920
+complements supervised fine-tuning in
+ 
+
+1711
+00:39:17,920 --> 00:39:20,230
+complements supervised fine-tuning in
+language models post-training.
+
+1712
+00:39:20,230 --> 00:39:20,240
+language models post-training.
+ 
+
+1713
+00:39:20,240 --> 00:39:22,550
+language models post-training.
+You can do this at home, too.
+
+1714
+00:39:22,550 --> 00:39:22,560
+You can do this at home, too.
+ 
+
+1715
+00:39:22,560 --> 00:39:25,550
+You can do this at home, too.
+If you can define a clear reward signal,
+
+1716
+00:39:25,550 --> 00:39:25,560
+If you can define a clear reward signal,
+ 
+
+1717
+00:39:25,560 --> 00:39:27,510
+If you can define a clear reward signal,
+you can build an environment and train a
+
+1718
+00:39:27,510 --> 00:39:27,520
+you can build an environment and train a
+ 
+
+1719
+00:39:27,520 --> 00:39:30,510
+you can build an environment and train a
+small, specialized model to beat a large
+
+1720
+00:39:30,510 --> 00:39:30,520
+small, specialized model to beat a large
+ 
+
+1721
+00:39:30,520 --> 00:39:32,990
+small, specialized model to beat a large
+closed model on a specific task at a
+
+1722
+00:39:32,990 --> 00:39:33,000
+closed model on a specific task at a
+ 
+
+1723
+00:39:33,000 --> 00:39:37,150
+closed model on a specific task at a
+fraction of the cost.
+
+1724
+00:39:37,150 --> 00:39:37,160
+
+ 
+
+1725
+00:39:37,160 --> 00:39:39,510
+
+I want to leave you with a few ideas and
+
+1726
+00:39:39,510 --> 00:39:39,520
+I want to leave you with a few ideas and
+ 
+
+1727
+00:39:39,520 --> 00:39:41,950
+I want to leave you with a few ideas and
+resources on this topic. All what I
+
+1728
+00:39:41,950 --> 00:39:41,960
+resources on this topic. All what I
+ 
+
+1729
+00:39:41,960 --> 00:39:45,550
+resources on this topic. All what I
+shared today can be found in my free LLM
+
+1730
+00:39:45,550 --> 00:39:45,560
+shared today can be found in my free LLM
+ 
+
+1731
+00:39:45,560 --> 00:39:48,030
+shared today can be found in my free LLM
+RL environment link course, where I go
+
+1732
+00:39:48,030 --> 00:39:48,040
+RL environment link course, where I go
+ 
+
+1733
+00:39:48,040 --> 00:39:50,910
+RL environment link course, where I go
+deep at explaining detail.
+
+1734
+00:39:50,910 --> 00:39:50,920
+deep at explaining detail.
+ 
+
+1735
+00:39:50,920 --> 00:39:53,910
+deep at explaining detail.
+Take a look and give a star.
+
+1736
+00:39:53,910 --> 00:39:53,920
+Take a look and give a star.
+ 
+
+1737
+00:39:53,920 --> 00:39:56,070
+Take a look and give a star.
+To figure out what others are building,
+
+1738
+00:39:56,070 --> 00:39:56,080
+To figure out what others are building,
+ 
+
+1739
+00:39:56,080 --> 00:39:59,070
+To figure out what others are building,
+explore the environments hub.
+
+1740
+00:39:59,070 --> 00:39:59,080
+explore the environments hub.
+ 
+
+1741
+00:39:59,080 --> 00:40:01,430
+explore the environments hub.
+And what to build next?
+
+1742
+00:40:01,430 --> 00:40:01,440
+And what to build next?
+ 
+
+1743
+00:40:01,440 --> 00:40:03,670
+And what to build next?
+Something I'm very excited about is
+
+1744
+00:40:03,670 --> 00:40:03,680
+Something I'm very excited about is
+ 
+
+1745
+00:40:03,680 --> 00:40:06,310
+Something I'm very excited about is
+this. Train a small language models on
+
+1746
+00:40:06,310 --> 00:40:06,320
+this. Train a small language models on
+ 
+
+1747
+00:40:06,320 --> 00:40:08,910
+this. Train a small language models on
+two three tools you often use and try to
+
+1748
+00:40:08,910 --> 00:40:08,920
+two three tools you often use and try to
+ 
+
+1749
+00:40:08,920 --> 00:40:11,030
+two three tools you often use and try to
+out perform a large model in that
+
+1750
+00:40:11,030 --> 00:40:11,040
+out perform a large model in that
+ 
+
+1751
+00:40:11,040 --> 00:40:12,830
+out perform a large model in that
+specific task.
+
+1752
+00:40:12,830 --> 00:40:12,840
+specific task.
+ 
+
+1753
+00:40:12,840 --> 00:40:15,230
+specific task.
+I recommend the Wiki search example in
+
+1754
+00:40:15,230 --> 00:40:15,240
+I recommend the Wiki search example in
+ 
+
+1755
+00:40:15,240 --> 00:40:17,790
+I recommend the Wiki search example in
+the Prime RL repository as a starting
+
+1756
+00:40:17,790 --> 00:40:17,800
+the Prime RL repository as a starting
+ 
+
+1757
+00:40:17,800 --> 00:40:21,230
+the Prime RL repository as a starting
+point.
+
+1758
+00:40:21,230 --> 00:40:21,240
+
+ 
+
+1759
+00:40:21,240 --> 00:40:23,680
+
+Thank you.
+

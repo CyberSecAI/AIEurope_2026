@@ -1,0 +1,4745 @@
+1
+00:00:15,519 --> 00:00:18,870
+
+Well, welcome.
+
+2
+00:00:18,870 --> 00:00:18,880
+Well, welcome.
+ 
+
+3
+00:00:18,880 --> 00:00:21,510
+Well, welcome.
+Let's get started.
+
+4
+00:00:21,510 --> 00:00:21,520
+Let's get started.
+ 
+
+5
+00:00:21,520 --> 00:00:23,029
+Let's get started.
+This
+
+6
+00:00:23,029 --> 00:00:23,039
+This
+ 
+
+7
+00:00:23,039 --> 00:00:25,750
+This
+is an MCP application.
+
+8
+00:00:25,750 --> 00:00:25,760
+is an MCP application.
+ 
+
+9
+00:00:25,760 --> 00:00:27,670
+is an MCP application.
+That's an agent shipping its own
+
+10
+00:00:27,670 --> 00:00:27,680
+That's an agent shipping its own
+ 
+
+11
+00:00:27,680 --> 00:00:29,429
+That's an agent shipping its own
+interface, not through like a plug-in,
+
+12
+00:00:29,429 --> 00:00:29,439
+interface, not through like a plug-in,
+ 
+
+13
+00:00:29,439 --> 00:00:31,910
+interface, not through like a plug-in,
+not through an SDK, not rendered on the
+
+14
+00:00:31,910 --> 00:00:31,920
+not through an SDK, not rendered on the
+ 
+
+15
+00:00:31,920 --> 00:00:35,670
+not through an SDK, not rendered on the
+fly by the model on the client side or
+
+16
+00:00:35,670 --> 00:00:35,680
+fly by the model on the client side or
+ 
+
+17
+00:00:35,680 --> 00:00:37,910
+fly by the model on the client side or
+hardcoded into the product. That is
+
+18
+00:00:37,910 --> 00:00:37,920
+hardcoded into the product. That is
+ 
+
+19
+00:00:37,920 --> 00:00:39,910
+hardcoded into the product. That is
+something that is served over an MCP
+
+20
+00:00:39,910 --> 00:00:39,920
+something that is served over an MCP
+ 
+
+21
+00:00:39,920 --> 00:00:42,069
+something that is served over an MCP
+server. And you can take the server, put
+
+22
+00:00:42,069 --> 00:00:42,079
+server. And you can take the server, put
+ 
+
+23
+00:00:42,079 --> 00:00:43,270
+server. And you can take the server, put
+it into cloud, you can put it into
+
+24
+00:00:43,270 --> 00:00:43,280
+it into cloud, you can put it into
+ 
+
+25
+00:00:43,280 --> 00:00:45,670
+it into cloud, you can put it into
+chatbt, you can put it into VS code
+
+26
+00:00:45,670 --> 00:00:45,680
+chatbt, you can put it into VS code
+ 
+
+27
+00:00:45,680 --> 00:00:50,229
+chatbt, you can put it into VS code
+cursor and it will just [\h__\h] work.
+
+28
+00:00:50,229 --> 00:00:50,239
+
+ 
+
+29
+00:00:50,239 --> 00:00:53,670
+
+And that I think is kind of cool because
+
+30
+00:00:53,670 --> 00:00:53,680
+And that I think is kind of cool because
+ 
+
+31
+00:00:53,680 --> 00:00:55,990
+And that I think is kind of cool because
+for doing that you need something that a
+
+32
+00:00:55,990 --> 00:00:56,000
+for doing that you need something that a
+ 
+
+33
+00:00:56,000 --> 00:00:58,389
+for doing that you need something that a
+lot of things that we're want in the
+
+34
+00:00:58,389 --> 00:00:58,399
+lot of things that we're want in the
+ 
+
+35
+00:00:58,399 --> 00:01:00,069
+lot of things that we're want in the
+ecosystem do not offer. You need
+
+36
+00:01:00,069 --> 00:01:00,079
+ecosystem do not offer. You need
+ 
+
+37
+00:01:00,079 --> 00:01:01,910
+ecosystem do not offer. You need
+semantics. You need to have both sides
+
+38
+00:01:01,910 --> 00:01:01,920
+semantics. You need to have both sides
+ 
+
+39
+00:01:01,920 --> 00:01:04,469
+semantics. You need to have both sides
+the client and the server to understand
+
+40
+00:01:04,469 --> 00:01:04,479
+the client and the server to understand
+ 
+
+41
+00:01:04,479 --> 00:01:06,469
+the client and the server to understand
+what each side is talking to understand
+
+42
+00:01:06,469 --> 00:01:06,479
+what each side is talking to understand
+ 
+
+43
+00:01:06,479 --> 00:01:08,469
+what each side is talking to understand
+how you render this understand that
+
+44
+00:01:08,469 --> 00:01:08,479
+how you render this understand that
+ 
+
+45
+00:01:08,479 --> 00:01:11,750
+how you render this understand that
+there's a UI coming. And for that you
+
+46
+00:01:11,750 --> 00:01:11,760
+there's a UI coming. And for that you
+ 
+
+47
+00:01:11,760 --> 00:01:13,670
+there's a UI coming. And for that you
+need a protocol.
+
+48
+00:01:13,670 --> 00:01:13,680
+need a protocol.
+ 
+
+49
+00:01:13,680 --> 00:01:16,469
+need a protocol.
+And the best part about this an MCP
+
+50
+00:01:16,469 --> 00:01:16,479
+And the best part about this an MCP
+ 
+
+51
+00:01:16,479 --> 00:01:18,630
+And the best part about this an MCP
+server doesn't just ship an app or can
+
+52
+00:01:18,630 --> 00:01:18,640
+server doesn't just ship an app or can
+ 
+
+53
+00:01:18,640 --> 00:01:20,950
+server doesn't just ship an app or can
+ship an app. It can also ship tools with
+
+54
+00:01:20,950 --> 00:01:20,960
+ship an app. It can also ship tools with
+ 
+
+55
+00:01:20,960 --> 00:01:23,510
+ship an app. It can also ship tools with
+it and so you can interact with it with
+
+56
+00:01:23,510 --> 00:01:23,520
+it and so you can interact with it with
+ 
+
+57
+00:01:23,520 --> 00:01:25,590
+it and so you can interact with it with
+the application as a human and you can
+
+58
+00:01:25,590 --> 00:01:25,600
+the application as a human and you can
+ 
+
+59
+00:01:25,600 --> 00:01:27,190
+the application as a human and you can
+have the model interact with it through
+
+60
+00:01:27,190 --> 00:01:27,200
+have the model interact with it through
+ 
+
+61
+00:01:27,200 --> 00:01:29,429
+have the model interact with it through
+tools which is I think a very unique
+
+62
+00:01:29,429 --> 00:01:29,439
+tools which is I think a very unique
+ 
+
+63
+00:01:29,439 --> 00:01:31,910
+tools which is I think a very unique
+thing that I think we have not explored
+
+64
+00:01:31,910 --> 00:01:31,920
+thing that I think we have not explored
+ 
+
+65
+00:01:31,920 --> 00:01:34,870
+thing that I think we have not explored
+much just yet.
+
+66
+00:01:34,870 --> 00:01:34,880
+much just yet.
+ 
+
+67
+00:01:34,880 --> 00:01:37,510
+much just yet.
+Okay, but let's quickly rewind a little
+
+68
+00:01:37,510 --> 00:01:37,520
+Okay, but let's quickly rewind a little
+ 
+
+69
+00:01:37,520 --> 00:01:39,590
+Okay, but let's quickly rewind a little
+bit from this what I think is a really
+
+70
+00:01:39,590 --> 00:01:39,600
+bit from this what I think is a really
+ 
+
+71
+00:01:39,600 --> 00:01:43,590
+bit from this what I think is a really
+cool glimpse into the future of MCP into
+
+72
+00:01:43,590 --> 00:01:43,600
+cool glimpse into the future of MCP into
+ 
+
+73
+00:01:43,600 --> 00:01:46,630
+cool glimpse into the future of MCP into
+over a year ago 18 months an eternity in
+
+74
+00:01:46,630 --> 00:01:46,640
+over a year ago 18 months an eternity in
+ 
+
+75
+00:01:46,640 --> 00:01:49,429
+over a year ago 18 months an eternity in
+AI life cycle. Um, all of this did not
+
+76
+00:01:49,429 --> 00:01:49,439
+AI life cycle. Um, all of this did not
+ 
+
+77
+00:01:49,439 --> 00:01:51,429
+AI life cycle. Um, all of this did not
+exist. There was just a little spec
+
+78
+00:01:51,429 --> 00:01:51,439
+exist. There was just a little spec
+ 
+
+79
+00:01:51,439 --> 00:01:54,389
+exist. There was just a little spec
+document, a few SDKs, uh, mostly written
+
+80
+00:01:54,389 --> 00:01:54,399
+document, a few SDKs, uh, mostly written
+ 
+
+81
+00:01:54,399 --> 00:01:57,749
+document, a few SDKs, uh, mostly written
+by claude, local only with little more
+
+82
+00:01:57,749 --> 00:01:57,759
+by claude, local only with little more
+ 
+
+83
+00:01:57,759 --> 00:02:00,950
+by claude, local only with little more
+than just tools. And in that last 18 or
+
+84
+00:02:00,950 --> 00:02:00,960
+than just tools. And in that last 18 or
+ 
+
+85
+00:02:00,960 --> 00:02:03,109
+than just tools. And in that last 18 or
+12 months, you guys have been absolutely
+
+86
+00:02:03,109 --> 00:02:03,119
+12 months, you guys have been absolutely
+ 
+
+87
+00:02:03,119 --> 00:02:05,270
+12 months, you guys have been absolutely
+crazy building stuff um, building
+
+88
+00:02:05,270 --> 00:02:05,280
+crazy building stuff um, building
+ 
+
+89
+00:02:05,280 --> 00:02:07,429
+crazy building stuff um, building
+servers, building um, and crazy
+
+90
+00:02:07,429 --> 00:02:07,439
+servers, building um, and crazy
+ 
+
+91
+00:02:07,439 --> 00:02:09,589
+servers, building um, and crazy
+ecosystem around this. And we on our
+
+92
+00:02:09,589 --> 00:02:09,599
+ecosystem around this. And we on our
+ 
+
+93
+00:02:09,599 --> 00:02:11,990
+ecosystem around this. And we on our
+side have been busy busy taken this
+
+94
+00:02:11,990 --> 00:02:12,000
+side have been busy busy taken this
+ 
+
+95
+00:02:12,000 --> 00:02:14,309
+side have been busy busy taken this
+local only thing added remote
+
+96
+00:02:14,309 --> 00:02:14,319
+local only thing added remote
+ 
+
+97
+00:02:14,319 --> 00:02:16,550
+local only thing added remote
+capabilities added centralized
+
+98
+00:02:16,550 --> 00:02:16,560
+capabilities added centralized
+ 
+
+99
+00:02:16,560 --> 00:02:19,510
+capabilities added centralized
+authorization added new primitives like
+
+100
+00:02:19,510 --> 00:02:19,520
+authorization added new primitives like
+ 
+
+101
+00:02:19,520 --> 00:02:22,070
+authorization added new primitives like
+elicitation and tasks and last but not
+
+102
+00:02:22,070 --> 00:02:22,080
+elicitation and tasks and last but not
+ 
+
+103
+00:02:22,080 --> 00:02:24,550
+elicitation and tasks and last but not
+least added new experimental features to
+
+104
+00:02:24,550 --> 00:02:24,560
+least added new experimental features to
+ 
+
+105
+00:02:24,560 --> 00:02:26,949
+least added new experimental features to
+the protocol like the MCP applications
+
+106
+00:02:26,949 --> 00:02:26,959
+the protocol like the MCP applications
+ 
+
+107
+00:02:26,959 --> 00:02:30,150
+the protocol like the MCP applications
+that you've just seen.
+
+108
+00:02:30,150 --> 00:02:30,160
+that you've just seen.
+ 
+
+109
+00:02:30,160 --> 00:02:32,949
+that you've just seen.
+And in the meantime, we have reached I
+
+110
+00:02:32,949 --> 00:02:32,959
+And in the meantime, we have reached I
+ 
+
+111
+00:02:32,959 --> 00:02:34,790
+And in the meantime, we have reached I
+think a really cool milestone because
+
+112
+00:02:34,790 --> 00:02:34,800
+think a really cool milestone because
+ 
+
+113
+00:02:34,800 --> 00:02:36,070
+think a really cool milestone because
+again you all of you have been
+
+114
+00:02:36,070 --> 00:02:36,080
+again you all of you have been
+ 
+
+115
+00:02:36,080 --> 00:02:37,830
+again you all of you have been
+absolutely crazy building building and
+
+116
+00:02:37,830 --> 00:02:37,840
+absolutely crazy building building and
+ 
+
+117
+00:02:37,840 --> 00:02:39,670
+absolutely crazy building building and
+building of course luckily with the help
+
+118
+00:02:39,670 --> 00:02:39,680
+building of course luckily with the help
+ 
+
+119
+00:02:39,680 --> 00:02:43,350
+building of course luckily with the help
+of uh a bunch of agents. Um we're now
+
+120
+00:02:43,350 --> 00:02:43,360
+of uh a bunch of agents. Um we're now
+ 
+
+121
+00:02:43,360 --> 00:02:46,550
+of uh a bunch of agents. Um we're now
+like at 110 million monthly downloads
+
+122
+00:02:46,550 --> 00:02:46,560
+like at 110 million monthly downloads
+ 
+
+123
+00:02:46,560 --> 00:02:49,350
+like at 110 million monthly downloads
+and that's just of course not us in our
+
+124
+00:02:49,350 --> 00:02:49,360
+and that's just of course not us in our
+ 
+
+125
+00:02:49,360 --> 00:02:51,830
+and that's just of course not us in our
+clients and servers. That's like OpenAI,
+
+126
+00:02:51,830 --> 00:02:51,840
+clients and servers. That's like OpenAI,
+ 
+
+127
+00:02:51,840 --> 00:02:54,229
+clients and servers. That's like OpenAI,
+it's agents SDK, it's Google's ADK, it's
+
+128
+00:02:54,229 --> 00:02:54,239
+it's agents SDK, it's Google's ADK, it's
+ 
+
+129
+00:02:54,239 --> 00:02:56,790
+it's agents SDK, it's Google's ADK, it's
+lang chain, thousands of frameworks and
+
+130
+00:02:56,790 --> 00:02:56,800
+lang chain, thousands of frameworks and
+ 
+
+131
+00:02:56,800 --> 00:02:58,309
+lang chain, thousands of frameworks and
+tools that you might have never even
+
+132
+00:02:58,309 --> 00:02:58,319
+tools that you might have never even
+ 
+
+133
+00:02:58,319 --> 00:03:00,390
+tools that you might have never even
+heard of it pulling it as a as a
+
+134
+00:03:00,390 --> 00:03:00,400
+heard of it pulling it as a as a
+ 
+
+135
+00:03:00,400 --> 00:03:02,550
+heard of it pulling it as a as a
+dependency, which means there's one
+
+136
+00:03:02,550 --> 00:03:02,560
+dependency, which means there's one
+ 
+
+137
+00:03:02,560 --> 00:03:05,830
+dependency, which means there's one
+common standard that all of us have at
+
+138
+00:03:05,830 --> 00:03:05,840
+common standard that all of us have at
+ 
+
+139
+00:03:05,840 --> 00:03:09,270
+common standard that all of us have at
+our disposal to speak to each other. Um,
+
+140
+00:03:09,270 --> 00:03:09,280
+our disposal to speak to each other. Um,
+ 
+
+141
+00:03:09,280 --> 00:03:11,589
+our disposal to speak to each other. Um,
+just a bit for context, uh, React, one
+
+142
+00:03:11,589 --> 00:03:11,599
+just a bit for context, uh, React, one
+ 
+
+143
+00:03:11,599 --> 00:03:14,070
+just a bit for context, uh, React, one
+of the most successful um, uh,
+
+144
+00:03:14,070 --> 00:03:14,080
+of the most successful um, uh,
+ 
+
+145
+00:03:14,080 --> 00:03:15,750
+of the most successful um, uh,
+open-source projects probably of the
+
+146
+00:03:15,750 --> 00:03:15,760
+open-source projects probably of the
+ 
+
+147
+00:03:15,760 --> 00:03:17,830
+open-source projects probably of the
+last decades, took roughly double the
+
+148
+00:03:17,830 --> 00:03:17,840
+last decades, took roughly double the
+ 
+
+149
+00:03:17,840 --> 00:03:19,110
+last decades, took roughly double the
+amount of time to reach that download
+
+150
+00:03:19,110 --> 00:03:19,120
+amount of time to reach that download
+ 
+
+151
+00:03:19,120 --> 00:03:21,190
+amount of time to reach that download
+volume. And in the meantime, of course,
+
+152
+00:03:21,190 --> 00:03:21,200
+volume. And in the meantime, of course,
+ 
+
+153
+00:03:21,200 --> 00:03:22,470
+volume. And in the meantime, of course,
+you all have been building really really
+
+154
+00:03:22,470 --> 00:03:22,480
+you all have been building really really
+ 
+
+155
+00:03:22,480 --> 00:03:24,470
+you all have been building really really
+cool servers from like little toy
+
+156
+00:03:24,470 --> 00:03:24,480
+cool servers from like little toy
+ 
+
+157
+00:03:24,480 --> 00:03:26,229
+cool servers from like little toy
+projects of WhatsApp servers and blender
+
+158
+00:03:26,229 --> 00:03:26,239
+projects of WhatsApp servers and blender
+ 
+
+159
+00:03:26,239 --> 00:03:28,790
+projects of WhatsApp servers and blender
+servers uh to building SAS integrations
+
+160
+00:03:28,790 --> 00:03:28,800
+servers uh to building SAS integrations
+ 
+
+161
+00:03:28,800 --> 00:03:30,630
+servers uh to building SAS integrations
+like Linear, Slack and Notion that are
+
+162
+00:03:30,630 --> 00:03:30,640
+like Linear, Slack and Notion that are
+ 
+
+163
+00:03:30,640 --> 00:03:32,869
+like Linear, Slack and Notion that are
+really powering what everyone does every
+
+164
+00:03:32,869 --> 00:03:32,879
+really powering what everyone does every
+ 
+
+165
+00:03:32,879 --> 00:03:35,110
+really powering what everyone does every
+day when they use MCPs. But most
+
+166
+00:03:35,110 --> 00:03:35,120
+day when they use MCPs. But most
+ 
+
+167
+00:03:35,120 --> 00:03:37,190
+day when they use MCPs. But most
+importantly, the vast majority of MCP
+
+168
+00:03:37,190 --> 00:03:37,200
+importantly, the vast majority of MCP
+ 
+
+169
+00:03:37,200 --> 00:03:39,030
+importantly, the vast majority of MCP
+server most of all of us have built are
+
+170
+00:03:39,030 --> 00:03:39,040
+server most of all of us have built are
+ 
+
+171
+00:03:39,040 --> 00:03:41,110
+server most of all of us have built are
+behind closed doors uh connecting
+
+172
+00:03:41,110 --> 00:03:41,120
+behind closed doors uh connecting
+ 
+
+173
+00:03:41,120 --> 00:03:44,390
+behind closed doors uh connecting
+companies systems to agents uh and AI
+
+174
+00:03:44,390 --> 00:03:44,400
+companies systems to agents uh and AI
+ 
+
+175
+00:03:44,400 --> 00:03:46,229
+companies systems to agents uh and AI
+applications.
+
+176
+00:03:46,229 --> 00:03:46,239
+applications.
+ 
+
+177
+00:03:46,239 --> 00:03:47,990
+applications.
+But I still think this is just the
+
+178
+00:03:47,990 --> 00:03:48,000
+But I still think this is just the
+ 
+
+179
+00:03:48,000 --> 00:03:51,509
+But I still think this is just the
+absolute beginning of where we are
+
+180
+00:03:51,509 --> 00:03:51,519
+absolute beginning of where we are
+ 
+
+181
+00:03:51,519 --> 00:03:54,390
+absolute beginning of where we are
+because I think 2025 was all about
+
+182
+00:03:54,390 --> 00:03:54,400
+because I think 2025 was all about
+ 
+
+183
+00:03:54,400 --> 00:03:57,190
+because I think 2025 was all about
+exploring in 2026 is all about putting
+
+184
+00:03:57,190 --> 00:03:57,200
+exploring in 2026 is all about putting
+ 
+
+185
+00:03:57,200 --> 00:03:59,910
+exploring in 2026 is all about putting
+these agents into production because if
+
+186
+00:03:59,910 --> 00:03:59,920
+these agents into production because if
+ 
+
+187
+00:03:59,920 --> 00:04:02,550
+these agents into production because if
+you really think about in my mind 2024
+
+188
+00:04:02,550 --> 00:04:02,560
+you really think about in my mind 2024
+ 
+
+189
+00:04:02,560 --> 00:04:04,309
+you really think about in my mind 2024
+we just built a bunch of like demos and
+
+190
+00:04:04,309 --> 00:04:04,319
+we just built a bunch of like demos and
+ 
+
+191
+00:04:04,319 --> 00:04:06,789
+we just built a bunch of like demos and
+showed cool stuff to people and there
+
+192
+00:04:06,789 --> 00:04:06,799
+showed cool stuff to people and there
+ 
+
+193
+00:04:06,799 --> 00:04:09,429
+showed cool stuff to people and there
+was a little bit of a buzz there. 2025
+
+194
+00:04:09,429 --> 00:04:09,439
+was a little bit of a buzz there. 2025
+ 
+
+195
+00:04:09,439 --> 00:04:11,190
+was a little bit of a buzz there. 2025
+was really all about coding agents.
+
+196
+00:04:11,190 --> 00:04:11,200
+was really all about coding agents.
+ 
+
+197
+00:04:11,200 --> 00:04:13,030
+was really all about coding agents.
+coding agent if you really think about
+
+198
+00:04:13,030 --> 00:04:13,040
+coding agent if you really think about
+ 
+
+199
+00:04:13,040 --> 00:04:15,830
+coding agent if you really think about
+are the most ideal scenario for an
+
+200
+00:04:15,830 --> 00:04:15,840
+are the most ideal scenario for an
+ 
+
+201
+00:04:15,840 --> 00:04:18,310
+are the most ideal scenario for an
+agent. It's local, it's verifiable, you
+
+202
+00:04:18,310 --> 00:04:18,320
+agent. It's local, it's verifiable, you
+ 
+
+203
+00:04:18,320 --> 00:04:20,550
+agent. It's local, it's verifiable, you
+can call a compiler like you have a
+
+204
+00:04:20,550 --> 00:04:20,560
+can call a compiler like you have a
+ 
+
+205
+00:04:20,560 --> 00:04:22,629
+can call a compiler like you have a
+developer who can fix [\h__\h] if it goes
+
+206
+00:04:22,629 --> 00:04:22,639
+developer who can fix [\h__\h] if it goes
+ 
+
+207
+00:04:22,639 --> 00:04:25,030
+developer who can fix [\h__\h] if it goes
+wrong in front of the in front of the
+
+208
+00:04:25,030 --> 00:04:25,040
+wrong in front of the in front of the
+ 
+
+209
+00:04:25,040 --> 00:04:27,590
+wrong in front of the in front of the
+computer. Uh and you can display a 2y
+
+210
+00:04:27,590 --> 00:04:27,600
+computer. Uh and you can display a 2y
+ 
+
+211
+00:04:27,600 --> 00:04:30,950
+computer. Uh and you can display a 2y
+interface and the user is quite happy.
+
+212
+00:04:30,950 --> 00:04:30,960
+interface and the user is quite happy.
+ 
+
+213
+00:04:30,960 --> 00:04:32,790
+interface and the user is quite happy.
+But I think now with the capabilities of
+
+214
+00:04:32,790 --> 00:04:32,800
+But I think now with the capabilities of
+ 
+
+215
+00:04:32,800 --> 00:04:35,350
+But I think now with the capabilities of
+the model increasing, we are going into
+
+216
+00:04:35,350 --> 00:04:35,360
+the model increasing, we are going into
+ 
+
+217
+00:04:35,360 --> 00:04:37,510
+the model increasing, we are going into
+a new era which I think this year will
+
+218
+00:04:37,510 --> 00:04:37,520
+a new era which I think this year will
+ 
+
+219
+00:04:37,520 --> 00:04:39,350
+a new era which I think this year will
+be we will see this start where we're
+
+220
+00:04:39,350 --> 00:04:39,360
+be we will see this start where we're
+ 
+
+221
+00:04:39,360 --> 00:04:41,189
+be we will see this start where we're
+not just doing coding agents. We're
+
+222
+00:04:41,189 --> 00:04:41,199
+not just doing coding agents. We're
+ 
+
+223
+00:04:41,199 --> 00:04:43,350
+not just doing coding agents. We're
+going to have general agents that will
+
+224
+00:04:43,350 --> 00:04:43,360
+going to have general agents that will
+ 
+
+225
+00:04:43,360 --> 00:04:45,670
+going to have general agents that will
+do real knowledge worker stuff like
+
+226
+00:04:45,670 --> 00:04:45,680
+do real knowledge worker stuff like
+ 
+
+227
+00:04:45,680 --> 00:04:47,990
+do real knowledge worker stuff like
+things a financial analysis analyst want
+
+228
+00:04:47,990 --> 00:04:48,000
+things a financial analysis analyst want
+ 
+
+229
+00:04:48,000 --> 00:04:50,950
+things a financial analysis analyst want
+to do a marketing person want to do. And
+
+230
+00:04:50,950 --> 00:04:50,960
+to do a marketing person want to do. And
+ 
+
+231
+00:04:50,960 --> 00:04:54,230
+to do a marketing person want to do. And
+they need one thing in particular. They
+
+232
+00:04:54,230 --> 00:04:54,240
+they need one thing in particular. They
+ 
+
+233
+00:04:54,240 --> 00:04:55,749
+they need one thing in particular. They
+don't need a local agent that calls a
+
+234
+00:04:55,749 --> 00:04:55,759
+don't need a local agent that calls a
+ 
+
+235
+00:04:55,759 --> 00:04:57,670
+don't need a local agent that calls a
+compiler. what they need is something
+
+236
+00:04:57,670 --> 00:04:57,680
+compiler. what they need is something
+ 
+
+237
+00:04:57,680 --> 00:04:59,510
+compiler. what they need is something
+that could connect to like five SAS
+
+238
+00:04:59,510 --> 00:04:59,520
+that could connect to like five SAS
+ 
+
+239
+00:04:59,520 --> 00:05:02,150
+that could connect to like five SAS
+applications and a and a shared drive
+
+240
+00:05:02,150 --> 00:05:02,160
+applications and a and a shared drive
+ 
+
+241
+00:05:02,160 --> 00:05:04,070
+applications and a and a shared drive
+because the most important part for them
+
+242
+00:05:04,070 --> 00:05:04,080
+because the most important part for them
+ 
+
+243
+00:05:04,080 --> 00:05:07,189
+because the most important part for them
+for an agent is connectivity and in my
+
+244
+00:05:07,189 --> 00:05:07,199
+for an agent is connectivity and in my
+ 
+
+245
+00:05:07,199 --> 00:05:09,670
+for an agent is connectivity and in my
+mind connectivity is not one thing if
+
+246
+00:05:09,670 --> 00:05:09,680
+mind connectivity is not one thing if
+ 
+
+247
+00:05:09,680 --> 00:05:11,590
+mind connectivity is not one thing if
+one if someone tells you there's one
+
+248
+00:05:11,590 --> 00:05:11,600
+one if someone tells you there's one
+ 
+
+249
+00:05:11,600 --> 00:05:12,950
+one if someone tells you there's one
+solution to all your connectivity
+
+250
+00:05:12,950 --> 00:05:12,960
+solution to all your connectivity
+ 
+
+251
+00:05:12,960 --> 00:05:16,310
+solution to all your connectivity
+problem be it computer use becp
+
+252
+00:05:16,310 --> 00:05:16,320
+problem be it computer use becp
+ 
+
+253
+00:05:16,320 --> 00:05:18,150
+problem be it computer use becp
+they are probably pretty wrong because
+
+254
+00:05:18,150 --> 00:05:18,160
+they are probably pretty wrong because
+ 
+
+255
+00:05:18,160 --> 00:05:20,070
+they are probably pretty wrong because
+in the right because the right thing of
+
+256
+00:05:20,070 --> 00:05:20,080
+in the right because the right thing of
+ 
+
+257
+00:05:20,080 --> 00:05:22,070
+in the right because the right thing of
+course is that it always means it
+
+258
+00:05:22,070 --> 00:05:22,080
+course is that it always means it
+ 
+
+259
+00:05:22,080 --> 00:05:24,070
+course is that it always means it
+depends and there's a real a big
+
+260
+00:05:24,070 --> 00:05:24,080
+depends and there's a real a big
+ 
+
+261
+00:05:24,080 --> 00:05:26,230
+depends and there's a real a big
+connectivity stack and there's right
+
+262
+00:05:26,230 --> 00:05:26,240
+connectivity stack and there's right
+ 
+
+263
+00:05:26,240 --> 00:05:28,870
+connectivity stack and there's right
+tool for the right job. And in my mind,
+
+264
+00:05:28,870 --> 00:05:28,880
+tool for the right job. And in my mind,
+ 
+
+265
+00:05:28,880 --> 00:05:30,550
+tool for the right job. And in my mind,
+there are three major things that you
+
+266
+00:05:30,550 --> 00:05:30,560
+there are three major things that you
+ 
+
+267
+00:05:30,560 --> 00:05:32,070
+there are three major things that you
+want to consider building an agent in
+
+268
+00:05:32,070 --> 00:05:32,080
+want to consider building an agent in
+ 
+
+269
+00:05:32,080 --> 00:05:34,950
+want to consider building an agent in
+2026. It's skills, MCP, and of course,
+
+270
+00:05:34,950 --> 00:05:34,960
+2026. It's skills, MCP, and of course,
+ 
+
+271
+00:05:34,960 --> 00:05:37,430
+2026. It's skills, MCP, and of course,
+like CLI or computer use depending on
+
+272
+00:05:37,430 --> 00:05:37,440
+like CLI or computer use depending on
+ 
+
+273
+00:05:37,440 --> 00:05:39,830
+like CLI or computer use depending on
+your use case. And they have three very
+
+274
+00:05:39,830 --> 00:05:39,840
+your use case. And they have three very
+ 
+
+275
+00:05:39,840 --> 00:05:41,430
+your use case. And they have three very
+distinct things that they can do and
+
+276
+00:05:41,430 --> 00:05:41,440
+distinct things that they can do and
+ 
+
+277
+00:05:41,440 --> 00:05:43,350
+distinct things that they can do and
+three different things you want to
+
+278
+00:05:43,350 --> 00:05:43,360
+three different things you want to
+ 
+
+279
+00:05:43,360 --> 00:05:46,870
+three different things you want to
+consider when you build your agent.
+
+280
+00:05:46,870 --> 00:05:46,880
+consider when you build your agent.
+ 
+
+281
+00:05:46,880 --> 00:05:48,950
+consider when you build your agent.
+Number one, skills of course is just
+
+282
+00:05:48,950 --> 00:05:48,960
+Number one, skills of course is just
+ 
+
+283
+00:05:48,960 --> 00:05:50,469
+Number one, skills of course is just
+like domain knowledge. It's just like
+
+284
+00:05:50,469 --> 00:05:50,479
+like domain knowledge. It's just like
+ 
+
+285
+00:05:50,479 --> 00:05:53,110
+like domain knowledge. It's just like
+capture specific capabilities put into a
+
+286
+00:05:53,110 --> 00:05:53,120
+capture specific capabilities put into a
+ 
+
+287
+00:05:53,120 --> 00:05:54,629
+capture specific capabilities put into a
+very simple file and it's mostly
+
+288
+00:05:54,629 --> 00:05:54,639
+very simple file and it's mostly
+ 
+
+289
+00:05:54,639 --> 00:05:56,790
+very simple file and it's mostly
+reusable. There's some minor differences
+
+290
+00:05:56,790 --> 00:05:56,800
+reusable. There's some minor differences
+ 
+
+291
+00:05:56,800 --> 00:05:59,189
+reusable. There's some minor differences
+between the different platform.
+
+292
+00:05:59,189 --> 00:05:59,199
+between the different platform.
+ 
+
+293
+00:05:59,199 --> 00:06:01,590
+between the different platform.
+Of course, CLI is very popular when
+
+294
+00:06:01,590 --> 00:06:01,600
+Of course, CLI is very popular when
+ 
+
+295
+00:06:01,600 --> 00:06:03,590
+Of course, CLI is very popular when
+local coding agents. It's an amazing
+
+296
+00:06:03,590 --> 00:06:03,600
+local coding agents. It's an amazing
+ 
+
+297
+00:06:03,600 --> 00:06:06,390
+local coding agents. It's an amazing
+tool to get simply started to have
+
+298
+00:06:06,390 --> 00:06:06,400
+tool to get simply started to have
+ 
+
+299
+00:06:06,400 --> 00:06:08,309
+tool to get simply started to have
+something that you can compose in a bash
+
+300
+00:06:08,309 --> 00:06:08,319
+something that you can compose in a bash
+ 
+
+301
+00:06:08,319 --> 00:06:10,309
+something that you can compose in a bash
+that you that automatically discover
+
+302
+00:06:10,309 --> 00:06:10,319
+that you that automatically discover
+ 
+
+303
+00:06:10,319 --> 00:06:11,430
+that you that automatically discover
+where the model can automatically
+
+304
+00:06:11,430 --> 00:06:11,440
+where the model can automatically
+ 
+
+305
+00:06:11,440 --> 00:06:13,670
+where the model can automatically
+discover what the CLI is capable of. And
+
+306
+00:06:13,670 --> 00:06:13,680
+discover what the CLI is capable of. And
+ 
+
+307
+00:06:13,680 --> 00:06:15,670
+discover what the CLI is capable of. And
+most importantly, if you have things
+
+308
+00:06:15,670 --> 00:06:15,680
+most importantly, if you have things
+ 
+
+309
+00:06:15,680 --> 00:06:18,390
+most importantly, if you have things
+that are like CLIs, like GitHub, Git,
+
+310
+00:06:18,390 --> 00:06:18,400
+that are like CLIs, like GitHub, Git,
+ 
+
+311
+00:06:18,400 --> 00:06:19,670
+that are like CLIs, like GitHub, Git,
+and other things that are in
+
+312
+00:06:19,670 --> 00:06:19,680
+and other things that are in
+ 
+
+313
+00:06:19,680 --> 00:06:22,390
+and other things that are in
+pre-training, CLI is an amazing solution
+
+314
+00:06:22,390 --> 00:06:22,400
+pre-training, CLI is an amazing solution
+ 
+
+315
+00:06:22,400 --> 00:06:24,629
+pre-training, CLI is an amazing solution
+for your connectivity part. And they're
+
+316
+00:06:24,629 --> 00:06:24,639
+for your connectivity part. And they're
+ 
+
+317
+00:06:24,639 --> 00:06:26,150
+for your connectivity part. And they're
+particularly good when you have a local
+
+318
+00:06:26,150 --> 00:06:26,160
+particularly good when you have a local
+ 
+
+319
+00:06:26,160 --> 00:06:28,469
+particularly good when you have a local
+agent where you can assume a sandbox
+
+320
+00:06:28,469 --> 00:06:28,479
+agent where you can assume a sandbox
+ 
+
+321
+00:06:28,479 --> 00:06:30,230
+agent where you can assume a sandbox
+where you can assume a code execution
+
+322
+00:06:30,230 --> 00:06:30,240
+where you can assume a code execution
+ 
+
+323
+00:06:30,240 --> 00:06:32,790
+where you can assume a code execution
+environment. But if you don't have this,
+
+324
+00:06:32,790 --> 00:06:32,800
+environment. But if you don't have this,
+ 
+
+325
+00:06:32,800 --> 00:06:34,550
+environment. But if you don't have this,
+if you need rich semantics, when you
+
+326
+00:06:34,550 --> 00:06:34,560
+if you need rich semantics, when you
+ 
+
+327
+00:06:34,560 --> 00:06:37,430
+if you need rich semantics, when you
+need a UI that can display longunning
+
+328
+00:06:37,430 --> 00:06:37,440
+need a UI that can display longunning
+ 
+
+329
+00:06:37,440 --> 00:06:39,270
+need a UI that can display longunning
+tasks, when you can have when you need
+
+330
+00:06:39,270 --> 00:06:39,280
+tasks, when you can have when you need
+ 
+
+331
+00:06:39,280 --> 00:06:41,270
+tasks, when you can have when you need
+things like resources, when you need to
+
+332
+00:06:41,270 --> 00:06:41,280
+things like resources, when you need to
+ 
+
+333
+00:06:41,280 --> 00:06:43,430
+things like resources, when you need to
+build something that is full decoupled
+
+334
+00:06:43,430 --> 00:06:43,440
+build something that is full decoupled
+ 
+
+335
+00:06:43,440 --> 00:06:45,590
+build something that is full decoupled
+and needs platform independence or you
+
+336
+00:06:45,590 --> 00:06:45,600
+and needs platform independence or you
+ 
+
+337
+00:06:45,600 --> 00:06:47,350
+and needs platform independence or you
+don't have a sandbox, when you need
+
+338
+00:06:47,350 --> 00:06:47,360
+don't have a sandbox, when you need
+ 
+
+339
+00:06:47,360 --> 00:06:50,230
+don't have a sandbox, when you need
+things like authorization, governance
+
+340
+00:06:50,230 --> 00:06:50,240
+things like authorization, governance
+ 
+
+341
+00:06:50,240 --> 00:06:53,189
+things like authorization, governance
+policies or short to say boring enter
+
+342
+00:06:53,189 --> 00:06:53,199
+policies or short to say boring enter
+ 
+
+343
+00:06:53,199 --> 00:06:55,830
+policies or short to say boring enter
+boring but important enterprise stuff or
+
+344
+00:06:55,830 --> 00:06:55,840
+boring but important enterprise stuff or
+ 
+
+345
+00:06:55,840 --> 00:06:58,870
+boring but important enterprise stuff or
+if you want to have experiments like MCP
+
+346
+00:06:58,870 --> 00:06:58,880
+if you want to have experiments like MCP
+ 
+
+347
+00:06:58,880 --> 00:07:01,670
+if you want to have experiments like MCP
+applications or what comes soon skills
+
+348
+00:07:01,670 --> 00:07:01,680
+applications or what comes soon skills
+ 
+
+349
+00:07:01,680 --> 00:07:05,189
+applications or what comes soon skills
+over MCP, then I think MCP is this like
+
+350
+00:07:05,189 --> 00:07:05,199
+over MCP, then I think MCP is this like
+ 
+
+351
+00:07:05,199 --> 00:07:07,029
+over MCP, then I think MCP is this like
+additional connective tissue that is
+
+352
+00:07:07,029 --> 00:07:07,039
+additional connective tissue that is
+ 
+
+353
+00:07:07,039 --> 00:07:09,589
+additional connective tissue that is
+just yet another tool in the toolbox for
+
+354
+00:07:09,589 --> 00:07:09,599
+just yet another tool in the toolbox for
+ 
+
+355
+00:07:09,599 --> 00:07:12,469
+just yet another tool in the toolbox for
+you to build an amazing agent. And so
+
+356
+00:07:12,469 --> 00:07:12,479
+you to build an amazing agent. And so
+ 
+
+357
+00:07:12,479 --> 00:07:15,430
+you to build an amazing agent. And so
+this is all to say that I think in 2026
+
+358
+00:07:15,430 --> 00:07:15,440
+this is all to say that I think in 2026
+ 
+
+359
+00:07:15,440 --> 00:07:16,950
+this is all to say that I think in 2026
+we're going to start building agents
+
+360
+00:07:16,950 --> 00:07:16,960
+we're going to start building agents
+ 
+
+361
+00:07:16,960 --> 00:07:19,110
+we're going to start building agents
+that use all of it. They don't use one
+
+362
+00:07:19,110 --> 00:07:19,120
+that use all of it. They don't use one
+ 
+
+363
+00:07:19,120 --> 00:07:20,629
+that use all of it. They don't use one
+thing, they use all of it and they use
+
+364
+00:07:20,629 --> 00:07:20,639
+thing, they use all of it and they use
+ 
+
+365
+00:07:20,639 --> 00:07:24,950
+thing, they use all of it and they use
+them quite seamlessly together.
+
+366
+00:07:24,950 --> 00:07:24,960
+them quite seamlessly together.
+ 
+
+367
+00:07:24,960 --> 00:07:27,430
+them quite seamlessly together.
+But I don't think we're quite there just
+
+368
+00:07:27,430 --> 00:07:27,440
+But I don't think we're quite there just
+ 
+
+369
+00:07:27,440 --> 00:07:28,950
+But I don't think we're quite there just
+yet
+
+370
+00:07:28,950 --> 00:07:28,960
+yet
+ 
+
+371
+00:07:28,960 --> 00:07:31,589
+yet
+because we need to build a lot of stuff.
+
+372
+00:07:31,589 --> 00:07:31,599
+because we need to build a lot of stuff.
+ 
+
+373
+00:07:31,599 --> 00:07:35,830
+because we need to build a lot of stuff.
+Partially um because our agents kind of
+
+374
+00:07:35,830 --> 00:07:35,840
+Partially um because our agents kind of
+ 
+
+375
+00:07:35,840 --> 00:07:38,469
+Partially um because our agents kind of
+still suck um and partially because I
+
+376
+00:07:38,469 --> 00:07:38,479
+still suck um and partially because I
+ 
+
+377
+00:07:38,479 --> 00:07:39,670
+still suck um and partially because I
+think we just haven't talked enough
+
+378
+00:07:39,670 --> 00:07:39,680
+think we just haven't talked enough
+ 
+
+379
+00:07:39,680 --> 00:07:41,430
+think we just haven't talked enough
+about like some of the techniques you
+
+380
+00:07:41,430 --> 00:07:41,440
+about like some of the techniques you
+ 
+
+381
+00:07:41,440 --> 00:07:44,150
+about like some of the techniques you
+can do uh to really put this connective
+
+382
+00:07:44,150 --> 00:07:44,160
+can do uh to really put this connective
+ 
+
+383
+00:07:44,160 --> 00:07:47,430
+can do uh to really put this connective
+tissue together.
+
+384
+00:07:47,430 --> 00:07:47,440
+tissue together.
+ 
+
+385
+00:07:47,440 --> 00:07:49,749
+tissue together.
+The number one thing that we need to go
+
+386
+00:07:49,749 --> 00:07:49,759
+The number one thing that we need to go
+ 
+
+387
+00:07:49,759 --> 00:07:51,909
+The number one thing that we need to go
+and start building is on the client side
+
+388
+00:07:51,909 --> 00:07:51,919
+and start building is on the client side
+ 
+
+389
+00:07:51,919 --> 00:07:54,790
+and start building is on the client side
+on the on the agent harness side on the
+
+390
+00:07:54,790 --> 00:07:54,800
+on the on the agent harness side on the
+ 
+
+391
+00:07:54,800 --> 00:07:57,270
+on the on the agent harness side on the
+things that powers the connective parts
+
+392
+00:07:57,270 --> 00:07:57,280
+things that powers the connective parts
+ 
+
+393
+00:07:57,280 --> 00:08:00,869
+things that powers the connective parts
+that be it a cloud code uh be it a pi be
+
+394
+00:08:00,869 --> 00:08:00,879
+that be it a cloud code uh be it a pi be
+ 
+
+395
+00:08:00,879 --> 00:08:02,469
+that be it a cloud code uh be it a pi be
+it whatever application you're going to
+
+396
+00:08:02,469 --> 00:08:02,479
+it whatever application you're going to
+ 
+
+397
+00:08:02,479 --> 00:08:04,629
+it whatever application you're going to
+build
+
+398
+00:08:04,629 --> 00:08:04,639
+build
+ 
+
+399
+00:08:04,639 --> 00:08:05,830
+build
+and the number one thing we're going to
+
+400
+00:08:05,830 --> 00:08:05,840
+and the number one thing we're going to
+ 
+
+401
+00:08:05,840 --> 00:08:07,749
+and the number one thing we're going to
+do there and what we all have to do and
+
+402
+00:08:07,749 --> 00:08:07,759
+do there and what we all have to do and
+ 
+
+403
+00:08:07,759 --> 00:08:09,189
+do there and what we all have to do and
+something I want to really get across
+
+404
+00:08:09,189 --> 00:08:09,199
+something I want to really get across
+ 
+
+405
+00:08:09,199 --> 00:08:11,189
+something I want to really get across
+today is that we need to go and start
+
+406
+00:08:11,189 --> 00:08:11,199
+today is that we need to go and start
+ 
+
+407
+00:08:11,199 --> 00:08:12,469
+today is that we need to go and start
+building something called progressive
+
+408
+00:08:12,469 --> 00:08:12,479
+building something called progressive
+ 
+
+409
+00:08:12,479 --> 00:08:14,469
+building something called progressive
+discovery
+
+410
+00:08:14,469 --> 00:08:14,479
+discovery
+ 
+
+411
+00:08:14,479 --> 00:08:16,150
+discovery
+most people when they think about like
+
+412
+00:08:16,150 --> 00:08:16,160
+most people when they think about like
+ 
+
+413
+00:08:16,160 --> 00:08:17,670
+most people when they think about like
+oh
+
+414
+00:08:17,670 --> 00:08:17,680
+oh
+ 
+
+415
+00:08:17,680 --> 00:08:20,469
+oh
+uh MCP they can think about like context
+
+416
+00:08:20,469 --> 00:08:20,479
+uh MCP they can think about like context
+ 
+
+417
+00:08:20,479 --> 00:08:22,550
+uh MCP they can think about like context
+bloat but if you really consider what a
+
+418
+00:08:22,550 --> 00:08:22,560
+bloat but if you really consider what a
+ 
+
+419
+00:08:22,560 --> 00:08:24,309
+bloat but if you really consider what a
+protocol does a protocol just puts
+
+420
+00:08:24,309 --> 00:08:24,319
+protocol does a protocol just puts
+ 
+
+421
+00:08:24,319 --> 00:08:26,550
+protocol does a protocol just puts
+information across the wire but the
+
+422
+00:08:26,550 --> 00:08:26,560
+information across the wire but the
+ 
+
+423
+00:08:26,560 --> 00:08:28,390
+information across the wire but the
+client is responsible for dealing with
+
+424
+00:08:28,390 --> 00:08:28,400
+client is responsible for dealing with
+ 
+
+425
+00:08:28,400 --> 00:08:30,710
+client is responsible for dealing with
+that information and what everybody so
+
+426
+00:08:30,710 --> 00:08:30,720
+that information and what everybody so
+ 
+
+427
+00:08:30,720 --> 00:08:32,310
+that information and what everybody so
+far has done because we're in this very
+
+428
+00:08:32,310 --> 00:08:32,320
+far has done because we're in this very
+ 
+
+429
+00:08:32,320 --> 00:08:34,709
+far has done because we're in this very
+early experimentation phase is to simply
+
+430
+00:08:34,709 --> 00:08:34,719
+early experimentation phase is to simply
+ 
+
+431
+00:08:34,719 --> 00:08:36,310
+early experimentation phase is to simply
+put all the tools into the context
+
+432
+00:08:36,310 --> 00:08:36,320
+put all the tools into the context
+ 
+
+433
+00:08:36,320 --> 00:08:38,230
+put all the tools into the context
+window and then be quite surprised that
+
+434
+00:08:38,230 --> 00:08:38,240
+window and then be quite surprised that
+ 
+
+435
+00:08:38,240 --> 00:08:41,589
+window and then be quite surprised that
+maybe the context window gets large. Um
+
+436
+00:08:41,589 --> 00:08:41,599
+maybe the context window gets large. Um
+ 
+
+437
+00:08:41,599 --> 00:08:43,909
+maybe the context window gets large. Um
+but what you can do instead and what you
+
+438
+00:08:43,909 --> 00:08:43,919
+but what you can do instead and what you
+ 
+
+439
+00:08:43,919 --> 00:08:46,870
+but what you can do instead and what you
+should do instead you should start using
+
+440
+00:08:46,870 --> 00:08:46,880
+should do instead you should start using
+ 
+
+441
+00:08:46,880 --> 00:08:49,910
+should do instead you should start using
+this progressive discovery pattern which
+
+442
+00:08:49,910 --> 00:08:49,920
+this progressive discovery pattern which
+ 
+
+443
+00:08:49,920 --> 00:08:52,710
+this progressive discovery pattern which
+is to say use something like tool search
+
+444
+00:08:52,710 --> 00:08:52,720
+is to say use something like tool search
+ 
+
+445
+00:08:52,720 --> 00:08:55,829
+is to say use something like tool search
+to defer the loading of the tools and
+
+446
+00:08:55,829 --> 00:08:55,839
+to defer the loading of the tools and
+ 
+
+447
+00:08:55,839 --> 00:08:58,470
+to defer the loading of the tools and
+start loading the tools when the model
+
+448
+00:08:58,470 --> 00:08:58,480
+start loading the tools when the model
+ 
+
+449
+00:08:58,480 --> 00:09:00,389
+start loading the tools when the model
+needs it. And we have this in the
+
+450
+00:09:00,389 --> 00:09:00,399
+needs it. And we have this in the
+ 
+
+451
+00:09:00,399 --> 00:09:03,190
+needs it. And we have this in the
+anthropic product and the API. Um people
+
+452
+00:09:03,190 --> 00:09:03,200
+anthropic product and the API. Um people
+ 
+
+453
+00:09:03,200 --> 00:09:05,750
+anthropic product and the API. Um people
+can use this uh on on competitors APIs
+
+454
+00:09:05,750 --> 00:09:05,760
+can use this uh on on competitors APIs
+ 
+
+455
+00:09:05,760 --> 00:09:07,670
+can use this uh on on competitors APIs
+as well. But also you can just build
+
+456
+00:09:07,670 --> 00:09:07,680
+as well. But also you can just build
+ 
+
+457
+00:09:07,680 --> 00:09:09,269
+as well. But also you can just build
+this in yourself where you just download
+
+458
+00:09:09,269 --> 00:09:09,279
+this in yourself where you just download
+ 
+
+459
+00:09:09,279 --> 00:09:11,430
+this in yourself where you just download
+the tool directly. And the moment you
+
+460
+00:09:11,430 --> 00:09:11,440
+the tool directly. And the moment you
+ 
+
+461
+00:09:11,440 --> 00:09:13,110
+the tool directly. And the moment you
+give the you give the model a tool
+
+462
+00:09:13,110 --> 00:09:13,120
+give the you give the model a tool
+ 
+
+463
+00:09:13,120 --> 00:09:14,790
+give the you give the model a tool
+loading tool basically and the model
+
+464
+00:09:14,790 --> 00:09:14,800
+loading tool basically and the model
+ 
+
+465
+00:09:14,800 --> 00:09:16,470
+loading tool basically and the model
+goes like ah maybe I need a tool now and
+
+466
+00:09:16,470 --> 00:09:16,480
+goes like ah maybe I need a tool now and
+ 
+
+467
+00:09:16,480 --> 00:09:18,550
+goes like ah maybe I need a tool now and
+let me look up what tools I need and
+
+468
+00:09:18,550 --> 00:09:18,560
+let me look up what tools I need and
+ 
+
+469
+00:09:18,560 --> 00:09:21,590
+let me look up what tools I need and
+then you load them on demand.
+
+470
+00:09:21,590 --> 00:09:21,600
+then you load them on demand.
+ 
+
+471
+00:09:21,600 --> 00:09:23,110
+then you load them on demand.
+And here in this example, what you're
+
+472
+00:09:23,110 --> 00:09:23,120
+And here in this example, what you're
+ 
+
+473
+00:09:23,120 --> 00:09:25,350
+And here in this example, what you're
+seeing is on the left side is uh cloud
+
+474
+00:09:25,350 --> 00:09:25,360
+seeing is on the left side is uh cloud
+ 
+
+475
+00:09:25,360 --> 00:09:27,670
+seeing is on the left side is uh cloud
+code before we added this to cloud code
+
+476
+00:09:27,670 --> 00:09:27,680
+code before we added this to cloud code
+ 
+
+477
+00:09:27,680 --> 00:09:30,550
+code before we added this to cloud code
+and then after it uh uh to cloud code.
+
+478
+00:09:30,550 --> 00:09:30,560
+and then after it uh uh to cloud code.
+ 
+
+479
+00:09:30,560 --> 00:09:33,269
+and then after it uh uh to cloud code.
+So you see a massive reduction
+
+480
+00:09:33,269 --> 00:09:33,279
+So you see a massive reduction
+ 
+
+481
+00:09:33,279 --> 00:09:39,430
+So you see a massive reduction
+in tool uh use tool context usage. The
+
+482
+00:09:39,430 --> 00:09:39,440
+in tool uh use tool context usage. The
+ 
+
+483
+00:09:39,440 --> 00:09:41,190
+in tool uh use tool context usage. The
+second part to that is something called
+
+484
+00:09:41,190 --> 00:09:41,200
+second part to that is something called
+ 
+
+485
+00:09:41,200 --> 00:09:43,269
+second part to that is something called
+programmatic tool calling or what other
+
+486
+00:09:43,269 --> 00:09:43,279
+programmatic tool calling or what other
+ 
+
+487
+00:09:43,279 --> 00:09:47,110
+programmatic tool calling or what other
+people usually refer to um to code mode.
+
+488
+00:09:47,110 --> 00:09:47,120
+people usually refer to um to code mode.
+ 
+
+489
+00:09:47,120 --> 00:09:51,030
+people usually refer to um to code mode.
+Um this is the idea that one thing that
+
+490
+00:09:51,030 --> 00:09:51,040
+Um this is the idea that one thing that
+ 
+
+491
+00:09:51,040 --> 00:09:52,790
+Um this is the idea that one thing that
+you really want to do is you want to
+
+492
+00:09:52,790 --> 00:09:52,800
+you really want to do is you want to
+ 
+
+493
+00:09:52,800 --> 00:09:56,150
+you really want to do is you want to
+compose things together. You don't want
+
+494
+00:09:56,150 --> 00:09:56,160
+compose things together. You don't want
+ 
+
+495
+00:09:56,160 --> 00:09:58,710
+compose things together. You don't want
+the model to go call a tool, take the
+
+496
+00:09:58,710 --> 00:09:58,720
+the model to go call a tool, take the
+ 
+
+497
+00:09:58,720 --> 00:10:00,949
+the model to go call a tool, take the
+result, then go and talk call another
+
+498
+00:10:00,949 --> 00:10:00,959
+result, then go and talk call another
+ 
+
+499
+00:10:00,959 --> 00:10:03,750
+result, then go and talk call another
+tool, take the result, call another tool
+
+500
+00:10:03,750 --> 00:10:03,760
+tool, take the result, call another tool
+ 
+
+501
+00:10:03,760 --> 00:10:05,190
+tool, take the result, call another tool
+because what you're effectively doing is
+
+502
+00:10:05,190 --> 00:10:05,200
+because what you're effectively doing is
+ 
+
+503
+00:10:05,200 --> 00:10:06,790
+because what you're effectively doing is
+you're letting the model orchestrate
+
+504
+00:10:06,790 --> 00:10:06,800
+you're letting the model orchestrate
+ 
+
+505
+00:10:06,800 --> 00:10:08,230
+you're letting the model orchestrate
+things together. And in that
+
+506
+00:10:08,230 --> 00:10:08,240
+things together. And in that
+ 
+
+507
+00:10:08,240 --> 00:10:10,230
+things together. And in that
+orchestration, you're using inference.
+
+508
+00:10:10,230 --> 00:10:10,240
+orchestration, you're using inference.
+ 
+
+509
+00:10:10,240 --> 00:10:12,710
+orchestration, you're using inference.
+that's it's latency sensitive and all of
+
+510
+00:10:12,710 --> 00:10:12,720
+that's it's latency sensitive and all of
+ 
+
+511
+00:10:12,720 --> 00:10:14,150
+that's it's latency sensitive and all of
+its stuff could be done way more
+
+512
+00:10:14,150 --> 00:10:14,160
+its stuff could be done way more
+ 
+
+513
+00:10:14,160 --> 00:10:18,870
+its stuff could be done way more
+effective if you would instead write
+
+514
+00:10:18,870 --> 00:10:18,880
+effective if you would instead write
+ 
+
+515
+00:10:18,880 --> 00:10:22,550
+effective if you would instead write
+a script. Um, and in fact that's
+
+516
+00:10:22,550 --> 00:10:22,560
+a script. Um, and in fact that's
+ 
+
+517
+00:10:22,560 --> 00:10:23,829
+a script. Um, and in fact that's
+actually what you constantly do and what
+
+518
+00:10:23,829 --> 00:10:23,839
+actually what you constantly do and what
+ 
+
+519
+00:10:23,839 --> 00:10:25,269
+actually what you constantly do and what
+you constantly see things like cloud
+
+520
+00:10:25,269 --> 00:10:25,279
+you constantly see things like cloud
+ 
+
+521
+00:10:25,279 --> 00:10:27,990
+you constantly see things like cloud
+code do when it writes the bash command.
+
+522
+00:10:27,990 --> 00:10:28,000
+code do when it writes the bash command.
+ 
+
+523
+00:10:28,000 --> 00:10:29,350
+code do when it writes the bash command.
+But you can of course do this with
+
+524
+00:10:29,350 --> 00:10:29,360
+But you can of course do this with
+ 
+
+525
+00:10:29,360 --> 00:10:31,110
+But you can of course do this with
+everything and you can do this with MCP
+
+526
+00:10:31,110 --> 00:10:31,120
+everything and you can do this with MCP
+ 
+
+527
+00:10:31,120 --> 00:10:33,430
+everything and you can do this with MCP
+and you should do this with MCP. So what
+
+528
+00:10:33,430 --> 00:10:33,440
+and you should do this with MCP. So what
+ 
+
+529
+00:10:33,440 --> 00:10:36,069
+and you should do this with MCP. So what
+does this mean? So what you want instead
+
+530
+00:10:36,069 --> 00:10:36,079
+does this mean? So what you want instead
+ 
+
+531
+00:10:36,079 --> 00:10:38,630
+does this mean? So what you want instead
+of having one tool out of another, you
+
+532
+00:10:38,630 --> 00:10:38,640
+of having one tool out of another, you
+ 
+
+533
+00:10:38,640 --> 00:10:40,630
+of having one tool out of another, you
+want to give the model a ripple tool
+
+534
+00:10:40,630 --> 00:10:40,640
+want to give the model a ripple tool
+ 
+
+535
+00:10:40,640 --> 00:10:42,870
+want to give the model a ripple tool
+provide like a comm like a execution
+
+536
+00:10:42,870 --> 00:10:42,880
+provide like a comm like a execution
+ 
+
+537
+00:10:42,880 --> 00:10:46,310
+provide like a comm like a execution
+environment like a V8 isolate or a monty
+
+538
+00:10:46,310 --> 00:10:46,320
+environment like a V8 isolate or a monty
+ 
+
+539
+00:10:46,320 --> 00:10:48,230
+environment like a V8 isolate or a monty
+or something like that or a Lua
+
+540
+00:10:48,230 --> 00:10:48,240
+or something like that or a Lua
+ 
+
+541
+00:10:48,240 --> 00:10:50,310
+or something like that or a Lua
+interpreter and just have the model
+
+542
+00:10:50,310 --> 00:10:50,320
+interpreter and just have the model
+ 
+
+543
+00:10:50,320 --> 00:10:52,550
+interpreter and just have the model
+write the code for you and the model
+
+544
+00:10:52,550 --> 00:10:52,560
+write the code for you and the model
+ 
+
+545
+00:10:52,560 --> 00:10:54,630
+write the code for you and the model
+just executes that code and then
+
+546
+00:10:54,630 --> 00:10:54,640
+just executes that code and then
+ 
+
+547
+00:10:54,640 --> 00:10:57,190
+just executes that code and then
+composes them together. And there's a
+
+548
+00:10:57,190 --> 00:10:57,200
+composes them together. And there's a
+ 
+
+549
+00:10:57,200 --> 00:10:59,350
+composes them together. And there's a
+neat little fe feature in MCP called
+
+550
+00:10:59,350 --> 00:10:59,360
+neat little fe feature in MCP called
+ 
+
+551
+00:10:59,360 --> 00:11:01,509
+neat little fe feature in MCP called
+structured output that tells you what
+
+552
+00:11:01,509 --> 00:11:01,519
+structured output that tells you what
+ 
+
+553
+00:11:01,519 --> 00:11:05,030
+structured output that tells you what
+the return value of the output will be.
+
+554
+00:11:05,030 --> 00:11:05,040
+the return value of the output will be.
+ 
+
+555
+00:11:05,040 --> 00:11:06,870
+the return value of the output will be.
+And the model can use this information
+
+556
+00:11:06,870 --> 00:11:06,880
+And the model can use this information
+ 
+
+557
+00:11:06,880 --> 00:11:09,670
+And the model can use this information
+to to figure out type information which
+
+558
+00:11:09,670 --> 00:11:09,680
+to to figure out type information which
+ 
+
+559
+00:11:09,680 --> 00:11:11,990
+to to figure out type information which
+then mean it can really nicely compose
+
+560
+00:11:11,990 --> 00:11:12,000
+then mean it can really nicely compose
+ 
+
+561
+00:11:12,000 --> 00:11:14,150
+then mean it can really nicely compose
+these things together. And in this
+
+562
+00:11:14,150 --> 00:11:14,160
+these things together. And in this
+ 
+
+563
+00:11:14,160 --> 00:11:16,230
+these things together. And in this
+example here, instead of doing two
+
+564
+00:11:16,230 --> 00:11:16,240
+example here, instead of doing two
+ 
+
+565
+00:11:16,240 --> 00:11:18,949
+example here, instead of doing two
+different calls, you do one call and you
+
+566
+00:11:18,949 --> 00:11:18,959
+different calls, you do one call and you
+ 
+
+567
+00:11:18,959 --> 00:11:20,550
+different calls, you do one call and you
+can filter that. The model will
+
+568
+00:11:20,550 --> 00:11:20,560
+can filter that. The model will
+ 
+
+569
+00:11:20,560 --> 00:11:23,350
+can filter that. The model will
+automatically ex uh remove things from
+
+570
+00:11:23,350 --> 00:11:23,360
+automatically ex uh remove things from
+ 
+
+571
+00:11:23,360 --> 00:11:26,230
+automatically ex uh remove things from
+uh JSON and just continue.
+
+572
+00:11:26,230 --> 00:11:26,240
+uh JSON and just continue.
+ 
+
+573
+00:11:26,240 --> 00:11:28,470
+uh JSON and just continue.
+Of course, if you don't have uh
+
+574
+00:11:28,470 --> 00:11:28,480
+Of course, if you don't have uh
+ 
+
+575
+00:11:28,480 --> 00:11:30,150
+Of course, if you don't have uh
+structured output, you can always just
+
+576
+00:11:30,150 --> 00:11:30,160
+structured output, you can always just
+ 
+
+577
+00:11:30,160 --> 00:11:31,590
+structured output, you can always just
+ask the model to give you structured
+
+578
+00:11:31,590 --> 00:11:31,600
+ask the model to give you structured
+ 
+
+579
+00:11:31,600 --> 00:11:35,509
+ask the model to give you structured
+output um uh by just extracting it and
+
+580
+00:11:35,509 --> 00:11:35,519
+output um uh by just extracting it and
+ 
+
+581
+00:11:35,519 --> 00:11:37,430
+output um uh by just extracting it and
+saying, "Hey, call a cheap model and
+
+582
+00:11:37,430 --> 00:11:37,440
+saying, "Hey, call a cheap model and
+ 
+
+583
+00:11:37,440 --> 00:11:39,590
+saying, "Hey, call a cheap model and
+say, I want this expected type. Give it
+
+584
+00:11:39,590 --> 00:11:39,600
+say, I want this expected type. Give it
+ 
+
+585
+00:11:39,600 --> 00:11:41,350
+say, I want this expected type. Give it
+back to me." And bam, you have a type.
+
+586
+00:11:41,350 --> 00:11:41,360
+back to me." And bam, you have a type.
+ 
+
+587
+00:11:41,360 --> 00:11:43,110
+back to me." And bam, you have a type.
+The model can compose things together.
+
+588
+00:11:43,110 --> 00:11:43,120
+The model can compose things together.
+ 
+
+589
+00:11:43,120 --> 00:11:44,550
+The model can compose things together.
+And I think this is something we're just
+
+590
+00:11:44,550 --> 00:11:44,560
+And I think this is something we're just
+ 
+
+591
+00:11:44,560 --> 00:11:46,550
+And I think this is something we're just
+not doing enough yet. And this is I
+
+592
+00:11:46,550 --> 00:11:46,560
+not doing enough yet. And this is I
+ 
+
+593
+00:11:46,560 --> 00:11:47,990
+not doing enough yet. And this is I
+think something where we can improve our
+
+594
+00:11:47,990 --> 00:11:48,000
+think something where we can improve our
+ 
+
+595
+00:11:48,000 --> 00:11:50,790
+think something where we can improve our
+agent harnesses. And then last but not
+
+596
+00:11:50,790 --> 00:11:50,800
+agent harnesses. And then last but not
+ 
+
+597
+00:11:50,800 --> 00:11:52,310
+agent harnesses. And then last but not
+least, of course, you can just compile
+
+598
+00:11:52,310 --> 00:11:52,320
+least, of course, you can just compile
+ 
+
+599
+00:11:52,320 --> 00:11:53,750
+least, of course, you can just compile
+compose these things together with
+
+600
+00:11:53,750 --> 00:11:53,760
+compose these things together with
+ 
+
+601
+00:11:53,760 --> 00:11:55,910
+compose these things together with
+executables like with CLIs, with other
+
+602
+00:11:55,910 --> 00:11:55,920
+executables like with CLIs, with other
+ 
+
+603
+00:11:55,920 --> 00:12:00,069
+executables like with CLIs, with other
+components, with APIs as well. Um, next
+
+604
+00:12:00,069 --> 00:12:00,079
+components, with APIs as well. Um, next
+ 
+
+605
+00:12:00,079 --> 00:12:02,230
+components, with APIs as well. Um, next
+what we need to do besides the client
+
+606
+00:12:02,230 --> 00:12:02,240
+what we need to do besides the client
+ 
+
+607
+00:12:02,240 --> 00:12:05,670
+what we need to do besides the client
+work, which is progressive discovery and
+
+608
+00:12:05,670 --> 00:12:05,680
+work, which is progressive discovery and
+ 
+
+609
+00:12:05,680 --> 00:12:07,990
+work, which is progressive discovery and
+um programmatic tool calling, we need to
+
+610
+00:12:07,990 --> 00:12:08,000
+um programmatic tool calling, we need to
+ 
+
+611
+00:12:08,000 --> 00:12:09,990
+um programmatic tool calling, we need to
+go and start building properly for
+
+612
+00:12:09,990 --> 00:12:10,000
+go and start building properly for
+ 
+
+613
+00:12:10,000 --> 00:12:12,470
+go and start building properly for
+agents. And that means we all need to
+
+614
+00:12:12,470 --> 00:12:12,480
+agents. And that means we all need to
+ 
+
+615
+00:12:12,480 --> 00:12:15,190
+agents. And that means we all need to
+stop taking REST APIs and put them one
+
+616
+00:12:15,190 --> 00:12:15,200
+stop taking REST APIs and put them one
+ 
+
+617
+00:12:15,200 --> 00:12:19,430
+stop taking REST APIs and put them one
+to one into uh an MCP server. Every time
+
+618
+00:12:19,430 --> 00:12:19,440
+to one into uh an MCP server. Every time
+ 
+
+619
+00:12:19,440 --> 00:12:22,310
+to one into uh an MCP server. Every time
+I see someone building another REST to
+
+620
+00:12:22,310 --> 00:12:22,320
+I see someone building another REST to
+ 
+
+621
+00:12:22,320 --> 00:12:24,949
+I see someone building another REST to
+MCP server conversion tool, I'm it's a
+
+622
+00:12:24,949 --> 00:12:24,959
+MCP server conversion tool, I'm it's a
+ 
+
+623
+00:12:24,959 --> 00:12:26,550
+MCP server conversion tool, I'm it's a
+bit cringe because I think it's just it
+
+624
+00:12:26,550 --> 00:12:26,560
+bit cringe because I think it's just it
+ 
+
+625
+00:12:26,560 --> 00:12:28,870
+bit cringe because I think it's just it
+just results in horrible things. Um and
+
+626
+00:12:28,870 --> 00:12:28,880
+just results in horrible things. Um and
+ 
+
+627
+00:12:28,880 --> 00:12:30,470
+just results in horrible things. Um and
+what you should do instead, you should
+
+628
+00:12:30,470 --> 00:12:30,480
+what you should do instead, you should
+ 
+
+629
+00:12:30,480 --> 00:12:32,550
+what you should do instead, you should
+design for an agent. Basically, you can
+
+630
+00:12:32,550 --> 00:12:32,560
+design for an agent. Basically, you can
+ 
+
+631
+00:12:32,560 --> 00:12:34,230
+design for an agent. Basically, you can
+start designing for you as a human how
+
+632
+00:12:34,230 --> 00:12:34,240
+start designing for you as a human how
+ 
+
+633
+00:12:34,240 --> 00:12:35,990
+start designing for you as a human how
+you would want to interact with this
+
+634
+00:12:35,990 --> 00:12:36,000
+you would want to interact with this
+ 
+
+635
+00:12:36,000 --> 00:12:37,990
+you would want to interact with this
+because that's actually a very very good
+
+636
+00:12:37,990 --> 00:12:38,000
+because that's actually a very very good
+ 
+
+637
+00:12:38,000 --> 00:12:40,949
+because that's actually a very very good
+start for an agent. If you want to
+
+638
+00:12:40,949 --> 00:12:40,959
+start for an agent. If you want to
+ 
+
+639
+00:12:40,959 --> 00:12:43,190
+start for an agent. If you want to
+orchestrate things together, you should
+
+640
+00:12:43,190 --> 00:12:43,200
+orchestrate things together, you should
+ 
+
+641
+00:12:43,200 --> 00:12:45,430
+orchestrate things together, you should
+reach of course for programmatic tool
+
+642
+00:12:45,430 --> 00:12:45,440
+reach of course for programmatic tool
+ 
+
+643
+00:12:45,440 --> 00:12:46,550
+reach of course for programmatic tool
+calling and you can do this on the
+
+644
+00:12:46,550 --> 00:12:46,560
+calling and you can do this on the
+ 
+
+645
+00:12:46,560 --> 00:12:48,870
+calling and you can do this on the
+client side as I said before. But you
+
+646
+00:12:48,870 --> 00:12:48,880
+client side as I said before. But you
+ 
+
+647
+00:12:48,880 --> 00:12:50,550
+client side as I said before. But you
+can also do this on the server side. The
+
+648
+00:12:50,550 --> 00:12:50,560
+can also do this on the server side. The
+ 
+
+649
+00:12:50,560 --> 00:12:53,829
+can also do this on the server side. The
+cloudfl MCP server and others like that
+
+650
+00:12:53,829 --> 00:12:53,839
+cloudfl MCP server and others like that
+ 
+
+651
+00:12:53,839 --> 00:12:56,150
+cloudfl MCP server and others like that
+are great examples how you can have
+
+652
+00:12:56,150 --> 00:12:56,160
+are great examples how you can have
+ 
+
+653
+00:12:56,160 --> 00:12:59,030
+are great examples how you can have
+instead of providing tools provide an
+
+654
+00:12:59,030 --> 00:12:59,040
+instead of providing tools provide an
+ 
+
+655
+00:12:59,040 --> 00:13:00,710
+instead of providing tools provide an
+execution environment to the model and
+
+656
+00:13:00,710 --> 00:13:00,720
+execution environment to the model and
+ 
+
+657
+00:13:00,720 --> 00:13:02,230
+execution environment to the model and
+then just have them orchestrate things
+
+658
+00:13:02,230 --> 00:13:02,240
+then just have them orchestrate things
+ 
+
+659
+00:13:02,240 --> 00:13:04,150
+then just have them orchestrate things
+together which again cuts on token
+
+660
+00:13:04,150 --> 00:13:04,160
+together which again cuts on token
+ 
+
+661
+00:13:04,160 --> 00:13:07,350
+together which again cuts on token
+usages uh cuts on latency uh and is way
+
+662
+00:13:07,350 --> 00:13:07,360
+usages uh cuts on latency uh and is way
+ 
+
+663
+00:13:07,360 --> 00:13:09,509
+usages uh cuts on latency uh and is way
+more powerful in its composition. And
+
+664
+00:13:09,509 --> 00:13:09,519
+more powerful in its composition. And
+ 
+
+665
+00:13:09,519 --> 00:13:11,430
+more powerful in its composition. And
+then last but not least, you should
+
+666
+00:13:11,430 --> 00:13:11,440
+then last but not least, you should
+ 
+
+667
+00:13:11,440 --> 00:13:12,949
+then last but not least, you should
+start and we should start as server
+
+668
+00:13:12,949 --> 00:13:12,959
+start and we should start as server
+ 
+
+669
+00:13:12,959 --> 00:13:15,509
+start and we should start as server
+authors to use this rich semantics that
+
+670
+00:13:15,509 --> 00:13:15,519
+authors to use this rich semantics that
+ 
+
+671
+00:13:15,519 --> 00:13:18,310
+authors to use this rich semantics that
+MCP offers over alternatives. This means
+
+672
+00:13:18,310 --> 00:13:18,320
+MCP offers over alternatives. This means
+ 
+
+673
+00:13:18,320 --> 00:13:20,550
+MCP offers over alternatives. This means
+shipping MCP applications. It means
+
+674
+00:13:20,550 --> 00:13:20,560
+shipping MCP applications. It means
+ 
+
+675
+00:13:20,560 --> 00:13:25,030
+shipping MCP applications. It means
+shipping um skills over MCP. It means um
+
+676
+00:13:25,030 --> 00:13:25,040
+shipping um skills over MCP. It means um
+ 
+
+677
+00:13:25,040 --> 00:13:27,110
+shipping um skills over MCP. It means um
+using uh things like task and other
+
+678
+00:13:27,110 --> 00:13:27,120
+using uh things like task and other
+ 
+
+679
+00:13:27,120 --> 00:13:29,190
+using uh things like task and other
+aspects that the protocol offers that
+
+680
+00:13:29,190 --> 00:13:29,200
+aspects that the protocol offers that
+ 
+
+681
+00:13:29,200 --> 00:13:31,430
+aspects that the protocol offers that
+we're currently slightly underused or
+
+682
+00:13:31,430 --> 00:13:31,440
+we're currently slightly underused or
+ 
+
+683
+00:13:31,440 --> 00:13:33,430
+we're currently slightly underused or
+things like elicitations,
+
+684
+00:13:33,430 --> 00:13:33,440
+things like elicitations,
+ 
+
+685
+00:13:33,440 --> 00:13:36,230
+things like elicitations,
+things that only MCP can do for you. And
+
+686
+00:13:36,230 --> 00:13:36,240
+things that only MCP can do for you. And
+ 
+
+687
+00:13:36,240 --> 00:13:39,030
+things that only MCP can do for you. And
+of course that's all the work you all
+
+688
+00:13:39,030 --> 00:13:39,040
+of course that's all the work you all
+ 
+
+689
+00:13:39,040 --> 00:13:41,110
+of course that's all the work you all
+need to do and maybe some of our product
+
+690
+00:13:41,110 --> 00:13:41,120
+need to do and maybe some of our product
+ 
+
+691
+00:13:41,120 --> 00:13:42,949
+need to do and maybe some of our product
+people need to do. We also need to do a
+
+692
+00:13:42,949 --> 00:13:42,959
+people need to do. We also need to do a
+ 
+
+693
+00:13:42,959 --> 00:13:45,269
+people need to do. We also need to do a
+lot of work on MCP itself. And there's a
+
+694
+00:13:45,269 --> 00:13:45,279
+lot of work on MCP itself. And there's a
+ 
+
+695
+00:13:45,279 --> 00:13:47,590
+lot of work on MCP itself. And there's a
+few things down the line that we going
+
+696
+00:13:47,590 --> 00:13:47,600
+few things down the line that we going
+ 
+
+697
+00:13:47,600 --> 00:13:49,990
+few things down the line that we going
+to go and have to go and solve. The
+
+698
+00:13:49,990 --> 00:13:50,000
+to go and have to go and solve. The
+ 
+
+699
+00:13:50,000 --> 00:13:51,590
+to go and have to go and solve. The
+number one thing is we need to improve
+
+700
+00:13:51,590 --> 00:13:51,600
+number one thing is we need to improve
+ 
+
+701
+00:13:51,600 --> 00:13:53,910
+number one thing is we need to improve
+the core. There's a few things that as
+
+702
+00:13:53,910 --> 00:13:53,920
+the core. There's a few things that as
+ 
+
+703
+00:13:53,920 --> 00:13:55,430
+the core. There's a few things that as
+we have developed the protocol over the
+
+704
+00:13:55,430 --> 00:13:55,440
+we have developed the protocol over the
+ 
+
+705
+00:13:55,440 --> 00:13:57,509
+we have developed the protocol over the
+last year that are just not in a good
+
+706
+00:13:57,509 --> 00:13:57,519
+last year that are just not in a good
+ 
+
+707
+00:13:57,519 --> 00:13:59,670
+last year that are just not in a good
+shape. Number one is that the current
+
+708
+00:13:59,670 --> 00:13:59,680
+shape. Number one is that the current
+ 
+
+709
+00:13:59,680 --> 00:14:02,790
+shape. Number one is that the current
+streamable HTTP is very hard to scale if
+
+710
+00:14:02,790 --> 00:14:02,800
+streamable HTTP is very hard to scale if
+ 
+
+711
+00:14:02,800 --> 00:14:05,509
+streamable HTTP is very hard to scale if
+you're a large hyperscaler. And so we
+
+712
+00:14:05,509 --> 00:14:05,519
+you're a large hyperscaler. And so we
+ 
+
+713
+00:14:05,519 --> 00:14:07,670
+you're a large hyperscaler. And so we
+have a proposal from uh our friends at
+
+714
+00:14:07,670 --> 00:14:07,680
+have a proposal from uh our friends at
+ 
+
+715
+00:14:07,680 --> 00:14:10,310
+have a proposal from uh our friends at
+Google um who are working on something
+
+716
+00:14:10,310 --> 00:14:10,320
+Google um who are working on something
+ 
+
+717
+00:14:10,320 --> 00:14:12,470
+Google um who are working on something
+called a stateless transport protocol
+
+718
+00:14:12,470 --> 00:14:12,480
+called a stateless transport protocol
+ 
+
+719
+00:14:12,480 --> 00:14:15,269
+called a stateless transport protocol
+which make it significantly easier to
+
+720
+00:14:15,269 --> 00:14:15,279
+which make it significantly easier to
+ 
+
+721
+00:14:15,279 --> 00:14:18,470
+which make it significantly easier to
+just treat MCP servers like you know
+
+722
+00:14:18,470 --> 00:14:18,480
+just treat MCP servers like you know
+ 
+
+723
+00:14:18,480 --> 00:14:20,949
+just treat MCP servers like you know
+another stateless uh rest server or
+
+724
+00:14:20,949 --> 00:14:20,959
+another stateless uh rest server or
+ 
+
+725
+00:14:20,959 --> 00:14:23,110
+another stateless uh rest server or
+something like that we used to know how
+
+726
+00:14:23,110 --> 00:14:23,120
+something like that we used to know how
+ 
+
+727
+00:14:23,120 --> 00:14:25,430
+something like that we used to know how
+to deploy to like cloud runs or
+
+728
+00:14:25,430 --> 00:14:25,440
+to deploy to like cloud runs or
+ 
+
+729
+00:14:25,440 --> 00:14:27,750
+to deploy to like cloud runs or
+kubernetes and so on. So that's coming
+
+730
+00:14:27,750 --> 00:14:27,760
+kubernetes and so on. So that's coming
+ 
+
+731
+00:14:27,760 --> 00:14:29,590
+kubernetes and so on. So that's coming
+down in June and hopefully landing in
+
+732
+00:14:29,590 --> 00:14:29,600
+down in June and hopefully landing in
+ 
+
+733
+00:14:29,600 --> 00:14:32,790
+down in June and hopefully landing in
+the SDKs very soon. In addition, we need
+
+734
+00:14:32,790 --> 00:14:32,800
+the SDKs very soon. In addition, we need
+ 
+
+735
+00:14:32,800 --> 00:14:35,430
+the SDKs very soon. In addition, we need
+to improve our asynchronous task
+
+736
+00:14:35,430 --> 00:14:35,440
+to improve our asynchronous task
+ 
+
+737
+00:14:35,440 --> 00:14:37,750
+to improve our asynchronous task
+primitive, which basically is a very
+
+738
+00:14:37,750 --> 00:14:37,760
+primitive, which basically is a very
+ 
+
+739
+00:14:37,760 --> 00:14:39,189
+primitive, which basically is a very
+fancy way to say we just want to have
+
+740
+00:14:39,189 --> 00:14:39,199
+fancy way to say we just want to have
+ 
+
+741
+00:14:39,199 --> 00:14:41,269
+fancy way to say we just want to have
+agent to agent communication. We have a
+
+742
+00:14:41,269 --> 00:14:41,279
+agent to agent communication. We have a
+ 
+
+743
+00:14:41,279 --> 00:14:42,550
+agent to agent communication. We have a
+very experimental version of the
+
+744
+00:14:42,550 --> 00:14:42,560
+very experimental version of the
+ 
+
+745
+00:14:42,560 --> 00:14:44,710
+very experimental version of the
+protocol that very few clients support.
+
+746
+00:14:44,710 --> 00:14:44,720
+protocol that very few clients support.
+ 
+
+747
+00:14:44,720 --> 00:14:47,030
+protocol that very few clients support.
+So, we're going to start building more
+
+748
+00:14:47,030 --> 00:14:47,040
+So, we're going to start building more
+ 
+
+749
+00:14:47,040 --> 00:14:48,470
+So, we're going to start building more
+clients out like that. And most
+
+750
+00:14:48,470 --> 00:14:48,480
+clients out like that. And most
+ 
+
+751
+00:14:48,480 --> 00:14:49,829
+clients out like that. And most
+importantly, we are improving some of
+
+752
+00:14:49,829 --> 00:14:49,839
+importantly, we are improving some of
+ 
+
+753
+00:14:49,839 --> 00:14:52,230
+importantly, we are improving some of
+the little semantics that we need to do.
+
+754
+00:14:52,230 --> 00:14:52,240
+the little semantics that we need to do.
+ 
+
+755
+00:14:52,240 --> 00:14:54,069
+the little semantics that we need to do.
+We're going to ship a TypeScript version
+
+756
+00:14:54,069 --> 00:14:54,079
+We're going to ship a TypeScript version
+ 
+
+757
+00:14:54,079 --> 00:14:56,069
+We're going to ship a TypeScript version
+uh SDK version two and Python SDK
+
+758
+00:14:56,069 --> 00:14:56,079
+uh SDK version two and Python SDK
+ 
+
+759
+00:14:56,079 --> 00:14:58,790
+uh SDK version two and Python SDK
+version two based on um a lot of the
+
+760
+00:14:58,790 --> 00:14:58,800
+version two based on um a lot of the
+ 
+
+761
+00:14:58,800 --> 00:15:01,670
+version two based on um a lot of the
+lessons learned uh over the last year.
+
+762
+00:15:01,670 --> 00:15:01,680
+lessons learned uh over the last year.
+ 
+
+763
+00:15:01,680 --> 00:15:04,949
+lessons learned uh over the last year.
+There's a there's a um a a SDK called
+
+764
+00:15:04,949 --> 00:15:04,959
+There's a there's a um a a SDK called
+ 
+
+765
+00:15:04,959 --> 00:15:08,949
+There's a there's a um a a SDK called
+FastMPP. Uh who's using Fast MCP? Yeah,
+
+766
+00:15:08,949 --> 00:15:08,959
+FastMPP. Uh who's using Fast MCP? Yeah,
+ 
+
+767
+00:15:08,959 --> 00:15:10,629
+FastMPP. Uh who's using Fast MCP? Yeah,
+it's just way [\h__\h] better than Python
+
+768
+00:15:10,629 --> 00:15:10,639
+it's just way [\h__\h] better than Python
+ 
+
+769
+00:15:10,639 --> 00:15:12,310
+it's just way [\h__\h] better than Python
+SDK that we ship in. Right. And that's
+
+770
+00:15:12,310 --> 00:15:12,320
+SDK that we ship in. Right. And that's
+ 
+
+771
+00:15:12,320 --> 00:15:15,110
+SDK that we ship in. Right. And that's
+on me because I wrote the Python SDK. Um
+
+772
+00:15:15,110 --> 00:15:15,120
+on me because I wrote the Python SDK. Um
+ 
+
+773
+00:15:15,120 --> 00:15:16,710
+on me because I wrote the Python SDK. Um
+and and so I have a bunch of people who
+
+774
+00:15:16,710 --> 00:15:16,720
+and and so I have a bunch of people who
+ 
+
+775
+00:15:16,720 --> 00:15:18,310
+and and so I have a bunch of people who
+are way better Python developers than me
+
+776
+00:15:18,310 --> 00:15:18,320
+are way better Python developers than me
+ 
+
+777
+00:15:18,320 --> 00:15:21,030
+are way better Python developers than me
+help me uh write it better. Um the
+
+778
+00:15:21,030 --> 00:15:21,040
+help me uh write it better. Um the
+ 
+
+779
+00:15:21,040 --> 00:15:23,350
+help me uh write it better. Um the
+second part is we need to start
+
+780
+00:15:23,350 --> 00:15:23,360
+second part is we need to start
+ 
+
+781
+00:15:23,360 --> 00:15:24,550
+second part is we need to start
+integrate everywhere. We're going to
+
+782
+00:15:24,550 --> 00:15:24,560
+integrate everywhere. We're going to
+ 
+
+783
+00:15:24,560 --> 00:15:26,230
+integrate everywhere. We're going to
+ship for particularly for enterprises
+
+784
+00:15:26,230 --> 00:15:26,240
+ship for particularly for enterprises
+ 
+
+785
+00:15:26,240 --> 00:15:28,230
+ship for particularly for enterprises
+something called cross app access. It's
+
+786
+00:15:28,230 --> 00:15:28,240
+something called cross app access. It's
+ 
+
+787
+00:15:28,240 --> 00:15:29,750
+something called cross app access. It's
+a new thing that we're working closely
+
+788
+00:15:29,750 --> 00:15:29,760
+a new thing that we're working closely
+ 
+
+789
+00:15:29,760 --> 00:15:31,750
+a new thing that we're working closely
+together with identity providers which
+
+790
+00:15:31,750 --> 00:15:31,760
+together with identity providers which
+ 
+
+791
+00:15:31,760 --> 00:15:33,590
+together with identity providers which
+just allows you it's a very fancy way to
+
+792
+00:15:33,590 --> 00:15:33,600
+just allows you it's a very fancy way to
+ 
+
+793
+00:15:33,600 --> 00:15:35,829
+just allows you it's a very fancy way to
+say uh once you log in once with your
+
+794
+00:15:35,829 --> 00:15:35,839
+say uh once you log in once with your
+ 
+
+795
+00:15:35,839 --> 00:15:38,150
+say uh once you log in once with your
+local company identity provider be it a
+
+796
+00:15:38,150 --> 00:15:38,160
+local company identity provider be it a
+ 
+
+797
+00:15:38,160 --> 00:15:39,829
+local company identity provider be it a
+Google be an octar you will be able to
+
+798
+00:15:39,829 --> 00:15:39,839
+Google be an octar you will be able to
+ 
+
+799
+00:15:39,839 --> 00:15:41,670
+Google be an octar you will be able to
+just use MCP servers without having to
+
+800
+00:15:41,670 --> 00:15:41,680
+just use MCP servers without having to
+ 
+
+801
+00:15:41,680 --> 00:15:44,389
+just use MCP servers without having to
+relog in. So it's a bit more smoothness.
+
+802
+00:15:44,389 --> 00:15:44,399
+relog in. So it's a bit more smoothness.
+ 
+
+803
+00:15:44,399 --> 00:15:46,150
+relog in. So it's a bit more smoothness.
+Um, in addition, we're going to add
+
+804
+00:15:46,150 --> 00:15:46,160
+Um, in addition, we're going to add
+ 
+
+805
+00:15:46,160 --> 00:15:49,189
+Um, in addition, we're going to add
+something called uh server discovery by
+
+806
+00:15:49,189 --> 00:15:49,199
+something called uh server discovery by
+ 
+
+807
+00:15:49,199 --> 00:15:52,470
+something called uh server discovery by
+um by uh specifying uh how you can
+
+808
+00:15:52,470 --> 00:15:52,480
+um by uh specifying uh how you can
+ 
+
+809
+00:15:52,480 --> 00:15:55,269
+um by uh specifying uh how you can
+discover servers on well-known URLs
+
+810
+00:15:55,269 --> 00:15:55,279
+discover servers on well-known URLs
+ 
+
+811
+00:15:55,279 --> 00:15:58,870
+discover servers on well-known URLs
+automatically. So crawlers, browsers, um
+
+812
+00:15:58,870 --> 00:15:58,880
+automatically. So crawlers, browsers, um
+ 
+
+813
+00:15:58,880 --> 00:16:01,189
+automatically. So crawlers, browsers, um
+agents can just go to a website and say,
+
+814
+00:16:01,189 --> 00:16:01,199
+agents can just go to a website and say,
+ 
+
+815
+00:16:01,199 --> 00:16:02,870
+agents can just go to a website and say,
+"Oh, I'm instead of just parsing the
+
+816
+00:16:02,870 --> 00:16:02,880
+"Oh, I'm instead of just parsing the
+ 
+
+817
+00:16:02,880 --> 00:16:05,030
+"Oh, I'm instead of just parsing the
+website, is there also an MCP server I
+
+818
+00:16:05,030 --> 00:16:05,040
+website, is there also an MCP server I
+ 
+
+819
+00:16:05,040 --> 00:16:06,230
+website, is there also an MCP server I
+can use?" And we will be able to
+
+820
+00:16:06,230 --> 00:16:06,240
+can use?" And we will be able to
+ 
+
+821
+00:16:06,240 --> 00:16:08,389
+can use?" And we will be able to
+automatically discover this. This is a
+
+822
+00:16:08,389 --> 00:16:08,399
+automatically discover this. This is a
+ 
+
+823
+00:16:08,399 --> 00:16:10,069
+automatically discover this. This is a
+really cool thing that will come down uh
+
+824
+00:16:10,069 --> 00:16:10,079
+really cool thing that will come down uh
+ 
+
+825
+00:16:10,079 --> 00:16:11,829
+really cool thing that will come down uh
+also in June when we launch the next
+
+826
+00:16:11,829 --> 00:16:11,839
+also in June when we launch the next
+ 
+
+827
+00:16:11,839 --> 00:16:14,069
+also in June when we launch the next
+specification uh and will be supported
+
+828
+00:16:14,069 --> 00:16:14,079
+specification uh and will be supported
+ 
+
+829
+00:16:14,079 --> 00:16:16,629
+specification uh and will be supported
+there. And then last but not least, we
+
+830
+00:16:16,629 --> 00:16:16,639
+there. And then last but not least, we
+ 
+
+831
+00:16:16,639 --> 00:16:18,230
+there. And then last but not least, we
+are starting to use our extension
+
+832
+00:16:18,230 --> 00:16:18,240
+are starting to use our extension
+ 
+
+833
+00:16:18,240 --> 00:16:20,710
+are starting to use our extension
+mechanisms in in MCP which means that
+
+834
+00:16:20,710 --> 00:16:20,720
+mechanisms in in MCP which means that
+ 
+
+835
+00:16:20,720 --> 00:16:22,389
+mechanisms in in MCP which means that
+some clients will support this like for
+
+836
+00:16:22,389 --> 00:16:22,399
+some clients will support this like for
+ 
+
+837
+00:16:22,399 --> 00:16:24,710
+some clients will support this like for
+example MCP applications will only be
+
+838
+00:16:24,710 --> 00:16:24,720
+example MCP applications will only be
+ 
+
+839
+00:16:24,720 --> 00:16:27,749
+example MCP applications will only be
+supported by web based interfaces
+
+840
+00:16:27,749 --> 00:16:27,759
+supported by web based interfaces
+ 
+
+841
+00:16:27,759 --> 00:16:29,590
+supported by web based interfaces
+because if you're a CLI you just have a
+
+842
+00:16:29,590 --> 00:16:29,600
+because if you're a CLI you just have a
+ 
+
+843
+00:16:29,600 --> 00:16:31,990
+because if you're a CLI you just have a
+hard time rendering HTML, right? Um and
+
+844
+00:16:31,990 --> 00:16:32,000
+hard time rendering HTML, right? Um and
+ 
+
+845
+00:16:32,000 --> 00:16:33,670
+hard time rendering HTML, right? Um and
+we do more of these extensions. One of
+
+846
+00:16:33,670 --> 00:16:33,680
+we do more of these extensions. One of
+ 
+
+847
+00:16:33,680 --> 00:16:35,269
+we do more of these extensions. One of
+the most exciting extensions that I
+
+848
+00:16:35,269 --> 00:16:35,279
+the most exciting extensions that I
+ 
+
+849
+00:16:35,279 --> 00:16:37,350
+the most exciting extensions that I
+think is is cool. we're just going to
+
+850
+00:16:37,350 --> 00:16:37,360
+think is is cool. we're just going to
+ 
+
+851
+00:16:37,360 --> 00:16:39,430
+think is is cool. we're just going to
+ship skills over MCP because it's very
+
+852
+00:16:39,430 --> 00:16:39,440
+ship skills over MCP because it's very
+ 
+
+853
+00:16:39,440 --> 00:16:41,509
+ship skills over MCP because it's very
+obvious that if you have a large MCP
+
+854
+00:16:41,509 --> 00:16:41,519
+obvious that if you have a large MCP
+ 
+
+855
+00:16:41,519 --> 00:16:43,430
+obvious that if you have a large MCP
+server with tons and tons of tools, you
+
+856
+00:16:43,430 --> 00:16:43,440
+server with tons and tons of tools, you
+ 
+
+857
+00:16:43,440 --> 00:16:45,509
+server with tons and tons of tools, you
+just want to ship domain knowledge with
+
+858
+00:16:45,509 --> 00:16:45,519
+just want to ship domain knowledge with
+ 
+
+859
+00:16:45,519 --> 00:16:47,189
+just want to ship domain knowledge with
+it and say, "Oh, this is how you're
+
+860
+00:16:47,189 --> 00:16:47,199
+it and say, "Oh, this is how you're
+ 
+
+861
+00:16:47,199 --> 00:16:48,389
+it and say, "Oh, this is how you're
+supposed to use this. This is how you're
+
+862
+00:16:48,389 --> 00:16:48,399
+supposed to use this. This is how you're
+ 
+
+863
+00:16:48,399 --> 00:16:50,069
+supposed to use this. This is how you're
+supposed to use this." And it allows you
+
+864
+00:16:50,069 --> 00:16:50,079
+supposed to use this." And it allows you
+ 
+
+865
+00:16:50,079 --> 00:16:52,870
+supposed to use this." And it allows you
+as a server author to continuously ship
+
+866
+00:16:52,870 --> 00:16:52,880
+as a server author to continuously ship
+ 
+
+867
+00:16:52,880 --> 00:16:55,189
+as a server author to continuously ship
+updated skills without having to rely on
+
+868
+00:16:55,189 --> 00:16:55,199
+updated skills without having to rely on
+ 
+
+869
+00:16:55,199 --> 00:16:57,030
+updated skills without having to rely on
+plug-in mechanisms and registries and
+
+870
+00:16:57,030 --> 00:16:57,040
+plug-in mechanisms and registries and
+ 
+
+871
+00:16:57,040 --> 00:17:00,230
+plug-in mechanisms and registries and
+other stuff. So, that's coming down. Um,
+
+872
+00:17:00,230 --> 00:17:00,240
+other stuff. So, that's coming down. Um,
+ 
+
+873
+00:17:00,240 --> 00:17:01,910
+other stuff. So, that's coming down. Um,
+there's a lot a lot of experimentation
+
+874
+00:17:01,910 --> 00:17:01,920
+there's a lot a lot of experimentation
+ 
+
+875
+00:17:01,920 --> 00:17:03,590
+there's a lot a lot of experimentation
+from people already in that space. You
+
+876
+00:17:03,590 --> 00:17:03,600
+from people already in that space. You
+ 
+
+877
+00:17:03,600 --> 00:17:05,110
+from people already in that space. You
+can already do some of that today if you
+
+878
+00:17:05,110 --> 00:17:05,120
+can already do some of that today if you
+ 
+
+879
+00:17:05,120 --> 00:17:07,429
+can already do some of that today if you
+just give the model a load skills tool.
+
+880
+00:17:07,429 --> 00:17:07,439
+just give the model a load skills tool.
+ 
+
+881
+00:17:07,439 --> 00:17:09,189
+just give the model a load skills tool.
+Like you can you can build primitives or
+
+882
+00:17:09,189 --> 00:17:09,199
+Like you can you can build primitives or
+ 
+
+883
+00:17:09,199 --> 00:17:10,949
+Like you can you can build primitives or
+versions of this today without having to
+
+884
+00:17:10,949 --> 00:17:10,959
+versions of this today without having to
+ 
+
+885
+00:17:10,959 --> 00:17:12,549
+versions of this today without having to
+rely on the semantics. But of course,
+
+886
+00:17:12,549 --> 00:17:12,559
+rely on the semantics. But of course,
+ 
+
+887
+00:17:12,559 --> 00:17:15,510
+rely on the semantics. But of course,
+we're going to define the semantics.
+
+888
+00:17:15,510 --> 00:17:15,520
+we're going to define the semantics.
+ 
+
+889
+00:17:15,520 --> 00:17:17,669
+we're going to define the semantics.
+Okay. So that's for me a long- winded
+
+890
+00:17:17,669 --> 00:17:17,679
+Okay. So that's for me a long- winded
+ 
+
+891
+00:17:17,679 --> 00:17:20,309
+Okay. So that's for me a long- winded
+way to think to say that I think MCP is
+
+892
+00:17:20,309 --> 00:17:20,319
+way to think to say that I think MCP is
+ 
+
+893
+00:17:20,319 --> 00:17:22,069
+way to think to say that I think MCP is
+actually in a really good shape and I
+
+894
+00:17:22,069 --> 00:17:22,079
+actually in a really good shape and I
+ 
+
+895
+00:17:22,079 --> 00:17:24,710
+actually in a really good shape and I
+think in this year we're going to push
+
+896
+00:17:24,710 --> 00:17:24,720
+think in this year we're going to push
+ 
+
+897
+00:17:24,720 --> 00:17:27,990
+think in this year we're going to push
+uh agents to full connectivity.
+
+898
+00:17:27,990 --> 00:17:28,000
+uh agents to full connectivity.
+ 
+
+899
+00:17:28,000 --> 00:17:30,470
+uh agents to full connectivity.
+Um MCP will continue to play a major
+
+900
+00:17:30,470 --> 00:17:30,480
+Um MCP will continue to play a major
+ 
+
+901
+00:17:30,480 --> 00:17:33,029
+Um MCP will continue to play a major
+major major role and we want of course
+
+902
+00:17:33,029 --> 00:17:33,039
+major major role and we want of course
+ 
+
+903
+00:17:33,039 --> 00:17:34,470
+major major role and we want of course
+your feedback. We are very open
+
+904
+00:17:34,470 --> 00:17:34,480
+your feedback. We are very open
+ 
+
+905
+00:17:34,480 --> 00:17:36,070
+your feedback. We are very open
+community. We just have created a
+
+906
+00:17:36,070 --> 00:17:36,080
+community. We just have created a
+ 
+
+907
+00:17:36,080 --> 00:17:38,630
+community. We just have created a
+foundation. We're mostly running as an
+
+908
+00:17:38,630 --> 00:17:38,640
+foundation. We're mostly running as an
+ 
+
+909
+00:17:38,640 --> 00:17:40,630
+foundation. We're mostly running as an
+open source community with a discord
+
+910
+00:17:40,630 --> 00:17:40,640
+open source community with a discord
+ 
+
+911
+00:17:40,640 --> 00:17:43,110
+open source community with a discord
+with issues. Um just come to us and tell
+
+912
+00:17:43,110 --> 00:17:43,120
+with issues. Um just come to us and tell
+ 
+
+913
+00:17:43,120 --> 00:17:45,190
+with issues. Um just come to us and tell
+us where the [\h__\h] are we wrong? what are
+
+914
+00:17:45,190 --> 00:17:45,200
+us where the [\h__\h] are we wrong? what are
+ 
+
+915
+00:17:45,200 --> 00:17:47,029
+us where the [\h__\h] are we wrong? what are
+we getting right? Um so that we can
+
+916
+00:17:47,029 --> 00:17:47,039
+we getting right? Um so that we can
+ 
+
+917
+00:17:47,039 --> 00:17:49,590
+we getting right? Um so that we can
+improve this on a continuous basis. So
+
+918
+00:17:49,590 --> 00:17:49,600
+improve this on a continuous basis. So
+ 
+
+919
+00:17:49,600 --> 00:17:51,830
+improve this on a continuous basis. So
+2026 I think is all about connectivity
+
+920
+00:17:51,830 --> 00:17:51,840
+2026 I think is all about connectivity
+ 
+
+921
+00:17:51,840 --> 00:17:54,870
+2026 I think is all about connectivity
+and the best agents use every available
+
+922
+00:17:54,870 --> 00:17:54,880
+and the best agents use every available
+ 
+
+923
+00:17:54,880 --> 00:17:56,470
+and the best agents use every available
+method. They will use computer use, they
+
+924
+00:17:56,470 --> 00:17:56,480
+method. They will use computer use, they
+ 
+
+925
+00:17:56,480 --> 00:17:58,630
+method. They will use computer use, they
+will use CLIs, they will use MCPS and
+
+926
+00:17:58,630 --> 00:17:58,640
+will use CLIs, they will use MCPS and
+ 
+
+927
+00:17:58,640 --> 00:18:01,669
+will use CLIs, they will use MCPS and
+they use will use skills because they
+
+928
+00:18:01,669 --> 00:18:01,679
+they use will use skills because they
+ 
+
+929
+00:18:01,679 --> 00:18:03,590
+they use will use skills because they
+want to have a wide variety of things
+
+930
+00:18:03,590 --> 00:18:03,600
+want to have a wide variety of things
+ 
+
+931
+00:18:03,600 --> 00:18:06,310
+want to have a wide variety of things
+they can do and then they can ship cool
+
+932
+00:18:06,310 --> 00:18:06,320
+they can do and then they can ship cool
+ 
+
+933
+00:18:06,320 --> 00:18:11,830
+they can do and then they can ship cool
+stuff like this. Um which is um
+
+934
+00:18:11,830 --> 00:18:11,840
+stuff like this. Um which is um
+ 
+
+935
+00:18:11,840 --> 00:18:13,350
+stuff like this. Um which is um
+one of the product features we shipped
+
+936
+00:18:13,350 --> 00:18:13,360
+one of the product features we shipped
+ 
+
+937
+00:18:13,360 --> 00:18:16,390
+one of the product features we shipped
+recently. uh under the hood it's nothing
+
+938
+00:18:16,390 --> 00:18:16,400
+recently. uh under the hood it's nothing
+ 
+
+939
+00:18:16,400 --> 00:18:19,669
+recently. uh under the hood it's nothing
+but an MCP application um that renders
+
+940
+00:18:19,669 --> 00:18:19,679
+but an MCP application um that renders
+ 
+
+941
+00:18:19,679 --> 00:18:23,909
+but an MCP application um that renders
+stuff right cool
+
+942
+00:18:23,909 --> 00:18:23,919
+stuff right cool
+ 
+
+943
+00:18:23,919 --> 00:18:25,590
+stuff right cool
+so we can now look at uh the model
+
+944
+00:18:25,590 --> 00:18:25,600
+so we can now look at uh the model
+ 
+
+945
+00:18:25,600 --> 00:18:27,590
+so we can now look at uh the model
+writing graphs
+
+946
+00:18:27,590 --> 00:18:27,600
+writing graphs
+ 
+
+947
+00:18:27,600 --> 00:18:29,110
+writing graphs
+anyway
+
+948
+00:18:29,110 --> 00:18:29,120
+anyway
+ 
+
+949
+00:18:29,120 --> 00:18:32,360
+anyway
+thank you
+

@@ -1,0 +1,5185 @@
+1
+00:00:07,205 --> 00:00:15,470
+
+[music]
+
+2
+00:00:15,470 --> 00:00:15,480
+
+ 
+
+3
+00:00:15,480 --> 00:00:18,870
+
+>> Our next presenter created PartyKit, the
+
+4
+00:00:18,870 --> 00:00:18,880
+>> Our next presenter created PartyKit, the
+ 
+
+5
+00:00:18,880 --> 00:00:21,110
+>> Our next presenter created PartyKit, the
+open-source tool for real-time
+
+6
+00:00:21,110 --> 00:00:21,120
+open-source tool for real-time
+ 
+
+7
+00:00:21,120 --> 00:00:24,230
+open-source tool for real-time
+multiplayer apps. For his day job, he
+
+8
+00:00:24,230 --> 00:00:24,240
+multiplayer apps. For his day job, he
+ 
+
+9
+00:00:24,240 --> 00:00:27,790
+multiplayer apps. For his day job, he
+builds AI agents at Cloudflare. Please
+
+10
+00:00:27,790 --> 00:00:27,800
+builds AI agents at Cloudflare. Please
+ 
+
+11
+00:00:27,800 --> 00:00:30,950
+builds AI agents at Cloudflare. Please
+join me in welcoming to the stage Sunil
+
+12
+00:00:30,950 --> 00:00:30,960
+join me in welcoming to the stage Sunil
+ 
+
+13
+00:00:30,960 --> 00:00:57,190
+join me in welcoming to the stage Sunil
+Pai.
+
+14
+00:00:57,190 --> 00:00:57,200
+
+ 
+
+15
+00:00:57,200 --> 00:01:01,030
+
+Uh 20 minutes to the pub.
+
+16
+00:01:01,030 --> 00:01:01,040
+Uh 20 minutes to the pub.
+ 
+
+17
+00:01:01,040 --> 00:01:03,510
+Uh 20 minutes to the pub.
+Uh hi. Uh my name is Sunil Pai. Uh I
+
+18
+00:01:03,510 --> 00:01:03,520
+Uh hi. Uh my name is Sunil Pai. Uh I
+ 
+
+19
+00:01:03,520 --> 00:01:05,189
+Uh hi. Uh my name is Sunil Pai. Uh I
+work at Cloudflare.
+
+20
+00:01:05,189 --> 00:01:05,199
+work at Cloudflare.
+ 
+
+21
+00:01:05,199 --> 00:01:07,510
+work at Cloudflare.
+Uh I build agents over there uh for the
+
+22
+00:01:07,510 --> 00:01:07,520
+Uh I build agents over there uh for the
+ 
+
+23
+00:01:07,520 --> 00:01:09,870
+Uh I build agents over there uh for the
+agents SDK. I'm trying very hard for
+
+24
+00:01:09,870 --> 00:01:09,880
+agents SDK. I'm trying very hard for
+ 
+
+25
+00:01:09,880 --> 00:01:12,070
+agents SDK. I'm trying very hard for
+this not to be a Cloudflare talk, but I
+
+26
+00:01:12,070 --> 00:01:12,080
+this not to be a Cloudflare talk, but I
+ 
+
+27
+00:01:12,080 --> 00:01:14,510
+this not to be a Cloudflare talk, but I
+think we are on the sponsor board, so
+
+28
+00:01:14,510 --> 00:01:14,520
+think we are on the sponsor board, so
+ 
+
+29
+00:01:14,520 --> 00:01:16,030
+think we are on the sponsor board, so
+that's nice.
+
+30
+00:01:16,030 --> 00:01:16,040
+that's nice.
+ 
+
+31
+00:01:16,040 --> 00:01:17,790
+that's nice.
+Uh this is a talk about something we
+
+32
+00:01:17,790 --> 00:01:17,800
+Uh this is a talk about something we
+ 
+
+33
+00:01:17,800 --> 00:01:19,830
+Uh this is a talk about something we
+call code mode. Uh I've been wearing the
+
+34
+00:01:19,830 --> 00:01:19,840
+call code mode. Uh I've been wearing the
+ 
+
+35
+00:01:19,840 --> 00:01:20,870
+call code mode. Uh I've been wearing the
+hat
+
+36
+00:01:20,870 --> 00:01:20,880
+hat
+ 
+
+37
+00:01:20,880 --> 00:01:22,430
+hat
+uh and uh
+
+38
+00:01:22,430 --> 00:01:22,440
+uh and uh
+ 
+
+39
+00:01:22,440 --> 00:01:24,190
+uh and uh
+there's some prior art to it. We don't
+
+40
+00:01:24,190 --> 00:01:24,200
+there's some prior art to it. We don't
+ 
+
+41
+00:01:24,200 --> 00:01:25,790
+there's some prior art to it. We don't
+claim to have invented it, but this is a
+
+42
+00:01:25,790 --> 00:01:25,800
+claim to have invented it, but this is a
+ 
+
+43
+00:01:25,800 --> 00:01:28,030
+claim to have invented it, but this is a
+talk about the implications of something
+
+44
+00:01:28,030 --> 00:01:28,040
+talk about the implications of something
+ 
+
+45
+00:01:28,040 --> 00:01:30,910
+talk about the implications of something
+new that we we're discovering.
+
+46
+00:01:30,910 --> 00:01:30,920
+new that we we're discovering.
+ 
+
+47
+00:01:30,920 --> 00:01:32,950
+new that we we're discovering.
+So, um
+
+48
+00:01:32,950 --> 00:01:32,960
+So, um
+ 
+
+49
+00:01:32,960 --> 00:01:35,230
+So, um
+you guys have built uh AI applications,
+
+50
+00:01:35,230 --> 00:01:35,240
+you guys have built uh AI applications,
+ 
+
+51
+00:01:35,240 --> 00:01:37,670
+you guys have built uh AI applications,
+and tool calling gets weird at scale.
+
+52
+00:01:37,670 --> 00:01:37,680
+and tool calling gets weird at scale.
+ 
+
+53
+00:01:37,680 --> 00:01:39,470
+and tool calling gets weird at scale.
+When it's just a couple of tools and
+
+54
+00:01:39,470 --> 00:01:39,480
+When it's just a couple of tools and
+ 
+
+55
+00:01:39,480 --> 00:01:41,790
+When it's just a couple of tools and
+very short runs, it's fine. But the
+
+56
+00:01:41,790 --> 00:01:41,800
+very short runs, it's fine. But the
+ 
+
+57
+00:01:41,800 --> 00:01:44,150
+very short runs, it's fine. But the
+moment you start stuffing in uh your
+
+58
+00:01:44,150 --> 00:01:44,160
+moment you start stuffing in uh your
+ 
+
+59
+00:01:44,160 --> 00:01:46,750
+moment you start stuffing in uh your
+Google services, your Jira, your wiki,
+
+60
+00:01:46,750 --> 00:01:46,760
+Google services, your Jira, your wiki,
+ 
+
+61
+00:01:46,760 --> 00:01:48,070
+Google services, your Jira, your wiki,
+etc., and you have like hundreds
+
+62
+00:01:48,070 --> 00:01:48,080
+etc., and you have like hundreds
+ 
+
+63
+00:01:48,080 --> 00:01:49,510
+etc., and you have like hundreds
+hundreds of tools filling up the
+
+64
+00:01:49,510 --> 00:01:49,520
+hundreds of tools filling up the
+ 
+
+65
+00:01:49,520 --> 00:01:52,070
+hundreds of tools filling up the
+context, it starts breaking.
+
+66
+00:01:52,070 --> 00:01:52,080
+context, it starts breaking.
+ 
+
+67
+00:01:52,080 --> 00:01:53,750
+context, it starts breaking.
+Um
+
+68
+00:01:53,750 --> 00:01:53,760
+Um
+ 
+
+69
+00:01:53,760 --> 00:01:55,710
+Um
+and uh the composition is weird, and
+
+70
+00:01:55,710 --> 00:01:55,720
+and uh the composition is weird, and
+ 
+
+71
+00:01:55,720 --> 00:01:57,230
+and uh the composition is weird, and
+there's this back and forth that you
+
+72
+00:01:57,230 --> 00:01:57,240
+there's this back and forth that you
+ 
+
+73
+00:01:57,240 --> 00:01:58,870
+there's this back and forth that you
+have to do with
+
+74
+00:01:58,870 --> 00:01:58,880
+have to do with
+ 
+
+75
+00:01:58,880 --> 00:02:03,030
+have to do with
+uh the model that's really slow.
+
+76
+00:02:03,030 --> 00:02:03,040
+uh the model that's really slow.
+ 
+
+77
+00:02:03,040 --> 00:02:04,510
+uh the model that's really slow.
+Uh
+
+78
+00:02:04,510 --> 00:02:04,520
+Uh
+ 
+
+79
+00:02:04,520 --> 00:02:06,830
+Uh
+we decided to take a different act.
+
+80
+00:02:06,830 --> 00:02:06,840
+we decided to take a different act.
+ 
+
+81
+00:02:06,840 --> 00:02:08,790
+we decided to take a different act.
+Instead of doing this JSON back and
+
+82
+00:02:08,790 --> 00:02:08,800
+Instead of doing this JSON back and
+ 
+
+83
+00:02:08,800 --> 00:02:10,109
+Instead of doing this JSON back and
+forth thing,
+
+84
+00:02:10,109 --> 00:02:10,119
+forth thing,
+ 
+
+85
+00:02:10,119 --> 00:02:13,670
+forth thing,
+we asked the model to generate code,
+
+86
+00:02:13,670 --> 00:02:13,680
+we asked the model to generate code,
+ 
+
+87
+00:02:13,680 --> 00:02:16,150
+we asked the model to generate code,
+usually JavaScript, that we could run
+
+88
+00:02:16,150 --> 00:02:16,160
+usually JavaScript, that we could run
+ 
+
+89
+00:02:16,160 --> 00:02:18,590
+usually JavaScript, that we could run
+against an environment.
+
+90
+00:02:18,590 --> 00:02:18,600
+against an environment.
+ 
+
+91
+00:02:18,600 --> 00:02:21,270
+against an environment.
+Uh and some of the benefits seem a
+
+92
+00:02:21,270 --> 00:02:21,280
+Uh and some of the benefits seem a
+ 
+
+93
+00:02:21,280 --> 00:02:24,350
+Uh and some of the benefits seem a
+little obvious to us. Uh with code, you
+
+94
+00:02:24,350 --> 00:02:24,360
+little obvious to us. Uh with code, you
+ 
+
+95
+00:02:24,360 --> 00:02:26,230
+little obvious to us. Uh with code, you
+get a typed API, you can do type
+
+96
+00:02:26,230 --> 00:02:26,240
+get a typed API, you can do type
+ 
+
+97
+00:02:26,240 --> 00:02:28,670
+get a typed API, you can do type
+checking, there are syntax errors. Uh
+
+98
+00:02:28,670 --> 00:02:28,680
+checking, there are syntax errors. Uh
+ 
+
+99
+00:02:28,680 --> 00:02:31,310
+checking, there are syntax errors. Uh
+models are trained on gigabytes, if not
+
+100
+00:02:31,310 --> 00:02:31,320
+models are trained on gigabytes, if not
+ 
+
+101
+00:02:31,320 --> 00:02:33,110
+models are trained on gigabytes, if not
+terabytes, of data already in the
+
+102
+00:02:33,110 --> 00:02:33,120
+terabytes, of data already in the
+ 
+
+103
+00:02:33,120 --> 00:02:34,630
+terabytes, of data already in the
+training set.
+
+104
+00:02:34,630 --> 00:02:34,640
+training set.
+ 
+
+105
+00:02:34,640 --> 00:02:37,230
+training set.
+Uh and instead of doing this back and
+
+106
+00:02:37,230 --> 00:02:37,240
+Uh and instead of doing this back and
+ 
+
+107
+00:02:37,240 --> 00:02:38,830
+Uh and instead of doing this back and
+forth, you could write code that
+
+108
+00:02:38,830 --> 00:02:38,840
+forth, you could write code that
+ 
+
+109
+00:02:38,840 --> 00:02:40,750
+forth, you could write code that
+executes it all in one run, just one
+
+110
+00:02:40,750 --> 00:02:40,760
+executes it all in one run, just one
+ 
+
+111
+00:02:40,760 --> 00:02:43,350
+executes it all in one run, just one
+execution.
+
+112
+00:02:43,350 --> 00:02:43,360
+execution.
+ 
+
+113
+00:02:43,360 --> 00:02:45,390
+execution.
+So, uh so this is what I mean. Like
+
+114
+00:02:45,390 --> 00:02:45,400
+So, uh so this is what I mean. Like
+ 
+
+115
+00:02:45,400 --> 00:02:46,550
+So, uh so this is what I mean. Like
+there are
+
+116
+00:02:46,550 --> 00:02:46,560
+there are
+ 
+
+117
+00:02:46,560 --> 00:02:48,910
+there are
+uh fundamental capabilities of code.
+
+118
+00:02:48,910 --> 00:02:48,920
+uh fundamental capabilities of code.
+ 
+
+119
+00:02:48,920 --> 00:02:50,510
+uh fundamental capabilities of code.
+You're able to do looping, you're able
+
+120
+00:02:50,510 --> 00:02:50,520
+You're able to do looping, you're able
+ 
+
+121
+00:02:50,520 --> 00:02:52,470
+You're able to do looping, you're able
+to hold state, uh you're doing
+
+122
+00:02:52,470 --> 00:02:52,480
+to hold state, uh you're doing
+ 
+
+123
+00:02:52,480 --> 00:02:55,550
+to hold state, uh you're doing
+sequencing, parallelize parallelization,
+
+124
+00:02:55,550 --> 00:02:55,560
+sequencing, parallelize parallelization,
+ 
+
+125
+00:02:55,560 --> 00:02:57,070
+sequencing, parallelize parallelization,
+things that you would normally do with
+
+126
+00:02:57,070 --> 00:02:57,080
+things that you would normally do with
+ 
+
+127
+00:02:57,080 --> 00:03:00,990
+things that you would normally do with
+code anyway as an engineer.
+
+128
+00:03:00,990 --> 00:03:01,000
+
+ 
+
+129
+00:03:01,000 --> 00:03:03,710
+
+So, the first place we applied this uh
+
+130
+00:03:03,710 --> 00:03:03,720
+So, the first place we applied this uh
+ 
+
+131
+00:03:03,720 --> 00:03:05,230
+So, the first place we applied this uh
+my colleague Matt Carey, who's actually
+
+132
+00:03:05,230 --> 00:03:05,240
+my colleague Matt Carey, who's actually
+ 
+
+133
+00:03:05,240 --> 00:03:06,510
+my colleague Matt Carey, who's actually
+going to be speaking about this a little
+
+134
+00:03:06,510 --> 00:03:06,520
+going to be speaking about this a little
+ 
+
+135
+00:03:06,520 --> 00:03:07,750
+going to be speaking about this a little
+more tomorrow, you should watch his
+
+136
+00:03:07,750 --> 00:03:07,760
+more tomorrow, you should watch his
+ 
+
+137
+00:03:07,760 --> 00:03:09,230
+more tomorrow, you should watch his
+talk. Uh
+
+138
+00:03:09,230 --> 00:03:09,240
+talk. Uh
+ 
+
+139
+00:03:09,240 --> 00:03:12,270
+talk. Uh
+the Cloudflare API surface is about
+
+140
+00:03:12,270 --> 00:03:12,280
+the Cloudflare API surface is about
+ 
+
+141
+00:03:12,280 --> 00:03:15,910
+the Cloudflare API surface is about
+2,600 API endpoints. If we exposed a
+
+142
+00:03:15,910 --> 00:03:15,920
+2,600 API endpoints. If we exposed a
+ 
+
+143
+00:03:15,920 --> 00:03:18,630
+2,600 API endpoints. If we exposed a
+tool for every single one of them, it's
+
+144
+00:03:18,630 --> 00:03:18,640
+tool for every single one of them, it's
+ 
+
+145
+00:03:18,640 --> 00:03:21,030
+tool for every single one of them, it's
+about 1.2 million tokens in your first
+
+146
+00:03:21,030 --> 00:03:21,040
+about 1.2 million tokens in your first
+ 
+
+147
+00:03:21,040 --> 00:03:22,950
+about 1.2 million tokens in your first
+call. Like it just blows. There's no way
+
+148
+00:03:22,950 --> 00:03:22,960
+call. Like it just blows. There's no way
+ 
+
+149
+00:03:22,960 --> 00:03:25,030
+call. Like it just blows. There's no way
+to create an MCP server for the entire
+
+150
+00:03:25,030 --> 00:03:25,040
+to create an MCP server for the entire
+ 
+
+151
+00:03:25,040 --> 00:03:27,150
+to create an MCP server for the entire
+Cloudflare API surface.
+
+152
+00:03:27,150 --> 00:03:27,160
+Cloudflare API surface.
+ 
+
+153
+00:03:27,160 --> 00:03:30,030
+Cloudflare API surface.
+And he had a very clever idea where he
+
+154
+00:03:30,030 --> 00:03:30,040
+And he had a very clever idea where he
+ 
+
+155
+00:03:30,040 --> 00:03:33,070
+And he had a very clever idea where he
+exposes just two tool calls.
+
+156
+00:03:33,070 --> 00:03:33,080
+exposes just two tool calls.
+ 
+
+157
+00:03:33,080 --> 00:03:36,110
+exposes just two tool calls.
+Uh search and execute. Both of these
+
+158
+00:03:36,110 --> 00:03:36,120
+Uh search and execute. Both of these
+ 
+
+159
+00:03:36,120 --> 00:03:39,110
+Uh search and execute. Both of these
+endpoints accept code as an input,
+
+160
+00:03:39,110 --> 00:03:39,120
+endpoints accept code as an input,
+ 
+
+161
+00:03:39,120 --> 00:03:42,150
+endpoints accept code as an input,
+literally a string of code. For search,
+
+162
+00:03:42,150 --> 00:03:42,160
+literally a string of code. For search,
+ 
+
+163
+00:03:42,160 --> 00:03:43,910
+literally a string of code. For search,
+the input to the function that you pass
+
+164
+00:03:43,910 --> 00:03:43,920
+the input to the function that you pass
+ 
+
+165
+00:03:43,920 --> 00:03:46,830
+the input to the function that you pass
+to it is the entire open API uh JSON
+
+166
+00:03:46,830 --> 00:03:46,840
+to it is the entire open API uh JSON
+ 
+
+167
+00:03:46,840 --> 00:03:47,910
+to it is the entire open API uh JSON
+spec.
+
+168
+00:03:47,910 --> 00:03:47,920
+spec.
+ 
+
+169
+00:03:47,920 --> 00:03:50,990
+spec.
+And once it does that, execute gives
+
+170
+00:03:50,990 --> 00:03:51,000
+And once it does that, execute gives
+ 
+
+171
+00:03:51,000 --> 00:03:52,390
+And once it does that, execute gives
+gives you a whole bunch of functions
+
+172
+00:03:52,390 --> 00:03:52,400
+gives you a whole bunch of functions
+ 
+
+173
+00:03:52,400 --> 00:03:53,870
+gives you a whole bunch of functions
+that you can call against the things
+
+174
+00:03:53,870 --> 00:03:53,880
+that you can call against the things
+ 
+
+175
+00:03:53,880 --> 00:03:56,150
+that you can call against the things
+that you called. And it reduced that
+
+176
+00:03:56,150 --> 00:03:56,160
+that you called. And it reduced that
+ 
+
+177
+00:03:56,160 --> 00:03:59,110
+that you called. And it reduced that
+1.2, 1.5 million token thing down to
+
+178
+00:03:59,110 --> 00:03:59,120
+1.2, 1.5 million token thing down to
+ 
+
+179
+00:03:59,120 --> 00:04:01,710
+1.2, 1.5 million token thing down to
+1,000 tokens. Kind of unheard of. I
+
+180
+00:04:01,710 --> 00:04:01,720
+1,000 tokens. Kind of unheard of. I
+ 
+
+181
+00:04:01,720 --> 00:04:04,110
+1,000 tokens. Kind of unheard of. I
+think it's like 99.9%
+
+182
+00:04:04,110 --> 00:04:04,120
+think it's like 99.9%
+ 
+
+183
+00:04:04,120 --> 00:04:05,510
+think it's like 99.9%
+reduction.
+
+184
+00:04:05,510 --> 00:04:05,520
+reduction.
+ 
+
+185
+00:04:05,520 --> 00:04:06,950
+reduction.
+Uh this is going to be scary. I actually
+
+186
+00:04:06,950 --> 00:04:06,960
+Uh this is going to be scary. I actually
+ 
+
+187
+00:04:06,960 --> 00:04:10,350
+Uh this is going to be scary. I actually
+have I have a live demo of this, and uh
+
+188
+00:04:10,350 --> 00:04:10,360
+have I have a live demo of this, and uh
+ 
+
+189
+00:04:10,360 --> 00:04:12,070
+have I have a live demo of this, and uh
+demos don't usually do me well on stage,
+
+190
+00:04:12,070 --> 00:04:12,080
+demos don't usually do me well on stage,
+ 
+
+191
+00:04:12,080 --> 00:04:14,990
+demos don't usually do me well on stage,
+but uh but the point being that we were
+
+192
+00:04:14,990 --> 00:04:15,000
+but uh but the point being that we were
+ 
+
+193
+00:04:15,000 --> 00:04:17,830
+but uh but the point being that we were
+able to take a wide, super wide API
+
+194
+00:04:17,830 --> 00:04:17,840
+able to take a wide, super wide API
+ 
+
+195
+00:04:17,840 --> 00:04:21,750
+able to take a wide, super wide API
+surface and make it incredibly fast.
+
+196
+00:04:21,750 --> 00:04:21,760
+surface and make it incredibly fast.
+ 
+
+197
+00:04:21,760 --> 00:04:25,550
+surface and make it incredibly fast.
+Uh the prompt itself can be
+
+198
+00:04:25,550 --> 00:04:25,560
+Uh the prompt itself can be
+ 
+
+199
+00:04:25,560 --> 00:04:28,190
+Uh the prompt itself can be
+uh fairly generic. So, I should have
+
+200
+00:04:28,190 --> 00:04:28,200
+uh fairly generic. So, I should have
+ 
+
+201
+00:04:28,200 --> 00:04:29,790
+uh fairly generic. So, I should have
+kicked up the font size on this one. The
+
+202
+00:04:29,790 --> 00:04:29,800
+kicked up the font size on this one. The
+ 
+
+203
+00:04:29,800 --> 00:04:32,350
+kicked up the font size on this one. The
+prompt here is as a customer, you come
+
+204
+00:04:32,350 --> 00:04:32,360
+prompt here is as a customer, you come
+ 
+
+205
+00:04:32,360 --> 00:04:34,750
+prompt here is as a customer, you come
+in and say, "We are getting DDoS'd. I
+
+206
+00:04:34,750 --> 00:04:34,760
+in and say, "We are getting DDoS'd. I
+ 
+
+207
+00:04:34,760 --> 00:04:37,510
+in and say, "We are getting DDoS'd. I
+want you to find every offending IP
+
+208
+00:04:37,510 --> 00:04:37,520
+want you to find every offending IP
+ 
+
+209
+00:04:37,520 --> 00:04:39,350
+want you to find every offending IP
+that's like attacking us and block
+
+210
+00:04:39,350 --> 00:04:39,360
+that's like attacking us and block
+ 
+
+211
+00:04:39,360 --> 00:04:40,950
+that's like attacking us and block
+them."
+
+212
+00:04:40,950 --> 00:04:40,960
+them."
+ 
+
+213
+00:04:40,960 --> 00:04:43,230
+them."
+In a moment of panic, when your website
+
+214
+00:04:43,230 --> 00:04:43,240
+In a moment of panic, when your website
+ 
+
+215
+00:04:43,240 --> 00:04:44,750
+In a moment of panic, when your website
+is going down,
+
+216
+00:04:44,750 --> 00:04:44,760
+is going down,
+ 
+
+217
+00:04:44,760 --> 00:04:47,390
+is going down,
+you don't have the time to do menu
+
+218
+00:04:47,390 --> 00:04:47,400
+you don't have the time to do menu
+ 
+
+219
+00:04:47,400 --> 00:04:49,870
+you don't have the time to do menu
+diving. Uh the Cloudflare dashboard is
+
+220
+00:04:49,870 --> 00:04:49,880
+diving. Uh the Cloudflare dashboard is
+ 
+
+221
+00:04:49,880 --> 00:04:53,270
+diving. Uh the Cloudflare dashboard is
+famously a little cumbersome to handle.
+
+222
+00:04:53,270 --> 00:04:53,280
+famously a little cumbersome to handle.
+ 
+
+223
+00:04:53,280 --> 00:04:55,990
+famously a little cumbersome to handle.
+Uh and you just want the thing done. And
+
+224
+00:04:55,990 --> 00:04:56,000
+Uh and you just want the thing done. And
+ 
+
+225
+00:04:56,000 --> 00:04:57,550
+Uh and you just want the thing done. And
+you can't even get an AE, it's like 3:00
+
+226
+00:04:57,550 --> 00:04:57,560
+you can't even get an AE, it's like 3:00
+ 
+
+227
+00:04:57,560 --> 00:04:59,710
+you can't even get an AE, it's like 3:00
+in the morning.
+
+228
+00:04:59,710 --> 00:04:59,720
+in the morning.
+ 
+
+229
+00:04:59,720 --> 00:05:02,350
+in the morning.
+Uh with a regular MCP thing, and this
+
+230
+00:05:02,350 --> 00:05:02,360
+Uh with a regular MCP thing, and this
+ 
+
+231
+00:05:02,360 --> 00:05:04,190
+Uh with a regular MCP thing, and this
+isn't even talking about stuffing 1.2
+
+232
+00:05:04,190 --> 00:05:04,200
+isn't even talking about stuffing 1.2
+ 
+
+233
+00:05:04,200 --> 00:05:06,310
+isn't even talking about stuffing 1.2
+million tokens. It would be about eight
+
+234
+00:05:06,310 --> 00:05:06,320
+million tokens. It would be about eight
+ 
+
+235
+00:05:06,320 --> 00:05:08,390
+million tokens. It would be about eight
+round trips to do each of those API
+
+236
+00:05:08,390 --> 00:05:08,400
+round trips to do each of those API
+ 
+
+237
+00:05:08,400 --> 00:05:12,150
+round trips to do each of those API
+calls. Instead, the model can generate
+
+238
+00:05:12,150 --> 00:05:12,160
+calls. Instead, the model can generate
+ 
+
+239
+00:05:12,160 --> 00:05:14,790
+calls. Instead, the model can generate
+this string of code, run it immediately
+
+240
+00:05:14,790 --> 00:05:14,800
+this string of code, run it immediately
+ 
+
+241
+00:05:14,800 --> 00:05:17,070
+this string of code, run it immediately
+right next to the API surface, and do it
+
+242
+00:05:17,070 --> 00:05:17,080
+right next to the API surface, and do it
+ 
+
+243
+00:05:17,080 --> 00:05:18,870
+right next to the API surface, and do it
+in one shot.
+
+244
+00:05:18,870 --> 00:05:18,880
+in one shot.
+ 
+
+245
+00:05:18,880 --> 00:05:22,510
+in one shot.
+And it's just running JavaScript. Just
+
+246
+00:05:22,510 --> 00:05:22,520
+And it's just running JavaScript. Just
+ 
+
+247
+00:05:22,520 --> 00:05:24,550
+And it's just running JavaScript. Just
+functions and um
+
+248
+00:05:24,550 --> 00:05:24,560
+functions and um
+ 
+
+249
+00:05:24,560 --> 00:05:26,230
+functions and um
+just things that you're exposing on the
+
+250
+00:05:26,230 --> 00:05:26,240
+just things that you're exposing on the
+ 
+
+251
+00:05:26,240 --> 00:05:28,870
+just things that you're exposing on the
+API surface.
+
+252
+00:05:28,870 --> 00:05:28,880
+API surface.
+ 
+
+253
+00:05:28,880 --> 00:05:31,150
+API surface.
+Okay, live demo. This is a demo of our
+
+254
+00:05:31,150 --> 00:05:31,160
+Okay, live demo. This is a demo of our
+ 
+
+255
+00:05:31,160 --> 00:05:32,790
+Okay, live demo. This is a demo of our
+mythical server.
+
+256
+00:05:32,790 --> 00:05:32,800
+mythical server.
+ 
+
+257
+00:05:32,800 --> 00:05:34,870
+mythical server.
+Uh I hope I'm logged in, because if I'm
+
+258
+00:05:34,870 --> 00:05:34,880
+Uh I hope I'm logged in, because if I'm
+ 
+
+259
+00:05:34,880 --> 00:05:36,830
+Uh I hope I'm logged in, because if I'm
+not, I'll need all of you to close your
+
+260
+00:05:36,830 --> 00:05:36,840
+not, I'll need all of you to close your
+ 
+
+261
+00:05:36,840 --> 00:05:39,790
+not, I'll need all of you to close your
+eyes while I enter a password. Let's say
+
+262
+00:05:39,790 --> 00:05:39,800
+eyes while I enter a password. Let's say
+ 
+
+263
+00:05:39,800 --> 00:05:46,310
+eyes while I enter a password. Let's say
+I just want to like list my workers.
+
+264
+00:05:46,310 --> 00:05:46,320
+
+ 
+
+265
+00:05:46,320 --> 00:05:48,070
+
+Oh, there it is. List my workers. I say
+
+266
+00:05:48,070 --> 00:05:48,080
+Oh, there it is. List my workers. I say
+ 
+
+267
+00:05:48,080 --> 00:05:49,870
+Oh, there it is. List my workers. I say
+send.
+
+268
+00:05:49,870 --> 00:05:49,880
+send.
+ 
+
+269
+00:05:49,880 --> 00:05:51,390
+send.
+Okay, okay, then there's no password
+
+270
+00:05:51,390 --> 00:05:51,400
+Okay, okay, then there's no password
+ 
+
+271
+00:05:51,400 --> 00:05:52,870
+Okay, okay, then there's no password
+required. Okay, fine, that's fine. Okay,
+
+272
+00:05:52,870 --> 00:05:52,880
+required. Okay, fine, that's fine. Okay,
+ 
+
+273
+00:05:52,880 --> 00:05:54,630
+required. Okay, fine, that's fine. Okay,
+I give it only read-only access for this
+
+274
+00:05:54,630 --> 00:05:54,640
+I give it only read-only access for this
+ 
+
+275
+00:05:54,640 --> 00:05:56,110
+I give it only read-only access for this
+demo.
+
+276
+00:05:56,110 --> 00:05:56,120
+demo.
+ 
+
+277
+00:05:56,120 --> 00:05:58,230
+demo.
+Uh do the thing. Yes, allow, sure,
+
+278
+00:05:58,230 --> 00:05:58,240
+Uh do the thing. Yes, allow, sure,
+ 
+
+279
+00:05:58,240 --> 00:06:00,390
+Uh do the thing. Yes, allow, sure,
+whatever.
+
+280
+00:06:00,390 --> 00:06:00,400
+whatever.
+ 
+
+281
+00:06:00,400 --> 00:06:02,470
+whatever.
+Ba ba ba ba ba. Nice. Okay, it comes
+
+282
+00:06:02,470 --> 00:06:02,480
+Ba ba ba ba ba. Nice. Okay, it comes
+ 
+
+283
+00:06:02,480 --> 00:06:03,790
+Ba ba ba ba ba. Nice. Okay, it comes
+back, and uh
+
+284
+00:06:03,790 --> 00:06:03,800
+back, and uh
+ 
+
+285
+00:06:03,800 --> 00:06:05,590
+back, and uh
+you'll see it'll start executing tool
+
+286
+00:06:05,590 --> 00:06:05,600
+you'll see it'll start executing tool
+ 
+
+287
+00:06:05,600 --> 00:06:08,550
+you'll see it'll start executing tool
+calls. I should be able to open this up.
+
+288
+00:06:08,550 --> 00:06:08,560
+calls. I should be able to open this up.
+ 
+
+289
+00:06:08,560 --> 00:06:10,030
+calls. I should be able to open this up.
+It has sent
+
+290
+00:06:10,030 --> 00:06:10,040
+It has sent
+ 
+
+291
+00:06:10,040 --> 00:06:11,830
+It has sent
+saying, "Hey, find me all API endpoints
+
+292
+00:06:11,830 --> 00:06:11,840
+saying, "Hey, find me all API endpoints
+ 
+
+293
+00:06:11,840 --> 00:06:13,830
+saying, "Hey, find me all API endpoints
+that just say the words list workers or
+
+294
+00:06:13,830 --> 00:06:13,840
+that just say the words list workers or
+ 
+
+295
+00:06:13,840 --> 00:06:15,390
+that just say the words list workers or
+something like that."
+
+296
+00:06:15,390 --> 00:06:15,400
+something like that."
+ 
+
+297
+00:06:15,400 --> 00:06:18,190
+something like that."
+Uh it then runs code,
+
+298
+00:06:18,190 --> 00:06:18,200
+Uh it then runs code,
+ 
+
+299
+00:06:18,200 --> 00:06:20,350
+Uh it then runs code,
+uh which Hey, yeah, it's like one single
+
+300
+00:06:20,350 --> 00:06:20,360
+uh which Hey, yeah, it's like one single
+ 
+
+301
+00:06:20,360 --> 00:06:22,910
+uh which Hey, yeah, it's like one single
+request for the API endpoint to get all
+
+302
+00:06:22,910 --> 00:06:22,920
+request for the API endpoint to get all
+ 
+
+303
+00:06:22,920 --> 00:06:24,550
+request for the API endpoint to get all
+the workers.
+
+304
+00:06:24,550 --> 00:06:24,560
+the workers.
+ 
+
+305
+00:06:24,560 --> 00:06:26,430
+the workers.
+Uh it must have received a whole bunch
+
+306
+00:06:26,430 --> 00:06:26,440
+Uh it must have received a whole bunch
+ 
+
+307
+00:06:26,440 --> 00:06:27,830
+Uh it must have received a whole bunch
+of these.
+
+308
+00:06:27,830 --> 00:06:27,840
+of these.
+ 
+
+309
+00:06:27,840 --> 00:06:29,470
+of these.
+It's actually going through JavaScript
+
+310
+00:06:29,470 --> 00:06:29,480
+It's actually going through JavaScript
+ 
+
+311
+00:06:29,480 --> 00:06:31,310
+It's actually going through JavaScript
+errors now. This is going to be fun to
+
+312
+00:06:31,310 --> 00:06:31,320
+errors now. This is going to be fun to
+ 
+
+313
+00:06:31,320 --> 00:06:34,830
+errors now. This is going to be fun to
+see if it actually succeeds.
+
+314
+00:06:34,830 --> 00:06:34,840
+
+ 
+
+315
+00:06:34,840 --> 00:06:38,710
+
+Yikes.
+
+316
+00:06:38,710 --> 00:06:38,720
+
+ 
+
+317
+00:06:38,720 --> 00:06:40,350
+
+Oh, is it trying to do it like per page?
+
+318
+00:06:40,350 --> 00:06:40,360
+Oh, is it trying to do it like per page?
+ 
+
+319
+00:06:40,360 --> 00:06:41,630
+Oh, is it trying to do it like per page?
+It's trying to paginate through the
+
+320
+00:06:41,630 --> 00:06:41,640
+It's trying to paginate through the
+ 
+
+321
+00:06:41,640 --> 00:06:43,550
+It's trying to paginate through the
+thing. Assume that this worked anyway,
+
+322
+00:06:43,550 --> 00:06:43,560
+thing. Assume that this worked anyway,
+ 
+
+323
+00:06:43,560 --> 00:06:44,950
+thing. Assume that this worked anyway,
+and I'll keep talking while it does
+
+324
+00:06:44,950 --> 00:06:44,960
+and I'll keep talking while it does
+ 
+
+325
+00:06:44,960 --> 00:06:46,350
+and I'll keep talking while it does
+this.
+
+326
+00:06:46,350 --> 00:06:46,360
+this.
+ 
+
+327
+00:06:46,360 --> 00:06:49,110
+this.
+Uh Love that this is happening to me on
+
+328
+00:06:49,110 --> 00:06:49,120
+Uh Love that this is happening to me on
+ 
+
+329
+00:06:49,120 --> 00:06:50,710
+Uh Love that this is happening to me on
+stage, because I did test it 10 times
+
+330
+00:06:50,710 --> 00:06:50,720
+stage, because I did test it 10 times
+ 
+
+331
+00:06:50,720 --> 00:06:52,950
+stage, because I did test it 10 times
+before coming on. Uh I need to pay for
+
+332
+00:06:52,950 --> 00:06:52,960
+before coming on. Uh I need to pay for
+ 
+
+333
+00:06:52,960 --> 00:06:55,670
+before coming on. Uh I need to pay for
+the Mythos uh model to make this work
+
+334
+00:06:55,670 --> 00:06:55,680
+the Mythos uh model to make this work
+ 
+
+335
+00:06:55,680 --> 00:06:57,229
+the Mythos uh model to make this work
+accurately.
+
+336
+00:06:57,229 --> 00:06:57,239
+accurately.
+ 
+
+337
+00:06:57,239 --> 00:06:57,750
+accurately.
+>> [laughter]
+
+338
+00:06:57,750 --> 00:06:57,760
+>> [laughter]
+ 
+
+339
+00:06:57,760 --> 00:06:58,910
+>> [laughter]
+>> Uh
+
+340
+00:06:58,910 --> 00:06:58,920
+>> Uh
+ 
+
+341
+00:06:58,920 --> 00:07:00,190
+>> Uh
+By the way, you can actually see it. It
+
+342
+00:07:00,190 --> 00:07:00,200
+By the way, you can actually see it. It
+ 
+
+343
+00:07:00,200 --> 00:07:01,750
+By the way, you can actually see it. It
+is actually like listing workers over
+
+344
+00:07:01,750 --> 00:07:01,760
+is actually like listing workers over
+ 
+
+345
+00:07:01,760 --> 00:07:03,470
+is actually like listing workers over
+here. It might just be having trouble uh
+
+346
+00:07:03,470 --> 00:07:03,480
+here. It might just be having trouble uh
+ 
+
+347
+00:07:03,480 --> 00:07:05,950
+here. It might just be having trouble uh
+rendering it over here. Um the point
+
+348
+00:07:05,950 --> 00:07:05,960
+rendering it over here. Um the point
+ 
+
+349
+00:07:05,960 --> 00:07:08,110
+rendering it over here. Um the point
+being, uh we are able to shrink that
+
+350
+00:07:08,110 --> 00:07:08,120
+being, uh we are able to shrink that
+ 
+
+351
+00:07:08,120 --> 00:07:10,150
+being, uh we are able to shrink that
+down. Now, if this was a talk about
+
+352
+00:07:10,150 --> 00:07:10,160
+down. Now, if this was a talk about
+ 
+
+353
+00:07:10,160 --> 00:07:12,350
+down. Now, if this was a talk about
+optimizing MCP servers, I would be done
+
+354
+00:07:12,350 --> 00:07:12,360
+optimizing MCP servers, I would be done
+ 
+
+355
+00:07:12,360 --> 00:07:13,710
+optimizing MCP servers, I would be done
+and dusted. I was like, "Hey, you should
+
+356
+00:07:13,710 --> 00:07:13,720
+and dusted. I was like, "Hey, you should
+ 
+
+357
+00:07:13,720 --> 00:07:15,990
+and dusted. I was like, "Hey, you should
+throw this, and trust me, it works when
+
+358
+00:07:15,990 --> 00:07:16,000
+throw this, and trust me, it works when
+ 
+
+359
+00:07:16,000 --> 00:07:17,750
+throw this, and trust me, it works when
+you're not staring at it and have 800
+
+360
+00:07:17,750 --> 00:07:17,760
+you're not staring at it and have 800
+ 
+
+361
+00:07:17,760 --> 00:07:20,070
+you're not staring at it and have 800
+people looking at you on the stage."
+
+362
+00:07:20,070 --> 00:07:20,080
+people looking at you on the stage."
+ 
+
+363
+00:07:20,080 --> 00:07:23,110
+people looking at you on the stage."
+But it did give us an idea that there's
+
+364
+00:07:23,110 --> 00:07:23,120
+But it did give us an idea that there's
+ 
+
+365
+00:07:23,120 --> 00:07:25,590
+But it did give us an idea that there's
+something deeper going on here.
+
+366
+00:07:25,590 --> 00:07:25,600
+something deeper going on here.
+ 
+
+367
+00:07:25,600 --> 00:07:29,270
+something deeper going on here.
+The ability to like run this code and uh
+
+368
+00:07:29,270 --> 00:07:29,280
+The ability to like run this code and uh
+ 
+
+369
+00:07:29,280 --> 00:07:30,590
+The ability to like run this code and uh
+feels like there's a new way of
+
+370
+00:07:30,590 --> 00:07:30,600
+feels like there's a new way of
+ 
+
+371
+00:07:30,600 --> 00:07:35,150
+feels like there's a new way of
+interacting with systems, with LLMs.
+
+372
+00:07:35,150 --> 00:07:35,160
+interacting with systems, with LLMs.
+ 
+
+373
+00:07:35,160 --> 00:07:37,030
+interacting with systems, with LLMs.
+Uh
+
+374
+00:07:37,030 --> 00:07:37,040
+Uh
+ 
+
+375
+00:07:37,040 --> 00:07:38,990
+Uh
+here's what I think. Like everyone here
+
+376
+00:07:38,990 --> 00:07:39,000
+here's what I think. Like everyone here
+ 
+
+377
+00:07:39,000 --> 00:07:40,830
+here's what I think. Like everyone here
+is a programmer. And I give you a
+
+378
+00:07:40,830 --> 00:07:40,840
+is a programmer. And I give you a
+ 
+
+379
+00:07:40,840 --> 00:07:43,750
+is a programmer. And I give you a
+problem statement like you have 200
+
+380
+00:07:43,750 --> 00:07:43,760
+problem statement like you have 200
+ 
+
+381
+00:07:43,760 --> 00:07:46,230
+problem statement like you have 200
+photos on your desktop. I need you to
+
+382
+00:07:46,230 --> 00:07:46,240
+photos on your desktop. I need you to
+ 
+
+383
+00:07:46,240 --> 00:07:48,350
+photos on your desktop. I need you to
+categorize and rename them.
+
+384
+00:07:48,350 --> 00:07:48,360
+categorize and rename them.
+ 
+
+385
+00:07:48,360 --> 00:07:49,510
+categorize and rename them.
+First thing you do is you look you're
+
+386
+00:07:49,510 --> 00:07:49,520
+First thing you do is you look you're
+ 
+
+387
+00:07:49,520 --> 00:07:51,350
+First thing you do is you look you're
+going to open up an IDE. You're going to
+
+388
+00:07:51,350 --> 00:07:51,360
+going to open up an IDE. You're going to
+ 
+
+389
+00:07:51,360 --> 00:07:52,630
+going to open up an IDE. You're going to
+write a little script. Maybe you're
+
+390
+00:07:52,630 --> 00:07:52,640
+write a little script. Maybe you're
+ 
+
+391
+00:07:52,640 --> 00:07:54,230
+write a little script. Maybe you're
+going to pass every image to a vision
+
+392
+00:07:54,230 --> 00:07:54,240
+going to pass every image to a vision
+ 
+
+393
+00:07:54,240 --> 00:07:55,470
+going to pass every image to a vision
+model now, because you get a nice
+
+394
+00:07:55,470 --> 00:07:55,480
+model now, because you get a nice
+ 
+
+395
+00:07:55,480 --> 00:07:57,830
+model now, because you get a nice
+caption for it. Uh rename it, and you're
+
+396
+00:07:57,830 --> 00:07:57,840
+caption for it. Uh rename it, and you're
+ 
+
+397
+00:07:57,840 --> 00:07:59,230
+caption for it. Uh rename it, and you're
+done and dusted. That is how you
+
+398
+00:07:59,230 --> 00:07:59,240
+done and dusted. That is how you
+ 
+
+399
+00:07:59,240 --> 00:08:01,150
+done and dusted. That is how you
+interact with systems.
+
+400
+00:08:01,150 --> 00:08:01,160
+interact with systems.
+ 
+
+401
+00:08:01,160 --> 00:08:03,510
+interact with systems.
+Uh my mother's not going to do this. Her
+
+402
+00:08:03,510 --> 00:08:03,520
+Uh my mother's not going to do this. Her
+ 
+
+403
+00:08:03,520 --> 00:08:11,870
+Uh my mother's not going to do this. Her
+options are to, well, call me up, or
+
+404
+00:08:11,870 --> 00:08:11,880
+
+ 
+
+405
+00:08:11,880 --> 00:08:13,750
+
+just that. There's going to be like
+
+406
+00:08:13,750 --> 00:08:13,760
+just that. There's going to be like
+ 
+
+407
+00:08:13,760 --> 00:08:15,750
+just that. There's going to be like
+lowest common denominator apps for photo
+
+408
+00:08:15,750 --> 00:08:15,760
+lowest common denominator apps for photo
+ 
+
+409
+00:08:15,760 --> 00:08:19,270
+lowest common denominator apps for photo
+management, and it's $7 a month. And for
+
+410
+00:08:19,270 --> 00:08:19,280
+management, and it's $7 a month. And for
+ 
+
+411
+00:08:19,280 --> 00:08:20,430
+management, and it's $7 a month. And for
+some reason, you have to install a
+
+412
+00:08:20,430 --> 00:08:20,440
+some reason, you have to install a
+ 
+
+413
+00:08:20,440 --> 00:08:22,430
+some reason, you have to install a
+daemon, which is stealing your crypto or
+
+414
+00:08:22,430 --> 00:08:22,440
+daemon, which is stealing your crypto or
+ 
+
+415
+00:08:22,440 --> 00:08:24,030
+daemon, which is stealing your crypto or
+some such stuff.
+
+416
+00:08:24,030 --> 00:08:24,040
+some such stuff.
+ 
+
+417
+00:08:24,040 --> 00:08:25,830
+some such stuff.
+Uh and there's been this dichotomy, and
+
+418
+00:08:25,830 --> 00:08:25,840
+Uh and there's been this dichotomy, and
+ 
+
+419
+00:08:25,840 --> 00:08:28,550
+Uh and there's been this dichotomy, and
+it's fine. Like until now, this has been
+
+420
+00:08:28,550 --> 00:08:28,560
+it's fine. Like until now, this has been
+ 
+
+421
+00:08:28,560 --> 00:08:30,270
+it's fine. Like until now, this has been
+an acceptable
+
+422
+00:08:30,270 --> 00:08:30,280
+an acceptable
+ 
+
+423
+00:08:30,280 --> 00:08:33,230
+an acceptable
+uh this has been an acceptable trade-off
+
+424
+00:08:33,230 --> 00:08:33,240
+uh this has been an acceptable trade-off
+ 
+
+425
+00:08:33,240 --> 00:08:35,390
+uh this has been an acceptable trade-off
+that non-technical people will have
+
+426
+00:08:35,390 --> 00:08:35,400
+that non-technical people will have
+ 
+
+427
+00:08:35,400 --> 00:08:37,270
+that non-technical people will have
+custom-made interfaces built for their
+
+428
+00:08:37,270 --> 00:08:37,280
+custom-made interfaces built for their
+ 
+
+429
+00:08:37,280 --> 00:08:39,830
+custom-made interfaces built for their
+needs and desires.
+
+430
+00:08:39,830 --> 00:08:39,840
+needs and desires.
+ 
+
+431
+00:08:39,840 --> 00:08:42,670
+needs and desires.
+LLMs are breaking this boundary.
+
+432
+00:08:42,670 --> 00:08:42,680
+LLMs are breaking this boundary.
+ 
+
+433
+00:08:42,680 --> 00:08:45,230
+LLMs are breaking this boundary.
+They every human being on the planet now
+
+434
+00:08:45,230 --> 00:08:45,240
+They every human being on the planet now
+ 
+
+435
+00:08:45,240 --> 00:08:48,230
+They every human being on the planet now
+has access to a buddy that can spit out
+
+436
+00:08:48,230 --> 00:08:48,240
+has access to a buddy that can spit out
+ 
+
+437
+00:08:48,240 --> 00:08:51,070
+has access to a buddy that can spit out
+code that can interact with systems.
+
+438
+00:08:51,070 --> 00:08:51,080
+code that can interact with systems.
+ 
+
+439
+00:08:51,080 --> 00:08:54,190
+code that can interact with systems.
+Uh it takes it takes a line like rename
+
+440
+00:08:54,190 --> 00:08:54,200
+Uh it takes it takes a line like rename
+ 
+
+441
+00:08:54,200 --> 00:08:56,790
+Uh it takes it takes a line like rename
+these files by date and location,
+
+442
+00:08:56,790 --> 00:08:56,800
+these files by date and location,
+ 
+
+443
+00:08:56,800 --> 00:08:59,670
+these files by date and location,
+and generates code, and can run it on
+
+444
+00:08:59,670 --> 00:08:59,680
+and generates code, and can run it on
+ 
+
+445
+00:08:59,680 --> 00:09:02,190
+and generates code, and can run it on
+your uh on whatever system you expose to
+
+446
+00:09:02,190 --> 00:09:02,200
+your uh on whatever system you expose to
+ 
+
+447
+00:09:02,200 --> 00:09:04,750
+your uh on whatever system you expose to
+it. Uh I say execute it safely here, and
+
+448
+00:09:04,750 --> 00:09:04,760
+it. Uh I say execute it safely here, and
+ 
+
+449
+00:09:04,760 --> 00:09:06,230
+it. Uh I say execute it safely here, and
+that's the bit that I do want to talk
+
+450
+00:09:06,230 --> 00:09:06,240
+that's the bit that I do want to talk
+ 
+
+451
+00:09:06,240 --> 00:09:07,750
+that's the bit that I do want to talk
+about in a minute.
+
+452
+00:09:07,750 --> 00:09:07,760
+about in a minute.
+ 
+
+453
+00:09:07,760 --> 00:09:09,470
+about in a minute.
+The other example I have, so this is
+
+454
+00:09:09,470 --> 00:09:09,480
+The other example I have, so this is
+ 
+
+455
+00:09:09,480 --> 00:09:11,110
+The other example I have, so this is
+Kenton. Kenton is the creator of
+
+456
+00:09:11,110 --> 00:09:11,120
+Kenton. Kenton is the creator of
+ 
+
+457
+00:09:11,120 --> 00:09:14,030
+Kenton. Kenton is the creator of
+Cloudflare Workers. Uh famously, I'm So,
+
+458
+00:09:14,030 --> 00:09:14,040
+Cloudflare Workers. Uh famously, I'm So,
+ 
+
+459
+00:09:14,040 --> 00:09:15,950
+Cloudflare Workers. Uh famously, I'm So,
+he does the work, and I like taking
+
+460
+00:09:15,950 --> 00:09:15,960
+he does the work, and I like taking
+ 
+
+461
+00:09:15,960 --> 00:09:17,670
+he does the work, and I like taking
+credit for his work. This is our
+
+462
+00:09:17,670 --> 00:09:17,680
+credit for his work. This is our
+ 
+
+463
+00:09:17,680 --> 00:09:19,670
+credit for his work. This is our
+relationship in the company.
+
+464
+00:09:19,670 --> 00:09:19,680
+relationship in the company.
+ 
+
+465
+00:09:19,680 --> 00:09:21,710
+relationship in the company.
+Uh so, he he had a thread a little while
+
+466
+00:09:21,710 --> 00:09:21,720
+Uh so, he he had a thread a little while
+ 
+
+467
+00:09:21,720 --> 00:09:23,470
+Uh so, he he had a thread a little while
+ago where he built he's built a little
+
+468
+00:09:23,470 --> 00:09:23,480
+ago where he built he's built a little
+ 
+
+469
+00:09:23,480 --> 00:09:25,350
+ago where he built he's built a little
+white coding environment for himself,
+
+470
+00:09:25,350 --> 00:09:25,360
+white coding environment for himself,
+ 
+
+471
+00:09:25,360 --> 00:09:26,990
+white coding environment for himself,
+because no one else does that in the
+
+472
+00:09:26,990 --> 00:09:27,000
+because no one else does that in the
+ 
+
+473
+00:09:27,000 --> 00:09:28,990
+because no one else does that in the
+world right now. So unique. Build your
+
+474
+00:09:28,990 --> 00:09:29,000
+world right now. So unique. Build your
+ 
+
+475
+00:09:29,000 --> 00:09:31,030
+world right now. So unique. Build your
+own little white coding thing.
+
+476
+00:09:31,030 --> 00:09:31,040
+own little white coding thing.
+ 
+
+477
+00:09:31,040 --> 00:09:33,070
+own little white coding thing.
+Uh the the thing he asked it to generate
+
+478
+00:09:33,070 --> 00:09:33,080
+Uh the the thing he asked it to generate
+ 
+
+479
+00:09:33,080 --> 00:09:36,310
+Uh the the thing he asked it to generate
+was a canvas, one of these TLDraw,
+
+480
+00:09:36,310 --> 00:09:36,320
+was a canvas, one of these TLDraw,
+ 
+
+481
+00:09:36,320 --> 00:09:38,550
+was a canvas, one of these TLDraw,
+Excalidraw style canvases.
+
+482
+00:09:38,550 --> 00:09:38,560
+Excalidraw style canvases.
+ 
+
+483
+00:09:38,560 --> 00:09:41,190
+Excalidraw style canvases.
+Uh and it did it it did a little canvas
+
+484
+00:09:41,190 --> 00:09:41,200
+Uh and it did it it did a little canvas
+ 
+
+485
+00:09:41,200 --> 00:09:43,630
+Uh and it did it it did a little canvas
+with little brushes and colors. And the
+
+486
+00:09:43,630 --> 00:09:43,640
+with little brushes and colors. And the
+ 
+
+487
+00:09:43,640 --> 00:09:45,030
+with little brushes and colors. And the
+first thing Kenton did was draw a
+
+488
+00:09:45,030 --> 00:09:45,040
+first thing Kenton did was draw a
+ 
+
+489
+00:09:45,040 --> 00:09:47,510
+first thing Kenton did was draw a
+tic-tac-toe board on it with a little X
+
+490
+00:09:47,510 --> 00:09:47,520
+tic-tac-toe board on it with a little X
+ 
+
+491
+00:09:47,520 --> 00:09:48,910
+tic-tac-toe board on it with a little X
+in the corner. This is the finished
+
+492
+00:09:48,910 --> 00:09:48,920
+in the corner. This is the finished
+ 
+
+493
+00:09:48,920 --> 00:09:50,190
+in the corner. This is the finished
+state, and I'll get to that in a second.
+
+494
+00:09:50,190 --> 00:09:50,200
+state, and I'll get to that in a second.
+ 
+
+495
+00:09:50,200 --> 00:09:52,710
+state, and I'll get to that in a second.
+He did that.
+
+496
+00:09:52,710 --> 00:09:52,720
+He did that.
+ 
+
+497
+00:09:52,720 --> 00:09:55,550
+He did that.
+And uh what he told the model then is,
+
+498
+00:09:55,550 --> 00:09:55,560
+And uh what he told the model then is,
+ 
+
+499
+00:09:55,560 --> 00:09:58,110
+And uh what he told the model then is,
+"I want you to play tic-tac-toe with me.
+
+500
+00:09:58,110 --> 00:09:58,120
+"I want you to play tic-tac-toe with me.
+ 
+
+501
+00:09:58,120 --> 00:10:00,430
+"I want you to play tic-tac-toe with me.
+The model, as you can guess, it started
+
+502
+00:10:00,430 --> 00:10:00,440
+The model, as you can guess, it started
+ 
+
+503
+00:10:00,440 --> 00:10:03,830
+The model, as you can guess, it started
+generating a tic-tac-toe app.
+
+504
+00:10:03,830 --> 00:10:03,840
+generating a tic-tac-toe app.
+ 
+
+505
+00:10:03,840 --> 00:10:05,470
+generating a tic-tac-toe app.
+Okay?
+
+506
+00:10:05,470 --> 00:10:05,480
+Okay?
+ 
+
+507
+00:10:05,480 --> 00:10:07,310
+Okay?
+Kenton stopped it immediately. He's
+
+508
+00:10:07,310 --> 00:10:07,320
+Kenton stopped it immediately. He's
+ 
+
+509
+00:10:07,320 --> 00:10:08,950
+Kenton stopped it immediately. He's
+like, "No.
+
+510
+00:10:08,950 --> 00:10:08,960
+like, "No.
+ 
+
+511
+00:10:08,960 --> 00:10:11,830
+like, "No.
+You have access to the entire state of
+
+512
+00:10:11,830 --> 00:10:11,840
+You have access to the entire state of
+ 
+
+513
+00:10:11,840 --> 00:10:13,910
+You have access to the entire state of
+the system. And the state of the system
+
+514
+00:10:13,910 --> 00:10:13,920
+the system. And the state of the system
+ 
+
+515
+00:10:13,920 --> 00:10:16,630
+the system. And the state of the system
+here is an array of strokes. You know,
+
+516
+00:10:16,630 --> 00:10:16,640
+here is an array of strokes. You know,
+ 
+
+517
+00:10:16,640 --> 00:10:19,190
+here is an array of strokes. You know,
+like just a whole bunch of points, grid
+
+518
+00:10:19,190 --> 00:10:19,200
+like just a whole bunch of points, grid
+ 
+
+519
+00:10:19,200 --> 00:10:21,590
+like just a whole bunch of points, grid
+line, grid line, X stroke, etc." He
+
+520
+00:10:21,590 --> 00:10:21,600
+line, grid line, X stroke, etc." He
+ 
+
+521
+00:10:21,600 --> 00:10:23,790
+line, grid line, X stroke, etc." He
+said, "Inspect that and play it with
+
+522
+00:10:23,790 --> 00:10:23,800
+said, "Inspect that and play it with
+ 
+
+523
+00:10:23,800 --> 00:10:26,230
+said, "Inspect that and play it with
+me."
+
+524
+00:10:26,230 --> 00:10:26,240
+
+ 
+
+525
+00:10:26,240 --> 00:10:27,230
+
+Uh
+
+526
+00:10:27,230 --> 00:10:27,240
+Uh
+ 
+
+527
+00:10:27,240 --> 00:10:30,470
+Uh
+immediately, the model started it output
+
+528
+00:10:30,470 --> 00:10:30,480
+immediately, the model started it output
+ 
+
+529
+00:10:30,480 --> 00:10:32,830
+immediately, the model started it output
+the state into its own context and it's
+
+530
+00:10:32,830 --> 00:10:32,840
+the state into its own context and it's
+ 
+
+531
+00:10:32,840 --> 00:10:35,710
+the state into its own context and it's
+like, "I recognize what this looks like.
+
+532
+00:10:35,710 --> 00:10:35,720
+like, "I recognize what this looks like.
+ 
+
+533
+00:10:35,720 --> 00:10:37,550
+like, "I recognize what this looks like.
+It looks like a tic-tac-toe board and I
+
+534
+00:10:37,550 --> 00:10:37,560
+It looks like a tic-tac-toe board and I
+ 
+
+535
+00:10:37,560 --> 00:10:39,510
+It looks like a tic-tac-toe board and I
+can see that you put an X in the top
+
+536
+00:10:39,510 --> 00:10:39,520
+can see that you put an X in the top
+ 
+
+537
+00:10:39,520 --> 00:10:42,790
+can see that you put an X in the top
+left. Let me draw a perfect circle in
+
+538
+00:10:42,790 --> 00:10:42,800
+left. Let me draw a perfect circle in
+ 
+
+539
+00:10:42,800 --> 00:10:44,910
+left. Let me draw a perfect circle in
+the middle of the app."
+
+540
+00:10:44,910 --> 00:10:44,920
+the middle of the app."
+ 
+
+541
+00:10:44,920 --> 00:10:46,830
+the middle of the app."
+To be clear, there is no tic-tac-toe
+
+542
+00:10:46,830 --> 00:10:46,840
+To be clear, there is no tic-tac-toe
+ 
+
+543
+00:10:46,840 --> 00:10:49,230
+To be clear, there is no tic-tac-toe
+code anywhere in this system.
+
+544
+00:10:49,230 --> 00:10:49,240
+code anywhere in this system.
+ 
+
+545
+00:10:49,240 --> 00:10:51,670
+code anywhere in this system.
+The the emergent behavior is that the
+
+546
+00:10:51,670 --> 00:10:51,680
+The the emergent behavior is that the
+ 
+
+547
+00:10:51,680 --> 00:10:54,630
+The the emergent behavior is that the
+model has like, "Sure, I now know how to
+
+548
+00:10:54,630 --> 00:10:54,640
+model has like, "Sure, I now know how to
+ 
+
+549
+00:10:54,640 --> 00:10:56,230
+model has like, "Sure, I now know how to
+interact with the system with a set of
+
+550
+00:10:56,230 --> 00:10:56,240
+interact with the system with a set of
+ 
+
+551
+00:10:56,240 --> 00:10:57,350
+interact with the system with a set of
+strokes."
+
+552
+00:10:57,350 --> 00:10:57,360
+strokes."
+ 
+
+553
+00:10:57,360 --> 00:10:59,510
+strokes."
+Uh also, it lost. Uh by the way, it lost
+
+554
+00:10:59,510 --> 00:10:59,520
+Uh also, it lost. Uh by the way, it lost
+ 
+
+555
+00:10:59,520 --> 00:11:00,990
+Uh also, it lost. Uh by the way, it lost
+the game and then when we saw the
+
+556
+00:11:00,990 --> 00:11:01,000
+the game and then when we saw the
+ 
+
+557
+00:11:01,000 --> 00:11:02,870
+the game and then when we saw the
+reasoning traces, we noticed that Opus
+
+558
+00:11:02,870 --> 00:11:02,880
+reasoning traces, we noticed that Opus
+ 
+
+559
+00:11:02,880 --> 00:11:04,829
+reasoning traces, we noticed that Opus
+let Kenton win.
+
+560
+00:11:04,829 --> 00:11:04,839
+let Kenton win.
+ 
+
+561
+00:11:04,839 --> 00:11:07,070
+let Kenton win.
+Which is a whole other weird area of
+
+562
+00:11:07,070 --> 00:11:07,080
+Which is a whole other weird area of
+ 
+
+563
+00:11:07,080 --> 00:11:10,430
+Which is a whole other weird area of
+alignment we're not talking about.
+
+564
+00:11:10,430 --> 00:11:10,440
+alignment we're not talking about.
+ 
+
+565
+00:11:10,440 --> 00:11:12,110
+alignment we're not talking about.
+Anyway, so this actually generated a lot
+
+566
+00:11:12,110 --> 00:11:12,120
+Anyway, so this actually generated a lot
+ 
+
+567
+00:11:12,120 --> 00:11:13,829
+Anyway, so this actually generated a lot
+of conversation internally and that's
+
+568
+00:11:13,829 --> 00:11:13,839
+of conversation internally and that's
+ 
+
+569
+00:11:13,839 --> 00:11:15,350
+of conversation internally and that's
+why like this talk is a little weird,
+
+570
+00:11:15,350 --> 00:11:15,360
+why like this talk is a little weird,
+ 
+
+571
+00:11:15,360 --> 00:11:17,470
+why like this talk is a little weird,
+it's a little woo-woo. I'm not even sure
+
+572
+00:11:17,470 --> 00:11:17,480
+it's a little woo-woo. I'm not even sure
+ 
+
+573
+00:11:17,480 --> 00:11:18,710
+it's a little woo-woo. I'm not even sure
+where we're going and I want to like
+
+574
+00:11:18,710 --> 00:11:18,720
+where we're going and I want to like
+ 
+
+575
+00:11:18,720 --> 00:11:20,150
+where we're going and I want to like
+spread the idea to you and have you
+
+576
+00:11:20,150 --> 00:11:20,160
+spread the idea to you and have you
+ 
+
+577
+00:11:20,160 --> 00:11:22,430
+spread the idea to you and have you
+folks like integrated. So, the the
+
+578
+00:11:22,430 --> 00:11:22,440
+folks like integrated. So, the the
+ 
+
+579
+00:11:22,440 --> 00:11:24,430
+folks like integrated. So, the the
+phrase we've started using is it stopped
+
+580
+00:11:24,430 --> 00:11:24,440
+phrase we've started using is it stopped
+ 
+
+581
+00:11:24,440 --> 00:11:26,590
+phrase we've started using is it stopped
+generating a program and it instead
+
+582
+00:11:26,590 --> 00:11:26,600
+generating a program and it instead
+ 
+
+583
+00:11:26,600 --> 00:11:29,270
+generating a program and it instead
+inhabiting the state machine. Uh there's
+
+584
+00:11:29,270 --> 00:11:29,280
+inhabiting the state machine. Uh there's
+ 
+
+585
+00:11:29,280 --> 00:11:31,110
+inhabiting the state machine. Uh there's
+a ghost in the shell reference here for
+
+586
+00:11:31,110 --> 00:11:31,120
+a ghost in the shell reference here for
+ 
+
+587
+00:11:31,120 --> 00:11:33,190
+a ghost in the shell reference here for
+anyone who's over the age of 40, you
+
+588
+00:11:33,190 --> 00:11:33,200
+anyone who's over the age of 40, you
+ 
+
+589
+00:11:33,200 --> 00:11:34,870
+anyone who's over the age of 40, you
+need ibuprofen,
+
+590
+00:11:34,870 --> 00:11:34,880
+need ibuprofen,
+ 
+
+591
+00:11:34,880 --> 00:11:36,470
+need ibuprofen,
+uh you should go back home. Uh but no,
+
+592
+00:11:36,470 --> 00:11:36,480
+uh you should go back home. Uh but no,
+ 
+
+593
+00:11:36,480 --> 00:11:38,910
+uh you should go back home. Uh but no,
+like it was a very strange thing to for
+
+594
+00:11:38,910 --> 00:11:38,920
+like it was a very strange thing to for
+ 
+
+595
+00:11:38,920 --> 00:11:39,750
+like it was a very strange thing to for
+us
+
+596
+00:11:39,750 --> 00:11:39,760
+us
+ 
+
+597
+00:11:39,760 --> 00:11:41,790
+us
+not to have a separate app generation
+
+598
+00:11:41,790 --> 00:11:41,800
+not to have a separate app generation
+ 
+
+599
+00:11:41,800 --> 00:11:43,710
+not to have a separate app generation
+stage that you then like interact with.
+
+600
+00:11:43,710 --> 00:11:43,720
+stage that you then like interact with.
+ 
+
+601
+00:11:43,720 --> 00:11:46,470
+stage that you then like interact with.
+That is entirely the part of the thing.
+
+602
+00:11:46,470 --> 00:11:46,480
+That is entirely the part of the thing.
+ 
+
+603
+00:11:46,480 --> 00:11:47,630
+That is entirely the part of the thing.
+So, what does this new software
+
+604
+00:11:47,630 --> 00:11:47,640
+So, what does this new software
+ 
+
+605
+00:11:47,640 --> 00:11:49,190
+So, what does this new software
+architecture look like?
+
+606
+00:11:49,190 --> 00:11:49,200
+architecture look like?
+ 
+
+607
+00:11:49,200 --> 00:11:51,870
+architecture look like?
+Uh everyone's building what they call a
+
+608
+00:11:51,870 --> 00:11:51,880
+Uh everyone's building what they call a
+ 
+
+609
+00:11:51,880 --> 00:11:54,550
+Uh everyone's building what they call a
+harness. Uh it's because over the last 3
+
+610
+00:11:54,550 --> 00:11:54,560
+harness. Uh it's because over the last 3
+ 
+
+611
+00:11:54,560 --> 00:11:56,390
+harness. Uh it's because over the last 3
+to 6 months, everyone has realized that
+
+612
+00:11:56,390 --> 00:11:56,400
+to 6 months, everyone has realized that
+ 
+
+613
+00:11:56,400 --> 00:11:58,270
+to 6 months, everyone has realized that
+these coding agents are great
+
+614
+00:11:58,270 --> 00:11:58,280
+these coding agents are great
+ 
+
+615
+00:11:58,280 --> 00:12:00,430
+these coding agents are great
+general-purpose computing machines. It's
+
+616
+00:12:00,430 --> 00:12:00,440
+general-purpose computing machines. It's
+ 
+
+617
+00:12:00,440 --> 00:12:02,110
+general-purpose computing machines. It's
+why they're running Claude code or code
+
+618
+00:12:02,110 --> 00:12:02,120
+why they're running Claude code or code
+ 
+
+619
+00:12:02,120 --> 00:12:04,910
+why they're running Claude code or code
+No, they're running Pi on a Mac Mini,
+
+620
+00:12:04,910 --> 00:12:04,920
+No, they're running Pi on a Mac Mini,
+ 
+
+621
+00:12:04,920 --> 00:12:06,190
+No, they're running Pi on a Mac Mini,
+which is the wrong machine for this, by
+
+622
+00:12:06,190 --> 00:12:06,200
+which is the wrong machine for this, by
+ 
+
+623
+00:12:06,200 --> 00:12:07,750
+which is the wrong machine for this, by
+the way. You don't have to spend $400
+
+624
+00:12:07,750 --> 00:12:07,760
+the way. You don't have to spend $400
+ 
+
+625
+00:12:07,760 --> 00:12:09,829
+the way. You don't have to spend $400
+for a thing that makes API calls. Uh
+
+626
+00:12:09,829 --> 00:12:09,839
+for a thing that makes API calls. Uh
+ 
+
+627
+00:12:09,839 --> 00:12:11,230
+for a thing that makes API calls. Uh
+it's been driving me mad. If you check
+
+628
+00:12:11,230 --> 00:12:11,240
+it's been driving me mad. If you check
+ 
+
+629
+00:12:11,240 --> 00:12:12,829
+it's been driving me mad. If you check
+all the second-hand prices of Mac Minis
+
+630
+00:12:12,829 --> 00:12:12,839
+all the second-hand prices of Mac Minis
+ 
+
+631
+00:12:12,839 --> 00:12:14,510
+all the second-hand prices of Mac Minis
+have like shot up. I got one before it,
+
+632
+00:12:14,510 --> 00:12:14,520
+have like shot up. I got one before it,
+ 
+
+633
+00:12:14,520 --> 00:12:16,150
+have like shot up. I got one before it,
+but I got it because I'm special that
+
+634
+00:12:16,150 --> 00:12:16,160
+but I got it because I'm special that
+ 
+
+635
+00:12:16,160 --> 00:12:17,310
+but I got it because I'm special that
+way.
+
+636
+00:12:17,310 --> 00:12:17,320
+way.
+ 
+
+637
+00:12:17,320 --> 00:12:19,190
+way.
+Uh you be everyone's building this
+
+638
+00:12:19,190 --> 00:12:19,200
+Uh you be everyone's building this
+ 
+
+639
+00:12:19,200 --> 00:12:21,070
+Uh you be everyone's building this
+harness and this architecture of the
+
+640
+00:12:21,070 --> 00:12:21,080
+harness and this architecture of the
+ 
+
+641
+00:12:21,080 --> 00:12:23,190
+harness and this architecture of the
+harness is not just that it can generate
+
+642
+00:12:23,190 --> 00:12:23,200
+harness is not just that it can generate
+ 
+
+643
+00:12:23,200 --> 00:12:25,670
+harness is not just that it can generate
+code, but it has a safe space to execute
+
+644
+00:12:25,670 --> 00:12:25,680
+code, but it has a safe space to execute
+ 
+
+645
+00:12:25,680 --> 00:12:28,590
+code, but it has a safe space to execute
+this code into which capabilities are uh
+
+646
+00:12:28,590 --> 00:12:28,600
+this code into which capabilities are uh
+ 
+
+647
+00:12:28,600 --> 00:12:30,990
+this code into which capabilities are uh
+exposed.
+
+648
+00:12:30,990 --> 00:12:31,000
+exposed.
+ 
+
+649
+00:12:31,000 --> 00:12:33,870
+exposed.
+Uh and there are some
+
+650
+00:12:33,870 --> 00:12:33,880
+Uh and there are some
+ 
+
+651
+00:12:33,880 --> 00:12:35,790
+Uh and there are some
+attributes to this sandbox. We're
+
+652
+00:12:35,790 --> 00:12:35,800
+attributes to this sandbox. We're
+ 
+
+653
+00:12:35,800 --> 00:12:37,270
+attributes to this sandbox. We're
+calling it a sandbox, which is again
+
+654
+00:12:37,270 --> 00:12:37,280
+calling it a sandbox, which is again
+ 
+
+655
+00:12:37,280 --> 00:12:39,150
+calling it a sandbox, which is again
+another completely overloaded term and I
+
+656
+00:12:39,150 --> 00:12:39,160
+another completely overloaded term and I
+ 
+
+657
+00:12:39,160 --> 00:12:40,790
+another completely overloaded term and I
+have friends in the industry, everyone's
+
+658
+00:12:40,790 --> 00:12:40,800
+have friends in the industry, everyone's
+ 
+
+659
+00:12:40,800 --> 00:12:42,630
+have friends in the industry, everyone's
+building a different kind of sandbox. Uh
+
+660
+00:12:42,630 --> 00:12:42,640
+building a different kind of sandbox. Uh
+ 
+
+661
+00:12:42,640 --> 00:12:44,230
+building a different kind of sandbox. Uh
+we have a sandbox SDK, which uses
+
+662
+00:12:44,230 --> 00:12:44,240
+we have a sandbox SDK, which uses
+ 
+
+663
+00:12:44,240 --> 00:12:45,790
+we have a sandbox SDK, which uses
+containers and VMs, but that's not even
+
+664
+00:12:45,790 --> 00:12:45,800
+containers and VMs, but that's not even
+ 
+
+665
+00:12:45,800 --> 00:12:48,070
+containers and VMs, but that's not even
+what I'm talking about right now. Uh
+
+666
+00:12:48,070 --> 00:12:48,080
+what I'm talking about right now. Uh
+ 
+
+667
+00:12:48,080 --> 00:12:49,750
+what I'm talking about right now. Uh
+there are some capabilities to it.
+
+668
+00:12:49,750 --> 00:12:49,760
+there are some capabilities to it.
+ 
+
+669
+00:12:49,760 --> 00:12:52,510
+there are some capabilities to it.
+Unlike a container, which comes with all
+
+670
+00:12:52,510 --> 00:12:52,520
+Unlike a container, which comes with all
+ 
+
+671
+00:12:52,520 --> 00:12:55,110
+Unlike a container, which comes with all
+sorts of features that you surround with
+
+672
+00:12:55,110 --> 00:12:55,120
+sorts of features that you surround with
+ 
+
+673
+00:12:55,120 --> 00:12:56,710
+sorts of features that you surround with
+security, you know, you do a bunch of
+
+674
+00:12:56,710 --> 00:12:56,720
+security, you know, you do a bunch of
+ 
+
+675
+00:12:56,720 --> 00:12:58,950
+security, you know, you do a bunch of
+things from the outside, you start with
+
+676
+00:12:58,950 --> 00:12:58,960
+things from the outside, you start with
+ 
+
+677
+00:12:58,960 --> 00:13:00,670
+things from the outside, you start with
+something that has no capabilities. The
+
+678
+00:13:00,670 --> 00:13:00,680
+something that has no capabilities. The
+ 
+
+679
+00:13:00,680 --> 00:13:02,750
+something that has no capabilities. The
+only thing it can do is execute code. It
+
+680
+00:13:02,750 --> 00:13:02,760
+only thing it can do is execute code. It
+ 
+
+681
+00:13:02,760 --> 00:13:04,590
+only thing it can do is execute code. It
+can't do fetches, there's no exposed
+
+682
+00:13:04,590 --> 00:13:04,600
+can't do fetches, there's no exposed
+ 
+
+683
+00:13:04,600 --> 00:13:06,390
+can't do fetches, there's no exposed
+APIs, no nothing.
+
+684
+00:13:06,390 --> 00:13:06,400
+APIs, no nothing.
+ 
+
+685
+00:13:06,400 --> 00:13:08,390
+APIs, no nothing.
+And then you grant capabilities to it
+
+686
+00:13:08,390 --> 00:13:08,400
+And then you grant capabilities to it
+ 
+
+687
+00:13:08,400 --> 00:13:11,030
+And then you grant capabilities to it
+explicitly. Uh we have something called
+
+688
+00:13:11,030 --> 00:13:11,040
+explicitly. Uh we have something called
+ 
+
+689
+00:13:11,040 --> 00:13:13,550
+explicitly. Uh we have something called
+dynamic workers. I told you I'm it's not
+
+690
+00:13:13,550 --> 00:13:13,560
+dynamic workers. I told you I'm it's not
+ 
+
+691
+00:13:13,560 --> 00:13:15,070
+dynamic workers. I told you I'm it's not
+really a Cloudflare code, someone else
+
+692
+00:13:15,070 --> 00:13:15,080
+really a Cloudflare code, someone else
+ 
+
+693
+00:13:15,080 --> 00:13:16,430
+really a Cloudflare code, someone else
+build something better if you think it's
+
+694
+00:13:16,430 --> 00:13:16,440
+build something better if you think it's
+ 
+
+695
+00:13:16,440 --> 00:13:18,270
+build something better if you think it's
+better, it's fine. Uh but this is what
+
+696
+00:13:18,270 --> 00:13:18,280
+better, it's fine. Uh but this is what
+ 
+
+697
+00:13:18,280 --> 00:13:19,990
+better, it's fine. Uh but this is what
+we use. We use V8 isolates because they
+
+698
+00:13:19,990 --> 00:13:20,000
+we use. We use V8 isolates because they
+ 
+
+699
+00:13:20,000 --> 00:13:22,590
+we use. We use V8 isolates because they
+start up really, really quickly and uh
+
+700
+00:13:22,590 --> 00:13:22,600
+start up really, really quickly and uh
+ 
+
+701
+00:13:22,600 --> 00:13:24,750
+start up really, really quickly and uh
+it's about 10 years of security
+
+702
+00:13:24,750 --> 00:13:24,760
+it's about 10 years of security
+ 
+
+703
+00:13:24,760 --> 00:13:26,510
+it's about 10 years of security
+hardening. Uh
+
+704
+00:13:26,510 --> 00:13:26,520
+hardening. Uh
+ 
+
+705
+00:13:26,520 --> 00:13:28,190
+hardening. Uh
+it's in our DNA, we care we care a lot
+
+706
+00:13:28,190 --> 00:13:28,200
+it's in our DNA, we care we care a lot
+ 
+
+707
+00:13:28,200 --> 00:13:30,230
+it's in our DNA, we care we care a lot
+about that. Anyway, so we you start
+
+708
+00:13:30,230 --> 00:13:30,240
+about that. Anyway, so we you start
+ 
+
+709
+00:13:30,240 --> 00:13:33,590
+about that. Anyway, so we you start
+exposing capabilities as APIs, A.
+
+710
+00:13:33,590 --> 00:13:33,600
+exposing capabilities as APIs, A.
+ 
+
+711
+00:13:33,600 --> 00:13:35,870
+exposing capabilities as APIs, A.
+And we also can control all outgoing
+
+712
+00:13:35,870 --> 00:13:35,880
+And we also can control all outgoing
+ 
+
+713
+00:13:35,880 --> 00:13:37,750
+And we also can control all outgoing
+fetches and any network connections. In
+
+714
+00:13:37,750 --> 00:13:37,760
+fetches and any network connections. In
+ 
+
+715
+00:13:37,760 --> 00:13:39,150
+fetches and any network connections. In
+fact, the default way we recommend you
+
+716
+00:13:39,150 --> 00:13:39,160
+fact, the default way we recommend you
+ 
+
+717
+00:13:39,160 --> 00:13:41,590
+fact, the default way we recommend you
+use this is no outgoing fetches, only
+
+718
+00:13:41,590 --> 00:13:41,600
+use this is no outgoing fetches, only
+ 
+
+719
+00:13:41,600 --> 00:13:44,310
+use this is no outgoing fetches, only
+APIs. It has to be fast and you need
+
+720
+00:13:44,310 --> 00:13:44,320
+APIs. It has to be fast and you need
+ 
+
+721
+00:13:44,320 --> 00:13:46,790
+APIs. It has to be fast and you need
+absolute full observability into it. You
+
+722
+00:13:46,790 --> 00:13:46,800
+absolute full observability into it. You
+ 
+
+723
+00:13:46,800 --> 00:13:49,310
+absolute full observability into it. You
+need to know why last Tuesday it made a
+
+724
+00:13:49,310 --> 00:13:49,320
+need to know why last Tuesday it made a
+ 
+
+725
+00:13:49,320 --> 00:13:51,829
+need to know why last Tuesday it made a
+trade for $2.3 million for I don't know,
+
+726
+00:13:51,829 --> 00:13:51,839
+trade for $2.3 million for I don't know,
+ 
+
+727
+00:13:51,839 --> 00:13:53,670
+trade for $2.3 million for I don't know,
+man, like llama poop or something,
+
+728
+00:13:53,670 --> 00:13:53,680
+man, like llama poop or something,
+ 
+
+729
+00:13:53,680 --> 00:13:56,270
+man, like llama poop or something,
+right? You need to go back to that code.
+
+730
+00:13:56,270 --> 00:13:56,280
+right? You need to go back to that code.
+ 
+
+731
+00:13:56,280 --> 00:13:58,710
+right? You need to go back to that code.
+Absolute observability on these systems.
+
+732
+00:13:58,710 --> 00:13:58,720
+Absolute observability on these systems.
+ 
+
+733
+00:13:58,720 --> 00:14:02,070
+Absolute observability on these systems.
+It can be V8 isolates like we use. Uh
+
+734
+00:14:02,070 --> 00:14:02,080
+It can be V8 isolates like we use. Uh
+ 
+
+735
+00:14:02,080 --> 00:14:04,110
+It can be V8 isolates like we use. Uh
+you could use, I don't know, a web web
+
+736
+00:14:04,110 --> 00:14:04,120
+you could use, I don't know, a web web
+ 
+
+737
+00:14:04,120 --> 00:14:05,829
+you could use, I don't know, a web web
+assembly, a custom JavaScript
+
+738
+00:14:05,829 --> 00:14:05,839
+assembly, a custom JavaScript
+ 
+
+739
+00:14:05,839 --> 00:14:08,310
+assembly, a custom JavaScript
+interpreter. Uh that's not the main
+
+740
+00:14:08,310 --> 00:14:08,320
+interpreter. Uh that's not the main
+ 
+
+741
+00:14:08,320 --> 00:14:09,670
+interpreter. Uh that's not the main
+story here. You just want something
+
+742
+00:14:09,670 --> 00:14:09,680
+story here. You just want something
+ 
+
+743
+00:14:09,680 --> 00:14:11,470
+story here. You just want something
+that's able to execute that you're able
+
+744
+00:14:11,470 --> 00:14:11,480
+that's able to execute that you're able
+ 
+
+745
+00:14:11,480 --> 00:14:13,470
+that's able to execute that you're able
+to expose capabilities to and run really
+
+746
+00:14:13,470 --> 00:14:13,480
+to expose capabilities to and run really
+ 
+
+747
+00:14:13,480 --> 00:14:15,110
+to expose capabilities to and run really
+quickly.
+
+748
+00:14:15,110 --> 00:14:15,120
+quickly.
+ 
+
+749
+00:14:15,120 --> 00:14:16,750
+quickly.
+From here, you can start getting really
+
+750
+00:14:16,750 --> 00:14:16,760
+From here, you can start getting really
+ 
+
+751
+00:14:16,760 --> 00:14:19,230
+From here, you can start getting really
+ambitious. The example that I showed you
+
+752
+00:14:19,230 --> 00:14:19,240
+ambitious. The example that I showed you
+ 
+
+753
+00:14:19,240 --> 00:14:21,710
+ambitious. The example that I showed you
+was a one-off, take some code, run it on
+
+754
+00:14:21,710 --> 00:14:21,720
+was a one-off, take some code, run it on
+ 
+
+755
+00:14:21,720 --> 00:14:24,110
+was a one-off, take some code, run it on
+an API, expand.
+
+756
+00:14:24,110 --> 00:14:24,120
+an API, expand.
+ 
+
+757
+00:14:24,120 --> 00:14:25,590
+an API, expand.
+Now, what if you could
+
+758
+00:14:25,590 --> 00:14:25,600
+Now, what if you could
+ 
+
+759
+00:14:25,600 --> 00:14:27,710
+Now, what if you could
+uh generate long-running workflows that
+
+760
+00:14:27,710 --> 00:14:27,720
+uh generate long-running workflows that
+ 
+
+761
+00:14:27,720 --> 00:14:32,069
+uh generate long-running workflows that
+run for days, months, years? Uh what if
+
+762
+00:14:32,069 --> 00:14:32,079
+run for days, months, years? Uh what if
+ 
+
+763
+00:14:32,079 --> 00:14:34,270
+run for days, months, years? Uh what if
+each of those instances has some state
+
+764
+00:14:34,270 --> 00:14:34,280
+each of those instances has some state
+ 
+
+765
+00:14:34,280 --> 00:14:36,990
+each of those instances has some state
+that it can carry with it uh through um
+
+766
+00:14:36,990 --> 00:14:37,000
+that it can carry with it uh through um
+ 
+
+767
+00:14:37,000 --> 00:14:38,750
+that it can carry with it uh through um
+through its lifetime?
+
+768
+00:14:38,750 --> 00:14:38,760
+through its lifetime?
+ 
+
+769
+00:14:38,760 --> 00:14:41,310
+through its lifetime?
+What if in this world of generative UI,
+
+770
+00:14:41,310 --> 00:14:41,320
+What if in this world of generative UI,
+ 
+
+771
+00:14:41,320 --> 00:14:46,350
+What if in this world of generative UI,
+you can start generating a perfect
+
+772
+00:14:46,350 --> 00:14:46,360
+you can start generating a perfect
+ 
+
+773
+00:14:46,360 --> 00:14:49,230
+you can start generating a perfect
+perfectly custom UIs for every single
+
+774
+00:14:49,230 --> 00:14:49,240
+perfectly custom UIs for every single
+ 
+
+775
+00:14:49,240 --> 00:14:51,069
+perfectly custom UIs for every single
+user that you have. Everyone who does
+
+776
+00:14:51,069 --> 00:14:51,079
+user that you have. Everyone who does
+ 
+
+777
+00:14:51,079 --> 00:14:52,829
+user that you have. Everyone who does
+e-commerce knows this problem. The more
+
+778
+00:14:52,829 --> 00:14:52,839
+e-commerce knows this problem. The more
+ 
+
+779
+00:14:52,839 --> 00:14:55,069
+e-commerce knows this problem. The more
+popular you get, the more UI becomes
+
+780
+00:14:55,069 --> 00:14:55,079
+popular you get, the more UI becomes
+ 
+
+781
+00:14:55,079 --> 00:14:57,230
+popular you get, the more UI becomes
+this bland thing that has to work for
+
+782
+00:14:57,230 --> 00:14:57,240
+this bland thing that has to work for
+ 
+
+783
+00:14:57,240 --> 00:14:59,150
+this bland thing that has to work for
+every single user. And then you bring in
+
+784
+00:14:59,150 --> 00:14:59,160
+every single user. And then you bring in
+ 
+
+785
+00:14:59,160 --> 00:15:00,310
+every single user. And then you bring in
+the ML people and they're like, "Oh,
+
+786
+00:15:00,310 --> 00:15:00,320
+the ML people and they're like, "Oh,
+ 
+
+787
+00:15:00,320 --> 00:15:02,230
+the ML people and they're like, "Oh,
+what if we change the color button this
+
+788
+00:15:02,230 --> 00:15:02,240
+what if we change the color button this
+ 
+
+789
+00:15:02,240 --> 00:15:05,510
+what if we change the color button this
+way if it's somebody else?" No.
+
+790
+00:15:05,510 --> 00:15:05,520
+way if it's somebody else?" No.
+ 
+
+791
+00:15:05,520 --> 00:15:09,750
+way if it's somebody else?" No.
+You can go absolutely custom. So, uh I I
+
+792
+00:15:09,750 --> 00:15:09,760
+You can go absolutely custom. So, uh I I
+ 
+
+793
+00:15:09,760 --> 00:15:11,590
+You can go absolutely custom. So, uh I I
+like the fact that I got Opus to
+
+794
+00:15:11,590 --> 00:15:11,600
+like the fact that I got Opus to
+ 
+
+795
+00:15:11,600 --> 00:15:13,949
+like the fact that I got Opus to
+generate generative UI for a slide where
+
+796
+00:15:13,949 --> 00:15:13,959
+generate generative UI for a slide where
+ 
+
+797
+00:15:13,959 --> 00:15:15,790
+generate generative UI for a slide where
+I'm making a point about generative UI
+
+798
+00:15:15,790 --> 00:15:15,800
+I'm making a point about generative UI
+ 
+
+799
+00:15:15,800 --> 00:15:17,270
+I'm making a point about generative UI
+and it still looks a little bit like
+
+800
+00:15:17,270 --> 00:15:17,280
+and it still looks a little bit like
+ 
+
+801
+00:15:17,280 --> 00:15:20,750
+and it still looks a little bit like
+ Uh but the idea is everyone like
+
+802
+00:15:20,750 --> 00:15:20,760
+Uh but the idea is everyone like
+ 
+
+803
+00:15:20,760 --> 00:15:22,630
+Uh but the idea is everyone like
+e-com let me talk about that e-commerce.
+
+804
+00:15:22,630 --> 00:15:22,640
+e-com let me talk about that e-commerce.
+ 
+
+805
+00:15:22,640 --> 00:15:24,390
+e-com let me talk about that e-commerce.
+Like you have context about everything
+
+806
+00:15:24,390 --> 00:15:24,400
+Like you have context about everything
+ 
+
+807
+00:15:24,400 --> 00:15:25,910
+Like you have context about everything
+about the user, the things they like,
+
+808
+00:15:25,910 --> 00:15:25,920
+about the user, the things they like,
+ 
+
+809
+00:15:25,920 --> 00:15:27,710
+about the user, the things they like,
+the orders they have in their cart, the
+
+810
+00:15:27,710 --> 00:15:27,720
+the orders they have in their cart, the
+ 
+
+811
+00:15:27,720 --> 00:15:29,230
+the orders they have in their cart, the
+things that might be making them mad.
+
+812
+00:15:29,230 --> 00:15:29,240
+things that might be making them mad.
+ 
+
+813
+00:15:29,240 --> 00:15:31,390
+things that might be making them mad.
+You can surface these things as actions.
+
+814
+00:15:31,390 --> 00:15:31,400
+You can surface these things as actions.
+ 
+
+815
+00:15:31,400 --> 00:15:33,350
+You can surface these things as actions.
+The UI doesn't have to be a blank chat
+
+816
+00:15:33,350 --> 00:15:33,360
+The UI doesn't have to be a blank chat
+ 
+
+817
+00:15:33,360 --> 00:15:35,590
+The UI doesn't have to be a blank chat
+box. Though, honestly, blank chat box
+
+818
+00:15:35,590 --> 00:15:35,600
+box. Though, honestly, blank chat box
+ 
+
+819
+00:15:35,600 --> 00:15:37,710
+box. Though, honestly, blank chat box
+e-commerce might be a lot of fun.
+
+820
+00:15:37,710 --> 00:15:37,720
+e-commerce might be a lot of fun.
+ 
+
+821
+00:15:37,720 --> 00:15:40,190
+e-commerce might be a lot of fun.
+Uh here I have two different use cases.
+
+822
+00:15:40,190 --> 00:15:40,200
+Uh here I have two different use cases.
+ 
+
+823
+00:15:40,200 --> 00:15:42,949
+Uh here I have two different use cases.
+In the first one, it's uh I need to
+
+824
+00:15:42,949 --> 00:15:42,959
+In the first one, it's uh I need to
+ 
+
+825
+00:15:42,959 --> 00:15:44,390
+In the first one, it's uh I need to
+return these shoes and find something
+
+826
+00:15:44,390 --> 00:15:44,400
+return these shoes and find something
+ 
+
+827
+00:15:44,400 --> 00:15:47,190
+return these shoes and find something
+similar under $100. If the product
+
+828
+00:15:47,190 --> 00:15:47,200
+similar under $100. If the product
+ 
+
+829
+00:15:47,200 --> 00:15:49,870
+similar under $100. If the product
+engineers have not implemented this, how
+
+830
+00:15:49,870 --> 00:15:49,880
+engineers have not implemented this, how
+ 
+
+831
+00:15:49,880 --> 00:15:50,710
+engineers have not implemented this, how
+it's
+
+832
+00:15:50,710 --> 00:15:50,720
+it's
+ 
+
+833
+00:15:50,720 --> 00:15:52,069
+it's
+it's going to kind of suck in but you
+
+834
+00:15:52,069 --> 00:15:52,079
+it's going to kind of suck in but you
+ 
+
+835
+00:15:52,079 --> 00:15:54,550
+it's going to kind of suck in but you
+can generate something on the fly versus
+
+836
+00:15:54,550 --> 00:15:54,560
+can generate something on the fly versus
+ 
+
+837
+00:15:54,560 --> 00:15:56,470
+can generate something on the fly versus
+what is happening with my uh delayed
+
+838
+00:15:56,470 --> 00:15:56,480
+what is happening with my uh delayed
+ 
+
+839
+00:15:56,480 --> 00:15:58,390
+what is happening with my uh delayed
+order.
+
+840
+00:15:58,390 --> 00:15:58,400
+order.
+ 
+
+841
+00:15:58,400 --> 00:16:00,350
+order.
+Point being, we are now in a world where
+
+842
+00:16:00,350 --> 00:16:00,360
+Point being, we are now in a world where
+ 
+
+843
+00:16:00,360 --> 00:16:02,630
+Point being, we are now in a world where
+we can generate completely different
+
+844
+00:16:02,630 --> 00:16:02,640
+we can generate completely different
+ 
+
+845
+00:16:02,640 --> 00:16:04,870
+we can generate completely different
+programs backed by a system that you
+
+846
+00:16:04,870 --> 00:16:04,880
+programs backed by a system that you
+ 
+
+847
+00:16:04,880 --> 00:16:07,190
+programs backed by a system that you
+built on your back end for every single
+
+848
+00:16:07,190 --> 00:16:07,200
+built on your back end for every single
+ 
+
+849
+00:16:07,200 --> 00:16:08,910
+built on your back end for every single
+user. It's a new kind of software we're
+
+850
+00:16:08,910 --> 00:16:08,920
+user. It's a new kind of software we're
+ 
+
+851
+00:16:08,920 --> 00:16:10,069
+user. It's a new kind of software we're
+building.
+
+852
+00:16:10,069 --> 00:16:10,079
+building.
+ 
+
+853
+00:16:10,079 --> 00:16:12,350
+building.
+And this harness idea isn't just built
+
+854
+00:16:12,350 --> 00:16:12,360
+And this harness idea isn't just built
+ 
+
+855
+00:16:12,360 --> 00:16:14,550
+And this harness idea isn't just built
+into the product. A lot of people are
+
+856
+00:16:14,550 --> 00:16:14,560
+into the product. A lot of people are
+ 
+
+857
+00:16:14,560 --> 00:16:17,430
+into the product. A lot of people are
+finding power by running the harness
+
+858
+00:16:17,430 --> 00:16:17,440
+finding power by running the harness
+ 
+
+859
+00:16:17,440 --> 00:16:19,470
+finding power by running the harness
+closer to the user simply because then
+
+860
+00:16:19,470 --> 00:16:19,480
+closer to the user simply because then
+ 
+
+861
+00:16:19,480 --> 00:16:21,190
+closer to the user simply because then
+they get to start mashing up all their
+
+862
+00:16:21,190 --> 00:16:21,200
+they get to start mashing up all their
+ 
+
+863
+00:16:21,200 --> 00:16:22,990
+they get to start mashing up all their
+different services. This is an
+
+864
+00:16:22,990 --> 00:16:23,000
+different services. This is an
+ 
+
+865
+00:16:23,000 --> 00:16:24,510
+different services. This is an
+anti-Cloudflare talk at this point. I'm
+
+866
+00:16:24,510 --> 00:16:24,520
+anti-Cloudflare talk at this point. I'm
+ 
+
+867
+00:16:24,520 --> 00:16:25,670
+anti-Cloudflare talk at this point. I'm
+like, you should be running the software
+
+868
+00:16:25,670 --> 00:16:25,680
+like, you should be running the software
+ 
+
+869
+00:16:25,680 --> 00:16:27,430
+like, you should be running the software
+on your iPhone, like not so much on our
+
+870
+00:16:27,430 --> 00:16:27,440
+on your iPhone, like not so much on our
+ 
+
+871
+00:16:27,440 --> 00:16:29,910
+on your iPhone, like not so much on our
+servers. Please run it on our servers.
+
+872
+00:16:29,910 --> 00:16:29,920
+servers. Please run it on our servers.
+ 
+
+873
+00:16:29,920 --> 00:16:32,390
+servers. Please run it on our servers.
+Uh but you but there you start getting
+
+874
+00:16:32,390 --> 00:16:32,400
+Uh but you but there you start getting
+ 
+
+875
+00:16:32,400 --> 00:16:35,030
+Uh but you but there you start getting
+to stitch together different systems in
+
+876
+00:16:35,030 --> 00:16:35,040
+to stitch together different systems in
+ 
+
+877
+00:16:35,040 --> 00:16:37,230
+to stitch together different systems in
+this safe environment and you get to do
+
+878
+00:16:37,230 --> 00:16:37,240
+this safe environment and you get to do
+ 
+
+879
+00:16:37,240 --> 00:16:40,990
+this safe environment and you get to do
+it on a task-by-task basis.
+
+880
+00:16:40,990 --> 00:16:41,000
+it on a task-by-task basis.
+ 
+
+881
+00:16:41,000 --> 00:16:42,190
+it on a task-by-task basis.
+Um
+
+882
+00:16:42,190 --> 00:16:42,200
+Um
+ 
+
+883
+00:16:42,200 --> 00:16:43,829
+Um
+I put this in here because I'm a React
+
+884
+00:16:43,829 --> 00:16:43,839
+I put this in here because I'm a React
+ 
+
+885
+00:16:43,839 --> 00:16:45,310
+I put this in here because I'm a React
+programmer and I don't want to freak out
+
+886
+00:16:45,310 --> 00:16:45,320
+programmer and I don't want to freak out
+ 
+
+887
+00:16:45,320 --> 00:16:46,949
+programmer and I don't want to freak out
+the React people by saying no one really
+
+888
+00:16:46,949 --> 00:16:46,959
+the React people by saying no one really
+ 
+
+889
+00:16:46,959 --> 00:16:49,310
+the React people by saying no one really
+wants to build UI anymore. But really,
+
+890
+00:16:49,310 --> 00:16:49,320
+wants to build UI anymore. But really,
+ 
+
+891
+00:16:49,320 --> 00:16:51,110
+wants to build UI anymore. But really,
+it's a harkening back to rethinking
+
+892
+00:16:51,110 --> 00:16:51,120
+it's a harkening back to rethinking
+ 
+
+893
+00:16:51,120 --> 00:16:53,590
+it's a harkening back to rethinking
+everything that we have thought about UI
+
+894
+00:16:53,590 --> 00:16:53,600
+everything that we have thought about UI
+ 
+
+895
+00:16:53,600 --> 00:16:56,350
+everything that we have thought about UI
+and for this new age. I keep thinking
+
+896
+00:16:56,350 --> 00:16:56,360
+and for this new age. I keep thinking
+ 
+
+897
+00:16:56,360 --> 00:16:58,270
+and for this new age. I keep thinking
+about it as part of the tech tree we
+
+898
+00:16:58,270 --> 00:16:58,280
+about it as part of the tech tree we
+ 
+
+899
+00:16:58,280 --> 00:17:00,069
+about it as part of the tech tree we
+have not really explored for 30 years
+
+900
+00:17:00,069 --> 00:17:00,079
+have not really explored for 30 years
+ 
+
+901
+00:17:00,079 --> 00:17:02,190
+have not really explored for 30 years
+because eval wasn't around, but now we
+
+902
+00:17:02,190 --> 00:17:02,200
+because eval wasn't around, but now we
+ 
+
+903
+00:17:02,200 --> 00:17:04,230
+because eval wasn't around, but now we
+have a safe eval and we have these
+
+904
+00:17:04,230 --> 00:17:04,240
+have a safe eval and we have these
+ 
+
+905
+00:17:04,240 --> 00:17:06,510
+have a safe eval and we have these
+things that generate code for you. But
+
+906
+00:17:06,510 --> 00:17:06,520
+things that generate code for you. But
+ 
+
+907
+00:17:06,520 --> 00:17:09,189
+things that generate code for you. But
+you do need to be in a place where you
+
+908
+00:17:09,189 --> 00:17:09,199
+you do need to be in a place where you
+ 
+
+909
+00:17:09,199 --> 00:17:11,390
+you do need to be in a place where you
+understand that your next billion users
+
+910
+00:17:11,390 --> 00:17:11,400
+understand that your next billion users
+ 
+
+911
+00:17:11,400 --> 00:17:13,230
+understand that your next billion users
+are these little robots that are
+
+912
+00:17:13,230 --> 00:17:13,240
+are these little robots that are
+ 
+
+913
+00:17:13,240 --> 00:17:15,189
+are these little robots that are
+generating code for you. To be clear,
+
+914
+00:17:15,189 --> 00:17:15,199
+generating code for you. To be clear,
+ 
+
+915
+00:17:15,199 --> 00:17:17,590
+generating code for you. To be clear,
+your customers are still humans. The
+
+916
+00:17:17,590 --> 00:17:17,600
+your customers are still humans. The
+ 
+
+917
+00:17:17,600 --> 00:17:20,030
+your customers are still humans. The
+things interacting with your systems, uh
+
+918
+00:17:20,030 --> 00:17:20,040
+things interacting with your systems, uh
+ 
+
+919
+00:17:20,040 --> 00:17:22,230
+things interacting with your systems, uh
+if you really love your users, you need
+
+920
+00:17:22,230 --> 00:17:22,240
+if you really love your users, you need
+ 
+
+921
+00:17:22,240 --> 00:17:23,949
+if you really love your users, you need
+to find out where they hang out and they
+
+922
+00:17:23,949 --> 00:17:23,959
+to find out where they hang out and they
+ 
+
+923
+00:17:23,959 --> 00:17:25,270
+to find out where they hang out and they
+don't hang out in the pub, they hang out
+
+924
+00:17:25,270 --> 00:17:25,280
+don't hang out in the pub, they hang out
+ 
+
+925
+00:17:25,280 --> 00:17:27,990
+don't hang out in the pub, they hang out
+in registries. They dream in types and
+
+926
+00:17:27,990 --> 00:17:28,000
+in registries. They dream in types and
+ 
+
+927
+00:17:28,000 --> 00:17:29,967
+in registries. They dream in types and
+syntax errors, you know?
+
+928
+00:17:29,967 --> 00:17:29,977
+syntax errors, you know?
+ 
+
+929
+00:17:29,977 --> 00:17:30,070
+syntax errors, you know?
+>> [snorts]
+
+930
+00:17:30,070 --> 00:17:30,080
+>> [snorts]
+ 
+
+931
+00:17:30,080 --> 00:17:32,470
+>> [snorts]
+>> Uh you need to be thinking about what is
+
+932
+00:17:32,470 --> 00:17:32,480
+>> Uh you need to be thinking about what is
+ 
+
+933
+00:17:32,480 --> 00:17:34,590
+>> Uh you need to be thinking about what is
+the developer experience for these
+
+934
+00:17:34,590 --> 00:17:34,600
+the developer experience for these
+ 
+
+935
+00:17:34,600 --> 00:17:35,830
+the developer experience for these
+agents. This is something a bunch of
+
+936
+00:17:35,830 --> 00:17:35,840
+agents. This is something a bunch of
+ 
+
+937
+00:17:35,840 --> 00:17:37,430
+agents. This is something a bunch of
+companies are already doing really well,
+
+938
+00:17:37,430 --> 00:17:37,440
+companies are already doing really well,
+ 
+
+939
+00:17:37,440 --> 00:17:39,110
+companies are already doing really well,
+by the way, you know? Docs which are
+
+940
+00:17:39,110 --> 00:17:39,120
+by the way, you know? Docs which are
+ 
+
+941
+00:17:39,120 --> 00:17:41,030
+by the way, you know? Docs which are
+markdown, uh
+
+942
+00:17:41,030 --> 00:17:41,040
+markdown, uh
+ 
+
+943
+00:17:41,040 --> 00:17:43,070
+markdown, uh
+errors that let the agent know what to
+
+944
+00:17:43,070 --> 00:17:43,080
+errors that let the agent know what to
+ 
+
+945
+00:17:43,080 --> 00:17:46,430
+errors that let the agent know what to
+do next, uh discoverability via search.
+
+946
+00:17:46,430 --> 00:17:46,440
+do next, uh discoverability via search.
+ 
+
+947
+00:17:46,440 --> 00:17:48,270
+do next, uh discoverability via search.
+The big one that I do want to talk that
+
+948
+00:17:48,270 --> 00:17:48,280
+The big one that I do want to talk that
+ 
+
+949
+00:17:48,280 --> 00:17:50,430
+The big one that I do want to talk that
+I want you to
+
+950
+00:17:50,430 --> 00:17:50,440
+I want you to
+ 
+
+951
+00:17:50,440 --> 00:17:52,070
+I want you to
+embed in your head, I guess, is this
+
+952
+00:17:52,070 --> 00:17:52,080
+embed in your head, I guess, is this
+ 
+
+953
+00:17:52,080 --> 00:17:55,630
+embed in your head, I guess, is this
+idea of capability-based security.
+
+954
+00:17:55,630 --> 00:17:55,640
+idea of capability-based security.
+ 
+
+955
+00:17:55,640 --> 00:17:57,550
+idea of capability-based security.
+This isn't even a JavaScript talk. It
+
+956
+00:17:57,550 --> 00:17:57,560
+This isn't even a JavaScript talk. It
+ 
+
+957
+00:17:57,560 --> 00:18:00,790
+This isn't even a JavaScript talk. It
+can be in Python, it can be in WASM. Uh
+
+958
+00:18:00,790 --> 00:18:00,800
+can be in Python, it can be in WASM. Uh
+ 
+
+959
+00:18:00,800 --> 00:18:03,550
+can be in Python, it can be in WASM. Uh
+I hope it brings a resurgence of Lisp.
+
+960
+00:18:03,550 --> 00:18:03,560
+I hope it brings a resurgence of Lisp.
+ 
+
+961
+00:18:03,560 --> 00:18:05,550
+I hope it brings a resurgence of Lisp.
+It's how I kind of learned how like ASTs
+
+962
+00:18:05,550 --> 00:18:05,560
+It's how I kind of learned how like ASTs
+ 
+
+963
+00:18:05,560 --> 00:18:07,750
+It's how I kind of learned how like ASTs
+work, it kind of breaks your brain. Uh
+
+964
+00:18:07,750 --> 00:18:07,760
+work, it kind of breaks your brain. Uh
+ 
+
+965
+00:18:07,760 --> 00:18:09,790
+work, it kind of breaks your brain. Uh
+but the but the attributes are still
+
+966
+00:18:09,790 --> 00:18:09,800
+but the but the attributes are still
+ 
+
+967
+00:18:09,800 --> 00:18:12,350
+but the but the attributes are still
+very much the same. Events, sandboxing,
+
+968
+00:18:12,350 --> 00:18:12,360
+very much the same. Events, sandboxing,
+ 
+
+969
+00:18:12,360 --> 00:18:14,750
+very much the same. Events, sandboxing,
+capability-based security, embeddable so
+
+970
+00:18:14,750 --> 00:18:14,760
+capability-based security, embeddable so
+ 
+
+971
+00:18:14,760 --> 00:18:16,470
+capability-based security, embeddable so
+that it's really fast to start up and
+
+972
+00:18:16,470 --> 00:18:16,480
+that it's really fast to start up and
+ 
+
+973
+00:18:16,480 --> 00:18:17,950
+that it's really fast to start up and
+run ephemerally.
+
+974
+00:18:17,950 --> 00:18:17,960
+run ephemerally.
+ 
+
+975
+00:18:17,960 --> 00:18:19,150
+run ephemerally.
+Uh
+
+976
+00:18:19,150 --> 00:18:19,160
+Uh
+ 
+
+977
+00:18:19,160 --> 00:18:21,590
+Uh
+React programmers simply be Well, UI
+
+978
+00:18:21,590 --> 00:18:21,600
+React programmers simply be Well, UI
+ 
+
+979
+00:18:21,600 --> 00:18:23,270
+React programmers simply be Well, UI
+programmers simply because they have so
+
+980
+00:18:23,270 --> 00:18:23,280
+programmers simply because they have so
+ 
+
+981
+00:18:23,280 --> 00:18:25,510
+programmers simply because they have so
+much uh they've been so close to users,
+
+982
+00:18:25,510 --> 00:18:25,520
+much uh they've been so close to users,
+ 
+
+983
+00:18:25,520 --> 00:18:26,990
+much uh they've been so close to users,
+I suspect that they'll do particularly
+
+984
+00:18:26,990 --> 00:18:27,000
+I suspect that they'll do particularly
+ 
+
+985
+00:18:27,000 --> 00:18:28,510
+I suspect that they'll do particularly
+well here and that feels really good to
+
+986
+00:18:28,510 --> 00:18:28,520
+well here and that feels really good to
+ 
+
+987
+00:18:28,520 --> 00:18:30,590
+well here and that feels really good to
+me, by the way. I feel happy about it.
+
+988
+00:18:30,590 --> 00:18:30,600
+me, by the way. I feel happy about it.
+ 
+
+989
+00:18:30,600 --> 00:18:33,310
+me, by the way. I feel happy about it.
+So, to end,
+
+990
+00:18:33,310 --> 00:18:33,320
+So, to end,
+ 
+
+991
+00:18:33,320 --> 00:18:35,470
+So, to end,
+for the longest time,
+
+992
+00:18:35,470 --> 00:18:35,480
+for the longest time,
+ 
+
+993
+00:18:35,480 --> 00:18:39,390
+for the longest time,
+programmers like us, we got code, we had
+
+994
+00:18:39,390 --> 00:18:39,400
+programmers like us, we got code, we had
+ 
+
+995
+00:18:39,400 --> 00:18:41,550
+programmers like us, we got code, we had
+infinite power to interact with any
+
+996
+00:18:41,550 --> 00:18:41,560
+infinite power to interact with any
+ 
+
+997
+00:18:41,560 --> 00:18:43,870
+infinite power to interact with any
+system that we could and complain about
+
+998
+00:18:43,870 --> 00:18:43,880
+system that we could and complain about
+ 
+
+999
+00:18:43,880 --> 00:18:45,590
+system that we could and complain about
+it on Twitter
+
+1000
+00:18:45,590 --> 00:18:45,600
+it on Twitter
+ 
+
+1001
+00:18:45,600 --> 00:18:47,390
+it on Twitter
+because our documentation doesn't have
+
+1002
+00:18:47,390 --> 00:18:47,400
+because our documentation doesn't have
+ 
+
+1003
+00:18:47,400 --> 00:18:49,030
+because our documentation doesn't have
+the right CSS or something. JavaScript
+
+1004
+00:18:49,030 --> 00:18:49,040
+the right CSS or something. JavaScript
+ 
+
+1005
+00:18:49,040 --> 00:18:51,350
+the right CSS or something. JavaScript
+programmers super entitled, by the way.
+
+1006
+00:18:51,350 --> 00:18:51,360
+programmers super entitled, by the way.
+ 
+
+1007
+00:18:51,360 --> 00:18:53,510
+programmers super entitled, by the way.
+Uh everyone else got buttons and forms.
+
+1008
+00:18:53,510 --> 00:18:53,520
+Uh everyone else got buttons and forms.
+ 
+
+1009
+00:18:53,520 --> 00:18:55,350
+Uh everyone else got buttons and forms.
+That distinction is breaking. In a world
+
+1010
+00:18:55,350 --> 00:18:55,360
+That distinction is breaking. In a world
+ 
+
+1011
+00:18:55,360 --> 00:18:57,550
+That distinction is breaking. In a world
+like this, you need to let the code do
+
+1012
+00:18:57,550 --> 00:18:57,560
+like this, you need to let the code do
+ 
+
+1013
+00:18:57,560 --> 00:18:59,230
+like this, you need to let the code do
+the talking. The code is the thing that
+
+1014
+00:18:59,230 --> 00:18:59,240
+the talking. The code is the thing that
+ 
+
+1015
+00:18:59,240 --> 00:19:01,870
+the talking. The code is the thing that
+interacts with all your systems. Uh come
+
+1016
+00:19:01,870 --> 00:19:01,880
+interacts with all your systems. Uh come
+ 
+
+1017
+00:19:01,880 --> 00:19:03,350
+interacts with all your systems. Uh come
+talk to me about it at the pub. Like
+
+1018
+00:19:03,350 --> 00:19:03,360
+talk to me about it at the pub. Like
+ 
+
+1019
+00:19:03,360 --> 00:19:05,070
+talk to me about it at the pub. Like
+this is like it feels like it's opening
+
+1020
+00:19:05,070 --> 00:19:05,080
+this is like it feels like it's opening
+ 
+
+1021
+00:19:05,080 --> 00:19:07,550
+this is like it feels like it's opening
+up a whole new area of research for us.
+
+1022
+00:19:07,550 --> 00:19:07,560
+up a whole new area of research for us.
+ 
+
+1023
+00:19:07,560 --> 00:19:10,390
+up a whole new area of research for us.
+Uh and we have a lot of ideas and I get
+
+1024
+00:19:10,390 --> 00:19:10,400
+Uh and we have a lot of ideas and I get
+ 
+
+1025
+00:19:10,400 --> 00:19:12,590
+Uh and we have a lot of ideas and I get
+to finish my talk and the day with 6
+
+1026
+00:19:12,590 --> 00:19:12,600
+to finish my talk and the day with 6
+ 
+
+1027
+00:19:12,600 --> 00:19:15,470
+to finish my talk and the day with 6
+seconds left. How good is that?
+
+1028
+00:19:15,470 --> 00:19:15,480
+seconds left. How good is that?
+ 
+
+1029
+00:19:15,480 --> 00:19:17,388
+seconds left. How good is that?
+Thank you very much. Appreciate it.
+
+1030
+00:19:17,388 --> 00:19:17,398
+Thank you very much. Appreciate it.
+ 
+
+1031
+00:19:17,398 --> 00:19:20,008
+Thank you very much. Appreciate it.
+>> [applause and cheering]
+
+1032
+00:19:20,008 --> 00:19:20,018
+
+ 
+
+1033
+00:19:20,018 --> 00:19:21,973
+
+[music]
+
+1034
+00:19:21,973 --> 00:19:21,983
+[music]
+ 
+
+1035
+00:19:21,983 --> 00:19:32,453
+[music]
+[applause]
+
+1036
+00:19:32,453 --> 00:19:32,463
+
+ 
+
+1037
+00:19:32,463 --> 00:19:34,483
+
+[music]
+
