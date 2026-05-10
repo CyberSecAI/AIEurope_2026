@@ -1,0 +1,6005 @@
+1
+00:00:14,559 --> 00:00:16,790
+
+All right, it's 11:15. Uh, we're going
+
+2
+00:00:16,790 --> 00:00:16,800
+All right, it's 11:15. Uh, we're going
+ 
+
+3
+00:00:16,800 --> 00:00:18,310
+All right, it's 11:15. Uh, we're going
+to go ahead and get started. Before we
+
+4
+00:00:18,310 --> 00:00:18,320
+to go ahead and get started. Before we
+ 
+
+5
+00:00:18,320 --> 00:00:23,670
+to go ahead and get started. Before we
+do, everyone say evals. Evals.
+
+6
+00:00:23,670 --> 00:00:23,680
+
+ 
+
+7
+00:00:23,680 --> 00:00:25,750
+
+I was telling my colleague Rose uh who
+
+8
+00:00:25,750 --> 00:00:25,760
+I was telling my colleague Rose uh who
+ 
+
+9
+00:00:25,760 --> 00:00:27,830
+I was telling my colleague Rose uh who
+who's at at the door that I was a
+
+10
+00:00:27,830 --> 00:00:27,840
+who's at at the door that I was a
+ 
+
+11
+00:00:27,840 --> 00:00:31,029
+who's at at the door that I was a
+adjunct professor for a number of years
+
+12
+00:00:31,029 --> 00:00:31,039
+adjunct professor for a number of years
+ 
+
+13
+00:00:31,039 --> 00:00:35,430
+adjunct professor for a number of years
+and um the first uh year that I did it I
+
+14
+00:00:35,430 --> 00:00:35,440
+and um the first uh year that I did it I
+ 
+
+15
+00:00:35,440 --> 00:00:36,549
+and um the first uh year that I did it I
+thought I was going to have this full
+
+16
+00:00:36,549 --> 00:00:36,559
+thought I was going to have this full
+ 
+
+17
+00:00:36,559 --> 00:00:39,190
+thought I was going to have this full
+class of 130 people every single week
+
+18
+00:00:39,190 --> 00:00:39,200
+class of 130 people every single week
+ 
+
+19
+00:00:39,200 --> 00:00:41,350
+class of 130 people every single week
+eager to learn and then as the weeks
+
+20
+00:00:41,350 --> 00:00:41,360
+eager to learn and then as the weeks
+ 
+
+21
+00:00:41,360 --> 00:00:44,790
+eager to learn and then as the weeks
+went on 130 became 60 became 30 became
+
+22
+00:00:44,790 --> 00:00:44,800
+went on 130 became 60 became 30 became
+ 
+
+23
+00:00:44,800 --> 00:00:46,790
+went on 130 became 60 became 30 became
+10. So, I always tell myself that
+
+24
+00:00:46,790 --> 00:00:46,800
+10. So, I always tell myself that
+ 
+
+25
+00:00:46,800 --> 00:00:48,709
+10. So, I always tell myself that
+whenever I give a talk that only about
+
+26
+00:00:48,709 --> 00:00:48,719
+whenever I give a talk that only about
+ 
+
+27
+00:00:48,719 --> 00:00:49,910
+whenever I give a talk that only about
+four or five people are going to show
+
+28
+00:00:49,910 --> 00:00:49,920
+four or five people are going to show
+ 
+
+29
+00:00:49,920 --> 00:00:51,590
+four or five people are going to show
+up, but I'm going to be really excited
+
+30
+00:00:51,590 --> 00:00:51,600
+up, but I'm going to be really excited
+ 
+
+31
+00:00:51,600 --> 00:00:54,549
+up, but I'm going to be really excited
+to teach those four or five. Um, today
+
+32
+00:00:54,549 --> 00:00:54,559
+to teach those four or five. Um, today
+ 
+
+33
+00:00:54,559 --> 00:00:57,670
+to teach those four or five. Um, today
+is a a a real blessing because um you
+
+34
+00:00:57,670 --> 00:00:57,680
+is a a a real blessing because um you
+ 
+
+35
+00:00:57,680 --> 00:00:59,349
+is a a a real blessing because um you
+know, we have we have a a packed house
+
+36
+00:00:59,349 --> 00:00:59,359
+know, we have we have a a packed house
+ 
+
+37
+00:00:59,359 --> 00:01:01,910
+know, we have we have a a packed house
+here today. Everyone's excited to learn
+
+38
+00:01:01,910 --> 00:01:01,920
+here today. Everyone's excited to learn
+ 
+
+39
+00:01:01,920 --> 00:01:04,950
+here today. Everyone's excited to learn
+about uh evals and I I am excited to to
+
+40
+00:01:04,950 --> 00:01:04,960
+about uh evals and I I am excited to to
+ 
+
+41
+00:01:04,960 --> 00:01:07,670
+about uh evals and I I am excited to to
+teach it. Um here's what we're going to
+
+42
+00:01:07,670 --> 00:01:07,680
+teach it. Um here's what we're going to
+ 
+
+43
+00:01:07,680 --> 00:01:09,510
+teach it. Um here's what we're going to
+be talking about today. I'll give you a
+
+44
+00:01:09,510 --> 00:01:09,520
+be talking about today. I'll give you a
+ 
+
+45
+00:01:09,520 --> 00:01:12,710
+be talking about today. I'll give you a
+little bit of intro about myself and the
+
+46
+00:01:12,710 --> 00:01:12,720
+little bit of intro about myself and the
+ 
+
+47
+00:01:12,720 --> 00:01:15,429
+little bit of intro about myself and the
+company that I work for. um an overview
+
+48
+00:01:15,429 --> 00:01:15,439
+company that I work for. um an overview
+ 
+
+49
+00:01:15,439 --> 00:01:18,070
+company that I work for. um an overview
+of of the problem statement. Uh we'll go
+
+50
+00:01:18,070 --> 00:01:18,080
+of of the problem statement. Uh we'll go
+ 
+
+51
+00:01:18,080 --> 00:01:21,350
+of of the problem statement. Uh we'll go
+into the different stages of when people
+
+52
+00:01:21,350 --> 00:01:21,360
+into the different stages of when people
+ 
+
+53
+00:01:21,360 --> 00:01:24,870
+into the different stages of when people
+are building eval platforms and after
+
+54
+00:01:24,870 --> 00:01:24,880
+are building eval platforms and after
+ 
+
+55
+00:01:24,880 --> 00:01:26,710
+are building eval platforms and after
+that we'll we'll talk about um at least
+
+56
+00:01:26,710 --> 00:01:26,720
+that we'll we'll talk about um at least
+ 
+
+57
+00:01:26,720 --> 00:01:30,070
+that we'll we'll talk about um at least
+in in my opinion where I think eval
+
+58
+00:01:30,070 --> 00:01:30,080
+in in my opinion where I think eval
+ 
+
+59
+00:01:30,080 --> 00:01:33,749
+in in my opinion where I think eval
+platforms are going to go. Um but yeah,
+
+60
+00:01:33,749 --> 00:01:33,759
+platforms are going to go. Um but yeah,
+ 
+
+61
+00:01:33,759 --> 00:01:35,510
+platforms are going to go. Um but yeah,
+this is this is me. My name is Phil
+
+62
+00:01:35,510 --> 00:01:35,520
+this is this is me. My name is Phil
+ 
+
+63
+00:01:35,520 --> 00:01:38,550
+this is this is me. My name is Phil
+Hzel. I lead solutions engineering at
+
+64
+00:01:38,550 --> 00:01:38,560
+Hzel. I lead solutions engineering at
+ 
+
+65
+00:01:38,560 --> 00:01:41,109
+Hzel. I lead solutions engineering at
+Brain. I'll go into what Brain Trust is
+
+66
+00:01:41,109 --> 00:01:41,119
+Brain. I'll go into what Brain Trust is
+ 
+
+67
+00:01:41,119 --> 00:01:43,670
+Brain. I'll go into what Brain Trust is
+in a second. um solution engineering.
+
+68
+00:01:43,670 --> 00:01:43,680
+in a second. um solution engineering.
+ 
+
+69
+00:01:43,680 --> 00:01:46,550
+in a second. um solution engineering.
+That basically means I'm the person and
+
+70
+00:01:46,550 --> 00:01:46,560
+That basically means I'm the person and
+ 
+
+71
+00:01:46,560 --> 00:01:48,710
+That basically means I'm the person and
+my team are the people that make sure
+
+72
+00:01:48,710 --> 00:01:48,720
+my team are the people that make sure
+ 
+
+73
+00:01:48,720 --> 00:01:50,469
+my team are the people that make sure
+that people are getting the most value
+
+74
+00:01:50,469 --> 00:01:50,479
+that people are getting the most value
+ 
+
+75
+00:01:50,479 --> 00:01:53,510
+that people are getting the most value
+out of our platform uh and as as quickly
+
+76
+00:01:53,510 --> 00:01:53,520
+out of our platform uh and as as quickly
+ 
+
+77
+00:01:53,520 --> 00:01:56,950
+out of our platform uh and as as quickly
+as possible. So I'm fortunate because uh
+
+78
+00:01:56,950 --> 00:01:56,960
+as possible. So I'm fortunate because uh
+ 
+
+79
+00:01:56,960 --> 00:01:59,350
+as possible. So I'm fortunate because uh
+throughout all of our customers, I I see
+
+80
+00:01:59,350 --> 00:01:59,360
+throughout all of our customers, I I see
+ 
+
+81
+00:01:59,360 --> 00:02:01,830
+throughout all of our customers, I I see
+uh what the state-of-the-art is in in
+
+82
+00:02:01,830 --> 00:02:01,840
+uh what the state-of-the-art is in in
+ 
+
+83
+00:02:01,840 --> 00:02:05,350
+uh what the state-of-the-art is in in
+both eval and and agent observability.
+
+84
+00:02:05,350 --> 00:02:05,360
+both eval and and agent observability.
+ 
+
+85
+00:02:05,360 --> 00:02:07,830
+both eval and and agent observability.
+Prior to Brain Trust, I spent 12 years
+
+86
+00:02:07,830 --> 00:02:07,840
+Prior to Brain Trust, I spent 12 years
+ 
+
+87
+00:02:07,840 --> 00:02:10,070
+Prior to Brain Trust, I spent 12 years
+in consulting and systems
+
+88
+00:02:10,070 --> 00:02:10,080
+in consulting and systems
+ 
+
+89
+00:02:10,080 --> 00:02:12,550
+in consulting and systems
+implementation. I worked for KPMG for
+
+90
+00:02:12,550 --> 00:02:12,560
+implementation. I worked for KPMG for
+ 
+
+91
+00:02:12,560 --> 00:02:14,390
+implementation. I worked for KPMG for
+four years. I worked for a company
+
+92
+00:02:14,390 --> 00:02:14,400
+four years. I worked for a company
+ 
+
+93
+00:02:14,400 --> 00:02:17,670
+four years. I worked for a company
+called Slalom Consulting for eight years
+
+94
+00:02:17,670 --> 00:02:17,680
+called Slalom Consulting for eight years
+ 
+
+95
+00:02:17,680 --> 00:02:20,710
+called Slalom Consulting for eight years
+where uh I led the global data bricks
+
+96
+00:02:20,710 --> 00:02:20,720
+where uh I led the global data bricks
+ 
+
+97
+00:02:20,720 --> 00:02:23,670
+where uh I led the global data bricks
+business unit. And I noticed that as I
+
+98
+00:02:23,670 --> 00:02:23,680
+business unit. And I noticed that as I
+ 
+
+99
+00:02:23,680 --> 00:02:27,110
+business unit. And I noticed that as I
+was um helping my my clients with those
+
+100
+00:02:27,110 --> 00:02:27,120
+was um helping my my clients with those
+ 
+
+101
+00:02:27,120 --> 00:02:29,510
+was um helping my my clients with those
+implementations, they were great. So
+
+102
+00:02:29,510 --> 00:02:29,520
+implementations, they were great. So
+ 
+
+103
+00:02:29,520 --> 00:02:31,589
+implementations, they were great. So
+they were so good at generating these
+
+104
+00:02:31,589 --> 00:02:31,599
+they were so good at generating these
+ 
+
+105
+00:02:31,599 --> 00:02:33,990
+they were so good at generating these
+generative AI proofs of concepts and
+
+106
+00:02:33,990 --> 00:02:34,000
+generative AI proofs of concepts and
+ 
+
+107
+00:02:34,000 --> 00:02:36,390
+generative AI proofs of concepts and
+none of them were getting to production.
+
+108
+00:02:36,390 --> 00:02:36,400
+none of them were getting to production.
+ 
+
+109
+00:02:36,400 --> 00:02:39,190
+none of them were getting to production.
+and I wanted to be um I want to be
+
+110
+00:02:39,190 --> 00:02:39,200
+and I wanted to be um I want to be
+ 
+
+111
+00:02:39,200 --> 00:02:41,990
+and I wanted to be um I want to be
+helpful in making sure that those PC's
+
+112
+00:02:41,990 --> 00:02:42,000
+helpful in making sure that those PC's
+ 
+
+113
+00:02:42,000 --> 00:02:44,070
+helpful in making sure that those PC's
+could get to production. So I actually
+
+114
+00:02:44,070 --> 00:02:44,080
+could get to production. So I actually
+ 
+
+115
+00:02:44,080 --> 00:02:46,229
+could get to production. So I actually
+started using Brain Trust because I knew
+
+116
+00:02:46,229 --> 00:02:46,239
+started using Brain Trust because I knew
+ 
+
+117
+00:02:46,239 --> 00:02:48,390
+started using Brain Trust because I knew
+it helped out in this space. I started
+
+118
+00:02:48,390 --> 00:02:48,400
+it helped out in this space. I started
+ 
+
+119
+00:02:48,400 --> 00:02:50,869
+it helped out in this space. I started
+using it as a user and I like the
+
+120
+00:02:50,869 --> 00:02:50,879
+using it as a user and I like the
+ 
+
+121
+00:02:50,879 --> 00:02:52,710
+using it as a user and I like the
+platform so much that I applied for a
+
+122
+00:02:52,710 --> 00:02:52,720
+platform so much that I applied for a
+ 
+
+123
+00:02:52,720 --> 00:02:55,350
+platform so much that I applied for a
+job and I've been uh been here for about
+
+124
+00:02:55,350 --> 00:02:55,360
+job and I've been uh been here for about
+ 
+
+125
+00:02:55,360 --> 00:02:59,910
+job and I've been uh been here for about
+a year. Uh outside of work, uh I I like
+
+126
+00:02:59,910 --> 00:02:59,920
+a year. Uh outside of work, uh I I like
+ 
+
+127
+00:02:59,920 --> 00:03:01,910
+a year. Uh outside of work, uh I I like
+to play chess, but I'm I'm I'm very bad
+
+128
+00:03:01,910 --> 00:03:01,920
+to play chess, but I'm I'm I'm very bad
+ 
+
+129
+00:03:01,920 --> 00:03:04,630
+to play chess, but I'm I'm I'm very bad
+at it. And I like to spend time with my
+
+130
+00:03:04,630 --> 00:03:04,640
+at it. And I like to spend time with my
+ 
+
+131
+00:03:04,640 --> 00:03:07,190
+at it. And I like to spend time with my
+wife and and my dachshund. Uh dachshund
+
+132
+00:03:07,190 --> 00:03:07,200
+wife and and my dachshund. Uh dachshund
+ 
+
+133
+00:03:07,200 --> 00:03:10,309
+wife and and my dachshund. Uh dachshund
+is is named Pistol Pete. And he's
+
+134
+00:03:10,309 --> 00:03:10,319
+is is named Pistol Pete. And he's
+ 
+
+135
+00:03:10,319 --> 00:03:12,390
+is is named Pistol Pete. And he's
+pictured. Um he's the person in brown.
+
+136
+00:03:12,390 --> 00:03:12,400
+pictured. Um he's the person in brown.
+ 
+
+137
+00:03:12,400 --> 00:03:14,550
+pictured. Um he's the person in brown.
+He's not the person in black. Person in
+
+138
+00:03:14,550 --> 00:03:14,560
+He's not the person in black. Person in
+ 
+
+139
+00:03:14,560 --> 00:03:17,509
+He's not the person in black. Person in
+black is me. Um has anyone heard of
+
+140
+00:03:17,509 --> 00:03:17,519
+black is me. Um has anyone heard of
+ 
+
+141
+00:03:17,519 --> 00:03:20,229
+black is me. Um has anyone heard of
+Brain Trust before? Anyone? Couple
+
+142
+00:03:20,229 --> 00:03:20,239
+Brain Trust before? Anyone? Couple
+ 
+
+143
+00:03:20,239 --> 00:03:22,390
+Brain Trust before? Anyone? Couple
+hands. How many people have heard about
+
+144
+00:03:22,390 --> 00:03:22,400
+hands. How many people have heard about
+ 
+
+145
+00:03:22,400 --> 00:03:24,470
+hands. How many people have heard about
+Brain Trust for the first time this
+
+146
+00:03:24,470 --> 00:03:24,480
+Brain Trust for the first time this
+ 
+
+147
+00:03:24,480 --> 00:03:26,309
+Brain Trust for the first time this
+week?
+
+148
+00:03:26,309 --> 00:03:26,319
+week?
+ 
+
+149
+00:03:26,319 --> 00:03:29,750
+week?
+really okay great wonderful uh brain
+
+150
+00:03:29,750 --> 00:03:29,760
+really okay great wonderful uh brain
+ 
+
+151
+00:03:29,760 --> 00:03:32,949
+really okay great wonderful uh brain
+trust for um for just a reminder um I
+
+152
+00:03:32,949 --> 00:03:32,959
+trust for um for just a reminder um I
+ 
+
+153
+00:03:32,959 --> 00:03:35,270
+trust for um for just a reminder um I
+think of ourselves as an agent quality
+
+154
+00:03:35,270 --> 00:03:35,280
+think of ourselves as an agent quality
+ 
+
+155
+00:03:35,280 --> 00:03:37,990
+think of ourselves as an agent quality
+platform and there's a lot of things
+
+156
+00:03:37,990 --> 00:03:38,000
+platform and there's a lot of things
+ 
+
+157
+00:03:38,000 --> 00:03:41,110
+platform and there's a lot of things
+that can go into quality um the way that
+
+158
+00:03:41,110 --> 00:03:41,120
+that can go into quality um the way that
+ 
+
+159
+00:03:41,120 --> 00:03:43,910
+that can go into quality um the way that
+we can get to agent quality two main
+
+160
+00:03:43,910 --> 00:03:43,920
+we can get to agent quality two main
+ 
+
+161
+00:03:43,920 --> 00:03:47,509
+we can get to agent quality two main
+pillars through eval
+
+162
+00:03:47,509 --> 00:03:47,519
+pillars through eval
+ 
+
+163
+00:03:47,519 --> 00:03:50,070
+pillars through eval
+observability which we think of as
+
+164
+00:03:50,070 --> 00:03:50,080
+observability which we think of as
+ 
+
+165
+00:03:50,080 --> 00:03:53,270
+observability which we think of as
+really similar problems to solve eval
+
+166
+00:03:53,270 --> 00:03:53,280
+really similar problems to solve eval
+ 
+
+167
+00:03:53,280 --> 00:03:56,309
+really similar problems to solve eval
+that's what you're doing with your agent
+
+168
+00:03:56,309 --> 00:03:56,319
+that's what you're doing with your agent
+ 
+
+169
+00:03:56,319 --> 00:03:58,229
+that's what you're doing with your agent
+before it gets to production as you're
+
+170
+00:03:58,229 --> 00:03:58,239
+before it gets to production as you're
+ 
+
+171
+00:03:58,239 --> 00:04:01,110
+before it gets to production as you're
+experimenting so that you can become
+
+172
+00:04:01,110 --> 00:04:01,120
+experimenting so that you can become
+ 
+
+173
+00:04:01,120 --> 00:04:03,350
+experimenting so that you can become
+confident in your agent. And then
+
+174
+00:04:03,350 --> 00:04:03,360
+confident in your agent. And then
+ 
+
+175
+00:04:03,360 --> 00:04:05,750
+confident in your agent. And then
+observability is really similar but
+
+176
+00:04:05,750 --> 00:04:05,760
+observability is really similar but
+ 
+
+177
+00:04:05,760 --> 00:04:07,910
+observability is really similar but
+you're already in production. Your agent
+
+178
+00:04:07,910 --> 00:04:07,920
+you're already in production. Your agent
+ 
+
+179
+00:04:07,920 --> 00:04:11,030
+you're already in production. Your agent
+is uh in front of real usage from real
+
+180
+00:04:11,030 --> 00:04:11,040
+is uh in front of real usage from real
+ 
+
+181
+00:04:11,040 --> 00:04:14,070
+is uh in front of real usage from real
+users and you want to be confident you
+
+182
+00:04:14,070 --> 00:04:14,080
+users and you want to be confident you
+ 
+
+183
+00:04:14,080 --> 00:04:15,990
+users and you want to be confident you
+want to remain confident I should say
+
+184
+00:04:15,990 --> 00:04:16,000
+want to remain confident I should say
+ 
+
+185
+00:04:16,000 --> 00:04:17,670
+want to remain confident I should say
+that your agent is performing the way
+
+186
+00:04:17,670 --> 00:04:17,680
+that your agent is performing the way
+ 
+
+187
+00:04:17,680 --> 00:04:19,670
+that your agent is performing the way
+that you thought that it it would when
+
+188
+00:04:19,670 --> 00:04:19,680
+that you thought that it it would when
+ 
+
+189
+00:04:19,680 --> 00:04:22,950
+that you thought that it it would when
+you were building it. Um so that's brain
+
+190
+00:04:22,950 --> 00:04:22,960
+you were building it. Um so that's brain
+ 
+
+191
+00:04:22,960 --> 00:04:26,150
+you were building it. Um so that's brain
+trust. I was specifically told to not
+
+192
+00:04:26,150 --> 00:04:26,160
+trust. I was specifically told to not
+ 
+
+193
+00:04:26,160 --> 00:04:28,550
+trust. I was specifically told to not
+make this a sales pitch. So that's like
+
+194
+00:04:28,550 --> 00:04:28,560
+make this a sales pitch. So that's like
+ 
+
+195
+00:04:28,560 --> 00:04:30,230
+make this a sales pitch. So that's like
+really the last brain trust slide that
+
+196
+00:04:30,230 --> 00:04:30,240
+really the last brain trust slide that
+ 
+
+197
+00:04:30,240 --> 00:04:32,550
+really the last brain trust slide that
+that you'll get today. Although of
+
+198
+00:04:32,550 --> 00:04:32,560
+that you'll get today. Although of
+ 
+
+199
+00:04:32,560 --> 00:04:34,150
+that you'll get today. Although of
+course I'm very happy to answer
+
+200
+00:04:34,150 --> 00:04:34,160
+course I'm very happy to answer
+ 
+
+201
+00:04:34,160 --> 00:04:36,790
+course I'm very happy to answer
+questions about our company this week.
+
+202
+00:04:36,790 --> 00:04:36,800
+questions about our company this week.
+ 
+
+203
+00:04:36,800 --> 00:04:38,790
+questions about our company this week.
+But mainly I wanted to talk more
+
+204
+00:04:38,790 --> 00:04:38,800
+But mainly I wanted to talk more
+ 
+
+205
+00:04:38,800 --> 00:04:41,830
+But mainly I wanted to talk more
+conceptually about um how people start
+
+206
+00:04:41,830 --> 00:04:41,840
+conceptually about um how people start
+ 
+
+207
+00:04:41,840 --> 00:04:43,990
+conceptually about um how people start
+to mature and and build build these
+
+208
+00:04:43,990 --> 00:04:44,000
+to mature and and build build these
+ 
+
+209
+00:04:44,000 --> 00:04:46,629
+to mature and and build build these
+platforms spoken from a place where we
+
+210
+00:04:46,629 --> 00:04:46,639
+platforms spoken from a place where we
+ 
+
+211
+00:04:46,639 --> 00:04:49,189
+platforms spoken from a place where we
+have a lot of experience in the space.
+
+212
+00:04:49,189 --> 00:04:49,199
+have a lot of experience in the space.
+ 
+
+213
+00:04:49,199 --> 00:04:52,710
+have a lot of experience in the space.
+Uh first why eval are important. Evals
+
+214
+00:04:52,710 --> 00:04:52,720
+Uh first why eval are important. Evals
+ 
+
+215
+00:04:52,720 --> 00:04:55,909
+Uh first why eval are important. Evals
+are important because um this sounds
+
+216
+00:04:55,909 --> 00:04:55,919
+are important because um this sounds
+ 
+
+217
+00:04:55,919 --> 00:04:58,950
+are important because um this sounds
+obvious but LMS have extreme
+
+218
+00:04:58,950 --> 00:04:58,960
+obvious but LMS have extreme
+ 
+
+219
+00:04:58,960 --> 00:05:01,830
+obvious but LMS have extreme
+variability. Uh we love LMS because
+
+220
+00:05:01,830 --> 00:05:01,840
+variability. Uh we love LMS because
+ 
+
+221
+00:05:01,840 --> 00:05:04,230
+variability. Uh we love LMS because
+they're highly variable. There are so
+
+222
+00:05:04,230 --> 00:05:04,240
+they're highly variable. There are so
+ 
+
+223
+00:05:04,240 --> 00:05:06,390
+they're highly variable. There are so
+many different types of problems that
+
+224
+00:05:06,390 --> 00:05:06,400
+many different types of problems that
+ 
+
+225
+00:05:06,400 --> 00:05:08,950
+many different types of problems that
+LMS can reason to solve. That's why
+
+226
+00:05:08,950 --> 00:05:08,960
+LMS can reason to solve. That's why
+ 
+
+227
+00:05:08,960 --> 00:05:11,430
+LMS can reason to solve. That's why
+we're that why you know we're so
+
+228
+00:05:11,430 --> 00:05:11,440
+we're that why you know we're so
+ 
+
+229
+00:05:11,440 --> 00:05:15,029
+we're that why you know we're so
+attracted to to them as a technology. Um
+
+230
+00:05:15,029 --> 00:05:15,039
+attracted to to them as a technology. Um
+ 
+
+231
+00:05:15,039 --> 00:05:17,510
+attracted to to them as a technology. Um
+agents are also of course agents use LMS
+
+232
+00:05:17,510 --> 00:05:17,520
+agents are also of course agents use LMS
+ 
+
+233
+00:05:17,520 --> 00:05:20,310
+agents are also of course agents use LMS
+as as the brain of the agent. Agents are
+
+234
+00:05:20,310 --> 00:05:20,320
+as as the brain of the agent. Agents are
+ 
+
+235
+00:05:20,320 --> 00:05:22,710
+as as the brain of the agent. Agents are
+becoming the norm in how customers are
+
+236
+00:05:22,710 --> 00:05:22,720
+becoming the norm in how customers are
+ 
+
+237
+00:05:22,720 --> 00:05:24,870
+becoming the norm in how customers are
+interacting with companies. People
+
+238
+00:05:24,870 --> 00:05:24,880
+interacting with companies. People
+ 
+
+239
+00:05:24,880 --> 00:05:28,710
+interacting with companies. People
+expect an agentic experience now. So if
+
+240
+00:05:28,710 --> 00:05:28,720
+expect an agentic experience now. So if
+ 
+
+241
+00:05:28,720 --> 00:05:30,469
+expect an agentic experience now. So if
+you combine both of those things
+
+242
+00:05:30,469 --> 00:05:30,479
+you combine both of those things
+ 
+
+243
+00:05:30,479 --> 00:05:32,950
+you combine both of those things
+together, you really need to be
+
+244
+00:05:32,950 --> 00:05:32,960
+together, you really need to be
+ 
+
+245
+00:05:32,960 --> 00:05:35,110
+together, you really need to be
+confident in how your agent is going to
+
+246
+00:05:35,110 --> 00:05:35,120
+confident in how your agent is going to
+ 
+
+247
+00:05:35,120 --> 00:05:37,990
+confident in how your agent is going to
+perform once it is in production.
+
+248
+00:05:37,990 --> 00:05:38,000
+perform once it is in production.
+ 
+
+249
+00:05:38,000 --> 00:05:40,790
+perform once it is in production.
+Without doing so, you're going to incur
+
+250
+00:05:40,790 --> 00:05:40,800
+Without doing so, you're going to incur
+ 
+
+251
+00:05:40,800 --> 00:05:43,270
+Without doing so, you're going to incur
+or you can potentially incur a great
+
+252
+00:05:43,270 --> 00:05:43,280
+or you can potentially incur a great
+ 
+
+253
+00:05:43,280 --> 00:05:46,629
+or you can potentially incur a great
+deal of risk um from both a a brand
+
+254
+00:05:46,629 --> 00:05:46,639
+deal of risk um from both a a brand
+ 
+
+255
+00:05:46,639 --> 00:05:49,749
+deal of risk um from both a a brand
+perspective, a compliance perspective,
+
+256
+00:05:49,749 --> 00:05:49,759
+perspective, a compliance perspective,
+ 
+
+257
+00:05:49,759 --> 00:05:53,189
+perspective, a compliance perspective,
+uh and even more of a a cost and and and
+
+258
+00:05:53,189 --> 00:05:53,199
+uh and even more of a a cost and and and
+ 
+
+259
+00:05:53,199 --> 00:05:55,749
+uh and even more of a a cost and and and
+maintenance and systems perspective. So,
+
+260
+00:05:55,749 --> 00:05:55,759
+maintenance and systems perspective. So,
+ 
+
+261
+00:05:55,759 --> 00:05:57,670
+maintenance and systems perspective. So,
+we want to avoid all of those things
+
+262
+00:05:57,670 --> 00:05:57,680
+we want to avoid all of those things
+ 
+
+263
+00:05:57,680 --> 00:05:59,670
+we want to avoid all of those things
+happening and make sure that, you know,
+
+264
+00:05:59,670 --> 00:05:59,680
+happening and make sure that, you know,
+ 
+
+265
+00:05:59,680 --> 00:06:00,950
+happening and make sure that, you know,
+our customers are having a great
+
+266
+00:06:00,950 --> 00:06:00,960
+our customers are having a great
+ 
+
+267
+00:06:00,960 --> 00:06:03,830
+our customers are having a great
+experience and that our agents are are
+
+268
+00:06:03,830 --> 00:06:03,840
+experience and that our agents are are
+ 
+
+269
+00:06:03,840 --> 00:06:05,990
+experience and that our agents are are
+um acting the way that we thought that
+
+270
+00:06:05,990 --> 00:06:06,000
+um acting the way that we thought that
+ 
+
+271
+00:06:06,000 --> 00:06:08,150
+um acting the way that we thought that
+they would act.
+
+272
+00:06:08,150 --> 00:06:08,160
+they would act.
+ 
+
+273
+00:06:08,160 --> 00:06:11,670
+they would act.
+Um, how many people are like they're
+
+274
+00:06:11,670 --> 00:06:11,680
+Um, how many people are like they're
+ 
+
+275
+00:06:11,680 --> 00:06:14,070
+Um, how many people are like they're
+doing eval right now, but it's just on a
+
+276
+00:06:14,070 --> 00:06:14,080
+doing eval right now, but it's just on a
+ 
+
+277
+00:06:14,080 --> 00:06:16,550
+doing eval right now, but it's just on a
+Google sheet or or some spreadsheet.
+
+278
+00:06:16,550 --> 00:06:16,560
+Google sheet or or some spreadsheet.
+ 
+
+279
+00:06:16,560 --> 00:06:18,230
+Google sheet or or some spreadsheet.
+There's probably there's no shame in
+
+280
+00:06:18,230 --> 00:06:18,240
+There's probably there's no shame in
+ 
+
+281
+00:06:18,240 --> 00:06:20,150
+There's probably there's no shame in
+that, my friend. Raise that hand high.
+
+282
+00:06:20,150 --> 00:06:20,160
+that, my friend. Raise that hand high.
+ 
+
+283
+00:06:20,160 --> 00:06:23,270
+that, my friend. Raise that hand high.
+That's great. Um, there's I and I I
+
+284
+00:06:23,270 --> 00:06:23,280
+That's great. Um, there's I and I I
+ 
+
+285
+00:06:23,280 --> 00:06:24,790
+That's great. Um, there's I and I I
+think I think that's great. Like ju just
+
+286
+00:06:24,790 --> 00:06:24,800
+think I think that's great. Like ju just
+ 
+
+287
+00:06:24,800 --> 00:06:26,870
+think I think that's great. Like ju just
+making the step is is really important.
+
+288
+00:06:26,870 --> 00:06:26,880
+making the step is is really important.
+ 
+
+289
+00:06:26,880 --> 00:06:28,870
+making the step is is really important.
+It's an acknowledgement of the problem
+
+290
+00:06:28,870 --> 00:06:28,880
+It's an acknowledgement of the problem
+ 
+
+291
+00:06:28,880 --> 00:06:32,070
+It's an acknowledgement of the problem
+space. And a lot of folks will, you
+
+292
+00:06:32,070 --> 00:06:32,080
+space. And a lot of folks will, you
+ 
+
+293
+00:06:32,080 --> 00:06:33,590
+space. And a lot of folks will, you
+know, they they'll they'll come to us
+
+294
+00:06:33,590 --> 00:06:33,600
+know, they they'll they'll come to us
+ 
+
+295
+00:06:33,600 --> 00:06:35,270
+know, they they'll they'll come to us
+and they'll say, "Well, I don't really
+
+296
+00:06:35,270 --> 00:06:35,280
+and they'll say, "Well, I don't really
+ 
+
+297
+00:06:35,280 --> 00:06:37,270
+and they'll say, "Well, I don't really
+understand brain trust because, you
+
+298
+00:06:37,270 --> 00:06:37,280
+understand brain trust because, you
+ 
+
+299
+00:06:37,280 --> 00:06:40,629
+understand brain trust because, you
+know, all I need to know is how to loop
+
+300
+00:06:40,629 --> 00:06:40,639
+know, all I need to know is how to loop
+ 
+
+301
+00:06:40,639 --> 00:06:42,230
+know, all I need to know is how to loop
+through my agent with a couple of
+
+302
+00:06:42,230 --> 00:06:42,240
+through my agent with a couple of
+ 
+
+303
+00:06:42,240 --> 00:06:45,510
+through my agent with a couple of
+different inputs and be able to display
+
+304
+00:06:45,510 --> 00:06:45,520
+different inputs and be able to display
+ 
+
+305
+00:06:45,520 --> 00:06:47,749
+different inputs and be able to display
+some, you know, handwritten notes and
+
+306
+00:06:47,749 --> 00:06:47,759
+some, you know, handwritten notes and
+ 
+
+307
+00:06:47,759 --> 00:06:50,230
+some, you know, handwritten notes and
+scores about that agent. So the things
+
+308
+00:06:50,230 --> 00:06:50,240
+scores about that agent. So the things
+ 
+
+309
+00:06:50,240 --> 00:06:52,309
+scores about that agent. So the things
+that I mentioned there, three things,
+
+310
+00:06:52,309 --> 00:06:52,319
+that I mentioned there, three things,
+ 
+
+311
+00:06:52,319 --> 00:06:56,150
+that I mentioned there, three things,
+some way to execute your agent, some UI,
+
+312
+00:06:56,150 --> 00:06:56,160
+some way to execute your agent, some UI,
+ 
+
+313
+00:06:56,160 --> 00:06:57,510
+some way to execute your agent, some UI,
+sometimes it's as simple as a
+
+314
+00:06:57,510 --> 00:06:57,520
+sometimes it's as simple as a
+ 
+
+315
+00:06:57,520 --> 00:07:00,629
+sometimes it's as simple as a
+spreadsheet to show those outputs and
+
+316
+00:07:00,629 --> 00:07:00,639
+spreadsheet to show those outputs and
+ 
+
+317
+00:07:00,639 --> 00:07:04,309
+spreadsheet to show those outputs and
+scores, and then also a way to to gather
+
+318
+00:07:04,309 --> 00:07:04,319
+scores, and then also a way to to gather
+ 
+
+319
+00:07:04,319 --> 00:07:06,070
+scores, and then also a way to to gather
+input examples. What what I mean by
+
+320
+00:07:06,070 --> 00:07:06,080
+input examples. What what I mean by
+ 
+
+321
+00:07:06,080 --> 00:07:09,110
+input examples. What what I mean by
+input example is the the thing that can
+
+322
+00:07:09,110 --> 00:07:09,120
+input example is the the thing that can
+ 
+
+323
+00:07:09,120 --> 00:07:11,749
+input example is the the thing that can
+initiate a run of an agent, the thing
+
+324
+00:07:11,749 --> 00:07:11,759
+initiate a run of an agent, the thing
+ 
+
+325
+00:07:11,759 --> 00:07:13,510
+initiate a run of an agent, the thing
+that can invoke an agent, whatever
+
+326
+00:07:13,510 --> 00:07:13,520
+that can invoke an agent, whatever
+ 
+
+327
+00:07:13,520 --> 00:07:16,469
+that can invoke an agent, whatever
+information that's necessary for that.
+
+328
+00:07:16,469 --> 00:07:16,479
+information that's necessary for that.
+ 
+
+329
+00:07:16,479 --> 00:07:18,070
+information that's necessary for that.
+Um, it would be a really short
+
+330
+00:07:18,070 --> 00:07:18,080
+Um, it would be a really short
+ 
+
+331
+00:07:18,080 --> 00:07:21,029
+Um, it would be a really short
+presentation if if this is all eval was,
+
+332
+00:07:21,029 --> 00:07:21,039
+presentation if if this is all eval was,
+ 
+
+333
+00:07:21,039 --> 00:07:22,390
+presentation if if this is all eval was,
+I would I would thank you for your time
+
+334
+00:07:22,390 --> 00:07:22,400
+I would I would thank you for your time
+ 
+
+335
+00:07:22,400 --> 00:07:23,510
+I would I would thank you for your time
+and I would walk out the room, but
+
+336
+00:07:23,510 --> 00:07:23,520
+and I would walk out the room, but
+ 
+
+337
+00:07:23,520 --> 00:07:24,710
+and I would walk out the room, but
+that's not that's not what you're here
+
+338
+00:07:24,710 --> 00:07:24,720
+that's not that's not what you're here
+ 
+
+339
+00:07:24,720 --> 00:07:26,870
+that's not that's not what you're here
+for. There is a whole other part of the
+
+340
+00:07:26,870 --> 00:07:26,880
+for. There is a whole other part of the
+ 
+
+341
+00:07:26,880 --> 00:07:28,790
+for. There is a whole other part of the
+iceberg.
+
+342
+00:07:28,790 --> 00:07:28,800
+iceberg.
+ 
+
+343
+00:07:28,800 --> 00:07:30,710
+iceberg.
+It's way more complicated than that.
+
+344
+00:07:30,710 --> 00:07:30,720
+It's way more complicated than that.
+ 
+
+345
+00:07:30,720 --> 00:07:32,469
+It's way more complicated than that.
+There are a lot of things that you end
+
+346
+00:07:32,469 --> 00:07:32,479
+There are a lot of things that you end
+ 
+
+347
+00:07:32,479 --> 00:07:34,790
+There are a lot of things that you end
+up having to build when you're really
+
+348
+00:07:34,790 --> 00:07:34,800
+up having to build when you're really
+ 
+
+349
+00:07:34,800 --> 00:07:37,110
+up having to build when you're really
+serious about evals. We're not going to
+
+350
+00:07:37,110 --> 00:07:37,120
+serious about evals. We're not going to
+ 
+
+351
+00:07:37,120 --> 00:07:39,189
+serious about evals. We're not going to
+talk about every single one of these
+
+352
+00:07:39,189 --> 00:07:39,199
+talk about every single one of these
+ 
+
+353
+00:07:39,199 --> 00:07:42,469
+talk about every single one of these
+things today. Um, but we will touch on
+
+354
+00:07:42,469 --> 00:07:42,479
+things today. Um, but we will touch on
+ 
+
+355
+00:07:42,479 --> 00:07:44,309
+things today. Um, but we will touch on
+uh on many of them. Uh, and of course,
+
+356
+00:07:44,309 --> 00:07:44,319
+uh on many of them. Uh, and of course,
+ 
+
+357
+00:07:44,319 --> 00:07:45,830
+uh on many of them. Uh, and of course,
+if there's anything here that I don't
+
+358
+00:07:45,830 --> 00:07:45,840
+if there's anything here that I don't
+ 
+
+359
+00:07:45,840 --> 00:07:48,070
+if there's anything here that I don't
+cover that you're interested in, I'll
+
+360
+00:07:48,070 --> 00:07:48,080
+cover that you're interested in, I'll
+ 
+
+361
+00:07:48,080 --> 00:07:50,230
+cover that you're interested in, I'll
+leave some uh some times uh time for
+
+362
+00:07:50,230 --> 00:07:50,240
+leave some uh some times uh time for
+ 
+
+363
+00:07:50,240 --> 00:07:52,629
+leave some uh some times uh time for
+questions for that. Also see like a lot
+
+364
+00:07:52,629 --> 00:07:52,639
+questions for that. Also see like a lot
+ 
+
+365
+00:07:52,639 --> 00:07:54,309
+questions for that. Also see like a lot
+of phones up, so I'm gonna I'll pause
+
+366
+00:07:54,309 --> 00:07:54,319
+of phones up, so I'm gonna I'll pause
+ 
+
+367
+00:07:54,319 --> 00:07:58,710
+of phones up, so I'm gonna I'll pause
+for iceberg pictures.
+
+368
+00:07:58,710 --> 00:07:58,720
+
+ 
+
+369
+00:07:58,720 --> 00:08:00,309
+
+Um, a couple a couple things while
+
+370
+00:08:00,309 --> 00:08:00,319
+Um, a couple a couple things while
+ 
+
+371
+00:08:00,319 --> 00:08:02,230
+Um, a couple a couple things while
+that's happening. Uh, why is this a
+
+372
+00:08:02,230 --> 00:08:02,240
+that's happening. Uh, why is this a
+ 
+
+373
+00:08:02,240 --> 00:08:04,869
+that's happening. Uh, why is this a
+complicated problem? We already talked a
+
+374
+00:08:04,869 --> 00:08:04,879
+complicated problem? We already talked a
+ 
+
+375
+00:08:04,879 --> 00:08:06,390
+complicated problem? We already talked a
+little bit about how the underlying
+
+376
+00:08:06,390 --> 00:08:06,400
+little bit about how the underlying
+ 
+
+377
+00:08:06,400 --> 00:08:08,869
+little bit about how the underlying
+technology is quite complex. Looms are
+
+378
+00:08:08,869 --> 00:08:08,879
+technology is quite complex. Looms are
+ 
+
+379
+00:08:08,879 --> 00:08:12,790
+technology is quite complex. Looms are
+are are not a superficial um engine. Uh
+
+380
+00:08:12,790 --> 00:08:12,800
+are are not a superficial um engine. Uh
+ 
+
+381
+00:08:12,800 --> 00:08:15,670
+are are not a superficial um engine. Uh
+but it's also a multi-persona problem uh
+
+382
+00:08:15,670 --> 00:08:15,680
+but it's also a multi-persona problem uh
+ 
+
+383
+00:08:15,680 --> 00:08:18,150
+but it's also a multi-persona problem uh
+bu building these agents. It's not just
+
+384
+00:08:18,150 --> 00:08:18,160
+bu building these agents. It's not just
+ 
+
+385
+00:08:18,160 --> 00:08:20,309
+bu building these agents. It's not just
+something that engineers do in
+
+386
+00:08:20,309 --> 00:08:20,319
+something that engineers do in
+ 
+
+387
+00:08:20,319 --> 00:08:22,950
+something that engineers do in
+isolation. It's something where
+
+388
+00:08:22,950 --> 00:08:22,960
+isolation. It's something where
+ 
+
+389
+00:08:22,960 --> 00:08:25,189
+isolation. It's something where
+engineers uh whether whether they're
+
+390
+00:08:25,189 --> 00:08:25,199
+engineers uh whether whether they're
+ 
+
+391
+00:08:25,199 --> 00:08:27,189
+engineers uh whether whether they're
+product engineers or AI engineers or
+
+392
+00:08:27,189 --> 00:08:27,199
+product engineers or AI engineers or
+ 
+
+393
+00:08:27,199 --> 00:08:29,670
+product engineers or AI engineers or
+both systems engineers to get the thing
+
+394
+00:08:29,670 --> 00:08:29,680
+both systems engineers to get the thing
+ 
+
+395
+00:08:29,680 --> 00:08:32,630
+both systems engineers to get the thing
+running. Um
+
+396
+00:08:32,630 --> 00:08:32,640
+running. Um
+ 
+
+397
+00:08:32,640 --> 00:08:35,110
+running. Um
+uhmemes that have the domain knowledge.
+
+398
+00:08:35,110 --> 00:08:35,120
+uhmemes that have the domain knowledge.
+ 
+
+399
+00:08:35,120 --> 00:08:37,110
+uhmemes that have the domain knowledge.
+All of these people need to be involved.
+
+400
+00:08:37,110 --> 00:08:37,120
+All of these people need to be involved.
+ 
+
+401
+00:08:37,120 --> 00:08:39,990
+All of these people need to be involved.
+Uh and then lastly it uh eval themselves
+
+402
+00:08:39,990 --> 00:08:40,000
+Uh and then lastly it uh eval themselves
+ 
+
+403
+00:08:40,000 --> 00:08:41,750
+Uh and then lastly it uh eval themselves
+become a systems problem. That'll be the
+
+404
+00:08:41,750 --> 00:08:41,760
+become a systems problem. That'll be the
+ 
+
+405
+00:08:41,760 --> 00:08:43,190
+become a systems problem. That'll be the
+last thing that we that we touch on
+
+406
+00:08:43,190 --> 00:08:43,200
+last thing that we that we touch on
+ 
+
+407
+00:08:43,200 --> 00:08:45,670
+last thing that we that we touch on
+today. So, what are the different stages
+
+408
+00:08:45,670 --> 00:08:45,680
+today. So, what are the different stages
+ 
+
+409
+00:08:45,680 --> 00:08:48,710
+today. So, what are the different stages
+of of building an eval platform? Um, my
+
+410
+00:08:48,710 --> 00:08:48,720
+of of building an eval platform? Um, my
+ 
+
+411
+00:08:48,720 --> 00:08:50,710
+of of building an eval platform? Um, my
+my my friend over over there that raised
+
+412
+00:08:50,710 --> 00:08:50,720
+my my friend over over there that raised
+ 
+
+413
+00:08:50,720 --> 00:08:53,110
+my my friend over over there that raised
+his hand proudly um about starting out
+
+414
+00:08:53,110 --> 00:08:53,120
+his hand proudly um about starting out
+ 
+
+415
+00:08:53,120 --> 00:08:55,110
+his hand proudly um about starting out
+in a spreadsheet. This is this is a
+
+416
+00:08:55,110 --> 00:08:55,120
+in a spreadsheet. This is this is a
+ 
+
+417
+00:08:55,120 --> 00:08:56,870
+in a spreadsheet. This is this is a
+great place to start. The the most
+
+418
+00:08:56,870 --> 00:08:56,880
+great place to start. The the most
+ 
+
+419
+00:08:56,880 --> 00:08:58,070
+great place to start. The the most
+important thing is that you just get
+
+420
+00:08:58,070 --> 00:08:58,080
+important thing is that you just get
+ 
+
+421
+00:08:58,080 --> 00:08:59,750
+important thing is that you just get
+started. So, you've got a spreadsheet
+
+422
+00:08:59,750 --> 00:08:59,760
+started. So, you've got a spreadsheet
+ 
+
+423
+00:08:59,760 --> 00:09:01,430
+started. So, you've got a spreadsheet
+and you've got a for loop. You've got a
+
+424
+00:09:01,430 --> 00:09:01,440
+and you've got a for loop. You've got a
+ 
+
+425
+00:09:01,440 --> 00:09:03,590
+and you've got a for loop. You've got a
+bunch of input examples that you can
+
+426
+00:09:03,590 --> 00:09:03,600
+bunch of input examples that you can
+ 
+
+427
+00:09:03,600 --> 00:09:05,910
+bunch of input examples that you can
+iterate through and you have a way to
+
+428
+00:09:05,910 --> 00:09:05,920
+iterate through and you have a way to
+ 
+
+429
+00:09:05,920 --> 00:09:08,150
+iterate through and you have a way to
+execute your agent. So you can say you
+
+430
+00:09:08,150 --> 00:09:08,160
+execute your agent. So you can say you
+ 
+
+431
+00:09:08,160 --> 00:09:10,870
+execute your agent. So you can say you
+can see every time you tweak your agent
+
+432
+00:09:10,870 --> 00:09:10,880
+can see every time you tweak your agent
+ 
+
+433
+00:09:10,880 --> 00:09:13,910
+can see every time you tweak your agent
+how the outputs are different over time.
+
+434
+00:09:13,910 --> 00:09:13,920
+how the outputs are different over time.
+ 
+
+435
+00:09:13,920 --> 00:09:16,070
+how the outputs are different over time.
+Um while this is a great place to start
+
+436
+00:09:16,070 --> 00:09:16,080
+Um while this is a great place to start
+ 
+
+437
+00:09:16,080 --> 00:09:19,190
+Um while this is a great place to start
+because there is no barrier to entry
+
+438
+00:09:19,190 --> 00:09:19,200
+because there is no barrier to entry
+ 
+
+439
+00:09:19,200 --> 00:09:21,829
+because there is no barrier to entry
+here. Everyone has some way to access
+
+440
+00:09:21,829 --> 00:09:21,839
+here. Everyone has some way to access
+ 
+
+441
+00:09:21,839 --> 00:09:24,949
+here. Everyone has some way to access
+some type of of spreadsheet technology.
+
+442
+00:09:24,949 --> 00:09:24,959
+some type of of spreadsheet technology.
+ 
+
+443
+00:09:24,959 --> 00:09:27,269
+some type of of spreadsheet technology.
+Um the the returns can be diminishing
+
+444
+00:09:27,269 --> 00:09:27,279
+Um the the returns can be diminishing
+ 
+
+445
+00:09:27,279 --> 00:09:30,310
+Um the the returns can be diminishing
+for a couple of reasons. Um this is more
+
+446
+00:09:30,310 --> 00:09:30,320
+for a couple of reasons. Um this is more
+ 
+
+447
+00:09:30,320 --> 00:09:32,389
+for a couple of reasons. Um this is more
+I would call this documenting. It it's
+
+448
+00:09:32,389 --> 00:09:32,399
+I would call this documenting. It it's
+ 
+
+449
+00:09:32,399 --> 00:09:34,389
+I would call this documenting. It it's
+not really experimenting.
+
+450
+00:09:34,389 --> 00:09:34,399
+not really experimenting.
+ 
+
+451
+00:09:34,399 --> 00:09:36,630
+not really experimenting.
+So while you have this spreadsheet of
+
+452
+00:09:36,630 --> 00:09:36,640
+So while you have this spreadsheet of
+ 
+
+453
+00:09:36,640 --> 00:09:39,509
+So while you have this spreadsheet of
+you know a bunch of input examples maybe
+
+454
+00:09:39,509 --> 00:09:39,519
+you know a bunch of input examples maybe
+ 
+
+455
+00:09:39,519 --> 00:09:42,710
+you know a bunch of input examples maybe
+you keep track across each time you are
+
+456
+00:09:42,710 --> 00:09:42,720
+you keep track across each time you are
+ 
+
+457
+00:09:42,720 --> 00:09:45,110
+you keep track across each time you are
+tweaking your agent the the different
+
+458
+00:09:45,110 --> 00:09:45,120
+tweaking your agent the the different
+ 
+
+459
+00:09:45,120 --> 00:09:48,550
+tweaking your agent the the different
+output that that emitted um that can
+
+460
+00:09:48,550 --> 00:09:48,560
+output that that emitted um that can
+ 
+
+461
+00:09:48,560 --> 00:09:50,710
+output that that emitted um that can
+become cumbersome to to manage over
+
+462
+00:09:50,710 --> 00:09:50,720
+become cumbersome to to manage over
+ 
+
+463
+00:09:50,720 --> 00:09:52,790
+become cumbersome to to manage over
+time. Of course um it's really
+
+464
+00:09:52,790 --> 00:09:52,800
+time. Of course um it's really
+ 
+
+465
+00:09:52,800 --> 00:09:55,590
+time. Of course um it's really
+challenging to be able to compare
+
+466
+00:09:55,590 --> 00:09:55,600
+challenging to be able to compare
+ 
+
+467
+00:09:55,600 --> 00:09:59,590
+challenging to be able to compare
+directly experiments over time. you're
+
+468
+00:09:59,590 --> 00:09:59,600
+directly experiments over time. you're
+ 
+
+469
+00:09:59,600 --> 00:10:02,230
+directly experiments over time. you're
+probably not doing a lot of analytics
+
+470
+00:10:02,230 --> 00:10:02,240
+probably not doing a lot of analytics
+ 
+
+471
+00:10:02,240 --> 00:10:04,470
+probably not doing a lot of analytics
+across those experiments and the
+
+472
+00:10:04,470 --> 00:10:04,480
+across those experiments and the
+ 
+
+473
+00:10:04,480 --> 00:10:06,790
+across those experiments and the
+analytics that you you are doing or
+
+474
+00:10:06,790 --> 00:10:06,800
+analytics that you you are doing or
+ 
+
+475
+00:10:06,800 --> 00:10:08,630
+analytics that you you are doing or
+performing they're likely coming from
+
+476
+00:10:08,630 --> 00:10:08,640
+performing they're likely coming from
+ 
+
+477
+00:10:08,640 --> 00:10:10,949
+performing they're likely coming from
+some type of human scorer which is which
+
+478
+00:10:10,949 --> 00:10:10,959
+some type of human scorer which is which
+ 
+
+479
+00:10:10,959 --> 00:10:13,430
+some type of human scorer which is which
+is really valuable but uh challenging to
+
+480
+00:10:13,430 --> 00:10:13,440
+is really valuable but uh challenging to
+ 
+
+481
+00:10:13,440 --> 00:10:15,910
+is really valuable but uh challenging to
+scale in practice
+
+482
+00:10:15,910 --> 00:10:15,920
+scale in practice
+ 
+
+483
+00:10:15,920 --> 00:10:17,990
+scale in practice
+um evolves are are a team sport kind of
+
+484
+00:10:17,990 --> 00:10:18,000
+um evolves are are a team sport kind of
+ 
+
+485
+00:10:18,000 --> 00:10:20,150
+um evolves are are a team sport kind of
+what I was talking about before we want
+
+486
+00:10:20,150 --> 00:10:20,160
+what I was talking about before we want
+ 
+
+487
+00:10:20,160 --> 00:10:21,509
+what I was talking about before we want
+to make sure that we're bringing a ton
+
+488
+00:10:21,509 --> 00:10:21,519
+to make sure that we're bringing a ton
+ 
+
+489
+00:10:21,519 --> 00:10:23,670
+to make sure that we're bringing a ton
+of people into the fold not just
+
+490
+00:10:23,670 --> 00:10:23,680
+of people into the fold not just
+ 
+
+491
+00:10:23,680 --> 00:10:25,509
+of people into the fold not just
+technical folks but also nontechnical
+
+492
+00:10:25,509 --> 00:10:25,519
+technical folks but also nontechnical
+ 
+
+493
+00:10:25,519 --> 00:10:28,230
+technical folks but also nontechnical
+folks they can add a lot of value to uh
+
+494
+00:10:28,230 --> 00:10:28,240
+folks they can add a lot of value to uh
+ 
+
+495
+00:10:28,240 --> 00:10:30,630
+folks they can add a lot of value to uh
+to your agent because of their domain
+
+496
+00:10:30,630 --> 00:10:30,640
+to your agent because of their domain
+ 
+
+497
+00:10:30,640 --> 00:10:33,190
+to your agent because of their domain
+unique domain expertise and proximity to
+
+498
+00:10:33,190 --> 00:10:33,200
+unique domain expertise and proximity to
+ 
+
+499
+00:10:33,200 --> 00:10:34,550
+unique domain expertise and proximity to
+users. They're probably not coming into
+
+500
+00:10:34,550 --> 00:10:34,560
+users. They're probably not coming into
+ 
+
+501
+00:10:34,560 --> 00:10:37,110
+users. They're probably not coming into
+the spreadsheet is is my point. Uh and
+
+502
+00:10:37,110 --> 00:10:37,120
+the spreadsheet is is my point. Uh and
+ 
+
+503
+00:10:37,120 --> 00:10:40,550
+the spreadsheet is is my point. Uh and
+it's slow. Um each time you eval um you
+
+504
+00:10:40,550 --> 00:10:40,560
+it's slow. Um each time you eval um you
+ 
+
+505
+00:10:40,560 --> 00:10:42,230
+it's slow. Um each time you eval um you
+have to go through probably a little bit
+
+506
+00:10:42,230 --> 00:10:42,240
+have to go through probably a little bit
+ 
+
+507
+00:10:42,240 --> 00:10:44,949
+have to go through probably a little bit
+of a cumbersome process to to recreate
+
+508
+00:10:44,949 --> 00:10:44,959
+of a cumbersome process to to recreate
+ 
+
+509
+00:10:44,959 --> 00:10:47,829
+of a cumbersome process to to recreate
+or append to the spreadsheet.
+
+510
+00:10:47,829 --> 00:10:47,839
+or append to the spreadsheet.
+ 
+
+511
+00:10:47,839 --> 00:10:52,069
+or append to the spreadsheet.
+Um, so, uh, probably the one of the, uh,
+
+512
+00:10:52,069 --> 00:10:52,079
+Um, so, uh, probably the one of the, uh,
+ 
+
+513
+00:10:52,079 --> 00:10:54,630
+Um, so, uh, probably the one of the, uh,
+um, most fun conversations that, uh, I
+
+514
+00:10:54,630 --> 00:10:54,640
+um, most fun conversations that, uh, I
+ 
+
+515
+00:10:54,640 --> 00:10:58,069
+um, most fun conversations that, uh, I
+have in my job is I'll have, you know, a
+
+516
+00:10:58,069 --> 00:10:58,079
+have in my job is I'll have, you know, a
+ 
+
+517
+00:10:58,079 --> 00:11:00,550
+have in my job is I'll have, you know, a
+very proud product engineer that gets on
+
+518
+00:11:00,550 --> 00:11:00,560
+very proud product engineer that gets on
+ 
+
+519
+00:11:00,560 --> 00:11:03,030
+very proud product engineer that gets on
+a call with me and, you know, they they
+
+520
+00:11:03,030 --> 00:11:03,040
+a call with me and, you know, they they
+ 
+
+521
+00:11:03,040 --> 00:11:04,790
+a call with me and, you know, they they
+puff their chest out and they smirk at
+
+522
+00:11:04,790 --> 00:11:04,800
+puff their chest out and they smirk at
+ 
+
+523
+00:11:04,800 --> 00:11:05,990
+puff their chest out and they smirk at
+me and they say, "Well, I can just vibe
+
+524
+00:11:05,990 --> 00:11:06,000
+me and they say, "Well, I can just vibe
+ 
+
+525
+00:11:06,000 --> 00:11:09,269
+me and they say, "Well, I can just vibe
+code branch. It's no problem." Um, and I
+
+526
+00:11:09,269 --> 00:11:09,279
+code branch. It's no problem." Um, and I
+ 
+
+527
+00:11:09,279 --> 00:11:11,829
+code branch. It's no problem." Um, and I
+think for for like like if if if you're
+
+528
+00:11:11,829 --> 00:11:11,839
+think for for like like if if if you're
+ 
+
+529
+00:11:11,839 --> 00:11:13,509
+think for for like like if if if you're
+just getting starting your journey, it's
+
+530
+00:11:13,509 --> 00:11:13,519
+just getting starting your journey, it's
+ 
+
+531
+00:11:13,519 --> 00:11:16,389
+just getting starting your journey, it's
+a really nice step to to go to. So now
+
+532
+00:11:16,389 --> 00:11:16,399
+a really nice step to to go to. So now
+ 
+
+533
+00:11:16,399 --> 00:11:19,990
+a really nice step to to go to. So now
+instead of being in a spreadsheet land,
+
+534
+00:11:19,990 --> 00:11:20,000
+instead of being in a spreadsheet land,
+ 
+
+535
+00:11:20,000 --> 00:11:21,269
+instead of being in a spreadsheet land,
+you're making something a little bit
+
+536
+00:11:21,269 --> 00:11:21,279
+you're making something a little bit
+ 
+
+537
+00:11:21,279 --> 00:11:24,470
+you're making something a little bit
+more bespoke for other other people to
+
+538
+00:11:24,470 --> 00:11:24,480
+more bespoke for other other people to
+ 
+
+539
+00:11:24,480 --> 00:11:26,870
+more bespoke for other other people to
+bring them into the fold. So now you've
+
+540
+00:11:26,870 --> 00:11:26,880
+bring them into the fold. So now you've
+ 
+
+541
+00:11:26,880 --> 00:11:29,750
+bring them into the fold. So now you've
+probably got a for loop. You have a
+
+542
+00:11:29,750 --> 00:11:29,760
+probably got a for loop. You have a
+ 
+
+543
+00:11:29,760 --> 00:11:32,710
+probably got a for loop. You have a
+nicer UI now, so it's more approachable.
+
+544
+00:11:32,710 --> 00:11:32,720
+nicer UI now, so it's more approachable.
+ 
+
+545
+00:11:32,720 --> 00:11:36,949
+nicer UI now, so it's more approachable.
+And hopefully you've graduated into some
+
+546
+00:11:36,949 --> 00:11:36,959
+And hopefully you've graduated into some
+ 
+
+547
+00:11:36,959 --> 00:11:39,829
+And hopefully you've graduated into some
+database that that isn't Excel or Google
+
+548
+00:11:39,829 --> 00:11:39,839
+database that that isn't Excel or Google
+ 
+
+549
+00:11:39,839 --> 00:11:43,910
+database that that isn't Excel or Google
+Sheets. should probably um you know use
+
+550
+00:11:43,910 --> 00:11:43,920
+Sheets. should probably um you know use
+ 
+
+551
+00:11:43,920 --> 00:11:46,230
+Sheets. should probably um you know use
+roll roll a new database in in something
+
+552
+00:11:46,230 --> 00:11:46,240
+roll roll a new database in in something
+ 
+
+553
+00:11:46,240 --> 00:11:48,949
+roll roll a new database in in something
+like neon or or something. Um so now you
+
+554
+00:11:48,949 --> 00:11:48,959
+like neon or or something. Um so now you
+ 
+
+555
+00:11:48,959 --> 00:11:50,949
+like neon or or something. Um so now you
+have a a better story around persistence
+
+556
+00:11:50,949 --> 00:11:50,959
+have a a better story around persistence
+ 
+
+557
+00:11:50,959 --> 00:11:54,470
+have a a better story around persistence
+of eval. Uh and because of this you're
+
+558
+00:11:54,470 --> 00:11:54,480
+of eval. Uh and because of this you're
+ 
+
+559
+00:11:54,480 --> 00:11:56,470
+of eval. Uh and because of this you're
+bringing more people into the fold. You
+
+560
+00:11:56,470 --> 00:11:56,480
+bringing more people into the fold. You
+ 
+
+561
+00:11:56,480 --> 00:11:58,470
+bringing more people into the fold. You
+are making UIs that are a little bit
+
+562
+00:11:58,470 --> 00:11:58,480
+are making UIs that are a little bit
+ 
+
+563
+00:11:58,480 --> 00:12:02,949
+are making UIs that are a little bit
+more bespoke for your specific users. Um
+
+564
+00:12:02,949 --> 00:12:02,959
+more bespoke for your specific users. Um
+ 
+
+565
+00:12:02,959 --> 00:12:04,630
+more bespoke for your specific users. Um
+the thing that's that's a problem here
+
+566
+00:12:04,630 --> 00:12:04,640
+the thing that's that's a problem here
+ 
+
+567
+00:12:04,640 --> 00:12:06,069
+the thing that's that's a problem here
+is that you're still not really
+
+568
+00:12:06,069 --> 00:12:06,079
+is that you're still not really
+ 
+
+569
+00:12:06,079 --> 00:12:08,389
+is that you're still not really
+iterating yet. you're still performing
+
+570
+00:12:08,389 --> 00:12:08,399
+iterating yet. you're still performing
+ 
+
+571
+00:12:08,399 --> 00:12:11,430
+iterating yet. you're still performing
+work that is a little bit more uh just
+
+572
+00:12:11,430 --> 00:12:11,440
+work that is a little bit more uh just
+ 
+
+573
+00:12:11,440 --> 00:12:14,230
+work that is a little bit more uh just
+reporting just documentation rather than
+
+574
+00:12:14,230 --> 00:12:14,240
+reporting just documentation rather than
+ 
+
+575
+00:12:14,240 --> 00:12:16,790
+reporting just documentation rather than
+encouraging a lot of a lot of iteration.
+
+576
+00:12:16,790 --> 00:12:16,800
+encouraging a lot of a lot of iteration.
+ 
+
+577
+00:12:16,800 --> 00:12:18,470
+encouraging a lot of a lot of iteration.
+So more of a reporting tool here. How
+
+578
+00:12:18,470 --> 00:12:18,480
+So more of a reporting tool here. How
+ 
+
+579
+00:12:18,480 --> 00:12:20,710
+So more of a reporting tool here. How
+many people have vibe coded their own uh
+
+580
+00:12:20,710 --> 00:12:20,720
+many people have vibe coded their own uh
+ 
+
+581
+00:12:20,720 --> 00:12:25,030
+many people have vibe coded their own uh
+UI? Yeah, makes sense.
+
+582
+00:12:25,030 --> 00:12:25,040
+UI? Yeah, makes sense.
+ 
+
+583
+00:12:25,040 --> 00:12:26,870
+UI? Yeah, makes sense.
+Uh next step here so you want to
+
+584
+00:12:26,870 --> 00:12:26,880
+Uh next step here so you want to
+ 
+
+585
+00:12:26,880 --> 00:12:29,990
+Uh next step here so you want to
+encourage a lot of um experimentation
+
+586
+00:12:29,990 --> 00:12:30,000
+encourage a lot of um experimentation
+ 
+
+587
+00:12:30,000 --> 00:12:32,150
+encourage a lot of um experimentation
+not just with technical users but with
+
+588
+00:12:32,150 --> 00:12:32,160
+not just with technical users but with
+ 
+
+589
+00:12:32,160 --> 00:12:35,829
+not just with technical users but with
+non-technical users. So um you know I'm
+
+590
+00:12:35,829 --> 00:12:35,839
+non-technical users. So um you know I'm
+ 
+
+591
+00:12:35,839 --> 00:12:39,190
+non-technical users. So um you know I'm
+showing this uh image that is more
+
+592
+00:12:39,190 --> 00:12:39,200
+showing this uh image that is more
+ 
+
+593
+00:12:39,200 --> 00:12:42,470
+showing this uh image that is more
+aligned to allowing experimentation
+
+594
+00:12:42,470 --> 00:12:42,480
+aligned to allowing experimentation
+ 
+
+595
+00:12:42,480 --> 00:12:45,670
+aligned to allowing experimentation
+for nontechnical users but of course as
+
+596
+00:12:45,670 --> 00:12:45,680
+for nontechnical users but of course as
+ 
+
+597
+00:12:45,680 --> 00:12:47,269
+for nontechnical users but of course as
+you're building these platforms you want
+
+598
+00:12:47,269 --> 00:12:47,279
+you're building these platforms you want
+ 
+
+599
+00:12:47,279 --> 00:12:50,150
+you're building these platforms you want
+to allow for more SDK driven experience
+
+600
+00:12:50,150 --> 00:12:50,160
+to allow for more SDK driven experience
+ 
+
+601
+00:12:50,160 --> 00:12:51,990
+to allow for more SDK driven experience
+as well. Uh that just doesn't make for
+
+602
+00:12:51,990 --> 00:12:52,000
+as well. Uh that just doesn't make for
+ 
+
+603
+00:12:52,000 --> 00:12:53,829
+as well. Uh that just doesn't make for
+for a very nice image in a in a
+
+604
+00:12:53,829 --> 00:12:53,839
+for a very nice image in a in a
+ 
+
+605
+00:12:53,839 --> 00:12:55,509
+for a very nice image in a in a
+presentation.
+
+606
+00:12:55,509 --> 00:12:55,519
+presentation.
+ 
+
+607
+00:12:55,519 --> 00:12:59,350
+presentation.
+So experimentation to me means that you
+
+608
+00:12:59,350 --> 00:12:59,360
+So experimentation to me means that you
+ 
+
+609
+00:12:59,360 --> 00:13:04,470
+So experimentation to me means that you
+can give a user access to a an agent a a
+
+610
+00:13:04,470 --> 00:13:04,480
+can give a user access to a an agent a a
+ 
+
+611
+00:13:04,480 --> 00:13:07,269
+can give a user access to a an agent a a
+configuration of an agent and a sandbox
+
+612
+00:13:07,269 --> 00:13:07,279
+configuration of an agent and a sandbox
+ 
+
+613
+00:13:07,279 --> 00:13:09,350
+configuration of an agent and a sandbox
+and you allow them to tweak certain
+
+614
+00:13:09,350 --> 00:13:09,360
+and you allow them to tweak certain
+ 
+
+615
+00:13:09,360 --> 00:13:11,670
+and you allow them to tweak certain
+parameters within within that agent. In
+
+616
+00:13:11,670 --> 00:13:11,680
+parameters within within that agent. In
+ 
+
+617
+00:13:11,680 --> 00:13:14,629
+parameters within within that agent. In
+my example here, I'm allowing a user in
+
+618
+00:13:14,629 --> 00:13:14,639
+my example here, I'm allowing a user in
+ 
+
+619
+00:13:14,639 --> 00:13:17,590
+my example here, I'm allowing a user in
+the UI to change the system instructions
+
+620
+00:13:17,590 --> 00:13:17,600
+the UI to change the system instructions
+ 
+
+621
+00:13:17,600 --> 00:13:20,389
+the UI to change the system instructions
+to an agent running outside of my eval
+
+622
+00:13:20,389 --> 00:13:20,399
+to an agent running outside of my eval
+ 
+
+623
+00:13:20,399 --> 00:13:23,190
+to an agent running outside of my eval
+platform and allowing them to compare
+
+624
+00:13:23,190 --> 00:13:23,200
+platform and allowing them to compare
+ 
+
+625
+00:13:23,200 --> 00:13:26,389
+platform and allowing them to compare
+two different configurations of that of
+
+626
+00:13:26,389 --> 00:13:26,399
+two different configurations of that of
+ 
+
+627
+00:13:26,399 --> 00:13:28,710
+two different configurations of that of
+that of that system prompt and I'm
+
+628
+00:13:28,710 --> 00:13:28,720
+that of that system prompt and I'm
+ 
+
+629
+00:13:28,720 --> 00:13:31,590
+that of that system prompt and I'm
+running eval across those two different
+
+630
+00:13:31,590 --> 00:13:31,600
+running eval across those two different
+ 
+
+631
+00:13:31,600 --> 00:13:34,389
+running eval across those two different
+agent runs so that I can bubble up
+
+632
+00:13:34,389 --> 00:13:34,399
+agent runs so that I can bubble up
+ 
+
+633
+00:13:34,399 --> 00:13:36,389
+agent runs so that I can bubble up
+scores. You can you can see that in the
+
+634
+00:13:36,389 --> 00:13:36,399
+scores. You can you can see that in the
+ 
+
+635
+00:13:36,399 --> 00:13:38,150
+scores. You can you can see that in the
+image now. I can bubble up different
+
+636
+00:13:38,150 --> 00:13:38,160
+image now. I can bubble up different
+ 
+
+637
+00:13:38,160 --> 00:13:40,470
+image now. I can bubble up different
+scores to understand both technically
+
+638
+00:13:40,470 --> 00:13:40,480
+scores to understand both technically
+ 
+
+639
+00:13:40,480 --> 00:13:43,110
+scores to understand both technically
+and functionally how my agent is
+
+640
+00:13:43,110 --> 00:13:43,120
+and functionally how my agent is
+ 
+
+641
+00:13:43,120 --> 00:13:45,750
+and functionally how my agent is
+behaving. Um, so this is like you'll
+
+642
+00:13:45,750 --> 00:13:45,760
+behaving. Um, so this is like you'll
+ 
+
+643
+00:13:45,760 --> 00:13:47,430
+behaving. Um, so this is like you'll
+hear about a lot of platforms have a
+
+644
+00:13:47,430 --> 00:13:47,440
+hear about a lot of platforms have a
+ 
+
+645
+00:13:47,440 --> 00:13:49,350
+hear about a lot of platforms have a
+playground feature. You're going to want
+
+646
+00:13:49,350 --> 00:13:49,360
+playground feature. You're going to want
+ 
+
+647
+00:13:49,360 --> 00:13:51,430
+playground feature. You're going to want
+some type of playground feature both for
+
+648
+00:13:51,430 --> 00:13:51,440
+some type of playground feature both for
+ 
+
+649
+00:13:51,440 --> 00:13:54,150
+some type of playground feature both for
+technical and nontechnical users. This
+
+650
+00:13:54,150 --> 00:13:54,160
+technical and nontechnical users. This
+ 
+
+651
+00:13:54,160 --> 00:13:55,430
+technical and nontechnical users. This
+is where the rubber starts beating the
+
+652
+00:13:55,430 --> 00:13:55,440
+is where the rubber starts beating the
+ 
+
+653
+00:13:55,440 --> 00:13:58,069
+is where the rubber starts beating the
+road because the best way to perform
+
+654
+00:13:58,069 --> 00:13:58,079
+road because the best way to perform
+ 
+
+655
+00:13:58,079 --> 00:14:01,670
+road because the best way to perform
+eval is to um really think about the
+
+656
+00:14:01,670 --> 00:14:01,680
+eval is to um really think about the
+ 
+
+657
+00:14:01,680 --> 00:14:03,430
+eval is to um really think about the
+failure modes that your agent can fall
+
+658
+00:14:03,430 --> 00:14:03,440
+failure modes that your agent can fall
+ 
+
+659
+00:14:03,440 --> 00:14:06,710
+failure modes that your agent can fall
+into um and build scoring functions
+
+660
+00:14:06,710 --> 00:14:06,720
+into um and build scoring functions
+ 
+
+661
+00:14:06,720 --> 00:14:09,350
+into um and build scoring functions
+around those failure modes. The best way
+
+662
+00:14:09,350 --> 00:14:09,360
+around those failure modes. The best way
+ 
+
+663
+00:14:09,360 --> 00:14:11,509
+around those failure modes. The best way
+to find those failure modes in the first
+
+664
+00:14:11,509 --> 00:14:11,519
+to find those failure modes in the first
+ 
+
+665
+00:14:11,519 --> 00:14:15,030
+to find those failure modes in the first
+place is to have access to production
+
+666
+00:14:15,030 --> 00:14:15,040
+place is to have access to production
+ 
+
+667
+00:14:15,040 --> 00:14:18,069
+place is to have access to production
+trace data i.e. your agent in front of
+
+668
+00:14:18,069 --> 00:14:18,079
+trace data i.e. your agent in front of
+ 
+
+669
+00:14:18,079 --> 00:14:21,670
+trace data i.e. your agent in front of
+real users users and and real usage. So
+
+670
+00:14:21,670 --> 00:14:21,680
+real users users and and real usage. So
+ 
+
+671
+00:14:21,680 --> 00:14:23,509
+real users users and and real usage. So
+the next step here is a really important
+
+672
+00:14:23,509 --> 00:14:23,519
+the next step here is a really important
+ 
+
+673
+00:14:23,519 --> 00:14:25,590
+the next step here is a really important
+one. We want to make sure that we can
+
+674
+00:14:25,590 --> 00:14:25,600
+one. We want to make sure that we can
+ 
+
+675
+00:14:25,600 --> 00:14:27,590
+one. We want to make sure that we can
+connect what we at least internally we
+
+676
+00:14:27,590 --> 00:14:27,600
+connect what we at least internally we
+ 
+
+677
+00:14:27,600 --> 00:14:29,910
+connect what we at least internally we
+call the flywheel. Observability and
+
+678
+00:14:29,910 --> 00:14:29,920
+call the flywheel. Observability and
+ 
+
+679
+00:14:29,920 --> 00:14:32,629
+call the flywheel. Observability and
+eval to us it's actually the same
+
+680
+00:14:32,629 --> 00:14:32,639
+eval to us it's actually the same
+ 
+
+681
+00:14:32,639 --> 00:14:34,710
+eval to us it's actually the same
+problem from a from a systems
+
+682
+00:14:34,710 --> 00:14:34,720
+problem from a from a systems
+ 
+
+683
+00:14:34,720 --> 00:14:37,670
+problem from a from a systems
+perspective. Um funny story we used to
+
+684
+00:14:37,670 --> 00:14:37,680
+perspective. Um funny story we used to
+ 
+
+685
+00:14:37,680 --> 00:14:39,590
+perspective. Um funny story we used to
+be uh three years ago when we started we
+
+686
+00:14:39,590 --> 00:14:39,600
+be uh three years ago when we started we
+ 
+
+687
+00:14:39,600 --> 00:14:41,910
+be uh three years ago when we started we
+were only an eval platform and then we
+
+688
+00:14:41,910 --> 00:14:41,920
+were only an eval platform and then we
+ 
+
+689
+00:14:41,920 --> 00:14:44,150
+were only an eval platform and then we
+noticed one of our customers was running
+
+690
+00:14:44,150 --> 00:14:44,160
+noticed one of our customers was running
+ 
+
+691
+00:14:44,160 --> 00:14:46,949
+noticed one of our customers was running
+this massive eval
+
+692
+00:14:46,949 --> 00:14:46,959
+this massive eval
+ 
+
+693
+00:14:46,959 --> 00:14:49,430
+this massive eval
+like a every hour of every day. So we
+
+694
+00:14:49,430 --> 00:14:49,440
+like a every hour of every day. So we
+ 
+
+695
+00:14:49,440 --> 00:14:50,790
+like a every hour of every day. So we
+reached out to this person and they
+
+696
+00:14:50,790 --> 00:14:50,800
+reached out to this person and they
+ 
+
+697
+00:14:50,800 --> 00:14:53,269
+reached out to this person and they
+said, "Oh yeah, I'm just piping all of
+
+698
+00:14:53,269 --> 00:14:53,279
+said, "Oh yeah, I'm just piping all of
+ 
+
+699
+00:14:53,279 --> 00:14:55,189
+said, "Oh yeah, I'm just piping all of
+my production traffic into this database
+
+700
+00:14:55,189 --> 00:14:55,199
+my production traffic into this database
+ 
+
+701
+00:14:55,199 --> 00:14:56,949
+my production traffic into this database
+and I'm running an eval against it." So
+
+702
+00:14:56,949 --> 00:14:56,959
+and I'm running an eval against it." So
+ 
+
+703
+00:14:56,959 --> 00:14:58,230
+and I'm running an eval against it." So
+we're like, "Okay, we should probably
+
+704
+00:14:58,230 --> 00:14:58,240
+we're like, "Okay, we should probably
+ 
+
+705
+00:14:58,240 --> 00:15:02,230
+we're like, "Okay, we should probably
+just make make that ability to trace uh
+
+706
+00:15:02,230 --> 00:15:02,240
+just make make that ability to trace uh
+ 
+
+707
+00:15:02,240 --> 00:15:05,269
+just make make that ability to trace uh
+and and observe actual traffic and be
+
+708
+00:15:05,269 --> 00:15:05,279
+and and observe actual traffic and be
+ 
+
+709
+00:15:05,279 --> 00:15:07,269
+and and observe actual traffic and be
+and account for that use case without
+
+710
+00:15:07,269 --> 00:15:07,279
+and account for that use case without
+ 
+
+711
+00:15:07,279 --> 00:15:10,470
+and account for that use case without
+having to cram it into offline evals. Uh
+
+712
+00:15:10,470 --> 00:15:10,480
+having to cram it into offline evals. Uh
+ 
+
+713
+00:15:10,480 --> 00:15:12,230
+having to cram it into offline evals. Uh
+so this is really important make sure
+
+714
+00:15:12,230 --> 00:15:12,240
+so this is really important make sure
+ 
+
+715
+00:15:12,240 --> 00:15:14,629
+so this is really important make sure
+that we can observe things in production
+
+716
+00:15:14,629 --> 00:15:14,639
+that we can observe things in production
+ 
+
+717
+00:15:14,639 --> 00:15:16,870
+that we can observe things in production
+understand the actual behavior of our
+
+718
+00:15:16,870 --> 00:15:16,880
+understand the actual behavior of our
+ 
+
+719
+00:15:16,880 --> 00:15:20,150
+understand the actual behavior of our
+agents also understand the the real lift
+
+720
+00:15:20,150 --> 00:15:20,160
+agents also understand the the real lift
+ 
+
+721
+00:15:20,160 --> 00:15:22,230
+agents also understand the the real lift
+that the changes that we're making to
+
+722
+00:15:22,230 --> 00:15:22,240
+that the changes that we're making to
+ 
+
+723
+00:15:22,240 --> 00:15:25,350
+that the changes that we're making to
+our agents are are having. Um so we're
+
+724
+00:15:25,350 --> 00:15:25,360
+our agents are are having. Um so we're
+ 
+
+725
+00:15:25,360 --> 00:15:27,750
+our agents are are having. Um so we're
+analyzing that data. Uh we pull that
+
+726
+00:15:27,750 --> 00:15:27,760
+analyzing that data. Uh we pull that
+ 
+
+727
+00:15:27,760 --> 00:15:30,389
+analyzing that data. Uh we pull that
+back those actual examples back into an
+
+728
+00:15:30,389 --> 00:15:30,399
+back those actual examples back into an
+ 
+
+729
+00:15:30,399 --> 00:15:32,710
+back those actual examples back into an
+offline environment and then we improve
+
+730
+00:15:32,710 --> 00:15:32,720
+offline environment and then we improve
+ 
+
+731
+00:15:32,720 --> 00:15:36,069
+offline environment and then we improve
+upon those using offline evals. This is
+
+732
+00:15:36,069 --> 00:15:36,079
+upon those using offline evals. This is
+ 
+
+733
+00:15:36,079 --> 00:15:39,030
+upon those using offline evals. This is
+a loop so it's it's not just a process.
+
+734
+00:15:39,030 --> 00:15:39,040
+a loop so it's it's not just a process.
+ 
+
+735
+00:15:39,040 --> 00:15:40,230
+a loop so it's it's not just a process.
+uh you're going to be performing this
+
+736
+00:15:40,230 --> 00:15:40,240
+uh you're going to be performing this
+ 
+
+737
+00:15:40,240 --> 00:15:42,949
+uh you're going to be performing this
+loop hopefully for the lifetime of the
+
+738
+00:15:42,949 --> 00:15:42,959
+loop hopefully for the lifetime of the
+ 
+
+739
+00:15:42,959 --> 00:15:44,710
+loop hopefully for the lifetime of the
+agent that that you're pushing to
+
+740
+00:15:44,710 --> 00:15:44,720
+agent that that you're pushing to
+ 
+
+741
+00:15:44,720 --> 00:15:46,389
+agent that that you're pushing to
+production. You you you should be
+
+742
+00:15:46,389 --> 00:15:46,399
+production. You you you should be
+ 
+
+743
+00:15:46,399 --> 00:15:48,389
+production. You you you should be
+iterating this loop as many times as
+
+744
+00:15:48,389 --> 00:15:48,399
+iterating this loop as many times as
+ 
+
+745
+00:15:48,399 --> 00:15:49,749
+iterating this loop as many times as
+possible. That's how you that's how you
+
+746
+00:15:49,749 --> 00:15:49,759
+possible. That's how you that's how you
+ 
+
+747
+00:15:49,759 --> 00:15:51,829
+possible. That's how you that's how you
+improve.
+
+748
+00:15:51,829 --> 00:15:51,839
+improve.
+ 
+
+749
+00:15:51,839 --> 00:15:54,069
+improve.
+Um so as a result of that you you've
+
+750
+00:15:54,069 --> 00:15:54,079
+Um so as a result of that you you've
+ 
+
+751
+00:15:54,079 --> 00:15:55,509
+Um so as a result of that you you've
+changed your scope a little. You've
+
+752
+00:15:55,509 --> 00:15:55,519
+changed your scope a little. You've
+ 
+
+753
+00:15:55,519 --> 00:15:58,870
+changed your scope a little. You've
+widened your scope a lot actually. You
+
+754
+00:15:58,870 --> 00:15:58,880
+widened your scope a lot actually. You
+ 
+
+755
+00:15:58,880 --> 00:16:01,430
+widened your scope a lot actually. You
+are now a tracing platform. You're now a
+
+756
+00:16:01,430 --> 00:16:01,440
+are now a tracing platform. You're now a
+ 
+
+757
+00:16:01,440 --> 00:16:04,710
+are now a tracing platform. You're now a
+logging platform in addition to being an
+
+758
+00:16:04,710 --> 00:16:04,720
+logging platform in addition to being an
+ 
+
+759
+00:16:04,720 --> 00:16:07,590
+logging platform in addition to being an
+offline eval platform. Again, the
+
+760
+00:16:07,590 --> 00:16:07,600
+offline eval platform. Again, the
+ 
+
+761
+00:16:07,600 --> 00:16:10,310
+offline eval platform. Again, the
+benefit of that is that you got you're
+
+762
+00:16:10,310 --> 00:16:10,320
+benefit of that is that you got you're
+ 
+
+763
+00:16:10,320 --> 00:16:12,710
+benefit of that is that you got you're
+starting to get far higher signal from
+
+764
+00:16:12,710 --> 00:16:12,720
+starting to get far higher signal from
+ 
+
+765
+00:16:12,720 --> 00:16:15,990
+starting to get far higher signal from
+how users are interacting with uh with
+
+766
+00:16:15,990 --> 00:16:16,000
+how users are interacting with uh with
+ 
+
+767
+00:16:16,000 --> 00:16:18,550
+how users are interacting with uh with
+your agents and you can use those real
+
+768
+00:16:18,550 --> 00:16:18,560
+your agents and you can use those real
+ 
+
+769
+00:16:18,560 --> 00:16:21,910
+your agents and you can use those real
+interactions. Uh so you can um almost
+
+770
+00:16:21,910 --> 00:16:21,920
+interactions. Uh so you can um almost
+ 
+
+771
+00:16:21,920 --> 00:16:23,910
+interactions. Uh so you can um almost
+think about eval
+
+772
+00:16:23,910 --> 00:16:23,920
+think about eval
+ 
+
+773
+00:16:23,920 --> 00:16:26,230
+think about eval
+production in a safe environment. You're
+
+774
+00:16:26,230 --> 00:16:26,240
+production in a safe environment. You're
+ 
+
+775
+00:16:26,240 --> 00:16:29,110
+production in a safe environment. You're
+now getting to uh to that point. Um with
+
+776
+00:16:29,110 --> 00:16:29,120
+now getting to uh to that point. Um with
+ 
+
+777
+00:16:29,120 --> 00:16:31,590
+now getting to uh to that point. Um with
+uh with with this example, um you can
+
+778
+00:16:31,590 --> 00:16:31,600
+uh with with this example, um you can
+ 
+
+779
+00:16:31,600 --> 00:16:34,069
+uh with with this example, um you can
+also perform online eval. So you can
+
+780
+00:16:34,069 --> 00:16:34,079
+also perform online eval. So you can
+ 
+
+781
+00:16:34,079 --> 00:16:37,990
+also perform online eval. So you can
+point scoring functions to your uh to
+
+782
+00:16:37,990 --> 00:16:38,000
+point scoring functions to your uh to
+ 
+
+783
+00:16:38,000 --> 00:16:41,350
+point scoring functions to your uh to
+your observability traffic and perform
+
+784
+00:16:41,350 --> 00:16:41,360
+your observability traffic and perform
+ 
+
+785
+00:16:41,360 --> 00:16:43,509
+your observability traffic and perform
+things like alerting. Um all things that
+
+786
+00:16:43,509 --> 00:16:43,519
+things like alerting. Um all things that
+ 
+
+787
+00:16:43,519 --> 00:16:45,189
+things like alerting. Um all things that
+you could build in when you're at this
+
+788
+00:16:45,189 --> 00:16:45,199
+you could build in when you're at this
+ 
+
+789
+00:16:45,199 --> 00:16:47,910
+you could build in when you're at this
+phase of maturity for uh for running
+
+790
+00:16:47,910 --> 00:16:47,920
+phase of maturity for uh for running
+ 
+
+791
+00:16:47,920 --> 00:16:51,749
+phase of maturity for uh for running
+emails. Uh the bad here uh if you build
+
+792
+00:16:51,749 --> 00:16:51,759
+emails. Uh the bad here uh if you build
+ 
+
+793
+00:16:51,759 --> 00:16:53,829
+emails. Uh the bad here uh if you build
+it, you have to manage it. So just
+
+794
+00:16:53,829 --> 00:16:53,839
+it, you have to manage it. So just
+ 
+
+795
+00:16:53,839 --> 00:16:57,110
+it, you have to manage it. So just
+because you've you know uh vibe coded a
+
+796
+00:16:57,110 --> 00:16:57,120
+because you've you know uh vibe coded a
+ 
+
+797
+00:16:57,120 --> 00:16:59,030
+because you've you know uh vibe coded a
+platform, guess what? You might get a
+
+798
+00:16:59,030 --> 00:16:59,040
+platform, guess what? You might get a
+ 
+
+799
+00:16:59,040 --> 00:17:00,870
+platform, guess what? You might get a
+promotion for it, but also like that's
+
+800
+00:17:00,870 --> 00:17:00,880
+promotion for it, but also like that's
+ 
+
+801
+00:17:00,880 --> 00:17:04,150
+promotion for it, but also like that's
+going to be your job now. uh is is to is
+
+802
+00:17:04,150 --> 00:17:04,160
+going to be your job now. uh is is to is
+ 
+
+803
+00:17:04,160 --> 00:17:06,309
+going to be your job now. uh is is to is
+to manage and and continue to grow your
+
+804
+00:17:06,309 --> 00:17:06,319
+to manage and and continue to grow your
+ 
+
+805
+00:17:06,319 --> 00:17:08,870
+to manage and and continue to grow your
+eval platform at the pace that the
+
+806
+00:17:08,870 --> 00:17:08,880
+eval platform at the pace that the
+ 
+
+807
+00:17:08,880 --> 00:17:11,350
+eval platform at the pace that the
+industry is moving. Um which can be an
+
+808
+00:17:11,350 --> 00:17:11,360
+industry is moving. Um which can be an
+ 
+
+809
+00:17:11,360 --> 00:17:12,630
+industry is moving. Um which can be an
+exciting challenge. That's kind of the
+
+810
+00:17:12,630 --> 00:17:12,640
+exciting challenge. That's kind of the
+ 
+
+811
+00:17:12,640 --> 00:17:14,470
+exciting challenge. That's kind of the
+bet that that our company's making and
+
+812
+00:17:14,470 --> 00:17:14,480
+bet that that our company's making and
+ 
+
+813
+00:17:14,480 --> 00:17:17,270
+bet that that our company's making and
+we're excited to solve that problem. The
+
+814
+00:17:17,270 --> 00:17:17,280
+we're excited to solve that problem. The
+ 
+
+815
+00:17:17,280 --> 00:17:19,350
+we're excited to solve that problem. The
+more important challenge though is that
+
+816
+00:17:19,350 --> 00:17:19,360
+more important challenge though is that
+ 
+
+817
+00:17:19,360 --> 00:17:21,270
+more important challenge though is that
+agent traces specifically, if you kind
+
+818
+00:17:21,270 --> 00:17:21,280
+agent traces specifically, if you kind
+ 
+
+819
+00:17:21,280 --> 00:17:23,350
+agent traces specifically, if you kind
+of look on the on the screen, these are
+
+820
+00:17:23,350 --> 00:17:23,360
+of look on the on the screen, these are
+ 
+
+821
+00:17:23,360 --> 00:17:25,669
+of look on the on the screen, these are
+really nasty. They're not like normal
+
+822
+00:17:25,669 --> 00:17:25,679
+really nasty. They're not like normal
+ 
+
+823
+00:17:25,679 --> 00:17:29,110
+really nasty. They're not like normal
+application traces. Um they are they are
+
+824
+00:17:29,110 --> 00:17:29,120
+application traces. Um they are they are
+ 
+
+825
+00:17:29,120 --> 00:17:30,870
+application traces. Um they are they are
+really semistructured. A lot of times
+
+826
+00:17:30,870 --> 00:17:30,880
+really semistructured. A lot of times
+ 
+
+827
+00:17:30,880 --> 00:17:32,789
+really semistructured. A lot of times
+they're unstructured. there's just a ton
+
+828
+00:17:32,789 --> 00:17:32,799
+they're unstructured. there's just a ton
+ 
+
+829
+00:17:32,799 --> 00:17:35,990
+they're unstructured. there's just a ton
+of text inherent to LM problems that
+
+830
+00:17:35,990 --> 00:17:36,000
+of text inherent to LM problems that
+ 
+
+831
+00:17:36,000 --> 00:17:39,590
+of text inherent to LM problems that
+we're that we're solving. Um they're um
+
+832
+00:17:39,590 --> 00:17:39,600
+we're that we're solving. Um they're um
+ 
+
+833
+00:17:39,600 --> 00:17:41,590
+we're that we're solving. Um they're um
+just like very large in addition to
+
+834
+00:17:41,590 --> 00:17:41,600
+just like very large in addition to
+ 
+
+835
+00:17:41,600 --> 00:17:43,830
+just like very large in addition to
+being complicated. So if you're trying
+
+836
+00:17:43,830 --> 00:17:43,840
+being complicated. So if you're trying
+ 
+
+837
+00:17:43,840 --> 00:17:47,510
+being complicated. So if you're trying
+to cram, you know, a a one gigabyte
+
+838
+00:17:47,510 --> 00:17:47,520
+to cram, you know, a a one gigabyte
+ 
+
+839
+00:17:47,520 --> 00:17:50,950
+to cram, you know, a a one gigabyte
+trace into a Postgress row, that can
+
+840
+00:17:50,950 --> 00:17:50,960
+trace into a Postgress row, that can
+ 
+
+841
+00:17:50,960 --> 00:17:52,870
+trace into a Postgress row, that can
+lead to a lot of performance problems.
+
+842
+00:17:52,870 --> 00:17:52,880
+lead to a lot of performance problems.
+ 
+
+843
+00:17:52,880 --> 00:17:54,310
+lead to a lot of performance problems.
+Uh and they're numerous. It's high
+
+844
+00:17:54,310 --> 00:17:54,320
+Uh and they're numerous. It's high
+ 
+
+845
+00:17:54,320 --> 00:17:56,710
+Uh and they're numerous. It's high
+velocity uh because there's so much
+
+846
+00:17:56,710 --> 00:17:56,720
+velocity uh because there's so much
+ 
+
+847
+00:17:56,720 --> 00:17:58,789
+velocity uh because there's so much
+usage happening in production hopefully
+
+848
+00:17:58,789 --> 00:17:58,799
+usage happening in production hopefully
+ 
+
+849
+00:17:58,799 --> 00:18:00,310
+usage happening in production hopefully
+with the with the agent that you've
+
+850
+00:18:00,310 --> 00:18:00,320
+with the with the agent that you've
+ 
+
+851
+00:18:00,320 --> 00:18:01,830
+with the with the agent that you've
+pushed.
+
+852
+00:18:01,830 --> 00:18:01,840
+pushed.
+ 
+
+853
+00:18:01,840 --> 00:18:03,990
+pushed.
+Um, so this is how we used to solve this
+
+854
+00:18:03,990 --> 00:18:04,000
+Um, so this is how we used to solve this
+ 
+
+855
+00:18:04,000 --> 00:18:06,230
+Um, so this is how we used to solve this
+problem. Uh, just as an example, if if
+
+856
+00:18:06,230 --> 00:18:06,240
+problem. Uh, just as an example, if if
+ 
+
+857
+00:18:06,240 --> 00:18:08,310
+problem. Uh, just as an example, if if
+you're at this stage in maturity, you've
+
+858
+00:18:08,310 --> 00:18:08,320
+you're at this stage in maturity, you've
+ 
+
+859
+00:18:08,320 --> 00:18:10,230
+you're at this stage in maturity, you've
+got traces coming in. You're going to
+
+860
+00:18:10,230 --> 00:18:10,240
+got traces coming in. You're going to
+ 
+
+861
+00:18:10,240 --> 00:18:13,110
+got traces coming in. You're going to
+need to account for two query patterns.
+
+862
+00:18:13,110 --> 00:18:13,120
+need to account for two query patterns.
+ 
+
+863
+00:18:13,120 --> 00:18:15,430
+need to account for two query patterns.
+One, if you're performing observability,
+
+864
+00:18:15,430 --> 00:18:15,440
+One, if you're performing observability,
+ 
+
+865
+00:18:15,440 --> 00:18:17,909
+One, if you're performing observability,
+you need a way for for folks to
+
+866
+00:18:17,909 --> 00:18:17,919
+you need a way for for folks to
+ 
+
+867
+00:18:17,919 --> 00:18:20,150
+you need a way for for folks to
+instantly be able to see their traces.
+
+868
+00:18:20,150 --> 00:18:20,160
+instantly be able to see their traces.
+ 
+
+869
+00:18:20,160 --> 00:18:21,990
+instantly be able to see their traces.
+It's very important to people. So,
+
+870
+00:18:21,990 --> 00:18:22,000
+It's very important to people. So,
+ 
+
+871
+00:18:22,000 --> 00:18:25,590
+It's very important to people. So,
+you'll need uh a a a very low latency
+
+872
+00:18:25,590 --> 00:18:25,600
+you'll need uh a a a very low latency
+ 
+
+873
+00:18:25,600 --> 00:18:29,830
+you'll need uh a a a very low latency
+way to ingest data. And then uh you also
+
+874
+00:18:29,830 --> 00:18:29,840
+way to ingest data. And then uh you also
+ 
+
+875
+00:18:29,840 --> 00:18:33,270
+way to ingest data. And then uh you also
+need a a second uh um a second layer of
+
+876
+00:18:33,270 --> 00:18:33,280
+need a a second uh um a second layer of
+ 
+
+877
+00:18:33,280 --> 00:18:36,070
+need a a second uh um a second layer of
+persistence for the query pattern of I
+
+878
+00:18:36,070 --> 00:18:36,080
+persistence for the query pattern of I
+ 
+
+879
+00:18:36,080 --> 00:18:38,310
+persistence for the query pattern of I
+want to be able to analyze in in
+
+880
+00:18:38,310 --> 00:18:38,320
+want to be able to analyze in in
+ 
+
+881
+00:18:38,320 --> 00:18:41,029
+want to be able to analyze in in
+aggregate these data. So we used to use
+
+882
+00:18:41,029 --> 00:18:41,039
+aggregate these data. So we used to use
+ 
+
+883
+00:18:41,039 --> 00:18:44,070
+aggregate these data. So we used to use
+an open- source data warehouse for this.
+
+884
+00:18:44,070 --> 00:18:44,080
+an open- source data warehouse for this.
+ 
+
+885
+00:18:44,080 --> 00:18:46,870
+an open- source data warehouse for this.
+And we used to stitch these two sources
+
+886
+00:18:46,870 --> 00:18:46,880
+And we used to stitch these two sources
+ 
+
+887
+00:18:46,880 --> 00:18:49,990
+And we used to stitch these two sources
+together uh through a a a domain
+
+888
+00:18:49,990 --> 00:18:50,000
+together uh through a a a domain
+ 
+
+889
+00:18:50,000 --> 00:18:51,669
+together uh through a a a domain
+specific language that we created called
+
+890
+00:18:51,669 --> 00:18:51,679
+specific language that we created called
+ 
+
+891
+00:18:51,679 --> 00:18:55,190
+specific language that we created called
+BTQL that no one liked and and including
+
+892
+00:18:55,190 --> 00:18:55,200
+BTQL that no one liked and and including
+ 
+
+893
+00:18:55,200 --> 00:18:57,669
+BTQL that no one liked and and including
+us we we hated it. And then we would
+
+894
+00:18:57,669 --> 00:18:57,679
+us we we hated it. And then we would
+ 
+
+895
+00:18:57,679 --> 00:18:59,669
+us we we hated it. And then we would
+perform like a third level of of
+
+896
+00:18:59,669 --> 00:18:59,679
+perform like a third level of of
+ 
+
+897
+00:18:59,679 --> 00:19:02,150
+perform like a third level of of
+aggregation with using duct db in the in
+
+898
+00:19:02,150 --> 00:19:02,160
+aggregation with using duct db in the in
+ 
+
+899
+00:19:02,160 --> 00:19:04,870
+aggregation with using duct db in the in
+the browser. Um this worked for us for
+
+900
+00:19:04,870 --> 00:19:04,880
+the browser. Um this worked for us for
+ 
+
+901
+00:19:04,880 --> 00:19:08,310
+the browser. Um this worked for us for
+for a bit h and then it it didn't work
+
+902
+00:19:08,310 --> 00:19:08,320
+for a bit h and then it it didn't work
+ 
+
+903
+00:19:08,320 --> 00:19:10,390
+for a bit h and then it it didn't work
+when um I'll just use one of our
+
+904
+00:19:10,390 --> 00:19:10,400
+when um I'll just use one of our
+ 
+
+905
+00:19:10,400 --> 00:19:13,270
+when um I'll just use one of our
+customer examples a customer like notion
+
+906
+00:19:13,270 --> 00:19:13,280
+customer examples a customer like notion
+ 
+
+907
+00:19:13,280 --> 00:19:17,110
+customer examples a customer like notion
+for um as an example just a ton of a lot
+
+908
+00:19:17,110 --> 00:19:17,120
+for um as an example just a ton of a lot
+ 
+
+909
+00:19:17,120 --> 00:19:18,870
+for um as an example just a ton of a lot
+of of unstructured data that they were
+
+910
+00:19:18,870 --> 00:19:18,880
+of of unstructured data that they were
+ 
+
+911
+00:19:18,880 --> 00:19:20,630
+of of unstructured data that they were
+sending us. They wanted to be able to
+
+912
+00:19:20,630 --> 00:19:20,640
+sending us. They wanted to be able to
+ 
+
+913
+00:19:20,640 --> 00:19:22,390
+sending us. They wanted to be able to
+perform things like full text search
+
+914
+00:19:22,390 --> 00:19:22,400
+perform things like full text search
+ 
+
+915
+00:19:22,400 --> 00:19:24,630
+perform things like full text search
+across a trace. None of these
+
+916
+00:19:24,630 --> 00:19:24,640
+across a trace. None of these
+ 
+
+917
+00:19:24,640 --> 00:19:26,870
+across a trace. None of these
+technologies are really equipped to
+
+918
+00:19:26,870 --> 00:19:26,880
+technologies are really equipped to
+ 
+
+919
+00:19:26,880 --> 00:19:30,789
+technologies are really equipped to
+perform text style um analytics which is
+
+920
+00:19:30,789 --> 00:19:30,799
+perform text style um analytics which is
+ 
+
+921
+00:19:30,799 --> 00:19:32,630
+perform text style um analytics which is
+a challenge with with the LM domain
+
+922
+00:19:32,630 --> 00:19:32,640
+a challenge with with the LM domain
+ 
+
+923
+00:19:32,640 --> 00:19:35,190
+a challenge with with the LM domain
+because there just so much text.
+
+924
+00:19:35,190 --> 00:19:35,200
+because there just so much text.
+ 
+
+925
+00:19:35,200 --> 00:19:37,510
+because there just so much text.
+So that leads us to this um measuring
+
+926
+00:19:37,510 --> 00:19:37,520
+So that leads us to this um measuring
+ 
+
+927
+00:19:37,520 --> 00:19:39,430
+So that leads us to this um measuring
+Asian quality performing eval performing
+
+928
+00:19:39,430 --> 00:19:39,440
+Asian quality performing eval performing
+ 
+
+929
+00:19:39,440 --> 00:19:41,909
+Asian quality performing eval performing
+observability. It's actually a systems
+
+930
+00:19:41,909 --> 00:19:41,919
+observability. It's actually a systems
+ 
+
+931
+00:19:41,919 --> 00:19:44,310
+observability. It's actually a systems
+problem. It's not just a UI UX problem.
+
+932
+00:19:44,310 --> 00:19:44,320
+problem. It's not just a UI UX problem.
+ 
+
+933
+00:19:44,320 --> 00:19:46,310
+problem. It's not just a UI UX problem.
+We recognize that it's quite easy to
+
+934
+00:19:46,310 --> 00:19:46,320
+We recognize that it's quite easy to
+ 
+
+935
+00:19:46,320 --> 00:19:50,870
+We recognize that it's quite easy to
+vibe code the UI of evals. Um, but it's
+
+936
+00:19:50,870 --> 00:19:50,880
+vibe code the UI of evals. Um, but it's
+ 
+
+937
+00:19:50,880 --> 00:19:53,909
+vibe code the UI of evals. Um, but it's
+way way way more challenging to create
+
+938
+00:19:53,909 --> 00:19:53,919
+way way way more challenging to create
+ 
+
+939
+00:19:53,919 --> 00:19:56,950
+way way way more challenging to create
+that data layer of of running a
+
+940
+00:19:56,950 --> 00:19:56,960
+that data layer of of running a
+ 
+
+941
+00:19:56,960 --> 00:19:59,350
+that data layer of of running a
+successful eval and observability
+
+942
+00:19:59,350 --> 00:19:59,360
+successful eval and observability
+ 
+
+943
+00:19:59,360 --> 00:20:01,350
+successful eval and observability
+platform. And not just from a scale
+
+944
+00:20:01,350 --> 00:20:01,360
+platform. And not just from a scale
+ 
+
+945
+00:20:01,360 --> 00:20:03,270
+platform. And not just from a scale
+perspective, although that matters,
+
+946
+00:20:03,270 --> 00:20:03,280
+perspective, although that matters,
+ 
+
+947
+00:20:03,280 --> 00:20:05,510
+perspective, although that matters,
+mostly from a functional perspective of
+
+948
+00:20:05,510 --> 00:20:05,520
+mostly from a functional perspective of
+ 
+
+949
+00:20:05,520 --> 00:20:07,750
+mostly from a functional perspective of
+allowing people to do the things that
+
+950
+00:20:07,750 --> 00:20:07,760
+allowing people to do the things that
+ 
+
+951
+00:20:07,760 --> 00:20:10,150
+allowing people to do the things that
+they would expect to do like performing
+
+952
+00:20:10,150 --> 00:20:10,160
+they would expect to do like performing
+ 
+
+953
+00:20:10,160 --> 00:20:11,750
+they would expect to do like performing
+full text search across millions of
+
+954
+00:20:11,750 --> 00:20:11,760
+full text search across millions of
+ 
+
+955
+00:20:11,760 --> 00:20:14,310
+full text search across millions of
+traces um in in their platform of
+
+956
+00:20:14,310 --> 00:20:14,320
+traces um in in their platform of
+ 
+
+957
+00:20:14,320 --> 00:20:17,430
+traces um in in their platform of
+choice. Um I talked about this a little
+
+958
+00:20:17,430 --> 00:20:17,440
+choice. Um I talked about this a little
+ 
+
+959
+00:20:17,440 --> 00:20:19,190
+choice. Um I talked about this a little
+bit. The the reason why this is such a
+
+960
+00:20:19,190 --> 00:20:19,200
+bit. The the reason why this is such a
+ 
+
+961
+00:20:19,200 --> 00:20:22,390
+bit. The the reason why this is such a
+novel problem to solve is across a lot
+
+962
+00:20:22,390 --> 00:20:22,400
+novel problem to solve is across a lot
+ 
+
+963
+00:20:22,400 --> 00:20:24,150
+novel problem to solve is across a lot
+of these dimensions, which I you know I
+
+964
+00:20:24,150 --> 00:20:24,160
+of these dimensions, which I you know I
+ 
+
+965
+00:20:24,160 --> 00:20:27,110
+of these dimensions, which I you know I
+won't drain this slide, but um the data
+
+966
+00:20:27,110 --> 00:20:27,120
+won't drain this slide, but um the data
+ 
+
+967
+00:20:27,120 --> 00:20:30,149
+won't drain this slide, but um the data
+comes in really fast. uh the data are
+
+968
+00:20:30,149 --> 00:20:30,159
+comes in really fast. uh the data are
+ 
+
+969
+00:20:30,159 --> 00:20:32,149
+comes in really fast. uh the data are
+are are like just really large when they
+
+970
+00:20:32,149 --> 00:20:32,159
+are are like just really large when they
+ 
+
+971
+00:20:32,159 --> 00:20:35,350
+are are like just really large when they
+come in. So even even though traditional
+
+972
+00:20:35,350 --> 00:20:35,360
+come in. So even even though traditional
+ 
+
+973
+00:20:35,360 --> 00:20:37,590
+come in. So even even though traditional
+uh spans in a trace span is just like
+
+974
+00:20:37,590 --> 00:20:37,600
+uh spans in a trace span is just like
+ 
+
+975
+00:20:37,600 --> 00:20:39,350
+uh spans in a trace span is just like
+one part of a trace, traditional span
+
+976
+00:20:39,350 --> 00:20:39,360
+one part of a trace, traditional span
+ 
+
+977
+00:20:39,360 --> 00:20:41,430
+one part of a trace, traditional span
+would be like a couple kilobytes. Here
+
+978
+00:20:41,430 --> 00:20:41,440
+would be like a couple kilobytes. Here
+ 
+
+979
+00:20:41,440 --> 00:20:43,430
+would be like a couple kilobytes. Here
+we've seen spans that are 10 20
+
+980
+00:20:43,430 --> 00:20:43,440
+we've seen spans that are 10 20
+ 
+
+981
+00:20:43,440 --> 00:20:46,870
+we've seen spans that are 10 20
+megabytes in size just so much context
+
+982
+00:20:46,870 --> 00:20:46,880
+megabytes in size just so much context
+ 
+
+983
+00:20:46,880 --> 00:20:49,909
+megabytes in size just so much context
+within those spans. Um highly highly
+
+984
+00:20:49,909 --> 00:20:49,919
+within those spans. Um highly highly
+ 
+
+985
+00:20:49,919 --> 00:20:52,149
+within those spans. Um highly highly
+unstructured and then also there are a
+
+986
+00:20:52,149 --> 00:20:52,159
+unstructured and then also there are a
+ 
+
+987
+00:20:52,159 --> 00:20:54,789
+unstructured and then also there are a
+lot of different types of read patterns.
+
+988
+00:20:54,789 --> 00:20:54,799
+lot of different types of read patterns.
+ 
+
+989
+00:20:54,799 --> 00:20:57,830
+lot of different types of read patterns.
+So um you might be performing aggregate
+
+990
+00:20:57,830 --> 00:20:57,840
+So um you might be performing aggregate
+ 
+
+991
+00:20:57,840 --> 00:20:59,750
+So um you might be performing aggregate
+types of read patterns but also you want
+
+992
+00:20:59,750 --> 00:20:59,760
+types of read patterns but also you want
+ 
+
+993
+00:20:59,760 --> 00:21:02,549
+types of read patterns but also you want
+very low latency types of of read read
+
+994
+00:21:02,549 --> 00:21:02,559
+very low latency types of of read read
+ 
+
+995
+00:21:02,559 --> 00:21:04,710
+very low latency types of of read read
+patterns. So none of these problems are
+
+996
+00:21:04,710 --> 00:21:04,720
+patterns. So none of these problems are
+ 
+
+997
+00:21:04,720 --> 00:21:07,750
+patterns. So none of these problems are
+are individually unique but together
+
+998
+00:21:07,750 --> 00:21:07,760
+are individually unique but together
+ 
+
+999
+00:21:07,760 --> 00:21:09,909
+are individually unique but together
+they make a make for a very uh unique
+
+1000
+00:21:09,909 --> 00:21:09,919
+they make a make for a very uh unique
+ 
+
+1001
+00:21:09,919 --> 00:21:13,510
+they make a make for a very uh unique
+problem from a systems perspective.
+
+1002
+00:21:13,510 --> 00:21:13,520
+problem from a systems perspective.
+ 
+
+1003
+00:21:13,520 --> 00:21:17,110
+problem from a systems perspective.
+Uh so what we've done is um and you know
+
+1004
+00:21:17,110 --> 00:21:17,120
+Uh so what we've done is um and you know
+ 
+
+1005
+00:21:17,120 --> 00:21:19,270
+Uh so what we've done is um and you know
+what you all would have to endeavor to
+
+1006
+00:21:19,270 --> 00:21:19,280
+what you all would have to endeavor to
+ 
+
+1007
+00:21:19,280 --> 00:21:21,270
+what you all would have to endeavor to
+do if you were building this yourselves
+
+1008
+00:21:21,270 --> 00:21:21,280
+do if you were building this yourselves
+ 
+
+1009
+00:21:21,280 --> 00:21:23,909
+do if you were building this yourselves
+is you really have to think about making
+
+1010
+00:21:23,909 --> 00:21:23,919
+is you really have to think about making
+ 
+
+1011
+00:21:23,919 --> 00:21:27,510
+is you really have to think about making
+the right data platform for traces so
+
+1012
+00:21:27,510 --> 00:21:27,520
+the right data platform for traces so
+ 
+
+1013
+00:21:27,520 --> 00:21:30,230
+the right data platform for traces so
+that you can perform some of the more
+
+1014
+00:21:30,230 --> 00:21:30,240
+that you can perform some of the more
+ 
+
+1015
+00:21:30,240 --> 00:21:32,950
+that you can perform some of the more
+functional um requirements that that
+
+1016
+00:21:32,950 --> 00:21:32,960
+functional um requirements that that
+ 
+
+1017
+00:21:32,960 --> 00:21:35,110
+functional um requirements that that
+eventually come down the line. The
+
+1018
+00:21:35,110 --> 00:21:35,120
+eventually come down the line. The
+ 
+
+1019
+00:21:35,120 --> 00:21:37,270
+eventually come down the line. The
+example that I have here is that you
+
+1020
+00:21:37,270 --> 00:21:37,280
+example that I have here is that you
+ 
+
+1021
+00:21:37,280 --> 00:21:39,590
+example that I have here is that you
+know let's say that you want to let a
+
+1022
+00:21:39,590 --> 00:21:39,600
+know let's say that you want to let a
+ 
+
+1023
+00:21:39,600 --> 00:21:42,390
+know let's say that you want to let a
+coding agent loose on your evals
+
+1024
+00:21:42,390 --> 00:21:42,400
+coding agent loose on your evals
+ 
+
+1025
+00:21:42,400 --> 00:21:44,789
+coding agent loose on your evals
+platform so that you can be a little bit
+
+1026
+00:21:44,789 --> 00:21:44,799
+platform so that you can be a little bit
+ 
+
+1027
+00:21:44,799 --> 00:21:47,990
+platform so that you can be a little bit
+more self-healing with grabbing data in
+
+1028
+00:21:47,990 --> 00:21:48,000
+more self-healing with grabbing data in
+ 
+
+1029
+00:21:48,000 --> 00:21:50,470
+more self-healing with grabbing data in
+aggregate from your evals platform using
+
+1030
+00:21:50,470 --> 00:21:50,480
+aggregate from your evals platform using
+ 
+
+1031
+00:21:50,480 --> 00:21:53,110
+aggregate from your evals platform using
+a coding agent to grab that into context
+
+1032
+00:21:53,110 --> 00:21:53,120
+a coding agent to grab that into context
+ 
+
+1033
+00:21:53,120 --> 00:21:56,710
+a coding agent to grab that into context
+and change your agent uh within um you
+
+1034
+00:21:56,710 --> 00:21:56,720
+and change your agent uh within um you
+ 
+
+1035
+00:21:56,720 --> 00:21:59,350
+and change your agent uh within um you
+know with with within a a coding agent
+
+1036
+00:21:59,350 --> 00:21:59,360
+know with with within a a coding agent
+ 
+
+1037
+00:21:59,360 --> 00:22:00,950
+know with with within a a coding agent
+session. That's something that's going
+
+1038
+00:22:00,950 --> 00:22:00,960
+session. That's something that's going
+ 
+
+1039
+00:22:00,960 --> 00:22:02,470
+session. That's something that's going
+to be really challenging to do if you
+
+1040
+00:22:02,470 --> 00:22:02,480
+to be really challenging to do if you
+ 
+
+1041
+00:22:02,480 --> 00:22:06,310
+to be really challenging to do if you
+can't run a lot of just pure SQL on the
+
+1042
+00:22:06,310 --> 00:22:06,320
+can't run a lot of just pure SQL on the
+ 
+
+1043
+00:22:06,320 --> 00:22:09,669
+can't run a lot of just pure SQL on the
+data back end of of your evals platform.
+
+1044
+00:22:09,669 --> 00:22:09,679
+data back end of of your evals platform.
+ 
+
+1045
+00:22:09,679 --> 00:22:11,430
+data back end of of your evals platform.
+We've actually noticed a lot of these
+
+1046
+00:22:11,430 --> 00:22:11,440
+We've actually noticed a lot of these
+ 
+
+1047
+00:22:11,440 --> 00:22:14,149
+We've actually noticed a lot of these
+headless style use cases come up where
+
+1048
+00:22:14,149 --> 00:22:14,159
+headless style use cases come up where
+ 
+
+1049
+00:22:14,159 --> 00:22:16,070
+headless style use cases come up where
+people aren't in interested in the UI at
+
+1050
+00:22:16,070 --> 00:22:16,080
+people aren't in interested in the UI at
+ 
+
+1051
+00:22:16,080 --> 00:22:17,510
+people aren't in interested in the UI at
+all. The only thing that they're
+
+1052
+00:22:17,510 --> 00:22:17,520
+all. The only thing that they're
+ 
+
+1053
+00:22:17,520 --> 00:22:19,990
+all. The only thing that they're
+interested in is how can I perform eval
+
+1054
+00:22:19,990 --> 00:22:20,000
+interested in is how can I perform eval
+ 
+
+1055
+00:22:20,000 --> 00:22:22,310
+interested in is how can I perform eval
+in a way where I can use a codeex or I
+
+1056
+00:22:22,310 --> 00:22:22,320
+in a way where I can use a codeex or I
+ 
+
+1057
+00:22:22,320 --> 00:22:29,029
+in a way where I can use a codeex or I
+can use a cloud code to to help uh um
+
+1058
+00:22:29,029 --> 00:22:29,039
+can use a cloud code to to help uh um
+ 
+
+1059
+00:22:29,039 --> 00:22:30,549
+can use a cloud code to to help uh um
+help increase the quality of my agent
+
+1060
+00:22:30,549 --> 00:22:30,559
+help increase the quality of my agent
+ 
+
+1061
+00:22:30,559 --> 00:22:33,510
+help increase the quality of my agent
+for me. So the the last problem here
+
+1062
+00:22:33,510 --> 00:22:33,520
+for me. So the the last problem here
+ 
+
+1063
+00:22:33,520 --> 00:22:35,190
+for me. So the the last problem here
+that that I'll talk about is the so what
+
+1064
+00:22:35,190 --> 00:22:35,200
+that that I'll talk about is the so what
+ 
+
+1065
+00:22:35,200 --> 00:22:38,230
+that that I'll talk about is the so what
+problem. Um and we'll we'll skip this
+
+1066
+00:22:38,230 --> 00:22:38,240
+problem. Um and we'll we'll skip this
+ 
+
+1067
+00:22:38,240 --> 00:22:39,430
+problem. Um and we'll we'll skip this
+for now for the sake of time. This is
+
+1068
+00:22:39,430 --> 00:22:39,440
+for now for the sake of time. This is
+ 
+
+1069
+00:22:39,440 --> 00:22:40,710
+for now for the sake of time. This is
+how Brain Trust does this. We have a
+
+1070
+00:22:40,710 --> 00:22:40,720
+how Brain Trust does this. We have a
+ 
+
+1071
+00:22:40,720 --> 00:22:42,470
+how Brain Trust does this. We have a
+blog about this if if you're interested
+
+1072
+00:22:42,470 --> 00:22:42,480
+blog about this if if you're interested
+ 
+
+1073
+00:22:42,480 --> 00:22:46,470
+blog about this if if you're interested
+that that just got released. Um
+
+1074
+00:22:46,470 --> 00:22:46,480
+that that just got released. Um
+ 
+
+1075
+00:22:46,480 --> 00:22:48,789
+that that just got released. Um
+um but what what kind of comes next here
+
+1076
+00:22:48,789 --> 00:22:48,799
+um but what what kind of comes next here
+ 
+
+1077
+00:22:48,799 --> 00:22:51,990
+um but what what kind of comes next here
+for um what you can expect to build into
+
+1078
+00:22:51,990 --> 00:22:52,000
+for um what you can expect to build into
+ 
+
+1079
+00:22:52,000 --> 00:22:54,230
+for um what you can expect to build into
+your evals platform is you want to be
+
+1080
+00:22:54,230 --> 00:22:54,240
+your evals platform is you want to be
+ 
+
+1081
+00:22:54,240 --> 00:22:56,470
+your evals platform is you want to be
+able to tell folks the unknown unknowns
+
+1082
+00:22:56,470 --> 00:22:56,480
+able to tell folks the unknown unknowns
+ 
+
+1083
+00:22:56,480 --> 00:22:59,110
+able to tell folks the unknown unknowns
+of your agent. I.e. don't make me look
+
+1084
+00:22:59,110 --> 00:22:59,120
+of your agent. I.e. don't make me look
+ 
+
+1085
+00:22:59,120 --> 00:23:01,750
+of your agent. I.e. don't make me look
+across a whole bunch of traces. Just
+
+1086
+00:23:01,750 --> 00:23:01,760
+across a whole bunch of traces. Just
+ 
+
+1087
+00:23:01,760 --> 00:23:04,710
+across a whole bunch of traces. Just
+tell me how people are are using uh our
+
+1088
+00:23:04,710 --> 00:23:04,720
+tell me how people are are using uh our
+ 
+
+1089
+00:23:04,720 --> 00:23:07,029
+tell me how people are are using uh our
+our agent. Uh so you want to be able to
+
+1090
+00:23:07,029 --> 00:23:07,039
+our agent. Uh so you want to be able to
+ 
+
+1091
+00:23:07,039 --> 00:23:09,190
+our agent. Uh so you want to be able to
+uncover those unknown unknowns unknown
+
+1092
+00:23:09,190 --> 00:23:09,200
+uncover those unknown unknowns unknown
+ 
+
+1093
+00:23:09,200 --> 00:23:11,350
+uncover those unknown unknowns unknown
+unknowns through topic modeling
+
+1094
+00:23:11,350 --> 00:23:11,360
+unknowns through topic modeling
+ 
+
+1095
+00:23:11,360 --> 00:23:12,870
+unknowns through topic modeling
+techniques so that you know where to
+
+1096
+00:23:12,870 --> 00:23:12,880
+techniques so that you know where to
+ 
+
+1097
+00:23:12,880 --> 00:23:15,510
+techniques so that you know where to
+spend your engineering time. Um you want
+
+1098
+00:23:15,510 --> 00:23:15,520
+spend your engineering time. Um you want
+ 
+
+1099
+00:23:15,520 --> 00:23:17,909
+spend your engineering time. Um you want
+to make sure that you are building your
+
+1100
+00:23:17,909 --> 00:23:17,919
+to make sure that you are building your
+ 
+
+1101
+00:23:17,919 --> 00:23:19,590
+to make sure that you are building your
+platform not just for humans but also
+
+1102
+00:23:19,590 --> 00:23:19,600
+platform not just for humans but also
+ 
+
+1103
+00:23:19,600 --> 00:23:21,750
+platform not just for humans but also
+for agents because that's one of the
+
+1104
+00:23:21,750 --> 00:23:21,760
+for agents because that's one of the
+ 
+
+1105
+00:23:21,760 --> 00:23:24,070
+for agents because that's one of the
+main media for how people are are
+
+1106
+00:23:24,070 --> 00:23:24,080
+main media for how people are are
+ 
+
+1107
+00:23:24,080 --> 00:23:26,470
+main media for how people are are
+creating technology. Now um we didn't
+
+1108
+00:23:26,470 --> 00:23:26,480
+creating technology. Now um we didn't
+ 
+
+1109
+00:23:26,480 --> 00:23:28,070
+creating technology. Now um we didn't
+even talk about the non-functional
+
+1110
+00:23:28,070 --> 00:23:28,080
+even talk about the non-functional
+ 
+
+1111
+00:23:28,080 --> 00:23:30,149
+even talk about the non-functional
+requirements that go into building these
+
+1112
+00:23:30,149 --> 00:23:30,159
+requirements that go into building these
+ 
+
+1113
+00:23:30,159 --> 00:23:32,390
+requirements that go into building these
+platforms like role-based access control
+
+1114
+00:23:32,390 --> 00:23:32,400
+platforms like role-based access control
+ 
+
+1115
+00:23:32,400 --> 00:23:34,390
+platforms like role-based access control
+data masking. That's also something that
+
+1116
+00:23:34,390 --> 00:23:34,400
+data masking. That's also something that
+ 
+
+1117
+00:23:34,400 --> 00:23:36,310
+data masking. That's also something that
+that's super important that comes up
+
+1118
+00:23:36,310 --> 00:23:36,320
+that's super important that comes up
+ 
+
+1119
+00:23:36,320 --> 00:23:38,390
+that's super important that comes up
+when you want to operate at scale. Uh
+
+1120
+00:23:38,390 --> 00:23:38,400
+when you want to operate at scale. Uh
+ 
+
+1121
+00:23:38,400 --> 00:23:41,590
+when you want to operate at scale. Uh
+and then lastly, uh a consideration for
+
+1122
+00:23:41,590 --> 00:23:41,600
+and then lastly, uh a consideration for
+ 
+
+1123
+00:23:41,600 --> 00:23:43,190
+and then lastly, uh a consideration for
+adding
+
+1124
+00:23:43,190 --> 00:23:43,200
+adding
+ 
+
+1125
+00:23:43,200 --> 00:23:45,510
+adding
+automatic tracing through some type of
+
+1126
+00:23:45,510 --> 00:23:45,520
+automatic tracing through some type of
+ 
+
+1127
+00:23:45,520 --> 00:23:47,990
+automatic tracing through some type of
+AI proxy or or gateway so that people
+
+1128
+00:23:47,990 --> 00:23:48,000
+AI proxy or or gateway so that people
+ 
+
+1129
+00:23:48,000 --> 00:23:50,149
+AI proxy or or gateway so that people
+don't even have a choice but to trace
+
+1130
+00:23:50,149 --> 00:23:50,159
+don't even have a choice but to trace
+ 
+
+1131
+00:23:50,159 --> 00:23:53,029
+don't even have a choice but to trace
+their their LMS. Um you can govern very
+
+1132
+00:23:53,029 --> 00:23:53,039
+their their LMS. Um you can govern very
+ 
+
+1133
+00:23:53,039 --> 00:23:54,470
+their their LMS. Um you can govern very
+centrally by adding tracing
+
+1134
+00:23:54,470 --> 00:23:54,480
+centrally by adding tracing
+ 
+
+1135
+00:23:54,480 --> 00:23:57,669
+centrally by adding tracing
+automatically uh to uh to your eval
+
+1136
+00:23:57,669 --> 00:23:57,679
+automatically uh to uh to your eval
+ 
+
+1137
+00:23:57,679 --> 00:23:59,510
+automatically uh to uh to your eval
+platform.
+
+1138
+00:23:59,510 --> 00:23:59,520
+platform.
+ 
+
+1139
+00:23:59,520 --> 00:24:01,830
+platform.
+Um so I appreciate the time. I'm I've
+
+1140
+00:24:01,830 --> 00:24:01,840
+Um so I appreciate the time. I'm I've
+ 
+
+1141
+00:24:01,840 --> 00:24:04,070
+Um so I appreciate the time. I'm I've
+got like a minute and 20 seconds left
+
+1142
+00:24:04,070 --> 00:24:04,080
+got like a minute and 20 seconds left
+ 
+
+1143
+00:24:04,080 --> 00:24:06,390
+got like a minute and 20 seconds left
+for for questions. I can probably take
+
+1144
+00:24:06,390 --> 00:24:06,400
+for for questions. I can probably take
+ 
+
+1145
+00:24:06,400 --> 00:24:09,669
+for for questions. I can probably take
+two of them if anyone has any questions.
+
+1146
+00:24:09,669 --> 00:24:09,679
+two of them if anyone has any questions.
+ 
+
+1147
+00:24:09,679 --> 00:24:11,029
+two of them if anyone has any questions.
+Yes.
+
+1148
+00:24:11,029 --> 00:24:11,039
+Yes.
+ 
+
+1149
+00:24:11,039 --> 00:24:15,029
+Yes.
+>> Okay. Um I'm not sure about
+
+1150
+00:24:15,029 --> 00:24:15,039
+>> Okay. Um I'm not sure about
+ 
+
+1151
+00:24:15,039 --> 00:24:17,110
+>> Okay. Um I'm not sure about
+these kind of
+
+1152
+00:24:17,110 --> 00:24:17,120
+these kind of
+ 
+
+1153
+00:24:17,120 --> 00:24:19,669
+these kind of
+problems often you create like dynamic
+
+1154
+00:24:19,669 --> 00:24:19,679
+problems often you create like dynamic
+ 
+
+1155
+00:24:19,679 --> 00:24:21,669
+problems often you create like dynamic
+promps
+
+1156
+00:24:21,669 --> 00:24:21,679
+promps
+ 
+
+1157
+00:24:21,679 --> 00:24:29,750
+promps
+only
+
+1158
+00:24:29,750 --> 00:24:29,760
+
+ 
+
+1159
+00:24:29,760 --> 00:24:31,510
+
+like solutions.
+
+1160
+00:24:31,510 --> 00:24:31,520
+like solutions.
+ 
+
+1161
+00:24:31,520 --> 00:24:33,909
+like solutions.
+Then you often build like custom
+
+1162
+00:24:33,909 --> 00:24:33,919
+Then you often build like custom
+ 
+
+1163
+00:24:33,919 --> 00:24:37,830
+Then you often build like custom
+version. How does brain trust?
+
+1164
+00:24:37,830 --> 00:24:37,840
+version. How does brain trust?
+ 
+
+1165
+00:24:37,840 --> 00:24:39,590
+version. How does brain trust?
+>> So like how does brain brain trust
+
+1166
+00:24:39,590 --> 00:24:39,600
+>> So like how does brain brain trust
+ 
+
+1167
+00:24:39,600 --> 00:24:42,070
+>> So like how does brain brain trust
+specifically handle multimodal outputs
+
+1168
+00:24:42,070 --> 00:24:42,080
+specifically handle multimodal outputs
+ 
+
+1169
+00:24:42,080 --> 00:24:44,070
+specifically handle multimodal outputs
+and inputs and traces?
+
+1170
+00:24:44,070 --> 00:24:44,080
+and inputs and traces?
+ 
+
+1171
+00:24:44,080 --> 00:24:48,149
+and inputs and traces?
+>> Yeah, we like just very technically we
+
+1172
+00:24:48,149 --> 00:24:48,159
+>> Yeah, we like just very technically we
+ 
+
+1173
+00:24:48,159 --> 00:24:50,549
+>> Yeah, we like just very technically we
+uh put them in some object storage,
+
+1174
+00:24:50,549 --> 00:24:50,559
+uh put them in some object storage,
+ 
+
+1175
+00:24:50,559 --> 00:24:53,350
+uh put them in some object storage,
+reference them and then um display them
+
+1176
+00:24:53,350 --> 00:24:53,360
+reference them and then um display them
+ 
+
+1177
+00:24:53,360 --> 00:24:55,110
+reference them and then um display them
+directly into the trace. So if you have
+
+1178
+00:24:55,110 --> 00:24:55,120
+directly into the trace. So if you have
+ 
+
+1179
+00:24:55,120 --> 00:24:57,430
+directly into the trace. So if you have
+like an audio file or a video file, you
+
+1180
+00:24:57,430 --> 00:24:57,440
+like an audio file or a video file, you
+ 
+
+1181
+00:24:57,440 --> 00:24:59,190
+like an audio file or a video file, you
+can play it in the trace when someone's
+
+1182
+00:24:59,190 --> 00:24:59,200
+can play it in the trace when someone's
+ 
+
+1183
+00:24:59,200 --> 00:25:01,190
+can play it in the trace when someone's
+reviewing the the trace itself. We don't
+
+1184
+00:25:01,190 --> 00:25:01,200
+reviewing the the trace itself. We don't
+ 
+
+1185
+00:25:01,200 --> 00:25:02,789
+reviewing the the trace itself. We don't
+want people to have to exit the platform
+
+1186
+00:25:02,789 --> 00:25:02,799
+want people to have to exit the platform
+ 
+
+1187
+00:25:02,799 --> 00:25:03,990
+want people to have to exit the platform
+for that.
+
+1188
+00:25:03,990 --> 00:25:04,000
+for that.
+ 
+
+1189
+00:25:04,000 --> 00:25:05,990
+for that.
+>> The prompt management is in brain trust.
+
+1190
+00:25:05,990 --> 00:25:06,000
+>> The prompt management is in brain trust.
+ 
+
+1191
+00:25:06,000 --> 00:25:07,669
+>> The prompt management is in brain trust.
+>> It could be. Yeah. A question was is
+
+1192
+00:25:07,669 --> 00:25:07,679
+>> It could be. Yeah. A question was is
+ 
+
+1193
+00:25:07,679 --> 00:25:09,190
+>> It could be. Yeah. A question was is
+prompt management in brain trust? It it
+
+1194
+00:25:09,190 --> 00:25:09,200
+prompt management in brain trust? It it
+ 
+
+1195
+00:25:09,200 --> 00:25:12,070
+prompt management in brain trust? It it
+it could be or it doesn't have to be.
+
+1196
+00:25:12,070 --> 00:25:12,080
+it could be or it doesn't have to be.
+ 
+
+1197
+00:25:12,080 --> 00:25:15,909
+it could be or it doesn't have to be.
+Yeah.
+
+1198
+00:25:15,909 --> 00:25:15,919
+
+ 
+
+1199
+00:25:15,919 --> 00:25:17,510
+
+Okay. Perfect. Thank you so much for
+
+1200
+00:25:17,510 --> 00:25:17,520
+Okay. Perfect. Thank you so much for
+ 
+
+1201
+00:25:17,520 --> 00:25:20,919
+Okay. Perfect. Thank you so much for
+your attention today.
+

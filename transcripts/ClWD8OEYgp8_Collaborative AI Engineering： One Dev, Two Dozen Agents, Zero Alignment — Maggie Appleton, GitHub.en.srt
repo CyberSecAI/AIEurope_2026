@@ -1,0 +1,5475 @@
+1
+00:00:07,205 --> 00:00:14,670
+
+[music]
+
+2
+00:00:14,670 --> 00:00:14,680
+
+ 
+
+3
+00:00:14,680 --> 00:00:17,430
+
+>> Okay, we all good? Right. Uh so yes,
+
+4
+00:00:17,430 --> 00:00:17,440
+>> Okay, we all good? Right. Uh so yes,
+ 
+
+5
+00:00:17,440 --> 00:00:19,990
+>> Okay, we all good? Right. Uh so yes,
+this talk uh is called uh one developer,
+
+6
+00:00:19,990 --> 00:00:20,000
+this talk uh is called uh one developer,
+ 
+
+7
+00:00:20,000 --> 00:00:21,750
+this talk uh is called uh one developer,
+two dozen agents, zero alignment. Uh
+
+8
+00:00:21,750 --> 00:00:21,760
+two dozen agents, zero alignment. Uh
+ 
+
+9
+00:00:21,760 --> 00:00:22,990
+two dozen agents, zero alignment. Uh
+this is the case for why we need
+
+10
+00:00:22,990 --> 00:00:23,000
+this is the case for why we need
+ 
+
+11
+00:00:23,000 --> 00:00:25,470
+this is the case for why we need
+collaborative AI engineering.
+
+12
+00:00:25,470 --> 00:00:25,480
+collaborative AI engineering.
+ 
+
+13
+00:00:25,480 --> 00:00:27,230
+collaborative AI engineering.
+So first, a very quick intro. I'm
+
+14
+00:00:27,230 --> 00:00:27,240
+So first, a very quick intro. I'm
+ 
+
+15
+00:00:27,240 --> 00:00:29,310
+So first, a very quick intro. I'm
+Maggie, I work uh at GitHub as a staff
+
+16
+00:00:29,310 --> 00:00:29,320
+Maggie, I work uh at GitHub as a staff
+ 
+
+17
+00:00:29,320 --> 00:00:31,190
+Maggie, I work uh at GitHub as a staff
+research engineer. Uh at least that's my
+
+18
+00:00:31,190 --> 00:00:31,200
+research engineer. Uh at least that's my
+ 
+
+19
+00:00:31,200 --> 00:00:32,790
+research engineer. Uh at least that's my
+title. I'm actually a designer back when
+
+20
+00:00:32,790 --> 00:00:32,800
+title. I'm actually a designer back when
+ 
+
+21
+00:00:32,800 --> 00:00:33,750
+title. I'm actually a designer back when
+that was like a separate thing to
+
+22
+00:00:33,750 --> 00:00:33,760
+that was like a separate thing to
+ 
+
+23
+00:00:33,760 --> 00:00:36,550
+that was like a separate thing to
+engineer. Um and next is the Labs team
+
+24
+00:00:36,550 --> 00:00:36,560
+engineer. Um and next is the Labs team
+ 
+
+25
+00:00:36,560 --> 00:00:38,190
+engineer. Um and next is the Labs team
+within GitHub. So we work on kind of
+
+26
+00:00:38,190 --> 00:00:38,200
+within GitHub. So we work on kind of
+ 
+
+27
+00:00:38,200 --> 00:00:39,990
+within GitHub. So we work on kind of
+more experimental, risky bets than the
+
+28
+00:00:39,990 --> 00:00:40,000
+more experimental, risky bets than the
+ 
+
+29
+00:00:40,000 --> 00:00:41,710
+more experimental, risky bets than the
+rest of the organization. We like to
+
+30
+00:00:41,710 --> 00:00:41,720
+rest of the organization. We like to
+ 
+
+31
+00:00:41,720 --> 00:00:42,950
+rest of the organization. We like to
+call it the Department of [\h__\h] Around
+
+32
+00:00:42,950 --> 00:00:42,960
+call it the Department of [\h__\h] Around
+ 
+
+33
+00:00:42,960 --> 00:00:44,350
+call it the Department of [\h__\h] Around
+and Find Out.
+
+34
+00:00:44,350 --> 00:00:44,360
+and Find Out.
+ 
+
+35
+00:00:44,360 --> 00:00:46,070
+and Find Out.
+Um and like everyone else, we are of
+
+36
+00:00:46,070 --> 00:00:46,080
+Um and like everyone else, we are of
+ 
+
+37
+00:00:46,080 --> 00:00:47,830
+Um and like everyone else, we are of
+course trying to shape new developer
+
+38
+00:00:47,830 --> 00:00:47,840
+course trying to shape new developer
+ 
+
+39
+00:00:47,840 --> 00:00:50,070
+course trying to shape new developer
+agentic tools.
+
+40
+00:00:50,070 --> 00:00:50,080
+agentic tools.
+ 
+
+41
+00:00:50,080 --> 00:00:52,270
+agentic tools.
+So, I think this is what many people
+
+42
+00:00:52,270 --> 00:00:52,280
+So, I think this is what many people
+ 
+
+43
+00:00:52,280 --> 00:00:54,390
+So, I think this is what many people
+think peak developer productivity looks
+
+44
+00:00:54,390 --> 00:00:54,400
+think peak developer productivity looks
+ 
+
+45
+00:00:54,400 --> 00:00:57,110
+think peak developer productivity looks
+like right now, right? This is like a
+
+46
+00:00:57,110 --> 00:00:57,120
+like right now, right? This is like a
+ 
+
+47
+00:00:57,120 --> 00:00:59,510
+like right now, right? This is like a
+wall of terminal-based coding agents all
+
+48
+00:00:59,510 --> 00:00:59,520
+wall of terminal-based coding agents all
+ 
+
+49
+00:00:59,520 --> 00:01:01,310
+wall of terminal-based coding agents all
+running in parallel on one person's
+
+50
+00:01:01,310 --> 00:01:01,320
+running in parallel on one person's
+ 
+
+51
+00:01:01,320 --> 00:01:03,230
+running in parallel on one person's
+machine.
+
+52
+00:01:03,230 --> 00:01:03,240
+machine.
+ 
+
+53
+00:01:03,240 --> 00:01:04,910
+machine.
+I like to call this the one man, two
+
+54
+00:01:04,910 --> 00:01:04,920
+I like to call this the one man, two
+ 
+
+55
+00:01:04,920 --> 00:01:06,950
+I like to call this the one man, two
+dozen Clods theory of the future.
+
+56
+00:01:06,950 --> 00:01:06,960
+dozen Clods theory of the future.
+ 
+
+57
+00:01:06,960 --> 00:01:09,230
+dozen Clods theory of the future.
+Uh so the promise that we're given here
+
+58
+00:01:09,230 --> 00:01:09,240
+Uh so the promise that we're given here
+ 
+
+59
+00:01:09,240 --> 00:01:11,230
+Uh so the promise that we're given here
+is that one person with a fleet of
+
+60
+00:01:11,230 --> 00:01:11,240
+is that one person with a fleet of
+ 
+
+61
+00:01:11,240 --> 00:01:13,350
+is that one person with a fleet of
+agents will do the work of an entire
+
+62
+00:01:13,350 --> 00:01:13,360
+agents will do the work of an entire
+ 
+
+63
+00:01:13,360 --> 00:01:15,950
+agents will do the work of an entire
+team of developers.
+
+64
+00:01:15,950 --> 00:01:15,960
+team of developers.
+ 
+
+65
+00:01:15,960 --> 00:01:17,470
+team of developers.
+The main problem with this stream is it
+
+66
+00:01:17,470 --> 00:01:17,480
+The main problem with this stream is it
+ 
+
+67
+00:01:17,480 --> 00:01:19,110
+The main problem with this stream is it
+assumes that software is made by one
+
+68
+00:01:19,110 --> 00:01:19,120
+assumes that software is made by one
+ 
+
+69
+00:01:19,120 --> 00:01:20,470
+assumes that software is made by one
+person.
+
+70
+00:01:20,470 --> 00:01:20,480
+person.
+ 
+
+71
+00:01:20,480 --> 00:01:22,070
+person.
+All of these tools are single-player
+
+72
+00:01:22,070 --> 00:01:22,080
+All of these tools are single-player
+ 
+
+73
+00:01:22,080 --> 00:01:24,630
+All of these tools are single-player
+interfaces and they focus on scaling up
+
+74
+00:01:24,630 --> 00:01:24,640
+interfaces and they focus on scaling up
+ 
+
+75
+00:01:24,640 --> 00:01:26,630
+interfaces and they focus on scaling up
+the work of the individual. But there is
+
+76
+00:01:26,630 --> 00:01:26,640
+the work of the individual. But there is
+ 
+
+77
+00:01:26,640 --> 00:01:28,270
+the work of the individual. But there is
+limited value in scaling up one
+
+78
+00:01:28,270 --> 00:01:28,280
+limited value in scaling up one
+ 
+
+79
+00:01:28,280 --> 00:01:29,630
+limited value in scaling up one
+individual.
+
+80
+00:01:29,630 --> 00:01:29,640
+individual.
+ 
+
+81
+00:01:29,640 --> 00:01:31,510
+individual.
+Because software is not made by one
+
+82
+00:01:31,510 --> 00:01:31,520
+Because software is not made by one
+ 
+
+83
+00:01:31,520 --> 00:01:33,910
+Because software is not made by one
+person in a vacuum. It is a team sport
+
+84
+00:01:33,910 --> 00:01:33,920
+person in a vacuum. It is a team sport
+ 
+
+85
+00:01:33,920 --> 00:01:35,470
+person in a vacuum. It is a team sport
+and everyone building it needs to agree
+
+86
+00:01:35,470 --> 00:01:35,480
+and everyone building it needs to agree
+ 
+
+87
+00:01:35,480 --> 00:01:38,070
+and everyone building it needs to agree
+on what they're building and why.
+
+88
+00:01:38,070 --> 00:01:38,080
+on what they're building and why.
+ 
+
+89
+00:01:38,080 --> 00:01:39,950
+on what they're building and why.
+Believing individual productivity leads
+
+90
+00:01:39,950 --> 00:01:39,960
+Believing individual productivity leads
+ 
+
+91
+00:01:39,960 --> 00:01:42,990
+Believing individual productivity leads
+to great software is nine maybe nine
+
+92
+00:01:42,990 --> 00:01:43,000
+to great software is nine maybe nine
+ 
+
+93
+00:01:43,000 --> 00:01:45,790
+to great software is nine maybe nine
+women make a baby in one month logic.
+
+94
+00:01:45,790 --> 00:01:45,800
+women make a baby in one month logic.
+ 
+
+95
+00:01:45,800 --> 00:01:48,150
+women make a baby in one month logic.
+Uh more individual output doesn't solve
+
+96
+00:01:48,150 --> 00:01:48,160
+Uh more individual output doesn't solve
+ 
+
+97
+00:01:48,160 --> 00:01:50,070
+Uh more individual output doesn't solve
+problems that require communication and
+
+98
+00:01:50,070 --> 00:01:50,080
+problems that require communication and
+ 
+
+99
+00:01:50,080 --> 00:01:53,510
+problems that require communication and
+coordination. It makes them worse.
+
+100
+00:01:53,510 --> 00:01:53,520
+coordination. It makes them worse.
+ 
+
+101
+00:01:53,520 --> 00:01:55,470
+coordination. It makes them worse.
+An implementation is rapidly becoming a
+
+102
+00:01:55,470 --> 00:01:55,480
+An implementation is rapidly becoming a
+ 
+
+103
+00:01:55,480 --> 00:01:56,990
+An implementation is rapidly becoming a
+solved problem, right? Probably everyone
+
+104
+00:01:56,990 --> 00:01:57,000
+solved problem, right? Probably everyone
+ 
+
+105
+00:01:57,000 --> 00:01:58,430
+solved problem, right? Probably everyone
+here believes that.
+
+106
+00:01:58,430 --> 00:01:58,440
+here believes that.
+ 
+
+107
+00:01:58,440 --> 00:02:00,390
+here believes that.
+Uh writing code is now fast, it's
+
+108
+00:02:00,390 --> 00:02:00,400
+Uh writing code is now fast, it's
+ 
+
+109
+00:02:00,400 --> 00:02:02,190
+Uh writing code is now fast, it's
+getting cheaper, and quality is going up
+
+110
+00:02:02,190 --> 00:02:02,200
+getting cheaper, and quality is going up
+ 
+
+111
+00:02:02,200 --> 00:02:03,670
+getting cheaper, and quality is going up
+and to the right.
+
+112
+00:02:03,670 --> 00:02:03,680
+and to the right.
+ 
+
+113
+00:02:03,680 --> 00:02:05,910
+and to the right.
+The hard question is no longer how to
+
+114
+00:02:05,910 --> 00:02:05,920
+The hard question is no longer how to
+ 
+
+115
+00:02:05,920 --> 00:02:08,230
+The hard question is no longer how to
+build it, it's should we build it?
+
+116
+00:02:08,230 --> 00:02:08,240
+build it, it's should we build it?
+ 
+
+117
+00:02:08,240 --> 00:02:10,150
+build it, it's should we build it?
+Agreeing on what to build is the new
+
+118
+00:02:10,150 --> 00:02:10,160
+Agreeing on what to build is the new
+ 
+
+119
+00:02:10,160 --> 00:02:12,230
+Agreeing on what to build is the new
+bottleneck. So everyone on your team
+
+120
+00:02:12,230 --> 00:02:12,240
+bottleneck. So everyone on your team
+ 
+
+121
+00:02:12,240 --> 00:02:14,190
+bottleneck. So everyone on your team
+needs to be involved in asking, are we
+
+122
+00:02:14,190 --> 00:02:14,200
+needs to be involved in asking, are we
+ 
+
+123
+00:02:14,200 --> 00:02:16,550
+needs to be involved in asking, are we
+making the right thing? Are we spending
+
+124
+00:02:16,550 --> 00:02:16,560
+making the right thing? Are we spending
+ 
+
+125
+00:02:16,560 --> 00:02:18,230
+making the right thing? Are we spending
+our energy in the right place and how do
+
+126
+00:02:18,230 --> 00:02:18,240
+our energy in the right place and how do
+ 
+
+127
+00:02:18,240 --> 00:02:20,750
+our energy in the right place and how do
+we have the most impact?
+
+128
+00:02:20,750 --> 00:02:20,760
+we have the most impact?
+ 
+
+129
+00:02:20,760 --> 00:02:22,710
+we have the most impact?
+When production is cheap, opportunity
+
+130
+00:02:22,710 --> 00:02:22,720
+When production is cheap, opportunity
+ 
+
+131
+00:02:22,720 --> 00:02:25,390
+When production is cheap, opportunity
+cost becomes the real cost. You can't
+
+132
+00:02:25,390 --> 00:02:25,400
+cost becomes the real cost. You can't
+ 
+
+133
+00:02:25,400 --> 00:02:26,990
+cost becomes the real cost. You can't
+build everything and whatever you pick
+
+134
+00:02:26,990 --> 00:02:27,000
+build everything and whatever you pick
+ 
+
+135
+00:02:27,000 --> 00:02:30,750
+build everything and whatever you pick
+comes at the cost of everything else.
+
+136
+00:02:30,750 --> 00:02:30,760
+comes at the cost of everything else.
+ 
+
+137
+00:02:30,760 --> 00:02:32,310
+comes at the cost of everything else.
+Anyone who ships software on a team
+
+138
+00:02:32,310 --> 00:02:32,320
+Anyone who ships software on a team
+ 
+
+139
+00:02:32,320 --> 00:02:34,590
+Anyone who ships software on a team
+knows that this isn't a new problem.
+
+140
+00:02:34,590 --> 00:02:34,600
+knows that this isn't a new problem.
+ 
+
+141
+00:02:34,600 --> 00:02:36,110
+knows that this isn't a new problem.
+Um alignment has always been a
+
+142
+00:02:36,110 --> 00:02:36,120
+Um alignment has always been a
+ 
+
+143
+00:02:36,120 --> 00:02:37,950
+Um alignment has always been a
+bottleneck, but agents have made the
+
+144
+00:02:37,950 --> 00:02:37,960
+bottleneck, but agents have made the
+ 
+
+145
+00:02:37,960 --> 00:02:39,750
+bottleneck, but agents have made the
+cost of not being aligned as a team
+
+146
+00:02:39,750 --> 00:02:39,760
+cost of not being aligned as a team
+ 
+
+147
+00:02:39,760 --> 00:02:42,830
+cost of not being aligned as a team
+much, much higher.
+
+148
+00:02:42,830 --> 00:02:42,840
+much, much higher.
+ 
+
+149
+00:02:42,840 --> 00:02:44,950
+much, much higher.
+What makes it worse is that all our
+
+150
+00:02:44,950 --> 00:02:44,960
+What makes it worse is that all our
+ 
+
+151
+00:02:44,960 --> 00:02:46,390
+What makes it worse is that all our
+coordination tools are still from
+
+152
+00:02:46,390 --> 00:02:46,400
+coordination tools are still from
+ 
+
+153
+00:02:46,400 --> 00:02:47,630
+coordination tools are still from
+another era.
+
+154
+00:02:47,630 --> 00:02:47,640
+another era.
+ 
+
+155
+00:02:47,640 --> 00:02:49,990
+another era.
+So GitHub, Slack, Jira, Linear, and the
+
+156
+00:02:49,990 --> 00:02:50,000
+So GitHub, Slack, Jira, Linear, and the
+ 
+
+157
+00:02:50,000 --> 00:02:52,630
+So GitHub, Slack, Jira, Linear, and the
+like are as they currently stand are not
+
+158
+00:02:52,630 --> 00:02:52,640
+like are as they currently stand are not
+ 
+
+159
+00:02:52,640 --> 00:02:54,030
+like are as they currently stand are not
+designed for the agentic development
+
+160
+00:02:54,030 --> 00:02:54,040
+designed for the agentic development
+ 
+
+161
+00:02:54,040 --> 00:02:54,990
+designed for the agentic development
+world.
+
+162
+00:02:54,990 --> 00:02:55,000
+world.
+ 
+
+163
+00:02:55,000 --> 00:02:56,590
+world.
+We are funneling masses of agentic
+
+164
+00:02:56,590 --> 00:02:56,600
+We are funneling masses of agentic
+ 
+
+165
+00:02:56,600 --> 00:02:58,790
+We are funneling masses of agentic
+outputs into platforms that were built
+
+166
+00:02:58,790 --> 00:02:58,800
+outputs into platforms that were built
+ 
+
+167
+00:02:58,800 --> 00:03:00,310
+outputs into platforms that were built
+for an outdated way of building
+
+168
+00:03:00,310 --> 00:03:00,320
+for an outdated way of building
+ 
+
+169
+00:03:00,320 --> 00:03:01,870
+for an outdated way of building
+software.
+
+170
+00:03:01,870 --> 00:03:01,880
+software.
+ 
+
+171
+00:03:01,880 --> 00:03:04,630
+software.
+Um here I know like I work at GitHub, so
+
+172
+00:03:04,630 --> 00:03:04,640
+Um here I know like I work at GitHub, so
+ 
+
+173
+00:03:04,640 --> 00:03:06,150
+Um here I know like I work at GitHub, so
+that might sound heretical for me to
+
+174
+00:03:06,150 --> 00:03:06,160
+that might sound heretical for me to
+ 
+
+175
+00:03:06,160 --> 00:03:07,950
+that might sound heretical for me to
+say. Um but I promise it's not
+
+176
+00:03:07,950 --> 00:03:07,960
+say. Um but I promise it's not
+ 
+
+177
+00:03:07,960 --> 00:03:10,030
+say. Um but I promise it's not
+controversial. There are very few people
+
+178
+00:03:10,030 --> 00:03:10,040
+controversial. There are very few people
+ 
+
+179
+00:03:10,040 --> 00:03:11,790
+controversial. There are very few people
+internally who believe that the PR and
+
+180
+00:03:11,790 --> 00:03:11,800
+internally who believe that the PR and
+ 
+
+181
+00:03:11,800 --> 00:03:13,110
+internally who believe that the PR and
+the issue are the future of software
+
+182
+00:03:13,110 --> 00:03:13,120
+the issue are the future of software
+ 
+
+183
+00:03:13,120 --> 00:03:14,710
+the issue are the future of software
+development and there are lots of us
+
+184
+00:03:14,710 --> 00:03:14,720
+development and there are lots of us
+ 
+
+185
+00:03:14,720 --> 00:03:16,150
+development and there are lots of us
+inside the machine trying to explore
+
+186
+00:03:16,150 --> 00:03:16,160
+inside the machine trying to explore
+ 
+
+187
+00:03:16,160 --> 00:03:18,870
+inside the machine trying to explore
+what comes next.
+
+188
+00:03:18,870 --> 00:03:18,880
+what comes next.
+ 
+
+189
+00:03:18,880 --> 00:03:20,710
+what comes next.
+So this is how the development process
+
+190
+00:03:20,710 --> 00:03:20,720
+So this is how the development process
+ 
+
+191
+00:03:20,720 --> 00:03:22,150
+So this is how the development process
+used to look, right? We had a planning
+
+192
+00:03:22,150 --> 00:03:22,160
+used to look, right? We had a planning
+ 
+
+193
+00:03:22,160 --> 00:03:23,710
+used to look, right? We had a planning
+phase, a building phase, and a review
+
+194
+00:03:23,710 --> 00:03:23,720
+phase, a building phase, and a review
+ 
+
+195
+00:03:23,720 --> 00:03:25,510
+phase, a building phase, and a review
+phase. And we had all of these
+
+196
+00:03:25,510 --> 00:03:25,520
+phase. And we had all of these
+ 
+
+197
+00:03:25,520 --> 00:03:28,070
+phase. And we had all of these
+touchpoints of alignment along the way.
+
+198
+00:03:28,070 --> 00:03:28,080
+touchpoints of alignment along the way.
+ 
+
+199
+00:03:28,080 --> 00:03:29,710
+touchpoints of alignment along the way.
+And it was slow enough that we had time
+
+200
+00:03:29,710 --> 00:03:29,720
+And it was slow enough that we had time
+ 
+
+201
+00:03:29,720 --> 00:03:31,350
+And it was slow enough that we had time
+for conversations in Slack and Zoom
+
+202
+00:03:31,350 --> 00:03:31,360
+for conversations in Slack and Zoom
+ 
+
+203
+00:03:31,360 --> 00:03:33,470
+for conversations in Slack and Zoom
+meetings, comments on issues and draft
+
+204
+00:03:33,470 --> 00:03:33,480
+meetings, comments on issues and draft
+ 
+
+205
+00:03:33,480 --> 00:03:35,510
+meetings, comments on issues and draft
+PRs so you could discuss the details.
+
+206
+00:03:35,510 --> 00:03:35,520
+PRs so you could discuss the details.
+ 
+
+207
+00:03:35,520 --> 00:03:36,750
+PRs so you could discuss the details.
+And everyone could give their two cents
+
+208
+00:03:36,750 --> 00:03:36,760
+And everyone could give their two cents
+ 
+
+209
+00:03:36,760 --> 00:03:38,430
+And everyone could give their two cents
+and get advice from expertise across
+
+210
+00:03:38,430 --> 00:03:38,440
+and get advice from expertise across
+ 
+
+211
+00:03:38,440 --> 00:03:41,750
+and get advice from expertise across
+your team and seniors and catch mistakes
+
+212
+00:03:41,750 --> 00:03:41,760
+your team and seniors and catch mistakes
+ 
+
+213
+00:03:41,760 --> 00:03:42,870
+your team and seniors and catch mistakes
+uh and course correct if things were
+
+214
+00:03:42,870 --> 00:03:42,880
+uh and course correct if things were
+ 
+
+215
+00:03:42,880 --> 00:03:44,350
+uh and course correct if things were
+going wrong.
+
+216
+00:03:44,350 --> 00:03:44,360
+going wrong.
+ 
+
+217
+00:03:44,360 --> 00:03:46,390
+going wrong.
+But by the time the code is reviewed and
+
+218
+00:03:46,390 --> 00:03:46,400
+But by the time the code is reviewed and
+ 
+
+219
+00:03:46,400 --> 00:03:48,270
+But by the time the code is reviewed and
+merged, the whole team had seen the work
+
+220
+00:03:48,270 --> 00:03:48,280
+merged, the whole team had seen the work
+ 
+
+221
+00:03:48,280 --> 00:03:49,910
+merged, the whole team had seen the work
+right happening and they were roughly on
+
+222
+00:03:49,910 --> 00:03:49,920
+right happening and they were roughly on
+ 
+
+223
+00:03:49,920 --> 00:03:52,070
+right happening and they were roughly on
+the same page.
+
+224
+00:03:52,070 --> 00:03:52,080
+the same page.
+ 
+
+225
+00:03:52,080 --> 00:03:53,550
+the same page.
+But that implementation window has now
+
+226
+00:03:53,550 --> 00:03:53,560
+But that implementation window has now
+ 
+
+227
+00:03:53,560 --> 00:03:54,790
+But that implementation window has now
+collapsed.
+
+228
+00:03:54,790 --> 00:03:54,800
+collapsed.
+ 
+
+229
+00:03:54,800 --> 00:03:56,670
+collapsed.
+And because implementation is no longer
+
+230
+00:03:56,670 --> 00:03:56,680
+And because implementation is no longer
+ 
+
+231
+00:03:56,680 --> 00:03:58,550
+And because implementation is no longer
+as expensive and time-consuming, we
+
+232
+00:03:58,550 --> 00:03:58,560
+as expensive and time-consuming, we
+ 
+
+233
+00:03:58,560 --> 00:04:00,950
+as expensive and time-consuming, we
+think we don't need to plan as much.
+
+234
+00:04:00,950 --> 00:04:00,960
+think we don't need to plan as much.
+ 
+
+235
+00:04:00,960 --> 00:04:02,470
+think we don't need to plan as much.
+So most of those early touchpoints
+
+236
+00:04:02,470 --> 00:04:02,480
+So most of those early touchpoints
+ 
+
+237
+00:04:02,480 --> 00:04:04,910
+So most of those early touchpoints
+actually disappear.
+
+238
+00:04:04,910 --> 00:04:04,920
+actually disappear.
+ 
+
+239
+00:04:04,920 --> 00:04:06,270
+actually disappear.
+And we know the review time for
+
+240
+00:04:06,270 --> 00:04:06,280
+And we know the review time for
+ 
+
+241
+00:04:06,280 --> 00:04:08,230
+And we know the review time for
+generated code is actually increased. So
+
+242
+00:04:08,230 --> 00:04:08,240
+generated code is actually increased. So
+ 
+
+243
+00:04:08,240 --> 00:04:10,070
+generated code is actually increased. So
+that creates more points of alignment,
+
+244
+00:04:10,070 --> 00:04:10,080
+that creates more points of alignment,
+ 
+
+245
+00:04:10,080 --> 00:04:11,470
+that creates more points of alignment,
+but they're actually on the wrong side
+
+246
+00:04:11,470 --> 00:04:11,480
+but they're actually on the wrong side
+ 
+
+247
+00:04:11,480 --> 00:04:14,310
+but they're actually on the wrong side
+of the implementation.
+
+248
+00:04:14,310 --> 00:04:14,320
+of the implementation.
+ 
+
+249
+00:04:14,320 --> 00:04:15,950
+of the implementation.
+The time between logging an issue and an
+
+250
+00:04:15,950 --> 00:04:15,960
+The time between logging an issue and an
+ 
+
+251
+00:04:15,960 --> 00:04:17,949
+The time between logging an issue and an
+agent opening a PR is now a couple of
+
+252
+00:04:17,949 --> 00:04:17,959
+agent opening a PR is now a couple of
+ 
+
+253
+00:04:17,959 --> 00:04:20,270
+agent opening a PR is now a couple of
+minutes. The code is so cheap that we
+
+254
+00:04:20,270 --> 00:04:20,280
+minutes. The code is so cheap that we
+ 
+
+255
+00:04:20,280 --> 00:04:21,949
+minutes. The code is so cheap that we
+don't properly stop to think before we
+
+256
+00:04:21,949 --> 00:04:21,959
+don't properly stop to think before we
+ 
+
+257
+00:04:21,959 --> 00:04:24,270
+don't properly stop to think before we
+prompt it.
+
+258
+00:04:24,270 --> 00:04:24,280
+prompt it.
+ 
+
+259
+00:04:24,280 --> 00:04:26,630
+prompt it.
+Unhelpfully, most coding agents also
+
+260
+00:04:26,630 --> 00:04:26,640
+Unhelpfully, most coding agents also
+ 
+
+261
+00:04:26,640 --> 00:04:27,950
+Unhelpfully, most coding agents also
+have this local plan mode that is
+
+262
+00:04:27,950 --> 00:04:27,960
+have this local plan mode that is
+ 
+
+263
+00:04:27,960 --> 00:04:30,310
+have this local plan mode that is
+completely unshared with other people.
+
+264
+00:04:30,310 --> 00:04:30,320
+completely unshared with other people.
+ 
+
+265
+00:04:30,320 --> 00:04:32,190
+completely unshared with other people.
+So you're not even your team on whether
+
+266
+00:04:32,190 --> 00:04:32,200
+So you're not even your team on whether
+ 
+
+267
+00:04:32,200 --> 00:04:34,270
+So you're not even your team on whether
+the plan it made is good before you ship
+
+268
+00:04:34,270 --> 00:04:34,280
+the plan it made is good before you ship
+ 
+
+269
+00:04:34,280 --> 00:04:36,390
+the plan it made is good before you ship
+it, if you even read it. And so we lose
+
+270
+00:04:36,390 --> 00:04:36,400
+it, if you even read it. And so we lose
+ 
+
+271
+00:04:36,400 --> 00:04:38,670
+it, if you even read it. And so we lose
+even more alignment points.
+
+272
+00:04:38,670 --> 00:04:38,680
+even more alignment points.
+ 
+
+273
+00:04:38,680 --> 00:04:40,350
+even more alignment points.
+This leaves the weight
+
+274
+00:04:40,350 --> 00:04:40,360
+This leaves the weight
+ 
+
+275
+00:04:40,360 --> 00:04:42,470
+This leaves the weight
+of all that alignment to sit on the pull
+
+276
+00:04:42,470 --> 00:04:42,480
+of all that alignment to sit on the pull
+ 
+
+277
+00:04:42,480 --> 00:04:44,750
+of all that alignment to sit on the pull
+request. All those checkpoints now come
+
+278
+00:04:44,750 --> 00:04:44,760
+request. All those checkpoints now come
+ 
+
+279
+00:04:44,760 --> 00:04:46,710
+request. All those checkpoints now come
+after the implementation at the end of
+
+280
+00:04:46,710 --> 00:04:46,720
+after the implementation at the end of
+ 
+
+281
+00:04:46,720 --> 00:04:48,790
+after the implementation at the end of
+the process when it's too late. And it's
+
+282
+00:04:48,790 --> 00:04:48,800
+the process when it's too late. And it's
+ 
+
+283
+00:04:48,800 --> 00:04:50,190
+the process when it's too late. And it's
+never what PRs were really designed to
+
+284
+00:04:50,190 --> 00:04:50,200
+never what PRs were really designed to
+ 
+
+285
+00:04:50,200 --> 00:04:51,710
+never what PRs were really designed to
+do in the first place, so they perform
+
+286
+00:04:51,710 --> 00:04:51,720
+do in the first place, so they perform
+ 
+
+287
+00:04:51,720 --> 00:04:53,430
+do in the first place, so they perform
+poorly at it.
+
+288
+00:04:53,430 --> 00:04:53,440
+poorly at it.
+ 
+
+289
+00:04:53,440 --> 00:04:55,550
+poorly at it.
+None of our current tools give teams a
+
+290
+00:04:55,550 --> 00:04:55,560
+None of our current tools give teams a
+ 
+
+291
+00:04:55,560 --> 00:04:57,830
+None of our current tools give teams a
+shared space to discuss plans, gather
+
+292
+00:04:57,830 --> 00:04:57,840
+shared space to discuss plans, gather
+ 
+
+293
+00:04:57,840 --> 00:04:59,790
+shared space to discuss plans, gather
+the right context, and work with agents
+
+294
+00:04:59,790 --> 00:04:59,800
+the right context, and work with agents
+ 
+
+295
+00:04:59,800 --> 00:05:02,750
+the right context, and work with agents
+as a collective.
+
+296
+00:05:02,750 --> 00:05:02,760
+as a collective.
+ 
+
+297
+00:05:02,760 --> 00:05:04,150
+as a collective.
+We're all experiencing the repercussions
+
+298
+00:05:04,150 --> 00:05:04,160
+We're all experiencing the repercussions
+ 
+
+299
+00:05:04,160 --> 00:05:06,150
+We're all experiencing the repercussions
+of this. Going fast without good
+
+300
+00:05:06,150 --> 00:05:06,160
+of this. Going fast without good
+ 
+
+301
+00:05:06,160 --> 00:05:08,350
+of this. Going fast without good
+alignment leads to wasted work. So this
+
+302
+00:05:08,350 --> 00:05:08,360
+alignment leads to wasted work. So this
+ 
+
+303
+00:05:08,360 --> 00:05:10,190
+alignment leads to wasted work. So this
+is like features no one asked for and
+
+304
+00:05:10,190 --> 00:05:10,200
+is like features no one asked for and
+ 
+
+305
+00:05:10,200 --> 00:05:12,310
+is like features no one asked for and
+that don't actually solve real problems.
+
+306
+00:05:12,310 --> 00:05:12,320
+that don't actually solve real problems.
+ 
+
+307
+00:05:12,320 --> 00:05:14,150
+that don't actually solve real problems.
+And receiving critical feedback after
+
+308
+00:05:14,150 --> 00:05:14,160
+And receiving critical feedback after
+ 
+
+309
+00:05:14,160 --> 00:05:15,950
+And receiving critical feedback after
+you finish something that ends up
+
+310
+00:05:15,950 --> 00:05:15,960
+you finish something that ends up
+ 
+
+311
+00:05:15,960 --> 00:05:17,190
+you finish something that ends up
+meaning you have to toss the whole thing
+
+312
+00:05:17,190 --> 00:05:17,200
+meaning you have to toss the whole thing
+ 
+
+313
+00:05:17,200 --> 00:05:18,270
+meaning you have to toss the whole thing
+out.
+
+314
+00:05:18,270 --> 00:05:18,280
+out.
+ 
+
+315
+00:05:18,280 --> 00:05:20,030
+out.
+And also coordination debts. This is
+
+316
+00:05:20,030 --> 00:05:20,040
+And also coordination debts. This is
+ 
+
+317
+00:05:20,040 --> 00:05:21,310
+And also coordination debts. This is
+when you get really hairy merge
+
+318
+00:05:21,310 --> 00:05:21,320
+when you get really hairy merge
+ 
+
+319
+00:05:21,320 --> 00:05:22,710
+when you get really hairy merge
+conflicts because agents will touch in
+
+320
+00:05:22,710 --> 00:05:22,720
+conflicts because agents will touch in
+ 
+
+321
+00:05:22,720 --> 00:05:24,870
+conflicts because agents will touch in
+the same files or developers even doing
+
+322
+00:05:24,870 --> 00:05:24,880
+the same files or developers even doing
+ 
+
+323
+00:05:24,880 --> 00:05:26,430
+the same files or developers even doing
+duplicated work because they both picked
+
+324
+00:05:26,430 --> 00:05:26,440
+duplicated work because they both picked
+ 
+
+325
+00:05:26,440 --> 00:05:27,750
+duplicated work because they both picked
+up a thing and tried to finish it in one
+
+326
+00:05:27,750 --> 00:05:27,760
+up a thing and tried to finish it in one
+ 
+
+327
+00:05:27,760 --> 00:05:28,750
+up a thing and tried to finish it in one
+day.
+
+328
+00:05:28,750 --> 00:05:28,760
+day.
+ 
+
+329
+00:05:28,760 --> 00:05:31,150
+day.
+Um or as we all know, we all have giant
+
+330
+00:05:31,150 --> 00:05:31,160
+Um or as we all know, we all have giant
+ 
+
+331
+00:05:31,160 --> 00:05:32,830
+Um or as we all know, we all have giant
+stacks of PRs to review that nobody has
+
+332
+00:05:32,830 --> 00:05:32,840
+stacks of PRs to review that nobody has
+ 
+
+333
+00:05:32,840 --> 00:05:34,230
+stacks of PRs to review that nobody has
+any context for and don't even know
+
+334
+00:05:34,230 --> 00:05:34,240
+any context for and don't even know
+ 
+
+335
+00:05:34,240 --> 00:05:35,870
+any context for and don't even know
+what's in them.
+
+336
+00:05:35,870 --> 00:05:35,880
+what's in them.
+ 
+
+337
+00:05:35,880 --> 00:05:38,510
+what's in them.
+So, how do we solve this?
+
+338
+00:05:38,510 --> 00:05:38,520
+So, how do we solve this?
+ 
+
+339
+00:05:38,520 --> 00:05:40,310
+So, how do we solve this?
+We need tools that help everyone on the
+
+340
+00:05:40,310 --> 00:05:40,320
+We need tools that help everyone on the
+ 
+
+341
+00:05:40,320 --> 00:05:42,590
+We need tools that help everyone on the
+team align before the agents start
+
+342
+00:05:42,590 --> 00:05:42,600
+team align before the agents start
+ 
+
+343
+00:05:42,600 --> 00:05:44,790
+team align before the agents start
+working, not after.
+
+344
+00:05:44,790 --> 00:05:44,800
+working, not after.
+ 
+
+345
+00:05:44,800 --> 00:05:45,830
+working, not after.
+That alignment needs to happen
+
+346
+00:05:45,830 --> 00:05:45,840
+That alignment needs to happen
+ 
+
+347
+00:05:45,840 --> 00:05:48,550
+That alignment needs to happen
+constantly alongside the implementation.
+
+348
+00:05:48,550 --> 00:05:48,560
+constantly alongside the implementation.
+ 
+
+349
+00:05:48,560 --> 00:05:50,030
+constantly alongside the implementation.
+Planning and building are no longer
+
+350
+00:05:50,030 --> 00:05:50,040
+Planning and building are no longer
+ 
+
+351
+00:05:50,040 --> 00:05:52,830
+Planning and building are no longer
+separate phases, they are now a cycle.
+
+352
+00:05:52,830 --> 00:05:52,840
+separate phases, they are now a cycle.
+ 
+
+353
+00:05:52,840 --> 00:05:54,390
+separate phases, they are now a cycle.
+The tools of the future need to bring
+
+354
+00:05:54,390 --> 00:05:54,400
+The tools of the future need to bring
+ 
+
+355
+00:05:54,400 --> 00:05:55,910
+The tools of the future need to bring
+planning, context gathering, and
+
+356
+00:05:55,910 --> 00:05:55,920
+planning, context gathering, and
+ 
+
+357
+00:05:55,920 --> 00:05:57,430
+planning, context gathering, and
+decision-making, and development
+
+358
+00:05:57,430 --> 00:05:57,440
+decision-making, and development
+ 
+
+359
+00:05:57,440 --> 00:06:01,270
+decision-making, and development
+underneath one roof.
+
+360
+00:06:01,270 --> 00:06:01,280
+
+ 
+
+361
+00:06:01,280 --> 00:06:02,990
+
+This is especially true because most of
+
+362
+00:06:02,990 --> 00:06:03,000
+This is especially true because most of
+ 
+
+363
+00:06:03,000 --> 00:06:04,710
+This is especially true because most of
+the context that you need for alignment
+
+364
+00:06:04,710 --> 00:06:04,720
+the context that you need for alignment
+ 
+
+365
+00:06:04,720 --> 00:06:06,190
+the context that you need for alignment
+and to build the right thing is not in
+
+366
+00:06:06,190 --> 00:06:06,200
+and to build the right thing is not in
+ 
+
+367
+00:06:06,200 --> 00:06:09,790
+and to build the right thing is not in
+the code base. It's in people's heads.
+
+368
+00:06:09,790 --> 00:06:09,800
+the code base. It's in people's heads.
+ 
+
+369
+00:06:09,800 --> 00:06:11,350
+the code base. It's in people's heads.
+The business context and the financial
+
+370
+00:06:11,350 --> 00:06:11,360
+The business context and the financial
+ 
+
+371
+00:06:11,360 --> 00:06:12,950
+The business context and the financial
+resources determine what the correct
+
+372
+00:06:12,950 --> 00:06:12,960
+resources determine what the correct
+ 
+
+373
+00:06:12,960 --> 00:06:14,830
+resources determine what the correct
+thing to build is, the political
+
+374
+00:06:14,830 --> 00:06:14,840
+thing to build is, the political
+ 
+
+375
+00:06:14,840 --> 00:06:16,710
+thing to build is, the political
+dynamics of who's in charge and who gets
+
+376
+00:06:16,710 --> 00:06:16,720
+dynamics of who's in charge and who gets
+ 
+
+377
+00:06:16,720 --> 00:06:18,830
+dynamics of who's in charge and who gets
+to make decisions, the product vision
+
+378
+00:06:18,830 --> 00:06:18,840
+to make decisions, the product vision
+ 
+
+379
+00:06:18,840 --> 00:06:20,990
+to make decisions, the product vision
+from leaders, the user research insight
+
+380
+00:06:20,990 --> 00:06:21,000
+from leaders, the user research insight
+ 
+
+381
+00:06:21,000 --> 00:06:23,110
+from leaders, the user research insight
+from designers, and the organization's
+
+382
+00:06:23,110 --> 00:06:23,120
+from designers, and the organization's
+ 
+
+383
+00:06:23,120 --> 00:06:25,590
+from designers, and the organization's
+history and what you've built before.
+
+384
+00:06:25,590 --> 00:06:25,600
+history and what you've built before.
+ 
+
+385
+00:06:25,600 --> 00:06:27,470
+history and what you've built before.
+These all matter immensely when you're
+
+386
+00:06:27,470 --> 00:06:27,480
+These all matter immensely when you're
+ 
+
+387
+00:06:27,480 --> 00:06:28,950
+These all matter immensely when you're
+deciding what the right thing for your
+
+388
+00:06:28,950 --> 00:06:28,960
+deciding what the right thing for your
+ 
+
+389
+00:06:28,960 --> 00:06:31,030
+deciding what the right thing for your
+team to build is. And the agents can
+
+390
+00:06:31,030 --> 00:06:31,040
+team to build is. And the agents can
+ 
+
+391
+00:06:31,040 --> 00:06:32,910
+team to build is. And the agents can
+never discover this context on their
+
+392
+00:06:32,910 --> 00:06:32,920
+never discover this context on their
+ 
+
+393
+00:06:32,920 --> 00:06:34,990
+never discover this context on their
+own. You need a way to get humans to
+
+394
+00:06:34,990 --> 00:06:35,000
+own. You need a way to get humans to
+ 
+
+395
+00:06:35,000 --> 00:06:37,710
+own. You need a way to get humans to
+share it early and naturally without
+
+396
+00:06:37,710 --> 00:06:37,720
+share it early and naturally without
+ 
+
+397
+00:06:37,720 --> 00:06:40,750
+share it early and naturally without
+adding process and overhead.
+
+398
+00:06:40,750 --> 00:06:40,760
+adding process and overhead.
+ 
+
+399
+00:06:40,760 --> 00:06:42,750
+adding process and overhead.
+So all of this has been very clear to us
+
+400
+00:06:42,750 --> 00:06:42,760
+So all of this has been very clear to us
+ 
+
+401
+00:06:42,760 --> 00:06:44,310
+So all of this has been very clear to us
+on the next team.
+
+402
+00:06:44,310 --> 00:06:44,320
+on the next team.
+ 
+
+403
+00:06:44,320 --> 00:06:45,550
+on the next team.
+Um and we've been building a new
+
+404
+00:06:45,550 --> 00:06:45,560
+Um and we've been building a new
+ 
+
+405
+00:06:45,560 --> 00:06:47,270
+Um and we've been building a new
+research prototype that explores how we
+
+406
+00:06:47,270 --> 00:06:47,280
+research prototype that explores how we
+ 
+
+407
+00:06:47,280 --> 00:06:49,790
+research prototype that explores how we
+might solve some of these problems.
+
+408
+00:06:49,790 --> 00:06:49,800
+might solve some of these problems.
+ 
+
+409
+00:06:49,800 --> 00:06:51,710
+might solve some of these problems.
+It's called ACE, stands for Agent
+
+410
+00:06:51,710 --> 00:06:51,720
+It's called ACE, stands for Agent
+ 
+
+411
+00:06:51,720 --> 00:06:53,790
+It's called ACE, stands for Agent
+Collaboration Environment. Uh it's not a
+
+412
+00:06:53,790 --> 00:06:53,800
+Collaboration Environment. Uh it's not a
+ 
+
+413
+00:06:53,800 --> 00:06:55,190
+Collaboration Environment. Uh it's not a
+primetime product yet. So like if it
+
+414
+00:06:55,190 --> 00:06:55,200
+primetime product yet. So like if it
+ 
+
+415
+00:06:55,200 --> 00:06:56,350
+primetime product yet. So like if it
+looks pretty rough around the edges,
+
+416
+00:06:56,350 --> 00:06:56,360
+looks pretty rough around the edges,
+ 
+
+417
+00:06:56,360 --> 00:06:57,950
+looks pretty rough around the edges,
+it's because it is.
+
+418
+00:06:57,950 --> 00:06:57,960
+it's because it is.
+ 
+
+419
+00:06:57,960 --> 00:06:59,350
+it's because it is.
+Um we're about to go into technical
+
+420
+00:06:59,350 --> 00:06:59,360
+Um we're about to go into technical
+ 
+
+421
+00:06:59,360 --> 00:07:00,470
+Um we're about to go into technical
+preview and we're going to use it to
+
+422
+00:07:00,470 --> 00:07:00,480
+preview and we're going to use it to
+ 
+
+423
+00:07:00,480 --> 00:07:02,750
+preview and we're going to use it to
+test it with a few thousand people. Um
+
+424
+00:07:02,750 --> 00:07:02,760
+test it with a few thousand people. Um
+ 
+
+425
+00:07:02,760 --> 00:07:03,750
+test it with a few thousand people. Um
+then we're going to learn how people
+
+426
+00:07:03,750 --> 00:07:03,760
+then we're going to learn how people
+ 
+
+427
+00:07:03,760 --> 00:07:05,110
+then we're going to learn how people
+collaborate in it and iterate from
+
+428
+00:07:05,110 --> 00:07:05,120
+collaborate in it and iterate from
+ 
+
+429
+00:07:05,120 --> 00:07:07,270
+collaborate in it and iterate from
+there.
+
+430
+00:07:07,270 --> 00:07:07,280
+there.
+ 
+
+431
+00:07:07,280 --> 00:07:09,390
+there.
+So here we are in ACE. It probably looks
+
+432
+00:07:09,390 --> 00:07:09,400
+So here we are in ACE. It probably looks
+ 
+
+433
+00:07:09,400 --> 00:07:11,270
+So here we are in ACE. It probably looks
+pretty familiar. We're not reinventing
+
+434
+00:07:11,270 --> 00:07:11,280
+pretty familiar. We're not reinventing
+ 
+
+435
+00:07:11,280 --> 00:07:13,270
+pretty familiar. We're not reinventing
+any more wheels than we have to.
+
+436
+00:07:13,270 --> 00:07:13,280
+any more wheels than we have to.
+ 
+
+437
+00:07:13,280 --> 00:07:15,550
+any more wheels than we have to.
+Uh it looks a bit like Slack, GitHub,
+
+438
+00:07:15,550 --> 00:07:15,560
+Uh it looks a bit like Slack, GitHub,
+ 
+
+439
+00:07:15,560 --> 00:07:17,270
+Uh it looks a bit like Slack, GitHub,
+Copilot, and a bunch of cloud computers
+
+440
+00:07:17,270 --> 00:07:17,280
+Copilot, and a bunch of cloud computers
+ 
+
+441
+00:07:17,280 --> 00:07:18,630
+Copilot, and a bunch of cloud computers
+had a baby.
+
+442
+00:07:18,630 --> 00:07:18,640
+had a baby.
+ 
+
+443
+00:07:18,640 --> 00:07:21,110
+had a baby.
+So we have our sessions list here on the
+
+444
+00:07:21,110 --> 00:07:21,120
+So we have our sessions list here on the
+ 
+
+445
+00:07:21,120 --> 00:07:22,750
+So we have our sessions list here on the
+left and sessions are where you do work,
+
+446
+00:07:22,750 --> 00:07:22,760
+left and sessions are where you do work,
+ 
+
+447
+00:07:22,760 --> 00:07:24,070
+left and sessions are where you do work,
+right? It's a multiplayer chat, it's
+
+448
+00:07:24,070 --> 00:07:24,080
+right? It's a multiplayer chat, it's
+ 
+
+449
+00:07:24,080 --> 00:07:25,710
+right? It's a multiplayer chat, it's
+like a Slack channel.
+
+450
+00:07:25,710 --> 00:07:25,720
+like a Slack channel.
+ 
+
+451
+00:07:25,720 --> 00:07:27,550
+like a Slack channel.
+I have team teammates in here and I can
+
+452
+00:07:27,550 --> 00:07:27,560
+I have team teammates in here and I can
+ 
+
+453
+00:07:27,560 --> 00:07:29,230
+I have team teammates in here and I can
+talk to them about the work we're doing,
+
+454
+00:07:29,230 --> 00:07:29,240
+talk to them about the work we're doing,
+ 
+
+455
+00:07:29,240 --> 00:07:31,070
+talk to them about the work we're doing,
+but I also have my coding agents in
+
+456
+00:07:31,070 --> 00:07:31,080
+but I also have my coding agents in
+ 
+
+457
+00:07:31,080 --> 00:07:32,910
+but I also have my coding agents in
+here.
+
+458
+00:07:32,910 --> 00:07:32,920
+here.
+ 
+
+459
+00:07:32,920 --> 00:07:34,790
+here.
+Each session is more than a chat channel
+
+460
+00:07:34,790 --> 00:07:34,800
+Each session is more than a chat channel
+ 
+
+461
+00:07:34,800 --> 00:07:37,150
+Each session is more than a chat channel
+though. It is also backed by a micro VM.
+
+462
+00:07:37,150 --> 00:07:37,160
+though. It is also backed by a micro VM.
+ 
+
+463
+00:07:37,160 --> 00:07:39,350
+though. It is also backed by a micro VM.
+So a sandboxed computer in the cloud on
+
+464
+00:07:39,350 --> 00:07:39,360
+So a sandboxed computer in the cloud on
+ 
+
+465
+00:07:39,360 --> 00:07:41,110
+So a sandboxed computer in the cloud on
+its own Git branch.
+
+466
+00:07:41,110 --> 00:07:41,120
+its own Git branch.
+ 
+
+467
+00:07:41,120 --> 00:07:42,670
+its own Git branch.
+The changes we make in each session are
+
+468
+00:07:42,670 --> 00:07:42,680
+The changes we make in each session are
+ 
+
+469
+00:07:42,680 --> 00:07:44,430
+The changes we make in each session are
+isolated, so we can work on parallel
+
+470
+00:07:44,430 --> 00:07:44,440
+isolated, so we can work on parallel
+ 
+
+471
+00:07:44,440 --> 00:07:47,030
+isolated, so we can work on parallel
+tasks and instantly switch between them.
+
+472
+00:07:47,030 --> 00:07:47,040
+tasks and instantly switch between them.
+ 
+
+473
+00:07:47,040 --> 00:07:48,790
+tasks and instantly switch between them.
+If I want to tap one of my teammates on
+
+474
+00:07:48,790 --> 00:07:48,800
+If I want to tap one of my teammates on
+ 
+
+475
+00:07:48,800 --> 00:07:50,630
+If I want to tap one of my teammates on
+the shoulder and get their thoughts on a
+
+476
+00:07:50,630 --> 00:07:50,640
+the shoulder and get their thoughts on a
+ 
+
+477
+00:07:50,640 --> 00:07:52,190
+the shoulder and get their thoughts on a
+feature I'm building, nobody has to
+
+478
+00:07:52,190 --> 00:07:52,200
+feature I'm building, nobody has to
+ 
+
+479
+00:07:52,200 --> 00:07:53,990
+feature I'm building, nobody has to
+stash their Git changes and like pull
+
+480
+00:07:53,990 --> 00:07:54,000
+stash their Git changes and like pull
+ 
+
+481
+00:07:54,000 --> 00:07:55,510
+stash their Git changes and like pull
+down a new branch or like wrestle with
+
+482
+00:07:55,510 --> 00:07:55,520
+down a new branch or like wrestle with
+ 
+
+483
+00:07:55,520 --> 00:07:57,750
+down a new branch or like wrestle with
+local work trees. I just jump into their
+
+484
+00:07:57,750 --> 00:07:57,760
+local work trees. I just jump into their
+ 
+
+485
+00:07:57,760 --> 00:07:59,110
+local work trees. I just jump into their
+session and I see what they're doing in
+
+486
+00:07:59,110 --> 00:07:59,120
+session and I see what they're doing in
+ 
+
+487
+00:07:59,120 --> 00:08:00,390
+session and I see what they're doing in
+a click.
+
+488
+00:08:00,390 --> 00:08:00,400
+a click.
+ 
+
+489
+00:08:00,400 --> 00:08:02,190
+a click.
+And this includes their entire prompting
+
+490
+00:08:02,190 --> 00:08:02,200
+And this includes their entire prompting
+ 
+
+491
+00:08:02,200 --> 00:08:03,670
+And this includes their entire prompting
+history with the agent, so I have the
+
+492
+00:08:03,670 --> 00:08:03,680
+history with the agent, so I have the
+ 
+
+493
+00:08:03,680 --> 00:08:05,110
+history with the agent, so I have the
+context about how they got to the
+
+494
+00:08:05,110 --> 00:08:05,120
+context about how they got to the
+ 
+
+495
+00:08:05,120 --> 00:08:07,790
+context about how they got to the
+current outputs.
+
+496
+00:08:07,790 --> 00:08:07,800
+current outputs.
+ 
+
+497
+00:08:07,800 --> 00:08:09,510
+current outputs.
+Just like a local machine, I can run
+
+498
+00:08:09,510 --> 00:08:09,520
+Just like a local machine, I can run
+ 
+
+499
+00:08:09,520 --> 00:08:11,390
+Just like a local machine, I can run
+terminal commands in this session. Here
+
+500
+00:08:11,390 --> 00:08:11,400
+terminal commands in this session. Here
+ 
+
+501
+00:08:11,400 --> 00:08:13,270
+terminal commands in this session. Here
+I'm going to run bun install and bun dev
+
+502
+00:08:13,270 --> 00:08:13,280
+I'm going to run bun install and bun dev
+ 
+
+503
+00:08:13,280 --> 00:08:15,350
+I'm going to run bun install and bun dev
+to get my current project running.
+
+504
+00:08:15,350 --> 00:08:15,360
+to get my current project running.
+ 
+
+505
+00:08:15,360 --> 00:08:17,150
+to get my current project running.
+I'm going to see in a minute uh my live
+
+506
+00:08:17,150 --> 00:08:17,160
+I'm going to see in a minute uh my live
+ 
+
+507
+00:08:17,160 --> 00:08:18,790
+I'm going to see in a minute uh my live
+preview in the browser on the side is
+
+508
+00:08:18,790 --> 00:08:18,800
+preview in the browser on the side is
+ 
+
+509
+00:08:18,800 --> 00:08:21,310
+preview in the browser on the side is
+going to pop up when I open the port. Um
+
+510
+00:08:21,310 --> 00:08:21,320
+going to pop up when I open the port. Um
+ 
+
+511
+00:08:21,320 --> 00:08:23,110
+going to pop up when I open the port. Um
+the demo project we have here is a calm
+
+512
+00:08:23,110 --> 00:08:23,120
+the demo project we have here is a calm
+ 
+
+513
+00:08:23,120 --> 00:08:24,670
+the demo project we have here is a calm
+version of Hacker News, so it only shows
+
+514
+00:08:24,670 --> 00:08:24,680
+version of Hacker News, so it only shows
+ 
+
+515
+00:08:24,680 --> 00:08:26,870
+version of Hacker News, so it only shows
+you top three stories from the last uh
+
+516
+00:08:26,870 --> 00:08:26,880
+you top three stories from the last uh
+ 
+
+517
+00:08:26,880 --> 00:08:28,150
+you top three stories from the last uh
+top stories from the last three months,
+
+518
+00:08:28,150 --> 00:08:28,160
+top stories from the last three months,
+ 
+
+519
+00:08:28,160 --> 00:08:29,670
+top stories from the last three months,
+which is a bit more chill than every
+
+520
+00:08:29,670 --> 00:08:29,680
+which is a bit more chill than every
+ 
+
+521
+00:08:29,680 --> 00:08:30,510
+which is a bit more chill than every
+day.
+
+522
+00:08:30,510 --> 00:08:30,520
+day.
+ 
+
+523
+00:08:30,520 --> 00:08:31,950
+day.
+Um and I'm going to ask the agent to
+
+524
+00:08:31,950 --> 00:08:31,960
+Um and I'm going to ask the agent to
+ 
+
+525
+00:08:31,960 --> 00:08:33,510
+Um and I'm going to ask the agent to
+change the color theme to purple here
+
+526
+00:08:33,510 --> 00:08:33,520
+change the color theme to purple here
+ 
+
+527
+00:08:33,520 --> 00:08:34,870
+change the color theme to purple here
+and you'll see in a second it instantly
+
+528
+00:08:34,870 --> 00:08:34,880
+and you'll see in a second it instantly
+ 
+
+529
+00:08:34,880 --> 00:08:36,510
+and you'll see in a second it instantly
+appears in my preview. Right, it's just
+
+530
+00:08:36,510 --> 00:08:36,520
+appears in my preview. Right, it's just
+ 
+
+531
+00:08:36,520 --> 00:08:38,149
+appears in my preview. Right, it's just
+running the code.
+
+532
+00:08:38,149 --> 00:08:38,159
+running the code.
+ 
+
+533
+00:08:38,159 --> 00:08:39,950
+running the code.
+Uh and the agent has also made an
+
+534
+00:08:39,950 --> 00:08:39,960
+Uh and the agent has also made an
+ 
+
+535
+00:08:39,960 --> 00:08:41,190
+Uh and the agent has also made an
+automatic commit for me with a nice
+
+536
+00:08:41,190 --> 00:08:41,200
+automatic commit for me with a nice
+ 
+
+537
+00:08:41,200 --> 00:08:42,630
+automatic commit for me with a nice
+commit message and I can open the diffs
+
+538
+00:08:42,630 --> 00:08:42,640
+commit message and I can open the diffs
+ 
+
+539
+00:08:42,640 --> 00:08:44,149
+commit message and I can open the diffs
+and see the diffs, all kind of standard
+
+540
+00:08:44,149 --> 00:08:44,159
+and see the diffs, all kind of standard
+ 
+
+541
+00:08:44,159 --> 00:08:45,190
+and see the diffs, all kind of standard
+things you would expect from code
+
+542
+00:08:45,190 --> 00:08:45,200
+things you would expect from code
+ 
+
+543
+00:08:45,200 --> 00:08:47,510
+things you would expect from code
+agents.
+
+544
+00:08:47,510 --> 00:08:47,520
+agents.
+ 
+
+545
+00:08:47,520 --> 00:08:48,870
+agents.
+So let's say we want to do some real
+
+546
+00:08:48,870 --> 00:08:48,880
+So let's say we want to do some real
+ 
+
+547
+00:08:48,880 --> 00:08:50,590
+So let's say we want to do some real
+work. Uh I have my teammates here in
+
+548
+00:08:50,590 --> 00:08:50,600
+work. Uh I have my teammates here in
+ 
+
+549
+00:08:50,600 --> 00:08:52,030
+work. Uh I have my teammates here in
+this session with me.
+
+550
+00:08:52,030 --> 00:08:52,040
+this session with me.
+ 
+
+551
+00:08:52,040 --> 00:08:53,390
+this session with me.
+Uh and I'm going to ask ACE to add some
+
+552
+00:08:53,390 --> 00:08:53,400
+Uh and I'm going to ask ACE to add some
+ 
+
+553
+00:08:53,400 --> 00:08:55,710
+Uh and I'm going to ask ACE to add some
+additional color themes to my app.
+
+554
+00:08:55,710 --> 00:08:55,720
+additional color themes to my app.
+ 
+
+555
+00:08:55,720 --> 00:08:57,830
+additional color themes to my app.
+We're going to um pick which model we
+
+556
+00:08:57,830 --> 00:08:57,840
+We're going to um pick which model we
+ 
+
+557
+00:08:57,840 --> 00:09:00,430
+We're going to um pick which model we
+want to use and obviously it's Opus 4.6.
+
+558
+00:09:00,430 --> 00:09:00,440
+want to use and obviously it's Opus 4.6.
+ 
+
+559
+00:09:00,440 --> 00:09:02,430
+want to use and obviously it's Opus 4.6.
+And then ACE is going to get started.
+
+560
+00:09:02,430 --> 00:09:02,440
+And then ACE is going to get started.
+ 
+
+561
+00:09:02,440 --> 00:09:04,470
+And then ACE is going to get started.
+Um we also have this handy summary block
+
+562
+00:09:04,470 --> 00:09:04,480
+Um we also have this handy summary block
+ 
+
+563
+00:09:04,480 --> 00:09:06,510
+Um we also have this handy summary block
+in the top right-hand corner.
+
+564
+00:09:06,510 --> 00:09:06,520
+in the top right-hand corner.
+ 
+
+565
+00:09:06,520 --> 00:09:07,790
+in the top right-hand corner.
+Uh this keeps me up to date with the
+
+566
+00:09:07,790 --> 00:09:07,800
+Uh this keeps me up to date with the
+ 
+
+567
+00:09:07,800 --> 00:09:09,150
+Uh this keeps me up to date with the
+latest changes in this session, whether
+
+568
+00:09:09,150 --> 00:09:09,160
+latest changes in this session, whether
+ 
+
+569
+00:09:09,160 --> 00:09:11,070
+latest changes in this session, whether
+they're from me or someone else, which
+
+570
+00:09:11,070 --> 00:09:11,080
+they're from me or someone else, which
+ 
+
+571
+00:09:11,080 --> 00:09:12,350
+they're from me or someone else, which
+means I can switch between lots of
+
+572
+00:09:12,350 --> 00:09:12,360
+means I can switch between lots of
+ 
+
+573
+00:09:12,360 --> 00:09:13,750
+means I can switch between lots of
+people's sessions that are running in
+
+574
+00:09:13,750 --> 00:09:13,760
+people's sessions that are running in
+ 
+
+575
+00:09:13,760 --> 00:09:15,950
+people's sessions that are running in
+parallel and always stay oriented about
+
+576
+00:09:15,950 --> 00:09:15,960
+parallel and always stay oriented about
+ 
+
+577
+00:09:15,960 --> 00:09:17,350
+parallel and always stay oriented about
+what's happening so that you don't get
+
+578
+00:09:17,350 --> 00:09:17,360
+what's happening so that you don't get
+ 
+
+579
+00:09:17,360 --> 00:09:19,310
+what's happening so that you don't get
+overwhelmed with the amount of noise and
+
+580
+00:09:19,310 --> 00:09:19,320
+overwhelmed with the amount of noise and
+ 
+
+581
+00:09:19,320 --> 00:09:21,470
+overwhelmed with the amount of noise and
+activity.
+
+582
+00:09:21,470 --> 00:09:21,480
+activity.
+ 
+
+583
+00:09:21,480 --> 00:09:22,550
+activity.
+But the more important thing is I want
+
+584
+00:09:22,550 --> 00:09:22,560
+But the more important thing is I want
+ 
+
+585
+00:09:22,560 --> 00:09:23,790
+But the more important thing is I want
+to talk to my teammates, right? I want
+
+586
+00:09:23,790 --> 00:09:23,800
+to talk to my teammates, right? I want
+ 
+
+587
+00:09:23,800 --> 00:09:25,990
+to talk to my teammates, right? I want
+to discuss what changes we're making. So
+
+588
+00:09:25,990 --> 00:09:26,000
+to discuss what changes we're making. So
+ 
+
+589
+00:09:26,000 --> 00:09:27,390
+to discuss what changes we're making. So
+I can ask them what they think of the
+
+590
+00:09:27,390 --> 00:09:27,400
+I can ask them what they think of the
+ 
+
+591
+00:09:27,400 --> 00:09:29,350
+I can ask them what they think of the
+current changes. They can spin up the
+
+592
+00:09:29,350 --> 00:09:29,360
+current changes. They can spin up the
+ 
+
+593
+00:09:29,360 --> 00:09:31,150
+current changes. They can spin up the
+dev server themselves because remember
+
+594
+00:09:31,150 --> 00:09:31,160
+dev server themselves because remember
+ 
+
+595
+00:09:31,160 --> 00:09:32,830
+dev server themselves because remember
+we're all working on the same computer
+
+596
+00:09:32,830 --> 00:09:32,840
+we're all working on the same computer
+ 
+
+597
+00:09:32,840 --> 00:09:35,270
+we're all working on the same computer
+in the cloud. This is no problem.
+
+598
+00:09:35,270 --> 00:09:35,280
+in the cloud. This is no problem.
+ 
+
+599
+00:09:35,280 --> 00:09:36,830
+in the cloud. This is no problem.
+We can all see the same preview. We can
+
+600
+00:09:36,830 --> 00:09:36,840
+We can all see the same preview. We can
+ 
+
+601
+00:09:36,840 --> 00:09:38,430
+We can all see the same preview. We can
+all write terminal commands and see the
+
+602
+00:09:38,430 --> 00:09:38,440
+all write terminal commands and see the
+ 
+
+603
+00:09:38,440 --> 00:09:40,070
+all write terminal commands and see the
+shared outputs. No one is going to say
+
+604
+00:09:40,070 --> 00:09:40,080
+shared outputs. No one is going to say
+ 
+
+605
+00:09:40,080 --> 00:09:43,910
+shared outputs. No one is going to say
+this doesn't work on my machine.
+
+606
+00:09:43,910 --> 00:09:43,920
+
+ 
+
+607
+00:09:43,920 --> 00:09:45,550
+
+So my teammates, Nate and Dawn, they're
+
+608
+00:09:45,550 --> 00:09:45,560
+So my teammates, Nate and Dawn, they're
+ 
+
+609
+00:09:45,560 --> 00:09:46,710
+So my teammates, Nate and Dawn, they're
+jumping in here. They've taken some
+
+610
+00:09:46,710 --> 00:09:46,720
+jumping in here. They've taken some
+ 
+
+611
+00:09:46,720 --> 00:09:48,190
+jumping in here. They've taken some
+screenshots. They're suggesting some
+
+612
+00:09:48,190 --> 00:09:48,200
+screenshots. They're suggesting some
+ 
+
+613
+00:09:48,200 --> 00:09:50,910
+screenshots. They're suggesting some
+alternative features, asking questions.
+
+614
+00:09:50,910 --> 00:09:50,920
+alternative features, asking questions.
+ 
+
+615
+00:09:50,920 --> 00:09:52,870
+alternative features, asking questions.
+And now what we're about to see is that
+
+616
+00:09:52,870 --> 00:09:52,880
+And now what we're about to see is that
+ 
+
+617
+00:09:52,880 --> 00:09:55,710
+And now what we're about to see is that
+Nate is going to ask the ACE agent to
+
+618
+00:09:55,710 --> 00:09:55,720
+Nate is going to ask the ACE agent to
+ 
+
+619
+00:09:55,720 --> 00:09:57,510
+Nate is going to ask the ACE agent to
+make changes
+
+620
+00:09:57,510 --> 00:09:57,520
+make changes
+ 
+
+621
+00:09:57,520 --> 00:09:58,990
+make changes
+in a minute.
+
+622
+00:09:58,990 --> 00:09:59,000
+in a minute.
+ 
+
+623
+00:09:59,000 --> 00:10:00,870
+in a minute.
+Where is Nate? There's Nate. So, he said
+
+624
+00:10:00,870 --> 00:10:00,880
+Where is Nate? There's Nate. So, he said
+ 
+
+625
+00:10:00,880 --> 00:10:02,990
+Where is Nate? There's Nate. So, he said
+Ace let's add a teal theme, too.
+
+626
+00:10:02,990 --> 00:10:03,000
+Ace let's add a teal theme, too.
+ 
+
+627
+00:10:03,000 --> 00:10:03,830
+Ace let's add a teal theme, too.
+Um
+
+628
+00:10:03,830 --> 00:10:03,840
+Um
+ 
+
+629
+00:10:03,840 --> 00:10:05,630
+Um
+so, I actually kicked off this session,
+
+630
+00:10:05,630 --> 00:10:05,640
+so, I actually kicked off this session,
+ 
+
+631
+00:10:05,640 --> 00:10:07,030
+so, I actually kicked off this session,
+but Nate is now prompting the agent. So,
+
+632
+00:10:07,030 --> 00:10:07,040
+but Nate is now prompting the agent. So,
+ 
+
+633
+00:10:07,040 --> 00:10:08,590
+but Nate is now prompting the agent. So,
+this is truly multiplayer. Both of us
+
+634
+00:10:08,590 --> 00:10:08,600
+this is truly multiplayer. Both of us
+ 
+
+635
+00:10:08,600 --> 00:10:11,510
+this is truly multiplayer. Both of us
+are sharing this coding session.
+
+636
+00:10:11,510 --> 00:10:11,520
+are sharing this coding session.
+ 
+
+637
+00:10:11,520 --> 00:10:12,870
+are sharing this coding session.
+Uh the agent can also read our whole
+
+638
+00:10:12,870 --> 00:10:12,880
+Uh the agent can also read our whole
+ 
+
+639
+00:10:12,880 --> 00:10:14,310
+Uh the agent can also read our whole
+conversation. That is all input to the
+
+640
+00:10:14,310 --> 00:10:14,320
+conversation. That is all input to the
+ 
+
+641
+00:10:14,320 --> 00:10:16,110
+conversation. That is all input to the
+prompt. So, we can talk about things up
+
+642
+00:10:16,110 --> 00:10:16,120
+prompt. So, we can talk about things up
+ 
+
+643
+00:10:16,120 --> 00:10:17,830
+prompt. So, we can talk about things up
+ahead and just say at Ace, do it.
+
+644
+00:10:17,830 --> 00:10:17,840
+ahead and just say at Ace, do it.
+ 
+
+645
+00:10:17,840 --> 00:10:19,590
+ahead and just say at Ace, do it.
+They'll go do it.
+
+646
+00:10:19,590 --> 00:10:19,600
+They'll go do it.
+ 
+
+647
+00:10:19,600 --> 00:10:21,230
+They'll go do it.
+This kind of accessible Slack-like
+
+648
+00:10:21,230 --> 00:10:21,240
+This kind of accessible Slack-like
+ 
+
+649
+00:10:21,240 --> 00:10:23,350
+This kind of accessible Slack-like
+interface means that um access to a
+
+650
+00:10:23,350 --> 00:10:23,360
+interface means that um access to a
+ 
+
+651
+00:10:23,360 --> 00:10:26,190
+interface means that um access to a
+coding agent is um brings everyone in
+
+652
+00:10:26,190 --> 00:10:26,200
+coding agent is um brings everyone in
+ 
+
+653
+00:10:26,200 --> 00:10:27,590
+coding agent is um brings everyone in
+who's creating software. So, not just
+
+654
+00:10:27,590 --> 00:10:27,600
+who's creating software. So, not just
+ 
+
+655
+00:10:27,600 --> 00:10:29,830
+who's creating software. So, not just
+developers, but designers and PMs and
+
+656
+00:10:29,830 --> 00:10:29,840
+developers, but designers and PMs and
+ 
+
+657
+00:10:29,840 --> 00:10:31,390
+developers, but designers and PMs and
+customer support people can all be in
+
+658
+00:10:31,390 --> 00:10:31,400
+customer support people can all be in
+ 
+
+659
+00:10:31,400 --> 00:10:33,190
+customer support people can all be in
+the same conversation seeing what's
+
+660
+00:10:33,190 --> 00:10:33,200
+the same conversation seeing what's
+ 
+
+661
+00:10:33,200 --> 00:10:35,110
+the same conversation seeing what's
+happening in real time as a feature gets
+
+662
+00:10:35,110 --> 00:10:35,120
+happening in real time as a feature gets
+ 
+
+663
+00:10:35,120 --> 00:10:36,110
+happening in real time as a feature gets
+built.
+
+664
+00:10:36,110 --> 00:10:36,120
+built.
+ 
+
+665
+00:10:36,120 --> 00:10:37,030
+built.
+Because if you're thinking, you know,
+
+666
+00:10:37,030 --> 00:10:37,040
+Because if you're thinking, you know,
+ 
+
+667
+00:10:37,040 --> 00:10:38,470
+Because if you're thinking, you know,
+like why wouldn't we just use Slack for
+
+668
+00:10:38,470 --> 00:10:38,480
+like why wouldn't we just use Slack for
+ 
+
+669
+00:10:38,480 --> 00:10:40,310
+like why wouldn't we just use Slack for
+this? I think it's because Slack is
+
+670
+00:10:40,310 --> 00:10:40,320
+this? I think it's because Slack is
+ 
+
+671
+00:10:40,320 --> 00:10:42,150
+this? I think it's because Slack is
+never going to become a fully featured
+
+672
+00:10:42,150 --> 00:10:42,160
+never going to become a fully featured
+ 
+
+673
+00:10:42,160 --> 00:10:43,950
+never going to become a fully featured
+software development tool unless they
+
+674
+00:10:43,950 --> 00:10:43,960
+software development tool unless they
+ 
+
+675
+00:10:43,960 --> 00:10:45,270
+software development tool unless they
+sincerely pivot from their current
+
+676
+00:10:45,270 --> 00:10:45,280
+sincerely pivot from their current
+ 
+
+677
+00:10:45,280 --> 00:10:46,990
+sincerely pivot from their current
+business. Um so, it's never going to
+
+678
+00:10:46,990 --> 00:10:47,000
+business. Um so, it's never going to
+ 
+
+679
+00:10:47,000 --> 00:10:48,470
+business. Um so, it's never going to
+have the right primitives and I really
+
+680
+00:10:48,470 --> 00:10:48,480
+have the right primitives and I really
+ 
+
+681
+00:10:48,480 --> 00:10:50,070
+have the right primitives and I really
+doubt it's going to add them. You know,
+
+682
+00:10:50,070 --> 00:10:50,080
+doubt it's going to add them. You know,
+ 
+
+683
+00:10:50,080 --> 00:10:51,590
+doubt it's going to add them. You know,
+diffs and terminal commands and that
+
+684
+00:10:51,590 --> 00:10:51,600
+diffs and terminal commands and that
+ 
+
+685
+00:10:51,600 --> 00:10:54,230
+diffs and terminal commands and that
+sort of thing is not Slack's business.
+
+686
+00:10:54,230 --> 00:10:54,240
+sort of thing is not Slack's business.
+ 
+
+687
+00:10:54,240 --> 00:10:55,950
+sort of thing is not Slack's business.
+Um we wanted Ace because it's explicitly
+
+688
+00:10:55,950 --> 00:10:55,960
+Um we wanted Ace because it's explicitly
+ 
+
+689
+00:10:55,960 --> 00:10:57,870
+Um we wanted Ace because it's explicitly
+designed for software development, but
+
+690
+00:10:57,870 --> 00:10:57,880
+designed for software development, but
+ 
+
+691
+00:10:57,880 --> 00:10:59,230
+designed for software development, but
+it's much more welcoming to other team
+
+692
+00:10:59,230 --> 00:10:59,240
+it's much more welcoming to other team
+ 
+
+693
+00:10:59,240 --> 00:11:02,030
+it's much more welcoming to other team
+members than your terminal.
+
+694
+00:11:02,030 --> 00:11:02,040
+members than your terminal.
+ 
+
+695
+00:11:02,040 --> 00:11:03,470
+members than your terminal.
+Anyway, we're back to shipping our
+
+696
+00:11:03,470 --> 00:11:03,480
+Anyway, we're back to shipping our
+ 
+
+697
+00:11:03,480 --> 00:11:05,030
+Anyway, we're back to shipping our
+changes here. We like how this looks, so
+
+698
+00:11:05,030 --> 00:11:05,040
+changes here. We like how this looks, so
+ 
+
+699
+00:11:05,040 --> 00:11:06,550
+changes here. We like how this looks, so
+we're going to create a PR.
+
+700
+00:11:06,550 --> 00:11:06,560
+we're going to create a PR.
+ 
+
+701
+00:11:06,560 --> 00:11:08,310
+we're going to create a PR.
+Um because eventually all this code does
+
+702
+00:11:08,310 --> 00:11:08,320
+Um because eventually all this code does
+ 
+
+703
+00:11:08,320 --> 00:11:10,270
+Um because eventually all this code does
+have to go back to GitHub, right?
+
+704
+00:11:10,270 --> 00:11:10,280
+have to go back to GitHub, right?
+ 
+
+705
+00:11:10,280 --> 00:11:11,510
+have to go back to GitHub, right?
+So, we create this PR from directly
+
+706
+00:11:11,510 --> 00:11:11,520
+So, we create this PR from directly
+ 
+
+707
+00:11:11,520 --> 00:11:12,910
+So, we create this PR from directly
+inside Ace.
+
+708
+00:11:12,910 --> 00:11:12,920
+inside Ace.
+ 
+
+709
+00:11:12,920 --> 00:11:14,510
+inside Ace.
+Uh we give it a minute and it's going to
+
+710
+00:11:14,510 --> 00:11:14,520
+Uh we give it a minute and it's going to
+ 
+
+711
+00:11:14,520 --> 00:11:17,030
+Uh we give it a minute and it's going to
+show us the preview of the PR.
+
+712
+00:11:17,030 --> 00:11:17,040
+show us the preview of the PR.
+ 
+
+713
+00:11:17,040 --> 00:11:18,390
+show us the preview of the PR.
+And then we can click a link that goes
+
+714
+00:11:18,390 --> 00:11:18,400
+And then we can click a link that goes
+ 
+
+715
+00:11:18,400 --> 00:11:20,310
+And then we can click a link that goes
+to it over here.
+
+716
+00:11:20,310 --> 00:11:20,320
+to it over here.
+ 
+
+717
+00:11:20,320 --> 00:11:21,870
+to it over here.
+In a second, Edon's going to click.
+
+718
+00:11:21,870 --> 00:11:21,880
+In a second, Edon's going to click.
+ 
+
+719
+00:11:21,880 --> 00:11:23,630
+In a second, Edon's going to click.
+There we go. So, there's our PR. All
+
+720
+00:11:23,630 --> 00:11:23,640
+There we go. So, there's our PR. All
+ 
+
+721
+00:11:23,640 --> 00:11:24,750
+There we go. So, there's our PR. All
+works, right? This is backwards
+
+722
+00:11:24,750 --> 00:11:24,760
+works, right? This is backwards
+ 
+
+723
+00:11:24,760 --> 00:11:26,550
+works, right? This is backwards
+compatible. It has a link back to the
+
+724
+00:11:26,550 --> 00:11:26,560
+compatible. It has a link back to the
+ 
+
+725
+00:11:26,560 --> 00:11:28,950
+compatible. It has a link back to the
+Ace session within the description. Like
+
+726
+00:11:28,950 --> 00:11:28,960
+Ace session within the description. Like
+ 
+
+727
+00:11:28,960 --> 00:11:30,350
+Ace session within the description. Like
+people don't all have to be in Ace to
+
+728
+00:11:30,350 --> 00:11:30,360
+people don't all have to be in Ace to
+ 
+
+729
+00:11:30,360 --> 00:11:31,350
+people don't all have to be in Ace to
+use this. You could have a few members
+
+730
+00:11:31,350 --> 00:11:31,360
+use this. You could have a few members
+ 
+
+731
+00:11:31,360 --> 00:11:33,110
+use this. You could have a few members
+of your team in Ace and the rest stay on
+
+732
+00:11:33,110 --> 00:11:33,120
+of your team in Ace and the rest stay on
+ 
+
+733
+00:11:33,120 --> 00:11:35,829
+of your team in Ace and the rest stay on
+whatever else they're using.
+
+734
+00:11:35,829 --> 00:11:35,839
+whatever else they're using.
+ 
+
+735
+00:11:35,839 --> 00:11:36,910
+whatever else they're using.
+And sometimes, you know, you still need
+
+736
+00:11:36,910 --> 00:11:36,920
+And sometimes, you know, you still need
+ 
+
+737
+00:11:36,920 --> 00:11:38,470
+And sometimes, you know, you still need
+to touch code. Like I do a lot of front
+
+738
+00:11:38,470 --> 00:11:38,480
+to touch code. Like I do a lot of front
+ 
+
+739
+00:11:38,480 --> 00:11:40,430
+to touch code. Like I do a lot of front
+end and agents are [\h__\h] at CSS. They
+
+740
+00:11:40,430 --> 00:11:40,440
+end and agents are [\h__\h] at CSS. They
+ 
+
+741
+00:11:40,440 --> 00:11:42,150
+end and agents are [\h__\h] at CSS. They
+never do what I want. So, we can of
+
+742
+00:11:42,150 --> 00:11:42,160
+never do what I want. So, we can of
+ 
+
+743
+00:11:42,160 --> 00:11:44,870
+never do what I want. So, we can of
+course open our project in VS Code here
+
+744
+00:11:44,870 --> 00:11:44,880
+course open our project in VS Code here
+ 
+
+745
+00:11:44,880 --> 00:11:47,430
+course open our project in VS Code here
+um and we have real-time multiplayer
+
+746
+00:11:47,430 --> 00:11:47,440
+um and we have real-time multiplayer
+ 
+
+747
+00:11:47,440 --> 00:11:49,070
+um and we have real-time multiplayer
+editing because again, this is just a
+
+748
+00:11:49,070 --> 00:11:49,080
+editing because again, this is just a
+ 
+
+749
+00:11:49,080 --> 00:11:50,630
+editing because again, this is just a
+micro VM cloud computer. Everyone's on
+
+750
+00:11:50,630 --> 00:11:50,640
+micro VM cloud computer. Everyone's on
+ 
+
+751
+00:11:50,640 --> 00:11:51,990
+micro VM cloud computer. Everyone's on
+the same computer.
+
+752
+00:11:51,990 --> 00:11:52,000
+the same computer.
+ 
+
+753
+00:11:52,000 --> 00:11:53,910
+the same computer.
+I can close my laptop on this and work
+
+754
+00:11:53,910 --> 00:11:53,920
+I can close my laptop on this and work
+ 
+
+755
+00:11:53,920 --> 00:11:56,270
+I can close my laptop on this and work
+can continue. Um my session doesn't die.
+
+756
+00:11:56,270 --> 00:11:56,280
+can continue. Um my session doesn't die.
+ 
+
+757
+00:11:56,280 --> 00:11:58,590
+can continue. Um my session doesn't die.
+My teammates can keep prompting Ace um
+
+758
+00:11:58,590 --> 00:11:58,600
+My teammates can keep prompting Ace um
+ 
+
+759
+00:11:58,600 --> 00:12:00,070
+My teammates can keep prompting Ace um
+and making progress.
+
+760
+00:12:00,070 --> 00:12:00,080
+and making progress.
+ 
+
+761
+00:12:00,080 --> 00:12:01,710
+and making progress.
+We don't have a mobile interface yet,
+
+762
+00:12:01,710 --> 00:12:01,720
+We don't have a mobile interface yet,
+ 
+
+763
+00:12:01,720 --> 00:12:03,630
+We don't have a mobile interface yet,
+but we're building it. But this micro VM
+
+764
+00:12:03,630 --> 00:12:03,640
+but we're building it. But this micro VM
+ 
+
+765
+00:12:03,640 --> 00:12:05,350
+but we're building it. But this micro VM
+architecture means that that will work
+
+766
+00:12:05,350 --> 00:12:05,360
+architecture means that that will work
+ 
+
+767
+00:12:05,360 --> 00:12:07,190
+architecture means that that will work
+seamlessly. Like I don't have to use my
+
+768
+00:12:07,190 --> 00:12:07,200
+seamlessly. Like I don't have to use my
+ 
+
+769
+00:12:07,200 --> 00:12:09,190
+seamlessly. Like I don't have to use my
+phone to somehow SSH into a terminal on
+
+770
+00:12:09,190 --> 00:12:09,200
+phone to somehow SSH into a terminal on
+ 
+
+771
+00:12:09,200 --> 00:12:10,590
+phone to somehow SSH into a terminal on
+my computer.
+
+772
+00:12:10,590 --> 00:12:10,600
+my computer.
+ 
+
+773
+00:12:10,600 --> 00:12:12,230
+my computer.
+Computer doesn't need to be alive and I
+
+774
+00:12:12,230 --> 00:12:12,240
+Computer doesn't need to be alive and I
+ 
+
+775
+00:12:12,240 --> 00:12:13,750
+Computer doesn't need to be alive and I
+don't need to go buy a Mac Mini to keep
+
+776
+00:12:13,750 --> 00:12:13,760
+don't need to go buy a Mac Mini to keep
+ 
+
+777
+00:12:13,760 --> 00:12:15,390
+don't need to go buy a Mac Mini to keep
+things available. I just talk to my
+
+778
+00:12:15,390 --> 00:12:15,400
+things available. I just talk to my
+ 
+
+779
+00:12:15,400 --> 00:12:18,750
+things available. I just talk to my
+always-on agent in the cloud.
+
+780
+00:12:18,750 --> 00:12:18,760
+always-on agent in the cloud.
+ 
+
+781
+00:12:18,760 --> 00:12:20,110
+always-on agent in the cloud.
+For bigger, more complex features,
+
+782
+00:12:20,110 --> 00:12:20,120
+For bigger, more complex features,
+ 
+
+783
+00:12:20,120 --> 00:12:21,110
+For bigger, more complex features,
+you'll of course want your agent to
+
+784
+00:12:21,110 --> 00:12:21,120
+you'll of course want your agent to
+ 
+
+785
+00:12:21,120 --> 00:12:22,829
+you'll of course want your agent to
+write a plan. That's a very standard
+
+786
+00:12:22,829 --> 00:12:22,839
+write a plan. That's a very standard
+ 
+
+787
+00:12:22,839 --> 00:12:25,070
+write a plan. That's a very standard
+workflow at this point. So, here we're
+
+788
+00:12:25,070 --> 00:12:25,080
+workflow at this point. So, here we're
+ 
+
+789
+00:12:25,080 --> 00:12:27,270
+workflow at this point. So, here we're
+chatting about adding uh variable time
+
+790
+00:12:27,270 --> 00:12:27,280
+chatting about adding uh variable time
+ 
+
+791
+00:12:27,280 --> 00:12:29,950
+chatting about adding uh variable time
+frames to our Hacker News clone app. And
+
+792
+00:12:29,950 --> 00:12:29,960
+frames to our Hacker News clone app. And
+ 
+
+793
+00:12:29,960 --> 00:12:32,190
+frames to our Hacker News clone app. And
+then I've gone ahead and asked Ace to
+
+794
+00:12:32,190 --> 00:12:32,200
+then I've gone ahead and asked Ace to
+ 
+
+795
+00:12:32,200 --> 00:12:33,790
+then I've gone ahead and asked Ace to
+make a plan, which he's going to do
+
+796
+00:12:33,790 --> 00:12:33,800
+make a plan, which he's going to do
+ 
+
+797
+00:12:33,800 --> 00:12:35,630
+make a plan, which he's going to do
+quite quickly.
+
+798
+00:12:35,630 --> 00:12:35,640
+quite quickly.
+ 
+
+799
+00:12:35,640 --> 00:12:37,310
+quite quickly.
+And so, we can go open that plan, right?
+
+800
+00:12:37,310 --> 00:12:37,320
+And so, we can go open that plan, right?
+ 
+
+801
+00:12:37,320 --> 00:12:39,390
+And so, we can go open that plan, right?
+And here we all are in our plan. I can
+
+802
+00:12:39,390 --> 00:12:39,400
+And here we all are in our plan. I can
+ 
+
+803
+00:12:39,400 --> 00:12:40,870
+And here we all are in our plan. I can
+see my teammates' cursors. We can
+
+804
+00:12:40,870 --> 00:12:40,880
+see my teammates' cursors. We can
+ 
+
+805
+00:12:40,880 --> 00:12:42,430
+see my teammates' cursors. We can
+collaboratively edit it together. We can
+
+806
+00:12:42,430 --> 00:12:42,440
+collaboratively edit it together. We can
+ 
+
+807
+00:12:42,440 --> 00:12:44,510
+collaboratively edit it together. We can
+decide if we like this plan, if it's any
+
+808
+00:12:44,510 --> 00:12:44,520
+decide if we like this plan, if it's any
+ 
+
+809
+00:12:44,520 --> 00:12:47,670
+decide if we like this plan, if it's any
+good at all, if it achieves our intent.
+
+810
+00:12:47,670 --> 00:12:47,680
+good at all, if it achieves our intent.
+ 
+
+811
+00:12:47,680 --> 00:12:49,710
+good at all, if it achieves our intent.
+Um my teammate Nate here is making
+
+812
+00:12:49,710 --> 00:12:49,720
+Um my teammate Nate here is making
+ 
+
+813
+00:12:49,720 --> 00:12:51,190
+Um my teammate Nate here is making
+suggestions about maybe using a
+
+814
+00:12:51,190 --> 00:12:51,200
+suggestions about maybe using a
+ 
+
+815
+00:12:51,200 --> 00:12:53,910
+suggestions about maybe using a
+drop-down for the interface instead of a
+
+816
+00:12:53,910 --> 00:12:53,920
+drop-down for the interface instead of a
+ 
+
+817
+00:12:53,920 --> 00:12:56,190
+drop-down for the interface instead of a
+segmented control. And then Edon's come
+
+818
+00:12:56,190 --> 00:12:56,200
+segmented control. And then Edon's come
+ 
+
+819
+00:12:56,200 --> 00:12:58,030
+segmented control. And then Edon's come
+in and updated the requirements so the
+
+820
+00:12:58,030 --> 00:12:58,040
+in and updated the requirements so the
+ 
+
+821
+00:12:58,040 --> 00:12:59,829
+in and updated the requirements so the
+agent knows to do that.
+
+822
+00:12:59,829 --> 00:12:59,839
+agent knows to do that.
+ 
+
+823
+00:12:59,839 --> 00:13:00,990
+agent knows to do that.
+Uh and once we're all happy with the
+
+824
+00:13:00,990 --> 00:13:01,000
+Uh and once we're all happy with the
+ 
+
+825
+00:13:01,000 --> 00:13:02,470
+Uh and once we're all happy with the
+details, we go back to the chat and we
+
+826
+00:13:02,470 --> 00:13:02,480
+details, we go back to the chat and we
+ 
+
+827
+00:13:02,480 --> 00:13:04,510
+details, we go back to the chat and we
+can just say at Ace, do this. And it
+
+828
+00:13:04,510 --> 00:13:04,520
+can just say at Ace, do this. And it
+ 
+
+829
+00:13:04,520 --> 00:13:07,710
+can just say at Ace, do this. And it
+knows what the context is.
+
+830
+00:13:07,710 --> 00:13:07,720
+knows what the context is.
+ 
+
+831
+00:13:07,720 --> 00:13:09,510
+knows what the context is.
+So, I'm now going to jump over to our
+
+832
+00:13:09,510 --> 00:13:09,520
+So, I'm now going to jump over to our
+ 
+
+833
+00:13:09,520 --> 00:13:10,990
+So, I'm now going to jump over to our
+dashboard in Ace.
+
+834
+00:13:10,990 --> 00:13:11,000
+dashboard in Ace.
+ 
+
+835
+00:13:11,000 --> 00:13:12,990
+dashboard in Ace.
+Uh a lot of the planning and discussion
+
+836
+00:13:12,990 --> 00:13:13,000
+Uh a lot of the planning and discussion
+ 
+
+837
+00:13:13,000 --> 00:13:15,070
+Uh a lot of the planning and discussion
+that would otherwise happen in Slack or
+
+838
+00:13:15,070 --> 00:13:15,080
+that would otherwise happen in Slack or
+ 
+
+839
+00:13:15,080 --> 00:13:17,350
+that would otherwise happen in Slack or
+GitHub or Linear is now happening in our
+
+840
+00:13:17,350 --> 00:13:17,360
+GitHub or Linear is now happening in our
+ 
+
+841
+00:13:17,360 --> 00:13:18,990
+GitHub or Linear is now happening in our
+Ace sessions. So, we have a lot of
+
+842
+00:13:18,990 --> 00:13:19,000
+Ace sessions. So, we have a lot of
+ 
+
+843
+00:13:19,000 --> 00:13:21,230
+Ace sessions. So, we have a lot of
+access to rich context on what work is
+
+844
+00:13:21,230 --> 00:13:21,240
+access to rich context on what work is
+ 
+
+845
+00:13:21,240 --> 00:13:23,190
+access to rich context on what work is
+underway and can helpfully summarize it
+
+846
+00:13:23,190 --> 00:13:23,200
+underway and can helpfully summarize it
+ 
+
+847
+00:13:23,200 --> 00:13:24,190
+underway and can helpfully summarize it
+for you.
+
+848
+00:13:24,190 --> 00:13:24,200
+for you.
+ 
+
+849
+00:13:24,200 --> 00:13:25,590
+for you.
+So, here it's Monday morning and I've
+
+850
+00:13:25,590 --> 00:13:25,600
+So, here it's Monday morning and I've
+ 
+
+851
+00:13:25,600 --> 00:13:27,070
+So, here it's Monday morning and I've
+been trying to remember what I left
+
+852
+00:13:27,070 --> 00:13:27,080
+been trying to remember what I left
+ 
+
+853
+00:13:27,080 --> 00:13:29,350
+been trying to remember what I left
+unfinished last Friday.
+
+854
+00:13:29,350 --> 00:13:29,360
+unfinished last Friday.
+ 
+
+855
+00:13:29,360 --> 00:13:31,030
+unfinished last Friday.
+And Ace is prompting me to keep working
+
+856
+00:13:31,030 --> 00:13:31,040
+And Ace is prompting me to keep working
+ 
+
+857
+00:13:31,040 --> 00:13:33,150
+And Ace is prompting me to keep working
+on some React hooks I was making as part
+
+858
+00:13:33,150 --> 00:13:33,160
+on some React hooks I was making as part
+ 
+
+859
+00:13:33,160 --> 00:13:34,950
+on some React hooks I was making as part
+of a big refactor, which is helpful
+
+860
+00:13:34,950 --> 00:13:34,960
+of a big refactor, which is helpful
+ 
+
+861
+00:13:34,960 --> 00:13:36,670
+of a big refactor, which is helpful
+since I have very crappy human memory
+
+862
+00:13:36,670 --> 00:13:36,680
+since I have very crappy human memory
+ 
+
+863
+00:13:36,680 --> 00:13:38,590
+since I have very crappy human memory
+after a long weekend.
+
+864
+00:13:38,590 --> 00:13:38,600
+after a long weekend.
+ 
+
+865
+00:13:38,600 --> 00:13:40,510
+after a long weekend.
+And from here I can start a new session
+
+866
+00:13:40,510 --> 00:13:40,520
+And from here I can start a new session
+ 
+
+867
+00:13:40,520 --> 00:13:42,190
+And from here I can start a new session
+or in this pick back up section, I can
+
+868
+00:13:42,190 --> 00:13:42,200
+or in this pick back up section, I can
+ 
+
+869
+00:13:42,200 --> 00:13:44,110
+or in this pick back up section, I can
+one click I can open the session to keep
+
+870
+00:13:44,110 --> 00:13:44,120
+one click I can open the session to keep
+ 
+
+871
+00:13:44,120 --> 00:13:46,070
+one click I can open the session to keep
+going on my unmerged PR.
+
+872
+00:13:46,070 --> 00:13:46,080
+going on my unmerged PR.
+ 
+
+873
+00:13:46,080 --> 00:13:47,670
+going on my unmerged PR.
+I can also see a list of my recently
+
+874
+00:13:47,670 --> 00:13:47,680
+I can also see a list of my recently
+ 
+
+875
+00:13:47,680 --> 00:13:49,430
+I can also see a list of my recently
+completed PRs and issues to stroke my
+
+876
+00:13:49,430 --> 00:13:49,440
+completed PRs and issues to stroke my
+ 
+
+877
+00:13:49,440 --> 00:13:52,910
+completed PRs and issues to stroke my
+ego and make me feel productive.
+
+878
+00:13:52,910 --> 00:13:52,920
+ego and make me feel productive.
+ 
+
+879
+00:13:52,920 --> 00:13:54,910
+ego and make me feel productive.
+And on the right here we have a team
+
+880
+00:13:54,910 --> 00:13:54,920
+And on the right here we have a team
+ 
+
+881
+00:13:54,920 --> 00:13:56,710
+And on the right here we have a team
+whole section. So, this summarizes what
+
+882
+00:13:56,710 --> 00:13:56,720
+whole section. So, this summarizes what
+ 
+
+883
+00:13:56,720 --> 00:13:58,310
+whole section. So, this summarizes what
+my co-workers have been up to for the
+
+884
+00:13:58,310 --> 00:13:58,320
+my co-workers have been up to for the
+ 
+
+885
+00:13:58,320 --> 00:14:00,590
+my co-workers have been up to for the
+last couple of days. I can see Nate has
+
+886
+00:14:00,590 --> 00:14:00,600
+last couple of days. I can see Nate has
+ 
+
+887
+00:14:00,600 --> 00:14:02,430
+last couple of days. I can see Nate has
+been shipping a lobby channel and David
+
+888
+00:14:02,430 --> 00:14:02,440
+been shipping a lobby channel and David
+ 
+
+889
+00:14:02,440 --> 00:14:05,030
+been shipping a lobby channel and David
+has been fixing access token issues.
+
+890
+00:14:05,030 --> 00:14:05,040
+has been fixing access token issues.
+ 
+
+891
+00:14:05,040 --> 00:14:07,070
+has been fixing access token issues.
+Um there's also a raw feed of recent
+
+892
+00:14:07,070 --> 00:14:07,080
+Um there's also a raw feed of recent
+ 
+
+893
+00:14:07,080 --> 00:14:08,990
+Um there's also a raw feed of recent
+issues and PRs on this repo, but I
+
+894
+00:14:08,990 --> 00:14:09,000
+issues and PRs on this repo, but I
+ 
+
+895
+00:14:09,000 --> 00:14:10,430
+issues and PRs on this repo, but I
+personally find the summary much more
+
+896
+00:14:10,430 --> 00:14:10,440
+personally find the summary much more
+ 
+
+897
+00:14:10,440 --> 00:14:11,510
+personally find the summary much more
+helpful.
+
+898
+00:14:11,510 --> 00:14:11,520
+helpful.
+ 
+
+899
+00:14:11,520 --> 00:14:13,270
+helpful.
+Um one of the biggest challenges of
+
+900
+00:14:13,270 --> 00:14:13,280
+Um one of the biggest challenges of
+ 
+
+901
+00:14:13,280 --> 00:14:14,870
+Um one of the biggest challenges of
+agentic development is that the speed
+
+902
+00:14:14,870 --> 00:14:14,880
+agentic development is that the speed
+ 
+
+903
+00:14:14,880 --> 00:14:16,670
+agentic development is that the speed
+and volume of work makes it really hard
+
+904
+00:14:16,670 --> 00:14:16,680
+and volume of work makes it really hard
+ 
+
+905
+00:14:16,680 --> 00:14:18,270
+and volume of work makes it really hard
+to keep up with what your co-workers are
+
+906
+00:14:18,270 --> 00:14:18,280
+to keep up with what your co-workers are
+ 
+
+907
+00:14:18,280 --> 00:14:19,310
+to keep up with what your co-workers are
+doing.
+
+908
+00:14:19,310 --> 00:14:19,320
+doing.
+ 
+
+909
+00:14:19,320 --> 00:14:20,630
+doing.
+They are now shipping five features a
+
+910
+00:14:20,630 --> 00:14:20,640
+They are now shipping five features a
+ 
+
+911
+00:14:20,640 --> 00:14:23,350
+They are now shipping five features a
+day instead of half of one.
+
+912
+00:14:23,350 --> 00:14:23,360
+day instead of half of one.
+ 
+
+913
+00:14:23,360 --> 00:14:25,150
+day instead of half of one.
+This dashboard is our first pass at
+
+914
+00:14:25,150 --> 00:14:25,160
+This dashboard is our first pass at
+ 
+
+915
+00:14:25,160 --> 00:14:26,990
+This dashboard is our first pass at
+trying to make agents proactive and
+
+916
+00:14:26,990 --> 00:14:27,000
+trying to make agents proactive and
+ 
+
+917
+00:14:27,000 --> 00:14:29,550
+trying to make agents proactive and
+bringing that social context to you.
+
+918
+00:14:29,550 --> 00:14:29,560
+bringing that social context to you.
+ 
+
+919
+00:14:29,560 --> 00:14:30,990
+bringing that social context to you.
+If all your conversations around the
+
+920
+00:14:30,990 --> 00:14:31,000
+If all your conversations around the
+ 
+
+921
+00:14:31,000 --> 00:14:32,790
+If all your conversations around the
+code are available to agents, it gives
+
+922
+00:14:32,790 --> 00:14:32,800
+code are available to agents, it gives
+ 
+
+923
+00:14:32,800 --> 00:14:34,510
+code are available to agents, it gives
+them access to a social information
+
+924
+00:14:34,510 --> 00:14:34,520
+them access to a social information
+ 
+
+925
+00:14:34,520 --> 00:14:36,150
+them access to a social information
+fabric where they can help get you
+
+926
+00:14:36,150 --> 00:14:36,160
+fabric where they can help get you
+ 
+
+927
+00:14:36,160 --> 00:14:37,949
+fabric where they can help get you
+oriented every morning and stay aligned
+
+928
+00:14:37,949 --> 00:14:37,959
+oriented every morning and stay aligned
+ 
+
+929
+00:14:37,959 --> 00:14:39,750
+oriented every morning and stay aligned
+with your team.
+
+930
+00:14:39,750 --> 00:14:39,760
+with your team.
+ 
+
+931
+00:14:39,760 --> 00:14:41,390
+with your team.
+They could notify you about decisions
+
+932
+00:14:41,390 --> 00:14:41,400
+They could notify you about decisions
+ 
+
+933
+00:14:41,400 --> 00:14:42,990
+They could notify you about decisions
+being made or pull you into a
+
+934
+00:14:42,990 --> 00:14:43,000
+being made or pull you into a
+ 
+
+935
+00:14:43,000 --> 00:14:44,630
+being made or pull you into a
+conversation where someone is about to
+
+936
+00:14:44,630 --> 00:14:44,640
+conversation where someone is about to
+ 
+
+937
+00:14:44,640 --> 00:14:46,110
+conversation where someone is about to
+extend a feature that you originally
+
+938
+00:14:46,110 --> 00:14:46,120
+extend a feature that you originally
+ 
+
+939
+00:14:46,120 --> 00:14:47,710
+extend a feature that you originally
+built.
+
+940
+00:14:47,710 --> 00:14:47,720
+built.
+ 
+
+941
+00:14:47,720 --> 00:14:49,390
+built.
+So, this is no longer a bunch of solo
+
+942
+00:14:49,390 --> 00:14:49,400
+So, this is no longer a bunch of solo
+ 
+
+943
+00:14:49,400 --> 00:14:51,470
+So, this is no longer a bunch of solo
+disconnected terminal instances on
+
+944
+00:14:51,470 --> 00:14:51,480
+disconnected terminal instances on
+ 
+
+945
+00:14:51,480 --> 00:14:53,110
+disconnected terminal instances on
+individual computers. This becomes a
+
+946
+00:14:53,110 --> 00:14:53,120
+individual computers. This becomes a
+ 
+
+947
+00:14:53,120 --> 00:14:55,270
+individual computers. This becomes a
+living, intelligent environment where
+
+948
+00:14:55,270 --> 00:14:55,280
+living, intelligent environment where
+ 
+
+949
+00:14:55,280 --> 00:14:57,670
+living, intelligent environment where
+everyone shares the same workspace and
+
+950
+00:14:57,670 --> 00:14:57,680
+everyone shares the same workspace and
+ 
+
+951
+00:14:57,680 --> 00:15:00,110
+everyone shares the same workspace and
+context.
+
+952
+00:15:00,110 --> 00:15:00,120
+context.
+ 
+
+953
+00:15:00,120 --> 00:15:01,710
+context.
+So, all of this is actually about
+
+954
+00:15:01,710 --> 00:15:01,720
+So, all of this is actually about
+ 
+
+955
+00:15:01,720 --> 00:15:03,870
+So, all of this is actually about
+reclaiming time, right? Before coding
+
+956
+00:15:03,870 --> 00:15:03,880
+reclaiming time, right? Before coding
+ 
+
+957
+00:15:03,880 --> 00:15:06,150
+reclaiming time, right? Before coding
+agents came along, none of us had enough
+
+958
+00:15:06,150 --> 00:15:06,160
+agents came along, none of us had enough
+ 
+
+959
+00:15:06,160 --> 00:15:07,870
+agents came along, none of us had enough
+time and energy to make our products the
+
+960
+00:15:07,870 --> 00:15:07,880
+time and energy to make our products the
+ 
+
+961
+00:15:07,880 --> 00:15:09,630
+time and energy to make our products the
+way we wanted to.
+
+962
+00:15:09,630 --> 00:15:09,640
+way we wanted to.
+ 
+
+963
+00:15:09,640 --> 00:15:11,190
+way we wanted to.
+I guarantee everyone in this room has
+
+964
+00:15:11,190 --> 00:15:11,200
+I guarantee everyone in this room has
+ 
+
+965
+00:15:11,200 --> 00:15:13,350
+I guarantee everyone in this room has
+shipped software they're not proud of.
+
+966
+00:15:13,350 --> 00:15:13,360
+shipped software they're not proud of.
+ 
+
+967
+00:15:13,360 --> 00:15:15,069
+shipped software they're not proud of.
+Maybe you didn't have enough time to do
+
+968
+00:15:15,069 --> 00:15:15,079
+Maybe you didn't have enough time to do
+ 
+
+969
+00:15:15,079 --> 00:15:17,829
+Maybe you didn't have enough time to do
+user research or consider design details
+
+970
+00:15:17,829 --> 00:15:17,839
+user research or consider design details
+ 
+
+971
+00:15:17,839 --> 00:15:19,470
+user research or consider design details
+or think through the implications of
+
+972
+00:15:19,470 --> 00:15:19,480
+or think through the implications of
+ 
+
+973
+00:15:19,480 --> 00:15:21,590
+or think through the implications of
+your architecture choices. Um not
+
+974
+00:15:21,590 --> 00:15:21,600
+your architecture choices. Um not
+ 
+
+975
+00:15:21,600 --> 00:15:23,270
+your architecture choices. Um not
+because you didn't want to, but because
+
+976
+00:15:23,270 --> 00:15:23,280
+because you didn't want to, but because
+ 
+
+977
+00:15:23,280 --> 00:15:24,949
+because you didn't want to, but because
+there simply wasn't enough time because
+
+978
+00:15:24,949 --> 00:15:24,959
+there simply wasn't enough time because
+ 
+
+979
+00:15:24,959 --> 00:15:26,990
+there simply wasn't enough time because
+implementation took up so much of that
+
+980
+00:15:26,990 --> 00:15:27,000
+implementation took up so much of that
+ 
+
+981
+00:15:27,000 --> 00:15:28,949
+implementation took up so much of that
+time and effort.
+
+982
+00:15:28,949 --> 00:15:28,959
+time and effort.
+ 
+
+983
+00:15:28,959 --> 00:15:31,069
+time and effort.
+But we've been gifted a lot of that time
+
+984
+00:15:31,069 --> 00:15:31,079
+But we've been gifted a lot of that time
+ 
+
+985
+00:15:31,079 --> 00:15:33,710
+But we've been gifted a lot of that time
+back. We have an opportunity to not just
+
+986
+00:15:33,710 --> 00:15:33,720
+back. We have an opportunity to not just
+ 
+
+987
+00:15:33,720 --> 00:15:36,470
+back. We have an opportunity to not just
+go faster and build a giant pile of the
+
+988
+00:15:36,470 --> 00:15:36,480
+go faster and build a giant pile of the
+ 
+
+989
+00:15:36,480 --> 00:15:38,430
+go faster and build a giant pile of the
+same crappy software,
+
+990
+00:15:38,430 --> 00:15:38,440
+same crappy software,
+ 
+
+991
+00:15:38,440 --> 00:15:41,430
+same crappy software,
+but instead to make much better software
+
+992
+00:15:41,430 --> 00:15:41,440
+but instead to make much better software
+ 
+
+993
+00:15:41,440 --> 00:15:42,790
+but instead to make much better software
+through much more rigorous critical
+
+994
+00:15:42,790 --> 00:15:42,800
+through much more rigorous critical
+ 
+
+995
+00:15:42,800 --> 00:15:44,470
+through much more rigorous critical
+thinking and better alignment in the
+
+996
+00:15:44,470 --> 00:15:44,480
+thinking and better alignment in the
+ 
+
+997
+00:15:44,480 --> 00:15:46,190
+thinking and better alignment in the
+planning stage.
+
+998
+00:15:46,190 --> 00:15:46,200
+planning stage.
+ 
+
+999
+00:15:46,200 --> 00:15:47,990
+planning stage.
+By doing more exploration, more
+
+1000
+00:15:47,990 --> 00:15:48,000
+By doing more exploration, more
+ 
+
+1001
+00:15:48,000 --> 00:15:49,430
+By doing more exploration, more
+research, and thinking through problems
+
+1002
+00:15:49,430 --> 00:15:49,440
+research, and thinking through problems
+ 
+
+1003
+00:15:49,440 --> 00:15:52,030
+research, and thinking through problems
+more deeply than we could have before.
+
+1004
+00:15:52,030 --> 00:15:52,040
+more deeply than we could have before.
+ 
+
+1005
+00:15:52,040 --> 00:15:54,030
+more deeply than we could have before.
+Agents allow us to scale up ourselves
+
+1006
+00:15:54,030 --> 00:15:54,040
+Agents allow us to scale up ourselves
+ 
+
+1007
+00:15:54,040 --> 00:15:56,630
+Agents allow us to scale up ourselves
+and our teams in a way that if done
+
+1008
+00:15:56,630 --> 00:15:56,640
+and our teams in a way that if done
+ 
+
+1009
+00:15:56,640 --> 00:15:59,069
+and our teams in a way that if done
+right, should lead to better quality
+
+1010
+00:15:59,069 --> 00:15:59,079
+right, should lead to better quality
+ 
+
+1011
+00:15:59,079 --> 00:16:01,710
+right, should lead to better quality
+software.
+
+1012
+00:16:01,710 --> 00:16:01,720
+
+ 
+
+1013
+00:16:01,720 --> 00:16:03,390
+
+I think many people are now realizing
+
+1014
+00:16:03,390 --> 00:16:03,400
+I think many people are now realizing
+ 
+
+1015
+00:16:03,400 --> 00:16:05,829
+I think many people are now realizing
+that in a world of fast, cheap software,
+
+1016
+00:16:05,829 --> 00:16:05,839
+that in a world of fast, cheap software,
+ 
+
+1017
+00:16:05,839 --> 00:16:08,550
+that in a world of fast, cheap software,
+quality becomes the new differentiator.
+
+1018
+00:16:08,550 --> 00:16:08,560
+quality becomes the new differentiator.
+ 
+
+1019
+00:16:08,560 --> 00:16:11,150
+quality becomes the new differentiator.
+The bar is being set much higher and
+
+1020
+00:16:11,150 --> 00:16:11,160
+The bar is being set much higher and
+ 
+
+1021
+00:16:11,160 --> 00:16:13,069
+The bar is being set much higher and
+craftsmanship is what set you will will
+
+1022
+00:16:13,069 --> 00:16:13,079
+craftsmanship is what set you will will
+ 
+
+1023
+00:16:13,079 --> 00:16:16,230
+craftsmanship is what set you will will
+will set you apart from vibe-coded slop.
+
+1024
+00:16:16,230 --> 00:16:16,240
+will set you apart from vibe-coded slop.
+ 
+
+1025
+00:16:16,240 --> 00:16:17,829
+will set you apart from vibe-coded slop.
+Um but craft still costs time and
+
+1026
+00:16:17,829 --> 00:16:17,839
+Um but craft still costs time and
+ 
+
+1027
+00:16:17,839 --> 00:16:19,949
+Um but craft still costs time and
+energy. It's not free. And in order to
+
+1028
+00:16:19,949 --> 00:16:19,959
+energy. It's not free. And in order to
+ 
+
+1029
+00:16:19,959 --> 00:16:21,910
+energy. It's not free. And in order to
+buy the time and energy you need for it,
+
+1030
+00:16:21,910 --> 00:16:21,920
+buy the time and energy you need for it,
+ 
+
+1031
+00:16:21,920 --> 00:16:23,550
+buy the time and energy you need for it,
+you need to do fewer things better,
+
+1032
+00:16:23,550 --> 00:16:23,560
+you need to do fewer things better,
+ 
+
+1033
+00:16:23,560 --> 00:16:26,470
+you need to do fewer things better,
+which requires lots of strong alignment.
+
+1034
+00:16:26,470 --> 00:16:26,480
+which requires lots of strong alignment.
+ 
+
+1035
+00:16:26,480 --> 00:16:28,110
+which requires lots of strong alignment.
+There are also more distractions than
+
+1036
+00:16:28,110 --> 00:16:28,120
+There are also more distractions than
+ 
+
+1037
+00:16:28,120 --> 00:16:30,990
+There are also more distractions than
+ever. It's very easy to prompt your way
+
+1038
+00:16:30,990 --> 00:16:31,000
+ever. It's very easy to prompt your way
+ 
+
+1039
+00:16:31,000 --> 00:16:32,949
+ever. It's very easy to prompt your way
+to the wrong thing or to add lots of
+
+1040
+00:16:32,949 --> 00:16:32,959
+to the wrong thing or to add lots of
+ 
+
+1041
+00:16:32,959 --> 00:16:35,030
+to the wrong thing or to add lots of
+unnecessarily unhelpful features to your
+
+1042
+00:16:35,030 --> 00:16:35,040
+unnecessarily unhelpful features to your
+ 
+
+1043
+00:16:35,040 --> 00:16:36,510
+unnecessarily unhelpful features to your
+product.
+
+1044
+00:16:36,510 --> 00:16:36,520
+product.
+ 
+
+1045
+00:16:36,520 --> 00:16:38,030
+product.
+I think the dream for me is that we end
+
+1046
+00:16:38,030 --> 00:16:38,040
+I think the dream for me is that we end
+ 
+
+1047
+00:16:38,040 --> 00:16:39,750
+I think the dream for me is that we end
+up with tools, whether it's Ace or
+
+1048
+00:16:39,750 --> 00:16:39,760
+up with tools, whether it's Ace or
+ 
+
+1049
+00:16:39,760 --> 00:16:41,630
+up with tools, whether it's Ace or
+others, that create environments where
+
+1050
+00:16:41,630 --> 00:16:41,640
+others, that create environments where
+ 
+
+1051
+00:16:41,640 --> 00:16:43,590
+others, that create environments where
+teams can think rigorously together
+
+1052
+00:16:43,590 --> 00:16:43,600
+teams can think rigorously together
+ 
+
+1053
+00:16:43,600 --> 00:16:45,510
+teams can think rigorously together
+about hard problems.
+
+1054
+00:16:45,510 --> 00:16:45,520
+about hard problems.
+ 
+
+1055
+00:16:45,520 --> 00:16:47,069
+about hard problems.
+Uh agentic tools should help us do
+
+1056
+00:16:47,069 --> 00:16:47,079
+Uh agentic tools should help us do
+ 
+
+1057
+00:16:47,079 --> 00:16:49,670
+Uh agentic tools should help us do
+higher quality work, get aligned faster,
+
+1058
+00:16:49,670 --> 00:16:49,680
+higher quality work, get aligned faster,
+ 
+
+1059
+00:16:49,680 --> 00:16:51,949
+higher quality work, get aligned faster,
+and build a few exceptional things
+
+1060
+00:16:51,949 --> 00:16:51,959
+and build a few exceptional things
+ 
+
+1061
+00:16:51,959 --> 00:16:55,710
+and build a few exceptional things
+rather than a thousand crappy ones.
+
+1062
+00:16:55,710 --> 00:16:55,720
+rather than a thousand crappy ones.
+ 
+
+1063
+00:16:55,720 --> 00:16:59,181
+rather than a thousand crappy ones.
+Thank you very much for listening. Um
+
+1064
+00:16:59,181 --> 00:16:59,191
+Thank you very much for listening. Um
+ 
+
+1065
+00:16:59,191 --> 00:17:03,270
+Thank you very much for listening. Um
+>> [applause]
+
+1066
+00:17:03,270 --> 00:17:03,280
+
+ 
+
+1067
+00:17:03,280 --> 00:17:05,990
+
+>> Uh if you do want early access to Ace,
+
+1068
+00:17:05,990 --> 00:17:06,000
+>> Uh if you do want early access to Ace,
+ 
+
+1069
+00:17:06,000 --> 00:17:07,310
+>> Uh if you do want early access to Ace,
+we should have it out within a couple
+
+1070
+00:17:07,310 --> 00:17:07,320
+we should have it out within a couple
+ 
+
+1071
+00:17:07,320 --> 00:17:09,829
+we should have it out within a couple
+months at the very latest. Uh this QR
+
+1072
+00:17:09,829 --> 00:17:09,839
+months at the very latest. Uh this QR
+ 
+
+1073
+00:17:09,839 --> 00:17:11,150
+months at the very latest. Uh this QR
+code will take you to a form where you
+
+1074
+00:17:11,150 --> 00:17:11,160
+code will take you to a form where you
+ 
+
+1075
+00:17:11,160 --> 00:17:12,710
+code will take you to a form where you
+put in your GitHub username and then it
+
+1076
+00:17:12,710 --> 00:17:12,720
+put in your GitHub username and then it
+ 
+
+1077
+00:17:12,720 --> 00:17:14,230
+put in your GitHub username and then it
+will give you early access as soon as it
+
+1078
+00:17:14,230 --> 00:17:14,240
+will give you early access as soon as it
+ 
+
+1079
+00:17:14,240 --> 00:17:16,110
+will give you early access as soon as it
+comes out. Um you can read more about
+
+1080
+00:17:16,110 --> 00:17:16,120
+comes out. Um you can read more about
+ 
+
+1081
+00:17:16,120 --> 00:17:17,710
+comes out. Um you can read more about
+the GitHub Next team and their research
+
+1082
+00:17:17,710 --> 00:17:17,720
+the GitHub Next team and their research
+ 
+
+1083
+00:17:17,720 --> 00:17:20,189
+the GitHub Next team and their research
+on githubnext.com and all my work and
+
+1084
+00:17:20,189 --> 00:17:20,199
+on githubnext.com and all my work and
+ 
+
+1085
+00:17:20,199 --> 00:17:22,069
+on githubnext.com and all my work and
+writing is on maggieappleton.com and
+
+1086
+00:17:22,069 --> 00:17:22,079
+writing is on maggieappleton.com and
+ 
+
+1087
+00:17:22,079 --> 00:17:23,590
+writing is on maggieappleton.com and
+I'll have the slides and notes for this
+
+1088
+00:17:23,590 --> 00:17:23,600
+I'll have the slides and notes for this
+ 
+
+1089
+00:17:23,600 --> 00:17:26,110
+I'll have the slides and notes for this
+up there in a day or two.
+
+1090
+00:17:26,110 --> 00:17:26,120
+up there in a day or two.
+ 
+
+1091
+00:17:26,120 --> 00:17:35,207
+up there in a day or two.
+Thanks.
+
+1092
+00:17:35,207 --> 00:17:35,217
+
+ 
+
+1093
+00:17:35,217 --> 00:17:40,447
+
+>> [music]
+
+1094
+00:17:40,447 --> 00:17:40,457
+
+ 
+
+1095
+00:17:40,457 --> 00:17:42,477
+
+[music]
+

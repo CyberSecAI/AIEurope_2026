@@ -1,0 +1,5365 @@
+1
+00:00:07,205 --> 00:00:14,510
+
+[music]
+
+2
+00:00:14,510 --> 00:00:14,520
+
+ 
+
+3
+00:00:14,520 --> 00:00:18,830
+
+>> All right. Um so everyone, I'm uh Karan
+
+4
+00:00:18,830 --> 00:00:18,840
+>> All right. Um so everyone, I'm uh Karan
+ 
+
+5
+00:00:18,840 --> 00:00:22,870
+>> All right. Um so everyone, I'm uh Karan
+Sampath. I'll be talking to you about
+
+6
+00:00:22,870 --> 00:00:22,880
+Sampath. I'll be talking to you about
+ 
+
+7
+00:00:22,880 --> 00:00:24,830
+Sampath. I'll be talking to you about
+how we Anthropic think about MCPs in the
+
+8
+00:00:24,830 --> 00:00:24,840
+how we Anthropic think about MCPs in the
+ 
+
+9
+00:00:24,840 --> 00:00:27,030
+how we Anthropic think about MCPs in the
+enterprise. I've alternatively titled
+
+10
+00:00:27,030 --> 00:00:27,040
+enterprise. I've alternatively titled
+ 
+
+11
+00:00:27,040 --> 00:00:28,670
+enterprise. I've alternatively titled
+it, I think more catchily, is why we
+
+12
+00:00:28,670 --> 00:00:28,680
+it, I think more catchily, is why we
+ 
+
+13
+00:00:28,680 --> 00:00:31,350
+it, I think more catchily, is why we
+think gateways are all you need. Um so
+
+14
+00:00:31,350 --> 00:00:31,360
+think gateways are all you need. Um so
+ 
+
+15
+00:00:31,360 --> 00:00:33,230
+think gateways are all you need. Um so
+before I go into the talk, uh I'm going
+
+16
+00:00:33,230 --> 00:00:33,240
+before I go into the talk, uh I'm going
+ 
+
+17
+00:00:33,240 --> 00:00:34,710
+before I go into the talk, uh I'm going
+to quickly tell you a bit about me. I
+
+18
+00:00:34,710 --> 00:00:34,720
+to quickly tell you a bit about me. I
+ 
+
+19
+00:00:34,720 --> 00:00:36,510
+to quickly tell you a bit about me. I
+was uh I'm a forward deployed engineer
+
+20
+00:00:36,510 --> 00:00:36,520
+was uh I'm a forward deployed engineer
+ 
+
+21
+00:00:36,520 --> 00:00:37,950
+was uh I'm a forward deployed engineer
+at Anthropic, um
+
+22
+00:00:37,950 --> 00:00:37,960
+at Anthropic, um
+ 
+
+23
+00:00:37,960 --> 00:00:40,790
+at Anthropic, um
+first one outside uh the US. Uh a lot of
+
+24
+00:00:40,790 --> 00:00:40,800
+first one outside uh the US. Uh a lot of
+ 
+
+25
+00:00:40,800 --> 00:00:42,230
+first one outside uh the US. Uh a lot of
+my work includes working with
+
+26
+00:00:42,230 --> 00:00:42,240
+my work includes working with
+ 
+
+27
+00:00:42,240 --> 00:00:44,510
+my work includes working with
+enterprises on things like MCPs, and I
+
+28
+00:00:44,510 --> 00:00:44,520
+enterprises on things like MCPs, and I
+ 
+
+29
+00:00:44,520 --> 00:00:47,590
+enterprises on things like MCPs, and I
+also work on our internal use cases. In
+
+30
+00:00:47,590 --> 00:00:47,600
+also work on our internal use cases. In
+ 
+
+31
+00:00:47,600 --> 00:00:49,630
+also work on our internal use cases. In
+this talk, I'm going to be
+
+32
+00:00:49,630 --> 00:00:49,640
+this talk, I'm going to be
+ 
+
+33
+00:00:49,640 --> 00:00:51,910
+this talk, I'm going to be
+positing to you what we think the
+
+34
+00:00:51,910 --> 00:00:51,920
+positing to you what we think the
+ 
+
+35
+00:00:51,920 --> 00:00:53,630
+positing to you what we think the
+problems with enterprises, what
+
+36
+00:00:53,630 --> 00:00:53,640
+problems with enterprises, what
+ 
+
+37
+00:00:53,640 --> 00:00:56,070
+problems with enterprises, what
+enterprises face with MCPs today, why we
+
+38
+00:00:56,070 --> 00:00:56,080
+enterprises face with MCPs today, why we
+ 
+
+39
+00:00:56,080 --> 00:00:58,390
+enterprises face with MCPs today, why we
+think gateways and the the necessary
+
+40
+00:00:58,390 --> 00:00:58,400
+think gateways and the the necessary
+ 
+
+41
+00:00:58,400 --> 00:01:00,030
+think gateways and the the necessary
+implications that come out of it are the
+
+42
+00:01:00,030 --> 00:01:00,040
+implications that come out of it are the
+ 
+
+43
+00:01:00,040 --> 00:01:02,150
+implications that come out of it are the
+best way to fix a lot of these problems,
+
+44
+00:01:02,150 --> 00:01:02,160
+best way to fix a lot of these problems,
+ 
+
+45
+00:01:02,160 --> 00:01:03,550
+best way to fix a lot of these problems,
+and what is that how does that align
+
+46
+00:01:03,550 --> 00:01:03,560
+and what is that how does that align
+ 
+
+47
+00:01:03,560 --> 00:01:05,670
+and what is that how does that align
+with our future vision for agent tech
+
+48
+00:01:05,670 --> 00:01:05,680
+with our future vision for agent tech
+ 
+
+49
+00:01:05,680 --> 00:01:08,510
+with our future vision for agent tech
+deployments. Um so before we go on, I
+
+50
+00:01:08,510 --> 00:01:08,520
+deployments. Um so before we go on, I
+ 
+
+51
+00:01:08,520 --> 00:01:09,750
+deployments. Um so before we go on, I
+know a lot of you already know this. I'm
+
+52
+00:01:09,750 --> 00:01:09,760
+know a lot of you already know this. I'm
+ 
+
+53
+00:01:09,760 --> 00:01:11,230
+know a lot of you already know this. I'm
+going to quickly run through this, but
+
+54
+00:01:11,230 --> 00:01:11,240
+going to quickly run through this, but
+ 
+
+55
+00:01:11,240 --> 00:01:13,070
+going to quickly run through this, but
+just a very quick overview of MCPs as it
+
+56
+00:01:13,070 --> 00:01:13,080
+just a very quick overview of MCPs as it
+ 
+
+57
+00:01:13,080 --> 00:01:14,950
+just a very quick overview of MCPs as it
+is relevant today. The first is of
+
+58
+00:01:14,950 --> 00:01:14,960
+is relevant today. The first is of
+ 
+
+59
+00:01:14,960 --> 00:01:16,270
+is relevant today. The first is of
+course we all know it's an open standard
+
+60
+00:01:16,270 --> 00:01:16,280
+course we all know it's an open standard
+ 
+
+61
+00:01:16,280 --> 00:01:18,030
+course we all know it's an open standard
+that was created. Uh most of us know
+
+62
+00:01:18,030 --> 00:01:18,040
+that was created. Uh most of us know
+ 
+
+63
+00:01:18,040 --> 00:01:19,750
+that was created. Uh most of us know
+that at Anthropic. Um there is an
+
+64
+00:01:19,750 --> 00:01:19,760
+that at Anthropic. Um there is an
+ 
+
+65
+00:01:19,760 --> 00:01:21,270
+that at Anthropic. Um there is an
+official registry today which contains
+
+66
+00:01:21,270 --> 00:01:21,280
+official registry today which contains
+ 
+
+67
+00:01:21,280 --> 00:01:23,070
+official registry today which contains
+over thousands of servers, and this is
+
+68
+00:01:23,070 --> 00:01:23,080
+over thousands of servers, and this is
+ 
+
+69
+00:01:23,080 --> 00:01:26,030
+over thousands of servers, and this is
+growing rapidly over the last year. Um
+
+70
+00:01:26,030 --> 00:01:26,040
+growing rapidly over the last year. Um
+ 
+
+71
+00:01:26,040 --> 00:01:27,830
+growing rapidly over the last year. Um
+and we see this happening that
+
+72
+00:01:27,830 --> 00:01:27,840
+and we see this happening that
+ 
+
+73
+00:01:27,840 --> 00:01:29,270
+and we see this happening that
+individual companies all the time are
+
+74
+00:01:29,270 --> 00:01:29,280
+individual companies all the time are
+ 
+
+75
+00:01:29,280 --> 00:01:31,870
+individual companies all the time are
+building new servers uh very quickly,
+
+76
+00:01:31,870 --> 00:01:31,880
+building new servers uh very quickly,
+ 
+
+77
+00:01:31,880 --> 00:01:33,710
+building new servers uh very quickly,
+and are trying to ensure that they stay
+
+78
+00:01:33,710 --> 00:01:33,720
+and are trying to ensure that they stay
+ 
+
+79
+00:01:33,720 --> 00:01:35,470
+and are trying to ensure that they stay
+ahead and trying to adhere to this
+
+80
+00:01:35,470 --> 00:01:35,480
+ahead and trying to adhere to this
+ 
+
+81
+00:01:35,480 --> 00:01:37,870
+ahead and trying to adhere to this
+protocol nowadays. But still, even if
+
+82
+00:01:37,870 --> 00:01:37,880
+protocol nowadays. But still, even if
+ 
+
+83
+00:01:37,880 --> 00:01:40,230
+protocol nowadays. But still, even if
+this happens, we see a major problem
+
+84
+00:01:40,230 --> 00:01:40,240
+this happens, we see a major problem
+ 
+
+85
+00:01:40,240 --> 00:01:42,350
+this happens, we see a major problem
+when enterprises try to use it.
+
+86
+00:01:42,350 --> 00:01:42,360
+when enterprises try to use it.
+ 
+
+87
+00:01:42,360 --> 00:01:44,150
+when enterprises try to use it.
+Enterprises struggle to deal with what
+
+88
+00:01:44,150 --> 00:01:44,160
+Enterprises struggle to deal with what
+ 
+
+89
+00:01:44,160 --> 00:01:46,390
+Enterprises struggle to deal with what
+they believe to be table stakes. Things
+
+90
+00:01:46,390 --> 00:01:46,400
+they believe to be table stakes. Things
+ 
+
+91
+00:01:46,400 --> 00:01:48,070
+they believe to be table stakes. Things
+like observability. When they want to
+
+92
+00:01:48,070 --> 00:01:48,080
+like observability. When they want to
+ 
+
+93
+00:01:48,080 --> 00:01:50,150
+like observability. When they want to
+know who's using my MCP, who's using
+
+94
+00:01:50,150 --> 00:01:50,160
+know who's using my MCP, who's using
+ 
+
+95
+00:01:50,160 --> 00:01:52,150
+know who's using my MCP, who's using
+these tools, how do I ensure that the
+
+96
+00:01:52,150 --> 00:01:52,160
+these tools, how do I ensure that the
+ 
+
+97
+00:01:52,160 --> 00:01:54,150
+these tools, how do I ensure that the
+correct people are using it, um and how
+
+98
+00:01:54,150 --> 00:01:54,160
+correct people are using it, um and how
+ 
+
+99
+00:01:54,160 --> 00:01:56,230
+correct people are using it, um and how
+do I know how to develop on certain
+
+100
+00:01:56,230 --> 00:01:56,240
+do I know how to develop on certain
+ 
+
+101
+00:01:56,240 --> 00:01:58,230
+do I know how to develop on certain
+parts of the MCP protocol, which parts
+
+102
+00:01:58,230 --> 00:01:58,240
+parts of the MCP protocol, which parts
+ 
+
+103
+00:01:58,240 --> 00:02:00,110
+parts of the MCP protocol, which parts
+of my tools aren't working properly.
+
+104
+00:02:00,110 --> 00:02:00,120
+of my tools aren't working properly.
+ 
+
+105
+00:02:00,120 --> 00:02:00,990
+of my tools aren't working properly.
+These are something that something
+
+106
+00:02:00,990 --> 00:02:01,000
+These are something that something
+ 
+
+107
+00:02:01,000 --> 00:02:02,630
+These are something that something
+that's simply completely opaque to
+
+108
+00:02:02,630 --> 00:02:02,640
+that's simply completely opaque to
+ 
+
+109
+00:02:02,640 --> 00:02:03,950
+that's simply completely opaque to
+enterprises today.
+
+110
+00:02:03,950 --> 00:02:03,960
+enterprises today.
+ 
+
+111
+00:02:03,960 --> 00:02:05,310
+enterprises today.
+Second is access control, something I
+
+112
+00:02:05,310 --> 00:02:05,320
+Second is access control, something I
+ 
+
+113
+00:02:05,320 --> 00:02:07,790
+Second is access control, something I
+just touched upon already, right? How do
+
+114
+00:02:07,790 --> 00:02:07,800
+just touched upon already, right? How do
+ 
+
+115
+00:02:07,800 --> 00:02:09,430
+just touched upon already, right? How do
+I ensure the correct correct users have
+
+116
+00:02:09,430 --> 00:02:09,440
+I ensure the correct correct users have
+ 
+
+117
+00:02:09,440 --> 00:02:10,950
+I ensure the correct correct users have
+access to these servers? Things like
+
+118
+00:02:10,950 --> 00:02:10,960
+access to these servers? Things like
+ 
+
+119
+00:02:10,960 --> 00:02:13,070
+access to these servers? Things like
+ensuring that certain servers are scoped
+
+120
+00:02:13,070 --> 00:02:13,080
+ensuring that certain servers are scoped
+ 
+
+121
+00:02:13,080 --> 00:02:15,870
+ensuring that certain servers are scoped
+correctly. Tools are only made are only
+
+122
+00:02:15,870 --> 00:02:15,880
+correctly. Tools are only made are only
+ 
+
+123
+00:02:15,880 --> 00:02:17,350
+correctly. Tools are only made are only
+allowed for certain groups of servers.
+
+124
+00:02:17,350 --> 00:02:17,360
+allowed for certain groups of servers.
+ 
+
+125
+00:02:17,360 --> 00:02:19,190
+allowed for certain groups of servers.
+If you're working in observability MCP,
+
+126
+00:02:19,190 --> 00:02:19,200
+If you're working in observability MCP,
+ 
+
+127
+00:02:19,200 --> 00:02:20,590
+If you're working in observability MCP,
+you might want the entire company to
+
+128
+00:02:20,590 --> 00:02:20,600
+you might want the entire company to
+ 
+
+129
+00:02:20,600 --> 00:02:21,310
+you might want the entire company to
+have
+
+130
+00:02:21,310 --> 00:02:21,320
+have
+ 
+
+131
+00:02:21,320 --> 00:02:23,390
+have
+view into like why which things are
+
+132
+00:02:23,390 --> 00:02:23,400
+view into like why which things are
+ 
+
+133
+00:02:23,400 --> 00:02:25,070
+view into like why which things are
+failing, but only certain people to have
+
+134
+00:02:25,070 --> 00:02:25,080
+failing, but only certain people to have
+ 
+
+135
+00:02:25,080 --> 00:02:26,350
+failing, but only certain people to have
+the ability to actually change things
+
+136
+00:02:26,350 --> 00:02:26,360
+the ability to actually change things
+ 
+
+137
+00:02:26,360 --> 00:02:28,470
+the ability to actually change things
+and update new dashboards, right? These
+
+138
+00:02:28,470 --> 00:02:28,480
+and update new dashboards, right? These
+ 
+
+139
+00:02:28,480 --> 00:02:29,510
+and update new dashboards, right? These
+are the kind of things that currently
+
+140
+00:02:29,510 --> 00:02:29,520
+are the kind of things that currently
+ 
+
+141
+00:02:29,520 --> 00:02:31,430
+are the kind of things that currently
+are quite hard to do with MCP servers.
+
+142
+00:02:31,430 --> 00:02:31,440
+are quite hard to do with MCP servers.
+ 
+
+143
+00:02:31,440 --> 00:02:33,270
+are quite hard to do with MCP servers.
+And honestly, not something that we as a
+
+144
+00:02:33,270 --> 00:02:33,280
+And honestly, not something that we as a
+ 
+
+145
+00:02:33,280 --> 00:02:35,790
+And honestly, not something that we as a
+community have worked on enough. And
+
+146
+00:02:35,790 --> 00:02:35,800
+community have worked on enough. And
+ 
+
+147
+00:02:35,800 --> 00:02:37,710
+community have worked on enough. And
+finally, security. And I like to think
+
+148
+00:02:37,710 --> 00:02:37,720
+finally, security. And I like to think
+ 
+
+149
+00:02:37,720 --> 00:02:38,750
+finally, security. And I like to think
+of the three of these is almost like a
+
+150
+00:02:38,750 --> 00:02:38,760
+of the three of these is almost like a
+ 
+
+151
+00:02:38,760 --> 00:02:40,710
+of the three of these is almost like a
+three-headed hydra in some ways, right?
+
+152
+00:02:40,710 --> 00:02:40,720
+three-headed hydra in some ways, right?
+ 
+
+153
+00:02:40,720 --> 00:02:43,430
+three-headed hydra in some ways, right?
+Um security is a wide range of things. I
+
+154
+00:02:43,430 --> 00:02:43,440
+Um security is a wide range of things. I
+ 
+
+155
+00:02:43,440 --> 00:02:44,870
+Um security is a wide range of things. I
+like to think not only in terms of the
+
+156
+00:02:44,870 --> 00:02:44,880
+like to think not only in terms of the
+ 
+
+157
+00:02:44,880 --> 00:02:46,830
+like to think not only in terms of the
+MCP server, where you know you
+
+158
+00:02:46,830 --> 00:02:46,840
+MCP server, where you know you
+ 
+
+159
+00:02:46,840 --> 00:02:48,030
+MCP server, where you know you
+enterprises want to know how do you
+
+160
+00:02:48,030 --> 00:02:48,040
+enterprises want to know how do you
+ 
+
+161
+00:02:48,040 --> 00:02:50,670
+enterprises want to know how do you
+verify whether a server is safe, it has
+
+162
+00:02:50,670 --> 00:02:50,680
+verify whether a server is safe, it has
+ 
+
+163
+00:02:50,680 --> 00:02:52,350
+verify whether a server is safe, it has
+uh the correct protocols and the correct
+
+164
+00:02:52,350 --> 00:02:52,360
+uh the correct protocols and the correct
+ 
+
+165
+00:02:52,360 --> 00:02:54,310
+uh the correct protocols and the correct
+ways of ensuring data exfiltration
+
+166
+00:02:54,310 --> 00:02:54,320
+ways of ensuring data exfiltration
+ 
+
+167
+00:02:54,320 --> 00:02:56,550
+ways of ensuring data exfiltration
+doesn't occur, things like uh you know
+
+168
+00:02:56,550 --> 00:02:56,560
+doesn't occur, things like uh you know
+ 
+
+169
+00:02:56,560 --> 00:02:59,110
+doesn't occur, things like uh you know
+the tools on on can't be used in a
+
+170
+00:02:59,110 --> 00:02:59,120
+the tools on on can't be used in a
+ 
+
+171
+00:02:59,120 --> 00:03:01,310
+the tools on on can't be used in a
+harmful way both for infrastructure
+
+172
+00:03:01,310 --> 00:03:01,320
+harmful way both for infrastructure
+ 
+
+173
+00:03:01,320 --> 00:03:02,910
+harmful way both for infrastructure
+externally, and but your internal
+
+174
+00:03:02,910 --> 00:03:02,920
+externally, and but your internal
+ 
+
+175
+00:03:02,920 --> 00:03:04,950
+externally, and but your internal
+infrastructure as well. But secondly,
+
+176
+00:03:04,950 --> 00:03:04,960
+infrastructure as well. But secondly,
+ 
+
+177
+00:03:04,960 --> 00:03:06,630
+infrastructure as well. But secondly,
+how do you ensure remote clients that
+
+178
+00:03:06,630 --> 00:03:06,640
+how do you ensure remote clients that
+ 
+
+179
+00:03:06,640 --> 00:03:08,590
+how do you ensure remote clients that
+are perhaps untrusted in nature can
+
+180
+00:03:08,590 --> 00:03:08,600
+are perhaps untrusted in nature can
+ 
+
+181
+00:03:08,600 --> 00:03:10,550
+are perhaps untrusted in nature can
+access your private data as an
+
+182
+00:03:10,550 --> 00:03:10,560
+access your private data as an
+ 
+
+183
+00:03:10,560 --> 00:03:12,110
+access your private data as an
+enterprise, right? These are all really
+
+184
+00:03:12,110 --> 00:03:12,120
+enterprise, right? These are all really
+ 
+
+185
+00:03:12,120 --> 00:03:14,030
+enterprise, right? These are all really
+hard problems that you've kind of solved
+
+186
+00:03:14,030 --> 00:03:14,040
+hard problems that you've kind of solved
+ 
+
+187
+00:03:14,040 --> 00:03:16,510
+hard problems that you've kind of solved
+in previous paradigms with APIs, but we
+
+188
+00:03:16,510 --> 00:03:16,520
+in previous paradigms with APIs, but we
+ 
+
+189
+00:03:16,520 --> 00:03:18,350
+in previous paradigms with APIs, but we
+really don't have a good way of solving
+
+190
+00:03:18,350 --> 00:03:18,360
+really don't have a good way of solving
+ 
+
+191
+00:03:18,360 --> 00:03:20,430
+really don't have a good way of solving
+it uh at the moment.
+
+192
+00:03:20,430 --> 00:03:20,440
+it uh at the moment.
+ 
+
+193
+00:03:20,440 --> 00:03:22,430
+it uh at the moment.
+So just going back to the registry
+
+194
+00:03:22,430 --> 00:03:22,440
+So just going back to the registry
+ 
+
+195
+00:03:22,440 --> 00:03:24,270
+So just going back to the registry
+point, it's really useful to think of
+
+196
+00:03:24,270 --> 00:03:24,280
+point, it's really useful to think of
+ 
+
+197
+00:03:24,280 --> 00:03:25,590
+point, it's really useful to think of
+where we are and where we want to go,
+
+198
+00:03:25,590 --> 00:03:25,600
+where we are and where we want to go,
+ 
+
+199
+00:03:25,600 --> 00:03:27,710
+where we are and where we want to go,
+right? Registries are really useful, and
+
+200
+00:03:27,710 --> 00:03:27,720
+right? Registries are really useful, and
+ 
+
+201
+00:03:27,720 --> 00:03:29,190
+right? Registries are really useful, and
+I don't think there's any discussion
+
+202
+00:03:29,190 --> 00:03:29,200
+I don't think there's any discussion
+ 
+
+203
+00:03:29,200 --> 00:03:30,390
+I don't think there's any discussion
+that here where we are having where we
+
+204
+00:03:30,390 --> 00:03:30,400
+that here where we are having where we
+ 
+
+205
+00:03:30,400 --> 00:03:31,790
+that here where we are having where we
+think they're not useful. We're really
+
+206
+00:03:31,790 --> 00:03:31,800
+think they're not useful. We're really
+ 
+
+207
+00:03:31,800 --> 00:03:33,230
+think they're not useful. We're really
+proud of it and we're really happy we we
+
+208
+00:03:33,230 --> 00:03:33,240
+proud of it and we're really happy we we
+ 
+
+209
+00:03:33,240 --> 00:03:34,990
+proud of it and we're really happy we we
+helped develop this. But it's really
+
+210
+00:03:34,990 --> 00:03:35,000
+helped develop this. But it's really
+ 
+
+211
+00:03:35,000 --> 00:03:36,550
+helped develop this. But it's really
+important to realize that registry
+
+212
+00:03:36,550 --> 00:03:36,560
+important to realize that registry
+ 
+
+213
+00:03:36,560 --> 00:03:38,190
+important to realize that registry
+registry simply aren't complete for an
+
+214
+00:03:38,190 --> 00:03:38,200
+registry simply aren't complete for an
+ 
+
+215
+00:03:38,200 --> 00:03:40,630
+registry simply aren't complete for an
+enterprise. And what's like funny about
+
+216
+00:03:40,630 --> 00:03:40,640
+enterprise. And what's like funny about
+ 
+
+217
+00:03:40,640 --> 00:03:42,590
+enterprise. And what's like funny about
+this is is that MCPs were specifically
+
+218
+00:03:42,590 --> 00:03:42,600
+this is is that MCPs were specifically
+ 
+
+219
+00:03:42,600 --> 00:03:45,070
+this is is that MCPs were specifically
+designed um if you attended David
+
+220
+00:03:45,070 --> 00:03:45,080
+designed um if you attended David
+ 
+
+221
+00:03:45,080 --> 00:03:47,390
+designed um if you attended David
+David's talk earlier today, MCPs are
+
+222
+00:03:47,390 --> 00:03:47,400
+David's talk earlier today, MCPs are
+ 
+
+223
+00:03:47,400 --> 00:03:49,390
+David's talk earlier today, MCPs are
+specifically designed because they allow
+
+224
+00:03:49,390 --> 00:03:49,400
+specifically designed because they allow
+ 
+
+225
+00:03:49,400 --> 00:03:50,990
+specifically designed because they allow
+themselves to be so much more useful for
+
+226
+00:03:50,990 --> 00:03:51,000
+themselves to be so much more useful for
+ 
+
+227
+00:03:51,000 --> 00:03:52,510
+themselves to be so much more useful for
+enterprises. And there's this kind of
+
+228
+00:03:52,510 --> 00:03:52,520
+enterprises. And there's this kind of
+ 
+
+229
+00:03:52,520 --> 00:03:54,710
+enterprises. And there's this kind of
+gap which the protocol allows for that
+
+230
+00:03:54,710 --> 00:03:54,720
+gap which the protocol allows for that
+ 
+
+231
+00:03:54,720 --> 00:03:57,190
+gap which the protocol allows for that
+we have yet to build into well, and
+
+232
+00:03:57,190 --> 00:03:57,200
+we have yet to build into well, and
+ 
+
+233
+00:03:57,200 --> 00:03:58,030
+we have yet to build into well, and
+these include things like
+
+234
+00:03:58,030 --> 00:03:58,040
+these include things like
+ 
+
+235
+00:03:58,040 --> 00:03:59,830
+these include things like
+authentication, but also access control,
+
+236
+00:03:59,830 --> 00:03:59,840
+authentication, but also access control,
+ 
+
+237
+00:03:59,840 --> 00:04:00,910
+authentication, but also access control,
+observability, and credential
+
+238
+00:04:00,910 --> 00:04:00,920
+observability, and credential
+ 
+
+239
+00:04:00,920 --> 00:04:02,550
+observability, and credential
+management. These are all things that
+
+240
+00:04:02,550 --> 00:04:02,560
+management. These are all things that
+ 
+
+241
+00:04:02,560 --> 00:04:04,670
+management. These are all things that
+enterprises need and are critical part,
+
+242
+00:04:04,670 --> 00:04:04,680
+enterprises need and are critical part,
+ 
+
+243
+00:04:04,680 --> 00:04:07,150
+enterprises need and are critical part,
+um but are simply not working. So now
+
+244
+00:04:07,150 --> 00:04:07,160
+um but are simply not working. So now
+ 
+
+245
+00:04:07,160 --> 00:04:08,870
+um but are simply not working. So now
+that we have this happening, what is
+
+246
+00:04:08,870 --> 00:04:08,880
+that we have this happening, what is
+ 
+
+247
+00:04:08,880 --> 00:04:11,070
+that we have this happening, what is
+what do enterprises do right nowadays?
+
+248
+00:04:11,070 --> 00:04:11,080
+what do enterprises do right nowadays?
+ 
+
+249
+00:04:11,080 --> 00:04:12,790
+what do enterprises do right nowadays?
+What they do is something like this,
+
+250
+00:04:12,790 --> 00:04:12,800
+What they do is something like this,
+ 
+
+251
+00:04:12,800 --> 00:04:15,630
+What they do is something like this,
+where every single team now with cloud
+
+252
+00:04:15,630 --> 00:04:15,640
+where every single team now with cloud
+ 
+
+253
+00:04:15,640 --> 00:04:17,670
+where every single team now with cloud
+core, you know, and explosion of coding
+
+254
+00:04:17,670 --> 00:04:17,680
+core, you know, and explosion of coding
+ 
+
+255
+00:04:17,680 --> 00:04:20,590
+core, you know, and explosion of coding
+across across various surfaces, can now
+
+256
+00:04:20,590 --> 00:04:20,600
+across across various surfaces, can now
+ 
+
+257
+00:04:20,600 --> 00:04:22,990
+across across various surfaces, can now
+start developing MCPs. But suddenly find
+
+258
+00:04:22,990 --> 00:04:23,000
+start developing MCPs. But suddenly find
+ 
+
+259
+00:04:23,000 --> 00:04:24,270
+start developing MCPs. But suddenly find
+out that they can't actually get them
+
+260
+00:04:24,270 --> 00:04:24,280
+out that they can't actually get them
+ 
+
+261
+00:04:24,280 --> 00:04:25,910
+out that they can't actually get them
+deployed. Or even if they want to get
+
+262
+00:04:25,910 --> 00:04:25,920
+deployed. Or even if they want to get
+ 
+
+263
+00:04:25,920 --> 00:04:28,510
+deployed. Or even if they want to get
+them deployed, the MCPs often can't use
+
+264
+00:04:28,510 --> 00:04:28,520
+them deployed, the MCPs often can't use
+ 
+
+265
+00:04:28,520 --> 00:04:30,150
+them deployed, the MCPs often can't use
+the tools they want to, those tools
+
+266
+00:04:30,150 --> 00:04:30,160
+the tools they want to, those tools
+ 
+
+267
+00:04:30,160 --> 00:04:31,830
+the tools they want to, those tools
+can't give them the correct access, and
+
+268
+00:04:31,830 --> 00:04:31,840
+can't give them the correct access, and
+ 
+
+269
+00:04:31,840 --> 00:04:33,990
+can't give them the correct access, and
+security teams on the other end are also
+
+270
+00:04:33,990 --> 00:04:34,000
+security teams on the other end are also
+ 
+
+271
+00:04:34,000 --> 00:04:35,470
+security teams on the other end are also
+pretty justified how they're going about
+
+272
+00:04:35,470 --> 00:04:35,480
+pretty justified how they're going about
+ 
+
+273
+00:04:35,480 --> 00:04:37,270
+pretty justified how they're going about
+it, because they're often overloaded,
+
+274
+00:04:37,270 --> 00:04:37,280
+it, because they're often overloaded,
+ 
+
+275
+00:04:37,280 --> 00:04:38,870
+it, because they're often overloaded,
+and they're often unable to see which
+
+276
+00:04:38,870 --> 00:04:38,880
+and they're often unable to see which
+ 
+
+277
+00:04:38,880 --> 00:04:41,150
+and they're often unable to see which
+MCPs they want to go through, and which
+
+278
+00:04:41,150 --> 00:04:41,160
+MCPs they want to go through, and which
+ 
+
+279
+00:04:41,160 --> 00:04:43,350
+MCPs they want to go through, and which
+they want to which they want to allow.
+
+280
+00:04:43,350 --> 00:04:43,360
+they want to which they want to allow.
+ 
+
+281
+00:04:43,360 --> 00:04:46,230
+they want to which they want to allow.
+And finally, at the company level, CEOs
+
+282
+00:04:46,230 --> 00:04:46,240
+And finally, at the company level, CEOs
+ 
+
+283
+00:04:46,240 --> 00:04:47,750
+And finally, at the company level, CEOs
+and C-suites are like, you know, why are
+
+284
+00:04:47,750 --> 00:04:47,760
+and C-suites are like, you know, why are
+ 
+
+285
+00:04:47,760 --> 00:04:49,630
+and C-suites are like, you know, why are
+my MCPs not working correctly? Why are
+
+286
+00:04:49,630 --> 00:04:49,640
+my MCPs not working correctly? Why are
+ 
+
+287
+00:04:49,640 --> 00:04:52,550
+my MCPs not working correctly? Why are
+my agents ineffective? Why can't um why
+
+288
+00:04:52,550 --> 00:04:52,560
+my agents ineffective? Why can't um why
+ 
+
+289
+00:04:52,560 --> 00:04:54,190
+my agents ineffective? Why can't um why
+can't your agents actually, you know,
+
+290
+00:04:54,190 --> 00:04:54,200
+can't your agents actually, you know,
+ 
+
+291
+00:04:54,200 --> 00:04:55,950
+can't your agents actually, you know,
+being be the thing that we all thought
+
+292
+00:04:55,950 --> 00:04:55,960
+being be the thing that we all thought
+ 
+
+293
+00:04:55,960 --> 00:04:57,390
+being be the thing that we all thought
+it was going to be? And so this
+
+294
+00:04:57,390 --> 00:04:57,400
+it was going to be? And so this
+ 
+
+295
+00:04:57,400 --> 00:04:58,870
+it was going to be? And so this
+bottleneck, which we're seeing right
+
+296
+00:04:58,870 --> 00:04:58,880
+bottleneck, which we're seeing right
+ 
+
+297
+00:04:58,880 --> 00:05:00,750
+bottleneck, which we're seeing right
+here, is something we need to solve. We
+
+298
+00:05:00,750 --> 00:05:00,760
+here, is something we need to solve. We
+ 
+
+299
+00:05:00,760 --> 00:05:03,190
+here, is something we need to solve. We
+need to ensure that security teams
+
+300
+00:05:03,190 --> 00:05:03,200
+need to ensure that security teams
+ 
+
+301
+00:05:03,200 --> 00:05:05,070
+need to ensure that security teams
+aren't overloaded, that users are given
+
+302
+00:05:05,070 --> 00:05:05,080
+aren't overloaded, that users are given
+ 
+
+303
+00:05:05,080 --> 00:05:06,270
+aren't overloaded, that users are given
+the freedom to actually develop their
+
+304
+00:05:06,270 --> 00:05:06,280
+the freedom to actually develop their
+ 
+
+305
+00:05:06,280 --> 00:05:08,910
+the freedom to actually develop their
+own MCPs, and organizations have
+
+306
+00:05:08,910 --> 00:05:08,920
+own MCPs, and organizations have
+ 
+
+307
+00:05:08,920 --> 00:05:11,790
+own MCPs, and organizations have
+visibility into all of them. And so what
+
+308
+00:05:11,790 --> 00:05:11,800
+visibility into all of them. And so what
+ 
+
+309
+00:05:11,800 --> 00:05:14,030
+visibility into all of them. And so what
+I'm going to tell you is that this
+
+310
+00:05:14,030 --> 00:05:14,040
+I'm going to tell you is that this
+ 
+
+311
+00:05:14,040 --> 00:05:15,550
+I'm going to tell you is that this
+problem where enterprises stay with a
+
+312
+00:05:15,550 --> 00:05:15,560
+problem where enterprises stay with a
+ 
+
+313
+00:05:15,560 --> 00:05:17,230
+problem where enterprises stay with a
+handful of MCP tools is going to
+
+314
+00:05:17,230 --> 00:05:17,240
+handful of MCP tools is going to
+ 
+
+315
+00:05:17,240 --> 00:05:18,790
+handful of MCP tools is going to
+fundamentally restrict the protocol and
+
+316
+00:05:18,790 --> 00:05:18,800
+fundamentally restrict the protocol and
+ 
+
+317
+00:05:18,800 --> 00:05:21,270
+fundamentally restrict the protocol and
+hurt agents until we really go and solve
+
+318
+00:05:21,270 --> 00:05:21,280
+hurt agents until we really go and solve
+ 
+
+319
+00:05:21,280 --> 00:05:22,310
+hurt agents until we really go and solve
+this.
+
+320
+00:05:22,310 --> 00:05:22,320
+this.
+ 
+
+321
+00:05:22,320 --> 00:05:23,590
+this.
+And I think it's worth zooming out at
+
+322
+00:05:23,590 --> 00:05:23,600
+And I think it's worth zooming out at
+ 
+
+323
+00:05:23,600 --> 00:05:25,470
+And I think it's worth zooming out at
+that moment, right? It's like I think
+
+324
+00:05:25,470 --> 00:05:25,480
+that moment, right? It's like I think
+ 
+
+325
+00:05:25,480 --> 00:05:27,070
+that moment, right? It's like I think
+it's really valuable to think how
+
+326
+00:05:27,070 --> 00:05:27,080
+it's really valuable to think how
+ 
+
+327
+00:05:27,080 --> 00:05:28,990
+it's really valuable to think how
+important these paper cuts are, and how
+
+328
+00:05:28,990 --> 00:05:29,000
+important these paper cuts are, and how
+ 
+
+329
+00:05:29,000 --> 00:05:30,710
+important these paper cuts are, and how
+valuable it is to try and invest the
+
+330
+00:05:30,710 --> 00:05:30,720
+valuable it is to try and invest the
+ 
+
+331
+00:05:30,720 --> 00:05:32,950
+valuable it is to try and invest the
+time to try and solve it um
+
+332
+00:05:32,950 --> 00:05:32,960
+time to try and solve it um
+ 
+
+333
+00:05:32,960 --> 00:05:34,670
+time to try and solve it um
+super super well.
+
+334
+00:05:34,670 --> 00:05:34,680
+super super well.
+ 
+
+335
+00:05:34,680 --> 00:05:36,790
+super super well.
+On to why we think the gateways are a
+
+336
+00:05:36,790 --> 00:05:36,800
+On to why we think the gateways are a
+ 
+
+337
+00:05:36,800 --> 00:05:38,710
+On to why we think the gateways are a
+better solution. I think this is a very
+
+338
+00:05:38,710 --> 00:05:38,720
+better solution. I think this is a very
+ 
+
+339
+00:05:38,720 --> 00:05:40,950
+better solution. I think this is a very
+way to good way to build intuition.
+
+340
+00:05:40,950 --> 00:05:40,960
+way to good way to build intuition.
+ 
+
+341
+00:05:40,960 --> 00:05:43,110
+way to good way to build intuition.
+The core intuition here is at a point in
+
+342
+00:05:43,110 --> 00:05:43,120
+The core intuition here is at a point in
+ 
+
+343
+00:05:43,120 --> 00:05:45,390
+The core intuition here is at a point in
+which almost all of your teams can build
+
+344
+00:05:45,390 --> 00:05:45,400
+which almost all of your teams can build
+ 
+
+345
+00:05:45,400 --> 00:05:47,990
+which almost all of your teams can build
+MCP servers really well, or have the
+
+346
+00:05:47,990 --> 00:05:48,000
+MCP servers really well, or have the
+ 
+
+347
+00:05:48,000 --> 00:05:50,390
+MCP servers really well, or have the
+ability to theoretically be able to do
+
+348
+00:05:50,390 --> 00:05:50,400
+ability to theoretically be able to do
+ 
+
+349
+00:05:50,400 --> 00:05:52,190
+ability to theoretically be able to do
+so because they're simply using coding
+
+350
+00:05:52,190 --> 00:05:52,200
+so because they're simply using coding
+ 
+
+351
+00:05:52,200 --> 00:05:53,590
+so because they're simply using coding
+agents that can understand the structure
+
+352
+00:05:53,590 --> 00:05:53,600
+agents that can understand the structure
+ 
+
+353
+00:05:53,600 --> 00:05:55,550
+agents that can understand the structure
+of the servers very well, that are able
+
+354
+00:05:55,550 --> 00:05:55,560
+of the servers very well, that are able
+ 
+
+355
+00:05:55,560 --> 00:05:56,910
+of the servers very well, that are able
+to understand what the tool definitions
+
+356
+00:05:56,910 --> 00:05:56,920
+to understand what the tool definitions
+ 
+
+357
+00:05:56,920 --> 00:05:59,390
+to understand what the tool definitions
+look like, what you should want, uh what
+
+358
+00:05:59,390 --> 00:05:59,400
+look like, what you should want, uh what
+ 
+
+359
+00:05:59,400 --> 00:06:01,270
+look like, what you should want, uh what
+access controls look like. The really
+
+360
+00:06:01,270 --> 00:06:01,280
+access controls look like. The really
+ 
+
+361
+00:06:01,280 --> 00:06:03,190
+access controls look like. The really
+important thing for security teams and
+
+362
+00:06:03,190 --> 00:06:03,200
+important thing for security teams and
+ 
+
+363
+00:06:03,200 --> 00:06:04,790
+important thing for security teams and
+enterprises that want to allow this to
+
+364
+00:06:04,790 --> 00:06:04,800
+enterprises that want to allow this to
+ 
+
+365
+00:06:04,800 --> 00:06:06,350
+enterprises that want to allow this to
+be decentralized is they need to
+
+366
+00:06:06,350 --> 00:06:06,360
+be decentralized is they need to
+ 
+
+367
+00:06:06,360 --> 00:06:08,870
+be decentralized is they need to
+establish a root of trust. And so we
+
+368
+00:06:08,870 --> 00:06:08,880
+establish a root of trust. And so we
+ 
+
+369
+00:06:08,880 --> 00:06:10,670
+establish a root of trust. And so we
+think that the goal for a secure this
+
+370
+00:06:10,670 --> 00:06:10,680
+think that the goal for a secure this
+ 
+
+371
+00:06:10,680 --> 00:06:13,390
+think that the goal for a secure this
+for any security team is to is to bless
+
+372
+00:06:13,390 --> 00:06:13,400
+for any security team is to is to bless
+ 
+
+373
+00:06:13,400 --> 00:06:15,870
+for any security team is to is to bless
+one platform. And this is if I take one
+
+374
+00:06:15,870 --> 00:06:15,880
+one platform. And this is if I take one
+ 
+
+375
+00:06:15,880 --> 00:06:17,030
+one platform. And this is if I take one
+thing away from this talk, I would
+
+376
+00:06:17,030 --> 00:06:17,040
+thing away from this talk, I would
+ 
+
+377
+00:06:17,040 --> 00:06:19,070
+thing away from this talk, I would
+really suggest it be this slide, because
+
+378
+00:06:19,070 --> 00:06:19,080
+really suggest it be this slide, because
+ 
+
+379
+00:06:19,080 --> 00:06:20,470
+really suggest it be this slide, because
+it's irrelevant like you can you might
+
+380
+00:06:20,470 --> 00:06:20,480
+it's irrelevant like you can you might
+ 
+
+381
+00:06:20,480 --> 00:06:21,830
+it's irrelevant like you can you might
+want to use a gateway and I'll mostly be
+
+382
+00:06:21,830 --> 00:06:21,840
+want to use a gateway and I'll mostly be
+ 
+
+383
+00:06:21,840 --> 00:06:23,430
+want to use a gateway and I'll mostly be
+talking to you through this, but I think
+
+384
+00:06:23,430 --> 00:06:23,440
+talking to you through this, but I think
+ 
+
+385
+00:06:23,440 --> 00:06:25,710
+talking to you through this, but I think
+this intuition is really the intuition I
+
+386
+00:06:25,710 --> 00:06:25,720
+this intuition is really the intuition I
+ 
+
+387
+00:06:25,720 --> 00:06:27,230
+this intuition is really the intuition I
+would really want to stress. Because
+
+388
+00:06:27,230 --> 00:06:27,240
+would really want to stress. Because
+ 
+
+389
+00:06:27,240 --> 00:06:28,870
+would really want to stress. Because
+enterprises that are able to do this, in
+
+390
+00:06:28,870 --> 00:06:28,880
+enterprises that are able to do this, in
+ 
+
+391
+00:06:28,880 --> 00:06:30,310
+enterprises that are able to do this, in
+our experience, we've done this
+
+392
+00:06:30,310 --> 00:06:30,320
+our experience, we've done this
+ 
+
+393
+00:06:30,320 --> 00:06:31,710
+our experience, we've done this
+internally and done this externally,
+
+394
+00:06:31,710 --> 00:06:31,720
+internally and done this externally,
+ 
+
+395
+00:06:31,720 --> 00:06:33,950
+internally and done this externally,
+too, are able to explore the usage of
+
+396
+00:06:33,950 --> 00:06:33,960
+too, are able to explore the usage of
+ 
+
+397
+00:06:33,960 --> 00:06:36,230
+too, are able to explore the usage of
+MCPs, and thereby explore the usage of
+
+398
+00:06:36,230 --> 00:06:36,240
+MCPs, and thereby explore the usage of
+ 
+
+399
+00:06:36,240 --> 00:06:38,030
+MCPs, and thereby explore the usage of
+how powerful the agents are. And it's
+
+400
+00:06:38,030 --> 00:06:38,040
+how powerful the agents are. And it's
+ 
+
+401
+00:06:38,040 --> 00:06:39,630
+how powerful the agents are. And it's
+worth obviously coming back here and
+
+402
+00:06:39,630 --> 00:06:39,640
+worth obviously coming back here and
+ 
+
+403
+00:06:39,640 --> 00:06:41,470
+worth obviously coming back here and
+saying like, you know, MCPs if the usage
+
+404
+00:06:41,470 --> 00:06:41,480
+saying like, you know, MCPs if the usage
+ 
+
+405
+00:06:41,480 --> 00:06:43,710
+saying like, you know, MCPs if the usage
+is exponential, every good MCP you have
+
+406
+00:06:43,710 --> 00:06:43,720
+is exponential, every good MCP you have
+ 
+
+407
+00:06:43,720 --> 00:06:45,590
+is exponential, every good MCP you have
+helps all of the agents in your company.
+
+408
+00:06:45,590 --> 00:06:45,600
+helps all of the agents in your company.
+ 
+
+409
+00:06:45,600 --> 00:06:47,550
+helps all of the agents in your company.
+And so doing something like this has
+
+410
+00:06:47,550 --> 00:06:47,560
+And so doing something like this has
+ 
+
+411
+00:06:47,560 --> 00:06:49,190
+And so doing something like this has
+knock-on effects beyond just that one
+
+412
+00:06:49,190 --> 00:06:49,200
+knock-on effects beyond just that one
+ 
+
+413
+00:06:49,200 --> 00:06:52,390
+knock-on effects beyond just that one
+MCP. Um so now now that we think that,
+
+414
+00:06:52,390 --> 00:06:52,400
+MCP. Um so now now that we think that,
+ 
+
+415
+00:06:52,400 --> 00:06:54,070
+MCP. Um so now now that we think that,
+you know, our platform is really useful,
+
+416
+00:06:54,070 --> 00:06:54,080
+you know, our platform is really useful,
+ 
+
+417
+00:06:54,080 --> 00:06:56,910
+you know, our platform is really useful,
+let me tell you why I think gateways and
+
+418
+00:06:56,910 --> 00:06:56,920
+let me tell you why I think gateways and
+ 
+
+419
+00:06:56,920 --> 00:06:58,790
+let me tell you why I think gateways and
+I'll define it for you are a good way of
+
+420
+00:06:58,790 --> 00:06:58,800
+I'll define it for you are a good way of
+ 
+
+421
+00:06:58,800 --> 00:07:01,750
+I'll define it for you are a good way of
+doing this. So a gateway, as a black box
+
+422
+00:07:01,750 --> 00:07:01,760
+doing this. So a gateway, as a black box
+ 
+
+423
+00:07:01,760 --> 00:07:04,990
+doing this. So a gateway, as a black box
+definition of it, is simply a middleman
+
+424
+00:07:04,990 --> 00:07:05,000
+definition of it, is simply a middleman
+ 
+
+425
+00:07:05,000 --> 00:07:05,750
+definition of it, is simply a middleman
+or
+
+426
+00:07:05,750 --> 00:07:05,760
+or
+ 
+
+427
+00:07:05,760 --> 00:07:08,790
+or
+sort of middle layer in between your MCP
+
+428
+00:07:08,790 --> 00:07:08,800
+sort of middle layer in between your MCP
+ 
+
+429
+00:07:08,800 --> 00:07:10,670
+sort of middle layer in between your MCP
+servers, and they can be numerous into
+
+430
+00:07:10,670 --> 00:07:10,680
+servers, and they can be numerous into
+ 
+
+431
+00:07:10,680 --> 00:07:13,430
+servers, and they can be numerous into
+the hundreds, and any MCP client. Notice
+
+432
+00:07:13,430 --> 00:07:13,440
+the hundreds, and any MCP client. Notice
+ 
+
+433
+00:07:13,440 --> 00:07:15,350
+the hundreds, and any MCP client. Notice
+the diagram here is notice is extremely
+
+434
+00:07:15,350 --> 00:07:15,360
+the diagram here is notice is extremely
+ 
+
+435
+00:07:15,360 --> 00:07:17,150
+the diagram here is notice is extremely
+simple, and it leaves a lot to be filled
+
+436
+00:07:17,150 --> 00:07:17,160
+simple, and it leaves a lot to be filled
+ 
+
+437
+00:07:17,160 --> 00:07:19,430
+simple, and it leaves a lot to be filled
+in. But what I really want to talk about
+
+438
+00:07:19,430 --> 00:07:19,440
+in. But what I really want to talk about
+ 
+
+439
+00:07:19,440 --> 00:07:20,870
+in. But what I really want to talk about
+is what we want to get out of the
+
+440
+00:07:20,870 --> 00:07:20,880
+is what we want to get out of the
+ 
+
+441
+00:07:20,880 --> 00:07:23,070
+is what we want to get out of the
+gateway. Things like authorization,
+
+442
+00:07:23,070 --> 00:07:23,080
+gateway. Things like authorization,
+ 
+
+443
+00:07:23,080 --> 00:07:24,550
+gateway. Things like authorization,
+authentication,
+
+444
+00:07:24,550 --> 00:07:24,560
+authentication,
+ 
+
+445
+00:07:24,560 --> 00:07:26,630
+authentication,
+observability, ensuring that you have
+
+446
+00:07:26,630 --> 00:07:26,640
+observability, ensuring that you have
+ 
+
+447
+00:07:26,640 --> 00:07:28,870
+observability, ensuring that you have
+correct connectivity between
+
+448
+00:07:28,870 --> 00:07:28,880
+correct connectivity between
+ 
+
+449
+00:07:28,880 --> 00:07:30,550
+correct connectivity between
+clear secure connections between your
+
+450
+00:07:30,550 --> 00:07:30,560
+clear secure connections between your
+ 
+
+451
+00:07:30,560 --> 00:07:32,710
+clear secure connections between your
+MCP client, which might be untrusted,
+
+452
+00:07:32,710 --> 00:07:32,720
+MCP client, which might be untrusted,
+ 
+
+453
+00:07:32,720 --> 00:07:34,990
+MCP client, which might be untrusted,
+and internally. And also finally, you're
+
+454
+00:07:34,990 --> 00:07:35,000
+and internally. And also finally, you're
+ 
+
+455
+00:07:35,000 --> 00:07:37,670
+and internally. And also finally, you're
+able a easy way to host and deploy any
+
+456
+00:07:37,670 --> 00:07:37,680
+able a easy way to host and deploy any
+ 
+
+457
+00:07:37,680 --> 00:07:40,470
+able a easy way to host and deploy any
+new MCP server. What this allows for is
+
+458
+00:07:40,470 --> 00:07:40,480
+new MCP server. What this allows for is
+ 
+
+459
+00:07:40,480 --> 00:07:42,550
+new MCP server. What this allows for is
+that any new MCP server now does not
+
+460
+00:07:42,550 --> 00:07:42,560
+that any new MCP server now does not
+ 
+
+461
+00:07:42,560 --> 00:07:43,910
+that any new MCP server now does not
+have to deal with any of these five
+
+462
+00:07:43,910 --> 00:07:43,920
+have to deal with any of these five
+ 
+
+463
+00:07:43,920 --> 00:07:45,950
+have to deal with any of these five
+things. And a team that wants to wants
+
+464
+00:07:45,950 --> 00:07:45,960
+things. And a team that wants to wants
+ 
+
+465
+00:07:45,960 --> 00:07:47,950
+things. And a team that wants to wants
+to add a new server only needs to care
+
+466
+00:07:47,950 --> 00:07:47,960
+to add a new server only needs to care
+ 
+
+467
+00:07:47,960 --> 00:07:49,830
+to add a new server only needs to care
+about what is the business logic. So
+
+468
+00:07:49,830 --> 00:07:49,840
+about what is the business logic. So
+ 
+
+469
+00:07:49,840 --> 00:07:51,350
+about what is the business logic. So
+your legal team which wants to review
+
+470
+00:07:51,350 --> 00:07:51,360
+your legal team which wants to review
+ 
+
+471
+00:07:51,360 --> 00:07:53,390
+your legal team which wants to review
+contracts only needs to care about,
+
+472
+00:07:53,390 --> 00:07:53,400
+contracts only needs to care about,
+ 
+
+473
+00:07:53,400 --> 00:07:55,590
+contracts only needs to care about,
+okay, if a contract comes in, this is
+
+474
+00:07:55,590 --> 00:07:55,600
+okay, if a contract comes in, this is
+ 
+
+475
+00:07:55,600 --> 00:07:57,030
+okay, if a contract comes in, this is
+what I want to be seen, this is how a
+
+476
+00:07:57,030 --> 00:07:57,040
+what I want to be seen, this is how a
+ 
+
+477
+00:07:57,040 --> 00:07:58,790
+what I want to be seen, this is how a
+redline should happen, this is what this
+
+478
+00:07:58,790 --> 00:07:58,800
+redline should happen, this is what this
+ 
+
+479
+00:07:58,800 --> 00:07:59,590
+redline should happen, this is what this
+is how you should escalate your
+
+480
+00:07:59,590 --> 00:07:59,600
+is how you should escalate your
+ 
+
+481
+00:07:59,600 --> 00:08:00,990
+is how you should escalate your
+different people. They don't need to
+
+482
+00:08:00,990 --> 00:08:01,000
+different people. They don't need to
+ 
+
+483
+00:08:01,000 --> 00:08:03,470
+different people. They don't need to
+ensure, you know, who who accesses this,
+
+484
+00:08:03,470 --> 00:08:03,480
+ensure, you know, who who accesses this,
+ 
+
+485
+00:08:03,480 --> 00:08:05,270
+ensure, you know, who who accesses this,
+how often can it be accessed, how do I
+
+486
+00:08:05,270 --> 00:08:05,280
+how often can it be accessed, how do I
+ 
+
+487
+00:08:05,280 --> 00:08:06,830
+how often can it be accessed, how do I
+know it's being accessed correctly, how
+
+488
+00:08:06,830 --> 00:08:06,840
+know it's being accessed correctly, how
+ 
+
+489
+00:08:06,840 --> 00:08:08,350
+know it's being accessed correctly, how
+do I know it's like scalable, and if I
+
+490
+00:08:08,350 --> 00:08:08,360
+do I know it's like scalable, and if I
+ 
+
+491
+00:08:08,360 --> 00:08:10,030
+do I know it's like scalable, and if I
+want to have new agents come in, how
+
+492
+00:08:10,030 --> 00:08:10,040
+want to have new agents come in, how
+ 
+
+493
+00:08:10,040 --> 00:08:11,430
+want to have new agents come in, how
+These are all things you need to worry
+
+494
+00:08:11,430 --> 00:08:11,440
+These are all things you need to worry
+ 
+
+495
+00:08:11,440 --> 00:08:13,630
+These are all things you need to worry
+about. And that's a really really useful
+
+496
+00:08:13,630 --> 00:08:13,640
+about. And that's a really really useful
+ 
+
+497
+00:08:13,640 --> 00:08:15,710
+about. And that's a really really useful
+middle layer to have, because actually,
+
+498
+00:08:15,710 --> 00:08:15,720
+middle layer to have, because actually,
+ 
+
+499
+00:08:15,720 --> 00:08:17,030
+middle layer to have, because actually,
+in the world we live in, your legal team
+
+500
+00:08:17,030 --> 00:08:17,040
+in the world we live in, your legal team
+ 
+
+501
+00:08:17,040 --> 00:08:18,670
+in the world we live in, your legal team
+can build the MCP server on their own.
+
+502
+00:08:18,670 --> 00:08:18,680
+can build the MCP server on their own.
+ 
+
+503
+00:08:18,680 --> 00:08:20,750
+can build the MCP server on their own.
+They aren't forced to go back to a new
+
+504
+00:08:20,750 --> 00:08:20,760
+They aren't forced to go back to a new
+ 
+
+505
+00:08:20,760 --> 00:08:22,230
+They aren't forced to go back to a new
+technical team and build it, right? And
+
+506
+00:08:22,230 --> 00:08:22,240
+technical team and build it, right? And
+ 
+
+507
+00:08:22,240 --> 00:08:23,590
+technical team and build it, right? And
+so if you really do want to live in that
+
+508
+00:08:23,590 --> 00:08:23,600
+so if you really do want to live in that
+ 
+
+509
+00:08:23,600 --> 00:08:25,870
+so if you really do want to live in that
+world, a gateway is a fundamental piece
+
+510
+00:08:25,870 --> 00:08:25,880
+world, a gateway is a fundamental piece
+ 
+
+511
+00:08:25,880 --> 00:08:27,990
+world, a gateway is a fundamental piece
+of that infrastructure.
+
+512
+00:08:27,990 --> 00:08:28,000
+of that infrastructure.
+ 
+
+513
+00:08:28,000 --> 00:08:29,670
+of that infrastructure.
+What does a gateway contain? Now there's
+
+514
+00:08:29,670 --> 00:08:29,680
+What does a gateway contain? Now there's
+ 
+
+515
+00:08:29,680 --> 00:08:31,350
+What does a gateway contain? Now there's
+like multiple definitions of gateways,
+
+516
+00:08:31,350 --> 00:08:31,360
+like multiple definitions of gateways,
+ 
+
+517
+00:08:31,360 --> 00:08:32,709
+like multiple definitions of gateways,
+we're going to give you examples, but in
+
+518
+00:08:32,709 --> 00:08:32,719
+we're going to give you examples, but in
+ 
+
+519
+00:08:32,719 --> 00:08:35,190
+we're going to give you examples, but in
+my mind, uh there is there are normally
+
+520
+00:08:35,190 --> 00:08:35,200
+my mind, uh there is there are normally
+ 
+
+521
+00:08:35,200 --> 00:08:37,029
+my mind, uh there is there are normally
+these components which usually exist
+
+522
+00:08:37,029 --> 00:08:37,039
+these components which usually exist
+ 
+
+523
+00:08:37,039 --> 00:08:38,830
+these components which usually exist
+within it. You know, I'm not going to be
+
+524
+00:08:38,830 --> 00:08:38,840
+within it. You know, I'm not going to be
+ 
+
+525
+00:08:38,840 --> 00:08:40,350
+within it. You know, I'm not going to be
+like this is hard and fast, this is
+
+526
+00:08:40,350 --> 00:08:40,360
+like this is hard and fast, this is
+ 
+
+527
+00:08:40,360 --> 00:08:43,670
+like this is hard and fast, this is
+neither exhaustive nor nor the only nor
+
+528
+00:08:43,670 --> 00:08:43,680
+neither exhaustive nor nor the only nor
+ 
+
+529
+00:08:43,680 --> 00:08:46,110
+neither exhaustive nor nor the only nor
+like the without these like there's not
+
+530
+00:08:46,110 --> 00:08:46,120
+like the without these like there's not
+ 
+
+531
+00:08:46,120 --> 00:08:47,870
+like the without these like there's not
+all required. But what you would really
+
+532
+00:08:47,870 --> 00:08:47,880
+all required. But what you would really
+ 
+
+533
+00:08:47,880 --> 00:08:49,430
+all required. But what you would really
+like to do to achieve the goals I just
+
+534
+00:08:49,430 --> 00:08:49,440
+like to do to achieve the goals I just
+ 
+
+535
+00:08:49,440 --> 00:08:51,310
+like to do to achieve the goals I just
+achieved I just talked about, is you
+
+536
+00:08:51,310 --> 00:08:51,320
+achieved I just talked about, is you
+ 
+
+537
+00:08:51,320 --> 00:08:53,150
+achieved I just talked about, is you
+kind of want a way to do auth, you want
+
+538
+00:08:53,150 --> 00:08:53,160
+kind of want a way to do auth, you want
+ 
+
+539
+00:08:53,160 --> 00:08:55,310
+kind of want a way to do auth, you want
+a way to do access control using roles,
+
+540
+00:08:55,310 --> 00:08:55,320
+a way to do access control using roles,
+ 
+
+541
+00:08:55,320 --> 00:08:57,190
+a way to do access control using roles,
+you want a way to route using a proxy
+
+542
+00:08:57,190 --> 00:08:57,200
+you want a way to route using a proxy
+ 
+
+543
+00:08:57,200 --> 00:08:59,430
+you want a way to route using a proxy
+such that any MCP client can only see
+
+544
+00:08:59,430 --> 00:08:59,440
+such that any MCP client can only see
+ 
+
+545
+00:08:59,440 --> 00:09:01,390
+such that any MCP client can only see
+your gateway, and and the gateway then
+
+546
+00:09:01,390 --> 00:09:01,400
+your gateway, and and the gateway then
+ 
+
+547
+00:09:01,400 --> 00:09:03,630
+your gateway, and and the gateway then
+can route to the individual MCP servers
+
+548
+00:09:03,630 --> 00:09:03,640
+can route to the individual MCP servers
+ 
+
+549
+00:09:03,640 --> 00:09:05,270
+can route to the individual MCP servers
+which treat the gateway as the only
+
+550
+00:09:05,270 --> 00:09:05,280
+which treat the gateway as the only
+ 
+
+551
+00:09:05,280 --> 00:09:07,270
+which treat the gateway as the only
+trusted endpoint. You want a way to
+
+552
+00:09:07,270 --> 00:09:07,280
+trusted endpoint. You want a way to
+ 
+
+553
+00:09:07,280 --> 00:09:08,470
+trusted endpoint. You want a way to
+ensure you have a tunnel which is a
+
+554
+00:09:08,470 --> 00:09:08,480
+ensure you have a tunnel which is a
+ 
+
+555
+00:09:08,480 --> 00:09:10,270
+ensure you have a tunnel which is a
+secured connection. You want to have a
+
+556
+00:09:10,270 --> 00:09:10,280
+secured connection. You want to have a
+ 
+
+557
+00:09:10,280 --> 00:09:12,590
+secured connection. You want to have a
+sub registry, which is your MCP servers
+
+558
+00:09:12,590 --> 00:09:12,600
+sub registry, which is your MCP servers
+ 
+
+559
+00:09:12,600 --> 00:09:14,390
+sub registry, which is your MCP servers
+internally. And finally, you would want
+
+560
+00:09:14,390 --> 00:09:14,400
+internally. And finally, you would want
+ 
+
+561
+00:09:14,400 --> 00:09:16,190
+internally. And finally, you would want
+to have any additional tooling. Tooling
+
+562
+00:09:16,190 --> 00:09:16,200
+to have any additional tooling. Tooling
+ 
+
+563
+00:09:16,200 --> 00:09:18,430
+to have any additional tooling. Tooling
+like a CLI for your gateway, such that
+
+564
+00:09:18,430 --> 00:09:18,440
+like a CLI for your gateway, such that
+ 
+
+565
+00:09:18,440 --> 00:09:20,550
+like a CLI for your gateway, such that
+anyone who wants to create a new MCP
+
+566
+00:09:20,550 --> 00:09:20,560
+anyone who wants to create a new MCP
+ 
+
+567
+00:09:20,560 --> 00:09:22,630
+anyone who wants to create a new MCP
+server in your in your company can
+
+568
+00:09:22,630 --> 00:09:22,640
+server in your in your company can
+ 
+
+569
+00:09:22,640 --> 00:09:24,350
+server in your in your company can
+easily create one because the gateway
+
+570
+00:09:24,350 --> 00:09:24,360
+easily create one because the gateway
+ 
+
+571
+00:09:24,360 --> 00:09:27,230
+easily create one because the gateway
+has a quick and easy CLI that not you,
+
+572
+00:09:27,230 --> 00:09:27,240
+has a quick and easy CLI that not you,
+ 
+
+573
+00:09:27,240 --> 00:09:29,150
+has a quick and easy CLI that not you,
+not that team, but but the agent that
+
+574
+00:09:29,150 --> 00:09:29,160
+not that team, but but the agent that
+ 
+
+575
+00:09:29,160 --> 00:09:31,110
+not that team, but but the agent that
+team is using, that cloud core or
+
+576
+00:09:31,110 --> 00:09:31,120
+team is using, that cloud core or
+ 
+
+577
+00:09:31,120 --> 00:09:33,470
+team is using, that cloud core or
+something else, can easily understand.
+
+578
+00:09:33,470 --> 00:09:33,480
+something else, can easily understand.
+ 
+
+579
+00:09:33,480 --> 00:09:35,710
+something else, can easily understand.
+Um these are all parts that when put
+
+580
+00:09:35,710 --> 00:09:35,720
+Um these are all parts that when put
+ 
+
+581
+00:09:35,720 --> 00:09:37,950
+Um these are all parts that when put
+together become really powerful, because
+
+582
+00:09:37,950 --> 00:09:37,960
+together become really powerful, because
+ 
+
+583
+00:09:37,960 --> 00:09:40,110
+together become really powerful, because
+someone who is just wants to create a
+
+584
+00:09:40,110 --> 00:09:40,120
+someone who is just wants to create a
+ 
+
+585
+00:09:40,120 --> 00:09:42,870
+someone who is just wants to create a
+new MCP server can use the gateway CLI
+
+586
+00:09:42,870 --> 00:09:42,880
+new MCP server can use the gateway CLI
+ 
+
+587
+00:09:42,880 --> 00:09:44,630
+new MCP server can use the gateway CLI
+and just easily integrate into these
+
+588
+00:09:44,630 --> 00:09:44,640
+and just easily integrate into these
+ 
+
+589
+00:09:44,640 --> 00:09:46,350
+and just easily integrate into these
+five components, and then completely
+
+590
+00:09:46,350 --> 00:09:46,360
+five components, and then completely
+ 
+
+591
+00:09:46,360 --> 00:09:48,670
+five components, and then completely
+focus on their MCP server, right? And
+
+592
+00:09:48,670 --> 00:09:48,680
+focus on their MCP server, right? And
+ 
+
+593
+00:09:48,680 --> 00:09:50,470
+focus on their MCP server, right? And
+that's why we really think that in
+
+594
+00:09:50,470 --> 00:09:50,480
+that's why we really think that in
+ 
+
+595
+00:09:50,480 --> 00:09:52,270
+that's why we really think that in
+making that kind of one-time investment,
+
+596
+00:09:52,270 --> 00:09:52,280
+making that kind of one-time investment,
+ 
+
+597
+00:09:52,280 --> 00:09:53,790
+making that kind of one-time investment,
+which doesn't hopefully doesn't require
+
+598
+00:09:53,790 --> 00:09:53,800
+which doesn't hopefully doesn't require
+ 
+
+599
+00:09:53,800 --> 00:09:55,270
+which doesn't hopefully doesn't require
+a lot of maintenance, and something you
+
+600
+00:09:55,270 --> 00:09:55,280
+a lot of maintenance, and something you
+ 
+
+601
+00:09:55,280 --> 00:09:57,070
+a lot of maintenance, and something you
+can easily do with agents would lead to
+
+602
+00:09:57,070 --> 00:09:57,080
+can easily do with agents would lead to
+ 
+
+603
+00:09:57,080 --> 00:10:00,030
+can easily do with agents would lead to
+several knock-on benefits.
+
+604
+00:10:00,030 --> 00:10:00,040
+several knock-on benefits.
+ 
+
+605
+00:10:00,040 --> 00:10:02,390
+several knock-on benefits.
+Um just like and just like a
+
+606
+00:10:02,390 --> 00:10:02,400
+Um just like and just like a
+ 
+
+607
+00:10:02,400 --> 00:10:03,750
+Um just like and just like a
+higher-level view of what this gives
+
+608
+00:10:03,750 --> 00:10:03,760
+higher-level view of what this gives
+ 
+
+609
+00:10:03,760 --> 00:10:05,750
+higher-level view of what this gives
+you, right? So, we already talked about
+
+610
+00:10:05,750 --> 00:10:05,760
+you, right? So, we already talked about
+ 
+
+611
+00:10:05,760 --> 00:10:07,430
+you, right? So, we already talked about
+this in terms of a listing of what we
+
+612
+00:10:07,430 --> 00:10:07,440
+this in terms of a listing of what we
+ 
+
+613
+00:10:07,440 --> 00:10:09,510
+this in terms of a listing of what we
+think is required, but just looking at
+
+614
+00:10:09,510 --> 00:10:09,520
+think is required, but just looking at
+ 
+
+615
+00:10:09,520 --> 00:10:12,110
+think is required, but just looking at
+once we have this, you have a vision of
+
+616
+00:10:12,110 --> 00:10:12,120
+once we have this, you have a vision of
+ 
+
+617
+00:10:12,120 --> 00:10:14,070
+once we have this, you have a vision of
+a gateway which can give you access
+
+618
+00:10:14,070 --> 00:10:14,080
+a gateway which can give you access
+ 
+
+619
+00:10:14,080 --> 00:10:15,870
+a gateway which can give you access
+authentication very easily. You might
+
+620
+00:10:15,870 --> 00:10:15,880
+authentication very easily. You might
+ 
+
+621
+00:10:15,880 --> 00:10:17,630
+authentication very easily. You might
+have your own IDP which you can plug in.
+
+622
+00:10:17,630 --> 00:10:17,640
+have your own IDP which you can plug in.
+ 
+
+623
+00:10:17,640 --> 00:10:19,710
+have your own IDP which you can plug in.
+You can have delegated identity in terms
+
+624
+00:10:19,710 --> 00:10:19,720
+You can have delegated identity in terms
+ 
+
+625
+00:10:19,720 --> 00:10:21,190
+You can have delegated identity in terms
+of users and agents. This is something
+
+626
+00:10:21,190 --> 00:10:21,200
+of users and agents. This is something
+ 
+
+627
+00:10:21,200 --> 00:10:22,590
+of users and agents. This is something
+we think is going to be really important
+
+628
+00:10:22,590 --> 00:10:22,600
+we think is going to be really important
+ 
+
+629
+00:10:22,600 --> 00:10:24,070
+we think is going to be really important
+into the coming year, where we think
+
+630
+00:10:24,070 --> 00:10:24,080
+into the coming year, where we think
+ 
+
+631
+00:10:24,080 --> 00:10:25,110
+into the coming year, where we think
+agents
+
+632
+00:10:25,110 --> 00:10:25,120
+agents
+ 
+
+633
+00:10:25,120 --> 00:10:26,950
+agents
+are going to require newer and novel
+
+634
+00:10:26,950 --> 00:10:26,960
+are going to require newer and novel
+ 
+
+635
+00:10:26,960 --> 00:10:29,030
+are going to require newer and novel
+definitions of identity that, you know,
+
+636
+00:10:29,030 --> 00:10:29,040
+definitions of identity that, you know,
+ 
+
+637
+00:10:29,040 --> 00:10:31,070
+definitions of identity that, you know,
+you can uniquely define and think about
+
+638
+00:10:31,070 --> 00:10:31,080
+you can uniquely define and think about
+ 
+
+639
+00:10:31,080 --> 00:10:33,550
+you can uniquely define and think about
+and scope for your enterprise using a
+
+640
+00:10:33,550 --> 00:10:33,560
+and scope for your enterprise using a
+ 
+
+641
+00:10:33,560 --> 00:10:35,550
+and scope for your enterprise using a
+gateway. We'll ensure that you can have
+
+642
+00:10:35,550 --> 00:10:35,560
+gateway. We'll ensure that you can have
+ 
+
+643
+00:10:35,560 --> 00:10:38,230
+gateway. We'll ensure that you can have
+one access control panel for all of your
+
+644
+00:10:38,230 --> 00:10:38,240
+one access control panel for all of your
+ 
+
+645
+00:10:38,240 --> 00:10:40,950
+one access control panel for all of your
+for all of your agents and and MCPs, and
+
+646
+00:10:40,950 --> 00:10:40,960
+for all of your agents and and MCPs, and
+ 
+
+647
+00:10:40,960 --> 00:10:42,830
+for all of your agents and and MCPs, and
+your access control can be scoped
+
+648
+00:10:42,830 --> 00:10:42,840
+your access control can be scoped
+ 
+
+649
+00:10:42,840 --> 00:10:44,270
+your access control can be scoped
+depending on like whether a team is
+
+650
+00:10:44,270 --> 00:10:44,280
+depending on like whether a team is
+ 
+
+651
+00:10:44,280 --> 00:10:45,430
+depending on like whether a team is
+accessing it, whether a user is
+
+652
+00:10:45,430 --> 00:10:45,440
+accessing it, whether a user is
+ 
+
+653
+00:10:45,440 --> 00:10:47,990
+accessing it, whether a user is
+accessing it, whether uh whether another
+
+654
+00:10:47,990 --> 00:10:48,000
+accessing it, whether uh whether another
+ 
+
+655
+00:10:48,000 --> 00:10:49,950
+accessing it, whether uh whether another
+employee is accessing it. And finally,
+
+656
+00:10:49,950 --> 00:10:49,960
+employee is accessing it. And finally,
+ 
+
+657
+00:10:49,960 --> 00:10:51,470
+employee is accessing it. And finally,
+observability. And I think observability
+
+658
+00:10:51,470 --> 00:10:51,480
+observability. And I think observability
+ 
+
+659
+00:10:51,480 --> 00:10:53,630
+observability. And I think observability
+here is nuanced in the sense that you
+
+660
+00:10:53,630 --> 00:10:53,640
+here is nuanced in the sense that you
+ 
+
+661
+00:10:53,640 --> 00:10:56,070
+here is nuanced in the sense that you
+not only want usage metrics to reflect
+
+662
+00:10:56,070 --> 00:10:56,080
+not only want usage metrics to reflect
+ 
+
+663
+00:10:56,080 --> 00:10:58,110
+not only want usage metrics to reflect
+what MCPs are
+
+664
+00:10:58,110 --> 00:10:58,120
+what MCPs are
+ 
+
+665
+00:10:58,120 --> 00:11:00,110
+what MCPs are
+being used, but you also kind of want to
+
+666
+00:11:00,110 --> 00:11:00,120
+being used, but you also kind of want to
+ 
+
+667
+00:11:00,120 --> 00:11:01,870
+being used, but you also kind of want to
+know how how are your tools being
+
+668
+00:11:01,870 --> 00:11:01,880
+know how how are your tools being
+ 
+
+669
+00:11:01,880 --> 00:11:04,230
+know how how are your tools being
+defined. In a world where the MCP
+
+670
+00:11:04,230 --> 00:11:04,240
+defined. In a world where the MCP
+ 
+
+671
+00:11:04,240 --> 00:11:06,270
+defined. In a world where the MCP
+protocol is itself being developed so
+
+672
+00:11:06,270 --> 00:11:06,280
+protocol is itself being developed so
+ 
+
+673
+00:11:06,280 --> 00:11:08,670
+protocol is itself being developed so
+rapidly, you kind of want to see how to
+
+674
+00:11:08,670 --> 00:11:08,680
+rapidly, you kind of want to see how to
+ 
+
+675
+00:11:08,680 --> 00:11:10,510
+rapidly, you kind of want to see how to
+how what are your load-bearing tools and
+
+676
+00:11:10,510 --> 00:11:10,520
+how what are your load-bearing tools and
+ 
+
+677
+00:11:10,520 --> 00:11:12,270
+how what are your load-bearing tools and
+how do you better adapt them to meet the
+
+678
+00:11:12,270 --> 00:11:12,280
+how do you better adapt them to meet the
+ 
+
+679
+00:11:12,280 --> 00:11:14,829
+how do you better adapt them to meet the
+needs of your various agents. So, I
+
+680
+00:11:14,829 --> 00:11:14,839
+needs of your various agents. So, I
+ 
+
+681
+00:11:14,839 --> 00:11:15,990
+needs of your various agents. So, I
+think this is really really cool and
+
+682
+00:11:15,990 --> 00:11:16,000
+think this is really really cool and
+ 
+
+683
+00:11:16,000 --> 00:11:18,510
+think this is really really cool and
+really useful. It kind of, you know,
+
+684
+00:11:18,510 --> 00:11:18,520
+really useful. It kind of, you know,
+ 
+
+685
+00:11:18,520 --> 00:11:19,910
+really useful. It kind of, you know,
+sometimes some people often say that it
+
+686
+00:11:19,910 --> 00:11:19,920
+sometimes some people often say that it
+ 
+
+687
+00:11:19,920 --> 00:11:21,750
+sometimes some people often say that it
+sounds too good to be true, but I really
+
+688
+00:11:21,750 --> 00:11:21,760
+sounds too good to be true, but I really
+ 
+
+689
+00:11:21,760 --> 00:11:22,990
+sounds too good to be true, but I really
+encourage you to try and take a look at
+
+690
+00:11:22,990 --> 00:11:23,000
+encourage you to try and take a look at
+ 
+
+691
+00:11:23,000 --> 00:11:23,910
+encourage you to try and take a look at
+this
+
+692
+00:11:23,910 --> 00:11:23,920
+this
+ 
+
+693
+00:11:23,920 --> 00:11:25,390
+this
+and try and and try and see where you
+
+694
+00:11:25,390 --> 00:11:25,400
+and try and and try and see where you
+ 
+
+695
+00:11:25,400 --> 00:11:28,430
+and try and and try and see where you
+can go from there. Um but let's say you
+
+696
+00:11:28,430 --> 00:11:28,440
+can go from there. Um but let's say you
+ 
+
+697
+00:11:28,440 --> 00:11:29,990
+can go from there. Um but let's say you
+have a gateway now, right? We've already
+
+698
+00:11:29,990 --> 00:11:30,000
+have a gateway now, right? We've already
+ 
+
+699
+00:11:30,000 --> 00:11:31,350
+have a gateway now, right? We've already
+talked about like the minimum
+
+700
+00:11:31,350 --> 00:11:31,360
+talked about like the minimum
+ 
+
+701
+00:11:31,360 --> 00:11:33,829
+talked about like the minimum
+requirements. I think there's a lot of
+
+702
+00:11:33,829 --> 00:11:33,839
+requirements. I think there's a lot of
+ 
+
+703
+00:11:33,839 --> 00:11:36,270
+requirements. I think there's a lot of
+exciting worlds that you get on very
+
+704
+00:11:36,270 --> 00:11:36,280
+exciting worlds that you get on very
+ 
+
+705
+00:11:36,280 --> 00:11:38,310
+exciting worlds that you get on very
+easy follow-ons or almost free lunches
+
+706
+00:11:38,310 --> 00:11:38,320
+easy follow-ons or almost free lunches
+ 
+
+707
+00:11:38,320 --> 00:11:40,430
+easy follow-ons or almost free lunches
+you kind of get from there. The first is
+
+708
+00:11:40,430 --> 00:11:40,440
+you kind of get from there. The first is
+ 
+
+709
+00:11:40,440 --> 00:11:41,950
+you kind of get from there. The first is
+it's very easy for you to add any new
+
+710
+00:11:41,950 --> 00:11:41,960
+it's very easy for you to add any new
+ 
+
+711
+00:11:41,960 --> 00:11:44,310
+it's very easy for you to add any new
+surface. So, you can easily have your
+
+712
+00:11:44,310 --> 00:11:44,320
+surface. So, you can easily have your
+ 
+
+713
+00:11:44,320 --> 00:11:46,390
+surface. So, you can easily have your
+MCP servers now plug into cloud.ai, they
+
+714
+00:11:46,390 --> 00:11:46,400
+MCP servers now plug into cloud.ai, they
+ 
+
+715
+00:11:46,400 --> 00:11:47,829
+MCP servers now plug into cloud.ai, they
+can easily plug into cloud core, they
+
+716
+00:11:47,829 --> 00:11:47,839
+can easily plug into cloud core, they
+ 
+
+717
+00:11:47,839 --> 00:11:49,190
+can easily plug into cloud core, they
+can easily plug into cloud core work
+
+718
+00:11:49,190 --> 00:11:49,200
+can easily plug into cloud core work
+ 
+
+719
+00:11:49,200 --> 00:11:50,710
+can easily plug into cloud core work
+because why? Because all of them are
+
+720
+00:11:50,710 --> 00:11:50,720
+because why? Because all of them are
+ 
+
+721
+00:11:50,720 --> 00:11:53,150
+because why? Because all of them are
+kind of listening to the same gateway
+
+722
+00:11:53,150 --> 00:11:53,160
+kind of listening to the same gateway
+ 
+
+723
+00:11:53,160 --> 00:11:54,470
+kind of listening to the same gateway
+and you kind of you only need to do it
+
+724
+00:11:54,470 --> 00:11:54,480
+and you kind of you only need to do it
+ 
+
+725
+00:11:54,480 --> 00:11:56,590
+and you kind of you only need to do it
+one time. Compare that to the world
+
+726
+00:11:56,590 --> 00:11:56,600
+one time. Compare that to the world
+ 
+
+727
+00:11:56,600 --> 00:11:58,630
+one time. Compare that to the world
+where you have 40 different MCP servers
+
+728
+00:11:58,630 --> 00:11:58,640
+where you have 40 different MCP servers
+ 
+
+729
+00:11:58,640 --> 00:11:59,990
+where you have 40 different MCP servers
+and some MCP servers are better
+
+730
+00:11:59,990 --> 00:12:00,000
+and some MCP servers are better
+ 
+
+731
+00:12:00,000 --> 00:12:01,030
+and some MCP servers are better
+configured for only one of these
+
+732
+00:12:01,030 --> 00:12:01,040
+configured for only one of these
+ 
+
+733
+00:12:01,040 --> 00:12:02,790
+configured for only one of these
+services in one of these clients. This
+
+734
+00:12:02,790 --> 00:12:02,800
+services in one of these clients. This
+ 
+
+735
+00:12:02,800 --> 00:12:04,390
+services in one of these clients. This
+is really important because this kind of
+
+736
+00:12:04,390 --> 00:12:04,400
+is really important because this kind of
+ 
+
+737
+00:12:04,400 --> 00:12:06,230
+is really important because this kind of
+ensures that you can be kind of
+
+738
+00:12:06,230 --> 00:12:06,240
+ensures that you can be kind of
+ 
+
+739
+00:12:06,240 --> 00:12:08,710
+ensures that you can be kind of
+invariant to any new surface that comes
+
+740
+00:12:08,710 --> 00:12:08,720
+invariant to any new surface that comes
+ 
+
+741
+00:12:08,720 --> 00:12:10,910
+invariant to any new surface that comes
+up. And I know like this is something
+
+742
+00:12:10,910 --> 00:12:10,920
+up. And I know like this is something
+ 
+
+743
+00:12:10,920 --> 00:12:12,470
+up. And I know like this is something
+that sounds interesting coming from me,
+
+744
+00:12:12,470 --> 00:12:12,480
+that sounds interesting coming from me,
+ 
+
+745
+00:12:12,480 --> 00:12:14,590
+that sounds interesting coming from me,
+but like it's really really useful for
+
+746
+00:12:14,590 --> 00:12:14,600
+but like it's really really useful for
+ 
+
+747
+00:12:14,600 --> 00:12:16,510
+but like it's really really useful for
+any new enterprise. It's really really
+
+748
+00:12:16,510 --> 00:12:16,520
+any new enterprise. It's really really
+ 
+
+749
+00:12:16,520 --> 00:12:18,070
+any new enterprise. It's really really
+useful for any enterprise to do this.
+
+750
+00:12:18,070 --> 00:12:18,080
+useful for any enterprise to do this.
+ 
+
+751
+00:12:18,080 --> 00:12:20,230
+useful for any enterprise to do this.
+The second is you have far more secured
+
+752
+00:12:20,230 --> 00:12:20,240
+The second is you have far more secured
+ 
+
+753
+00:12:20,240 --> 00:12:21,710
+The second is you have far more secured
+connections that can be built in.
+
+754
+00:12:21,710 --> 00:12:21,720
+connections that can be built in.
+ 
+
+755
+00:12:21,720 --> 00:12:23,790
+connections that can be built in.
+Currently, you know, your MCP servers
+
+756
+00:12:23,790 --> 00:12:23,800
+Currently, you know, your MCP servers
+ 
+
+757
+00:12:23,800 --> 00:12:25,590
+Currently, you know, your MCP servers
+often have access to sensitive data
+
+758
+00:12:25,590 --> 00:12:25,600
+often have access to sensitive data
+ 
+
+759
+00:12:25,600 --> 00:12:27,550
+often have access to sensitive data
+internally and you any enterprises are
+
+760
+00:12:27,550 --> 00:12:27,560
+internally and you any enterprises are
+ 
+
+761
+00:12:27,560 --> 00:12:29,150
+internally and you any enterprises are
+worried about, you know, "If I send this
+
+762
+00:12:29,150 --> 00:12:29,160
+worried about, you know, "If I send this
+ 
+
+763
+00:12:29,160 --> 00:12:30,870
+worried about, you know, "If I send this
+out to another client, is that data
+
+764
+00:12:30,870 --> 00:12:30,880
+out to another client, is that data
+ 
+
+765
+00:12:30,880 --> 00:12:32,270
+out to another client, is that data
+going to be exfiltrated? What happens to
+
+766
+00:12:32,270 --> 00:12:32,280
+going to be exfiltrated? What happens to
+ 
+
+767
+00:12:32,280 --> 00:12:34,110
+going to be exfiltrated? What happens to
+my data? How do I ensure that, you know,
+
+768
+00:12:34,110 --> 00:12:34,120
+my data? How do I ensure that, you know,
+ 
+
+769
+00:12:34,120 --> 00:12:36,430
+my data? How do I ensure that, you know,
+my like literally years and years of
+
+770
+00:12:36,430 --> 00:12:36,440
+my like literally years and years of
+ 
+
+771
+00:12:36,440 --> 00:12:38,110
+my like literally years and years of
+work doesn't go away?" You can now
+
+772
+00:12:38,110 --> 00:12:38,120
+work doesn't go away?" You can now
+ 
+
+773
+00:12:38,120 --> 00:12:40,550
+work doesn't go away?" You can now
+invest in much more secured connections
+
+774
+00:12:40,550 --> 00:12:40,560
+invest in much more secured connections
+ 
+
+775
+00:12:40,560 --> 00:12:42,870
+invest in much more secured connections
+between your MCP servers that are
+
+776
+00:12:42,870 --> 00:12:42,880
+between your MCP servers that are
+ 
+
+777
+00:12:42,880 --> 00:12:44,390
+between your MCP servers that are
+between your MCP server and your client
+
+778
+00:12:44,390 --> 00:12:44,400
+between your MCP server and your client
+ 
+
+779
+00:12:44,400 --> 00:12:46,510
+between your MCP server and your client
+that is completely encrypted
+
+780
+00:12:46,510 --> 00:12:46,520
+that is completely encrypted
+ 
+
+781
+00:12:46,520 --> 00:12:48,829
+that is completely encrypted
+and can ensure that you have root trust
+
+782
+00:12:48,829 --> 00:12:48,839
+and can ensure that you have root trust
+ 
+
+783
+00:12:48,839 --> 00:12:51,350
+and can ensure that you have root trust
+in how in what kind of data be sent. And
+
+784
+00:12:51,350 --> 00:12:51,360
+in how in what kind of data be sent. And
+ 
+
+785
+00:12:51,360 --> 00:12:52,910
+in how in what kind of data be sent. And
+this is really important. I think like,
+
+786
+00:12:52,910 --> 00:12:52,920
+this is really important. I think like,
+ 
+
+787
+00:12:52,920 --> 00:12:54,550
+this is really important. I think like,
+you know, we've often done you've often
+
+788
+00:12:54,550 --> 00:12:54,560
+you know, we've often done you've often
+ 
+
+789
+00:12:54,560 --> 00:12:57,430
+you know, we've often done you've often
+made MCP servers with kind of play data
+
+790
+00:12:57,430 --> 00:12:57,440
+made MCP servers with kind of play data
+ 
+
+791
+00:12:57,440 --> 00:12:58,710
+made MCP servers with kind of play data
+and things that, you know, enterprises
+
+792
+00:12:58,710 --> 00:12:58,720
+and things that, you know, enterprises
+ 
+
+793
+00:12:58,720 --> 00:13:00,470
+and things that, you know, enterprises
+can't really use, but for enterprises to
+
+794
+00:13:00,470 --> 00:13:00,480
+can't really use, but for enterprises to
+ 
+
+795
+00:13:00,480 --> 00:13:02,150
+can't really use, but for enterprises to
+actually derive the exponential value
+
+796
+00:13:02,150 --> 00:13:02,160
+actually derive the exponential value
+ 
+
+797
+00:13:02,160 --> 00:13:03,430
+actually derive the exponential value
+they can get from this, this is
+
+798
+00:13:03,430 --> 00:13:03,440
+they can get from this, this is
+ 
+
+799
+00:13:03,440 --> 00:13:04,829
+they can get from this, this is
+something we need.
+
+800
+00:13:04,829 --> 00:13:04,839
+something we need.
+ 
+
+801
+00:13:04,839 --> 00:13:07,030
+something we need.
+The third is faster iteration. The real
+
+802
+00:13:07,030 --> 00:13:07,040
+The third is faster iteration. The real
+ 
+
+803
+00:13:07,040 --> 00:13:09,550
+The third is faster iteration. The real
+value in like ensuring your teams can be
+
+804
+00:13:09,550 --> 00:13:09,560
+value in like ensuring your teams can be
+ 
+
+805
+00:13:09,560 --> 00:13:11,630
+value in like ensuring your teams can be
+decentralized completely is going to be
+
+806
+00:13:11,630 --> 00:13:11,640
+decentralized completely is going to be
+ 
+
+807
+00:13:11,640 --> 00:13:13,510
+decentralized completely is going to be
+that they can iterate and develop their
+
+808
+00:13:13,510 --> 00:13:13,520
+that they can iterate and develop their
+ 
+
+809
+00:13:13,520 --> 00:13:15,590
+that they can iterate and develop their
+own workflows much faster. If the legal
+
+810
+00:13:15,590 --> 00:13:15,600
+own workflows much faster. If the legal
+ 
+
+811
+00:13:15,600 --> 00:13:17,829
+own workflows much faster. If the legal
+team is able to very quickly just change
+
+812
+00:13:17,829 --> 00:13:17,839
+team is able to very quickly just change
+ 
+
+813
+00:13:17,839 --> 00:13:19,670
+team is able to very quickly just change
+their legal MCP rapidly and iterate on
+
+814
+00:13:19,670 --> 00:13:19,680
+their legal MCP rapidly and iterate on
+ 
+
+815
+00:13:19,680 --> 00:13:22,870
+their legal MCP rapidly and iterate on
+it without repeated security reviews,
+
+816
+00:13:22,870 --> 00:13:22,880
+it without repeated security reviews,
+ 
+
+817
+00:13:22,880 --> 00:13:26,030
+it without repeated security reviews,
+that has a massive effect which can just
+
+818
+00:13:26,030 --> 00:13:26,040
+that has a massive effect which can just
+ 
+
+819
+00:13:26,040 --> 00:13:27,630
+that has a massive effect which can just
+which just builds upon itself. So, this
+
+820
+00:13:27,630 --> 00:13:27,640
+which just builds upon itself. So, this
+ 
+
+821
+00:13:27,640 --> 00:13:28,390
+which just builds upon itself. So, this
+is something that shouldn't be
+
+822
+00:13:28,390 --> 00:13:28,400
+is something that shouldn't be
+ 
+
+823
+00:13:28,400 --> 00:13:30,590
+is something that shouldn't be
+underrated. The fourth is that you get
+
+824
+00:13:30,590 --> 00:13:30,600
+underrated. The fourth is that you get
+ 
+
+825
+00:13:30,600 --> 00:13:32,670
+underrated. The fourth is that you get
+very much more standard primitives. So,
+
+826
+00:13:32,670 --> 00:13:32,680
+very much more standard primitives. So,
+ 
+
+827
+00:13:32,680 --> 00:13:34,670
+very much more standard primitives. So,
+any new MCP server that you want to
+
+828
+00:13:34,670 --> 00:13:34,680
+any new MCP server that you want to
+ 
+
+829
+00:13:34,680 --> 00:13:36,670
+any new MCP server that you want to
+build kind of has to adhere to
+
+830
+00:13:36,670 --> 00:13:36,680
+build kind of has to adhere to
+ 
+
+831
+00:13:36,680 --> 00:13:38,710
+build kind of has to adhere to
+primitives that are that are within your
+
+832
+00:13:38,710 --> 00:13:38,720
+primitives that are that are within your
+ 
+
+833
+00:13:38,720 --> 00:13:40,590
+primitives that are that are within your
+enterprise and how your enterprise wants
+
+834
+00:13:40,590 --> 00:13:40,600
+enterprise and how your enterprise wants
+ 
+
+835
+00:13:40,600 --> 00:13:42,350
+enterprise and how your enterprise wants
+to go about it. A common request, you
+
+836
+00:13:42,350 --> 00:13:42,360
+to go about it. A common request, you
+ 
+
+837
+00:13:42,360 --> 00:13:43,870
+to go about it. A common request, you
+know, a common problem enterprises have
+
+838
+00:13:43,870 --> 00:13:43,880
+know, a common problem enterprises have
+ 
+
+839
+00:13:43,880 --> 00:13:47,190
+know, a common problem enterprises have
+is like, "How do I ensure said AI agent
+
+840
+00:13:47,190 --> 00:13:47,200
+is like, "How do I ensure said AI agent
+ 
+
+841
+00:13:47,200 --> 00:13:48,870
+is like, "How do I ensure said AI agent
+meets my standards and operating
+
+842
+00:13:48,870 --> 00:13:48,880
+meets my standards and operating
+ 
+
+843
+00:13:48,880 --> 00:13:50,590
+meets my standards and operating
+procedures?" A gateway is a way of
+
+844
+00:13:50,590 --> 00:13:50,600
+procedures?" A gateway is a way of
+ 
+
+845
+00:13:50,600 --> 00:13:52,910
+procedures?" A gateway is a way of
+encoding that. A gateway is a way of you
+
+846
+00:13:52,910 --> 00:13:52,920
+encoding that. A gateway is a way of you
+ 
+
+847
+00:13:52,920 --> 00:13:54,310
+encoding that. A gateway is a way of you
+being like, "These are my standard
+
+848
+00:13:54,310 --> 00:13:54,320
+being like, "These are my standard
+ 
+
+849
+00:13:54,320 --> 00:13:55,590
+being like, "These are my standard
+procedures, these are the primitives I
+
+850
+00:13:55,590 --> 00:13:55,600
+procedures, these are the primitives I
+ 
+
+851
+00:13:55,600 --> 00:13:57,030
+procedures, these are the primitives I
+want to see, these are the tools I
+
+852
+00:13:57,030 --> 00:13:57,040
+want to see, these are the tools I
+ 
+
+853
+00:13:57,040 --> 00:13:58,750
+want to see, these are the tools I
+expect, and these are the things I don't
+
+854
+00:13:58,750 --> 00:13:58,760
+expect, and these are the things I don't
+ 
+
+855
+00:13:58,760 --> 00:14:00,510
+expect, and these are the things I don't
+want to see." And that's a very quick
+
+856
+00:14:00,510 --> 00:14:00,520
+want to see." And that's a very quick
+ 
+
+857
+00:14:00,520 --> 00:14:02,630
+want to see." And that's a very quick
+way of encoding how you as an enterprise
+
+858
+00:14:02,630 --> 00:14:02,640
+way of encoding how you as an enterprise
+ 
+
+859
+00:14:02,640 --> 00:14:04,590
+way of encoding how you as an enterprise
+want to behave. Uh the fifth is
+
+860
+00:14:04,590 --> 00:14:04,600
+want to behave. Uh the fifth is
+ 
+
+861
+00:14:04,600 --> 00:14:07,110
+want to behave. Uh the fifth is
+pluggable credentials, right? What we
+
+862
+00:14:07,110 --> 00:14:07,120
+pluggable credentials, right? What we
+ 
+
+863
+00:14:07,120 --> 00:14:09,030
+pluggable credentials, right? What we
+currently have is certain MCP servers
+
+864
+00:14:09,030 --> 00:14:09,040
+currently have is certain MCP servers
+ 
+
+865
+00:14:09,040 --> 00:14:11,630
+currently have is certain MCP servers
+that only accept one type of user
+
+866
+00:14:11,630 --> 00:14:11,640
+that only accept one type of user
+ 
+
+867
+00:14:11,640 --> 00:14:13,230
+that only accept one type of user
+authentication, right? And it's very
+
+868
+00:14:13,230 --> 00:14:13,240
+authentication, right? And it's very
+ 
+
+869
+00:14:13,240 --> 00:14:15,190
+authentication, right? And it's very
+hard to kind of make sure it it it
+
+870
+00:14:15,190 --> 00:14:15,200
+hard to kind of make sure it it it
+ 
+
+871
+00:14:15,200 --> 00:14:16,550
+hard to kind of make sure it it it
+becomes
+
+872
+00:14:16,550 --> 00:14:16,560
+becomes
+ 
+
+873
+00:14:16,560 --> 00:14:18,030
+becomes
+like, you know, you can have a
+
+874
+00:14:18,030 --> 00:14:18,040
+like, you know, you can have a
+ 
+
+875
+00:14:18,040 --> 00:14:20,430
+like, you know, you can have a
+company-wide one or a team-wide one or
+
+876
+00:14:20,430 --> 00:14:20,440
+company-wide one or a team-wide one or
+ 
+
+877
+00:14:20,440 --> 00:14:22,030
+company-wide one or a team-wide one or
+something with service accounts. These
+
+878
+00:14:22,030 --> 00:14:22,040
+something with service accounts. These
+ 
+
+879
+00:14:22,040 --> 00:14:24,150
+something with service accounts. These
+are all things which are often useful in
+
+880
+00:14:24,150 --> 00:14:24,160
+are all things which are often useful in
+ 
+
+881
+00:14:24,160 --> 00:14:26,230
+are all things which are often useful in
+different cases, and that becomes easier
+
+882
+00:14:26,230 --> 00:14:26,240
+different cases, and that becomes easier
+ 
+
+883
+00:14:26,240 --> 00:14:28,390
+different cases, and that becomes easier
+with a gateway because a gateway
+
+884
+00:14:28,390 --> 00:14:28,400
+with a gateway because a gateway
+ 
+
+885
+00:14:28,400 --> 00:14:30,949
+with a gateway because a gateway
+allows any new MCP server to easily
+
+886
+00:14:30,949 --> 00:14:30,959
+allows any new MCP server to easily
+ 
+
+887
+00:14:30,959 --> 00:14:32,670
+allows any new MCP server to easily
+support new credentials and swap it in
+
+888
+00:14:32,670 --> 00:14:32,680
+support new credentials and swap it in
+ 
+
+889
+00:14:32,680 --> 00:14:34,430
+support new credentials and swap it in
+and out in an intelligent manner. And
+
+890
+00:14:34,430 --> 00:14:34,440
+and out in an intelligent manner. And
+ 
+
+891
+00:14:34,440 --> 00:14:37,110
+and out in an intelligent manner. And
+then finally, it's scalable, right? Like
+
+892
+00:14:37,110 --> 00:14:37,120
+then finally, it's scalable, right? Like
+ 
+
+893
+00:14:37,120 --> 00:14:39,190
+then finally, it's scalable, right? Like
+if you have 40 MCP servers that need to
+
+894
+00:14:39,190 --> 00:14:39,200
+if you have 40 MCP servers that need to
+ 
+
+895
+00:14:39,200 --> 00:14:41,310
+if you have 40 MCP servers that need to
+scale to from tens to hundreds to
+
+896
+00:14:41,310 --> 00:14:41,320
+scale to from tens to hundreds to
+ 
+
+897
+00:14:41,320 --> 00:14:42,630
+scale to from tens to hundreds to
+thousands to hundreds of thousands of
+
+898
+00:14:42,630 --> 00:14:42,640
+thousands to hundreds of thousands of
+ 
+
+899
+00:14:42,640 --> 00:14:44,550
+thousands to hundreds of thousands of
+agents, that's a really hard surface to
+
+900
+00:14:44,550 --> 00:14:44,560
+agents, that's a really hard surface to
+ 
+
+901
+00:14:44,560 --> 00:14:46,430
+agents, that's a really hard surface to
+maintain. A gateway which is able to
+
+902
+00:14:46,430 --> 00:14:46,440
+maintain. A gateway which is able to
+ 
+
+903
+00:14:46,440 --> 00:14:48,550
+maintain. A gateway which is able to
+take all these requests in and farm it
+
+904
+00:14:48,550 --> 00:14:48,560
+take all these requests in and farm it
+ 
+
+905
+00:14:48,560 --> 00:14:50,430
+take all these requests in and farm it
+out in an intelligent manner is a far
+
+906
+00:14:50,430 --> 00:14:50,440
+out in an intelligent manner is a far
+ 
+
+907
+00:14:50,440 --> 00:14:53,630
+out in an intelligent manner is a far
+better place for your teams to focus on.
+
+908
+00:14:53,630 --> 00:14:53,640
+better place for your teams to focus on.
+ 
+
+909
+00:14:53,640 --> 00:14:54,829
+better place for your teams to focus on.
+Finally,
+
+910
+00:14:54,829 --> 00:14:54,839
+Finally,
+ 
+
+911
+00:14:54,839 --> 00:14:56,310
+Finally,
+you know, this is not something that's
+
+912
+00:14:56,310 --> 00:14:56,320
+you know, this is not something that's
+ 
+
+913
+00:14:56,320 --> 00:14:57,870
+you know, this is not something that's
+we think is going to be like we're we're
+
+914
+00:14:57,870 --> 00:14:57,880
+we think is going to be like we're we're
+ 
+
+915
+00:14:57,880 --> 00:14:59,710
+we think is going to be like we're we're
+telling you out of the blocks. We have
+
+916
+00:14:59,710 --> 00:14:59,720
+telling you out of the blocks. We have
+ 
+
+917
+00:14:59,720 --> 00:15:01,150
+telling you out of the blocks. We have
+examples of this both in the open
+
+918
+00:15:01,150 --> 00:15:01,160
+examples of this both in the open
+ 
+
+919
+00:15:01,160 --> 00:15:02,470
+examples of this both in the open
+source, you have provided something
+
+920
+00:15:02,470 --> 00:15:02,480
+source, you have provided something
+ 
+
+921
+00:15:02,480 --> 00:15:03,990
+source, you have provided something
+in-house, but this is also something we
+
+922
+00:15:03,990 --> 00:15:04,000
+in-house, but this is also something we
+ 
+
+923
+00:15:04,000 --> 00:15:05,790
+in-house, but this is also something we
+can help with. This is something I do in
+
+924
+00:15:05,790 --> 00:15:05,800
+can help with. This is something I do in
+ 
+
+925
+00:15:05,800 --> 00:15:07,390
+can help with. This is something I do in
+my daily basis. If you're interested,
+
+926
+00:15:07,390 --> 00:15:07,400
+my daily basis. If you're interested,
+ 
+
+927
+00:15:07,400 --> 00:15:09,470
+my daily basis. If you're interested,
+I'd love to talk to you about this after
+
+928
+00:15:09,470 --> 00:15:09,480
+I'd love to talk to you about this after
+ 
+
+929
+00:15:09,480 --> 00:15:10,990
+I'd love to talk to you about this after
+this.
+
+930
+00:15:10,990 --> 00:15:11,000
+this.
+ 
+
+931
+00:15:11,000 --> 00:15:13,670
+this.
+Um but just finally zooming out, right?
+
+932
+00:15:13,670 --> 00:15:13,680
+Um but just finally zooming out, right?
+ 
+
+933
+00:15:13,680 --> 00:15:14,829
+Um but just finally zooming out, right?
+I want I want to take these last few
+
+934
+00:15:14,829 --> 00:15:14,839
+I want I want to take these last few
+ 
+
+935
+00:15:14,839 --> 00:15:16,270
+I want I want to take these last few
+minutes to think about where we're going
+
+936
+00:15:16,270 --> 00:15:16,280
+minutes to think about where we're going
+ 
+
+937
+00:15:16,280 --> 00:15:18,110
+minutes to think about where we're going
+with this. I like pitched a version of
+
+938
+00:15:18,110 --> 00:15:18,120
+with this. I like pitched a version of
+ 
+
+939
+00:15:18,120 --> 00:15:19,870
+with this. I like pitched a version of
+the MCP world to you that, you know,
+
+940
+00:15:19,870 --> 00:15:19,880
+the MCP world to you that, you know,
+ 
+
+941
+00:15:19,880 --> 00:15:22,630
+the MCP world to you that, you know,
+sounds cool, probably works, but does
+
+942
+00:15:22,630 --> 00:15:22,640
+sounds cool, probably works, but does
+ 
+
+943
+00:15:22,640 --> 00:15:23,870
+sounds cool, probably works, but does
+this really work in the hundreds of
+
+944
+00:15:23,870 --> 00:15:23,880
+this really work in the hundreds of
+ 
+
+945
+00:15:23,880 --> 00:15:25,030
+this really work in the hundreds of
+things you've been hearing over this
+
+946
+00:15:25,030 --> 00:15:25,040
+things you've been hearing over this
+ 
+
+947
+00:15:25,040 --> 00:15:26,829
+things you've been hearing over this
+conference? I think what we want to
+
+948
+00:15:26,829 --> 00:15:26,839
+conference? I think what we want to
+ 
+
+949
+00:15:26,839 --> 00:15:29,110
+conference? I think what we want to
+ensure is the larger picture where
+
+950
+00:15:29,110 --> 00:15:29,120
+ensure is the larger picture where
+ 
+
+951
+00:15:29,120 --> 00:15:30,550
+ensure is the larger picture where
+things are going is we want to separate
+
+952
+00:15:30,550 --> 00:15:30,560
+things are going is we want to separate
+ 
+
+953
+00:15:30,560 --> 00:15:32,270
+things are going is we want to separate
+the agent harness from where your data
+
+954
+00:15:32,270 --> 00:15:32,280
+the agent harness from where your data
+ 
+
+955
+00:15:32,280 --> 00:15:35,110
+the agent harness from where your data
+lives. We have many more surfaces coming
+
+956
+00:15:35,110 --> 00:15:35,120
+lives. We have many more surfaces coming
+ 
+
+957
+00:15:35,120 --> 00:15:37,470
+lives. We have many more surfaces coming
+up. We see an explosion of agents, but
+
+958
+00:15:37,470 --> 00:15:37,480
+up. We see an explosion of agents, but
+ 
+
+959
+00:15:37,480 --> 00:15:39,710
+up. We see an explosion of agents, but
+those agents shouldn't be tightly
+
+960
+00:15:39,710 --> 00:15:39,720
+those agents shouldn't be tightly
+ 
+
+961
+00:15:39,720 --> 00:15:41,430
+those agents shouldn't be tightly
+coupled to where how your data
+
+962
+00:15:41,430 --> 00:15:41,440
+coupled to where how your data
+ 
+
+963
+00:15:41,440 --> 00:15:43,230
+coupled to where how your data
+structured and how your MCPs are
+
+964
+00:15:43,230 --> 00:15:43,240
+structured and how your MCPs are
+ 
+
+965
+00:15:43,240 --> 00:15:46,110
+structured and how your MCPs are
+structured. An example of this is just
+
+966
+00:15:46,110 --> 00:15:46,120
+structured. An example of this is just
+ 
+
+967
+00:15:46,120 --> 00:15:48,870
+structured. An example of this is just
+the pure definition of an agent should
+
+968
+00:15:48,870 --> 00:15:48,880
+the pure definition of an agent should
+ 
+
+969
+00:15:48,880 --> 00:15:51,270
+the pure definition of an agent should
+like when you have tens of thousands of
+
+970
+00:15:51,270 --> 00:15:51,280
+like when you have tens of thousands of
+ 
+
+971
+00:15:51,280 --> 00:15:53,270
+like when you have tens of thousands of
+the orange box on the left, you don't
+
+972
+00:15:53,270 --> 00:15:53,280
+the orange box on the left, you don't
+ 
+
+973
+00:15:53,280 --> 00:15:55,190
+the orange box on the left, you don't
+need to keep you don't want to ensure
+
+974
+00:15:55,190 --> 00:15:55,200
+need to keep you don't want to ensure
+ 
+
+975
+00:15:55,200 --> 00:15:56,710
+need to keep you don't want to ensure
+that it has to be opinionated. You don't
+
+976
+00:15:56,710 --> 00:15:56,720
+that it has to be opinionated. You don't
+ 
+
+977
+00:15:56,720 --> 00:15:57,790
+that it has to be opinionated. You don't
+want you don't want the things on the
+
+978
+00:15:57,790 --> 00:15:57,800
+want you don't want the things on the
+ 
+
+979
+00:15:57,800 --> 00:15:59,510
+want you don't want the things on the
+right to be opinionated on how this
+
+980
+00:15:59,510 --> 00:15:59,520
+right to be opinionated on how this
+ 
+
+981
+00:15:59,520 --> 00:16:02,030
+right to be opinionated on how this
+works. We have this working we have an
+
+982
+00:16:02,030 --> 00:16:02,040
+works. We have this working we have an
+ 
+
+983
+00:16:02,040 --> 00:16:03,150
+works. We have this working we have an
+example of this which was released
+
+984
+00:16:03,150 --> 00:16:03,160
+example of this which was released
+ 
+
+985
+00:16:03,160 --> 00:16:04,990
+example of this which was released
+recently, right? Just as an example of
+
+986
+00:16:04,990 --> 00:16:05,000
+recently, right? Just as an example of
+ 
+
+987
+00:16:05,000 --> 00:16:07,069
+recently, right? Just as an example of
+this right now, if you have an MCP
+
+988
+00:16:07,069 --> 00:16:07,079
+this right now, if you have an MCP
+ 
+
+989
+00:16:07,079 --> 00:16:09,069
+this right now, if you have an MCP
+gateway, you can use you can easily
+
+990
+00:16:09,069 --> 00:16:09,079
+gateway, you can use you can easily
+ 
+
+991
+00:16:09,079 --> 00:16:10,550
+gateway, you can use you can easily
+connect it to cloud managed agents which
+
+992
+00:16:10,550 --> 00:16:10,560
+connect it to cloud managed agents which
+ 
+
+993
+00:16:10,560 --> 00:16:12,150
+connect it to cloud managed agents which
+was released recently, but you can also
+
+994
+00:16:12,150 --> 00:16:12,160
+was released recently, but you can also
+ 
+
+995
+00:16:12,160 --> 00:16:14,270
+was released recently, but you can also
+build it into use it internally
+
+996
+00:16:14,270 --> 00:16:14,280
+build it into use it internally
+ 
+
+997
+00:16:14,280 --> 00:16:16,069
+build it into use it internally
+with your own cloud agent SDK as well,
+
+998
+00:16:16,069 --> 00:16:16,079
+with your own cloud agent SDK as well,
+ 
+
+999
+00:16:16,079 --> 00:16:17,829
+with your own cloud agent SDK as well,
+right? And this is just an example from
+
+1000
+00:16:17,829 --> 00:16:17,839
+right? And this is just an example from
+ 
+
+1001
+00:16:17,839 --> 00:16:19,790
+right? And this is just an example from
+the cloud.x ecosystem. But think about
+
+1002
+00:16:19,790 --> 00:16:19,800
+the cloud.x ecosystem. But think about
+ 
+
+1003
+00:16:19,800 --> 00:16:21,990
+the cloud.x ecosystem. But think about
+the value of this. As an enterprise, you
+
+1004
+00:16:21,990 --> 00:16:22,000
+the value of this. As an enterprise, you
+ 
+
+1005
+00:16:22,000 --> 00:16:24,190
+the value of this. As an enterprise, you
+now have the ability to quickly decide
+
+1006
+00:16:24,190 --> 00:16:24,200
+now have the ability to quickly decide
+ 
+
+1007
+00:16:24,200 --> 00:16:25,829
+now have the ability to quickly decide
+which agents you want to keep in-house,
+
+1008
+00:16:25,829 --> 00:16:25,839
+which agents you want to keep in-house,
+ 
+
+1009
+00:16:25,839 --> 00:16:27,790
+which agents you want to keep in-house,
+which agents you want to have outside,
+
+1010
+00:16:27,790 --> 00:16:27,800
+which agents you want to have outside,
+ 
+
+1011
+00:16:27,800 --> 00:16:29,510
+which agents you want to have outside,
+but that becomes an invariant decision.
+
+1012
+00:16:29,510 --> 00:16:29,520
+but that becomes an invariant decision.
+ 
+
+1013
+00:16:29,520 --> 00:16:31,510
+but that becomes an invariant decision.
+The gateway remains regardless. What I'm
+
+1014
+00:16:31,510 --> 00:16:31,520
+The gateway remains regardless. What I'm
+ 
+
+1015
+00:16:31,520 --> 00:16:33,069
+The gateway remains regardless. What I'm
+trying to tell you is that the gateway
+
+1016
+00:16:33,069 --> 00:16:33,079
+trying to tell you is that the gateway
+ 
+
+1017
+00:16:33,079 --> 00:16:34,990
+trying to tell you is that the gateway
+is an investment which will allow you
+
+1018
+00:16:34,990 --> 00:16:35,000
+is an investment which will allow you
+ 
+
+1019
+00:16:35,000 --> 00:16:37,550
+is an investment which will allow you
+give you the flexibility to try to try
+
+1020
+00:16:37,550 --> 00:16:37,560
+give you the flexibility to try to try
+ 
+
+1021
+00:16:37,560 --> 00:16:40,230
+give you the flexibility to try to try
+and meet the wide-ranging agent needs of
+
+1022
+00:16:40,230 --> 00:16:40,240
+and meet the wide-ranging agent needs of
+ 
+
+1023
+00:16:40,240 --> 00:16:41,829
+and meet the wide-ranging agent needs of
+the future, and that's going to be
+
+1024
+00:16:41,829 --> 00:16:41,839
+the future, and that's going to be
+ 
+
+1025
+00:16:41,839 --> 00:16:43,550
+the future, and that's going to be
+really really exciting.
+
+1026
+00:16:43,550 --> 00:16:43,560
+really really exciting.
+ 
+
+1027
+00:16:43,560 --> 00:16:46,590
+really really exciting.
+And that allows you to not only
+
+1028
+00:16:46,590 --> 00:16:46,600
+And that allows you to not only
+ 
+
+1029
+00:16:46,600 --> 00:16:47,990
+And that allows you to not only
+not have to think that much about agent
+
+1030
+00:16:47,990 --> 00:16:48,000
+not have to think that much about agent
+ 
+
+1031
+00:16:48,000 --> 00:16:49,870
+not have to think that much about agent
+design at the moment, but it also allows
+
+1032
+00:16:49,870 --> 00:16:49,880
+design at the moment, but it also allows
+ 
+
+1033
+00:16:49,880 --> 00:16:52,270
+design at the moment, but it also allows
+you to really invest very strongly in
+
+1034
+00:16:52,270 --> 00:16:52,280
+you to really invest very strongly in
+ 
+
+1035
+00:16:52,280 --> 00:16:56,390
+you to really invest very strongly in
+opinionated MCP gateway primitives.
+
+1036
+00:16:56,390 --> 00:16:56,400
+opinionated MCP gateway primitives.
+ 
+
+1037
+00:16:56,400 --> 00:16:58,829
+opinionated MCP gateway primitives.
+So, just in summary,
+
+1038
+00:16:58,829 --> 00:16:58,839
+So, just in summary,
+ 
+
+1039
+00:16:58,839 --> 00:17:00,150
+So, just in summary,
+I would say three main things here,
+
+1040
+00:17:00,150 --> 00:17:00,160
+I would say three main things here,
+ 
+
+1041
+00:17:00,160 --> 00:17:01,750
+I would say three main things here,
+right? The first and the most important
+
+1042
+00:17:01,750 --> 00:17:01,760
+right? The first and the most important
+ 
+
+1043
+00:17:01,760 --> 00:17:04,069
+right? The first and the most important
+takeaway is to invest in common infra,
+
+1044
+00:17:04,069 --> 00:17:04,079
+takeaway is to invest in common infra,
+ 
+
+1045
+00:17:04,079 --> 00:17:06,390
+takeaway is to invest in common infra,
+to not try and roll your own MCPs, and
+
+1046
+00:17:06,390 --> 00:17:06,400
+to not try and roll your own MCPs, and
+ 
+
+1047
+00:17:06,400 --> 00:17:07,710
+to not try and roll your own MCPs, and
+to ensure your teams can build their own
+
+1048
+00:17:07,710 --> 00:17:07,720
+to ensure your teams can build their own
+ 
+
+1049
+00:17:07,720 --> 00:17:10,390
+to ensure your teams can build their own
+MCPs. Second, we really think gateways
+
+1050
+00:17:10,390 --> 00:17:10,400
+MCPs. Second, we really think gateways
+ 
+
+1051
+00:17:10,400 --> 00:17:12,030
+MCPs. Second, we really think gateways
+for secured connections allow you to
+
+1052
+00:17:12,030 --> 00:17:12,040
+for secured connections allow you to
+ 
+
+1053
+00:17:12,040 --> 00:17:14,429
+for secured connections allow you to
+build that root of trust. And third,
+
+1054
+00:17:14,429 --> 00:17:14,439
+build that root of trust. And third,
+ 
+
+1055
+00:17:14,439 --> 00:17:16,390
+build that root of trust. And third,
+that moves towards a world where we
+
+1056
+00:17:16,390 --> 00:17:16,400
+that moves towards a world where we
+ 
+
+1057
+00:17:16,400 --> 00:17:18,550
+that moves towards a world where we
+think the agent harness is better be
+
+1058
+00:17:18,550 --> 00:17:18,560
+think the agent harness is better be
+ 
+
+1059
+00:17:18,560 --> 00:17:21,949
+think the agent harness is better be
+able to separated from your data layer.
+
+1060
+00:17:21,949 --> 00:17:21,959
+able to separated from your data layer.
+ 
+
+1061
+00:17:21,959 --> 00:17:23,710
+able to separated from your data layer.
+So, yeah, thank you so much. If you have
+
+1062
+00:17:23,710 --> 00:17:23,720
+So, yeah, thank you so much. If you have
+ 
+
+1063
+00:17:23,720 --> 00:17:24,870
+So, yeah, thank you so much. If you have
+if you're interested in any of this, I'd
+
+1064
+00:17:24,870 --> 00:17:24,880
+if you're interested in any of this, I'd
+ 
+
+1065
+00:17:24,880 --> 00:17:26,429
+if you're interested in any of this, I'd
+love to talk
+
+1066
+00:17:26,429 --> 00:17:26,439
+love to talk
+ 
+
+1067
+00:17:26,439 --> 00:17:27,350
+love to talk
+and that was the talk. Thank you so
+
+1068
+00:17:27,350 --> 00:17:27,360
+and that was the talk. Thank you so
+ 
+
+1069
+00:17:27,360 --> 00:17:28,657
+and that was the talk. Thank you so
+much.
+
+1070
+00:17:28,657 --> 00:17:28,667
+much.
+ 
+
+1071
+00:17:28,667 --> 00:17:37,827
+much.
+>> [applause]
+
+1072
+00:17:37,827 --> 00:17:37,837
+
+ 
+
+1073
+00:17:37,837 --> 00:17:39,857
+
+[music]
+

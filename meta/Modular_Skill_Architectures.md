@@ -23,9 +23,17 @@ Folderize agent behaviors into discrete skills to improve scalability and optimi
 - A standardized format for skills ensures that agent capabilities are portable and can be easily integrated into any compliant system.
 - The community-driven exchange of skills accelerates the development of increasingly powerful and versatile AI assistants for various specialized domains.
 
+## Skills Replace Infrastructure Code
+- Skills can replace 15,000 lines of infrastructure code with 200 lines of markdown using agent primitives.
+- Context needs validation layers: format linting, comprehension checking, and behavioral evals like code.
+- Skills are context engineering made reusable: capture domain knowledge and past learnings across sessions.
+- Package context like libraries with registries, versioning, and dependency management for workflows.
+
 # Related Talks
 
 - **[Skill Issue: How We Used AI to Make Agents Actually Good at Supabase — Pedro Rodrigues](../insights/GmAQKINjv1E_Skill_Issue_How_We_Used_AI_to_Make_Agents_Actually_Good_at_Supabase.md)**
 - **[Skills at Scale — Nick Nisi & Zack Poser](../insights/pFsfax19yOM_Skills_at_Scale_Nick_Nisi_Zack_Poser.md)**
 - **[Codex and Subagents — Vaibhav Srivastav & Katia Gil Guzman](../insights/MhHEGMFCEB0_Codex_and_Subagents_-_Vaibhav_Srivastav_and_Katia_Gil_Guzman.md)**
 - **[Ralph Loops — Chris Parsons](../insights/2TLXsxkz0zI_Chris_Parsons_Ralph_Loops_Build_Dumb_AI_Loops_That_Ship.md)**
+- **[Replacing 12K LoC with a 200 LoC Skill — David Gomes, Cursor](../insights/WE_Gnowy3uw_Replacing_12K_LoC_with_a_200_LoC_Skill_David_Gomes_Cursor.md)**
+- **[Context Is the New Code — Patrick Debois, Tessl](../insights/bSG9wUYaHWU_Context_Is_the_New_Code_Patrick_Debois_Tessl.md)**

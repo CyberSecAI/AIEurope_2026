@@ -1,0 +1,5215 @@
+1
+00:00:14,600 --> 00:00:16,910
+
+Hi everyone. My name is Maxim Labonne.
+
+2
+00:00:16,910 --> 00:00:16,920
+Hi everyone. My name is Maxim Labonne.
+ 
+
+3
+00:00:16,920 --> 00:00:18,510
+Hi everyone. My name is Maxim Labonne.
+In this presentation I want to talk
+
+4
+00:00:18,510 --> 00:00:18,520
+In this presentation I want to talk
+ 
+
+5
+00:00:18,520 --> 00:00:20,710
+In this presentation I want to talk
+about the lessons I've learned
+
+6
+00:00:20,710 --> 00:00:20,720
+about the lessons I've learned
+ 
+
+7
+00:00:20,720 --> 00:00:22,630
+about the lessons I've learned
+pre-training small models.
+
+8
+00:00:22,630 --> 00:00:22,640
+pre-training small models.
+ 
+
+9
+00:00:22,640 --> 00:00:25,870
+pre-training small models.
+So for context I work at Liquid AI as
+
+10
+00:00:25,870 --> 00:00:25,880
+So for context I work at Liquid AI as
+ 
+
+11
+00:00:25,880 --> 00:00:27,710
+So for context I work at Liquid AI as
+head of pre-training. At Liquid we
+
+12
+00:00:27,710 --> 00:00:27,720
+head of pre-training. At Liquid we
+ 
+
+13
+00:00:27,720 --> 00:00:29,670
+head of pre-training. At Liquid we
+mostly focus on edge models for on
+
+14
+00:00:29,670 --> 00:00:29,680
+mostly focus on edge models for on
+ 
+
+15
+00:00:29,680 --> 00:00:31,630
+mostly focus on edge models for on
+device deployment. And as you can see
+
+16
+00:00:31,630 --> 00:00:31,640
+device deployment. And as you can see
+ 
+
+17
+00:00:31,640 --> 00:00:34,150
+device deployment. And as you can see
+here we have models from
+
+18
+00:00:34,150 --> 00:00:34,160
+here we have models from
+ 
+
+19
+00:00:34,160 --> 00:00:37,830
+here we have models from
+350 million parameters to 24 billion
+
+20
+00:00:37,830 --> 00:00:37,840
+350 million parameters to 24 billion
+ 
+
+21
+00:00:37,840 --> 00:00:40,310
+350 million parameters to 24 billion
+parameters. So this is very very small.
+
+22
+00:00:40,310 --> 00:00:40,320
+parameters. So this is very very small.
+ 
+
+23
+00:00:40,320 --> 00:00:41,470
+parameters. So this is very very small.
+And
+
+24
+00:00:41,470 --> 00:00:41,480
+And
+ 
+
+25
+00:00:41,480 --> 00:00:45,510
+And
+yesterday we released our new VLM 450M
+
+26
+00:00:45,510 --> 00:00:45,520
+yesterday we released our new VLM 450M
+ 
+
+27
+00:00:45,520 --> 00:00:47,630
+yesterday we released our new VLM 450M
+and the week before we released the new
+
+28
+00:00:47,630 --> 00:00:47,640
+and the week before we released the new
+ 
+
+29
+00:00:47,640 --> 00:00:51,270
+and the week before we released the new
+version of the 350M model for text.
+
+30
+00:00:51,270 --> 00:00:51,280
+version of the 350M model for text.
+ 
+
+31
+00:00:51,280 --> 00:00:53,710
+version of the 350M model for text.
+So this is what we do. We work across
+
+32
+00:00:53,710 --> 00:00:53,720
+So this is what we do. We work across
+ 
+
+33
+00:00:53,720 --> 00:00:57,710
+So this is what we do. We work across
+text, vision and audio. And yeah, the
+
+34
+00:00:57,710 --> 00:00:57,720
+text, vision and audio. And yeah, the
+ 
+
+35
+00:00:57,720 --> 00:00:59,590
+text, vision and audio. And yeah, the
+models are available on Hugging Face if
+
+36
+00:00:59,590 --> 00:00:59,600
+models are available on Hugging Face if
+ 
+
+37
+00:00:59,600 --> 00:01:01,670
+models are available on Hugging Face if
+you want to try them out.
+
+38
+00:01:01,670 --> 00:01:01,680
+you want to try them out.
+ 
+
+39
+00:01:01,680 --> 00:01:03,430
+you want to try them out.
+In this presentation I want to talk
+
+40
+00:01:03,430 --> 00:01:03,440
+In this presentation I want to talk
+ 
+
+41
+00:01:03,440 --> 00:01:07,150
+In this presentation I want to talk
+about what separates small models and
+
+42
+00:01:07,150 --> 00:01:07,160
+about what separates small models and
+ 
+
+43
+00:01:07,160 --> 00:01:09,030
+about what separates small models and
+big models. And there are three main
+
+44
+00:01:09,030 --> 00:01:09,040
+big models. And there are three main
+ 
+
+45
+00:01:09,040 --> 00:01:11,110
+big models. And there are three main
+characteristics I want to talk about. So
+
+46
+00:01:11,110 --> 00:01:11,120
+characteristics I want to talk about. So
+ 
+
+47
+00:01:11,120 --> 00:01:12,830
+characteristics I want to talk about. So
+first of all, the small models they're
+
+48
+00:01:12,830 --> 00:01:12,840
+first of all, the small models they're
+ 
+
+49
+00:01:12,840 --> 00:01:14,750
+first of all, the small models they're
+memory bound um
+
+50
+00:01:14,750 --> 00:01:14,760
+memory bound um
+ 
+
+51
+00:01:14,760 --> 00:01:17,390
+memory bound um
+because the hardware is is what it is,
+
+52
+00:01:17,390 --> 00:01:17,400
+because the hardware is is what it is,
+ 
+
+53
+00:01:17,400 --> 00:01:20,110
+because the hardware is is what it is,
+right? On a phone, in a car, etc. We
+
+54
+00:01:20,110 --> 00:01:20,120
+right? On a phone, in a car, etc. We
+ 
+
+55
+00:01:20,120 --> 00:01:22,430
+right? On a phone, in a car, etc. We
+can't really use super big models which
+
+56
+00:01:22,430 --> 00:01:22,440
+can't really use super big models which
+ 
+
+57
+00:01:22,440 --> 00:01:24,950
+can't really use super big models which
+is why we try to keep the the size quite
+
+58
+00:01:24,950 --> 00:01:24,960
+is why we try to keep the the size quite
+ 
+
+59
+00:01:24,960 --> 00:01:25,950
+is why we try to keep the the size quite
+small.
+
+60
+00:01:25,950 --> 00:01:25,960
+small.
+ 
+
+61
+00:01:25,960 --> 00:01:27,430
+small.
+Because of that we have low knowledge
+
+62
+00:01:27,430 --> 00:01:27,440
+Because of that we have low knowledge
+ 
+
+63
+00:01:27,440 --> 00:01:29,510
+Because of that we have low knowledge
+capacity compared to bigger models.
+
+64
+00:01:29,510 --> 00:01:29,520
+capacity compared to bigger models.
+ 
+
+65
+00:01:29,520 --> 00:01:32,470
+capacity compared to bigger models.
+Then the models are task which is great
+
+66
+00:01:32,470 --> 00:01:32,480
+Then the models are task which is great
+ 
+
+67
+00:01:32,480 --> 00:01:34,750
+Then the models are task which is great
+because if you have small knowledge
+
+68
+00:01:34,750 --> 00:01:34,760
+because if you have small knowledge
+ 
+
+69
+00:01:34,760 --> 00:01:36,670
+because if you have small knowledge
+capacity you can at least focus on one
+
+70
+00:01:36,670 --> 00:01:36,680
+capacity you can at least focus on one
+ 
+
+71
+00:01:36,680 --> 00:01:39,190
+capacity you can at least focus on one
+thing very well. And so that means that
+
+72
+00:01:39,190 --> 00:01:39,200
+thing very well. And so that means that
+ 
+
+73
+00:01:39,200 --> 00:01:40,790
+thing very well. And so that means that
+they are usually not general purpose
+
+74
+00:01:40,790 --> 00:01:40,800
+they are usually not general purpose
+ 
+
+75
+00:01:40,800 --> 00:01:42,990
+they are usually not general purpose
+chatbots like ChatGPT. They are a lot
+
+76
+00:01:42,990 --> 00:01:43,000
+chatbots like ChatGPT. They are a lot
+ 
+
+77
+00:01:43,000 --> 00:01:45,750
+chatbots like ChatGPT. They are a lot
+more narrow in terms of focus and they
+
+78
+00:01:45,750 --> 00:01:45,760
+more narrow in terms of focus and they
+ 
+
+79
+00:01:45,760 --> 00:01:47,710
+more narrow in terms of focus and they
+can do something like summarization to
+
+80
+00:01:47,710 --> 00:01:47,720
+can do something like summarization to
+ 
+
+81
+00:01:47,720 --> 00:01:49,190
+can do something like summarization to
+use very very well.
+
+82
+00:01:49,190 --> 00:01:49,200
+use very very well.
+ 
+
+83
+00:01:49,200 --> 00:01:51,710
+use very very well.
+So that's the second aspect. And the
+
+84
+00:01:51,710 --> 00:01:51,720
+So that's the second aspect. And the
+ 
+
+85
+00:01:51,720 --> 00:01:54,350
+So that's the second aspect. And the
+final one is that it's very latency
+
+86
+00:01:54,350 --> 00:01:54,360
+final one is that it's very latency
+ 
+
+87
+00:01:54,360 --> 00:01:56,750
+final one is that it's very latency
+sensitive. And that means that you need
+
+88
+00:01:56,750 --> 00:01:56,760
+sensitive. And that means that you need
+ 
+
+89
+00:01:56,760 --> 00:02:00,270
+sensitive. And that means that you need
+to have very very fast throughput. So
+
+90
+00:02:00,270 --> 00:02:00,280
+to have very very fast throughput. So
+ 
+
+91
+00:02:00,280 --> 00:02:01,830
+to have very very fast throughput. So
+all these characteristics are very
+
+92
+00:02:01,830 --> 00:02:01,840
+all these characteristics are very
+ 
+
+93
+00:02:01,840 --> 00:02:02,950
+all these characteristics are very
+important and we'll see in this
+
+94
+00:02:02,950 --> 00:02:02,960
+important and we'll see in this
+ 
+
+95
+00:02:02,960 --> 00:02:04,750
+important and we'll see in this
+presentation how they play with each
+
+96
+00:02:04,750 --> 00:02:04,760
+presentation how they play with each
+ 
+
+97
+00:02:04,760 --> 00:02:07,310
+presentation how they play with each
+other and how we can do better.
+
+98
+00:02:07,310 --> 00:02:07,320
+other and how we can do better.
+ 
+
+99
+00:02:07,320 --> 00:02:09,270
+other and how we can do better.
+But the main lesson I want you to retain
+
+100
+00:02:09,270 --> 00:02:09,280
+But the main lesson I want you to retain
+ 
+
+101
+00:02:09,280 --> 00:02:11,230
+But the main lesson I want you to retain
+from this presentation is that small
+
+102
+00:02:11,230 --> 00:02:11,240
+from this presentation is that small
+ 
+
+103
+00:02:11,240 --> 00:02:13,470
+from this presentation is that small
+models are not just scaled on versions
+
+104
+00:02:13,470 --> 00:02:13,480
+models are not just scaled on versions
+ 
+
+105
+00:02:13,480 --> 00:02:15,350
+models are not just scaled on versions
+of bigger models. They also have their
+
+106
+00:02:15,350 --> 00:02:15,360
+of bigger models. They also have their
+ 
+
+107
+00:02:15,360 --> 00:02:18,110
+of bigger models. They also have their
+unique challenges and we will see about
+
+108
+00:02:18,110 --> 00:02:18,120
+unique challenges and we will see about
+ 
+
+109
+00:02:18,120 --> 00:02:20,590
+unique challenges and we will see about
+how we do it in this presentation. The
+
+110
+00:02:20,590 --> 00:02:20,600
+how we do it in this presentation. The
+ 
+
+111
+00:02:20,600 --> 00:02:22,350
+how we do it in this presentation. The
+first thing I want to talk about is the
+
+112
+00:02:22,350 --> 00:02:22,360
+first thing I want to talk about is the
+ 
+
+113
+00:02:22,360 --> 00:02:24,150
+first thing I want to talk about is the
+model architecture because there's a lot
+
+114
+00:02:24,150 --> 00:02:24,160
+model architecture because there's a lot
+ 
+
+115
+00:02:24,160 --> 00:02:26,230
+model architecture because there's a lot
+of interesting things that we can do
+
+116
+00:02:26,230 --> 00:02:26,240
+of interesting things that we can do
+ 
+
+117
+00:02:26,240 --> 00:02:27,950
+of interesting things that we can do
+here for edge models.
+
+118
+00:02:27,950 --> 00:02:27,960
+here for edge models.
+ 
+
+119
+00:02:27,960 --> 00:02:31,870
+here for edge models.
+I want to first look about Gemma 3 270M
+
+120
+00:02:31,870 --> 00:02:31,880
+I want to first look about Gemma 3 270M
+ 
+
+121
+00:02:31,880 --> 00:02:35,550
+I want to first look about Gemma 3 270M
+and Gemma 2.5 0.8B. So these models are
+
+122
+00:02:35,550 --> 00:02:35,560
+and Gemma 2.5 0.8B. So these models are
+ 
+
+123
+00:02:35,560 --> 00:02:37,630
+and Gemma 2.5 0.8B. So these models are
+the smallest version of their respective
+
+124
+00:02:37,630 --> 00:02:37,640
+the smallest version of their respective
+ 
+
+125
+00:02:37,640 --> 00:02:39,310
+the smallest version of their respective
+family. And you can see that both of
+
+126
+00:02:39,310 --> 00:02:39,320
+family. And you can see that both of
+ 
+
+127
+00:02:39,320 --> 00:02:42,110
+family. And you can see that both of
+them they adopt a hybrid architecture.
+
+128
+00:02:42,110 --> 00:02:42,120
+them they adopt a hybrid architecture.
+ 
+
+129
+00:02:42,120 --> 00:02:45,350
+them they adopt a hybrid architecture.
+Gemma 3 has sliding window attention and
+
+130
+00:02:45,350 --> 00:02:45,360
+Gemma 3 has sliding window attention and
+ 
+
+131
+00:02:45,360 --> 00:02:48,710
+Gemma 3 has sliding window attention and
+GQA hybrid. Gemma 2.5 has a new
+
+132
+00:02:48,710 --> 00:02:48,720
+GQA hybrid. Gemma 2.5 has a new
+ 
+
+133
+00:02:48,720 --> 00:02:50,990
+GQA hybrid. Gemma 2.5 has a new
+architecture with gated
+
+134
+00:02:50,990 --> 00:02:51,000
+architecture with gated
+ 
+
+135
+00:02:51,000 --> 00:02:53,150
+architecture with gated
+Delta Net and gated attention. This is
+
+136
+00:02:53,150 --> 00:02:53,160
+Delta Net and gated attention. This is
+ 
+
+137
+00:02:53,160 --> 00:02:55,350
+Delta Net and gated attention. This is
+great because this is a lot faster. But
+
+138
+00:02:55,350 --> 00:02:55,360
+great because this is a lot faster. But
+ 
+
+139
+00:02:55,360 --> 00:02:57,270
+great because this is a lot faster. But
+what I'm interested in here is actually
+
+140
+00:02:57,270 --> 00:02:57,280
+what I'm interested in here is actually
+ 
+
+141
+00:02:57,280 --> 00:02:59,510
+what I'm interested in here is actually
+the embedding layer. Because if you look
+
+142
+00:02:59,510 --> 00:02:59,520
+the embedding layer. Because if you look
+ 
+
+143
+00:02:59,520 --> 00:03:01,310
+the embedding layer. Because if you look
+at the size of the embedding layer
+
+144
+00:03:01,310 --> 00:03:01,320
+at the size of the embedding layer
+ 
+
+145
+00:03:01,320 --> 00:03:03,190
+at the size of the embedding layer
+compared to all the parameters of the
+
+146
+00:03:03,190 --> 00:03:03,200
+compared to all the parameters of the
+ 
+
+147
+00:03:03,200 --> 00:03:06,470
+compared to all the parameters of the
+model you see that actually Gemma 3 270M
+
+148
+00:03:06,470 --> 00:03:06,480
+model you see that actually Gemma 3 270M
+ 
+
+149
+00:03:06,480 --> 00:03:09,910
+model you see that actually Gemma 3 270M
+is mostly an embedding layer. It's 63%
+
+150
+00:03:09,910 --> 00:03:09,920
+is mostly an embedding layer. It's 63%
+ 
+
+151
+00:03:09,920 --> 00:03:12,150
+is mostly an embedding layer. It's 63%
+of the total parameters. And even Gemma
+
+152
+00:03:12,150 --> 00:03:12,160
+of the total parameters. And even Gemma
+ 
+
+153
+00:03:12,160 --> 00:03:16,310
+of the total parameters. And even Gemma
+2.5 0.8B it's it's still like 29% of the
+
+154
+00:03:16,310 --> 00:03:16,320
+2.5 0.8B it's it's still like 29% of the
+ 
+
+155
+00:03:16,320 --> 00:03:17,830
+2.5 0.8B it's it's still like 29% of the
+parameters.
+
+156
+00:03:17,830 --> 00:03:17,840
+parameters.
+ 
+
+157
+00:03:17,840 --> 00:03:20,350
+parameters.
+So that's not super efficient because
+
+158
+00:03:20,350 --> 00:03:20,360
+So that's not super efficient because
+ 
+
+159
+00:03:20,360 --> 00:03:22,030
+So that's not super efficient because
+the effective parameters, the parameters
+
+160
+00:03:22,030 --> 00:03:22,040
+the effective parameters, the parameters
+ 
+
+161
+00:03:22,040 --> 00:03:24,350
+the effective parameters, the parameters
+that are really used for reasoning, for
+
+162
+00:03:24,350 --> 00:03:24,360
+that are really used for reasoning, for
+ 
+
+163
+00:03:24,360 --> 00:03:26,430
+that are really used for reasoning, for
+knowledge capacity and all that stuff
+
+164
+00:03:26,430 --> 00:03:26,440
+knowledge capacity and all that stuff
+ 
+
+165
+00:03:26,440 --> 00:03:29,270
+knowledge capacity and all that stuff
+are not the embedding parameters.
+
+166
+00:03:29,270 --> 00:03:29,280
+are not the embedding parameters.
+ 
+
+167
+00:03:29,280 --> 00:03:31,390
+are not the embedding parameters.
+They're the rest. So the effective size
+
+168
+00:03:31,390 --> 00:03:31,400
+They're the rest. So the effective size
+ 
+
+169
+00:03:31,400 --> 00:03:34,310
+They're the rest. So the effective size
+is actually a lot smaller and it means
+
+170
+00:03:34,310 --> 00:03:34,320
+is actually a lot smaller and it means
+ 
+
+171
+00:03:34,320 --> 00:03:36,270
+is actually a lot smaller and it means
+that you could squeeze more reasoning
+
+172
+00:03:36,270 --> 00:03:36,280
+that you could squeeze more reasoning
+ 
+
+173
+00:03:36,280 --> 00:03:38,110
+that you could squeeze more reasoning
+and more performance from the same
+
+174
+00:03:38,110 --> 00:03:38,120
+and more performance from the same
+ 
+
+175
+00:03:38,120 --> 00:03:39,670
+and more performance from the same
+memory footprint.
+
+176
+00:03:39,670 --> 00:03:39,680
+memory footprint.
+ 
+
+177
+00:03:39,680 --> 00:03:41,590
+memory footprint.
+And the reason why they do that is
+
+178
+00:03:41,590 --> 00:03:41,600
+And the reason why they do that is
+ 
+
+179
+00:03:41,600 --> 00:03:43,470
+And the reason why they do that is
+because they use distillation to train
+
+180
+00:03:43,470 --> 00:03:43,480
+because they use distillation to train
+ 
+
+181
+00:03:43,480 --> 00:03:46,630
+because they use distillation to train
+the models. So they distill
+
+182
+00:03:46,630 --> 00:03:46,640
+the models. So they distill
+ 
+
+183
+00:03:46,640 --> 00:03:48,750
+the models. So they distill
+these models like those are the
+
+184
+00:03:48,750 --> 00:03:48,760
+these models like those are the
+ 
+
+185
+00:03:48,760 --> 00:03:50,550
+these models like those are the
+student models and they have teacher
+
+186
+00:03:50,550 --> 00:03:50,560
+student models and they have teacher
+ 
+
+187
+00:03:50,560 --> 00:03:53,390
+student models and they have teacher
+models with a huge vocabulary sizes and
+
+188
+00:03:53,390 --> 00:03:53,400
+models with a huge vocabulary sizes and
+ 
+
+189
+00:03:53,400 --> 00:03:56,390
+models with a huge vocabulary sizes and
+this is why we have these super big
+
+190
+00:03:56,390 --> 00:03:56,400
+this is why we have these super big
+ 
+
+191
+00:03:56,400 --> 00:03:58,910
+this is why we have these super big
+embedding layers.
+
+192
+00:03:58,910 --> 00:03:58,920
+embedding layers.
+ 
+
+193
+00:03:58,920 --> 00:04:01,190
+embedding layers.
+All right, let's look about the LFM 2
+
+194
+00:04:01,190 --> 00:04:01,200
+All right, let's look about the LFM 2
+ 
+
+195
+00:04:01,200 --> 00:04:03,310
+All right, let's look about the LFM 2
+architecture now. As you can see the LFM
+
+196
+00:04:03,310 --> 00:04:03,320
+architecture now. As you can see the LFM
+ 
+
+197
+00:04:03,320 --> 00:04:05,670
+architecture now. As you can see the LFM
+2 architecture is actually
+
+198
+00:04:05,670 --> 00:04:05,680
+2 architecture is actually
+ 
+
+199
+00:04:05,680 --> 00:04:08,950
+2 architecture is actually
+not that different in terms of um
+
+200
+00:04:08,950 --> 00:04:08,960
+not that different in terms of um
+ 
+
+201
+00:04:08,960 --> 00:04:10,990
+not that different in terms of um
+just layers. We also have like a hybrid
+
+202
+00:04:10,990 --> 00:04:11,000
+just layers. We also have like a hybrid
+ 
+
+203
+00:04:11,000 --> 00:04:13,310
+just layers. We also have like a hybrid
+architecture and this time we have short
+
+204
+00:04:13,310 --> 00:04:13,320
+architecture and this time we have short
+ 
+
+205
+00:04:13,320 --> 00:04:15,990
+architecture and this time we have short
+convolutions and GQA.
+
+206
+00:04:15,990 --> 00:04:16,000
+convolutions and GQA.
+ 
+
+207
+00:04:16,000 --> 00:04:18,509
+convolutions and GQA.
+And I want to talk a bit about well
+
+208
+00:04:18,509 --> 00:04:18,519
+And I want to talk a bit about well
+ 
+
+209
+00:04:18,519 --> 00:04:20,870
+And I want to talk a bit about well
+first you can see that the embedding
+
+210
+00:04:20,870 --> 00:04:20,880
+first you can see that the embedding
+ 
+
+211
+00:04:20,880 --> 00:04:23,150
+first you can see that the embedding
+layer is actually a lot smaller compared
+
+212
+00:04:23,150 --> 00:04:23,160
+layer is actually a lot smaller compared
+ 
+
+213
+00:04:23,160 --> 00:04:24,790
+layer is actually a lot smaller compared
+to the others. It's like 90% of the
+
+214
+00:04:24,790 --> 00:04:24,800
+to the others. It's like 90% of the
+ 
+
+215
+00:04:24,800 --> 00:04:26,950
+to the others. It's like 90% of the
+parameters so we have more effective
+
+216
+00:04:26,950 --> 00:04:26,960
+parameters so we have more effective
+ 
+
+217
+00:04:26,960 --> 00:04:29,310
+parameters so we have more effective
+parameters which is great. And I want to
+
+218
+00:04:29,310 --> 00:04:29,320
+parameters which is great. And I want to
+ 
+
+219
+00:04:29,320 --> 00:04:30,670
+parameters which is great. And I want to
+talk about how we created this
+
+220
+00:04:30,670 --> 00:04:30,680
+talk about how we created this
+ 
+
+221
+00:04:30,680 --> 00:04:31,830
+talk about how we created this
+architecture.
+
+222
+00:04:31,830 --> 00:04:31,840
+architecture.
+ 
+
+223
+00:04:31,840 --> 00:04:33,790
+architecture.
+And we did on device profiling. So
+
+224
+00:04:33,790 --> 00:04:33,800
+And we did on device profiling. So
+ 
+
+225
+00:04:33,800 --> 00:04:36,430
+And we did on device profiling. So
+instead of doing more like theoretical
+
+226
+00:04:36,430 --> 00:04:36,440
+instead of doing more like theoretical
+ 
+
+227
+00:04:36,440 --> 00:04:39,150
+instead of doing more like theoretical
+work we decided to say like okay, let's
+
+228
+00:04:39,150 --> 00:04:39,160
+work we decided to say like okay, let's
+ 
+
+229
+00:04:39,160 --> 00:04:41,270
+work we decided to say like okay, let's
+try to really implement it on the target
+
+230
+00:04:41,270 --> 00:04:41,280
+try to really implement it on the target
+ 
+
+231
+00:04:41,280 --> 00:04:43,630
+try to really implement it on the target
+hardware. So we had two target hardware
+
+232
+00:04:43,630 --> 00:04:43,640
+hardware. So we had two target hardware
+ 
+
+233
+00:04:43,640 --> 00:04:46,830
+hardware. So we had two target hardware
+here and we wanted to see how it
+
+234
+00:04:46,830 --> 00:04:46,840
+here and we wanted to see how it
+ 
+
+235
+00:04:46,840 --> 00:04:48,830
+here and we wanted to see how it
+performs in real life to be able to
+
+236
+00:04:48,830 --> 00:04:48,840
+performs in real life to be able to
+ 
+
+237
+00:04:48,840 --> 00:04:50,190
+performs in real life to be able to
+optimize
+
+238
+00:04:50,190 --> 00:04:50,200
+optimize
+ 
+
+239
+00:04:50,200 --> 00:04:51,830
+optimize
+the architecture, find the right
+
+240
+00:04:51,830 --> 00:04:51,840
+the architecture, find the right
+ 
+
+241
+00:04:51,840 --> 00:04:53,870
+the architecture, find the right
+operators here. And the thing that we
+
+242
+00:04:53,870 --> 00:04:53,880
+operators here. And the thing that we
+ 
+
+243
+00:04:53,880 --> 00:04:56,150
+operators here. And the thing that we
+found is this gated short convolution
+
+244
+00:04:56,150 --> 00:04:56,160
+found is this gated short convolution
+ 
+
+245
+00:04:56,160 --> 00:04:58,830
+found is this gated short convolution
+block that you can see here. And why
+
+246
+00:04:58,830 --> 00:04:58,840
+block that you can see here. And why
+ 
+
+247
+00:04:58,840 --> 00:05:01,510
+block that you can see here. And why
+this is nice it's because it's very very
+
+248
+00:05:01,510 --> 00:05:01,520
+this is nice it's because it's very very
+ 
+
+249
+00:05:01,520 --> 00:05:04,230
+this is nice it's because it's very very
+fast. The short convs are a lot faster
+
+250
+00:05:04,230 --> 00:05:04,240
+fast. The short convs are a lot faster
+ 
+
+251
+00:05:04,240 --> 00:05:06,270
+fast. The short convs are a lot faster
+than all the alternatives. So you can
+
+252
+00:05:06,270 --> 00:05:06,280
+than all the alternatives. So you can
+ 
+
+253
+00:05:06,280 --> 00:05:09,070
+than all the alternatives. So you can
+see here compared to sliding window
+
+254
+00:05:09,070 --> 00:05:09,080
+see here compared to sliding window
+ 
+
+255
+00:05:09,080 --> 00:05:11,390
+see here compared to sliding window
+attention from Gemma 3, the gated Delta
+
+256
+00:05:11,390 --> 00:05:11,400
+attention from Gemma 3, the gated Delta
+ 
+
+257
+00:05:11,400 --> 00:05:13,910
+attention from Gemma 3, the gated Delta
+Net from Gemma 2.5, gated linear
+
+258
+00:05:13,910 --> 00:05:13,920
+Net from Gemma 2.5, gated linear
+ 
+
+259
+00:05:13,920 --> 00:05:16,190
+Net from Gemma 2.5, gated linear
+attention and group query attention. You
+
+260
+00:05:16,190 --> 00:05:16,200
+attention and group query attention. You
+ 
+
+261
+00:05:16,200 --> 00:05:17,390
+attention and group query attention. You
+can see that
+
+262
+00:05:17,390 --> 00:05:17,400
+can see that
+ 
+
+263
+00:05:17,400 --> 00:05:19,190
+can see that
+the cost ratio is really in favor of
+
+264
+00:05:19,190 --> 00:05:19,200
+the cost ratio is really in favor of
+ 
+
+265
+00:05:19,200 --> 00:05:20,870
+the cost ratio is really in favor of
+short conv which is great because we
+
+266
+00:05:20,870 --> 00:05:20,880
+short conv which is great because we
+ 
+
+267
+00:05:20,880 --> 00:05:22,830
+short conv which is great because we
+said that this is very latency
+
+268
+00:05:22,830 --> 00:05:22,840
+said that this is very latency
+ 
+
+269
+00:05:22,840 --> 00:05:24,870
+said that this is very latency
+sensitive. So this is exactly what we
+
+270
+00:05:24,870 --> 00:05:24,880
+sensitive. So this is exactly what we
+ 
+
+271
+00:05:24,880 --> 00:05:27,470
+sensitive. So this is exactly what we
+want. So this is quite theoretical but
+
+272
+00:05:27,470 --> 00:05:27,480
+want. So this is quite theoretical but
+ 
+
+273
+00:05:27,480 --> 00:05:30,710
+want. So this is quite theoretical but
+if we look in practice and we profile
+
+274
+00:05:30,710 --> 00:05:30,720
+if we look in practice and we profile
+ 
+
+275
+00:05:30,720 --> 00:05:32,110
+if we look in practice and we profile
+the inference of these models you can
+
+276
+00:05:32,110 --> 00:05:32,120
+the inference of these models you can
+ 
+
+277
+00:05:32,120 --> 00:05:36,550
+the inference of these models you can
+see here on the 2 CPU, the AMD Ryzen Max
+
+278
+00:05:36,550 --> 00:05:36,560
+see here on the 2 CPU, the AMD Ryzen Max
+ 
+
+279
+00:05:36,560 --> 00:05:40,830
+see here on the 2 CPU, the AMD Ryzen Max
+Plus 395 and the Samsung Galaxy S25
+
+280
+00:05:40,830 --> 00:05:40,840
+Plus 395 and the Samsung Galaxy S25
+ 
+
+281
+00:05:40,840 --> 00:05:43,470
+Plus 395 and the Samsung Galaxy S25
+Ultra. Um
+
+282
+00:05:43,470 --> 00:05:43,480
+Ultra. Um
+ 
+
+283
+00:05:43,480 --> 00:05:44,990
+Ultra. Um
+All these models don't have necessarily
+
+284
+00:05:44,990 --> 00:05:45,000
+All these models don't have necessarily
+ 
+
+285
+00:05:45,000 --> 00:05:46,710
+All these models don't have necessarily
+the same size but it gives you a rough
+
+286
+00:05:46,710 --> 00:05:46,720
+the same size but it gives you a rough
+ 
+
+287
+00:05:46,720 --> 00:05:48,470
+the same size but it gives you a rough
+picture and you can see that the short
+
+288
+00:05:48,470 --> 00:05:48,480
+picture and you can see that the short
+ 
+
+289
+00:05:48,480 --> 00:05:50,670
+picture and you can see that the short
+conv really allow LFM 2 architecture to
+
+290
+00:05:50,670 --> 00:05:50,680
+conv really allow LFM 2 architecture to
+ 
+
+291
+00:05:50,680 --> 00:05:53,430
+conv really allow LFM 2 architecture to
+be a lot faster and also use less
+
+292
+00:05:53,430 --> 00:05:53,440
+be a lot faster and also use less
+ 
+
+293
+00:05:53,440 --> 00:05:55,710
+be a lot faster and also use less
+memory. So that's great.
+
+294
+00:05:55,710 --> 00:05:55,720
+memory. So that's great.
+ 
+
+295
+00:05:55,720 --> 00:05:57,910
+memory. So that's great.
+And you can see also GPU. It's not
+
+296
+00:05:57,910 --> 00:05:57,920
+And you can see also GPU. It's not
+ 
+
+297
+00:05:57,920 --> 00:06:00,150
+And you can see also GPU. It's not
+really just for CPU but also on GPU you
+
+298
+00:06:00,150 --> 00:06:00,160
+really just for CPU but also on GPU you
+ 
+
+299
+00:06:00,160 --> 00:06:03,190
+really just for CPU but also on GPU you
+can see that it has a lot of throughput
+
+300
+00:06:03,190 --> 00:06:03,200
+can see that it has a lot of throughput
+ 
+
+301
+00:06:03,200 --> 00:06:07,030
+can see that it has a lot of throughput
+even at very high concurrency levels.
+
+302
+00:06:07,030 --> 00:06:07,040
+even at very high concurrency levels.
+ 
+
+303
+00:06:07,040 --> 00:06:08,870
+even at very high concurrency levels.
+All right, let's talk a bit about
+
+304
+00:06:08,870 --> 00:06:08,880
+All right, let's talk a bit about
+ 
+
+305
+00:06:08,880 --> 00:06:10,590
+All right, let's talk a bit about
+training now.
+
+306
+00:06:10,590 --> 00:06:10,600
+training now.
+ 
+
+307
+00:06:10,600 --> 00:06:12,190
+training now.
+So
+
+308
+00:06:12,190 --> 00:06:12,200
+So
+ 
+
+309
+00:06:12,200 --> 00:06:15,430
+So
+the LFM 2.5 training recipe is quite
+
+310
+00:06:15,430 --> 00:06:15,440
+the LFM 2.5 training recipe is quite
+ 
+
+311
+00:06:15,440 --> 00:06:17,950
+the LFM 2.5 training recipe is quite
+similar to what you can find find
+
+312
+00:06:17,950 --> 00:06:17,960
+similar to what you can find find
+ 
+
+313
+00:06:17,960 --> 00:06:19,830
+similar to what you can find find
+elsewhere in terms of stages. We have
+
+314
+00:06:19,830 --> 00:06:19,840
+elsewhere in terms of stages. We have
+ 
+
+315
+00:06:19,840 --> 00:06:21,630
+elsewhere in terms of stages. We have
+pre and mid-training
+
+316
+00:06:21,630 --> 00:06:21,640
+pre and mid-training
+ 
+
+317
+00:06:21,640 --> 00:06:24,990
+pre and mid-training
+28 trillion tokens. We have supervised
+
+318
+00:06:24,990 --> 00:06:25,000
+28 trillion tokens. We have supervised
+ 
+
+319
+00:06:25,000 --> 00:06:26,710
+28 trillion tokens. We have supervised
+fine-tuning, preference alignment and
+
+320
+00:06:26,710 --> 00:06:26,720
+fine-tuning, preference alignment and
+ 
+
+321
+00:06:26,720 --> 00:06:28,630
+fine-tuning, preference alignment and
+reinforcement learning.
+
+322
+00:06:28,630 --> 00:06:28,640
+reinforcement learning.
+ 
+
+323
+00:06:28,640 --> 00:06:30,110
+reinforcement learning.
+And here you can see I'm talking about
+
+324
+00:06:30,110 --> 00:06:30,120
+And here you can see I'm talking about
+ 
+
+325
+00:06:30,120 --> 00:06:32,550
+And here you can see I'm talking about
+28 trillion tokens. And I said that we
+
+326
+00:06:32,550 --> 00:06:32,560
+28 trillion tokens. And I said that we
+ 
+
+327
+00:06:32,560 --> 00:06:37,030
+28 trillion tokens. And I said that we
+released a model of 350M parameters last
+
+328
+00:06:37,030 --> 00:06:37,040
+released a model of 350M parameters last
+ 
+
+329
+00:06:37,040 --> 00:06:38,190
+released a model of 350M parameters last
+week.
+
+330
+00:06:38,190 --> 00:06:38,200
+week.
+ 
+
+331
+00:06:38,200 --> 00:06:40,670
+week.
+So yeah, we pre-trained a 350 million
+
+332
+00:06:40,670 --> 00:06:40,680
+So yeah, we pre-trained a 350 million
+ 
+
+333
+00:06:40,680 --> 00:06:43,510
+So yeah, we pre-trained a 350 million
+parameter model on 28 trillion tokens.
+
+334
+00:06:43,510 --> 00:06:43,520
+parameter model on 28 trillion tokens.
+ 
+
+335
+00:06:43,520 --> 00:06:45,430
+parameter model on 28 trillion tokens.
+If you're familiar with Chinchilla
+
+336
+00:06:45,430 --> 00:06:45,440
+If you're familiar with Chinchilla
+ 
+
+337
+00:06:45,440 --> 00:06:47,950
+If you're familiar with Chinchilla
+scaling laws that might sound a bit
+
+338
+00:06:47,950 --> 00:06:47,960
+scaling laws that might sound a bit
+ 
+
+339
+00:06:47,960 --> 00:06:50,350
+scaling laws that might sound a bit
+weird because we're supposed to be
+
+340
+00:06:50,350 --> 00:06:50,360
+weird because we're supposed to be
+ 
+
+341
+00:06:50,360 --> 00:06:52,470
+weird because we're supposed to be
+compute optimal at like I don't know
+
+342
+00:06:52,470 --> 00:06:52,480
+compute optimal at like I don't know
+ 
+
+343
+00:06:52,480 --> 00:06:54,510
+compute optimal at like I don't know
+like maybe 1 billion not not even 1
+
+344
+00:06:54,510 --> 00:06:54,520
+like maybe 1 billion not not even 1
+ 
+
+345
+00:06:54,520 --> 00:06:56,590
+like maybe 1 billion not not even 1
+trillion parameter. I mean
+
+346
+00:06:56,590 --> 00:06:56,600
+trillion parameter. I mean
+ 
+
+347
+00:06:56,600 --> 00:06:58,390
+trillion parameter. I mean
+but it's actually not the case and we
+
+348
+00:06:58,390 --> 00:06:58,400
+but it's actually not the case and we
+ 
+
+349
+00:06:58,400 --> 00:07:01,310
+but it's actually not the case and we
+see that the performance still
+
+350
+00:07:01,310 --> 00:07:01,320
+see that the performance still
+ 
+
+351
+00:07:01,320 --> 00:07:03,030
+see that the performance still
+grows when you scale the number of
+
+352
+00:07:03,030 --> 00:07:03,040
+grows when you scale the number of
+ 
+
+353
+00:07:03,040 --> 00:07:04,910
+grows when you scale the number of
+pre-training tokens. And there was a
+
+354
+00:07:04,910 --> 00:07:04,920
+pre-training tokens. And there was a
+ 
+
+355
+00:07:04,920 --> 00:07:07,750
+pre-training tokens. And there was a
+super interesting paper by Roberts et al
+
+356
+00:07:07,750 --> 00:07:07,760
+super interesting paper by Roberts et al
+ 
+
+357
+00:07:07,760 --> 00:07:10,270
+super interesting paper by Roberts et al
+published last week about the test time
+
+358
+00:07:10,270 --> 00:07:10,280
+published last week about the test time
+ 
+
+359
+00:07:10,280 --> 00:07:13,350
+published last week about the test time
+scaling laws. And you can see here how
+
+360
+00:07:13,350 --> 00:07:13,360
+scaling laws. And you can see here how
+ 
+
+361
+00:07:13,360 --> 00:07:16,630
+scaling laws. And you can see here how
+LFM 2.5 350M compares to their new
+
+362
+00:07:16,630 --> 00:07:16,640
+LFM 2.5 350M compares to their new
+ 
+
+363
+00:07:16,640 --> 00:07:18,630
+LFM 2.5 350M compares to their new
+scaling laws. You can see Chinchilla
+
+364
+00:07:18,630 --> 00:07:18,640
+scaling laws. You can see Chinchilla
+ 
+
+365
+00:07:18,640 --> 00:07:20,350
+scaling laws. You can see Chinchilla
+scaling laws here and the new ones that
+
+366
+00:07:20,350 --> 00:07:20,360
+scaling laws here and the new ones that
+ 
+
+367
+00:07:20,360 --> 00:07:23,150
+scaling laws here and the new ones that
+they proposed here. And actually we did
+
+368
+00:07:23,150 --> 00:07:23,160
+they proposed here. And actually we did
+ 
+
+369
+00:07:23,160 --> 00:07:24,750
+they proposed here. And actually we did
+not pre-train the models on enough
+
+370
+00:07:24,750 --> 00:07:24,760
+not pre-train the models on enough
+ 
+
+371
+00:07:24,760 --> 00:07:27,710
+not pre-train the models on enough
+tokens. We should pre-train even more to
+
+372
+00:07:27,710 --> 00:07:27,720
+tokens. We should pre-train even more to
+ 
+
+373
+00:07:27,720 --> 00:07:30,470
+tokens. We should pre-train even more to
+be optimal according to their laws.
+
+374
+00:07:30,470 --> 00:07:30,480
+be optimal according to their laws.
+ 
+
+375
+00:07:30,480 --> 00:07:31,710
+be optimal according to their laws.
+But this is cool because more
+
+376
+00:07:31,710 --> 00:07:31,720
+But this is cool because more
+ 
+
+377
+00:07:31,720 --> 00:07:34,190
+But this is cool because more
+pre-training works and it works even at
+
+378
+00:07:34,190 --> 00:07:34,200
+pre-training works and it works even at
+ 
+
+379
+00:07:34,200 --> 00:07:35,950
+pre-training works and it works even at
+the smallest scale which is great
+
+380
+00:07:35,950 --> 00:07:35,960
+the smallest scale which is great
+ 
+
+381
+00:07:35,960 --> 00:07:37,590
+the smallest scale which is great
+because these models are a lot cheaper
+
+382
+00:07:37,590 --> 00:07:37,600
+because these models are a lot cheaper
+ 
+
+383
+00:07:37,600 --> 00:07:39,390
+because these models are a lot cheaper
+to train than
+
+384
+00:07:39,390 --> 00:07:39,400
+to train than
+ 
+
+385
+00:07:39,400 --> 00:07:41,470
+to train than
+much bigger models. And here you can see
+
+386
+00:07:41,470 --> 00:07:41,480
+much bigger models. And here you can see
+ 
+
+387
+00:07:41,480 --> 00:07:43,310
+much bigger models. And here you can see
+a comparison. It's not just for
+
+388
+00:07:43,310 --> 00:07:43,320
+a comparison. It's not just for
+ 
+
+389
+00:07:43,320 --> 00:07:45,030
+a comparison. It's not just for
+pre-training. It's like
+
+390
+00:07:45,030 --> 00:07:45,040
+pre-training. It's like
+ 
+
+391
+00:07:45,040 --> 00:07:48,190
+pre-training. It's like
+post-training models. And you can see
+
+392
+00:07:48,190 --> 00:07:48,200
+post-training models. And you can see
+ 
+
+393
+00:07:48,200 --> 00:07:52,030
+post-training models. And you can see
+that the LFM 2.5 model is significantly
+
+394
+00:07:52,030 --> 00:07:52,040
+that the LFM 2.5 model is significantly
+ 
+
+395
+00:07:52,040 --> 00:07:54,430
+that the LFM 2.5 model is significantly
+better than the the previous version LFM
+
+396
+00:07:54,430 --> 00:07:54,440
+better than the the previous version LFM
+ 
+
+397
+00:07:54,440 --> 00:07:57,470
+better than the the previous version LFM
+2 350M on a lot of different benchmarks.
+
+398
+00:07:57,470 --> 00:07:57,480
+2 350M on a lot of different benchmarks.
+ 
+
+399
+00:07:57,480 --> 00:07:59,990
+2 350M on a lot of different benchmarks.
+So you have knowledge with GPQA diamond.
+
+400
+00:07:59,990 --> 00:08:00,000
+So you have knowledge with GPQA diamond.
+ 
+
+401
+00:08:00,000 --> 00:08:01,510
+So you have knowledge with GPQA diamond.
+You have instruction following with IF
+
+402
+00:08:01,510 --> 00:08:01,520
+You have instruction following with IF
+ 
+
+403
+00:08:01,520 --> 00:08:03,470
+You have instruction following with IF
+bench. You have case report bench which
+
+404
+00:08:03,470 --> 00:08:03,480
+bench. You have case report bench which
+ 
+
+405
+00:08:03,480 --> 00:08:06,070
+bench. You have case report bench which
+is data extraction. And also a lot of
+
+406
+00:08:06,070 --> 00:08:06,080
+is data extraction. And also a lot of
+ 
+
+407
+00:08:06,080 --> 00:08:09,230
+is data extraction. And also a lot of
+tool use with BFCL and and Dow 2 bench.
+
+408
+00:08:09,230 --> 00:08:09,240
+tool use with BFCL and and Dow 2 bench.
+ 
+
+409
+00:08:09,240 --> 00:08:11,230
+tool use with BFCL and and Dow 2 bench.
+With this model it's only 350 million
+
+410
+00:08:11,230 --> 00:08:11,240
+With this model it's only 350 million
+ 
+
+411
+00:08:11,240 --> 00:08:13,550
+With this model it's only 350 million
+parameters. So what we wanted to do is
+
+412
+00:08:13,550 --> 00:08:13,560
+parameters. So what we wanted to do is
+ 
+
+413
+00:08:13,560 --> 00:08:16,270
+parameters. So what we wanted to do is
+we wanted the model to be very very good
+
+414
+00:08:16,270 --> 00:08:16,280
+we wanted the model to be very very good
+ 
+
+415
+00:08:16,280 --> 00:08:19,190
+we wanted the model to be very very good
+at data extraction and at tool use. And
+
+416
+00:08:19,190 --> 00:08:19,200
+at data extraction and at tool use. And
+ 
+
+417
+00:08:19,200 --> 00:08:21,430
+at data extraction and at tool use. And
+the rest if it's not the best model at
+
+418
+00:08:21,430 --> 00:08:21,440
+the rest if it's not the best model at
+ 
+
+419
+00:08:21,440 --> 00:08:23,030
+the rest if it's not the best model at
+encode it doesn't matter. Like people
+
+420
+00:08:23,030 --> 00:08:23,040
+encode it doesn't matter. Like people
+ 
+
+421
+00:08:23,040 --> 00:08:24,750
+encode it doesn't matter. Like people
+don't use it that way anyway. Same for
+
+422
+00:08:24,750 --> 00:08:24,760
+don't use it that way anyway. Same for
+ 
+
+423
+00:08:24,760 --> 00:08:27,310
+don't use it that way anyway. Same for
+math. I think it's really nice to try to
+
+424
+00:08:27,310 --> 00:08:27,320
+math. I think it's really nice to try to
+ 
+
+425
+00:08:27,320 --> 00:08:29,310
+math. I think it's really nice to try to
+target some capabilities and not try to
+
+426
+00:08:29,310 --> 00:08:29,320
+target some capabilities and not try to
+ 
+
+427
+00:08:29,320 --> 00:08:31,870
+target some capabilities and not try to
+be like average on everything.
+
+428
+00:08:31,870 --> 00:08:31,880
+be like average on everything.
+ 
+
+429
+00:08:31,880 --> 00:08:33,790
+be like average on everything.
+All right, let's talk exactly about
+
+430
+00:08:33,790 --> 00:08:33,800
+All right, let's talk exactly about
+ 
+
+431
+00:08:33,800 --> 00:08:35,550
+All right, let's talk exactly about
+that. Pre-training
+
+432
+00:08:35,550 --> 00:08:35,560
+that. Pre-training
+ 
+
+433
+00:08:35,560 --> 00:08:37,270
+that. Pre-training
+small and big models. What's the
+
+434
+00:08:37,270 --> 00:08:37,280
+small and big models. What's the
+ 
+
+435
+00:08:37,280 --> 00:08:39,310
+small and big models. What's the
+difference? We have pretty much the same
+
+436
+00:08:39,310 --> 00:08:39,320
+difference? We have pretty much the same
+ 
+
+437
+00:08:39,320 --> 00:08:41,550
+difference? We have pretty much the same
+stage. So this is not really in terms of
+
+438
+00:08:41,550 --> 00:08:41,560
+stage. So this is not really in terms of
+ 
+
+439
+00:08:41,560 --> 00:08:43,589
+stage. So this is not really in terms of
+stages that we see a difference. It's
+
+440
+00:08:43,589 --> 00:08:43,599
+stages that we see a difference. It's
+ 
+
+441
+00:08:43,599 --> 00:08:45,430
+stages that we see a difference. It's
+more about how you do it. So for
+
+442
+00:08:45,430 --> 00:08:45,440
+more about how you do it. So for
+ 
+
+443
+00:08:45,440 --> 00:08:47,910
+more about how you do it. So for
+supervised fine-tuning is better if you
+
+444
+00:08:47,910 --> 00:08:47,920
+supervised fine-tuning is better if you
+ 
+
+445
+00:08:47,920 --> 00:08:49,950
+supervised fine-tuning is better if you
+actually quite narrow and you focus on
+
+446
+00:08:49,950 --> 00:08:49,960
+actually quite narrow and you focus on
+ 
+
+447
+00:08:49,960 --> 00:08:52,870
+actually quite narrow and you focus on
+some task. It's true for general purpose
+
+448
+00:08:52,870 --> 00:08:52,880
+some task. It's true for general purpose
+ 
+
+449
+00:08:52,880 --> 00:08:54,470
+some task. It's true for general purpose
+pre-training but it's also true if you
+
+450
+00:08:54,470 --> 00:08:54,480
+pre-training but it's also true if you
+ 
+
+451
+00:08:54,480 --> 00:08:56,630
+pre-training but it's also true if you
+do fine-tuning. So you can take one of
+
+452
+00:08:56,630 --> 00:08:56,640
+do fine-tuning. So you can take one of
+ 
+
+453
+00:08:56,640 --> 00:08:58,430
+do fine-tuning. So you can take one of
+these models on Hugging Face and just
+
+454
+00:08:58,430 --> 00:08:58,440
+these models on Hugging Face and just
+ 
+
+455
+00:08:58,440 --> 00:09:00,230
+these models on Hugging Face and just
+fine-tune it for your use case. And for
+
+456
+00:09:00,230 --> 00:09:00,240
+fine-tune it for your use case. And for
+ 
+
+457
+00:09:00,240 --> 00:09:01,670
+fine-tune it for your use case. And for
+example you have a use case where you
+
+458
+00:09:01,670 --> 00:09:01,680
+example you have a use case where you
+ 
+
+459
+00:09:01,680 --> 00:09:03,630
+example you have a use case where you
+have a particular function that you want
+
+460
+00:09:03,630 --> 00:09:03,640
+have a particular function that you want
+ 
+
+461
+00:09:03,640 --> 00:09:05,350
+have a particular function that you want
+to call. This is great. This is a
+
+462
+00:09:05,350 --> 00:09:05,360
+to call. This is great. This is a
+ 
+
+463
+00:09:05,360 --> 00:09:07,430
+to call. This is great. This is a
+excellent use case. Like the more narrow
+
+464
+00:09:07,430 --> 00:09:07,440
+excellent use case. Like the more narrow
+ 
+
+465
+00:09:07,440 --> 00:09:08,630
+excellent use case. Like the more narrow
+you can
+
+466
+00:09:08,630 --> 00:09:08,640
+you can
+ 
+
+467
+00:09:08,640 --> 00:09:09,790
+you can
+you can
+
+468
+00:09:09,790 --> 00:09:09,800
+you can
+ 
+
+469
+00:09:09,800 --> 00:09:12,630
+you can
+find it or design it the better it is.
+
+470
+00:09:12,630 --> 00:09:12,640
+find it or design it the better it is.
+ 
+
+471
+00:09:12,640 --> 00:09:14,270
+find it or design it the better it is.
+Then we have preference alignment. So
+
+472
+00:09:14,270 --> 00:09:14,280
+Then we have preference alignment. So
+ 
+
+473
+00:09:14,280 --> 00:09:18,190
+Then we have preference alignment. So
+during pre-training we have our on
+
+474
+00:09:18,190 --> 00:09:18,200
+during pre-training we have our on
+ 
+
+475
+00:09:18,200 --> 00:09:20,350
+during pre-training we have our on
+on policy length normalized direct
+
+476
+00:09:20,350 --> 00:09:20,360
+on policy length normalized direct
+ 
+
+477
+00:09:20,360 --> 00:09:22,030
+on policy length normalized direct
+preference optimization algorithm that
+
+478
+00:09:22,030 --> 00:09:22,040
+preference optimization algorithm that
+ 
+
+479
+00:09:22,040 --> 00:09:23,910
+preference optimization algorithm that
+we quite like. And preference alignment
+
+480
+00:09:23,910 --> 00:09:23,920
+we quite like. And preference alignment
+ 
+
+481
+00:09:23,920 --> 00:09:26,190
+we quite like. And preference alignment
+is very nice because it brings you
+
+482
+00:09:26,190 --> 00:09:26,200
+is very nice because it brings you
+ 
+
+483
+00:09:26,200 --> 00:09:28,230
+is very nice because it brings you
+general improvements. It's not just
+
+484
+00:09:28,230 --> 00:09:28,240
+general improvements. It's not just
+ 
+
+485
+00:09:28,240 --> 00:09:30,470
+general improvements. It's not just
+about benchmarks. It's really like
+
+486
+00:09:30,470 --> 00:09:30,480
+about benchmarks. It's really like
+ 
+
+487
+00:09:30,480 --> 00:09:32,870
+about benchmarks. It's really like
+overall after preference alignment the
+
+488
+00:09:32,870 --> 00:09:32,880
+overall after preference alignment the
+ 
+
+489
+00:09:32,880 --> 00:09:35,510
+overall after preference alignment the
+model is better. It sounds better and
+
+490
+00:09:35,510 --> 00:09:35,520
+model is better. It sounds better and
+ 
+
+491
+00:09:35,520 --> 00:09:37,870
+model is better. It sounds better and
+this is really nice to be able to just
+
+492
+00:09:37,870 --> 00:09:37,880
+this is really nice to be able to just
+ 
+
+493
+00:09:37,880 --> 00:09:39,790
+this is really nice to be able to just
+improve it overall.
+
+494
+00:09:39,790 --> 00:09:39,800
+improve it overall.
+ 
+
+495
+00:09:39,800 --> 00:09:41,070
+improve it overall.
+And finally we have reinforcement
+
+496
+00:09:41,070 --> 00:09:41,080
+And finally we have reinforcement
+ 
+
+497
+00:09:41,080 --> 00:09:42,430
+And finally we have reinforcement
+learning.
+
+498
+00:09:42,430 --> 00:09:42,440
+learning.
+ 
+
+499
+00:09:42,440 --> 00:09:44,310
+learning.
+And reinforcement learning is extremely
+
+500
+00:09:44,310 --> 00:09:44,320
+And reinforcement learning is extremely
+ 
+
+501
+00:09:44,320 --> 00:09:47,230
+And reinforcement learning is extremely
+efficient even at very small scale. It's
+
+502
+00:09:47,230 --> 00:09:47,240
+efficient even at very small scale. It's
+ 
+
+503
+00:09:47,240 --> 00:09:49,270
+efficient even at very small scale. It's
+a really really important technique that
+
+504
+00:09:49,270 --> 00:09:49,280
+a really really important technique that
+ 
+
+505
+00:09:49,280 --> 00:09:51,870
+a really really important technique that
+we use everywhere. And the main thing is
+
+506
+00:09:51,870 --> 00:09:51,880
+we use everywhere. And the main thing is
+ 
+
+507
+00:09:51,880 --> 00:09:53,870
+we use everywhere. And the main thing is
+that it's very narrow in terms of focus.
+
+508
+00:09:53,870 --> 00:09:53,880
+that it's very narrow in terms of focus.
+ 
+
+509
+00:09:53,880 --> 00:09:55,430
+that it's very narrow in terms of focus.
+So you want to have like as many
+
+510
+00:09:55,430 --> 00:09:55,440
+So you want to have like as many
+ 
+
+511
+00:09:55,440 --> 00:09:57,710
+So you want to have like as many
+environments, as many tasks as possible,
+
+512
+00:09:57,710 --> 00:09:57,720
+environments, as many tasks as possible,
+ 
+
+513
+00:09:57,720 --> 00:09:59,390
+environments, as many tasks as possible,
+and make sure that
+
+514
+00:09:59,390 --> 00:09:59,400
+and make sure that
+ 
+
+515
+00:09:59,400 --> 00:10:01,990
+and make sure that
+you generalize well thanks to this.
+
+516
+00:10:01,990 --> 00:10:02,000
+you generalize well thanks to this.
+ 
+
+517
+00:10:02,000 --> 00:10:03,270
+you generalize well thanks to this.
+Um
+
+518
+00:10:03,270 --> 00:10:03,280
+Um
+ 
+
+519
+00:10:03,280 --> 00:10:05,310
+Um
+and then for small models in particular,
+
+520
+00:10:05,310 --> 00:10:05,320
+and then for small models in particular,
+ 
+
+521
+00:10:05,320 --> 00:10:07,390
+and then for small models in particular,
+they're quite sensitive to cold start
+
+522
+00:10:07,390 --> 00:10:07,400
+they're quite sensitive to cold start
+ 
+
+523
+00:10:07,400 --> 00:10:10,470
+they're quite sensitive to cold start
+SFT data. So, if you have a particular
+
+524
+00:10:10,470 --> 00:10:10,480
+SFT data. So, if you have a particular
+ 
+
+525
+00:10:10,480 --> 00:10:12,110
+SFT data. So, if you have a particular
+task in reinforcement learning, it's
+
+526
+00:10:12,110 --> 00:10:12,120
+task in reinforcement learning, it's
+ 
+
+527
+00:10:12,120 --> 00:10:15,110
+task in reinforcement learning, it's
+always good to have similar samples and
+
+528
+00:10:15,110 --> 00:10:15,120
+always good to have similar samples and
+ 
+
+529
+00:10:15,120 --> 00:10:16,870
+always good to have similar samples and
+a similar task in your supervised
+
+530
+00:10:16,870 --> 00:10:16,880
+a similar task in your supervised
+ 
+
+531
+00:10:16,880 --> 00:10:19,110
+a similar task in your supervised
+fine-tuning mixture. And this is good
+
+532
+00:10:19,110 --> 00:10:19,120
+fine-tuning mixture. And this is good
+ 
+
+533
+00:10:19,120 --> 00:10:20,630
+fine-tuning mixture. And this is good
+feedback that you can see during
+
+534
+00:10:20,630 --> 00:10:20,640
+feedback that you can see during
+ 
+
+535
+00:10:20,640 --> 00:10:22,470
+feedback that you can see during
+reinforcement learning something doesn't
+
+536
+00:10:22,470 --> 00:10:22,480
+reinforcement learning something doesn't
+ 
+
+537
+00:10:22,480 --> 00:10:24,310
+reinforcement learning something doesn't
+train very well. It's probably because
+
+538
+00:10:24,310 --> 00:10:24,320
+train very well. It's probably because
+ 
+
+539
+00:10:24,320 --> 00:10:26,710
+train very well. It's probably because
+you are missing some uh cold start SFT
+
+540
+00:10:26,710 --> 00:10:26,720
+you are missing some uh cold start SFT
+ 
+
+541
+00:10:26,720 --> 00:10:28,830
+you are missing some uh cold start SFT
+data. Maybe the task is too complex,
+
+542
+00:10:28,830 --> 00:10:28,840
+data. Maybe the task is too complex,
+ 
+
+543
+00:10:28,840 --> 00:10:30,550
+data. Maybe the task is too complex,
+there are different reasons, but um you
+
+544
+00:10:30,550 --> 00:10:30,560
+there are different reasons, but um you
+ 
+
+545
+00:10:30,560 --> 00:10:32,310
+there are different reasons, but um you
+can try to
+
+546
+00:10:32,310 --> 00:10:32,320
+can try to
+ 
+
+547
+00:10:32,320 --> 00:10:34,350
+can try to
+start again uh from the supervised
+
+548
+00:10:34,350 --> 00:10:34,360
+start again uh from the supervised
+ 
+
+549
+00:10:34,360 --> 00:10:37,110
+start again uh from the supervised
+fine-tuning uh stage, add your data, and
+
+550
+00:10:37,110 --> 00:10:37,120
+fine-tuning uh stage, add your data, and
+ 
+
+551
+00:10:37,120 --> 00:10:41,110
+fine-tuning uh stage, add your data, and
+then see if it improves anything.
+
+552
+00:10:41,110 --> 00:10:41,120
+then see if it improves anything.
+ 
+
+553
+00:10:41,120 --> 00:10:43,270
+then see if it improves anything.
+All right, but there's a new problem uh
+
+554
+00:10:43,270 --> 00:10:43,280
+All right, but there's a new problem uh
+ 
+
+555
+00:10:43,280 --> 00:10:45,430
+All right, but there's a new problem uh
+with small language models that you
+
+556
+00:10:45,430 --> 00:10:45,440
+with small language models that you
+ 
+
+557
+00:10:45,440 --> 00:10:46,990
+with small language models that you
+might have encountered even with bigger
+
+558
+00:10:46,990 --> 00:10:47,000
+might have encountered even with bigger
+ 
+
+559
+00:10:47,000 --> 00:10:49,230
+might have encountered even with bigger
+ones, and this is doom looping.
+
+560
+00:10:49,230 --> 00:10:49,240
+ones, and this is doom looping.
+ 
+
+561
+00:10:49,240 --> 00:10:50,990
+ones, and this is doom looping.
+So, the problem with doom looping is, as
+
+562
+00:10:50,990 --> 00:10:51,000
+So, the problem with doom looping is, as
+ 
+
+563
+00:10:51,000 --> 00:10:52,830
+So, the problem with doom looping is, as
+you can see here, it's going to start
+
+564
+00:10:52,830 --> 00:10:52,840
+you can see here, it's going to start
+ 
+
+565
+00:10:52,840 --> 00:10:55,110
+you can see here, it's going to start
+repeating a sequence of words over and
+
+566
+00:10:55,110 --> 00:10:55,120
+repeating a sequence of words over and
+ 
+
+567
+00:10:55,120 --> 00:10:56,750
+repeating a sequence of words over and
+over and over and over again, and it
+
+568
+00:10:56,750 --> 00:10:56,760
+over and over and over again, and it
+ 
+
+569
+00:10:56,760 --> 00:10:58,390
+over and over and over again, and it
+just like never stops.
+
+570
+00:10:58,390 --> 00:10:58,400
+just like never stops.
+ 
+
+571
+00:10:58,400 --> 00:11:00,670
+just like never stops.
+Um so, this is a problem all the time,
+
+572
+00:11:00,670 --> 00:11:00,680
+Um so, this is a problem all the time,
+ 
+
+573
+00:11:00,680 --> 00:11:02,790
+Um so, this is a problem all the time,
+but it's particularly a problem if you
+
+574
+00:11:02,790 --> 00:11:02,800
+but it's particularly a problem if you
+ 
+
+575
+00:11:02,800 --> 00:11:05,590
+but it's particularly a problem if you
+have small models, if you have reasoning
+
+576
+00:11:05,590 --> 00:11:05,600
+have small models, if you have reasoning
+ 
+
+577
+00:11:05,600 --> 00:11:07,870
+have small models, if you have reasoning
+models, and if you have complex task. If
+
+578
+00:11:07,870 --> 00:11:07,880
+models, and if you have complex task. If
+ 
+
+579
+00:11:07,880 --> 00:11:10,030
+models, and if you have complex task. If
+the task is basically too complex for
+
+580
+00:11:10,030 --> 00:11:10,040
+the task is basically too complex for
+ 
+
+581
+00:11:10,040 --> 00:11:11,990
+the task is basically too complex for
+the model. Hopefully, this recipe is not
+
+582
+00:11:11,990 --> 00:11:12,000
+the model. Hopefully, this recipe is not
+ 
+
+583
+00:11:12,000 --> 00:11:13,829
+the model. Hopefully, this recipe is not
+too complex for this model, but this can
+
+584
+00:11:13,829 --> 00:11:13,839
+too complex for this model, but this can
+ 
+
+585
+00:11:13,839 --> 00:11:16,710
+too complex for this model, but this can
+happen anywhere, and you have the three
+
+586
+00:11:16,710 --> 00:11:16,720
+happen anywhere, and you have the three
+ 
+
+587
+00:11:16,720 --> 00:11:18,030
+happen anywhere, and you have the three
+of them at the same time. So, if you
+
+588
+00:11:18,030 --> 00:11:18,040
+of them at the same time. So, if you
+ 
+
+589
+00:11:18,040 --> 00:11:21,110
+of them at the same time. So, if you
+have a tiny reasoning models on like
+
+590
+00:11:21,110 --> 00:11:21,120
+have a tiny reasoning models on like
+ 
+
+591
+00:11:21,120 --> 00:11:23,470
+have a tiny reasoning models on like
+super difficult math task, this is the
+
+592
+00:11:23,470 --> 00:11:23,480
+super difficult math task, this is the
+ 
+
+593
+00:11:23,480 --> 00:11:26,070
+super difficult math task, this is the
+perfect recipe to have a lot of doom
+
+594
+00:11:26,070 --> 00:11:26,080
+perfect recipe to have a lot of doom
+ 
+
+595
+00:11:26,080 --> 00:11:27,070
+perfect recipe to have a lot of doom
+loops.
+
+596
+00:11:27,070 --> 00:11:27,080
+loops.
+ 
+
+597
+00:11:27,080 --> 00:11:29,430
+loops.
+Um so, this is a unique challenge that
+
+598
+00:11:29,430 --> 00:11:29,440
+Um so, this is a unique challenge that
+ 
+
+599
+00:11:29,440 --> 00:11:31,190
+Um so, this is a unique challenge that
+you find with small models uh to give
+
+600
+00:11:31,190 --> 00:11:31,200
+you find with small models uh to give
+ 
+
+601
+00:11:31,200 --> 00:11:32,990
+you find with small models uh to give
+you a concrete example.
+
+602
+00:11:32,990 --> 00:11:33,000
+you a concrete example.
+ 
+
+603
+00:11:33,000 --> 00:11:34,870
+you a concrete example.
+And here I can talk about like how we
+
+604
+00:11:34,870 --> 00:11:34,880
+And here I can talk about like how we
+ 
+
+605
+00:11:34,880 --> 00:11:37,510
+And here I can talk about like how we
+solve it. The first thing is that we
+
+606
+00:11:37,510 --> 00:11:37,520
+solve it. The first thing is that we
+ 
+
+607
+00:11:37,520 --> 00:11:39,390
+solve it. The first thing is that we
+solve it during the preference alignment
+
+608
+00:11:39,390 --> 00:11:39,400
+solve it during the preference alignment
+ 
+
+609
+00:11:39,400 --> 00:11:43,190
+solve it during the preference alignment
+stage, and in particular for the data
+
+610
+00:11:43,190 --> 00:11:43,200
+stage, and in particular for the data
+ 
+
+611
+00:11:43,200 --> 00:11:45,470
+stage, and in particular for the data
+generation part that we do.
+
+612
+00:11:45,470 --> 00:11:45,480
+generation part that we do.
+ 
+
+613
+00:11:45,480 --> 00:11:47,070
+generation part that we do.
+So, here you can see the pipeline that
+
+614
+00:11:47,070 --> 00:11:47,080
+So, here you can see the pipeline that
+ 
+
+615
+00:11:47,080 --> 00:11:50,550
+So, here you can see the pipeline that
+we use uh to do the data generation, the
+
+616
+00:11:50,550 --> 00:11:50,560
+we use uh to do the data generation, the
+ 
+
+617
+00:11:50,560 --> 00:11:52,550
+we use uh to do the data generation, the
+on-policy data generation for preference
+
+618
+00:11:52,550 --> 00:11:52,560
+on-policy data generation for preference
+ 
+
+619
+00:11:52,560 --> 00:11:55,310
+on-policy data generation for preference
+alignment. So, we start with prompt like
+
+620
+00:11:55,310 --> 00:11:55,320
+alignment. So, we start with prompt like
+ 
+
+621
+00:11:55,320 --> 00:11:56,950
+alignment. So, we start with prompt like
+1 million samples to give you a rough
+
+622
+00:11:56,950 --> 00:11:56,960
+1 million samples to give you a rough
+ 
+
+623
+00:11:56,960 --> 00:12:00,230
+1 million samples to give you a rough
+idea, and then we use the policy model,
+
+624
+00:12:00,230 --> 00:12:00,240
+idea, and then we use the policy model,
+ 
+
+625
+00:12:00,240 --> 00:12:01,870
+idea, and then we use the policy model,
+the model that we want to train with
+
+626
+00:12:01,870 --> 00:12:01,880
+the model that we want to train with
+ 
+
+627
+00:12:01,880 --> 00:12:03,910
+the model that we want to train with
+temperature sampling, and we just
+
+628
+00:12:03,910 --> 00:12:03,920
+temperature sampling, and we just
+ 
+
+629
+00:12:03,920 --> 00:12:06,390
+temperature sampling, and we just
+generate five rollouts. Because we use
+
+630
+00:12:06,390 --> 00:12:06,400
+generate five rollouts. Because we use
+ 
+
+631
+00:12:06,400 --> 00:12:08,470
+generate five rollouts. Because we use
+temperature sampling, these rollouts
+
+632
+00:12:08,470 --> 00:12:08,480
+temperature sampling, these rollouts
+ 
+
+633
+00:12:08,480 --> 00:12:11,350
+temperature sampling, these rollouts
+tend to be a lot more diverse, and we
+
+634
+00:12:11,350 --> 00:12:11,360
+tend to be a lot more diverse, and we
+ 
+
+635
+00:12:11,360 --> 00:12:13,990
+tend to be a lot more diverse, and we
+expect that not all of them will uh have
+
+636
+00:12:13,990 --> 00:12:14,000
+expect that not all of them will uh have
+ 
+
+637
+00:12:14,000 --> 00:12:15,870
+expect that not all of them will uh have
+doom loops. At least one should not doom
+
+638
+00:12:15,870 --> 00:12:15,880
+doom loops. At least one should not doom
+ 
+
+639
+00:12:15,880 --> 00:12:18,390
+doom loops. At least one should not doom
+loop, right? And on the other hand, we
+
+640
+00:12:18,390 --> 00:12:18,400
+loop, right? And on the other hand, we
+ 
+
+641
+00:12:18,400 --> 00:12:22,190
+loop, right? And on the other hand, we
+generate just one extra uh rollout with
+
+642
+00:12:22,190 --> 00:12:22,200
+generate just one extra uh rollout with
+ 
+
+643
+00:12:22,200 --> 00:12:24,710
+generate just one extra uh rollout with
+a policy model with temperature zero,
+
+644
+00:12:24,710 --> 00:12:24,720
+a policy model with temperature zero,
+ 
+
+645
+00:12:24,720 --> 00:12:26,350
+a policy model with temperature zero,
+and this one we think that it's going to
+
+646
+00:12:26,350 --> 00:12:26,360
+and this one we think that it's going to
+ 
+
+647
+00:12:26,360 --> 00:12:27,430
+and this one we think that it's going to
+doom loop.
+
+648
+00:12:27,430 --> 00:12:27,440
+doom loop.
+ 
+
+649
+00:12:27,440 --> 00:12:30,030
+doom loop.
+And then we give everything to a LLM
+
+650
+00:12:30,030 --> 00:12:30,040
+And then we give everything to a LLM
+ 
+
+651
+00:12:30,040 --> 00:12:33,430
+And then we give everything to a LLM
+jury to score all the um rollouts. We
+
+652
+00:12:33,430 --> 00:12:33,440
+jury to score all the um rollouts. We
+ 
+
+653
+00:12:33,440 --> 00:12:35,510
+jury to score all the um rollouts. We
+pick the best one, the one with the
+
+654
+00:12:35,510 --> 00:12:35,520
+pick the best one, the one with the
+ 
+
+655
+00:12:35,520 --> 00:12:37,190
+pick the best one, the one with the
+highest score as the chosen answer, the
+
+656
+00:12:37,190 --> 00:12:37,200
+highest score as the chosen answer, the
+ 
+
+657
+00:12:37,200 --> 00:12:38,990
+highest score as the chosen answer, the
+one with the worst score as the rejected
+
+658
+00:12:38,990 --> 00:12:39,000
+one with the worst score as the rejected
+ 
+
+659
+00:12:39,000 --> 00:12:41,550
+one with the worst score as the rejected
+answer, and the idea is that if we have
+
+660
+00:12:41,550 --> 00:12:41,560
+answer, and the idea is that if we have
+ 
+
+661
+00:12:41,560 --> 00:12:44,430
+answer, and the idea is that if we have
+some doom loop here, the response for
+
+662
+00:12:44,430 --> 00:12:44,440
+some doom loop here, the response for
+ 
+
+663
+00:12:44,440 --> 00:12:46,510
+some doom loop here, the response for
+the doom loop will be rejected. So, we
+
+664
+00:12:46,510 --> 00:12:46,520
+the doom loop will be rejected. So, we
+ 
+
+665
+00:12:46,520 --> 00:12:48,630
+the doom loop will be rejected. So, we
+will train the model during preference
+
+666
+00:12:48,630 --> 00:12:48,640
+will train the model during preference
+ 
+
+667
+00:12:48,640 --> 00:12:51,750
+will train the model during preference
+alignment to not doom loop. And this is
+
+668
+00:12:51,750 --> 00:12:51,760
+alignment to not doom loop. And this is
+ 
+
+669
+00:12:51,760 --> 00:12:53,750
+alignment to not doom loop. And this is
+quite effective. So, this is solution
+
+670
+00:12:53,750 --> 00:12:53,760
+quite effective. So, this is solution
+ 
+
+671
+00:12:53,760 --> 00:12:54,990
+quite effective. So, this is solution
+number one.
+
+672
+00:12:54,990 --> 00:12:55,000
+number one.
+ 
+
+673
+00:12:55,000 --> 00:12:57,070
+number one.
+And then we have solution number two,
+
+674
+00:12:57,070 --> 00:12:57,080
+And then we have solution number two,
+ 
+
+675
+00:12:57,080 --> 00:12:59,030
+And then we have solution number two,
+and this one is about using
+
+676
+00:12:59,030 --> 00:12:59,040
+and this one is about using
+ 
+
+677
+00:12:59,040 --> 00:13:01,310
+and this one is about using
+reinforcement learning with verifiable
+
+678
+00:13:01,310 --> 00:13:01,320
+reinforcement learning with verifiable
+ 
+
+679
+00:13:01,320 --> 00:13:03,790
+reinforcement learning with verifiable
+rewards, and we add a bit of n-gram
+
+680
+00:13:03,790 --> 00:13:03,800
+rewards, and we add a bit of n-gram
+ 
+
+681
+00:13:03,800 --> 00:13:06,510
+rewards, and we add a bit of n-gram
+repetition penalty. Uh but you can see
+
+682
+00:13:06,510 --> 00:13:06,520
+repetition penalty. Uh but you can see
+ 
+
+683
+00:13:06,520 --> 00:13:09,070
+repetition penalty. Uh but you can see
+that with reinforcement learning with um
+
+684
+00:13:09,070 --> 00:13:09,080
+that with reinforcement learning with um
+ 
+
+685
+00:13:09,080 --> 00:13:12,750
+that with reinforcement learning with um
+verifiable rewards, it's a very nice way
+
+686
+00:13:12,750 --> 00:13:12,760
+verifiable rewards, it's a very nice way
+ 
+
+687
+00:13:12,760 --> 00:13:16,550
+verifiable rewards, it's a very nice way
+to actually um solve this issue, because
+
+688
+00:13:16,550 --> 00:13:16,560
+to actually um solve this issue, because
+ 
+
+689
+00:13:16,560 --> 00:13:18,030
+to actually um solve this issue, because
+if you have a question, like a math
+
+690
+00:13:18,030 --> 00:13:18,040
+if you have a question, like a math
+ 
+
+691
+00:13:18,040 --> 00:13:20,310
+if you have a question, like a math
+question like this one,
+
+692
+00:13:20,310 --> 00:13:20,320
+question like this one,
+ 
+
+693
+00:13:20,320 --> 00:13:22,230
+question like this one,
+you are going to try to extract the
+
+694
+00:13:22,230 --> 00:13:22,240
+you are going to try to extract the
+ 
+
+695
+00:13:22,240 --> 00:13:24,990
+you are going to try to extract the
+final answer. If you do not have a final
+
+696
+00:13:24,990 --> 00:13:25,000
+final answer. If you do not have a final
+ 
+
+697
+00:13:25,000 --> 00:13:27,590
+final answer. If you do not have a final
+answer, uh you won't get a positive
+
+698
+00:13:27,590 --> 00:13:27,600
+answer, uh you won't get a positive
+ 
+
+699
+00:13:27,600 --> 00:13:30,710
+answer, uh you won't get a positive
+reward. So, this is already
+
+700
+00:13:30,710 --> 00:13:30,720
+reward. So, this is already
+ 
+
+701
+00:13:30,720 --> 00:13:32,990
+reward. So, this is already
+being taken care of during um
+
+702
+00:13:32,990 --> 00:13:33,000
+being taken care of during um
+ 
+
+703
+00:13:33,000 --> 00:13:34,790
+being taken care of during um
+reinforcement learning with verifiable
+
+704
+00:13:34,790 --> 00:13:34,800
+reinforcement learning with verifiable
+ 
+
+705
+00:13:34,800 --> 00:13:37,390
+reinforcement learning with verifiable
+rewards. But on top of that, you can add
+
+706
+00:13:37,390 --> 00:13:37,400
+rewards. But on top of that, you can add
+ 
+
+707
+00:13:37,400 --> 00:13:39,790
+rewards. But on top of that, you can add
+a bit of repetition penalty to make sure
+
+708
+00:13:39,790 --> 00:13:39,800
+a bit of repetition penalty to make sure
+ 
+
+709
+00:13:39,800 --> 00:13:43,070
+a bit of repetition penalty to make sure
+that um you are going to generate more
+
+710
+00:13:43,070 --> 00:13:43,080
+that um you are going to generate more
+ 
+
+711
+00:13:43,080 --> 00:13:45,150
+that um you are going to generate more
+like less doom loops in general, and
+
+712
+00:13:45,150 --> 00:13:45,160
+like less doom loops in general, and
+ 
+
+713
+00:13:45,160 --> 00:13:46,950
+like less doom loops in general, and
+same thing, we also use temperature
+
+714
+00:13:46,950 --> 00:13:46,960
+same thing, we also use temperature
+ 
+
+715
+00:13:46,960 --> 00:13:49,110
+same thing, we also use temperature
+sampling here, so the rollouts are also
+
+716
+00:13:49,110 --> 00:13:49,120
+sampling here, so the rollouts are also
+ 
+
+717
+00:13:49,120 --> 00:13:52,510
+sampling here, so the rollouts are also
+quite diverse, and it just is less
+
+718
+00:13:52,510 --> 00:13:52,520
+quite diverse, and it just is less
+ 
+
+719
+00:13:52,520 --> 00:13:54,430
+quite diverse, and it just is less
+likely that you are going to get like a
+
+720
+00:13:54,430 --> 00:13:54,440
+likely that you are going to get like a
+ 
+
+721
+00:13:54,440 --> 00:13:57,030
+likely that you are going to get like a
+lot of doom loops uh all the time.
+
+722
+00:13:57,030 --> 00:13:57,040
+lot of doom loops uh all the time.
+ 
+
+723
+00:13:57,040 --> 00:14:00,630
+lot of doom loops uh all the time.
+So, this is the the second uh solution.
+
+724
+00:14:00,630 --> 00:14:00,640
+So, this is the the second uh solution.
+ 
+
+725
+00:14:00,640 --> 00:14:03,270
+So, this is the the second uh solution.
+And that allowed us to uh really reduce
+
+726
+00:14:03,270 --> 00:14:03,280
+And that allowed us to uh really reduce
+ 
+
+727
+00:14:03,280 --> 00:14:05,270
+And that allowed us to uh really reduce
+the doom loop ratio. So, this is a real
+
+728
+00:14:05,270 --> 00:14:05,280
+the doom loop ratio. So, this is a real
+ 
+
+729
+00:14:05,280 --> 00:14:09,790
+the doom loop ratio. So, this is a real
+example with uh LFM 2.5 1.2B thinking,
+
+730
+00:14:09,790 --> 00:14:09,800
+example with uh LFM 2.5 1.2B thinking,
+ 
+
+731
+00:14:09,800 --> 00:14:12,390
+example with uh LFM 2.5 1.2B thinking,
+which is a small model. It's a reasoning
+
+732
+00:14:12,390 --> 00:14:12,400
+which is a small model. It's a reasoning
+ 
+
+733
+00:14:12,400 --> 00:14:14,630
+which is a small model. It's a reasoning
+model, and on top of that, we threw
+
+734
+00:14:14,630 --> 00:14:14,640
+model, and on top of that, we threw
+ 
+
+735
+00:14:14,640 --> 00:14:16,750
+model, and on top of that, we threw
+really hard task at it. So, you can see
+
+736
+00:14:16,750 --> 00:14:16,760
+really hard task at it. So, you can see
+ 
+
+737
+00:14:16,760 --> 00:14:18,829
+really hard task at it. So, you can see
+that after pre-training, the doom loop
+
+738
+00:14:18,829 --> 00:14:18,839
+that after pre-training, the doom loop
+ 
+
+739
+00:14:18,839 --> 00:14:21,390
+that after pre-training, the doom loop
+ratio that we calculated across like a
+
+740
+00:14:21,390 --> 00:14:21,400
+ratio that we calculated across like a
+ 
+
+741
+00:14:21,400 --> 00:14:24,829
+ratio that we calculated across like a
+lot of benchmarks was about 15%.
+
+742
+00:14:24,829 --> 00:14:24,839
+lot of benchmarks was about 15%.
+ 
+
+743
+00:14:24,839 --> 00:14:28,550
+lot of benchmarks was about 15%.
+Um or even 16%. And then after SFT, it
+
+744
+00:14:28,550 --> 00:14:28,560
+Um or even 16%. And then after SFT, it
+ 
+
+745
+00:14:28,560 --> 00:14:30,829
+Um or even 16%. And then after SFT, it
+it barely moves. Like SFT is not the
+
+746
+00:14:30,829 --> 00:14:30,839
+it barely moves. Like SFT is not the
+ 
+
+747
+00:14:30,839 --> 00:14:33,190
+it barely moves. Like SFT is not the
+right stage to fix this. Um we didn't
+
+748
+00:14:33,190 --> 00:14:33,200
+right stage to fix this. Um we didn't
+ 
+
+749
+00:14:33,200 --> 00:14:35,470
+right stage to fix this. Um we didn't
+have doom loop uh examples during the
+
+750
+00:14:35,470 --> 00:14:35,480
+have doom loop uh examples during the
+ 
+
+751
+00:14:35,480 --> 00:14:38,790
+have doom loop uh examples during the
+SFT stage, but it's not enough uh to get
+
+752
+00:14:38,790 --> 00:14:38,800
+SFT stage, but it's not enough uh to get
+ 
+
+753
+00:14:38,800 --> 00:14:40,230
+SFT stage, but it's not enough uh to get
+rid of this issue.
+
+754
+00:14:40,230 --> 00:14:40,240
+rid of this issue.
+ 
+
+755
+00:14:40,240 --> 00:14:42,630
+rid of this issue.
+Um after DPO, so that was our first
+
+756
+00:14:42,630 --> 00:14:42,640
+Um after DPO, so that was our first
+ 
+
+757
+00:14:42,640 --> 00:14:44,990
+Um after DPO, so that was our first
+solution, um it really reduces quite a
+
+758
+00:14:44,990 --> 00:14:45,000
+solution, um it really reduces quite a
+ 
+
+759
+00:14:45,000 --> 00:14:46,230
+solution, um it really reduces quite a
+lot, and you can see that after
+
+760
+00:14:46,230 --> 00:14:46,240
+lot, and you can see that after
+ 
+
+761
+00:14:46,240 --> 00:14:48,030
+lot, and you can see that after
+reinforcement learning, the problem is
+
+762
+00:14:48,030 --> 00:14:48,040
+reinforcement learning, the problem is
+ 
+
+763
+00:14:48,040 --> 00:14:51,230
+reinforcement learning, the problem is
+almost nonexistent. If today you try to
+
+764
+00:14:51,230 --> 00:14:51,240
+almost nonexistent. If today you try to
+ 
+
+765
+00:14:51,240 --> 00:14:55,069
+almost nonexistent. If today you try to
+do the same thing with um Gwen 3.5 0.8B
+
+766
+00:14:55,069 --> 00:14:55,079
+do the same thing with um Gwen 3.5 0.8B
+ 
+
+767
+00:14:55,079 --> 00:14:57,030
+do the same thing with um Gwen 3.5 0.8B
+in reasoning mode, you will see a lot a
+
+768
+00:14:57,030 --> 00:14:57,040
+in reasoning mode, you will see a lot a
+ 
+
+769
+00:14:57,040 --> 00:14:59,510
+in reasoning mode, you will see a lot a
+lot a lot of doom loops, like over 50%
+
+770
+00:14:59,510 --> 00:14:59,520
+lot a lot of doom loops, like over 50%
+ 
+
+771
+00:14:59,520 --> 00:15:01,030
+lot a lot of doom loops, like over 50%
+of doom loops, which is something that
+
+772
+00:15:01,030 --> 00:15:01,040
+of doom loops, which is something that
+ 
+
+773
+00:15:01,040 --> 00:15:03,390
+of doom loops, which is something that
+people complain about online, and that
+
+774
+00:15:03,390 --> 00:15:03,400
+people complain about online, and that
+ 
+
+775
+00:15:03,400 --> 00:15:06,030
+people complain about online, and that
+also shows that the Gwen 3.5, like this
+
+776
+00:15:06,030 --> 00:15:06,040
+also shows that the Gwen 3.5, like this
+ 
+
+777
+00:15:06,040 --> 00:15:07,510
+also shows that the Gwen 3.5, like this
+tiny model, is just a scaled-down
+
+778
+00:15:07,510 --> 00:15:07,520
+tiny model, is just a scaled-down
+ 
+
+779
+00:15:07,520 --> 00:15:10,270
+tiny model, is just a scaled-down
+version of bigger models. And this is
+
+780
+00:15:10,270 --> 00:15:10,280
+version of bigger models. And this is
+ 
+
+781
+00:15:10,280 --> 00:15:12,030
+version of bigger models. And this is
+not the approach that we're taking here
+
+782
+00:15:12,030 --> 00:15:12,040
+not the approach that we're taking here
+ 
+
+783
+00:15:12,040 --> 00:15:14,190
+not the approach that we're taking here
+at Liquid. We want to say, "Okay, like
+
+784
+00:15:14,190 --> 00:15:14,200
+at Liquid. We want to say, "Okay, like
+ 
+
+785
+00:15:14,200 --> 00:15:16,030
+at Liquid. We want to say, "Okay, like
+the edge models, they are their own
+
+786
+00:15:16,030 --> 00:15:16,040
+the edge models, they are their own
+ 
+
+787
+00:15:16,040 --> 00:15:19,949
+the edge models, they are their own
+thing, and um this is also a way to just
+
+788
+00:15:19,949 --> 00:15:19,959
+thing, and um this is also a way to just
+ 
+
+789
+00:15:19,959 --> 00:15:21,590
+thing, and um this is also a way to just
+optimize the entire architecture, the
+
+790
+00:15:21,590 --> 00:15:21,600
+optimize the entire architecture, the
+ 
+
+791
+00:15:21,600 --> 00:15:23,230
+optimize the entire architecture, the
+entire pre-training stack to make sure
+
+792
+00:15:23,230 --> 00:15:23,240
+entire pre-training stack to make sure
+ 
+
+793
+00:15:23,240 --> 00:15:26,590
+entire pre-training stack to make sure
+that uh we treat them as um special as
+
+794
+00:15:26,590 --> 00:15:26,600
+that uh we treat them as um special as
+ 
+
+795
+00:15:26,600 --> 00:15:28,390
+that uh we treat them as um special as
+possible.
+
+796
+00:15:28,390 --> 00:15:28,400
+possible.
+ 
+
+797
+00:15:28,400 --> 00:15:30,430
+possible.
+And finally, I want to talk about uh
+
+798
+00:15:30,430 --> 00:15:30,440
+And finally, I want to talk about uh
+ 
+
+799
+00:15:30,440 --> 00:15:33,310
+And finally, I want to talk about uh
+next stage, next steps for uh all these
+
+800
+00:15:33,310 --> 00:15:33,320
+next stage, next steps for uh all these
+ 
+
+801
+00:15:33,320 --> 00:15:34,710
+next stage, next steps for uh all these
+uh small models with agentic
+
+802
+00:15:34,710 --> 00:15:34,720
+uh small models with agentic
+ 
+
+803
+00:15:34,720 --> 00:15:36,550
+uh small models with agentic
+reinforcement learning. The final
+
+804
+00:15:36,550 --> 00:15:36,560
+reinforcement learning. The final
+ 
+
+805
+00:15:36,560 --> 00:15:38,630
+reinforcement learning. The final
+characteristic I didn't mention here is
+
+806
+00:15:38,630 --> 00:15:38,640
+characteristic I didn't mention here is
+ 
+
+807
+00:15:38,640 --> 00:15:40,750
+characteristic I didn't mention here is
+about uh being memory bound. If you're
+
+808
+00:15:40,750 --> 00:15:40,760
+about uh being memory bound. If you're
+ 
+
+809
+00:15:40,760 --> 00:15:42,590
+about uh being memory bound. If you're
+memory bound, it means that you have low
+
+810
+00:15:42,590 --> 00:15:42,600
+memory bound, it means that you have low
+ 
+
+811
+00:15:42,600 --> 00:15:44,750
+memory bound, it means that you have low
+knowledge capacity. If you have no low
+
+812
+00:15:44,750 --> 00:15:44,760
+knowledge capacity. If you have no low
+ 
+
+813
+00:15:44,760 --> 00:15:46,590
+knowledge capacity. If you have no low
+knowledge capacity, it means that you're
+
+814
+00:15:46,590 --> 00:15:46,600
+knowledge capacity, it means that you're
+ 
+
+815
+00:15:46,600 --> 00:15:48,910
+knowledge capacity, it means that you're
+going to hallucinate a lot. But a nice
+
+816
+00:15:48,910 --> 00:15:48,920
+going to hallucinate a lot. But a nice
+ 
+
+817
+00:15:48,920 --> 00:15:50,910
+going to hallucinate a lot. But a nice
+way to solve this issue is just
+
+818
+00:15:50,910 --> 00:15:50,920
+way to solve this issue is just
+ 
+
+819
+00:15:50,920 --> 00:15:52,670
+way to solve this issue is just
+providing like web search tools to the
+
+820
+00:15:52,670 --> 00:15:52,680
+providing like web search tools to the
+ 
+
+821
+00:15:52,680 --> 00:15:54,430
+providing like web search tools to the
+model. If you have a tiny model, but
+
+822
+00:15:54,430 --> 00:15:54,440
+model. If you have a tiny model, but
+ 
+
+823
+00:15:54,440 --> 00:15:56,949
+model. If you have a tiny model, but
+it's able to Google everything that you
+
+824
+00:15:56,949 --> 00:15:56,959
+it's able to Google everything that you
+ 
+
+825
+00:15:56,959 --> 00:15:59,069
+it's able to Google everything that you
+um throw at it in terms of like
+
+826
+00:15:59,069 --> 00:15:59,079
+um throw at it in terms of like
+ 
+
+827
+00:15:59,079 --> 00:16:00,390
+um throw at it in terms of like
+knowledge questions, you're going to
+
+828
+00:16:00,390 --> 00:16:00,400
+knowledge questions, you're going to
+ 
+
+829
+00:16:00,400 --> 00:16:02,430
+knowledge questions, you're going to
+have like much much better performance
+
+830
+00:16:02,430 --> 00:16:02,440
+have like much much better performance
+ 
+
+831
+00:16:02,440 --> 00:16:05,949
+have like much much better performance
+uh than if you just rely on the uh base
+
+832
+00:16:05,949 --> 00:16:05,959
+uh than if you just rely on the uh base
+ 
+
+833
+00:16:05,959 --> 00:16:07,150
+uh than if you just rely on the uh base
+models.
+
+834
+00:16:07,150 --> 00:16:07,160
+models.
+ 
+
+835
+00:16:07,160 --> 00:16:09,150
+models.
+And same thing with a a lot of problems
+
+836
+00:16:09,150 --> 00:16:09,160
+And same thing with a a lot of problems
+ 
+
+837
+00:16:09,160 --> 00:16:11,430
+And same thing with a a lot of problems
+that you can uh throw at the model. I
+
+838
+00:16:11,430 --> 00:16:11,440
+that you can uh throw at the model. I
+ 
+
+839
+00:16:11,440 --> 00:16:12,790
+that you can uh throw at the model. I
+think that
+
+840
+00:16:12,790 --> 00:16:12,800
+think that
+ 
+
+841
+00:16:12,800 --> 00:16:15,470
+think that
+from experience, these tiny models are
+
+842
+00:16:15,470 --> 00:16:15,480
+from experience, these tiny models are
+ 
+
+843
+00:16:15,480 --> 00:16:17,870
+from experience, these tiny models are
+actually very good at agentic task, and
+
+844
+00:16:17,870 --> 00:16:17,880
+actually very good at agentic task, and
+ 
+
+845
+00:16:17,880 --> 00:16:20,430
+actually very good at agentic task, and
+this is how we should use them. Um it
+
+846
+00:16:20,430 --> 00:16:20,440
+this is how we should use them. Um it
+ 
+
+847
+00:16:20,440 --> 00:16:23,550
+this is how we should use them. Um it
+doesn't matter if um they don't have the
+
+848
+00:16:23,550 --> 00:16:23,560
+doesn't matter if um they don't have the
+ 
+
+849
+00:16:23,560 --> 00:16:25,710
+doesn't matter if um they don't have the
+knowledge capacity of big models. What
+
+850
+00:16:25,710 --> 00:16:25,720
+knowledge capacity of big models. What
+ 
+
+851
+00:16:25,720 --> 00:16:28,270
+knowledge capacity of big models. What
+they truly need is really good reasoning
+
+852
+00:16:28,270 --> 00:16:28,280
+they truly need is really good reasoning
+ 
+
+853
+00:16:28,280 --> 00:16:30,870
+they truly need is really good reasoning
+capabilities to make sure that they are
+
+854
+00:16:30,870 --> 00:16:30,880
+capabilities to make sure that they are
+ 
+
+855
+00:16:30,880 --> 00:16:33,150
+capabilities to make sure that they are
+able to use these tools in a reliable
+
+856
+00:16:33,150 --> 00:16:33,160
+able to use these tools in a reliable
+ 
+
+857
+00:16:33,160 --> 00:16:35,590
+able to use these tools in a reliable
+manner. And another point that I haven't
+
+858
+00:16:35,590 --> 00:16:35,600
+manner. And another point that I haven't
+ 
+
+859
+00:16:35,600 --> 00:16:37,870
+manner. And another point that I haven't
+mentioned here is that small models are
+
+860
+00:16:37,870 --> 00:16:37,880
+mentioned here is that small models are
+ 
+
+861
+00:16:37,880 --> 00:16:39,990
+mentioned here is that small models are
+also not very good at long context
+
+862
+00:16:39,990 --> 00:16:40,000
+also not very good at long context
+ 
+
+863
+00:16:40,000 --> 00:16:42,069
+also not very good at long context
+capabilities. But it's okay, because if
+
+864
+00:16:42,069 --> 00:16:42,079
+capabilities. But it's okay, because if
+ 
+
+865
+00:16:42,079 --> 00:16:44,510
+capabilities. But it's okay, because if
+you have like a recursive um language
+
+866
+00:16:44,510 --> 00:16:44,520
+you have like a recursive um language
+ 
+
+867
+00:16:44,520 --> 00:16:46,470
+you have like a recursive um language
+model environment, then you can use
+
+868
+00:16:46,470 --> 00:16:46,480
+model environment, then you can use
+ 
+
+869
+00:16:46,480 --> 00:16:49,510
+model environment, then you can use
+Python and and like basically take a
+
+870
+00:16:49,510 --> 00:16:49,520
+Python and and like basically take a
+ 
+
+871
+00:16:49,520 --> 00:16:52,550
+Python and and like basically take a
+shortcut uh to to solve this issue. So,
+
+872
+00:16:52,550 --> 00:16:52,560
+shortcut uh to to solve this issue. So,
+ 
+
+873
+00:16:52,560 --> 00:16:54,430
+shortcut uh to to solve this issue. So,
+most of the issues that you find with
+
+874
+00:16:54,430 --> 00:16:54,440
+most of the issues that you find with
+ 
+
+875
+00:16:54,440 --> 00:16:56,310
+most of the issues that you find with
+small language models can actually be
+
+876
+00:16:56,310 --> 00:16:56,320
+small language models can actually be
+ 
+
+877
+00:16:56,320 --> 00:16:58,510
+small language models can actually be
+fixed in different ways. It just
+
+878
+00:16:58,510 --> 00:16:58,520
+fixed in different ways. It just
+ 
+
+879
+00:16:58,520 --> 00:17:00,310
+fixed in different ways. It just
+requires more creativity, it just
+
+880
+00:17:00,310 --> 00:17:00,320
+requires more creativity, it just
+ 
+
+881
+00:17:00,320 --> 00:17:02,910
+requires more creativity, it just
+requires thinking about this problem not
+
+882
+00:17:02,910 --> 00:17:02,920
+requires thinking about this problem not
+ 
+
+883
+00:17:02,920 --> 00:17:04,949
+requires thinking about this problem not
+like you would think about it uh from a
+
+884
+00:17:04,949 --> 00:17:04,959
+like you would think about it uh from a
+ 
+
+885
+00:17:04,959 --> 00:17:06,949
+like you would think about it uh from a
+bigger model perspective, uh but
+
+886
+00:17:06,949 --> 00:17:06,959
+bigger model perspective, uh but
+ 
+
+887
+00:17:06,959 --> 00:17:09,390
+bigger model perspective, uh but
+everything about this is fixable.
+
+888
+00:17:09,390 --> 00:17:09,400
+everything about this is fixable.
+ 
+
+889
+00:17:09,400 --> 00:17:11,550
+everything about this is fixable.
+All right. So, in conclusion, some
+
+890
+00:17:11,550 --> 00:17:11,560
+All right. So, in conclusion, some
+ 
+
+891
+00:17:11,560 --> 00:17:13,750
+All right. So, in conclusion, some
+takeaways, um I hope I convinced you
+
+892
+00:17:13,750 --> 00:17:13,760
+takeaways, um I hope I convinced you
+ 
+
+893
+00:17:13,760 --> 00:17:15,910
+takeaways, um I hope I convinced you
+that edge models have unique challenges,
+
+894
+00:17:15,910 --> 00:17:15,920
+that edge models have unique challenges,
+ 
+
+895
+00:17:15,920 --> 00:17:18,069
+that edge models have unique challenges,
+and they are actually interesting from
+
+896
+00:17:18,069 --> 00:17:18,079
+and they are actually interesting from
+ 
+
+897
+00:17:18,079 --> 00:17:19,790
+and they are actually interesting from
+scientific point of view, and also
+
+898
+00:17:19,790 --> 00:17:19,800
+scientific point of view, and also
+ 
+
+899
+00:17:19,800 --> 00:17:21,630
+scientific point of view, and also
+production point of view.
+
+900
+00:17:21,630 --> 00:17:21,640
+production point of view.
+ 
+
+901
+00:17:21,640 --> 00:17:23,510
+production point of view.
+Um if you combine them with agentic
+
+902
+00:17:23,510 --> 00:17:23,520
+Um if you combine them with agentic
+ 
+
+903
+00:17:23,520 --> 00:17:24,910
+Um if you combine them with agentic
+tools, they tend to perform really
+
+904
+00:17:24,910 --> 00:17:24,920
+tools, they tend to perform really
+ 
+
+905
+00:17:24,920 --> 00:17:26,550
+tools, they tend to perform really
+really well, and this is something that
+
+906
+00:17:26,550 --> 00:17:26,560
+really well, and this is something that
+ 
+
+907
+00:17:26,560 --> 00:17:28,350
+really well, and this is something that
+is currently underexplored. We talk
+
+908
+00:17:28,350 --> 00:17:28,360
+is currently underexplored. We talk
+ 
+
+909
+00:17:28,360 --> 00:17:31,110
+is currently underexplored. We talk
+about agentic workloads with really big
+
+910
+00:17:31,110 --> 00:17:31,120
+about agentic workloads with really big
+ 
+
+911
+00:17:31,120 --> 00:17:34,070
+about agentic workloads with really big
+models, but it's not necessarily um the
+
+912
+00:17:34,070 --> 00:17:34,080
+models, but it's not necessarily um the
+ 
+
+913
+00:17:34,080 --> 00:17:35,630
+models, but it's not necessarily um the
+best use case, it's not necessarily the
+
+914
+00:17:35,630 --> 00:17:35,640
+best use case, it's not necessarily the
+ 
+
+915
+00:17:35,640 --> 00:17:38,150
+best use case, it's not necessarily the
+best fit all the time. And uh yeah,
+
+916
+00:17:38,150 --> 00:17:38,160
+best fit all the time. And uh yeah,
+ 
+
+917
+00:17:38,160 --> 00:17:40,669
+best fit all the time. And uh yeah,
+finally, we're working on LFM 3, and we
+
+918
+00:17:40,669 --> 00:17:40,679
+finally, we're working on LFM 3, and we
+ 
+
+919
+00:17:40,679 --> 00:17:43,630
+finally, we're working on LFM 3, and we
+have like a a ton of crazy experiments
+
+920
+00:17:43,630 --> 00:17:43,640
+have like a a ton of crazy experiments
+ 
+
+921
+00:17:43,640 --> 00:17:46,430
+have like a a ton of crazy experiments
+and uh ideas to try, so um come work
+
+922
+00:17:46,430 --> 00:17:46,440
+and uh ideas to try, so um come work
+ 
+
+923
+00:17:46,440 --> 00:17:48,390
+and uh ideas to try, so um come work
+with us if you're interested uh in this
+
+924
+00:17:48,390 --> 00:17:48,400
+with us if you're interested uh in this
+ 
+
+925
+00:17:48,400 --> 00:17:49,630
+with us if you're interested uh in this
+space.
+
+926
+00:17:49,630 --> 00:17:49,640
+space.
+ 
+
+927
+00:17:49,640 --> 00:17:58,510
+space.
+Thank you, everyone.
+
+928
+00:17:58,510 --> 00:17:58,520
+
+ 
+
+929
+00:17:58,520 --> 00:17:59,990
+
+Yes. Um
+
+930
+00:17:59,990 --> 00:18:00,000
+Yes. Um
+ 
+
+931
+00:18:00,000 --> 00:18:02,190
+Yes. Um
+can you share a bit about how you use
+
+932
+00:18:02,190 --> 00:18:02,200
+can you share a bit about how you use
+ 
+
+933
+00:18:02,200 --> 00:18:04,790
+can you share a bit about how you use
+these models in your workflow, and how
+
+934
+00:18:04,790 --> 00:18:04,800
+these models in your workflow, and how
+ 
+
+935
+00:18:04,800 --> 00:18:06,150
+these models in your workflow, and how
+how you make the decision about when to
+
+936
+00:18:06,150 --> 00:18:06,160
+how you make the decision about when to
+ 
+
+937
+00:18:06,160 --> 00:18:07,790
+how you make the decision about when to
+use big models
+
+938
+00:18:07,790 --> 00:18:07,800
+use big models
+ 
+
+939
+00:18:07,800 --> 00:18:09,310
+use big models
+Yeah, this is a good question. So, the
+
+940
+00:18:09,310 --> 00:18:09,320
+Yeah, this is a good question. So, the
+ 
+
+941
+00:18:09,320 --> 00:18:11,030
+Yeah, this is a good question. So, the
+question is like how are we use this
+
+942
+00:18:11,030 --> 00:18:11,040
+question is like how are we use this
+ 
+
+943
+00:18:11,040 --> 00:18:13,110
+question is like how are we use this
+model in the workflows, and uh how we
+
+944
+00:18:13,110 --> 00:18:13,120
+model in the workflows, and uh how we
+ 
+
+945
+00:18:13,120 --> 00:18:15,030
+model in the workflows, and uh how we
+decide between small models and big
+
+946
+00:18:15,030 --> 00:18:15,040
+decide between small models and big
+ 
+
+947
+00:18:15,040 --> 00:18:17,270
+decide between small models and big
+models. So, the the main idea here is
+
+948
+00:18:17,270 --> 00:18:17,280
+models. So, the the main idea here is
+ 
+
+949
+00:18:17,280 --> 00:18:19,350
+models. So, the the main idea here is
+that you will try to use the small
+
+950
+00:18:19,350 --> 00:18:19,360
+that you will try to use the small
+ 
+
+951
+00:18:19,360 --> 00:18:21,310
+that you will try to use the small
+models when you
+
+952
+00:18:21,310 --> 00:18:21,320
+models when you
+ 
+
+953
+00:18:21,320 --> 00:18:23,030
+models when you
+don't have uh internet connection, for
+
+954
+00:18:23,030 --> 00:18:23,040
+don't have uh internet connection, for
+ 
+
+955
+00:18:23,040 --> 00:18:25,230
+don't have uh internet connection, for
+example. So, in-car deployment is a good
+
+956
+00:18:25,230 --> 00:18:25,240
+example. So, in-car deployment is a good
+ 
+
+957
+00:18:25,240 --> 00:18:27,909
+example. So, in-car deployment is a good
+example of that, because you can't have
+
+958
+00:18:27,909 --> 00:18:27,919
+example of that, because you can't have
+ 
+
+959
+00:18:27,919 --> 00:18:29,950
+example of that, because you can't have
+like a reliable internet connection, so
+
+960
+00:18:29,950 --> 00:18:29,960
+like a reliable internet connection, so
+ 
+
+961
+00:18:29,960 --> 00:18:32,430
+like a reliable internet connection, so
+it makes sense. Uh latency is also a big
+
+962
+00:18:32,430 --> 00:18:32,440
+it makes sense. Uh latency is also a big
+ 
+
+963
+00:18:32,440 --> 00:18:34,390
+it makes sense. Uh latency is also a big
+one. If you have a workload that is very
+
+964
+00:18:34,390 --> 00:18:34,400
+one. If you have a workload that is very
+ 
+
+965
+00:18:34,400 --> 00:18:36,750
+one. If you have a workload that is very
+latency sensitive, uh small models
+
+966
+00:18:36,750 --> 00:18:36,760
+latency sensitive, uh small models
+ 
+
+967
+00:18:36,760 --> 00:18:38,909
+latency sensitive, uh small models
+running locally are always going to be
+
+968
+00:18:38,909 --> 00:18:38,919
+running locally are always going to be
+ 
+
+969
+00:18:38,919 --> 00:18:41,909
+running locally are always going to be
+better. And another one is is privacy.
+
+970
+00:18:41,909 --> 00:18:41,919
+better. And another one is is privacy.
+ 
+
+971
+00:18:41,919 --> 00:18:43,149
+better. And another one is is privacy.
+If you're in a
+
+972
+00:18:43,149 --> 00:18:43,159
+If you're in a
+ 
+
+973
+00:18:43,159 --> 00:18:45,909
+If you're in a
+regulated environment, um if you work in
+
+974
+00:18:45,909 --> 00:18:45,919
+regulated environment, um if you work in
+ 
+
+975
+00:18:45,919 --> 00:18:47,230
+regulated environment, um if you work in
+finance or health care, this is also a
+
+976
+00:18:47,230 --> 00:18:47,240
+finance or health care, this is also a
+ 
+
+977
+00:18:47,240 --> 00:18:47,710
+finance or health care, this is also a
+good one.
+
+978
+00:18:47,710 --> 00:18:47,720
+good one.
+ 
+
+979
+00:18:47,720 --> 00:18:49,390
+good one.
+>> in in your specific workflow is the
+
+980
+00:18:49,390 --> 00:18:49,400
+>> in in your specific workflow is the
+ 
+
+981
+00:18:49,400 --> 00:18:50,590
+>> in in your specific workflow is the
+question.
+
+982
+00:18:50,590 --> 00:18:50,600
+question.
+ 
+
+983
+00:18:50,600 --> 00:18:54,390
+question.
+It I make the models, so I like I make
+
+984
+00:18:54,390 --> 00:18:54,400
+It I make the models, so I like I make
+ 
+
+985
+00:18:54,400 --> 00:18:56,870
+It I make the models, so I like I make
+them most for other people, but uh like
+
+986
+00:18:56,870 --> 00:18:56,880
+them most for other people, but uh like
+ 
+
+987
+00:18:56,880 --> 00:19:00,270
+them most for other people, but uh like
+in my workflows, like not necessarily.
+
+988
+00:19:00,270 --> 00:19:00,280
+in my workflows, like not necessarily.
+ 
+
+989
+00:19:00,280 --> 00:19:02,030
+in my workflows, like not necessarily.
+Have you tried for doom looping have you
+
+990
+00:19:02,030 --> 00:19:02,040
+Have you tried for doom looping have you
+ 
+
+991
+00:19:02,040 --> 00:19:04,270
+Have you tried for doom looping have you
+tried like you you talked about how Gwen
+
+992
+00:19:04,270 --> 00:19:04,280
+tried like you you talked about how Gwen
+ 
+
+993
+00:19:04,280 --> 00:19:06,710
+tried like you you talked about how Gwen
+3.5 is a scaled-down version of bigger
+
+994
+00:19:06,710 --> 00:19:06,720
+3.5 is a scaled-down version of bigger
+ 
+
+995
+00:19:06,720 --> 00:19:09,470
+3.5 is a scaled-down version of bigger
+one? Yep. Have you seen uh the work that
+
+996
+00:19:09,470 --> 00:19:09,480
+one? Yep. Have you seen uh the work that
+ 
+
+997
+00:19:09,480 --> 00:19:11,669
+one? Yep. Have you seen uh the work that
+you do with RL and all these uh
+
+998
+00:19:11,669 --> 00:19:11,679
+you do with RL and all these uh
+ 
+
+999
+00:19:11,679 --> 00:19:13,350
+you do with RL and all these uh
+reduction of doom looping on a bigger
+
+1000
+00:19:13,350 --> 00:19:13,360
+reduction of doom looping on a bigger
+ 
+
+1001
+00:19:13,360 --> 00:19:14,430
+reduction of doom looping on a bigger
+model
+
+1002
+00:19:14,430 --> 00:19:14,440
+model
+ 
+
+1003
+00:19:14,440 --> 00:19:15,750
+model
+uh be able to be distilled into a
+
+1004
+00:19:15,750 --> 00:19:15,760
+uh be able to be distilled into a
+ 
+
+1005
+00:19:15,760 --> 00:19:17,790
+uh be able to be distilled into a
+smaller model without having to re- redo
+
+1006
+00:19:17,790 --> 00:19:17,800
+smaller model without having to re- redo
+ 
+
+1007
+00:19:17,800 --> 00:19:19,149
+smaller model without having to re- redo
+the steps?
+
+1008
+00:19:19,149 --> 00:19:19,159
+the steps?
+ 
+
+1009
+00:19:19,159 --> 00:19:21,550
+the steps?
+It's a good question. I think we need to
+
+1010
+00:19:21,550 --> 00:19:21,560
+It's a good question. I think we need to
+ 
+
+1011
+00:19:21,560 --> 00:19:23,750
+It's a good question. I think we need to
+do some experiments to see like if uh
+
+1012
+00:19:23,750 --> 00:19:23,760
+do some experiments to see like if uh
+ 
+
+1013
+00:19:23,760 --> 00:19:25,430
+do some experiments to see like if uh
+just distilling from a bigger model
+
+1014
+00:19:25,430 --> 00:19:25,440
+just distilling from a bigger model
+ 
+
+1015
+00:19:25,440 --> 00:19:26,950
+just distilling from a bigger model
+translates well in terms of doom
+
+1016
+00:19:26,950 --> 00:19:26,960
+translates well in terms of doom
+ 
+
+1017
+00:19:26,960 --> 00:19:29,230
+translates well in terms of doom
+looping. I would say no. I would I don't
+
+1018
+00:19:29,230 --> 00:19:29,240
+looping. I would say no. I would I don't
+ 
+
+1019
+00:19:29,240 --> 00:19:30,669
+looping. I would say no. I would I don't
+think so, because I think it would be
+
+1020
+00:19:30,669 --> 00:19:30,679
+think so, because I think it would be
+ 
+
+1021
+00:19:30,679 --> 00:19:33,909
+think so, because I think it would be
+too close to SFT. So, it depends like
+
+1022
+00:19:33,909 --> 00:19:33,919
+too close to SFT. So, it depends like
+ 
+
+1023
+00:19:33,919 --> 00:19:35,710
+too close to SFT. So, it depends like
+how you do this distillation. If you
+
+1024
+00:19:35,710 --> 00:19:35,720
+how you do this distillation. If you
+ 
+
+1025
+00:19:35,720 --> 00:19:38,149
+how you do this distillation. If you
+stop K and you have like enough uh K,
+
+1026
+00:19:38,149 --> 00:19:38,159
+stop K and you have like enough uh K,
+ 
+
+1027
+00:19:38,159 --> 00:19:41,350
+stop K and you have like enough uh K,
+maybe this is uh good enough, um but I I
+
+1028
+00:19:41,350 --> 00:19:41,360
+maybe this is uh good enough, um but I I
+ 
+
+1029
+00:19:41,360 --> 00:19:43,110
+maybe this is uh good enough, um but I I
+think that it would not completely be
+
+1030
+00:19:43,110 --> 00:19:43,120
+think that it would not completely be
+ 
+
+1031
+00:19:43,120 --> 00:19:44,909
+think that it would not completely be
+solved, and you would still need like
+
+1032
+00:19:44,909 --> 00:19:44,919
+solved, and you would still need like
+ 
+
+1033
+00:19:44,919 --> 00:19:46,430
+solved, and you would still need like
+several batches to make sure that it
+
+1034
+00:19:46,430 --> 00:19:46,440
+several batches to make sure that it
+ 
+
+1035
+00:19:46,440 --> 00:19:48,790
+several batches to make sure that it
+doesn't happen again.
+
+1036
+00:19:48,790 --> 00:19:48,800
+doesn't happen again.
+ 
+
+1037
+00:19:48,800 --> 00:19:49,950
+doesn't happen again.
+All right. Yeah.
+
+1038
+00:19:49,950 --> 00:19:49,960
+All right. Yeah.
+ 
+
+1039
+00:19:49,960 --> 00:19:51,950
+All right. Yeah.
+All right, I I think I should quit, but
+
+1040
+00:19:51,950 --> 00:19:51,960
+All right, I I think I should quit, but
+ 
+
+1041
+00:19:51,960 --> 00:19:53,710
+All right, I I think I should quit, but
+um I'll be around if you you have other
+
+1042
+00:19:53,710 --> 00:19:53,720
+um I'll be around if you you have other
+ 
+
+1043
+00:19:53,720 --> 00:19:56,920
+um I'll be around if you you have other
+questions. Thank you very much.
+

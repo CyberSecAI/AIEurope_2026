@@ -1,0 +1,5465 @@
+1
+00:00:07,205 --> 00:00:14,630
+
+[music]
+
+2
+00:00:14,630 --> 00:00:14,640
+
+ 
+
+3
+00:00:14,640 --> 00:00:16,270
+
+>> Hello everyone. Having a good conference
+
+4
+00:00:16,270 --> 00:00:16,280
+>> Hello everyone. Having a good conference
+ 
+
+5
+00:00:16,280 --> 00:00:18,270
+>> Hello everyone. Having a good conference
+so far? Yeah. Are you having a good
+
+6
+00:00:18,270 --> 00:00:18,280
+so far? Yeah. Are you having a good
+ 
+
+7
+00:00:18,280 --> 00:00:20,470
+so far? Yeah. Are you having a good
+conference so far? Yeah. Good.
+
+8
+00:00:20,470 --> 00:00:20,480
+conference so far? Yeah. Good.
+ 
+
+9
+00:00:20,480 --> 00:00:22,150
+conference so far? Yeah. Good.
+Wonderful.
+
+10
+00:00:22,150 --> 00:00:22,160
+Wonderful.
+ 
+
+11
+00:00:22,160 --> 00:00:23,990
+Wonderful.
+I have a message for you that I hope
+
+12
+00:00:23,990 --> 00:00:24,000
+I have a message for you that I hope
+ 
+
+13
+00:00:24,000 --> 00:00:26,990
+I have a message for you that I hope
+will be um a comforting message for
+
+14
+00:00:26,990 --> 00:00:27,000
+will be um a comforting message for
+ 
+
+15
+00:00:27,000 --> 00:00:29,390
+will be um a comforting message for
+folks who believe that uh
+
+16
+00:00:29,390 --> 00:00:29,400
+folks who believe that uh
+ 
+
+17
+00:00:29,400 --> 00:00:31,270
+folks who believe that uh
+their skill set is no longer worth
+
+18
+00:00:31,270 --> 00:00:31,280
+their skill set is no longer worth
+ 
+
+19
+00:00:31,280 --> 00:00:33,950
+their skill set is no longer worth
+anything in this new age, which is I
+
+20
+00:00:33,950 --> 00:00:33,960
+anything in this new age, which is I
+ 
+
+21
+00:00:33,960 --> 00:00:35,310
+anything in this new age, which is I
+believe that software fundamentals
+
+22
+00:00:35,310 --> 00:00:35,320
+believe that software fundamentals
+ 
+
+23
+00:00:35,320 --> 00:00:37,390
+believe that software fundamentals
+matter now more than they actually ever
+
+24
+00:00:37,390 --> 00:00:37,400
+matter now more than they actually ever
+ 
+
+25
+00:00:37,400 --> 00:00:39,030
+matter now more than they actually ever
+have.
+
+26
+00:00:39,030 --> 00:00:39,040
+have.
+ 
+
+27
+00:00:39,040 --> 00:00:40,630
+have.
+And
+
+28
+00:00:40,630 --> 00:00:40,640
+And
+ 
+
+29
+00:00:40,640 --> 00:00:42,470
+And
+I'm a teacher,
+
+30
+00:00:42,470 --> 00:00:42,480
+I'm a teacher,
+ 
+
+31
+00:00:42,480 --> 00:00:44,510
+I'm a teacher,
+and I've been recently teaching a course
+
+32
+00:00:44,510 --> 00:00:44,520
+and I've been recently teaching a course
+ 
+
+33
+00:00:44,520 --> 00:00:47,230
+and I've been recently teaching a course
+called Clojure Code for Real Engineers.
+
+34
+00:00:47,230 --> 00:00:47,240
+called Clojure Code for Real Engineers.
+ 
+
+35
+00:00:47,240 --> 00:00:49,310
+called Clojure Code for Real Engineers.
+Nice and provocative. And
+
+36
+00:00:49,310 --> 00:00:49,320
+Nice and provocative. And
+ 
+
+37
+00:00:49,320 --> 00:00:50,830
+Nice and provocative. And
+in the process of kind of working on
+
+38
+00:00:50,830 --> 00:00:50,840
+in the process of kind of working on
+ 
+
+39
+00:00:50,840 --> 00:00:52,030
+in the process of kind of working on
+this course, I had to come up with a
+
+40
+00:00:52,030 --> 00:00:52,040
+this course, I had to come up with a
+ 
+
+41
+00:00:52,040 --> 00:00:54,790
+this course, I had to come up with a
+curriculum about
+
+42
+00:00:54,790 --> 00:00:54,800
+curriculum about
+ 
+
+43
+00:00:54,800 --> 00:00:57,550
+curriculum about
+AI coding, which is a bit of a nightmare
+
+44
+00:00:57,550 --> 00:00:57,560
+AI coding, which is a bit of a nightmare
+ 
+
+45
+00:00:57,560 --> 00:00:58,990
+AI coding, which is a bit of a nightmare
+because things are changing all the
+
+46
+00:00:58,990 --> 00:00:59,000
+because things are changing all the
+ 
+
+47
+00:00:59,000 --> 00:01:02,270
+because things are changing all the
+time, right? AI is a whole new paradigm.
+
+48
+00:01:02,270 --> 00:01:02,280
+time, right? AI is a whole new paradigm.
+ 
+
+49
+00:01:02,280 --> 00:01:03,710
+time, right? AI is a whole new paradigm.
+We need to chuck out all of the old
+
+50
+00:01:03,710 --> 00:01:03,720
+We need to chuck out all of the old
+ 
+
+51
+00:01:03,720 --> 00:01:05,910
+We need to chuck out all of the old
+rules, surely, so that we can bring in
+
+52
+00:01:05,910 --> 00:01:05,920
+rules, surely, so that we can bring in
+ 
+
+53
+00:01:05,920 --> 00:01:07,990
+rules, surely, so that we can bring in
+the new stuff.
+
+54
+00:01:07,990 --> 00:01:08,000
+the new stuff.
+ 
+
+55
+00:01:08,000 --> 00:01:09,750
+the new stuff.
+And there's
+
+56
+00:01:09,750 --> 00:01:09,760
+And there's
+ 
+
+57
+00:01:09,760 --> 00:01:12,150
+And there's
+a kind of movement that has come up
+
+58
+00:01:12,150 --> 00:01:12,160
+a kind of movement that has come up
+ 
+
+59
+00:01:12,160 --> 00:01:14,470
+a kind of movement that has come up
+around this, which is the specs-to-code
+
+60
+00:01:14,470 --> 00:01:14,480
+around this, which is the specs-to-code
+ 
+
+61
+00:01:14,480 --> 00:01:16,470
+around this, which is the specs-to-code
+movement. And the specs-to-code movement
+
+62
+00:01:16,470 --> 00:01:16,480
+movement. And the specs-to-code movement
+ 
+
+63
+00:01:16,480 --> 00:01:18,030
+movement. And the specs-to-code movement
+says that, "Okay, you can write a
+
+64
+00:01:18,030 --> 00:01:18,040
+says that, "Okay, you can write a
+ 
+
+65
+00:01:18,040 --> 00:01:19,630
+says that, "Okay, you can write a
+specification about how an application
+
+66
+00:01:19,630 --> 00:01:19,640
+specification about how an application
+ 
+
+67
+00:01:19,640 --> 00:01:21,950
+specification about how an application
+is supposed to work. Then you can use AI
+
+68
+00:01:21,950 --> 00:01:21,960
+is supposed to work. Then you can use AI
+ 
+
+69
+00:01:21,960 --> 00:01:23,870
+is supposed to work. Then you can use AI
+to turn it into code. If there's a
+
+70
+00:01:23,870 --> 00:01:23,880
+to turn it into code. If there's a
+ 
+
+71
+00:01:23,880 --> 00:01:26,190
+to turn it into code. If there's a
+problem with the application, you then
+
+72
+00:01:26,190 --> 00:01:26,200
+problem with the application, you then
+ 
+
+73
+00:01:26,200 --> 00:01:27,670
+problem with the application, you then
+go back to the spec. You don't really
+
+74
+00:01:27,670 --> 00:01:27,680
+go back to the spec. You don't really
+ 
+
+75
+00:01:27,680 --> 00:01:29,110
+go back to the spec. You don't really
+look at the code. You just change the
+
+76
+00:01:29,110 --> 00:01:29,120
+look at the code. You just change the
+ 
+
+77
+00:01:29,120 --> 00:01:32,230
+look at the code. You just change the
+spec, you run the compiler again, and
+
+78
+00:01:32,230 --> 00:01:32,240
+spec, you run the compiler again, and
+ 
+
+79
+00:01:32,240 --> 00:01:34,470
+spec, you run the compiler again, and
+you end up with more code." Raise your
+
+80
+00:01:34,470 --> 00:01:34,480
+you end up with more code." Raise your
+ 
+
+81
+00:01:34,480 --> 00:01:37,150
+you end up with more code." Raise your
+hand if you've heard of that.
+
+82
+00:01:37,150 --> 00:01:37,160
+hand if you've heard of that.
+ 
+
+83
+00:01:37,160 --> 00:01:38,470
+hand if you've heard of that.
+Keep your hand raised if you've tried
+
+84
+00:01:38,470 --> 00:01:38,480
+Keep your hand raised if you've tried
+ 
+
+85
+00:01:38,480 --> 00:01:39,790
+Keep your hand raised if you've tried
+it.
+
+86
+00:01:39,790 --> 00:01:39,800
+it.
+ 
+
+87
+00:01:39,800 --> 00:01:41,230
+it.
+Okay, I've tried it, too. You can put
+
+88
+00:01:41,230 --> 00:01:41,240
+Okay, I've tried it, too. You can put
+ 
+
+89
+00:01:41,240 --> 00:01:42,790
+Okay, I've tried it, too. You can put
+your hands down.
+
+90
+00:01:42,790 --> 00:01:42,800
+your hands down.
+ 
+
+91
+00:01:42,800 --> 00:01:45,350
+your hands down.
+And what I noticed was I would run it,
+
+92
+00:01:45,350 --> 00:01:45,360
+And what I noticed was I would run it,
+ 
+
+93
+00:01:45,360 --> 00:01:48,470
+And what I noticed was I would run it,
+and I would try not to look at the code,
+
+94
+00:01:48,470 --> 00:01:48,480
+and I would try not to look at the code,
+ 
+
+95
+00:01:48,480 --> 00:01:50,070
+and I would try not to look at the code,
+but I would look at the code, and I
+
+96
+00:01:50,070 --> 00:01:50,080
+but I would look at the code, and I
+ 
+
+97
+00:01:50,080 --> 00:01:51,870
+but I would look at the code, and I
+realized I would get code out, first of
+
+98
+00:01:51,870 --> 00:01:51,880
+realized I would get code out, first of
+ 
+
+99
+00:01:51,880 --> 00:01:53,230
+realized I would get code out, first of
+all, and then I would run it, I would
+
+100
+00:01:53,230 --> 00:01:53,240
+all, and then I would run it, I would
+ 
+
+101
+00:01:53,240 --> 00:01:55,430
+all, and then I would run it, I would
+get worse code. And I did it again, I
+
+102
+00:01:55,430 --> 00:01:55,440
+get worse code. And I did it again, I
+ 
+
+103
+00:01:55,440 --> 00:01:58,030
+get worse code. And I did it again, I
+got even worse code. I got it again, I
+
+104
+00:01:58,030 --> 00:01:58,040
+got even worse code. I got it again, I
+ 
+
+105
+00:01:58,040 --> 00:01:59,670
+got even worse code. I got it again, I
+kept running the compiler, kept running
+
+106
+00:01:59,670 --> 00:01:59,680
+kept running the compiler, kept running
+ 
+
+107
+00:01:59,680 --> 00:02:00,750
+kept running the compiler, kept running
+the compiler, and I would just end up
+
+108
+00:02:00,750 --> 00:02:00,760
+the compiler, and I would just end up
+ 
+
+109
+00:02:00,760 --> 00:02:03,630
+the compiler, and I would just end up
+with garbage.
+
+110
+00:02:03,630 --> 00:02:03,640
+
+ 
+
+111
+00:02:03,640 --> 00:02:04,430
+
+You know, raise your hand if that's
+
+112
+00:02:04,430 --> 00:02:04,440
+You know, raise your hand if that's
+ 
+
+113
+00:02:04,440 --> 00:02:05,990
+You know, raise your hand if that's
+happened to you.
+
+114
+00:02:05,990 --> 00:02:06,000
+happened to you.
+ 
+
+115
+00:02:06,000 --> 00:02:09,150
+happened to you.
+Yes. I don't think this works. The idea
+
+116
+00:02:09,150 --> 00:02:09,160
+Yes. I don't think this works. The idea
+ 
+
+117
+00:02:09,160 --> 00:02:10,870
+Yes. I don't think this works. The idea
+that we can just ignore the code and
+
+118
+00:02:10,870 --> 00:02:10,880
+that we can just ignore the code and
+ 
+
+119
+00:02:10,880 --> 00:02:13,390
+that we can just ignore the code and
+just have the code let it manage itself
+
+120
+00:02:13,390 --> 00:02:13,400
+just have the code let it manage itself
+ 
+
+121
+00:02:13,400 --> 00:02:14,830
+just have the code let it manage itself
+is just sort of vibe coding by another
+
+122
+00:02:14,830 --> 00:02:14,840
+is just sort of vibe coding by another
+ 
+
+123
+00:02:14,840 --> 00:02:16,550
+is just sort of vibe coding by another
+name.
+
+124
+00:02:16,550 --> 00:02:16,560
+name.
+ 
+
+125
+00:02:16,560 --> 00:02:18,950
+name.
+And I didn't believe that back then. I
+
+126
+00:02:18,950 --> 00:02:18,960
+And I didn't believe that back then. I
+ 
+
+127
+00:02:18,960 --> 00:02:20,270
+And I didn't believe that back then. I
+thought, "Okay, how do I fix the
+
+128
+00:02:20,270 --> 00:02:20,280
+thought, "Okay, how do I fix the
+ 
+
+129
+00:02:20,280 --> 00:02:22,230
+thought, "Okay, how do I fix the
+compiler? How do I make it so that it
+
+130
+00:02:22,230 --> 00:02:22,240
+compiler? How do I make it so that it
+ 
+
+131
+00:02:22,240 --> 00:02:23,950
+compiler? How do I make it so that it
+doesn't produce bad code each time, or
+
+132
+00:02:23,950 --> 00:02:23,960
+doesn't produce bad code each time, or
+ 
+
+133
+00:02:23,960 --> 00:02:25,350
+doesn't produce bad code each time, or
+worse code?"
+
+134
+00:02:25,350 --> 00:02:25,360
+worse code?"
+ 
+
+135
+00:02:25,360 --> 00:02:26,510
+worse code?"
+And so I thought, "Okay, I need to
+
+136
+00:02:26,510 --> 00:02:26,520
+And so I thought, "Okay, I need to
+ 
+
+137
+00:02:26,520 --> 00:02:30,030
+And so I thought, "Okay, I need to
+explain to the LLM in English what a
+
+138
+00:02:30,030 --> 00:02:30,040
+explain to the LLM in English what a
+ 
+
+139
+00:02:30,040 --> 00:02:32,150
+explain to the LLM in English what a
+good code base looks like." Let me dig
+
+140
+00:02:32,150 --> 00:02:32,160
+good code base looks like." Let me dig
+ 
+
+141
+00:02:32,160 --> 00:02:34,950
+good code base looks like." Let me dig
+out one of my old favorite books, which
+
+142
+00:02:34,950 --> 00:02:34,960
+out one of my old favorite books, which
+ 
+
+143
+00:02:34,960 --> 00:02:36,310
+out one of my old favorite books, which
+is a Philosophy of Software Design by
+
+144
+00:02:36,310 --> 00:02:36,320
+is a Philosophy of Software Design by
+ 
+
+145
+00:02:36,320 --> 00:02:37,750
+is a Philosophy of Software Design by
+John Osterhout.
+
+146
+00:02:37,750 --> 00:02:37,760
+John Osterhout.
+ 
+
+147
+00:02:37,760 --> 00:02:39,310
+John Osterhout.
+Go on Amazon, get it.
+
+148
+00:02:39,310 --> 00:02:39,320
+Go on Amazon, get it.
+ 
+
+149
+00:02:39,320 --> 00:02:40,870
+Go on Amazon, get it.
+Um
+
+150
+00:02:40,870 --> 00:02:40,880
+Um
+ 
+
+151
+00:02:40,880 --> 00:02:43,230
+Um
+and he has a definition for what bad
+
+152
+00:02:43,230 --> 00:02:43,240
+and he has a definition for what bad
+ 
+
+153
+00:02:43,240 --> 00:02:45,350
+and he has a definition for what bad
+code looks like.
+
+154
+00:02:45,350 --> 00:02:45,360
+code looks like.
+ 
+
+155
+00:02:45,360 --> 00:02:47,230
+code looks like.
+He calls it complex code. Complexity is
+
+156
+00:02:47,230 --> 00:02:47,240
+He calls it complex code. Complexity is
+ 
+
+157
+00:02:47,240 --> 00:02:48,670
+He calls it complex code. Complexity is
+anything related to the structure of a
+
+158
+00:02:48,670 --> 00:02:48,680
+anything related to the structure of a
+ 
+
+159
+00:02:48,680 --> 00:02:50,870
+anything related to the structure of a
+software system that makes it hard to
+
+160
+00:02:50,870 --> 00:02:50,880
+software system that makes it hard to
+ 
+
+161
+00:02:50,880 --> 00:02:53,470
+software system that makes it hard to
+understand and modify the system, right?
+
+162
+00:02:53,470 --> 00:02:53,480
+understand and modify the system, right?
+ 
+
+163
+00:02:53,480 --> 00:02:55,510
+understand and modify the system, right?
+So a a bad code base is a code base
+
+164
+00:02:55,510 --> 00:02:55,520
+So a a bad code base is a code base
+ 
+
+165
+00:02:55,520 --> 00:02:58,190
+So a a bad code base is a code base
+that's hard to change. If you can't
+
+166
+00:02:58,190 --> 00:02:58,200
+that's hard to change. If you can't
+ 
+
+167
+00:02:58,200 --> 00:03:00,270
+that's hard to change. If you can't
+change a code base without causing bugs,
+
+168
+00:03:00,270 --> 00:03:00,280
+change a code base without causing bugs,
+ 
+
+169
+00:03:00,280 --> 00:03:01,870
+change a code base without causing bugs,
+then it's a bad code base. Good code
+
+170
+00:03:01,870 --> 00:03:01,880
+then it's a bad code base. Good code
+ 
+
+171
+00:03:01,880 --> 00:03:04,190
+then it's a bad code base. Good code
+bases are easy to change.
+
+172
+00:03:04,190 --> 00:03:04,200
+bases are easy to change.
+ 
+
+173
+00:03:04,200 --> 00:03:05,870
+bases are easy to change.
+So I thought, "Ooh, that was good.
+
+174
+00:03:05,870 --> 00:03:05,880
+So I thought, "Ooh, that was good.
+ 
+
+175
+00:03:05,880 --> 00:03:06,950
+So I thought, "Ooh, that was good.
+Let's try another book. Let's try The
+
+176
+00:03:06,950 --> 00:03:06,960
+Let's try another book. Let's try The
+ 
+
+177
+00:03:06,960 --> 00:03:08,630
+Let's try another book. Let's try The
+Pragmatic Programmer."
+
+178
+00:03:08,630 --> 00:03:08,640
+Pragmatic Programmer."
+ 
+
+179
+00:03:08,640 --> 00:03:10,670
+Pragmatic Programmer."
+Go on Amazon, get it.
+
+180
+00:03:10,670 --> 00:03:10,680
+Go on Amazon, get it.
+ 
+
+181
+00:03:10,680 --> 00:03:12,510
+Go on Amazon, get it.
+They have a whole chapter on something
+
+182
+00:03:12,510 --> 00:03:12,520
+They have a whole chapter on something
+ 
+
+183
+00:03:12,520 --> 00:03:14,470
+They have a whole chapter on something
+called software entropy. And this is
+
+184
+00:03:14,470 --> 00:03:14,480
+called software entropy. And this is
+ 
+
+185
+00:03:14,480 --> 00:03:16,950
+called software entropy. And this is
+exactly what I was seeing. Entropy is
+
+186
+00:03:16,950 --> 00:03:16,960
+exactly what I was seeing. Entropy is
+ 
+
+187
+00:03:16,960 --> 00:03:19,510
+exactly what I was seeing. Entropy is
+the idea that things tend towards um
+
+188
+00:03:19,510 --> 00:03:19,520
+the idea that things tend towards um
+ 
+
+189
+00:03:19,520 --> 00:03:21,750
+the idea that things tend towards um
+disaster and uh floating away from each
+
+190
+00:03:21,750 --> 00:03:21,760
+disaster and uh floating away from each
+ 
+
+191
+00:03:21,760 --> 00:03:23,910
+disaster and uh floating away from each
+other and collapse. And this is exactly
+
+192
+00:03:23,910 --> 00:03:23,920
+other and collapse. And this is exactly
+ 
+
+193
+00:03:23,920 --> 00:03:25,510
+other and collapse. And this is exactly
+how most software systems behave, too,
+
+194
+00:03:25,510 --> 00:03:25,520
+how most software systems behave, too,
+ 
+
+195
+00:03:25,520 --> 00:03:27,070
+how most software systems behave, too,
+is that every time you make a change to
+
+196
+00:03:27,070 --> 00:03:27,080
+is that every time you make a change to
+ 
+
+197
+00:03:27,080 --> 00:03:28,750
+is that every time you make a change to
+a code base, if you're only thinking
+
+198
+00:03:28,750 --> 00:03:28,760
+a code base, if you're only thinking
+ 
+
+199
+00:03:28,760 --> 00:03:30,470
+a code base, if you're only thinking
+about that change and not thinking about
+
+200
+00:03:30,470 --> 00:03:30,480
+about that change and not thinking about
+ 
+
+201
+00:03:30,480 --> 00:03:32,830
+about that change and not thinking about
+the design of the whole system, your
+
+202
+00:03:32,830 --> 00:03:32,840
+the design of the whole system, your
+ 
+
+203
+00:03:32,840 --> 00:03:33,990
+the design of the whole system, your
+code base is going to get worse and
+
+204
+00:03:33,990 --> 00:03:34,000
+code base is going to get worse and
+ 
+
+205
+00:03:34,000 --> 00:03:35,830
+code base is going to get worse and
+worse and worse. And that's what I was
+
+206
+00:03:35,830 --> 00:03:35,840
+worse and worse. And that's what I was
+ 
+
+207
+00:03:35,840 --> 00:03:36,870
+worse and worse. And that's what I was
+seeing.
+
+208
+00:03:36,870 --> 00:03:36,880
+seeing.
+ 
+
+209
+00:03:36,880 --> 00:03:39,110
+seeing.
+Everything inside the specs-to-code idea
+
+210
+00:03:39,110 --> 00:03:39,120
+Everything inside the specs-to-code idea
+ 
+
+211
+00:03:39,120 --> 00:03:40,430
+Everything inside the specs-to-code idea
+that you just run the compiler again and
+
+212
+00:03:40,430 --> 00:03:40,440
+that you just run the compiler again and
+ 
+
+213
+00:03:40,440 --> 00:03:43,190
+that you just run the compiler again and
+again was making worse code.
+
+214
+00:03:43,190 --> 00:03:43,200
+again was making worse code.
+ 
+
+215
+00:03:43,200 --> 00:03:46,110
+again was making worse code.
+Now, there's an idea that sort of drives
+
+216
+00:03:46,110 --> 00:03:46,120
+Now, there's an idea that sort of drives
+ 
+
+217
+00:03:46,120 --> 00:03:47,910
+Now, there's an idea that sort of drives
+the specs-to-code movement,
+
+218
+00:03:47,910 --> 00:03:47,920
+the specs-to-code movement,
+ 
+
+219
+00:03:47,920 --> 00:03:50,430
+the specs-to-code movement,
+which is that code is cheap. Raise your
+
+220
+00:03:50,430 --> 00:03:50,440
+which is that code is cheap. Raise your
+ 
+
+221
+00:03:50,440 --> 00:03:51,750
+which is that code is cheap. Raise your
+hand if you've heard that phrase before,
+
+222
+00:03:51,750 --> 00:03:51,760
+hand if you've heard that phrase before,
+ 
+
+223
+00:03:51,760 --> 00:03:54,990
+hand if you've heard that phrase before,
+that code is cheap. Yeah.
+
+224
+00:03:54,990 --> 00:03:55,000
+that code is cheap. Yeah.
+ 
+
+225
+00:03:55,000 --> 00:03:57,550
+that code is cheap. Yeah.
+Well, I don't think this is right.
+
+226
+00:03:57,550 --> 00:03:57,560
+Well, I don't think this is right.
+ 
+
+227
+00:03:57,560 --> 00:04:00,270
+Well, I don't think this is right.
+I think code is not cheap. In fact, bad
+
+228
+00:04:00,270 --> 00:04:00,280
+I think code is not cheap. In fact, bad
+ 
+
+229
+00:04:00,280 --> 00:04:02,430
+I think code is not cheap. In fact, bad
+code is the most expensive it's ever
+
+230
+00:04:02,430 --> 00:04:02,440
+code is the most expensive it's ever
+ 
+
+231
+00:04:02,440 --> 00:04:03,590
+code is the most expensive it's ever
+been.
+
+232
+00:04:03,590 --> 00:04:03,600
+been.
+ 
+
+233
+00:04:03,600 --> 00:04:04,950
+been.
+Because if you have a code base that's
+
+234
+00:04:04,950 --> 00:04:04,960
+Because if you have a code base that's
+ 
+
+235
+00:04:04,960 --> 00:04:07,750
+Because if you have a code base that's
+hard to change, you're not able to take
+
+236
+00:04:07,750 --> 00:04:07,760
+hard to change, you're not able to take
+ 
+
+237
+00:04:07,760 --> 00:04:10,070
+hard to change, you're not able to take
+all of the bounty that AI can offer, cuz
+
+238
+00:04:10,070 --> 00:04:10,080
+all of the bounty that AI can offer, cuz
+ 
+
+239
+00:04:10,080 --> 00:04:12,470
+all of the bounty that AI can offer, cuz
+AI in a good code base actually does
+
+240
+00:04:12,470 --> 00:04:12,480
+AI in a good code base actually does
+ 
+
+241
+00:04:12,480 --> 00:04:15,110
+AI in a good code base actually does
+really, really well.
+
+242
+00:04:15,110 --> 00:04:15,120
+really, really well.
+ 
+
+243
+00:04:15,120 --> 00:04:16,910
+really, really well.
+And this means good code bases matter
+
+244
+00:04:16,910 --> 00:04:16,920
+And this means good code bases matter
+ 
+
+245
+00:04:16,920 --> 00:04:18,590
+And this means good code bases matter
+more than ever, which means software
+
+246
+00:04:18,590 --> 00:04:18,600
+more than ever, which means software
+ 
+
+247
+00:04:18,600 --> 00:04:20,390
+more than ever, which means software
+fundamentals matter more than ever.
+
+248
+00:04:20,390 --> 00:04:20,400
+fundamentals matter more than ever.
+ 
+
+249
+00:04:20,400 --> 00:04:22,870
+fundamentals matter more than ever.
+That's the thesis of this talk.
+
+250
+00:04:22,870 --> 00:04:22,880
+That's the thesis of this talk.
+ 
+
+251
+00:04:22,880 --> 00:04:23,950
+That's the thesis of this talk.
+So let's actually get into practical
+
+252
+00:04:23,950 --> 00:04:23,960
+So let's actually get into practical
+ 
+
+253
+00:04:23,960 --> 00:04:25,390
+So let's actually get into practical
+stuff.
+
+254
+00:04:25,390 --> 00:04:25,400
+stuff.
+ 
+
+255
+00:04:25,400 --> 00:04:26,470
+stuff.
+I'm going to talk about different
+
+256
+00:04:26,470 --> 00:04:26,480
+I'm going to talk about different
+ 
+
+257
+00:04:26,480 --> 00:04:27,750
+I'm going to talk about different
+failure modes that you may have
+
+258
+00:04:27,750 --> 00:04:27,760
+failure modes that you may have
+ 
+
+259
+00:04:27,760 --> 00:04:28,830
+failure modes that you may have
+experienced, or you may not have
+
+260
+00:04:28,830 --> 00:04:28,840
+experienced, or you may not have
+ 
+
+261
+00:04:28,840 --> 00:04:30,870
+experienced, or you may not have
+experienced yet with AI, and how you can
+
+262
+00:04:30,870 --> 00:04:30,880
+experienced yet with AI, and how you can
+ 
+
+263
+00:04:30,880 --> 00:04:32,830
+experienced yet with AI, and how you can
+avoid them by just going back to old
+
+264
+00:04:32,830 --> 00:04:32,840
+avoid them by just going back to old
+ 
+
+265
+00:04:32,840 --> 00:04:34,150
+avoid them by just going back to old
+books and looking at good software
+
+266
+00:04:34,150 --> 00:04:34,160
+books and looking at good software
+ 
+
+267
+00:04:34,160 --> 00:04:36,630
+books and looking at good software
+practices. Sound good?
+
+268
+00:04:36,630 --> 00:04:36,640
+practices. Sound good?
+ 
+
+269
+00:04:36,640 --> 00:04:38,670
+practices. Sound good?
+So the first one is that the AI didn't
+
+270
+00:04:38,670 --> 00:04:38,680
+So the first one is that the AI didn't
+ 
+
+271
+00:04:38,680 --> 00:04:40,710
+So the first one is that the AI didn't
+do what I wanted.
+
+272
+00:04:40,710 --> 00:04:40,720
+do what I wanted.
+ 
+
+273
+00:04:40,720 --> 00:04:42,430
+do what I wanted.
+You know, I I thought I had a good idea
+
+274
+00:04:42,430 --> 00:04:42,440
+You know, I I thought I had a good idea
+ 
+
+275
+00:04:42,440 --> 00:04:43,670
+You know, I I thought I had a good idea
+in my head, and the AI just did
+
+276
+00:04:43,670 --> 00:04:43,680
+in my head, and the AI just did
+ 
+
+277
+00:04:43,680 --> 00:04:45,110
+in my head, and the AI just did
+something totally different, or it did
+
+278
+00:04:45,110 --> 00:04:45,120
+something totally different, or it did
+ 
+
+279
+00:04:45,120 --> 00:04:47,870
+something totally different, or it did
+some uh like specs that I, you know, it
+
+280
+00:04:47,870 --> 00:04:47,880
+some uh like specs that I, you know, it
+ 
+
+281
+00:04:47,880 --> 00:04:49,150
+some uh like specs that I, you know, it
+just made something I didn't want. Raise
+
+282
+00:04:49,150 --> 00:04:49,160
+just made something I didn't want. Raise
+ 
+
+283
+00:04:49,160 --> 00:04:51,710
+just made something I didn't want. Raise
+your hand if you've hit this mode.
+
+284
+00:04:51,710 --> 00:04:51,720
+your hand if you've hit this mode.
+ 
+
+285
+00:04:51,720 --> 00:04:53,270
+your hand if you've hit this mode.
+Cool. Okay.
+
+286
+00:04:53,270 --> 00:04:53,280
+Cool. Okay.
+ 
+
+287
+00:04:53,280 --> 00:04:54,790
+Cool. Okay.
+Well,
+
+288
+00:04:54,790 --> 00:04:54,800
+Well,
+ 
+
+289
+00:04:54,800 --> 00:04:55,790
+Well,
+this is what they say in The Pragmatic
+
+290
+00:04:55,790 --> 00:04:55,800
+this is what they say in The Pragmatic
+ 
+
+291
+00:04:55,800 --> 00:04:57,750
+this is what they say in The Pragmatic
+Programmer, is that no one knows exactly
+
+292
+00:04:57,750 --> 00:04:57,760
+Programmer, is that no one knows exactly
+ 
+
+293
+00:04:57,760 --> 00:05:00,350
+Programmer, is that no one knows exactly
+what they want. It's that you and the
+
+294
+00:05:00,350 --> 00:05:00,360
+what they want. It's that you and the
+ 
+
+295
+00:05:00,360 --> 00:05:02,350
+what they want. It's that you and the
+AI, there is a communication barrier
+
+296
+00:05:02,350 --> 00:05:02,360
+AI, there is a communication barrier
+ 
+
+297
+00:05:02,360 --> 00:05:03,990
+AI, there is a communication barrier
+there, right?
+
+298
+00:05:03,990 --> 00:05:04,000
+there, right?
+ 
+
+299
+00:05:04,000 --> 00:05:05,630
+there, right?
+And so when you're talking to the AI,
+
+300
+00:05:05,630 --> 00:05:05,640
+And so when you're talking to the AI,
+ 
+
+301
+00:05:05,640 --> 00:05:07,070
+And so when you're talking to the AI,
+that's kind of like the AI doing its
+
+302
+00:05:07,070 --> 00:05:07,080
+that's kind of like the AI doing its
+ 
+
+303
+00:05:07,080 --> 00:05:09,430
+that's kind of like the AI doing its
+requirements gathering. It's basically
+
+304
+00:05:09,430 --> 00:05:09,440
+requirements gathering. It's basically
+ 
+
+305
+00:05:09,440 --> 00:05:11,390
+requirements gathering. It's basically
+working out from you what it is that you
+
+306
+00:05:11,390 --> 00:05:11,400
+working out from you what it is that you
+ 
+
+307
+00:05:11,400 --> 00:05:12,750
+working out from you what it is that you
+need.
+
+308
+00:05:12,750 --> 00:05:12,760
+need.
+ 
+
+309
+00:05:12,760 --> 00:05:14,310
+need.
+And
+
+310
+00:05:14,310 --> 00:05:14,320
+And
+ 
+
+311
+00:05:14,320 --> 00:05:16,670
+And
+I realized that there was another book,
+
+312
+00:05:16,670 --> 00:05:16,680
+I realized that there was another book,
+ 
+
+313
+00:05:16,680 --> 00:05:17,830
+I realized that there was another book,
+Frederick P. Brooks' The Design of
+
+314
+00:05:17,830 --> 00:05:17,840
+Frederick P. Brooks' The Design of
+ 
+
+315
+00:05:17,840 --> 00:05:19,030
+Frederick P. Brooks' The Design of
+Design,
+
+316
+00:05:19,030 --> 00:05:19,040
+Design,
+ 
+
+317
+00:05:19,040 --> 00:05:20,510
+Design,
+and it talks about this idea called the
+
+318
+00:05:20,510 --> 00:05:20,520
+and it talks about this idea called the
+ 
+
+319
+00:05:20,520 --> 00:05:22,270
+and it talks about this idea called the
+design concept.
+
+320
+00:05:22,270 --> 00:05:22,280
+design concept.
+ 
+
+321
+00:05:22,280 --> 00:05:23,430
+design concept.
+It's that when you have more than one
+
+322
+00:05:23,430 --> 00:05:23,440
+It's that when you have more than one
+ 
+
+323
+00:05:23,440 --> 00:05:25,830
+It's that when you have more than one
+person designing something together, you
+
+324
+00:05:25,830 --> 00:05:25,840
+person designing something together, you
+ 
+
+325
+00:05:25,840 --> 00:05:28,470
+person designing something together, you
+have this idea sort of floating between
+
+326
+00:05:28,470 --> 00:05:28,480
+have this idea sort of floating between
+ 
+
+327
+00:05:28,480 --> 00:05:30,590
+have this idea sort of floating between
+you, this ephemeral idea of the thing
+
+328
+00:05:30,590 --> 00:05:30,600
+you, this ephemeral idea of the thing
+ 
+
+329
+00:05:30,600 --> 00:05:32,390
+you, this ephemeral idea of the thing
+that you're building. And that thing
+
+330
+00:05:32,390 --> 00:05:32,400
+that you're building. And that thing
+ 
+
+331
+00:05:32,400 --> 00:05:33,990
+that you're building. And that thing
+that you're building, or the idea of it,
+
+332
+00:05:33,990 --> 00:05:34,000
+that you're building, or the idea of it,
+ 
+
+333
+00:05:34,000 --> 00:05:35,990
+that you're building, or the idea of it,
+is called the design concept. It's not
+
+334
+00:05:35,990 --> 00:05:36,000
+is called the design concept. It's not
+ 
+
+335
+00:05:36,000 --> 00:05:37,710
+is called the design concept. It's not
+an asset, it's not something you can put
+
+336
+00:05:37,710 --> 00:05:37,720
+an asset, it's not something you can put
+ 
+
+337
+00:05:37,720 --> 00:05:40,270
+an asset, it's not something you can put
+in a markdown file, it is the invisible
+
+338
+00:05:40,270 --> 00:05:40,280
+in a markdown file, it is the invisible
+ 
+
+339
+00:05:40,280 --> 00:05:41,390
+in a markdown file, it is the invisible
+sort of
+
+340
+00:05:41,390 --> 00:05:41,400
+sort of
+ 
+
+341
+00:05:41,400 --> 00:05:44,030
+sort of
+theory of what you're building.
+
+342
+00:05:44,030 --> 00:05:44,040
+theory of what you're building.
+ 
+
+343
+00:05:44,040 --> 00:05:45,990
+theory of what you're building.
+And so I thought, "Okay, that's what's
+
+344
+00:05:45,990 --> 00:05:46,000
+And so I thought, "Okay, that's what's
+ 
+
+345
+00:05:46,000 --> 00:05:48,110
+And so I thought, "Okay, that's what's
+going on. Me and the AI don't share a
+
+346
+00:05:48,110 --> 00:05:48,120
+going on. Me and the AI don't share a
+ 
+
+347
+00:05:48,120 --> 00:05:50,070
+going on. Me and the AI don't share a
+design concept." So I came up with a
+
+348
+00:05:50,070 --> 00:05:50,080
+design concept." So I came up with a
+ 
+
+349
+00:05:50,080 --> 00:05:51,270
+design concept." So I came up with a
+skill.
+
+350
+00:05:51,270 --> 00:05:51,280
+skill.
+ 
+
+351
+00:05:51,280 --> 00:05:53,390
+skill.
+The skill is very, very simple. It's
+
+352
+00:05:53,390 --> 00:05:53,400
+The skill is very, very simple. It's
+ 
+
+353
+00:05:53,400 --> 00:05:54,790
+The skill is very, very simple. It's
+called Grill Me,
+
+354
+00:05:54,790 --> 00:05:54,800
+called Grill Me,
+ 
+
+355
+00:05:54,800 --> 00:05:57,070
+called Grill Me,
+and it looks like this.
+
+356
+00:05:57,070 --> 00:05:57,080
+and it looks like this.
+ 
+
+357
+00:05:57,080 --> 00:05:58,910
+and it looks like this.
+"Interview me relentlessly about every
+
+358
+00:05:58,910 --> 00:05:58,920
+"Interview me relentlessly about every
+ 
+
+359
+00:05:58,920 --> 00:06:01,430
+"Interview me relentlessly about every
+aspect of this plan until we reach a
+
+360
+00:06:01,430 --> 00:06:01,440
+aspect of this plan until we reach a
+ 
+
+361
+00:06:01,440 --> 00:06:03,870
+aspect of this plan until we reach a
+shared understanding. Walk down each
+
+362
+00:06:03,870 --> 00:06:03,880
+shared understanding. Walk down each
+ 
+
+363
+00:06:03,880 --> 00:06:05,190
+shared understanding. Walk down each
+branch of the design tree, which is
+
+364
+00:06:05,190 --> 00:06:05,200
+branch of the design tree, which is
+ 
+
+365
+00:06:05,200 --> 00:06:07,430
+branch of the design tree, which is
+another thing from Frederick P. Brooks,
+
+366
+00:06:07,430 --> 00:06:07,440
+another thing from Frederick P. Brooks,
+ 
+
+367
+00:06:07,440 --> 00:06:09,030
+another thing from Frederick P. Brooks,
+resolving dependencies between decisions
+
+368
+00:06:09,030 --> 00:06:09,040
+resolving dependencies between decisions
+ 
+
+369
+00:06:09,040 --> 00:06:10,470
+resolving dependencies between decisions
+one by one."
+
+370
+00:06:10,470 --> 00:06:10,480
+one by one."
+ 
+
+371
+00:06:10,480 --> 00:06:12,670
+one by one."
+This skill is like uh the repo
+
+372
+00:06:12,670 --> 00:06:12,680
+This skill is like uh the repo
+ 
+
+373
+00:06:12,680 --> 00:06:14,310
+This skill is like uh the repo
+containing this skill has like 13,000
+
+374
+00:06:14,310 --> 00:06:14,320
+containing this skill has like 13,000
+ 
+
+375
+00:06:14,320 --> 00:06:15,670
+containing this skill has like 13,000
+stars or something. Like, it just went
+
+376
+00:06:15,670 --> 00:06:15,680
+stars or something. Like, it just went
+ 
+
+377
+00:06:15,680 --> 00:06:17,510
+stars or something. Like, it just went
+nuts, went viral. People love this
+
+378
+00:06:17,510 --> 00:06:17,520
+nuts, went viral. People love this
+ 
+
+379
+00:06:17,520 --> 00:06:20,230
+nuts, went viral. People love this
+thing. It These couple of lines means
+
+380
+00:06:20,230 --> 00:06:20,240
+thing. It These couple of lines means
+ 
+
+381
+00:06:20,240 --> 00:06:23,470
+thing. It These couple of lines means
+the AI asks you like 40 questions, 60
+
+382
+00:06:23,470 --> 00:06:23,480
+the AI asks you like 40 questions, 60
+ 
+
+383
+00:06:23,480 --> 00:06:25,870
+the AI asks you like 40 questions, 60
+questions. I've had it ask uh people 100
+
+384
+00:06:25,870 --> 00:06:25,880
+questions. I've had it ask uh people 100
+ 
+
+385
+00:06:25,880 --> 00:06:27,910
+questions. I've had it ask uh people 100
+questions before it's satisfied they've
+
+386
+00:06:27,910 --> 00:06:27,920
+questions before it's satisfied they've
+ 
+
+387
+00:06:27,920 --> 00:06:29,670
+questions before it's satisfied they've
+reached a shared understanding. And it
+
+388
+00:06:29,670 --> 00:06:29,680
+reached a shared understanding. And it
+ 
+
+389
+00:06:29,680 --> 00:06:32,110
+reached a shared understanding. And it
+means it turns the AI into a kind of
+
+390
+00:06:32,110 --> 00:06:32,120
+means it turns the AI into a kind of
+ 
+
+391
+00:06:32,120 --> 00:06:34,070
+means it turns the AI into a kind of
+adversary, where it's just continually
+
+392
+00:06:34,070 --> 00:06:34,080
+adversary, where it's just continually
+ 
+
+393
+00:06:34,080 --> 00:06:36,230
+adversary, where it's just continually
+pinging you ideas and trying to reach a
+
+394
+00:06:36,230 --> 00:06:36,240
+pinging you ideas and trying to reach a
+ 
+
+395
+00:06:36,240 --> 00:06:38,110
+pinging you ideas and trying to reach a
+shared understanding.
+
+396
+00:06:38,110 --> 00:06:38,120
+shared understanding.
+ 
+
+397
+00:06:38,120 --> 00:06:39,470
+shared understanding.
+And that means that the conversation
+
+398
+00:06:39,470 --> 00:06:39,480
+And that means that the conversation
+ 
+
+399
+00:06:39,480 --> 00:06:41,510
+And that means that the conversation
+that you then generate, you can take
+
+400
+00:06:41,510 --> 00:06:41,520
+that you then generate, you can take
+ 
+
+401
+00:06:41,520 --> 00:06:43,510
+that you then generate, you can take
+that and turn it into a product
+
+402
+00:06:43,510 --> 00:06:43,520
+that and turn it into a product
+ 
+
+403
+00:06:43,520 --> 00:06:45,510
+that and turn it into a product
+requirements document or something. Or
+
+404
+00:06:45,510 --> 00:06:45,520
+requirements document or something. Or
+ 
+
+405
+00:06:45,520 --> 00:06:48,510
+requirements document or something. Or
+if it's a small change, you can just uh
+
+406
+00:06:48,510 --> 00:06:48,520
+if it's a small change, you can just uh
+ 
+
+407
+00:06:48,520 --> 00:06:49,430
+if it's a small change, you can just uh
+do
+
+408
+00:06:49,430 --> 00:06:49,440
+do
+ 
+
+409
+00:06:49,440 --> 00:06:51,990
+do
+uh turn it directly into issues.
+
+410
+00:06:51,990 --> 00:06:52,000
+uh turn it directly into issues.
+ 
+
+411
+00:06:52,000 --> 00:06:53,470
+uh turn it directly into issues.
+And then your AFK agent will then pick
+
+412
+00:06:53,470 --> 00:06:53,480
+And then your AFK agent will then pick
+ 
+
+413
+00:06:53,480 --> 00:06:54,630
+And then your AFK agent will then pick
+it up.
+
+414
+00:06:54,630 --> 00:06:54,640
+it up.
+ 
+
+415
+00:06:54,640 --> 00:06:55,550
+it up.
+And
+
+416
+00:06:55,550 --> 00:06:55,560
+And
+ 
+
+417
+00:06:55,560 --> 00:06:57,190
+And
+don't at me on this, but I personally
+
+418
+00:06:57,190 --> 00:06:57,200
+don't at me on this, but I personally
+ 
+
+419
+00:06:57,200 --> 00:06:59,350
+don't at me on this, but I personally
+believe this is better than the default
+
+420
+00:06:59,350 --> 00:06:59,360
+believe this is better than the default
+ 
+
+421
+00:06:59,360 --> 00:07:02,190
+believe this is better than the default
+plan mode in uh the
+
+422
+00:07:02,190 --> 00:07:02,200
+plan mode in uh the
+ 
+
+423
+00:07:02,200 --> 00:07:04,430
+plan mode in uh the
+tool that I use, which is Clojure Code.
+
+424
+00:07:04,430 --> 00:07:04,440
+tool that I use, which is Clojure Code.
+ 
+
+425
+00:07:04,440 --> 00:07:07,030
+tool that I use, which is Clojure Code.
+Plan mode is extremely eager to create
+
+426
+00:07:07,030 --> 00:07:07,040
+Plan mode is extremely eager to create
+ 
+
+427
+00:07:07,040 --> 00:07:09,510
+Plan mode is extremely eager to create
+an asset. It really wants to uh just
+
+428
+00:07:09,510 --> 00:07:09,520
+an asset. It really wants to uh just
+ 
+
+429
+00:07:09,520 --> 00:07:12,230
+an asset. It really wants to uh just
+create a plan and start working.
+
+430
+00:07:12,230 --> 00:07:12,240
+create a plan and start working.
+ 
+
+431
+00:07:12,240 --> 00:07:15,590
+create a plan and start working.
+Whereas I think it's a lot nicer to
+
+432
+00:07:15,590 --> 00:07:15,600
+Whereas I think it's a lot nicer to
+ 
+
+433
+00:07:15,600 --> 00:07:18,750
+Whereas I think it's a lot nicer to
+reach a shared design concept first.
+
+434
+00:07:18,750 --> 00:07:18,760
+reach a shared design concept first.
+ 
+
+435
+00:07:18,760 --> 00:07:21,430
+reach a shared design concept first.
+So that's tip number one.
+
+436
+00:07:21,430 --> 00:07:21,440
+So that's tip number one.
+ 
+
+437
+00:07:21,440 --> 00:07:22,750
+So that's tip number one.
+Now, failure mode number two is that the
+
+438
+00:07:22,750 --> 00:07:22,760
+Now, failure mode number two is that the
+ 
+
+439
+00:07:22,760 --> 00:07:25,950
+Now, failure mode number two is that the
+AI is just way too verbose.
+
+440
+00:07:25,950 --> 00:07:25,960
+AI is just way too verbose.
+ 
+
+441
+00:07:25,960 --> 00:07:27,190
+AI is just way too verbose.
+It's like you're almost talking at
+
+442
+00:07:27,190 --> 00:07:27,200
+It's like you're almost talking at
+ 
+
+443
+00:07:27,200 --> 00:07:29,150
+It's like you're almost talking at
+cross-purposes with the AI. Raise your
+
+444
+00:07:29,150 --> 00:07:29,160
+cross-purposes with the AI. Raise your
+ 
+
+445
+00:07:29,160 --> 00:07:31,670
+cross-purposes with the AI. Raise your
+hand if you uh feel this. If you've ever
+
+446
+00:07:31,670 --> 00:07:31,680
+hand if you uh feel this. If you've ever
+ 
+
+447
+00:07:31,680 --> 00:07:33,230
+hand if you uh feel this. If you've ever
+experienced that failure mode. Yeah.
+
+448
+00:07:33,230 --> 00:07:33,240
+experienced that failure mode. Yeah.
+ 
+
+449
+00:07:33,240 --> 00:07:34,710
+experienced that failure mode. Yeah.
+It's kind of like the AI is like talking
+
+450
+00:07:34,710 --> 00:07:34,720
+It's kind of like the AI is like talking
+ 
+
+451
+00:07:34,720 --> 00:07:36,830
+It's kind of like the AI is like talking
+just using too many words to try to
+
+452
+00:07:36,830 --> 00:07:36,840
+just using too many words to try to
+ 
+
+453
+00:07:36,840 --> 00:07:38,590
+just using too many words to try to
+communicate what it's doing. It's not
+
+454
+00:07:38,590 --> 00:07:38,600
+communicate what it's doing. It's not
+ 
+
+455
+00:07:38,600 --> 00:07:40,270
+communicate what it's doing. It's not
+like you're talking uh using the same
+
+456
+00:07:40,270 --> 00:07:40,280
+like you're talking uh using the same
+ 
+
+457
+00:07:40,280 --> 00:07:41,910
+like you're talking uh using the same
+language.
+
+458
+00:07:41,910 --> 00:07:41,920
+language.
+ 
+
+459
+00:07:41,920 --> 00:07:44,550
+language.
+And this to me felt very, very familiar,
+
+460
+00:07:44,550 --> 00:07:44,560
+And this to me felt very, very familiar,
+ 
+
+461
+00:07:44,560 --> 00:07:46,590
+And this to me felt very, very familiar,
+right? If you've ever been a developer
+
+462
+00:07:46,590 --> 00:07:46,600
+right? If you've ever been a developer
+ 
+
+463
+00:07:46,600 --> 00:07:48,270
+right? If you've ever been a developer
+for a long time, and you've worked with,
+
+464
+00:07:48,270 --> 00:07:48,280
+for a long time, and you've worked with,
+ 
+
+465
+00:07:48,280 --> 00:07:49,710
+for a long time, and you've worked with,
+let's say, domain experts, someone
+
+466
+00:07:49,710 --> 00:07:49,720
+let's say, domain experts, someone
+ 
+
+467
+00:07:49,720 --> 00:07:51,990
+let's say, domain experts, someone
+building an application, um let's say
+
+468
+00:07:51,990 --> 00:07:52,000
+building an application, um let's say
+ 
+
+469
+00:07:52,000 --> 00:07:53,310
+building an application, um let's say
+the domain expert wants you to build
+
+470
+00:07:53,310 --> 00:07:53,320
+the domain expert wants you to build
+ 
+
+471
+00:07:53,320 --> 00:07:54,390
+the domain expert wants you to build
+something on uh I don't know,
+
+472
+00:07:54,390 --> 00:07:54,400
+something on uh I don't know,
+ 
+
+473
+00:07:54,400 --> 00:07:55,670
+something on uh I don't know,
+microchips. You have no idea what
+
+474
+00:07:55,670 --> 00:07:55,680
+microchips. You have no idea what
+ 
+
+475
+00:07:55,680 --> 00:07:57,030
+microchips. You have no idea what
+microchips are.
+
+476
+00:07:57,030 --> 00:07:57,040
+microchips are.
+ 
+
+477
+00:07:57,040 --> 00:07:58,470
+microchips are.
+You need to establish some kind of
+
+478
+00:07:58,470 --> 00:07:58,480
+You need to establish some kind of
+ 
+
+479
+00:07:58,480 --> 00:08:00,950
+You need to establish some kind of
+shared language, right? Cuz otherwise,
+
+480
+00:08:00,950 --> 00:08:00,960
+shared language, right? Cuz otherwise,
+ 
+
+481
+00:08:00,960 --> 00:08:01,870
+shared language, right? Cuz otherwise,
+they're going to be using terms you
+
+482
+00:08:01,870 --> 00:08:01,880
+they're going to be using terms you
+ 
+
+483
+00:08:01,880 --> 00:08:02,790
+they're going to be using terms you
+don't understand. You're going to be
+
+484
+00:08:02,790 --> 00:08:02,800
+don't understand. You're going to be
+ 
+
+485
+00:08:02,800 --> 00:08:04,470
+don't understand. You're going to be
+translating that into code that maybe
+
+486
+00:08:04,470 --> 00:08:04,480
+translating that into code that maybe
+ 
+
+487
+00:08:04,480 --> 00:08:06,150
+translating that into code that maybe
+you don't even understand, and certainly
+
+488
+00:08:06,150 --> 00:08:06,160
+you don't even understand, and certainly
+ 
+
+489
+00:08:06,160 --> 00:08:07,750
+you don't even understand, and certainly
+the domain expert won't.
+
+490
+00:08:07,750 --> 00:08:07,760
+the domain expert won't.
+ 
+
+491
+00:08:07,760 --> 00:08:11,830
+the domain expert won't.
+And so there's this kind of language
+
+492
+00:08:11,830 --> 00:08:11,840
+
+ 
+
+493
+00:08:11,840 --> 00:08:14,310
+
+gap between you and the domain I went
+
+494
+00:08:14,310 --> 00:08:14,320
+gap between you and the domain I went
+ 
+
+495
+00:08:14,320 --> 00:08:17,870
+gap between you and the domain I went
+back to domain-driven design, DDD.
+
+496
+00:08:17,870 --> 00:08:17,880
+back to domain-driven design, DDD.
+ 
+
+497
+00:08:17,880 --> 00:08:19,030
+back to domain-driven design, DDD.
+This is something I'm still kind of on
+
+498
+00:08:19,030 --> 00:08:19,040
+This is something I'm still kind of on
+ 
+
+499
+00:08:19,040 --> 00:08:20,390
+This is something I'm still kind of on
+the edge of exploring, but everything
+
+500
+00:08:20,390 --> 00:08:20,400
+the edge of exploring, but everything
+ 
+
+501
+00:08:20,400 --> 00:08:23,190
+the edge of exploring, but everything
+I'm reading about DDD is just music to
+
+502
+00:08:23,190 --> 00:08:23,200
+I'm reading about DDD is just music to
+ 
+
+503
+00:08:23,200 --> 00:08:25,590
+I'm reading about DDD is just music to
+my ears. I freaking love it.
+
+504
+00:08:25,590 --> 00:08:25,600
+my ears. I freaking love it.
+ 
+
+505
+00:08:25,600 --> 00:08:27,950
+my ears. I freaking love it.
+And DDD has a concept of a ubiquitous
+
+506
+00:08:27,950 --> 00:08:27,960
+And DDD has a concept of a ubiquitous
+ 
+
+507
+00:08:27,960 --> 00:08:30,870
+And DDD has a concept of a ubiquitous
+language.
+
+508
+00:08:30,870 --> 00:08:30,880
+
+ 
+
+509
+00:08:30,880 --> 00:08:32,310
+
+With a ubiquitous language,
+
+510
+00:08:32,310 --> 00:08:32,320
+With a ubiquitous language,
+ 
+
+511
+00:08:32,320 --> 00:08:34,190
+With a ubiquitous language,
+conversations among developers, and
+
+512
+00:08:34,190 --> 00:08:34,200
+conversations among developers, and
+ 
+
+513
+00:08:34,200 --> 00:08:35,589
+conversations among developers, and
+expressions of the code, and
+
+514
+00:08:35,589 --> 00:08:35,599
+expressions of the code, and
+ 
+
+515
+00:08:35,599 --> 00:08:37,029
+expressions of the code, and
+conversations with domain experts are
+
+516
+00:08:37,029 --> 00:08:37,039
+conversations with domain experts are
+ 
+
+517
+00:08:37,039 --> 00:08:39,110
+conversations with domain experts are
+all derived from the same domain model.
+
+518
+00:08:39,110 --> 00:08:39,120
+all derived from the same domain model.
+ 
+
+519
+00:08:39,120 --> 00:08:41,630
+all derived from the same domain model.
+It's essentially a markdown file full of
+
+520
+00:08:41,630 --> 00:08:41,640
+It's essentially a markdown file full of
+ 
+
+521
+00:08:41,640 --> 00:08:43,670
+It's essentially a markdown file full of
+a list of terms that you and the AI have
+
+522
+00:08:43,670 --> 00:08:43,680
+a list of terms that you and the AI have
+ 
+
+523
+00:08:43,680 --> 00:08:45,990
+a list of terms that you and the AI have
+in common. And you really focus on those
+
+524
+00:08:45,990 --> 00:08:46,000
+in common. And you really focus on those
+ 
+
+525
+00:08:46,000 --> 00:08:47,430
+in common. And you really focus on those
+terms, and you really make sure that
+
+526
+00:08:47,430 --> 00:08:47,440
+terms, and you really make sure that
+ 
+
+527
+00:08:47,440 --> 00:08:49,150
+terms, and you really make sure that
+they're aligned with what it actually
+
+528
+00:08:49,150 --> 00:08:49,160
+they're aligned with what it actually
+ 
+
+529
+00:08:49,160 --> 00:08:51,510
+they're aligned with what it actually
+means, and you use them all the time in
+
+530
+00:08:51,510 --> 00:08:51,520
+means, and you use them all the time in
+ 
+
+531
+00:08:51,520 --> 00:08:52,950
+means, and you use them all the time in
+the code, when you're talking about the
+
+532
+00:08:52,950 --> 00:08:52,960
+the code, when you're talking about the
+ 
+
+533
+00:08:52,960 --> 00:08:54,270
+the code, when you're talking about the
+code, when you're talking to domain
+
+534
+00:08:54,270 --> 00:08:54,280
+code, when you're talking to domain
+ 
+
+535
+00:08:54,280 --> 00:08:55,910
+code, when you're talking to domain
+experts, or in our case, when you're
+
+536
+00:08:55,910 --> 00:08:55,920
+experts, or in our case, when you're
+ 
+
+537
+00:08:55,920 --> 00:08:57,630
+experts, or in our case, when you're
+talking with AI.
+
+538
+00:08:57,630 --> 00:08:57,640
+talking with AI.
+ 
+
+539
+00:08:57,640 --> 00:08:59,750
+talking with AI.
+So I made a skill.
+
+540
+00:08:59,750 --> 00:08:59,760
+So I made a skill.
+ 
+
+541
+00:08:59,760 --> 00:09:01,870
+So I made a skill.
+This skill is the ubiquitous language
+
+542
+00:09:01,870 --> 00:09:01,880
+This skill is the ubiquitous language
+ 
+
+543
+00:09:01,880 --> 00:09:03,710
+This skill is the ubiquitous language
+skill. Basically just scans your code
+
+544
+00:09:03,710 --> 00:09:03,720
+skill. Basically just scans your code
+ 
+
+545
+00:09:03,720 --> 00:09:07,470
+skill. Basically just scans your code
+base, looks for terminology, and then um
+
+546
+00:09:07,470 --> 00:09:07,480
+base, looks for terminology, and then um
+ 
+
+547
+00:09:07,480 --> 00:09:09,750
+base, looks for terminology, and then um
+creates a markdown file. Creates the
+
+548
+00:09:09,750 --> 00:09:09,760
+creates a markdown file. Creates the
+ 
+
+549
+00:09:09,760 --> 00:09:11,150
+creates a markdown file. Creates the
+ubiquitous language markdown file, a
+
+550
+00:09:11,150 --> 00:09:11,160
+ubiquitous language markdown file, a
+ 
+
+551
+00:09:11,160 --> 00:09:13,470
+ubiquitous language markdown file, a
+bunch of markdown tables with all of the
+
+552
+00:09:13,470 --> 00:09:13,480
+bunch of markdown tables with all of the
+ 
+
+553
+00:09:13,480 --> 00:09:14,830
+bunch of markdown tables with all of the
+terminology.
+
+554
+00:09:14,830 --> 00:09:14,840
+terminology.
+ 
+
+555
+00:09:14,840 --> 00:09:17,430
+terminology.
+And this, then I pass it to the AI,
+
+556
+00:09:17,430 --> 00:09:17,440
+And this, then I pass it to the AI,
+ 
+
+557
+00:09:17,440 --> 00:09:19,630
+And this, then I pass it to the AI,
+and I'm able to read it, too. And I
+
+558
+00:09:19,630 --> 00:09:19,640
+and I'm able to read it, too. And I
+ 
+
+559
+00:09:19,640 --> 00:09:21,110
+and I'm able to read it, too. And I
+actually have it open all the time when
+
+560
+00:09:21,110 --> 00:09:21,120
+actually have it open all the time when
+ 
+
+561
+00:09:21,120 --> 00:09:22,710
+actually have it open all the time when
+I'm grilling with the AI and planning
+
+562
+00:09:22,710 --> 00:09:22,720
+I'm grilling with the AI and planning
+ 
+
+563
+00:09:22,720 --> 00:09:24,950
+I'm grilling with the AI and planning
+and that. What I noticed by reading the
+
+564
+00:09:24,950 --> 00:09:24,960
+and that. What I noticed by reading the
+ 
+
+565
+00:09:24,960 --> 00:09:26,750
+and that. What I noticed by reading the
+thinking traces of the AI, it not only
+
+566
+00:09:26,750 --> 00:09:26,760
+thinking traces of the AI, it not only
+ 
+
+567
+00:09:26,760 --> 00:09:29,070
+thinking traces of the AI, it not only
+improves the planning, but it allows the
+
+568
+00:09:29,070 --> 00:09:29,080
+improves the planning, but it allows the
+ 
+
+569
+00:09:29,080 --> 00:09:32,190
+improves the planning, but it allows the
+AI to think in a less verbose way, and
+
+570
+00:09:32,190 --> 00:09:32,200
+AI to think in a less verbose way, and
+ 
+
+571
+00:09:32,200 --> 00:09:33,750
+AI to think in a less verbose way, and
+actually means that the implementation
+
+572
+00:09:33,750 --> 00:09:33,760
+actually means that the implementation
+ 
+
+573
+00:09:33,760 --> 00:09:36,030
+actually means that the implementation
+is more aligned with what you actually
+
+574
+00:09:36,030 --> 00:09:36,040
+is more aligned with what you actually
+ 
+
+575
+00:09:36,040 --> 00:09:38,430
+is more aligned with what you actually
+planned. So this has absolutely been a
+
+576
+00:09:38,430 --> 00:09:38,440
+planned. So this has absolutely been a
+ 
+
+577
+00:09:38,440 --> 00:09:41,310
+planned. So this has absolutely been a
+powerhouse. It's been unbelievably good.
+
+578
+00:09:41,310 --> 00:09:41,320
+powerhouse. It's been unbelievably good.
+ 
+
+579
+00:09:41,320 --> 00:09:42,590
+powerhouse. It's been unbelievably good.
+So that's tip number two. Create a
+
+580
+00:09:42,590 --> 00:09:42,600
+So that's tip number two. Create a
+ 
+
+581
+00:09:42,600 --> 00:09:45,910
+So that's tip number two. Create a
+shared language with the AI.
+
+582
+00:09:45,910 --> 00:09:45,920
+shared language with the AI.
+ 
+
+583
+00:09:45,920 --> 00:09:47,230
+shared language with the AI.
+So okay, let's imagine that you've
+
+584
+00:09:47,230 --> 00:09:47,240
+So okay, let's imagine that you've
+ 
+
+585
+00:09:47,240 --> 00:09:49,790
+So okay, let's imagine that you've
+aligned with the AI. You know what it is
+
+586
+00:09:49,790 --> 00:09:49,800
+aligned with the AI. You know what it is
+ 
+
+587
+00:09:49,800 --> 00:09:51,270
+aligned with the AI. You know what it is
+you're supposed to be building. The AI
+
+588
+00:09:51,270 --> 00:09:51,280
+you're supposed to be building. The AI
+ 
+
+589
+00:09:51,280 --> 00:09:53,510
+you're supposed to be building. The AI
+has built the right thing,
+
+590
+00:09:53,510 --> 00:09:53,520
+has built the right thing,
+ 
+
+591
+00:09:53,520 --> 00:09:55,430
+has built the right thing,
+but it doesn't work.
+
+592
+00:09:55,430 --> 00:09:55,440
+but it doesn't work.
+ 
+
+593
+00:09:55,440 --> 00:09:56,470
+but it doesn't work.
+Raise your hands if that's happened to
+
+594
+00:09:56,470 --> 00:09:56,480
+Raise your hands if that's happened to
+ 
+
+595
+00:09:56,480 --> 00:09:57,830
+Raise your hands if that's happened to
+you.
+
+596
+00:09:57,830 --> 00:09:57,840
+you.
+ 
+
+597
+00:09:57,840 --> 00:09:59,790
+you.
+Yeah, just doesn't work.
+
+598
+00:09:59,790 --> 00:09:59,800
+Yeah, just doesn't work.
+ 
+
+599
+00:09:59,800 --> 00:10:01,030
+Yeah, just doesn't work.
+Well, there's an obvious thing that we
+
+600
+00:10:01,030 --> 00:10:01,040
+Well, there's an obvious thing that we
+ 
+
+601
+00:10:01,040 --> 00:10:03,750
+Well, there's an obvious thing that we
+can do to make that better, which is we
+
+602
+00:10:03,750 --> 00:10:03,760
+can do to make that better, which is we
+ 
+
+603
+00:10:03,760 --> 00:10:06,190
+can do to make that better, which is we
+can use feedback loops. We can use um
+
+604
+00:10:06,190 --> 00:10:06,200
+can use feedback loops. We can use um
+ 
+
+605
+00:10:06,200 --> 00:10:07,670
+can use feedback loops. We can use um
+static types, you know, if you're not
+
+606
+00:10:07,670 --> 00:10:07,680
+static types, you know, if you're not
+ 
+
+607
+00:10:07,680 --> 00:10:09,230
+static types, you know, if you're not
+using TypeScript, uh
+
+608
+00:10:09,230 --> 00:10:09,240
+using TypeScript, uh
+ 
+
+609
+00:10:09,240 --> 00:10:12,270
+using TypeScript, uh
+that's crazy. Uh if you're not using uh
+
+610
+00:10:12,270 --> 00:10:12,280
+that's crazy. Uh if you're not using uh
+ 
+
+611
+00:10:12,280 --> 00:10:13,510
+that's crazy. Uh if you're not using uh
+if you're building a front-end app and
+
+612
+00:10:13,510 --> 00:10:13,520
+if you're building a front-end app and
+ 
+
+613
+00:10:13,520 --> 00:10:15,350
+if you're building a front-end app and
+you're not giving it the LLM access to
+
+614
+00:10:15,350 --> 00:10:15,360
+you're not giving it the LLM access to
+ 
+
+615
+00:10:15,360 --> 00:10:17,230
+you're not giving it the LLM access to
+the browser so it can look around,
+
+616
+00:10:17,230 --> 00:10:17,240
+the browser so it can look around,
+ 
+
+617
+00:10:17,240 --> 00:10:19,030
+the browser so it can look around,
+absolutely needs that.
+
+618
+00:10:19,030 --> 00:10:19,040
+absolutely needs that.
+ 
+
+619
+00:10:19,040 --> 00:10:21,110
+absolutely needs that.
+And you obviously also need automated
+
+620
+00:10:21,110 --> 00:10:21,120
+And you obviously also need automated
+ 
+
+621
+00:10:21,120 --> 00:10:23,230
+And you obviously also need automated
+tests.
+
+622
+00:10:23,230 --> 00:10:23,240
+tests.
+ 
+
+623
+00:10:23,240 --> 00:10:26,070
+tests.
+And one sort of
+
+624
+00:10:26,070 --> 00:10:26,080
+And one sort of
+ 
+
+625
+00:10:26,080 --> 00:10:28,110
+And one sort of
+thing I notice here is that even with
+
+626
+00:10:28,110 --> 00:10:28,120
+thing I notice here is that even with
+ 
+
+627
+00:10:28,120 --> 00:10:30,430
+thing I notice here is that even with
+these feedback loops, the LLM doesn't
+
+628
+00:10:30,430 --> 00:10:30,440
+these feedback loops, the LLM doesn't
+ 
+
+629
+00:10:30,440 --> 00:10:32,390
+these feedback loops, the LLM doesn't
+use them very well. It doesn't kind of
+
+630
+00:10:32,390 --> 00:10:32,400
+use them very well. It doesn't kind of
+ 
+
+631
+00:10:32,400 --> 00:10:34,670
+use them very well. It doesn't kind of
+like get the most out of its feedback
+
+632
+00:10:34,670 --> 00:10:34,680
+like get the most out of its feedback
+ 
+
+633
+00:10:34,680 --> 00:10:35,750
+like get the most out of its feedback
+loops in the way that a veteran
+
+634
+00:10:35,750 --> 00:10:35,760
+loops in the way that a veteran
+ 
+
+635
+00:10:35,760 --> 00:10:38,150
+loops in the way that a veteran
+developer would. And so it does what it
+
+636
+00:10:38,150 --> 00:10:38,160
+developer would. And so it does what it
+ 
+
+637
+00:10:38,160 --> 00:10:40,710
+developer would. And so it does what it
+tends to do is just does way too much at
+
+638
+00:10:40,710 --> 00:10:40,720
+tends to do is just does way too much at
+ 
+
+639
+00:10:40,720 --> 00:10:42,510
+tends to do is just does way too much at
+once. It will produce like a huge
+
+640
+00:10:42,510 --> 00:10:42,520
+once. It will produce like a huge
+ 
+
+641
+00:10:42,520 --> 00:10:44,270
+once. It will produce like a huge
+amounts of code and then think, "Oh, I
+
+642
+00:10:44,270 --> 00:10:44,280
+amounts of code and then think, "Oh, I
+ 
+
+643
+00:10:44,280 --> 00:10:45,270
+amounts of code and then think, "Oh, I
+should probably type check that
+
+644
+00:10:45,270 --> 00:10:45,280
+should probably type check that
+ 
+
+645
+00:10:45,280 --> 00:10:47,030
+should probably type check that
+actually." Or I should uh you know,
+
+646
+00:10:47,030 --> 00:10:47,040
+actually." Or I should uh you know,
+ 
+
+647
+00:10:47,040 --> 00:10:48,870
+actually." Or I should uh you know,
+maybe check a test on that or maybe do
+
+648
+00:10:48,870 --> 00:10:48,880
+maybe check a test on that or maybe do
+ 
+
+649
+00:10:48,880 --> 00:10:50,550
+maybe check a test on that or maybe do
+something like that.
+
+650
+00:10:50,550 --> 00:10:50,560
+something like that.
+ 
+
+651
+00:10:50,560 --> 00:10:52,510
+something like that.
+And this in the Pragmatic Programmer
+
+652
+00:10:52,510 --> 00:10:52,520
+And this in the Pragmatic Programmer
+ 
+
+653
+00:10:52,520 --> 00:10:53,950
+And this in the Pragmatic Programmer
+they describe as outrunning your
+
+654
+00:10:53,950 --> 00:10:53,960
+they describe as outrunning your
+ 
+
+655
+00:10:53,960 --> 00:10:56,390
+they describe as outrunning your
+headlights. It's essentially driving too
+
+656
+00:10:56,390 --> 00:10:56,400
+headlights. It's essentially driving too
+ 
+
+657
+00:10:56,400 --> 00:10:58,230
+headlights. It's essentially driving too
+fast because
+
+658
+00:10:58,230 --> 00:10:58,240
+fast because
+ 
+
+659
+00:10:58,240 --> 00:11:00,950
+fast because
+the rate of feedback is your speed
+
+660
+00:11:00,950 --> 00:11:00,960
+the rate of feedback is your speed
+ 
+
+661
+00:11:00,960 --> 00:11:02,030
+the rate of feedback is your speed
+limit.
+
+662
+00:11:02,030 --> 00:11:02,040
+limit.
+ 
+
+663
+00:11:02,040 --> 00:11:03,590
+limit.
+The rate of feedback is your speed
+
+664
+00:11:03,590 --> 00:11:03,600
+The rate of feedback is your speed
+ 
+
+665
+00:11:03,600 --> 00:11:05,230
+The rate of feedback is your speed
+limit, which means that you should be
+
+666
+00:11:05,230 --> 00:11:05,240
+limit, which means that you should be
+ 
+
+667
+00:11:05,240 --> 00:11:07,510
+limit, which means that you should be
+testing as you go, taking small
+
+668
+00:11:07,510 --> 00:11:07,520
+testing as you go, taking small
+ 
+
+669
+00:11:07,520 --> 00:11:09,870
+testing as you go, taking small
+deliberate steps. And the AI by default
+
+670
+00:11:09,870 --> 00:11:09,880
+deliberate steps. And the AI by default
+ 
+
+671
+00:11:09,880 --> 00:11:11,910
+deliberate steps. And the AI by default
+is really not very good at that.
+
+672
+00:11:11,910 --> 00:11:11,920
+is really not very good at that.
+ 
+
+673
+00:11:11,920 --> 00:11:14,870
+is really not very good at that.
+So, skill number three is TDD.
+
+674
+00:11:14,870 --> 00:11:14,880
+So, skill number three is TDD.
+ 
+
+675
+00:11:14,880 --> 00:11:16,550
+So, skill number three is TDD.
+You should be using test-driven
+
+676
+00:11:16,550 --> 00:11:16,560
+You should be using test-driven
+ 
+
+677
+00:11:16,560 --> 00:11:17,870
+You should be using test-driven
+development
+
+678
+00:11:17,870 --> 00:11:17,880
+development
+ 
+
+679
+00:11:17,880 --> 00:11:21,670
+development
+because TDD forces the LLM to
+
+680
+00:11:21,670 --> 00:11:21,680
+because TDD forces the LLM to
+ 
+
+681
+00:11:21,680 --> 00:11:24,030
+because TDD forces the LLM to
+really take small steps. You create a
+
+682
+00:11:24,030 --> 00:11:24,040
+really take small steps. You create a
+ 
+
+683
+00:11:24,040 --> 00:11:27,110
+really take small steps. You create a
+test first, you make that test pass, and
+
+684
+00:11:27,110 --> 00:11:27,120
+test first, you make that test pass, and
+ 
+
+685
+00:11:27,120 --> 00:11:29,030
+test first, you make that test pass, and
+then you refactor the code to make it
+
+686
+00:11:29,030 --> 00:11:29,040
+then you refactor the code to make it
+ 
+
+687
+00:11:29,040 --> 00:11:32,270
+then you refactor the code to make it
+nicer and consider the design.
+
+688
+00:11:32,270 --> 00:11:32,280
+nicer and consider the design.
+ 
+
+689
+00:11:32,280 --> 00:11:33,950
+nicer and consider the design.
+The issue here
+
+690
+00:11:33,950 --> 00:11:33,960
+The issue here
+ 
+
+691
+00:11:33,960 --> 00:11:36,270
+The issue here
+is that testing is really hard.
+
+692
+00:11:36,270 --> 00:11:36,280
+is that testing is really hard.
+ 
+
+693
+00:11:36,280 --> 00:11:38,790
+is that testing is really hard.
+Testing has always been hard.
+
+694
+00:11:38,790 --> 00:11:38,800
+Testing has always been hard.
+ 
+
+695
+00:11:38,800 --> 00:11:41,550
+Testing has always been hard.
+And the reason for that
+
+696
+00:11:41,550 --> 00:11:41,560
+And the reason for that
+ 
+
+697
+00:11:41,560 --> 00:11:43,270
+And the reason for that
+is there are a ton
+
+698
+00:11:43,270 --> 00:11:43,280
+is there are a ton
+ 
+
+699
+00:11:43,280 --> 00:11:44,950
+is there are a ton
+of different decisions you need to make
+
+700
+00:11:44,950 --> 00:11:44,960
+of different decisions you need to make
+ 
+
+701
+00:11:44,960 --> 00:11:46,750
+of different decisions you need to make
+when you write a test.
+
+702
+00:11:46,750 --> 00:11:46,760
+when you write a test.
+ 
+
+703
+00:11:46,760 --> 00:11:48,950
+when you write a test.
+You need to figure out how big a unit do
+
+704
+00:11:48,950 --> 00:11:48,960
+You need to figure out how big a unit do
+ 
+
+705
+00:11:48,960 --> 00:11:50,510
+You need to figure out how big a unit do
+you want to test?
+
+706
+00:11:50,510 --> 00:11:50,520
+you want to test?
+ 
+
+707
+00:11:50,520 --> 00:11:51,990
+you want to test?
+You need to figure out what to mock. You
+
+708
+00:11:51,990 --> 00:11:52,000
+You need to figure out what to mock. You
+ 
+
+709
+00:11:52,000 --> 00:11:53,990
+You need to figure out what to mock. You
+need to figure out what behaviors do you
+
+710
+00:11:53,990 --> 00:11:54,000
+need to figure out what behaviors do you
+ 
+
+711
+00:11:54,000 --> 00:11:55,670
+need to figure out what behaviors do you
+even want to test in the first place?
+
+712
+00:11:55,670 --> 00:11:55,680
+even want to test in the first place?
+ 
+
+713
+00:11:55,680 --> 00:11:56,670
+even want to test in the first place?
+And all of these decisions are
+
+714
+00:11:56,670 --> 00:11:56,680
+And all of these decisions are
+ 
+
+715
+00:11:56,680 --> 00:11:58,350
+And all of these decisions are
+dependent. So, if you are testing a
+
+716
+00:11:58,350 --> 00:11:58,360
+dependent. So, if you are testing a
+ 
+
+717
+00:11:58,360 --> 00:12:00,910
+dependent. So, if you are testing a
+really big unit like an entire uh
+
+718
+00:12:00,910 --> 00:12:00,920
+really big unit like an entire uh
+ 
+
+719
+00:12:00,920 --> 00:12:02,990
+really big unit like an entire uh
+massive application, then it might be
+
+720
+00:12:02,990 --> 00:12:03,000
+massive application, then it might be
+ 
+
+721
+00:12:03,000 --> 00:12:04,510
+massive application, then it might be
+quite flaky. You might not want to test
+
+722
+00:12:04,510 --> 00:12:04,520
+quite flaky. You might not want to test
+ 
+
+723
+00:12:04,520 --> 00:12:06,750
+quite flaky. You might not want to test
+that many behaviors. You know, if you
+
+724
+00:12:06,750 --> 00:12:06,760
+that many behaviors. You know, if you
+ 
+
+725
+00:12:06,760 --> 00:12:08,350
+that many behaviors. You know, if you
+only test this unit, you need to mock
+
+726
+00:12:08,350 --> 00:12:08,360
+only test this unit, you need to mock
+ 
+
+727
+00:12:08,360 --> 00:12:09,750
+only test this unit, you need to mock
+this unit, you know. It's all
+
+728
+00:12:09,750 --> 00:12:09,760
+this unit, you know. It's all
+ 
+
+729
+00:12:09,760 --> 00:12:11,230
+this unit, you know. It's all
+interlinked. And I've been thinking
+
+730
+00:12:11,230 --> 00:12:11,240
+interlinked. And I've been thinking
+ 
+
+731
+00:12:11,240 --> 00:12:12,710
+interlinked. And I've been thinking
+about this for years, for my entire
+
+732
+00:12:12,710 --> 00:12:12,720
+about this for years, for my entire
+ 
+
+733
+00:12:12,720 --> 00:12:15,150
+about this for years, for my entire
+development career.
+
+734
+00:12:15,150 --> 00:12:15,160
+development career.
+ 
+
+735
+00:12:15,160 --> 00:12:17,710
+development career.
+And what we notice is that good
+
+736
+00:12:17,710 --> 00:12:17,720
+And what we notice is that good
+ 
+
+737
+00:12:17,720 --> 00:12:20,750
+And what we notice is that good
+codebases are easy codebases to test.
+
+738
+00:12:20,750 --> 00:12:20,760
+codebases are easy codebases to test.
+ 
+
+739
+00:12:20,760 --> 00:12:22,630
+codebases are easy codebases to test.
+Right? So, here we're starting to get
+
+740
+00:12:22,630 --> 00:12:22,640
+Right? So, here we're starting to get
+ 
+
+741
+00:12:22,640 --> 00:12:24,030
+Right? So, here we're starting to get
+back to the idea of code being
+
+742
+00:12:24,030 --> 00:12:24,040
+back to the idea of code being
+ 
+
+743
+00:12:24,040 --> 00:12:26,110
+back to the idea of code being
+important. It's that the better your
+
+744
+00:12:26,110 --> 00:12:26,120
+important. It's that the better your
+ 
+
+745
+00:12:26,120 --> 00:12:27,870
+important. It's that the better your
+codebase is, the better your feedback
+
+746
+00:12:27,870 --> 00:12:27,880
+codebase is, the better your feedback
+ 
+
+747
+00:12:27,880 --> 00:12:31,630
+codebase is, the better your feedback
+loops are because you're able to um
+
+748
+00:12:31,630 --> 00:12:31,640
+loops are because you're able to um
+ 
+
+749
+00:12:31,640 --> 00:12:33,190
+loops are because you're able to um
+give better feedback to the LLM, it
+
+750
+00:12:33,190 --> 00:12:33,200
+give better feedback to the LLM, it
+ 
+
+751
+00:12:33,200 --> 00:12:35,550
+give better feedback to the LLM, it
+produces better code.
+
+752
+00:12:35,550 --> 00:12:35,560
+produces better code.
+ 
+
+753
+00:12:35,560 --> 00:12:36,990
+produces better code.
+And so I thought, what does a good
+
+754
+00:12:36,990 --> 00:12:37,000
+And so I thought, what does a good
+ 
+
+755
+00:12:37,000 --> 00:12:38,790
+And so I thought, what does a good
+codebase, what does a testable codebase
+
+756
+00:12:38,790 --> 00:12:38,800
+codebase, what does a testable codebase
+ 
+
+757
+00:12:38,800 --> 00:12:41,070
+codebase, what does a testable codebase
+look like? Again, we go to John
+
+758
+00:12:41,070 --> 00:12:41,080
+look like? Again, we go to John
+ 
+
+759
+00:12:41,080 --> 00:12:42,430
+look like? Again, we go to John
+Ousterhout. [clears throat]
+
+760
+00:12:42,430 --> 00:12:42,440
+Ousterhout. [clears throat]
+ 
+
+761
+00:12:42,440 --> 00:12:45,270
+Ousterhout. [clears throat]
+He talks about having deep modules in
+
+762
+00:12:45,270 --> 00:12:45,280
+He talks about having deep modules in
+ 
+
+763
+00:12:45,280 --> 00:12:47,910
+He talks about having deep modules in
+your codebase. Not shallow modules, not
+
+764
+00:12:47,910 --> 00:12:47,920
+your codebase. Not shallow modules, not
+ 
+
+765
+00:12:47,920 --> 00:12:50,270
+your codebase. Not shallow modules, not
+lots of modules that expose type kind of
+
+766
+00:12:50,270 --> 00:12:50,280
+lots of modules that expose type kind of
+ 
+
+767
+00:12:50,280 --> 00:12:52,430
+lots of modules that expose type kind of
+um lots of functions.
+
+768
+00:12:52,430 --> 00:12:52,440
+um lots of functions.
+ 
+
+769
+00:12:52,440 --> 00:12:54,950
+um lots of functions.
+They should be relatively few large deep
+
+770
+00:12:54,950 --> 00:12:54,960
+They should be relatively few large deep
+ 
+
+771
+00:12:54,960 --> 00:12:57,470
+They should be relatively few large deep
+modules with simple interfaces.
+
+772
+00:12:57,470 --> 00:12:57,480
+modules with simple interfaces.
+ 
+
+773
+00:12:57,480 --> 00:12:59,470
+modules with simple interfaces.
+Let's compare them quickly.
+
+774
+00:12:59,470 --> 00:12:59,480
+Let's compare them quickly.
+ 
+
+775
+00:12:59,480 --> 00:13:01,390
+Let's compare them quickly.
+Deep modules, lots of functionality
+
+776
+00:13:01,390 --> 00:13:01,400
+Deep modules, lots of functionality
+ 
+
+777
+00:13:01,400 --> 00:13:04,030
+Deep modules, lots of functionality
+hidden behind a simple interface. Hiding
+
+778
+00:13:04,030 --> 00:13:04,040
+hidden behind a simple interface. Hiding
+ 
+
+779
+00:13:04,040 --> 00:13:05,630
+hidden behind a simple interface. Hiding
+the complexity.
+
+780
+00:13:05,630 --> 00:13:05,640
+the complexity.
+ 
+
+781
+00:13:05,640 --> 00:13:06,950
+the complexity.
+You can look inside the deep module if
+
+782
+00:13:06,950 --> 00:13:06,960
+You can look inside the deep module if
+ 
+
+783
+00:13:06,960 --> 00:13:08,070
+You can look inside the deep module if
+you want to, but you don't need to. You
+
+784
+00:13:08,070 --> 00:13:08,080
+you want to, but you don't need to. You
+ 
+
+785
+00:13:08,080 --> 00:13:09,990
+you want to, but you don't need to. You
+can just use the interface. Shallow
+
+786
+00:13:09,990 --> 00:13:10,000
+can just use the interface. Shallow
+ 
+
+787
+00:13:10,000 --> 00:13:12,310
+can just use the interface. Shallow
+modules, not much functionality, complex
+
+788
+00:13:12,310 --> 00:13:12,320
+modules, not much functionality, complex
+ 
+
+789
+00:13:12,320 --> 00:13:13,870
+modules, not much functionality, complex
+interface.
+
+790
+00:13:13,870 --> 00:13:13,880
+interface.
+ 
+
+791
+00:13:13,880 --> 00:13:15,190
+interface.
+And
+
+792
+00:13:15,190 --> 00:13:15,200
+And
+ 
+
+793
+00:13:15,200 --> 00:13:16,430
+And
+I'll just wait for you to take the
+
+794
+00:13:16,430 --> 00:13:16,440
+I'll just wait for you to take the
+ 
+
+795
+00:13:16,440 --> 00:13:18,350
+I'll just wait for you to take the
+photos.
+
+796
+00:13:18,350 --> 00:13:18,360
+photos.
+ 
+
+797
+00:13:18,360 --> 00:13:19,910
+photos.
+Shallow modules in a codebase kind of
+
+798
+00:13:19,910 --> 00:13:19,920
+Shallow modules in a codebase kind of
+ 
+
+799
+00:13:19,920 --> 00:13:22,270
+Shallow modules in a codebase kind of
+look like this, where you have a ton of
+
+800
+00:13:22,270 --> 00:13:22,280
+look like this, where you have a ton of
+ 
+
+801
+00:13:22,280 --> 00:13:24,829
+look like this, where you have a ton of
+different tiny little blobs that the AI
+
+802
+00:13:24,829 --> 00:13:24,839
+different tiny little blobs that the AI
+ 
+
+803
+00:13:24,839 --> 00:13:26,829
+different tiny little blobs that the AI
+has to walk through and navigate. And
+
+804
+00:13:26,829 --> 00:13:26,839
+has to walk through and navigate. And
+ 
+
+805
+00:13:26,839 --> 00:13:29,190
+has to walk through and navigate. And
+this is really hard for the AI to
+
+806
+00:13:29,190 --> 00:13:29,200
+this is really hard for the AI to
+ 
+
+807
+00:13:29,200 --> 00:13:30,950
+this is really hard for the AI to
+explore actually.
+
+808
+00:13:30,950 --> 00:13:30,960
+explore actually.
+ 
+
+809
+00:13:30,960 --> 00:13:32,310
+explore actually.
+And so often what you'll see is if you
+
+810
+00:13:32,310 --> 00:13:32,320
+And so often what you'll see is if you
+ 
+
+811
+00:13:32,320 --> 00:13:33,950
+And so often what you'll see is if you
+have a codebase like this, which AI is
+
+812
+00:13:33,950 --> 00:13:33,960
+have a codebase like this, which AI is
+ 
+
+813
+00:13:33,960 --> 00:13:35,550
+have a codebase like this, which AI is
+really good at creating codebases like
+
+814
+00:13:35,550 --> 00:13:35,560
+really good at creating codebases like
+ 
+
+815
+00:13:35,560 --> 00:13:36,510
+really good at creating codebases like
+this,
+
+816
+00:13:36,510 --> 00:13:36,520
+this,
+ 
+
+817
+00:13:36,520 --> 00:13:38,550
+this,
+is that you'll have a situation where AI
+
+818
+00:13:38,550 --> 00:13:38,560
+is that you'll have a situation where AI
+ 
+
+819
+00:13:38,560 --> 00:13:40,150
+is that you'll have a situation where AI
+doesn't understand what your code is
+
+820
+00:13:40,150 --> 00:13:40,160
+doesn't understand what your code is
+ 
+
+821
+00:13:40,160 --> 00:13:42,390
+doesn't understand what your code is
+doing. It will attempt to explore the
+
+822
+00:13:42,390 --> 00:13:42,400
+doing. It will attempt to explore the
+ 
+
+823
+00:13:42,400 --> 00:13:45,070
+doing. It will attempt to explore the
+code, but because it's poorly laid out,
+
+824
+00:13:45,070 --> 00:13:45,080
+code, but because it's poorly laid out,
+ 
+
+825
+00:13:45,080 --> 00:13:47,270
+code, but because it's poorly laid out,
+filled with shallow modules, it doesn't
+
+826
+00:13:47,270 --> 00:13:47,280
+filled with shallow modules, it doesn't
+ 
+
+827
+00:13:47,280 --> 00:13:49,230
+filled with shallow modules, it doesn't
+maybe get to the right module in time or
+
+828
+00:13:49,230 --> 00:13:49,240
+maybe get to the right module in time or
+ 
+
+829
+00:13:49,240 --> 00:13:50,870
+maybe get to the right module in time or
+doesn't understand all the dependencies,
+
+830
+00:13:50,870 --> 00:13:50,880
+doesn't understand all the dependencies,
+ 
+
+831
+00:13:50,880 --> 00:13:52,110
+doesn't understand all the dependencies,
+all that stuff. It doesn't understand
+
+832
+00:13:52,110 --> 00:13:52,120
+all that stuff. It doesn't understand
+ 
+
+833
+00:13:52,120 --> 00:13:53,710
+all that stuff. It doesn't understand
+your code.
+
+834
+00:13:53,710 --> 00:13:53,720
+your code.
+ 
+
+835
+00:13:53,720 --> 00:13:54,950
+your code.
+And so what does a
+
+836
+00:13:54,950 --> 00:13:54,960
+And so what does a
+ 
+
+837
+00:13:54,960 --> 00:13:57,950
+And so what does a
+codebase full of deep modules look like?
+
+838
+00:13:57,950 --> 00:13:57,960
+codebase full of deep modules look like?
+ 
+
+839
+00:13:57,960 --> 00:14:00,270
+codebase full of deep modules look like?
+Well, it looks like this.
+
+840
+00:14:00,270 --> 00:14:00,280
+Well, it looks like this.
+ 
+
+841
+00:14:00,280 --> 00:14:02,190
+Well, it looks like this.
+Where it's the same code, but it's just
+
+842
+00:14:02,190 --> 00:14:02,200
+Where it's the same code, but it's just
+ 
+
+843
+00:14:02,200 --> 00:14:04,590
+Where it's the same code, but it's just
+structured inside boundaries, where you
+
+844
+00:14:04,590 --> 00:14:04,600
+structured inside boundaries, where you
+ 
+
+845
+00:14:04,600 --> 00:14:08,550
+structured inside boundaries, where you
+have these interfaces on the top.
+
+846
+00:14:08,550 --> 00:14:08,560
+have these interfaces on the top.
+ 
+
+847
+00:14:08,560 --> 00:14:10,390
+have these interfaces on the top.
+And these interfaces, you should
+
+848
+00:14:10,390 --> 00:14:10,400
+And these interfaces, you should
+ 
+
+849
+00:14:10,400 --> 00:14:12,230
+And these interfaces, you should
+probably have a lot of control over them
+
+850
+00:14:12,230 --> 00:14:12,240
+probably have a lot of control over them
+ 
+
+851
+00:14:12,240 --> 00:14:14,590
+probably have a lot of control over them
+and design them really well. Otherwise,
+
+852
+00:14:14,590 --> 00:14:14,600
+and design them really well. Otherwise,
+ 
+
+853
+00:14:14,600 --> 00:14:17,110
+and design them really well. Otherwise,
+you know, AI might mess up the design.
+
+854
+00:14:17,110 --> 00:14:17,120
+you know, AI might mess up the design.
+ 
+
+855
+00:14:17,120 --> 00:14:18,670
+you know, AI might mess up the design.
+But the implementation, you can kind of
+
+856
+00:14:18,670 --> 00:14:18,680
+But the implementation, you can kind of
+ 
+
+857
+00:14:18,680 --> 00:14:20,910
+But the implementation, you can kind of
+leave that to the AI bit.
+
+858
+00:14:20,910 --> 00:14:20,920
+leave that to the AI bit.
+ 
+
+859
+00:14:20,920 --> 00:14:23,590
+leave that to the AI bit.
+So, how do you turn a codebase that
+
+860
+00:14:23,590 --> 00:14:23,600
+So, how do you turn a codebase that
+ 
+
+861
+00:14:23,600 --> 00:14:26,790
+So, how do you turn a codebase that
+looks like this into a codebase that
+
+862
+00:14:26,790 --> 00:14:26,800
+looks like this into a codebase that
+ 
+
+863
+00:14:26,800 --> 00:14:29,110
+looks like this into a codebase that
+looks like that?
+
+864
+00:14:29,110 --> 00:14:29,120
+looks like that?
+ 
+
+865
+00:14:29,120 --> 00:14:31,190
+looks like that?
+Well, I've got a skill for that. Improve
+
+866
+00:14:31,190 --> 00:14:31,200
+Well, I've got a skill for that. Improve
+ 
+
+867
+00:14:31,200 --> 00:14:33,270
+Well, I've got a skill for that. Improve
+codebase architecture. Turns out this is
+
+868
+00:14:33,270 --> 00:14:33,280
+codebase architecture. Turns out this is
+ 
+
+869
+00:14:33,280 --> 00:14:35,670
+codebase architecture. Turns out this is
+not It's it's quite complicated to do
+
+870
+00:14:35,670 --> 00:14:35,680
+not It's it's quite complicated to do
+ 
+
+871
+00:14:35,680 --> 00:14:36,870
+not It's it's quite complicated to do
+this, but it's a
+
+872
+00:14:36,870 --> 00:14:36,880
+this, but it's a
+ 
+
+873
+00:14:36,880 --> 00:14:38,270
+this, but it's a
+like a set of steps that you can
+
+874
+00:14:38,270 --> 00:14:38,280
+like a set of steps that you can
+ 
+
+875
+00:14:38,280 --> 00:14:40,630
+like a set of steps that you can
+reusably do again and again. You just
+
+876
+00:14:40,630 --> 00:14:40,640
+reusably do again and again. You just
+ 
+
+877
+00:14:40,640 --> 00:14:42,829
+reusably do again and again. You just
+sort of explore the codebase, look for
+
+878
+00:14:42,829 --> 00:14:42,839
+sort of explore the codebase, look for
+ 
+
+879
+00:14:42,839 --> 00:14:44,390
+sort of explore the codebase, look for
+opportunities where there's code that's
+
+880
+00:14:44,390 --> 00:14:44,400
+opportunities where there's code that's
+ 
+
+881
+00:14:44,400 --> 00:14:45,630
+opportunities where there's code that's
+kind of look um
+
+882
+00:14:45,630 --> 00:14:45,640
+kind of look um
+ 
+
+883
+00:14:45,640 --> 00:14:47,870
+kind of look um
+related, and wrap all of that in a deep
+
+884
+00:14:47,870 --> 00:14:47,880
+related, and wrap all of that in a deep
+ 
+
+885
+00:14:47,880 --> 00:14:49,990
+related, and wrap all of that in a deep
+module.
+
+886
+00:14:49,990 --> 00:14:50,000
+module.
+ 
+
+887
+00:14:50,000 --> 00:14:51,990
+module.
+And this is a testable codebase because
+
+888
+00:14:51,990 --> 00:14:52,000
+And this is a testable codebase because
+ 
+
+889
+00:14:52,000 --> 00:14:54,630
+And this is a testable codebase because
+the boundaries around this code are so
+
+890
+00:14:54,630 --> 00:14:54,640
+the boundaries around this code are so
+ 
+
+891
+00:14:54,640 --> 00:14:56,949
+the boundaries around this code are so
+so simple. You test at the interface,
+
+892
+00:14:56,949 --> 00:14:56,959
+so simple. You test at the interface,
+ 
+
+893
+00:14:56,959 --> 00:14:59,150
+so simple. You test at the interface,
+you verify using that interface,
+
+894
+00:14:59,150 --> 00:14:59,160
+you verify using that interface,
+ 
+
+895
+00:14:59,160 --> 00:15:00,470
+you verify using that interface,
+and you're good to go. And so this is a
+
+896
+00:15:00,470 --> 00:15:00,480
+and you're good to go. And so this is a
+ 
+
+897
+00:15:00,480 --> 00:15:04,230
+and you're good to go. And so this is a
+codebase that rewards TDD.
+
+898
+00:15:04,230 --> 00:15:04,240
+codebase that rewards TDD.
+ 
+
+899
+00:15:04,240 --> 00:15:06,470
+codebase that rewards TDD.
+But how about failure mode number six?
+
+900
+00:15:06,470 --> 00:15:06,480
+But how about failure mode number six?
+ 
+
+901
+00:15:06,480 --> 00:15:07,829
+But how about failure mode number six?
+Which is your Okay, let's say your
+
+902
+00:15:07,829 --> 00:15:07,839
+Which is your Okay, let's say your
+ 
+
+903
+00:15:07,839 --> 00:15:09,430
+Which is your Okay, let's say your
+feedback loops are working. Let's say
+
+904
+00:15:09,430 --> 00:15:09,440
+feedback loops are working. Let's say
+ 
+
+905
+00:15:09,440 --> 00:15:11,110
+feedback loops are working. Let's say
+that things are kicking into gear.
+
+906
+00:15:11,110 --> 00:15:11,120
+that things are kicking into gear.
+ 
+
+907
+00:15:11,120 --> 00:15:12,390
+that things are kicking into gear.
+You're able to ship more code than you
+
+908
+00:15:12,390 --> 00:15:12,400
+You're able to ship more code than you
+ 
+
+909
+00:15:12,400 --> 00:15:14,870
+You're able to ship more code than you
+ever have before, but your brain can't
+
+910
+00:15:14,870 --> 00:15:14,880
+ever have before, but your brain can't
+ 
+
+911
+00:15:14,880 --> 00:15:16,510
+ever have before, but your brain can't
+keep up.
+
+912
+00:15:16,510 --> 00:15:16,520
+keep up.
+ 
+
+913
+00:15:16,520 --> 00:15:18,550
+keep up.
+Right? Uh raise your hand if you've felt
+
+914
+00:15:18,550 --> 00:15:18,560
+Right? Uh raise your hand if you've felt
+ 
+
+915
+00:15:18,560 --> 00:15:20,430
+Right? Uh raise your hand if you've felt
+more tired than you have ever before in
+
+916
+00:15:20,430 --> 00:15:20,440
+more tired than you have ever before in
+ 
+
+917
+00:15:20,440 --> 00:15:22,310
+more tired than you have ever before in
+your development career.
+
+918
+00:15:22,310 --> 00:15:22,320
+your development career.
+ 
+
+919
+00:15:22,320 --> 00:15:25,150
+your development career.
+Yeah, me too. It's knackering.
+
+920
+00:15:25,150 --> 00:15:25,160
+Yeah, me too. It's knackering.
+ 
+
+921
+00:15:25,160 --> 00:15:27,670
+Yeah, me too. It's knackering.
+And I think that this is a codebase that
+
+922
+00:15:27,670 --> 00:15:27,680
+And I think that this is a codebase that
+ 
+
+923
+00:15:27,680 --> 00:15:30,590
+And I think that this is a codebase that
+actually makes it harder for your brain
+
+924
+00:15:30,590 --> 00:15:30,600
+actually makes it harder for your brain
+ 
+
+925
+00:15:30,600 --> 00:15:32,310
+actually makes it harder for your brain
+because you, as well as the AI, need to
+
+926
+00:15:32,310 --> 00:15:32,320
+because you, as well as the AI, need to
+ 
+
+927
+00:15:32,320 --> 00:15:33,510
+because you, as well as the AI, need to
+keep all of that information in your
+
+928
+00:15:33,510 --> 00:15:33,520
+keep all of that information in your
+ 
+
+929
+00:15:33,520 --> 00:15:34,790
+keep all of that information in your
+head.
+
+930
+00:15:34,790 --> 00:15:34,800
+head.
+ 
+
+931
+00:15:34,800 --> 00:15:38,310
+head.
+Whereas this, not only is it simpler
+
+932
+00:15:38,310 --> 00:15:38,320
+Whereas this, not only is it simpler
+ 
+
+933
+00:15:38,320 --> 00:15:40,750
+Whereas this, not only is it simpler
+for you to read and understand, it also
+
+934
+00:15:40,750 --> 00:15:40,760
+for you to read and understand, it also
+ 
+
+935
+00:15:40,760 --> 00:15:42,710
+for you to read and understand, it also
+means you can kind of treat these
+
+936
+00:15:42,710 --> 00:15:42,720
+means you can kind of treat these
+ 
+
+937
+00:15:42,720 --> 00:15:45,550
+means you can kind of treat these
+modules, or these deep modules, as gray
+
+938
+00:15:45,550 --> 00:15:45,560
+modules, or these deep modules, as gray
+ 
+
+939
+00:15:45,560 --> 00:15:47,350
+modules, or these deep modules, as gray
+boxes.
+
+940
+00:15:47,350 --> 00:15:47,360
+boxes.
+ 
+
+941
+00:15:47,360 --> 00:15:49,030
+boxes.
+You can kind of say,
+
+942
+00:15:49,030 --> 00:15:49,040
+You can kind of say,
+ 
+
+943
+00:15:49,040 --> 00:15:50,110
+You can kind of say,
+"Okay,
+
+944
+00:15:50,110 --> 00:15:50,120
+"Okay,
+ 
+
+945
+00:15:50,120 --> 00:15:52,190
+"Okay,
+I'm going to just design the interface,
+
+946
+00:15:52,190 --> 00:15:52,200
+I'm going to just design the interface,
+ 
+
+947
+00:15:52,200 --> 00:15:53,710
+I'm going to just design the interface,
+but I'm not going to worry too much or
+
+948
+00:15:53,710 --> 00:15:53,720
+but I'm not going to worry too much or
+ 
+
+949
+00:15:53,720 --> 00:15:56,990
+but I'm not going to worry too much or
+not review the implementation too much."
+
+950
+00:15:56,990 --> 00:15:57,000
+not review the implementation too much."
+ 
+
+951
+00:15:57,000 --> 00:15:58,510
+not review the implementation too much."
+You can do this obviously with uh things
+
+952
+00:15:58,510 --> 00:15:58,520
+You can do this obviously with uh things
+ 
+
+953
+00:15:58,520 --> 00:15:59,390
+You can do this obviously with uh things
+that are less critical in your
+
+954
+00:15:59,390 --> 00:15:59,400
+that are less critical in your
+ 
+
+955
+00:15:59,400 --> 00:16:01,590
+that are less critical in your
+application. Can't do this with uh you
+
+956
+00:16:01,590 --> 00:16:01,600
+application. Can't do this with uh you
+ 
+
+957
+00:16:01,600 --> 00:16:03,630
+application. Can't do this with uh you
+know, various things like finance or
+
+958
+00:16:03,630 --> 00:16:03,640
+know, various things like finance or
+ 
+
+959
+00:16:03,640 --> 00:16:05,910
+know, various things like finance or
+whatever, but in many many modules in
+
+960
+00:16:05,910 --> 00:16:05,920
+whatever, but in many many modules in
+ 
+
+961
+00:16:05,920 --> 00:16:07,710
+whatever, but in many many modules in
+your app, you don't need to think about
+
+962
+00:16:07,710 --> 00:16:07,720
+your app, you don't need to think about
+ 
+
+963
+00:16:07,720 --> 00:16:09,270
+your app, you don't need to think about
+the implementation too much as long as
+
+964
+00:16:09,270 --> 00:16:09,280
+the implementation too much as long as
+ 
+
+965
+00:16:09,280 --> 00:16:11,230
+the implementation too much as long as
+you have a testable boundary outside the
+
+966
+00:16:11,230 --> 00:16:11,240
+you have a testable boundary outside the
+ 
+
+967
+00:16:11,240 --> 00:16:13,069
+you have a testable boundary outside the
+module, and as long as you understand
+
+968
+00:16:13,069 --> 00:16:13,079
+module, and as long as you understand
+ 
+
+969
+00:16:13,079 --> 00:16:14,550
+module, and as long as you understand
+its purpose and can design it from the
+
+970
+00:16:14,550 --> 00:16:14,560
+its purpose and can design it from the
+ 
+
+971
+00:16:14,560 --> 00:16:17,270
+its purpose and can design it from the
+outside. I have found this has really
+
+972
+00:16:17,270 --> 00:16:17,280
+outside. I have found this has really
+ 
+
+973
+00:16:17,280 --> 00:16:19,270
+outside. I have found this has really
+saved my brain because I can just go,
+
+974
+00:16:19,270 --> 00:16:19,280
+saved my brain because I can just go,
+ 
+
+975
+00:16:19,280 --> 00:16:21,270
+saved my brain because I can just go,
+"Okay, the AI, I'll let you handle
+
+976
+00:16:21,270 --> 00:16:21,280
+"Okay, the AI, I'll let you handle
+ 
+
+977
+00:16:21,280 --> 00:16:22,990
+"Okay, the AI, I'll let you handle
+what's inside the big blob. I'm just
+
+978
+00:16:22,990 --> 00:16:23,000
+what's inside the big blob. I'm just
+ 
+
+979
+00:16:23,000 --> 00:16:24,030
+what's inside the big blob. I'm just
+going to test from the outside and
+
+980
+00:16:24,030 --> 00:16:24,040
+going to test from the outside and
+ 
+
+981
+00:16:24,040 --> 00:16:25,990
+going to test from the outside and
+verify it."
+
+982
+00:16:25,990 --> 00:16:26,000
+verify it."
+ 
+
+983
+00:16:26,000 --> 00:16:27,750
+verify it."
+So, that's tip number five. Design the
+
+984
+00:16:27,750 --> 00:16:27,760
+So, that's tip number five. Design the
+ 
+
+985
+00:16:27,760 --> 00:16:31,990
+So, that's tip number five. Design the
+interface, delegate the implementation.
+
+986
+00:16:31,990 --> 00:16:32,000
+interface, delegate the implementation.
+ 
+
+987
+00:16:32,000 --> 00:16:34,069
+interface, delegate the implementation.
+But this means that whenever we're
+
+988
+00:16:34,069 --> 00:16:34,079
+But this means that whenever we're
+ 
+
+989
+00:16:34,079 --> 00:16:35,310
+But this means that whenever we're
+touching the code, whenever we're
+
+990
+00:16:35,310 --> 00:16:35,320
+touching the code, whenever we're
+ 
+
+991
+00:16:35,320 --> 00:16:37,670
+touching the code, whenever we're
+planning stuff, we need to think about
+
+992
+00:16:37,670 --> 00:16:37,680
+planning stuff, we need to think about
+ 
+
+993
+00:16:37,680 --> 00:16:39,350
+planning stuff, we need to think about
+and be aware of the modules in our
+
+994
+00:16:39,350 --> 00:16:39,360
+and be aware of the modules in our
+ 
+
+995
+00:16:39,360 --> 00:16:41,390
+and be aware of the modules in our
+application. We need to know that map
+
+996
+00:16:41,390 --> 00:16:41,400
+application. We need to know that map
+ 
+
+997
+00:16:41,400 --> 00:16:43,550
+application. We need to know that map
+really well. It needs to be part of our
+
+998
+00:16:43,550 --> 00:16:43,560
+really well. It needs to be part of our
+ 
+
+999
+00:16:43,560 --> 00:16:45,710
+really well. It needs to be part of our
+ubiquitous language. We need to build it
+
+1000
+00:16:45,710 --> 00:16:45,720
+ubiquitous language. We need to build it
+ 
+
+1001
+00:16:45,720 --> 00:16:47,949
+ubiquitous language. We need to build it
+into our planning skills as well. So, my
+
+1002
+00:16:47,949 --> 00:16:47,959
+into our planning skills as well. So, my
+ 
+
+1003
+00:16:47,959 --> 00:16:50,550
+into our planning skills as well. So, my
+write a PRD, inside the PRD I'm specific
+
+1004
+00:16:50,550 --> 00:16:50,560
+write a PRD, inside the PRD I'm specific
+ 
+
+1005
+00:16:50,560 --> 00:16:51,990
+write a PRD, inside the PRD I'm specific
+about the module changes and the
+
+1006
+00:16:51,990 --> 00:16:52,000
+about the module changes and the
+ 
+
+1007
+00:16:52,000 --> 00:16:54,230
+about the module changes and the
+interfaces inside those modules, how
+
+1008
+00:16:54,230 --> 00:16:54,240
+interfaces inside those modules, how
+ 
+
+1009
+00:16:54,240 --> 00:16:55,350
+interfaces inside those modules, how
+they're being modified. I'm thinking
+
+1010
+00:16:55,350 --> 00:16:55,360
+they're being modified. I'm thinking
+ 
+
+1011
+00:16:55,360 --> 00:16:57,150
+they're being modified. I'm thinking
+about them all the time. And this comes
+
+1012
+00:16:57,150 --> 00:16:57,160
+about them all the time. And this comes
+ 
+
+1013
+00:16:57,160 --> 00:16:58,750
+about them all the time. And this comes
+from Kent Beck.
+
+1014
+00:16:58,750 --> 00:16:58,760
+from Kent Beck.
+ 
+
+1015
+00:16:58,760 --> 00:17:01,350
+from Kent Beck.
+Invest in the design of the system every
+
+1016
+00:17:01,350 --> 00:17:01,360
+Invest in the design of the system every
+ 
+
+1017
+00:17:01,360 --> 00:17:02,710
+Invest in the design of the system every
+day.
+
+1018
+00:17:02,710 --> 00:17:02,720
+day.
+ 
+
+1019
+00:17:02,720 --> 00:17:03,910
+day.
+And this is the core of it, right?
+
+1020
+00:17:03,910 --> 00:17:03,920
+And this is the core of it, right?
+ 
+
+1021
+00:17:03,920 --> 00:17:06,669
+And this is the core of it, right?
+Because specs to code, we are not
+
+1022
+00:17:06,669 --> 00:17:06,679
+Because specs to code, we are not
+ 
+
+1023
+00:17:06,679 --> 00:17:08,550
+Because specs to code, we are not
+investing in the design of the system.
+
+1024
+00:17:08,550 --> 00:17:08,560
+investing in the design of the system.
+ 
+
+1025
+00:17:08,560 --> 00:17:10,710
+investing in the design of the system.
+We are divesting from it. We're getting
+
+1026
+00:17:10,710 --> 00:17:10,720
+We are divesting from it. We're getting
+ 
+
+1027
+00:17:10,720 --> 00:17:12,230
+We are divesting from it. We're getting
+rid of that.
+
+1028
+00:17:12,230 --> 00:17:12,240
+rid of that.
+ 
+
+1029
+00:17:12,240 --> 00:17:13,949
+rid of that.
+Whereas this, I think, is absolutely
+
+1030
+00:17:13,949 --> 00:17:13,959
+Whereas this, I think, is absolutely
+ 
+
+1031
+00:17:13,959 --> 00:17:16,390
+Whereas this, I think, is absolutely
+key.
+
+1032
+00:17:16,390 --> 00:17:16,400
+
+ 
+
+1033
+00:17:16,400 --> 00:17:18,030
+
+And so
+
+1034
+00:17:18,030 --> 00:17:18,040
+And so
+ 
+
+1035
+00:17:18,040 --> 00:17:19,870
+And so
+code is not cheap. That's the message I
+
+1036
+00:17:19,870 --> 00:17:19,880
+code is not cheap. That's the message I
+ 
+
+1037
+00:17:19,880 --> 00:17:21,590
+code is not cheap. That's the message I
+want you to take away. Code is
+
+1038
+00:17:21,590 --> 00:17:21,600
+want you to take away. Code is
+ 
+
+1039
+00:17:21,600 --> 00:17:23,429
+want you to take away. Code is
+important.
+
+1040
+00:17:23,429 --> 00:17:23,439
+important.
+ 
+
+1041
+00:17:23,439 --> 00:17:25,069
+important.
+And if we think about AI as a really
+
+1042
+00:17:25,069 --> 00:17:25,079
+And if we think about AI as a really
+ 
+
+1043
+00:17:25,079 --> 00:17:27,870
+And if we think about AI as a really
+great on-the-ground programmer,
+
+1044
+00:17:27,870 --> 00:17:27,880
+great on-the-ground programmer,
+ 
+
+1045
+00:17:27,880 --> 00:17:29,590
+great on-the-ground programmer,
+a kind of tactical programmer, a
+
+1046
+00:17:29,590 --> 00:17:29,600
+a kind of tactical programmer, a
+ 
+
+1047
+00:17:29,600 --> 00:17:32,070
+a kind of tactical programmer, a
+sergeant on the ground making the code
+
+1048
+00:17:32,070 --> 00:17:32,080
+sergeant on the ground making the code
+ 
+
+1049
+00:17:32,080 --> 00:17:35,510
+sergeant on the ground making the code
+changes, you need someone above that.
+
+1050
+00:17:35,510 --> 00:17:35,520
+changes, you need someone above that.
+ 
+
+1051
+00:17:35,520 --> 00:17:36,710
+changes, you need someone above that.
+You need someone thinking on the
+
+1052
+00:17:36,710 --> 00:17:36,720
+You need someone thinking on the
+ 
+
+1053
+00:17:36,720 --> 00:17:39,590
+You need someone thinking on the
+strategic level. And that's you.
+
+1054
+00:17:39,590 --> 00:17:39,600
+strategic level. And that's you.
+ 
+
+1055
+00:17:39,600 --> 00:17:41,270
+strategic level. And that's you.
+And that requires software fundamental
+
+1056
+00:17:41,270 --> 00:17:41,280
+And that requires software fundamental
+ 
+
+1057
+00:17:41,280 --> 00:17:43,550
+And that requires software fundamental
+skills that we've been using for 20
+
+1058
+00:17:43,550 --> 00:17:43,560
+skills that we've been using for 20
+ 
+
+1059
+00:17:43,560 --> 00:17:46,390
+skills that we've been using for 20
+years, for longer.
+
+1060
+00:17:46,390 --> 00:17:46,400
+years, for longer.
+ 
+
+1061
+00:17:46,400 --> 00:17:47,990
+years, for longer.
+Now, if you were interested in any of
+
+1062
+00:17:47,990 --> 00:17:48,000
+Now, if you were interested in any of
+ 
+
+1063
+00:17:48,000 --> 00:17:49,550
+Now, if you were interested in any of
+the skills I put up here, it's in the
+
+1064
+00:17:49,550 --> 00:17:49,560
+the skills I put up here, it's in the
+ 
+
+1065
+00:17:49,560 --> 00:17:51,990
+the skills I put up here, it's in the
+GitHub repo macpocockskills.
+
+1066
+00:17:51,990 --> 00:17:52,000
+GitHub repo macpocockskills.
+ 
+
+1067
+00:17:52,000 --> 00:17:53,510
+GitHub repo macpocockskills.
+And if you're interested in the training
+
+1068
+00:17:53,510 --> 00:17:53,520
+And if you're interested in the training
+ 
+
+1069
+00:17:53,520 --> 00:17:55,910
+And if you're interested in the training
+that I do or any free stuff, I'm on
+
+1070
+00:17:55,910 --> 00:17:55,920
+that I do or any free stuff, I'm on
+ 
+
+1071
+00:17:55,920 --> 00:17:57,590
+that I do or any free stuff, I'm on
+YouTube, I'm on Twitter, but I'm also at
+
+1072
+00:17:57,590 --> 00:17:57,600
+YouTube, I'm on Twitter, but I'm also at
+ 
+
+1073
+00:17:57,600 --> 00:17:59,590
+YouTube, I'm on Twitter, but I'm also at
+aihero.dev, where I have a newsletter
+
+1074
+00:17:59,590 --> 00:17:59,600
+aihero.dev, where I have a newsletter
+ 
+
+1075
+00:17:59,600 --> 00:18:00,990
+aihero.dev, where I have a newsletter
+you can check out.
+
+1076
+00:18:00,990 --> 00:18:01,000
+you can check out.
+ 
+
+1077
+00:18:01,000 --> 00:18:03,070
+you can check out.
+Thank you so much. I hope that this
+
+1078
+00:18:03,070 --> 00:18:03,080
+Thank you so much. I hope that this
+ 
+
+1079
+00:18:03,080 --> 00:18:05,630
+Thank you so much. I hope that this
+gives you confidence in this new AI age
+
+1080
+00:18:05,630 --> 00:18:05,640
+gives you confidence in this new AI age
+ 
+
+1081
+00:18:05,640 --> 00:18:06,430
+gives you confidence in this new AI age
+that you can actually make a good
+
+1082
+00:18:06,430 --> 00:18:06,440
+that you can actually make a good
+ 
+
+1083
+00:18:06,440 --> 00:18:07,830
+that you can actually make a good
+impact.
+
+1084
+00:18:07,830 --> 00:18:07,840
+impact.
+ 
+
+1085
+00:18:07,840 --> 00:18:09,267
+impact.
+Thank you.
+
+1086
+00:18:09,267 --> 00:18:09,277
+Thank you.
+ 
+
+1087
+00:18:09,277 --> 00:18:10,577
+Thank you.
+>> [music]
+
+1088
+00:18:10,577 --> 00:18:10,587
+>> [music]
+ 
+
+1089
+00:18:10,587 --> 00:18:15,817
+>> [music]
+[applause]
+
+1090
+00:18:15,817 --> 00:18:15,827
+
+ 
+
+1091
+00:18:15,827 --> 00:18:21,057
+
+[music]
+
+1092
+00:18:21,057 --> 00:18:21,067
+
+ 
+
+1093
+00:18:21,067 --> 00:18:23,087
+
+[music]
+

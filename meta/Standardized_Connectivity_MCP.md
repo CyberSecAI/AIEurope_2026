@@ -23,9 +23,20 @@ Standardize agent connectivity via MCP to decouple model reasoning from specific
 - Decoupling allows organizations to upgrade their models without having to rebuild their entire underlying tool and data infrastructure.
 - Standardized connectivity ensures that agents remain portable and can be easily redeployed across different providers and environments.
 
+## Enterprise Adoption
+- Gateway architecture enables enterprise MCP adoption by establishing one blessed root of trust for security teams.
+- Tool overload degrades agent performance; GitHub reduced context by 49% through tool consolidation and CRUD grouping.
+- Code generation via typed SDKs beats traditional tools for exposing massive APIs (1,000 tokens vs 1.1M).
+- Cross-app access (XAA) eliminates repetitive OAuth consent by brokering trust through identity providers.
+
 # Related Talks
 
 - **[The Future of MCP — David Soria Parra, Anthropic](../insights/v3Fr2JR47KA_The_Future_of_MCP_David_Soria_Parra_Anthropic.md)**
 - **[Bending a Public MCP Server Without Breaking It — Nimrod Hauser, Baz](../insights/U00AOI1eJUE_Bending_a_Public_MCP_Server_Without_Breaking_It.md)**
 - **[Your Insecure MCP Server Won't Survive Production — Tun Shwe, Lenses](../insights/BurJvbqFr4c_Your_Insecure_MCP_Server_Won_t_Survive_Production_Tun_Shwe_Lenses.md)**
 - **[Clawzette — Nick Taylor](../insights/xg1zNlzw7Jk_Nick_Taylor_Clawzette.md)**
+- **[Lessons from Scaling GitHub's Remote MCP Server — Sam Morrow, GitHub](../insights/0n3MKk7r60w_Lessons_from_Scaling_GitHubs_Remote_MCP_Server_Sam_Morrow_GitHub.md)**
+- **[What we learned scaling MCPs to Enterprise — Karan Sampath, Anthropic](../insights/CD6R4Wf3jnY_What_we_learned_scaling_MCPs_to_Enterprise_Karan_Sampath_Anthropic.md)**
+- **[One Login to Rule Them All: Cross-App Access for MCP — Garrett Galow, WorkOS](../insights/EmhRyw6xeT0_One_Login_to_Rule_Them_All_Cross-App_Access_for_MCP_Garrett_Galow_WorkOS.md)**
+- **[MCP = Mega Context Problem — Matt Carey](../insights/YBYUvGOuotE_MCP_Mega_Context_Problem_Matt_Carey.md)**
+- **[Full Workshop: Build Your Own Deep Research Agents — Louis-François Bouchard](../insights/mYSRn6PC1mc_Full_Workshop_Build_Your_Own_Deep_Research_Agents_Louis-Francois_Bouchard.md)**

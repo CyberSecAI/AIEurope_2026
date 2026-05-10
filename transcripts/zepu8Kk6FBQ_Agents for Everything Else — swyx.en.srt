@@ -1,0 +1,4185 @@
+1
+00:00:07,205 --> 00:00:15,590
+
+[music]
+
+2
+00:00:15,590 --> 00:00:15,600
+
+ 
+
+3
+00:00:15,600 --> 00:00:18,030
+
+>> The future of work has many paths.
+
+4
+00:00:18,030 --> 00:00:18,040
+>> The future of work has many paths.
+ 
+
+5
+00:00:18,040 --> 00:00:20,310
+>> The future of work has many paths.
+Our next presenter will discuss the path
+
+6
+00:00:20,310 --> 00:00:20,320
+Our next presenter will discuss the path
+ 
+
+7
+00:00:20,320 --> 00:00:22,470
+Our next presenter will discuss the path
+that he walked with Devin as he
+
+8
+00:00:22,470 --> 00:00:22,480
+that he walked with Devin as he
+ 
+
+9
+00:00:22,480 --> 00:00:25,030
+that he walked with Devin as he
+organized this very conference. Please
+
+10
+00:00:25,030 --> 00:00:25,040
+organized this very conference. Please
+ 
+
+11
+00:00:25,040 --> 00:00:27,070
+organized this very conference. Please
+join me in welcoming to the stage the
+
+12
+00:00:27,070 --> 00:00:27,080
+join me in welcoming to the stage the
+ 
+
+13
+00:00:27,080 --> 00:00:29,590
+join me in welcoming to the stage the
+co-founder of AI Engineer conferences
+
+14
+00:00:29,590 --> 00:00:29,600
+co-founder of AI Engineer conferences
+ 
+
+15
+00:00:29,600 --> 00:00:32,870
+co-founder of AI Engineer conferences
+Swyx.
+
+16
+00:00:32,870 --> 00:00:32,880
+
+ 
+
+17
+00:00:32,880 --> 00:00:34,050
+
+Oh.
+
+18
+00:00:34,050 --> 00:00:34,060
+Oh.
+ 
+
+19
+00:00:34,060 --> 00:00:35,950
+Oh.
+>> [applause]
+
+20
+00:00:35,950 --> 00:00:35,960
+>> [applause]
+ 
+
+21
+00:00:35,960 --> 00:00:37,870
+>> [applause]
+>> Hi, everyone.
+
+22
+00:00:37,870 --> 00:00:37,880
+>> Hi, everyone.
+ 
+
+23
+00:00:37,880 --> 00:00:40,790
+>> Hi, everyone.
+Uh I am not the chief AI officer of the
+
+24
+00:00:40,790 --> 00:00:40,800
+Uh I am not the chief AI officer of the
+ 
+
+25
+00:00:40,800 --> 00:00:41,910
+Uh I am not the chief AI officer of the
+UK.
+
+26
+00:00:41,910 --> 00:00:41,920
+UK.
+ 
+
+27
+00:00:41,920 --> 00:00:44,350
+UK.
+Uh I unfortunately he he had to leave
+
+28
+00:00:44,350 --> 00:00:44,360
+Uh I unfortunately he he had to leave
+ 
+
+29
+00:00:44,360 --> 00:00:46,270
+Uh I unfortunately he he had to leave
+for personal reason. Uh but you know,
+
+30
+00:00:46,270 --> 00:00:46,280
+for personal reason. Uh but you know,
+ 
+
+31
+00:00:46,280 --> 00:00:47,910
+for personal reason. Uh but you know,
+you got me. Uh thanks for staying so
+
+32
+00:00:47,910 --> 00:00:47,920
+you got me. Uh thanks for staying so
+ 
+
+33
+00:00:47,920 --> 00:00:49,230
+you got me. Uh thanks for staying so
+long. I hope has everyone having a good
+
+34
+00:00:49,230 --> 00:00:49,240
+long. I hope has everyone having a good
+ 
+
+35
+00:00:49,240 --> 00:00:50,425
+long. I hope has everyone having a good
+time? Thank you.
+
+36
+00:00:50,425 --> 00:00:50,435
+time? Thank you.
+ 
+
+37
+00:00:50,435 --> 00:00:51,630
+time? Thank you.
+>> [applause]
+
+38
+00:00:51,630 --> 00:00:51,640
+>> [applause]
+ 
+
+39
+00:00:51,640 --> 00:00:53,430
+>> [applause]
+>> Uh
+
+40
+00:00:53,430 --> 00:00:53,440
+>> Uh
+ 
+
+41
+00:00:53,440 --> 00:00:55,630
+>> Uh
+It is so endearing and and and
+
+42
+00:00:55,630 --> 00:00:55,640
+It is so endearing and and and
+ 
+
+43
+00:00:55,640 --> 00:00:57,910
+It is so endearing and and and
+heartwarming to to hear from you guys.
+
+44
+00:00:57,910 --> 00:00:57,920
+heartwarming to to hear from you guys.
+ 
+
+45
+00:00:57,920 --> 00:00:59,910
+heartwarming to to hear from you guys.
+Uh I'll take you a little bit into how
+
+46
+00:00:59,910 --> 00:00:59,920
+Uh I'll take you a little bit into how
+ 
+
+47
+00:00:59,920 --> 00:01:02,590
+Uh I'll take you a little bit into how
+we build AI Engineer with AI.
+
+48
+00:01:02,590 --> 00:01:02,600
+we build AI Engineer with AI.
+ 
+
+49
+00:01:02,600 --> 00:01:03,950
+we build AI Engineer with AI.
+And it's it's probably the biggest
+
+50
+00:01:03,950 --> 00:01:03,960
+And it's it's probably the biggest
+ 
+
+51
+00:01:03,960 --> 00:01:06,390
+And it's it's probably the biggest
+revelation that I've had. Uh so yeah,
+
+52
+00:01:06,390 --> 00:01:06,400
+revelation that I've had. Uh so yeah,
+ 
+
+53
+00:01:06,400 --> 00:01:07,950
+revelation that I've had. Uh so yeah,
+we've had we've had a lot of really warm
+
+54
+00:01:07,950 --> 00:01:07,960
+we've had we've had a lot of really warm
+ 
+
+55
+00:01:07,960 --> 00:01:10,030
+we've had we've had a lot of really warm
+reception from you guys and I think it's
+
+56
+00:01:10,030 --> 00:01:10,040
+reception from you guys and I think it's
+ 
+
+57
+00:01:10,040 --> 00:01:12,350
+reception from you guys and I think it's
+really great and uh I think this is
+
+58
+00:01:12,350 --> 00:01:12,360
+really great and uh I think this is
+ 
+
+59
+00:01:12,360 --> 00:01:13,750
+really great and uh I think this is
+something that we really try to engineer
+
+60
+00:01:13,750 --> 00:01:13,760
+something that we really try to engineer
+ 
+
+61
+00:01:13,760 --> 00:01:15,390
+something that we really try to engineer
+and and hopefully, you know, this is our
+
+62
+00:01:15,390 --> 00:01:15,400
+and and hopefully, you know, this is our
+ 
+
+63
+00:01:15,400 --> 00:01:16,830
+and and hopefully, you know, this is our
+first event in London. Hopefully, you
+
+64
+00:01:16,830 --> 00:01:16,840
+first event in London. Hopefully, you
+ 
+
+65
+00:01:16,840 --> 00:01:18,750
+first event in London. Hopefully, you
+have us back next year.
+
+66
+00:01:18,750 --> 00:01:18,760
+have us back next year.
+ 
+
+67
+00:01:18,760 --> 00:01:21,150
+have us back next year.
+Um one one thing I wanted to for those
+
+68
+00:01:21,150 --> 00:01:21,160
+Um one one thing I wanted to for those
+ 
+
+69
+00:01:21,160 --> 00:01:22,990
+Um one one thing I wanted to for those
+who are newer to us, uh I do one of
+
+70
+00:01:22,990 --> 00:01:23,000
+who are newer to us, uh I do one of
+ 
+
+71
+00:01:23,000 --> 00:01:25,550
+who are newer to us, uh I do one of
+these keynotes every single AIE. Uh the
+
+72
+00:01:25,550 --> 00:01:25,560
+these keynotes every single AIE. Uh the
+ 
+
+73
+00:01:25,560 --> 00:01:27,830
+these keynotes every single AIE. Uh the
+first very first one 3 years ago, I
+
+74
+00:01:27,830 --> 00:01:27,840
+first very first one 3 years ago, I
+ 
+
+75
+00:01:27,840 --> 00:01:30,590
+first very first one 3 years ago, I
+talked about the productivity gain that
+
+76
+00:01:30,590 --> 00:01:30,600
+talked about the productivity gain that
+ 
+
+77
+00:01:30,600 --> 00:01:33,110
+talked about the productivity gain that
+you get from the increased AI
+
+78
+00:01:33,110 --> 00:01:33,120
+you get from the increased AI
+ 
+
+79
+00:01:33,120 --> 00:01:35,190
+you get from the increased AI
+uh from from the increased usage of AI.
+
+80
+00:01:35,190 --> 00:01:35,200
+uh from from the increased usage of AI.
+ 
+
+81
+00:01:35,200 --> 00:01:38,270
+uh from from the increased usage of AI.
+Um and the second one, we talked about
+
+82
+00:01:38,270 --> 00:01:38,280
+Um and the second one, we talked about
+ 
+
+83
+00:01:38,280 --> 00:01:40,510
+Um and the second one, we talked about
+how you should just use more AI because
+
+84
+00:01:40,510 --> 00:01:40,520
+how you should just use more AI because
+ 
+
+85
+00:01:40,520 --> 00:01:42,670
+how you should just use more AI because
+the cost curve of AI is going down
+
+86
+00:01:42,670 --> 00:01:42,680
+the cost curve of AI is going down
+ 
+
+87
+00:01:42,680 --> 00:01:44,910
+the cost curve of AI is going down
+roughly 100 times uh
+
+88
+00:01:44,910 --> 00:01:44,920
+roughly 100 times uh
+ 
+
+89
+00:01:44,920 --> 00:01:47,190
+roughly 100 times uh
+per every 12 to 18 months. And I think
+
+90
+00:01:47,190 --> 00:01:47,200
+per every 12 to 18 months. And I think
+ 
+
+91
+00:01:47,200 --> 00:01:48,750
+per every 12 to 18 months. And I think
+it's still continuing to to trend that
+
+92
+00:01:48,750 --> 00:01:48,760
+it's still continuing to to trend that
+ 
+
+93
+00:01:48,760 --> 00:01:50,070
+it's still continuing to to trend that
+way.
+
+94
+00:01:50,070 --> 00:01:50,080
+way.
+ 
+
+95
+00:01:50,080 --> 00:01:51,750
+way.
+Um the third year, we started to talk
+
+96
+00:01:51,750 --> 00:01:51,760
+Um the third year, we started to talk
+ 
+
+97
+00:01:51,760 --> 00:01:54,070
+Um the third year, we started to talk
+about tiny teams. Uh which which was
+
+98
+00:01:54,070 --> 00:01:54,080
+about tiny teams. Uh which which was
+ 
+
+99
+00:01:54,080 --> 00:01:55,910
+about tiny teams. Uh which which was
+basically this definition that I had
+
+100
+00:01:55,910 --> 00:01:55,920
+basically this definition that I had
+ 
+
+101
+00:01:55,920 --> 00:01:58,670
+basically this definition that I had
+that teams with more millions in revenue
+
+102
+00:01:58,670 --> 00:01:58,680
+that teams with more millions in revenue
+ 
+
+103
+00:01:58,680 --> 00:02:01,790
+that teams with more millions in revenue
+than number of employees. Um
+
+104
+00:02:01,790 --> 00:02:01,800
+than number of employees. Um
+ 
+
+105
+00:02:01,800 --> 00:02:03,750
+than number of employees. Um
+and I even curated an entire track at
+
+106
+00:02:03,750 --> 00:02:03,760
+and I even curated an entire track at
+ 
+
+107
+00:02:03,760 --> 00:02:05,430
+and I even curated an entire track at
+the World's Fair about this where we
+
+108
+00:02:05,430 --> 00:02:05,440
+the World's Fair about this where we
+ 
+
+109
+00:02:05,440 --> 00:02:06,870
+the World's Fair about this where we
+where we sort of summarize it as the
+
+110
+00:02:06,870 --> 00:02:06,880
+where we sort of summarize it as the
+ 
+
+111
+00:02:06,880 --> 00:02:08,310
+where we sort of summarize it as the
+tiny teams fable if you're interested in
+
+112
+00:02:08,310 --> 00:02:08,320
+tiny teams fable if you're interested in
+ 
+
+113
+00:02:08,320 --> 00:02:10,389
+tiny teams fable if you're interested in
+building that. Uh the reason I liked
+
+114
+00:02:10,389 --> 00:02:10,399
+building that. Uh the reason I liked
+ 
+
+115
+00:02:10,399 --> 00:02:12,470
+building that. Uh the reason I liked
+this emphasis is because
+
+116
+00:02:12,470 --> 00:02:12,480
+this emphasis is because
+ 
+
+117
+00:02:12,480 --> 00:02:13,990
+this emphasis is because
+uh I think people are maybe too
+
+118
+00:02:13,990 --> 00:02:14,000
+uh I think people are maybe too
+ 
+
+119
+00:02:14,000 --> 00:02:15,710
+uh I think people are maybe too
+egotistical about looking at for the
+
+120
+00:02:15,710 --> 00:02:15,720
+egotistical about looking at for the
+ 
+
+121
+00:02:15,720 --> 00:02:17,670
+egotistical about looking at for the
+one-person billionaire
+
+122
+00:02:17,670 --> 00:02:17,680
+one-person billionaire
+ 
+
+123
+00:02:17,680 --> 00:02:20,510
+one-person billionaire
+uh or unicorn founder. Um every company
+
+124
+00:02:20,510 --> 00:02:20,520
+uh or unicorn founder. Um every company
+ 
+
+125
+00:02:20,520 --> 00:02:21,790
+uh or unicorn founder. Um every company
+can have a tiny team whether you're
+
+126
+00:02:21,790 --> 00:02:21,800
+can have a tiny team whether you're
+ 
+
+127
+00:02:21,800 --> 00:02:23,670
+can have a tiny team whether you're
+small or large.
+
+128
+00:02:23,670 --> 00:02:23,680
+small or large.
+ 
+
+129
+00:02:23,680 --> 00:02:25,830
+small or large.
+Um and I think when I look at how I how
+
+130
+00:02:25,830 --> 00:02:25,840
+Um and I think when I look at how I how
+ 
+
+131
+00:02:25,840 --> 00:02:28,190
+Um and I think when I look at how I how
+we run AI Engineer, me being the the the
+
+132
+00:02:28,190 --> 00:02:28,200
+we run AI Engineer, me being the the the
+ 
+
+133
+00:02:28,200 --> 00:02:30,510
+we run AI Engineer, me being the the the
+leadership of Ben Lear and myself, uh
+
+134
+00:02:30,510 --> 00:02:30,520
+leadership of Ben Lear and myself, uh
+ 
+
+135
+00:02:30,520 --> 00:02:33,470
+leadership of Ben Lear and myself, uh
+we're also a tiny team. Um this is us.
+
+136
+00:02:33,470 --> 00:02:33,480
+we're also a tiny team. Um this is us.
+ 
+
+137
+00:02:33,480 --> 00:02:37,110
+we're also a tiny team. Um this is us.
+Uh it's just uh nine full-time people
+
+138
+00:02:37,110 --> 00:02:37,120
+Uh it's just uh nine full-time people
+ 
+
+139
+00:02:37,120 --> 00:02:40,230
+Uh it's just uh nine full-time people
+and uh we're running a business that is
+
+140
+00:02:40,230 --> 00:02:40,240
+and uh we're running a business that is
+ 
+
+141
+00:02:40,240 --> 00:02:41,830
+and uh we're running a business that is
+more than $9 million. So, we are a tiny
+
+142
+00:02:41,830 --> 00:02:41,840
+more than $9 million. So, we are a tiny
+ 
+
+143
+00:02:41,840 --> 00:02:43,390
+more than $9 million. So, we are a tiny
+team.
+
+144
+00:02:43,390 --> 00:02:43,400
+team.
+ 
+
+145
+00:02:43,400 --> 00:02:45,710
+team.
+Um and I wanted to show you the most
+
+146
+00:02:45,710 --> 00:02:45,720
+Um and I wanted to show you the most
+ 
+
+147
+00:02:45,720 --> 00:02:48,350
+Um and I wanted to show you the most
+significant changes in our workflow
+
+148
+00:02:48,350 --> 00:02:48,360
+significant changes in our workflow
+ 
+
+149
+00:02:48,360 --> 00:02:50,990
+significant changes in our workflow
+since we started this 3 years ago. Uh by
+
+150
+00:02:50,990 --> 00:02:51,000
+since we started this 3 years ago. Uh by
+ 
+
+151
+00:02:51,000 --> 00:02:52,790
+since we started this 3 years ago. Uh by
+the way, this is our taking the AGI pill
+
+152
+00:02:52,790 --> 00:02:52,800
+the way, this is our taking the AGI pill
+ 
+
+153
+00:02:52,800 --> 00:02:54,270
+the way, this is our taking the AGI pill
+moment. Uh did you guys get the AGI
+
+154
+00:02:54,270 --> 00:02:54,280
+moment. Uh did you guys get the AGI
+ 
+
+155
+00:02:54,280 --> 00:02:55,630
+moment. Uh did you guys get the AGI
+pills? Yes.
+
+156
+00:02:55,630 --> 00:02:55,640
+pills? Yes.
+ 
+
+157
+00:02:55,640 --> 00:02:56,186
+pills? Yes.
+Yes.
+
+158
+00:02:56,186 --> 00:02:56,196
+Yes.
+ 
+
+159
+00:02:56,196 --> 00:02:56,830
+Yes.
+>> [laughter]
+
+160
+00:02:56,830 --> 00:02:56,840
+>> [laughter]
+ 
+
+161
+00:02:56,840 --> 00:02:58,950
+>> [laughter]
+>> Uh very proud of this is my brainchild.
+
+162
+00:02:58,950 --> 00:02:58,960
+>> Uh very proud of this is my brainchild.
+ 
+
+163
+00:02:58,960 --> 00:03:01,430
+>> Uh very proud of this is my brainchild.
+Uh if one of your coworkers is not
+
+164
+00:03:01,430 --> 00:03:01,440
+Uh if one of your coworkers is not
+ 
+
+165
+00:03:01,440 --> 00:03:02,830
+Uh if one of your coworkers is not
+sufficiently AGI pill, you should
+
+166
+00:03:02,830 --> 00:03:02,840
+sufficiently AGI pill, you should
+ 
+
+167
+00:03:02,840 --> 00:03:05,070
+sufficiently AGI pill, you should
+prescribe one of this. You're all AGI
+
+168
+00:03:05,070 --> 00:03:05,080
+prescribe one of this. You're all AGI
+ 
+
+169
+00:03:05,080 --> 00:03:07,350
+prescribe one of this. You're all AGI
+doctors now.
+
+170
+00:03:07,350 --> 00:03:07,360
+doctors now.
+ 
+
+171
+00:03:07,360 --> 00:03:10,110
+doctors now.
+Okay, our stack was very stable and
+
+172
+00:03:10,110 --> 00:03:10,120
+Okay, our stack was very stable and
+ 
+
+173
+00:03:10,120 --> 00:03:12,110
+Okay, our stack was very stable and
+completely non-AI, which is very ironic
+
+174
+00:03:12,110 --> 00:03:12,120
+completely non-AI, which is very ironic
+ 
+
+175
+00:03:12,120 --> 00:03:14,750
+completely non-AI, which is very ironic
+for an AI conference. Uh we do Figma,
+
+176
+00:03:14,750 --> 00:03:14,760
+for an AI conference. Uh we do Figma,
+ 
+
+177
+00:03:14,760 --> 00:03:16,950
+for an AI conference. Uh we do Figma,
+React, Supabase, Tido,
+
+178
+00:03:16,950 --> 00:03:16,960
+React, Supabase, Tido,
+ 
+
+179
+00:03:16,960 --> 00:03:18,630
+React, Supabase, Tido,
+uh Google Sheets, Sessionize.
+
+180
+00:03:18,630 --> 00:03:18,640
+uh Google Sheets, Sessionize.
+ 
+
+181
+00:03:18,640 --> 00:03:19,550
+uh Google Sheets, Sessionize.
+Um
+
+182
+00:03:19,550 --> 00:03:19,560
+Um
+ 
+
+183
+00:03:19,560 --> 00:03:21,550
+Um
+and then I've had this funny weird
+
+184
+00:03:21,550 --> 00:03:21,560
+and then I've had this funny weird
+ 
+
+185
+00:03:21,560 --> 00:03:24,390
+and then I've had this funny weird
+moment where I joined Cognition uh and
+
+186
+00:03:24,390 --> 00:03:24,400
+moment where I joined Cognition uh and
+ 
+
+187
+00:03:24,400 --> 00:03:26,550
+moment where I joined Cognition uh and
+and started talking uh started using
+
+188
+00:03:26,550 --> 00:03:26,560
+and started talking uh started using
+ 
+
+189
+00:03:26,560 --> 00:03:28,150
+and started talking uh started using
+coding agents
+
+190
+00:03:28,150 --> 00:03:28,160
+coding agents
+ 
+
+191
+00:03:28,160 --> 00:03:29,750
+coding agents
+seriously at work, mostly because they
+
+192
+00:03:29,750 --> 00:03:29,760
+seriously at work, mostly because they
+ 
+
+193
+00:03:29,760 --> 00:03:30,830
+seriously at work, mostly because they
+were free.
+
+194
+00:03:30,830 --> 00:03:30,840
+were free.
+ 
+
+195
+00:03:30,840 --> 00:03:33,470
+were free.
+Um and I started adding it to the
+
+196
+00:03:33,470 --> 00:03:33,480
+Um and I started adding it to the
+ 
+
+197
+00:03:33,480 --> 00:03:34,870
+Um and I started adding it to the
+company Slack.
+
+198
+00:03:34,870 --> 00:03:34,880
+company Slack.
+ 
+
+199
+00:03:34,880 --> 00:03:36,630
+company Slack.
+And then I started doing things with it
+
+200
+00:03:36,630 --> 00:03:36,640
+And then I started doing things with it
+ 
+
+201
+00:03:36,640 --> 00:03:38,190
+And then I started doing things with it
+and showing people, "Hey, here's how you
+
+202
+00:03:38,190 --> 00:03:38,200
+and showing people, "Hey, here's how you
+ 
+
+203
+00:03:38,200 --> 00:03:40,110
+and showing people, "Hey, here's how you
+use it to do coding on the the company
+
+204
+00:03:40,110 --> 00:03:40,120
+use it to do coding on the the company
+ 
+
+205
+00:03:40,120 --> 00:03:42,270
+use it to do coding on the the company
+website." All well and good. And
+
+206
+00:03:42,270 --> 00:03:42,280
+website." All well and good. And
+ 
+
+207
+00:03:42,280 --> 00:03:44,790
+website." All well and good. And
+something strange starts happening. Um I
+
+208
+00:03:44,790 --> 00:03:44,800
+something strange starts happening. Um I
+ 
+
+209
+00:03:44,800 --> 00:03:47,950
+something strange starts happening. Um I
+start introducing uh this is this is a a
+
+210
+00:03:47,950 --> 00:03:47,960
+start introducing uh this is this is a a
+ 
+
+211
+00:03:47,960 --> 00:03:50,070
+start introducing uh this is this is a a
+a workflow of our contract designer now
+
+212
+00:03:50,070 --> 00:03:50,080
+a workflow of our contract designer now
+ 
+
+213
+00:03:50,080 --> 00:03:53,110
+a workflow of our contract designer now
+full-time um uh showing me a Figma page
+
+214
+00:03:53,110 --> 00:03:53,120
+full-time um uh showing me a Figma page
+ 
+
+215
+00:03:53,120 --> 00:03:54,510
+full-time um uh showing me a Figma page
+and asking me to go through it and
+
+216
+00:03:54,510 --> 00:03:54,520
+and asking me to go through it and
+ 
+
+217
+00:03:54,520 --> 00:03:57,350
+and asking me to go through it and
+expecting that we would take a week, 2
+
+218
+00:03:57,350 --> 00:03:57,360
+expecting that we would take a week, 2
+ 
+
+219
+00:03:57,360 --> 00:03:59,870
+expecting that we would take a week, 2
+weeks, 4 weeks to turn it into reality.
+
+220
+00:03:59,870 --> 00:03:59,880
+weeks, 4 weeks to turn it into reality.
+ 
+
+221
+00:03:59,880 --> 00:04:02,510
+weeks, 4 weeks to turn it into reality.
+Um I just added Devin to it.
+
+222
+00:04:02,510 --> 00:04:02,520
+Um I just added Devin to it.
+ 
+
+223
+00:04:02,520 --> 00:04:05,830
+Um I just added Devin to it.
+Um and I'll and ultimately uh before I
+
+224
+00:04:05,830 --> 00:04:05,840
+Um and I'll and ultimately uh before I
+ 
+
+225
+00:04:05,840 --> 00:04:07,190
+Um and I'll and ultimately uh before I
+had to add Devin to it, I had to hook up
+
+226
+00:04:07,190 --> 00:04:07,200
+had to add Devin to it, I had to hook up
+ 
+
+227
+00:04:07,200 --> 00:04:09,070
+had to add Devin to it, I had to hook up
+Devin to Figma and I'm not going to be
+
+228
+00:04:09,070 --> 00:04:09,080
+Devin to Figma and I'm not going to be
+ 
+
+229
+00:04:09,080 --> 00:04:10,710
+Devin to Figma and I'm not going to be
+doing that So, Coworker is doing
+
+230
+00:04:10,710 --> 00:04:10,720
+doing that So, Coworker is doing
+ 
+
+231
+00:04:10,720 --> 00:04:12,822
+doing that So, Coworker is doing
+it for me. You should use Coworker for
+
+232
+00:04:12,822 --> 00:04:12,832
+it for me. You should use Coworker for
+ 
+
+233
+00:04:12,832 --> 00:04:13,390
+it for me. You should use Coworker for
+>> [laughter]
+
+234
+00:04:13,390 --> 00:04:13,400
+>> [laughter]
+ 
+
+235
+00:04:13,400 --> 00:04:15,150
+>> [laughter]
+>> uh for doing this. And which which by
+
+236
+00:04:15,150 --> 00:04:15,160
+>> uh for doing this. And which which by
+ 
+
+237
+00:04:15,160 --> 00:04:16,349
+>> uh for doing this. And which which by
+the way by the way leads me to my first
+
+238
+00:04:16,349 --> 00:04:16,359
+the way by the way leads me to my first
+ 
+
+239
+00:04:16,359 --> 00:04:18,310
+the way by the way leads me to my first
+lesson, which is anytime there's like
+
+240
+00:04:18,310 --> 00:04:18,320
+lesson, which is anytime there's like
+ 
+
+241
+00:04:18,320 --> 00:04:19,830
+lesson, which is anytime there's like
+random yak shaving, I think one
+
+242
+00:04:19,830 --> 00:04:19,840
+random yak shaving, I think one
+ 
+
+243
+00:04:19,840 --> 00:04:21,509
+random yak shaving, I think one
+underappreciated um
+
+244
+00:04:21,509 --> 00:04:21,519
+underappreciated um
+ 
+
+245
+00:04:21,519 --> 00:04:23,510
+underappreciated um
+uh benefit of agents is that they save
+
+246
+00:04:23,510 --> 00:04:23,520
+uh benefit of agents is that they save
+ 
+
+247
+00:04:23,520 --> 00:04:25,150
+uh benefit of agents is that they save
+you the yak shaves. Like all the
+
+248
+00:04:25,150 --> 00:04:25,160
+you the yak shaves. Like all the
+ 
+
+249
+00:04:25,160 --> 00:04:26,870
+you the yak shaves. Like all the
+dependency tree crawling of like, "Oh,
+
+250
+00:04:26,870 --> 00:04:26,880
+dependency tree crawling of like, "Oh,
+ 
+
+251
+00:04:26,880 --> 00:04:28,150
+dependency tree crawling of like, "Oh,
+no, I have to do that first. Oh, no, I
+
+252
+00:04:28,150 --> 00:04:28,160
+no, I have to do that first. Oh, no, I
+ 
+
+253
+00:04:28,160 --> 00:04:29,910
+no, I have to do that first. Oh, no, I
+have to do that first." And particularly
+
+254
+00:04:29,910 --> 00:04:29,920
+have to do that first." And particularly
+ 
+
+255
+00:04:29,920 --> 00:04:31,390
+have to do that first." And particularly
+when it comes to installing dependencies
+
+256
+00:04:31,390 --> 00:04:31,400
+when it comes to installing dependencies
+ 
+
+257
+00:04:31,400 --> 00:04:33,750
+when it comes to installing dependencies
+or fixing Python dependencies, fantastic
+
+258
+00:04:33,750 --> 00:04:33,760
+or fixing Python dependencies, fantastic
+ 
+
+259
+00:04:33,760 --> 00:04:35,710
+or fixing Python dependencies, fantastic
+for that. And I think uh
+
+260
+00:04:35,710 --> 00:04:35,720
+for that. And I think uh
+ 
+
+261
+00:04:35,720 --> 00:04:38,390
+for that. And I think uh
+what model of productivity that doesn't
+
+262
+00:04:38,390 --> 00:04:38,400
+what model of productivity that doesn't
+ 
+
+263
+00:04:38,400 --> 00:04:40,110
+what model of productivity that doesn't
+sufficiently appreciate parallelism and
+
+264
+00:04:40,110 --> 00:04:40,120
+sufficiently appreciate parallelism and
+ 
+
+265
+00:04:40,120 --> 00:04:42,030
+sufficiently appreciate parallelism and
+not just autonomy, I think uh and and
+
+266
+00:04:42,030 --> 00:04:42,040
+not just autonomy, I think uh and and
+ 
+
+267
+00:04:42,040 --> 00:04:44,230
+not just autonomy, I think uh and and
+sort of death of the yak shaving is not
+
+268
+00:04:44,230 --> 00:04:44,240
+sort of death of the yak shaving is not
+ 
+
+269
+00:04:44,240 --> 00:04:45,590
+sort of death of the yak shaving is not
+fully capturing the the benefit of
+
+270
+00:04:45,590 --> 00:04:45,600
+fully capturing the the benefit of
+ 
+
+271
+00:04:45,600 --> 00:04:47,630
+fully capturing the the benefit of
+agents. Um
+
+272
+00:04:47,630 --> 00:04:47,640
+agents. Um
+ 
+
+273
+00:04:47,640 --> 00:04:49,670
+agents. Um
+so anyway, back to the agent story. Uh
+
+274
+00:04:49,670 --> 00:04:49,680
+so anyway, back to the agent story. Uh
+ 
+
+275
+00:04:49,680 --> 00:04:52,830
+so anyway, back to the agent story. Uh
+hooked up Devin to Figma and we uh in
+
+276
+00:04:52,830 --> 00:04:52,840
+hooked up Devin to Figma and we uh in
+ 
+
+277
+00:04:52,840 --> 00:04:54,310
+hooked up Devin to Figma and we uh in
+very short order, we have a perfectly
+
+278
+00:04:54,310 --> 00:04:54,320
+very short order, we have a perfectly
+ 
+
+279
+00:04:54,320 --> 00:04:56,030
+very short order, we have a perfectly
+functioning website uh
+
+280
+00:04:56,030 --> 00:04:56,040
+functioning website uh
+ 
+
+281
+00:04:56,040 --> 00:04:58,190
+functioning website uh
+that is pixel perfect to the Figma. And
+
+282
+00:04:58,190 --> 00:04:58,200
+that is pixel perfect to the Figma. And
+ 
+
+283
+00:04:58,200 --> 00:04:59,910
+that is pixel perfect to the Figma. And
+to me, uh that was a surprise cuz I've
+
+284
+00:04:59,910 --> 00:04:59,920
+to me, uh that was a surprise cuz I've
+ 
+
+285
+00:04:59,920 --> 00:05:01,630
+to me, uh that was a surprise cuz I've
+never done it before. You know, you
+
+286
+00:05:01,630 --> 00:05:01,640
+never done it before. You know, you
+ 
+
+287
+00:05:01,640 --> 00:05:03,510
+never done it before. You know, you
+always mistrust marketing until you see
+
+288
+00:05:03,510 --> 00:05:03,520
+always mistrust marketing until you see
+ 
+
+289
+00:05:03,520 --> 00:05:05,110
+always mistrust marketing until you see
+it for yourself. And more importantly,
+
+290
+00:05:05,110 --> 00:05:05,120
+it for yourself. And more importantly,
+ 
+
+291
+00:05:05,120 --> 00:05:06,550
+it for yourself. And more importantly,
+our our designer was very happy about
+
+292
+00:05:06,550 --> 00:05:06,560
+our our designer was very happy about
+ 
+
+293
+00:05:06,560 --> 00:05:08,110
+our our designer was very happy about
+it. Um
+
+294
+00:05:08,110 --> 00:05:08,120
+it. Um
+ 
+
+295
+00:05:08,120 --> 00:05:09,470
+it. Um
+and that's the that's basically the the
+
+296
+00:05:09,470 --> 00:05:09,480
+and that's the that's basically the the
+ 
+
+297
+00:05:09,480 --> 00:05:10,590
+and that's the that's basically the the
+website that you see live today when you
+
+298
+00:05:10,590 --> 00:05:10,600
+website that you see live today when you
+ 
+
+299
+00:05:10,600 --> 00:05:12,510
+website that you see live today when you
+go to ai.engineer.
+
+300
+00:05:12,510 --> 00:05:12,520
+go to ai.engineer.
+ 
+
+301
+00:05:12,520 --> 00:05:14,550
+go to ai.engineer.
+Um the other interesting thing that
+
+302
+00:05:14,550 --> 00:05:14,560
+Um the other interesting thing that
+ 
+
+303
+00:05:14,560 --> 00:05:16,470
+Um the other interesting thing that
+happened was then we started using it
+
+304
+00:05:16,470 --> 00:05:16,480
+happened was then we started using it
+ 
+
+305
+00:05:16,480 --> 00:05:17,910
+happened was then we started using it
+more, right? After after one initial
+
+306
+00:05:17,910 --> 00:05:17,920
+more, right? After after one initial
+ 
+
+307
+00:05:17,920 --> 00:05:19,510
+more, right? After after one initial
+success, you start using it more. Uh
+
+308
+00:05:19,510 --> 00:05:19,520
+success, you start using it more. Uh
+ 
+
+309
+00:05:19,520 --> 00:05:20,590
+success, you start using it more. Uh
+something that you can't see because
+
+310
+00:05:20,590 --> 00:05:20,600
+something that you can't see because
+ 
+
+311
+00:05:20,600 --> 00:05:21,710
+something that you can't see because
+it's very small text, but I'm going to
+
+312
+00:05:21,710 --> 00:05:21,720
+it's very small text, but I'm going to
+ 
+
+313
+00:05:21,720 --> 00:05:24,990
+it's very small text, but I'm going to
+highlight for you is that that is 207
+
+314
+00:05:24,990 --> 00:05:25,000
+highlight for you is that that is 207
+ 
+
+315
+00:05:25,000 --> 00:05:27,470
+highlight for you is that that is 207
+replies just exploded in usage. Like,
+
+316
+00:05:27,470 --> 00:05:27,480
+replies just exploded in usage. Like,
+ 
+
+317
+00:05:27,480 --> 00:05:29,310
+replies just exploded in usage. Like,
+what the hell? Um and when you dig into
+
+318
+00:05:29,310 --> 00:05:29,320
+what the hell? Um and when you dig into
+ 
+
+319
+00:05:29,320 --> 00:05:31,510
+what the hell? Um and when you dig into
+it, uh it's it's very interesting,
+
+320
+00:05:31,510 --> 00:05:31,520
+it, uh it's it's very interesting,
+ 
+
+321
+00:05:31,520 --> 00:05:33,630
+it, uh it's it's very interesting,
+right? So, first of all, uh I start
+
+322
+00:05:33,630 --> 00:05:33,640
+right? So, first of all, uh I start
+ 
+
+323
+00:05:33,640 --> 00:05:35,190
+right? So, first of all, uh I start
+kicking off some some work and then I go
+
+324
+00:05:35,190 --> 00:05:35,200
+kicking off some some work and then I go
+ 
+
+325
+00:05:35,200 --> 00:05:37,270
+kicking off some some work and then I go
+to bed. And then my designer who's in
+
+326
+00:05:37,270 --> 00:05:37,280
+to bed. And then my designer who's in
+ 
+
+327
+00:05:37,280 --> 00:05:40,190
+to bed. And then my designer who's in
+Indonesia wakes up and starts messing
+
+328
+00:05:40,190 --> 00:05:40,200
+Indonesia wakes up and starts messing
+ 
+
+329
+00:05:40,200 --> 00:05:42,510
+Indonesia wakes up and starts messing
+with Devin. Starts prompting Devin with
+
+330
+00:05:42,510 --> 00:05:42,520
+with Devin. Starts prompting Devin with
+ 
+
+331
+00:05:42,520 --> 00:05:44,430
+with Devin. Starts prompting Devin with
+red lines on annotations, which is
+
+332
+00:05:44,430 --> 00:05:44,440
+red lines on annotations, which is
+ 
+
+333
+00:05:44,440 --> 00:05:46,150
+red lines on annotations, which is
+something that Steve Ruiz, one of our
+
+334
+00:05:46,150 --> 00:05:46,160
+something that Steve Ruiz, one of our
+ 
+
+335
+00:05:46,160 --> 00:05:48,350
+something that Steve Ruiz, one of our
+speakers from yesterday, does with
+
+336
+00:05:48,350 --> 00:05:48,360
+speakers from yesterday, does with
+ 
+
+337
+00:05:48,360 --> 00:05:49,630
+speakers from yesterday, does with
+TLDraw.
+
+338
+00:05:49,630 --> 00:05:49,640
+TLDraw.
+ 
+
+339
+00:05:49,640 --> 00:05:51,230
+TLDraw.
+And I never taught him to do this. And
+
+340
+00:05:51,230 --> 00:05:51,240
+And I never taught him to do this. And
+ 
+
+341
+00:05:51,240 --> 00:05:52,990
+And I never taught him to do this. And
+there's no instruction manual. It was
+
+342
+00:05:52,990 --> 00:05:53,000
+there's no instruction manual. It was
+ 
+
+343
+00:05:53,000 --> 00:05:54,190
+there's no instruction manual. It was
+just mostly like, "How would you
+
+344
+00:05:54,190 --> 00:05:54,200
+just mostly like, "How would you
+ 
+
+345
+00:05:54,200 --> 00:05:55,910
+just mostly like, "How would you
+communicate with another human being?"
+
+346
+00:05:55,910 --> 00:05:55,920
+communicate with another human being?"
+ 
+
+347
+00:05:55,920 --> 00:05:57,390
+communicate with another human being?"
+And so, I work mostly with a
+
+348
+00:05:57,390 --> 00:05:57,400
+And so, I work mostly with a
+ 
+
+349
+00:05:57,400 --> 00:05:58,630
+And so, I work mostly with a
+non-technical team and I think that's
+
+350
+00:05:58,630 --> 00:05:58,640
+non-technical team and I think that's
+ 
+
+351
+00:05:58,640 --> 00:06:00,430
+non-technical team and I think that's
+very important that they need to be
+
+352
+00:06:00,430 --> 00:06:00,440
+very important that they need to be
+ 
+
+353
+00:06:00,440 --> 00:06:01,590
+very important that they need to be
+comfortable with agents and I think
+
+354
+00:06:01,590 --> 00:06:01,600
+comfortable with agents and I think
+ 
+
+355
+00:06:01,600 --> 00:06:03,390
+comfortable with agents and I think
+they're finally at that point that they
+
+356
+00:06:03,390 --> 00:06:03,400
+they're finally at that point that they
+ 
+
+357
+00:06:03,400 --> 00:06:04,830
+they're finally at that point that they
+are.
+
+358
+00:06:04,830 --> 00:06:04,840
+are.
+ 
+
+359
+00:06:04,840 --> 00:06:06,830
+are.
+Um we start working on things that we
+
+360
+00:06:06,830 --> 00:06:06,840
+Um we start working on things that we
+ 
+
+361
+00:06:06,840 --> 00:06:08,790
+Um we start working on things that we
+would never normally have worked on. Uh
+
+362
+00:06:08,790 --> 00:06:08,800
+would never normally have worked on. Uh
+ 
+
+363
+00:06:08,800 --> 00:06:10,150
+would never normally have worked on. Uh
+nobody has reported this, so I assume
+
+364
+00:06:10,150 --> 00:06:10,160
+nobody has reported this, so I assume
+ 
+
+365
+00:06:10,160 --> 00:06:11,190
+nobody has reported this, so I assume
+none of you have discovered it, but
+
+366
+00:06:11,190 --> 00:06:11,200
+none of you have discovered it, but
+ 
+
+367
+00:06:11,200 --> 00:06:12,670
+none of you have discovered it, but
+there's an Easter egg on the website.
+
+368
+00:06:12,670 --> 00:06:12,680
+there's an Easter egg on the website.
+ 
+
+369
+00:06:12,680 --> 00:06:14,310
+there's an Easter egg on the website.
+Why? Cuz I put it there. Why? Cuz it was
+
+370
+00:06:14,310 --> 00:06:14,320
+Why? Cuz I put it there. Why? Cuz it was
+ 
+
+371
+00:06:14,320 --> 00:06:16,710
+Why? Cuz I put it there. Why? Cuz it was
+fun. Cuz I could. Right? So, if you're
+
+372
+00:06:16,710 --> 00:06:16,720
+fun. Cuz I could. Right? So, if you're
+ 
+
+373
+00:06:16,720 --> 00:06:18,630
+fun. Cuz I could. Right? So, if you're
+on an ultra-wide, you scan you scan your
+
+374
+00:06:18,630 --> 00:06:18,640
+on an ultra-wide, you scan you scan your
+ 
+
+375
+00:06:18,640 --> 00:06:20,230
+on an ultra-wide, you scan you scan your
+mouse over the the highlights, you'll
+
+376
+00:06:20,230 --> 00:06:20,240
+mouse over the the highlights, you'll
+ 
+
+377
+00:06:20,240 --> 00:06:21,710
+mouse over the the highlights, you'll
+you'll see an Easter egg.
+
+378
+00:06:21,710 --> 00:06:21,720
+you'll see an Easter egg.
+ 
+
+379
+00:06:21,720 --> 00:06:22,870
+you'll see an Easter egg.
+Um
+
+380
+00:06:22,870 --> 00:06:22,880
+Um
+ 
+
+381
+00:06:22,880 --> 00:06:23,510
+Um
+uh
+
+382
+00:06:23,510 --> 00:06:23,520
+uh
+ 
+
+383
+00:06:23,520 --> 00:06:25,910
+uh
+I saw a tweet that was viral about a
+
+384
+00:06:25,910 --> 00:06:25,920
+I saw a tweet that was viral about a
+ 
+
+385
+00:06:25,920 --> 00:06:27,750
+I saw a tweet that was viral about a
+design aesthetic that I liked. I threw
+
+386
+00:06:27,750 --> 00:06:27,760
+design aesthetic that I liked. I threw
+ 
+
+387
+00:06:27,760 --> 00:06:29,230
+design aesthetic that I liked. I threw
+it into Devin.
+
+388
+00:06:29,230 --> 00:06:29,240
+it into Devin.
+ 
+
+389
+00:06:29,240 --> 00:06:31,750
+it into Devin.
+Out pops um
+
+390
+00:06:31,750 --> 00:06:31,760
+Out pops um
+ 
+
+391
+00:06:31,760 --> 00:06:33,630
+Out pops um
+and and then and then you know, 127
+
+392
+00:06:33,630 --> 00:06:33,640
+and and then and then you know, 127
+ 
+
+393
+00:06:33,640 --> 00:06:36,070
+and and then and then you know, 127
+replies later, uh I I literally I popped
+
+394
+00:06:36,070 --> 00:06:36,080
+replies later, uh I I literally I popped
+ 
+
+395
+00:06:36,080 --> 00:06:37,350
+replies later, uh I I literally I popped
+it in in and I was like, "Oh, let's just
+
+396
+00:06:37,350 --> 00:06:37,360
+it in in and I was like, "Oh, let's just
+ 
+
+397
+00:06:37,360 --> 00:06:39,710
+it in in and I was like, "Oh, let's just
+see what the the Clanker will do for me.
+
+398
+00:06:39,710 --> 00:06:39,720
+see what the the Clanker will do for me.
+ 
+
+399
+00:06:39,720 --> 00:06:41,470
+see what the the Clanker will do for me.
+Uh I don't want to waste my designer's
+
+400
+00:06:41,470 --> 00:06:41,480
+Uh I don't want to waste my designer's
+ 
+
+401
+00:06:41,480 --> 00:06:42,750
+Uh I don't want to waste my designer's
+time. I just want to see what Clanker
+
+402
+00:06:42,750 --> 00:06:42,760
+time. I just want to see what Clanker
+ 
+
+403
+00:06:42,760 --> 00:06:45,550
+time. I just want to see what Clanker
+does for me." Designer jumps in.
+
+404
+00:06:45,550 --> 00:06:45,560
+does for me." Designer jumps in.
+ 
+
+405
+00:06:45,560 --> 00:06:48,070
+does for me." Designer jumps in.
+Um and and does and does and start
+
+406
+00:06:48,070 --> 00:06:48,080
+Um and and does and does and start
+ 
+
+407
+00:06:48,080 --> 00:06:49,150
+Um and and does and does and start
+actually starts working on this thing
+
+408
+00:06:49,150 --> 00:06:49,160
+actually starts working on this thing
+ 
+
+409
+00:06:49,160 --> 00:06:50,670
+actually starts working on this thing
+which I thought was throwaway and fun.
+
+410
+00:06:50,670 --> 00:06:50,680
+which I thought was throwaway and fun.
+ 
+
+411
+00:06:50,680 --> 00:06:52,470
+which I thought was throwaway and fun.
+And the most interesting thing is so
+
+412
+00:06:52,470 --> 00:06:52,480
+And the most interesting thing is so
+ 
+
+413
+00:06:52,480 --> 00:06:53,750
+And the most interesting thing is so
+small, I can't even read it. I'm so
+
+414
+00:06:53,750 --> 00:06:53,760
+small, I can't even read it. I'm so
+ 
+
+415
+00:06:53,760 --> 00:06:55,550
+small, I can't even read it. I'm so
+sorry for this. Uh so basically, the
+
+416
+00:06:55,550 --> 00:06:55,560
+sorry for this. Uh so basically, the
+ 
+
+417
+00:06:55,560 --> 00:06:57,110
+sorry for this. Uh so basically, the
+reason he starts working on it even
+
+418
+00:06:57,110 --> 00:06:57,120
+reason he starts working on it even
+ 
+
+419
+00:06:57,120 --> 00:06:58,590
+reason he starts working on it even
+though it's a throwaway project is
+
+420
+00:06:58,590 --> 00:06:58,600
+though it's a throwaway project is
+ 
+
+421
+00:06:58,600 --> 00:07:00,670
+though it's a throwaway project is
+because it's fun. And I think that's
+
+422
+00:07:00,670 --> 00:07:00,680
+because it's fun. And I think that's
+ 
+
+423
+00:07:00,680 --> 00:07:02,150
+because it's fun. And I think that's
+something that was like a big aha moment
+
+424
+00:07:02,150 --> 00:07:02,160
+something that was like a big aha moment
+ 
+
+425
+00:07:02,160 --> 00:07:03,990
+something that was like a big aha moment
+for me. Like, I am getting more work out
+
+426
+00:07:03,990 --> 00:07:04,000
+for me. Like, I am getting more work out
+ 
+
+427
+00:07:04,000 --> 00:07:05,990
+for me. Like, I am getting more work out
+of my employees because they enjoy doing
+
+428
+00:07:05,990 --> 00:07:06,000
+of my employees because they enjoy doing
+ 
+
+429
+00:07:06,000 --> 00:07:08,710
+of my employees because they enjoy doing
+it. Because the feedback cycle for them
+
+430
+00:07:08,710 --> 00:07:08,720
+it. Because the feedback cycle for them
+ 
+
+431
+00:07:08,720 --> 00:07:10,390
+it. Because the feedback cycle for them
+from like waiting blocking on me or
+
+432
+00:07:10,390 --> 00:07:10,400
+from like waiting blocking on me or
+ 
+
+433
+00:07:10,400 --> 00:07:12,390
+from like waiting blocking on me or
+contracted uh developer that we have is
+
+434
+00:07:12,390 --> 00:07:12,400
+contracted uh developer that we have is
+ 
+
+435
+00:07:12,400 --> 00:07:13,510
+contracted uh developer that we have is
+gone.
+
+436
+00:07:13,510 --> 00:07:13,520
+gone.
+ 
+
+437
+00:07:13,520 --> 00:07:14,990
+gone.
+Like they they just literally they have
+
+438
+00:07:14,990 --> 00:07:15,000
+Like they they just literally they have
+ 
+
+439
+00:07:15,000 --> 00:07:18,390
+Like they they just literally they have
+the idea, they go do it. Right? Um and
+
+440
+00:07:18,390 --> 00:07:18,400
+the idea, they go do it. Right? Um and
+ 
+
+441
+00:07:18,400 --> 00:07:19,590
+the idea, they go do it. Right? Um and
+uh they're doing more things. They're
+
+442
+00:07:19,590 --> 00:07:19,600
+uh they're doing more things. They're
+ 
+
+443
+00:07:19,600 --> 00:07:21,670
+uh they're doing more things. They're
+doing animations, they're doing polish,
+
+444
+00:07:21,670 --> 00:07:21,680
+doing animations, they're doing polish,
+ 
+
+445
+00:07:21,680 --> 00:07:22,230
+doing animations, they're doing polish,
+uh
+
+446
+00:07:22,230 --> 00:07:22,240
+uh
+ 
+
+447
+00:07:22,240 --> 00:07:23,670
+uh
+things that we've just I'm getting work
+
+448
+00:07:23,670 --> 00:07:23,680
+things that we've just I'm getting work
+ 
+
+449
+00:07:23,680 --> 00:07:25,270
+things that we've just I'm getting work
+that I've never gotten out of uh my
+
+450
+00:07:25,270 --> 00:07:25,280
+that I've never gotten out of uh my
+ 
+
+451
+00:07:25,280 --> 00:07:26,630
+that I've never gotten out of uh my
+employees before. I think that's
+
+452
+00:07:26,630 --> 00:07:26,640
+employees before. I think that's
+ 
+
+453
+00:07:26,640 --> 00:07:28,070
+employees before. I think that's
+something that's something you should
+
+454
+00:07:28,070 --> 00:07:28,080
+something that's something you should
+ 
+
+455
+00:07:28,080 --> 00:07:30,350
+something that's something you should
+appreciate, too. Um I'm If you haven't
+
+456
+00:07:30,350 --> 00:07:30,360
+appreciate, too. Um I'm If you haven't
+ 
+
+457
+00:07:30,360 --> 00:07:32,750
+appreciate, too. Um I'm If you haven't
+noticed, I'm no longer talking about
+
+458
+00:07:32,750 --> 00:07:32,760
+noticed, I'm no longer talking about
+ 
+
+459
+00:07:32,760 --> 00:07:34,710
+noticed, I'm no longer talking about
+agents for coding or like how many lines
+
+460
+00:07:34,710 --> 00:07:34,720
+agents for coding or like how many lines
+ 
+
+461
+00:07:34,720 --> 00:07:36,510
+agents for coding or like how many lines
+of code I'm producing. I'm getting more
+
+462
+00:07:36,510 --> 00:07:36,520
+of code I'm producing. I'm getting more
+ 
+
+463
+00:07:36,520 --> 00:07:38,870
+of code I'm producing. I'm getting more
+productivity out of my humans. And I I I
+
+464
+00:07:38,870 --> 00:07:38,880
+productivity out of my humans. And I I I
+ 
+
+465
+00:07:38,880 --> 00:07:40,630
+productivity out of my humans. And I I I
+I think this is something that is major
+
+466
+00:07:40,630 --> 00:07:40,640
+I think this is something that is major
+ 
+
+467
+00:07:40,640 --> 00:07:41,990
+I think this is something that is major
+theme for this year that I'm really
+
+468
+00:07:41,990 --> 00:07:42,000
+theme for this year that I'm really
+ 
+
+469
+00:07:42,000 --> 00:07:43,590
+theme for this year that I'm really
+trying to investigate, which is agents
+
+470
+00:07:43,590 --> 00:07:43,600
+trying to investigate, which is agents
+ 
+
+471
+00:07:43,600 --> 00:07:45,430
+trying to investigate, which is agents
+for everything else.
+
+472
+00:07:45,430 --> 00:07:45,440
+for everything else.
+ 
+
+473
+00:07:45,440 --> 00:07:46,510
+for everything else.
+Um
+
+474
+00:07:46,510 --> 00:07:46,520
+Um
+ 
+
+475
+00:07:46,520 --> 00:07:48,230
+Um
+then obviously, okay, I had the success
+
+476
+00:07:48,230 --> 00:07:48,240
+then obviously, okay, I had the success
+ 
+
+477
+00:07:48,240 --> 00:07:50,030
+then obviously, okay, I had the success
+with Figma to
+
+478
+00:07:50,030 --> 00:07:50,040
+with Figma to
+ 
+
+479
+00:07:50,040 --> 00:07:52,190
+with Figma to
+uh to to website. I had the success with
+
+480
+00:07:52,190 --> 00:07:52,200
+uh to to website. I had the success with
+ 
+
+481
+00:07:52,200 --> 00:07:54,030
+uh to to website. I had the success with
+tweet to website.
+
+482
+00:07:54,030 --> 00:07:54,040
+tweet to website.
+ 
+
+483
+00:07:54,040 --> 00:07:55,830
+tweet to website.
+What else? Right? Like you start to
+
+484
+00:07:55,830 --> 00:07:55,840
+What else? Right? Like you start to
+ 
+
+485
+00:07:55,840 --> 00:07:58,430
+What else? Right? Like you start to
+think about other use cases. Um this
+
+486
+00:07:58,430 --> 00:07:58,440
+think about other use cases. Um this
+ 
+
+487
+00:07:58,440 --> 00:08:00,790
+think about other use cases. Um this
+whole conference is a giant data
+
+488
+00:08:00,790 --> 00:08:00,800
+whole conference is a giant data
+ 
+
+489
+00:08:00,800 --> 00:08:03,030
+whole conference is a giant data
+management problem. Like, I have to sync
+
+490
+00:08:03,030 --> 00:08:03,040
+management problem. Like, I have to sync
+ 
+
+491
+00:08:03,040 --> 00:08:06,110
+management problem. Like, I have to sync
+with 130 speakers and uh
+
+492
+00:08:06,110 --> 00:08:06,120
+with 130 speakers and uh
+ 
+
+493
+00:08:06,120 --> 00:08:09,030
+with 130 speakers and uh
+couple dozen sponsors and all the
+
+494
+00:08:09,030 --> 00:08:09,040
+couple dozen sponsors and all the
+ 
+
+495
+00:08:09,040 --> 00:08:10,910
+couple dozen sponsors and all the
+attendees that come in with all various
+
+496
+00:08:10,910 --> 00:08:10,920
+attendees that come in with all various
+ 
+
+497
+00:08:10,920 --> 00:08:13,830
+attendees that come in with all various
+needs. Um and really uh it's just a CMS,
+
+498
+00:08:13,830 --> 00:08:13,840
+needs. Um and really uh it's just a CMS,
+ 
+
+499
+00:08:13,840 --> 00:08:15,790
+needs. Um and really uh it's just a CMS,
+right? Like we we we we've messed with
+
+500
+00:08:15,790 --> 00:08:15,800
+right? Like we we we we've messed with
+ 
+
+501
+00:08:15,800 --> 00:08:18,070
+right? Like we we we we've messed with
+the sanity. I'm not a the biggest fan of
+
+502
+00:08:18,070 --> 00:08:18,080
+the sanity. I'm not a the biggest fan of
+ 
+
+503
+00:08:18,080 --> 00:08:20,030
+the sanity. I'm not a the biggest fan of
+sanity in the world um because I want to
+
+504
+00:08:20,030 --> 00:08:20,040
+sanity in the world um because I want to
+ 
+
+505
+00:08:20,040 --> 00:08:23,030
+sanity in the world um because I want to
+keep some sanity to myself. Um but but
+
+506
+00:08:23,030 --> 00:08:23,040
+keep some sanity to myself. Um but but
+ 
+
+507
+00:08:23,040 --> 00:08:24,710
+keep some sanity to myself. Um but but
+basically like I I can throw in
+
+508
+00:08:24,710 --> 00:08:24,720
+basically like I I can throw in
+ 
+
+509
+00:08:24,720 --> 00:08:26,390
+basically like I I can throw in
+spreadsheets and and Devin can manage
+
+510
+00:08:26,390 --> 00:08:26,400
+spreadsheets and and Devin can manage
+ 
+
+511
+00:08:26,400 --> 00:08:27,870
+spreadsheets and and Devin can manage
+that for me. And once I really I think
+
+512
+00:08:27,870 --> 00:08:27,880
+that for me. And once I really I think
+ 
+
+513
+00:08:27,880 --> 00:08:29,110
+that for me. And once I really I think
+the unlock
+
+514
+00:08:29,110 --> 00:08:29,120
+the unlock
+ 
+
+515
+00:08:29,120 --> 00:08:30,990
+the unlock
+happened when I threw away the CMS and
+
+516
+00:08:30,990 --> 00:08:31,000
+happened when I threw away the CMS and
+ 
+
+517
+00:08:31,000 --> 00:08:32,589
+happened when I threw away the CMS and
+just kind of committed that to code, but
+
+518
+00:08:32,589 --> 00:08:32,599
+just kind of committed that to code, but
+ 
+
+519
+00:08:32,599 --> 00:08:34,310
+just kind of committed that to code, but
+use that code as my sort of source of
+
+520
+00:08:34,310 --> 00:08:34,320
+use that code as my sort of source of
+ 
+
+521
+00:08:34,320 --> 00:08:36,230
+use that code as my sort of source of
+truth and let Devin, whatever coding
+
+522
+00:08:36,230 --> 00:08:36,240
+truth and let Devin, whatever coding
+ 
+
+523
+00:08:36,240 --> 00:08:38,630
+truth and let Devin, whatever coding
+agent you use, uh start to manage it.
+
+524
+00:08:38,630 --> 00:08:38,640
+agent you use, uh start to manage it.
+ 
+
+525
+00:08:38,640 --> 00:08:40,790
+agent you use, uh start to manage it.
+And so, this entire schedule uh is
+
+526
+00:08:40,790 --> 00:08:40,800
+And so, this entire schedule uh is
+ 
+
+527
+00:08:40,800 --> 00:08:42,750
+And so, this entire schedule uh is
+managed by Devin. What does that mean?
+
+528
+00:08:42,750 --> 00:08:42,760
+managed by Devin. What does that mean?
+ 
+
+529
+00:08:42,760 --> 00:08:45,750
+managed by Devin. What does that mean?
+It means that whenever um someone comes
+
+530
+00:08:45,750 --> 00:08:45,760
+It means that whenever um someone comes
+ 
+
+531
+00:08:45,760 --> 00:08:47,990
+It means that whenever um someone comes
+in with a speaker change, for example,
+
+532
+00:08:47,990 --> 00:08:48,000
+in with a speaker change, for example,
+ 
+
+533
+00:08:48,000 --> 00:08:49,950
+in with a speaker change, for example,
+Marta, one of the speakers from today,
+
+534
+00:08:49,950 --> 00:08:49,960
+Marta, one of the speakers from today,
+ 
+
+535
+00:08:49,960 --> 00:08:51,670
+Marta, one of the speakers from today,
+uh sends in an email, I just say,
+
+536
+00:08:51,670 --> 00:08:51,680
+uh sends in an email, I just say,
+ 
+
+537
+00:08:51,680 --> 00:08:52,870
+uh sends in an email, I just say,
+"Devin,
+
+538
+00:08:52,870 --> 00:08:52,880
+"Devin,
+ 
+
+539
+00:08:52,880 --> 00:08:54,710
+"Devin,
+handle it for me." Right? No other
+
+540
+00:08:54,710 --> 00:08:54,720
+handle it for me." Right? No other
+ 
+
+541
+00:08:54,720 --> 00:08:56,430
+handle it for me." Right? No other
+further communication is needed. I can
+
+542
+00:08:56,430 --> 00:08:56,440
+further communication is needed. I can
+ 
+
+543
+00:08:56,440 --> 00:08:58,030
+further communication is needed. I can
+just forward the email or I can paste a
+
+544
+00:08:58,030 --> 00:08:58,040
+just forward the email or I can paste a
+ 
+
+545
+00:08:58,040 --> 00:08:59,630
+just forward the email or I can paste a
+screenshot, whatever.
+
+546
+00:08:59,630 --> 00:08:59,640
+screenshot, whatever.
+ 
+
+547
+00:08:59,640 --> 00:09:03,030
+screenshot, whatever.
+Um and that kind of volume lets us as a
+
+548
+00:09:03,030 --> 00:09:03,040
+Um and that kind of volume lets us as a
+ 
+
+549
+00:09:03,040 --> 00:09:05,030
+Um and that kind of volume lets us as a
+small team of nine people manage a
+
+550
+00:09:05,030 --> 00:09:05,040
+small team of nine people manage a
+ 
+
+551
+00:09:05,040 --> 00:09:06,830
+small team of nine people manage a
+thousand-person conference. Right? We're
+
+552
+00:09:06,830 --> 00:09:06,840
+thousand-person conference. Right? We're
+ 
+
+553
+00:09:06,840 --> 00:09:08,390
+thousand-person conference. Right? We're
+going to manage 6,000 people in San
+
+554
+00:09:08,390 --> 00:09:08,400
+going to manage 6,000 people in San
+ 
+
+555
+00:09:08,400 --> 00:09:10,830
+going to manage 6,000 people in San
+Francisco this fall uh this summer. Um
+
+556
+00:09:10,830 --> 00:09:10,840
+Francisco this fall uh this summer. Um
+ 
+
+557
+00:09:10,840 --> 00:09:12,430
+Francisco this fall uh this summer. Um
+and I'm pretty sure we can stay the same
+
+558
+00:09:12,430 --> 00:09:12,440
+and I'm pretty sure we can stay the same
+ 
+
+559
+00:09:12,440 --> 00:09:15,030
+and I'm pretty sure we can stay the same
+size. Like it is incredible the amount
+
+560
+00:09:15,030 --> 00:09:15,040
+size. Like it is incredible the amount
+ 
+
+561
+00:09:15,040 --> 00:09:16,750
+size. Like it is incredible the amount
+of productivity that you can get once
+
+562
+00:09:16,750 --> 00:09:16,760
+of productivity that you can get once
+ 
+
+563
+00:09:16,760 --> 00:09:18,710
+of productivity that you can get once
+you're sufficiently on-boarded and you
+
+564
+00:09:18,710 --> 00:09:18,720
+you're sufficiently on-boarded and you
+ 
+
+565
+00:09:18,720 --> 00:09:20,710
+you're sufficiently on-boarded and you
+have the workflows ironed out.
+
+566
+00:09:20,710 --> 00:09:20,720
+have the workflows ironed out.
+ 
+
+567
+00:09:20,720 --> 00:09:21,790
+have the workflows ironed out.
+Um
+
+568
+00:09:21,790 --> 00:09:21,800
+Um
+ 
+
+569
+00:09:21,800 --> 00:09:23,630
+Um
+we have agents for ETL. We we deal with
+
+570
+00:09:23,630 --> 00:09:23,640
+we have agents for ETL. We we deal with
+ 
+
+571
+00:09:23,640 --> 00:09:25,590
+we have agents for ETL. We we deal with
+an external vendor system that has data
+
+572
+00:09:25,590 --> 00:09:25,600
+an external vendor system that has data
+ 
+
+573
+00:09:25,600 --> 00:09:26,990
+an external vendor system that has data
+that we don't have in a
+
+574
+00:09:26,990 --> 00:09:27,000
+that we don't have in a
+ 
+
+575
+00:09:27,000 --> 00:09:29,150
+that we don't have in a
+central source of truth. So, I need to
+
+576
+00:09:29,150 --> 00:09:29,160
+central source of truth. So, I need to
+ 
+
+577
+00:09:29,160 --> 00:09:31,310
+central source of truth. So, I need to
+get the API key to sync over data and
+
+578
+00:09:31,310 --> 00:09:31,320
+get the API key to sync over data and
+ 
+
+579
+00:09:31,320 --> 00:09:32,190
+get the API key to sync over data and
+make sure there's a single source of
+
+580
+00:09:32,190 --> 00:09:32,200
+make sure there's a single source of
+ 
+
+581
+00:09:32,200 --> 00:09:34,270
+make sure there's a single source of
+truth. Uh these are very boring routine
+
+582
+00:09:34,270 --> 00:09:34,280
+truth. Uh these are very boring routine
+ 
+
+583
+00:09:34,280 --> 00:09:37,150
+truth. Uh these are very boring routine
+tasks. Um well, there's there's another,
+
+584
+00:09:37,150 --> 00:09:37,160
+tasks. Um well, there's there's another,
+ 
+
+585
+00:09:37,160 --> 00:09:38,430
+tasks. Um well, there's there's another,
+you know, another fun story that I can
+
+586
+00:09:38,430 --> 00:09:38,440
+you know, another fun story that I can
+ 
+
+587
+00:09:38,440 --> 00:09:40,790
+you know, another fun story that I can
+tell you is agents for buying. Uh so, I
+
+588
+00:09:40,790 --> 00:09:40,800
+tell you is agents for buying. Uh so, I
+ 
+
+589
+00:09:40,800 --> 00:09:42,750
+tell you is agents for buying. Uh so, I
+saw this viral tweet about how somebody
+
+590
+00:09:42,750 --> 00:09:42,760
+saw this viral tweet about how somebody
+ 
+
+591
+00:09:42,760 --> 00:09:44,950
+saw this viral tweet about how somebody
+put a claw in uh Wall Street next to the
+
+592
+00:09:44,950 --> 00:09:44,960
+put a claw in uh Wall Street next to the
+ 
+
+593
+00:09:44,960 --> 00:09:46,470
+put a claw in uh Wall Street next to the
+Wall Street bull. And I was like, "Oh,
+
+594
+00:09:46,470 --> 00:09:46,480
+Wall Street bull. And I was like, "Oh,
+ 
+
+595
+00:09:46,480 --> 00:09:48,390
+Wall Street bull. And I was like, "Oh,
+well, that's funny. Like, we should put
+
+596
+00:09:48,390 --> 00:09:48,400
+well, that's funny. Like, we should put
+ 
+
+597
+00:09:48,400 --> 00:09:50,150
+well, that's funny. Like, we should put
+a claw in front of our
+
+598
+00:09:50,150 --> 00:09:50,160
+a claw in front of our
+ 
+
+599
+00:09:50,160 --> 00:09:53,070
+a claw in front of our
+um conference." And that's exactly And
+
+600
+00:09:53,070 --> 00:09:53,080
+um conference." And that's exactly And
+ 
+
+601
+00:09:53,080 --> 00:09:55,390
+um conference." And that's exactly And
+so so, I asked Devin to research, "Where
+
+602
+00:09:55,390 --> 00:09:55,400
+so so, I asked Devin to research, "Where
+ 
+
+603
+00:09:55,400 --> 00:09:58,190
+so so, I asked Devin to research, "Where
+can I get a lobster in London?
+
+604
+00:09:58,190 --> 00:09:58,200
+can I get a lobster in London?
+ 
+
+605
+00:09:58,200 --> 00:10:00,990
+can I get a lobster in London?
+Devin comes back with phone numbers and
+
+606
+00:10:00,990 --> 00:10:01,000
+Devin comes back with phone numbers and
+ 
+
+607
+00:10:01,000 --> 00:10:02,870
+Devin comes back with phone numbers and
+email addresses and websites and I just
+
+608
+00:10:02,870 --> 00:10:02,880
+email addresses and websites and I just
+ 
+
+609
+00:10:02,880 --> 00:10:04,630
+email addresses and websites and I just
+click through and and think about it and
+
+610
+00:10:04,630 --> 00:10:04,640
+click through and and think about it and
+ 
+
+611
+00:10:04,640 --> 00:10:06,910
+click through and and think about it and
+ask it to do some more research and I'll
+
+612
+00:10:06,910 --> 00:10:06,920
+ask it to do some more research and I'll
+ 
+
+613
+00:10:06,920 --> 00:10:08,710
+ask it to do some more research and I'll
+post this guy.
+
+614
+00:10:08,710 --> 00:10:08,720
+post this guy.
+ 
+
+615
+00:10:08,720 --> 00:10:10,390
+post this guy.
+That's literally the the lobster that
+
+616
+00:10:10,390 --> 00:10:10,400
+That's literally the the lobster that
+ 
+
+617
+00:10:10,400 --> 00:10:12,750
+That's literally the the lobster that
+you had was bought from Devin
+
+618
+00:10:12,750 --> 00:10:12,760
+you had was bought from Devin
+ 
+
+619
+00:10:12,760 --> 00:10:14,110
+you had was bought from Devin
+and I think
+
+620
+00:10:14,110 --> 00:10:14,120
+and I think
+ 
+
+621
+00:10:14,120 --> 00:10:15,830
+and I think
+this kind of personal automation for
+
+622
+00:10:15,830 --> 00:10:15,840
+this kind of personal automation for
+ 
+
+623
+00:10:15,840 --> 00:10:18,110
+this kind of personal automation for
+everything else it just matters that you
+
+624
+00:10:18,110 --> 00:10:18,120
+everything else it just matters that you
+ 
+
+625
+00:10:18,120 --> 00:10:19,870
+everything else it just matters that you
+have an agent that has web access that
+
+626
+00:10:19,870 --> 00:10:19,880
+have an agent that has web access that
+ 
+
+627
+00:10:19,880 --> 00:10:20,950
+have an agent that has web access that
+has some
+
+628
+00:10:20,950 --> 00:10:20,960
+has some
+ 
+
+629
+00:10:20,960 --> 00:10:22,630
+has some
+smart enough model.
+
+630
+00:10:22,630 --> 00:10:22,640
+smart enough model.
+ 
+
+631
+00:10:22,640 --> 00:10:24,830
+smart enough model.
+I mean this is effectively a claw right
+
+632
+00:10:24,830 --> 00:10:24,840
+I mean this is effectively a claw right
+ 
+
+633
+00:10:24,840 --> 00:10:25,590
+I mean this is effectively a claw right
+here
+
+634
+00:10:25,590 --> 00:10:25,600
+here
+ 
+
+635
+00:10:25,600 --> 00:10:27,630
+here
+an open claw nano claw whatever the
+
+636
+00:10:27,630 --> 00:10:27,640
+an open claw nano claw whatever the
+ 
+
+637
+00:10:27,640 --> 00:10:29,150
+an open claw nano claw whatever the
+whatever cracker you call it. It doesn't
+
+638
+00:10:29,150 --> 00:10:29,160
+whatever cracker you call it. It doesn't
+ 
+
+639
+00:10:29,160 --> 00:10:30,470
+whatever cracker you call it. It doesn't
+really matter it matters that you're
+
+640
+00:10:30,470 --> 00:10:30,480
+really matter it matters that you're
+ 
+
+641
+00:10:30,480 --> 00:10:32,750
+really matter it matters that you're
+using agents for things that you would
+
+642
+00:10:32,750 --> 00:10:32,760
+using agents for things that you would
+ 
+
+643
+00:10:32,760 --> 00:10:34,550
+using agents for things that you would
+otherwise have spent knowledge work on.
+
+644
+00:10:34,550 --> 00:10:34,560
+otherwise have spent knowledge work on.
+ 
+
+645
+00:10:34,560 --> 00:10:36,710
+otherwise have spent knowledge work on.
+I might have had executive assistant I
+
+646
+00:10:36,710 --> 00:10:36,720
+I might have had executive assistant I
+ 
+
+647
+00:10:36,720 --> 00:10:38,270
+I might have had executive assistant I
+might have had a junior employee do
+
+648
+00:10:38,270 --> 00:10:38,280
+might have had a junior employee do
+ 
+
+649
+00:10:38,280 --> 00:10:40,030
+might have had a junior employee do
+these things for me but now I can do it
+
+650
+00:10:40,030 --> 00:10:40,040
+these things for me but now I can do it
+ 
+
+651
+00:10:40,040 --> 00:10:42,550
+these things for me but now I can do it
+serverless on demand with according
+
+652
+00:10:42,550 --> 00:10:42,560
+serverless on demand with according
+ 
+
+653
+00:10:42,560 --> 00:10:43,710
+serverless on demand with according
+agent.
+
+654
+00:10:43,710 --> 00:10:43,720
+agent.
+ 
+
+655
+00:10:43,720 --> 00:10:44,750
+agent.
+I'm
+
+656
+00:10:44,750 --> 00:10:44,760
+I'm
+ 
+
+657
+00:10:44,760 --> 00:10:48,630
+I'm
+not here to only show Devin.
+
+658
+00:10:48,630 --> 00:10:48,640
+
+ 
+
+659
+00:10:48,640 --> 00:10:50,590
+
+Just advise with the company now
+
+660
+00:10:50,590 --> 00:10:50,600
+Just advise with the company now
+ 
+
+661
+00:10:50,600 --> 00:10:53,070
+Just advise with the company now
+but I you know I started exploring town
+
+662
+00:10:53,070 --> 00:10:53,080
+but I you know I started exploring town
+ 
+
+663
+00:10:53,080 --> 00:10:54,790
+but I you know I started exploring town
+because I think what's what's happening
+
+664
+00:10:54,790 --> 00:10:54,800
+because I think what's what's happening
+ 
+
+665
+00:10:54,800 --> 00:10:56,390
+because I think what's what's happening
+here is coding agents going to break in
+
+666
+00:10:56,390 --> 00:10:56,400
+here is coding agents going to break in
+ 
+
+667
+00:10:56,400 --> 00:10:58,310
+here is coding agents going to break in
+containments right?
+
+668
+00:10:58,310 --> 00:10:58,320
+containments right?
+ 
+
+669
+00:10:58,320 --> 00:11:00,390
+containments right?
+There's all these other more fit for
+
+670
+00:11:00,390 --> 00:11:00,400
+There's all these other more fit for
+ 
+
+671
+00:11:00,400 --> 00:11:02,870
+There's all these other more fit for
+purpose knowledge management tools like
+
+672
+00:11:02,870 --> 00:11:02,880
+purpose knowledge management tools like
+ 
+
+673
+00:11:02,880 --> 00:11:04,430
+purpose knowledge management tools like
+the wikis that Andre Karpathy is is
+
+674
+00:11:04,430 --> 00:11:04,440
+the wikis that Andre Karpathy is is
+ 
+
+675
+00:11:04,440 --> 00:11:06,829
+the wikis that Andre Karpathy is is
+talking about that nano claw that open
+
+676
+00:11:06,829 --> 00:11:06,839
+talking about that nano claw that open
+ 
+
+677
+00:11:06,839 --> 00:11:09,150
+talking about that nano claw that open
+claw is is is now adopting as well.
+
+678
+00:11:09,150 --> 00:11:09,160
+claw is is is now adopting as well.
+ 
+
+679
+00:11:09,160 --> 00:11:10,470
+claw is is is now adopting as well.
+You're going to see an explosion of this
+
+680
+00:11:10,470 --> 00:11:10,480
+You're going to see an explosion of this
+ 
+
+681
+00:11:10,480 --> 00:11:12,270
+You're going to see an explosion of this
+this year. This is like probably the top
+
+682
+00:11:12,270 --> 00:11:12,280
+this year. This is like probably the top
+ 
+
+683
+00:11:12,280 --> 00:11:15,510
+this year. This is like probably the top
+trend of maybe top three to five trends
+
+684
+00:11:15,510 --> 00:11:15,520
+trend of maybe top three to five trends
+ 
+
+685
+00:11:15,520 --> 00:11:17,710
+trend of maybe top three to five trends
+of 2026 that I want to alert you to.
+
+686
+00:11:17,710 --> 00:11:17,720
+of 2026 that I want to alert you to.
+ 
+
+687
+00:11:17,720 --> 00:11:20,590
+of 2026 that I want to alert you to.
+So here is me managing
+
+688
+00:11:20,590 --> 00:11:20,600
+So here is me managing
+ 
+
+689
+00:11:20,600 --> 00:11:23,030
+So here is me managing
+the world's fair in 2020 in in in this
+
+690
+00:11:23,030 --> 00:11:23,040
+the world's fair in 2020 in in in this
+ 
+
+691
+00:11:23,040 --> 00:11:24,590
+the world's fair in 2020 in in in this
+summer. Here all the tracks I'm
+
+692
+00:11:24,590 --> 00:11:24,600
+summer. Here all the tracks I'm
+ 
+
+693
+00:11:24,600 --> 00:11:27,710
+summer. Here all the tracks I'm
+planning. Here's my Apple notes.
+
+694
+00:11:27,710 --> 00:11:27,720
+planning. Here's my Apple notes.
+ 
+
+695
+00:11:27,720 --> 00:11:29,670
+planning. Here's my Apple notes.
+On the left is my Apple notes of all the
+
+696
+00:11:29,670 --> 00:11:29,680
+On the left is my Apple notes of all the
+ 
+
+697
+00:11:29,680 --> 00:11:32,350
+On the left is my Apple notes of all the
+people I it's intentionally small and I
+
+698
+00:11:32,350 --> 00:11:32,360
+people I it's intentionally small and I
+ 
+
+699
+00:11:32,360 --> 00:11:35,150
+people I it's intentionally small and I
+threw it into into town and on up pops a
+
+700
+00:11:35,150 --> 00:11:35,160
+threw it into into town and on up pops a
+ 
+
+701
+00:11:35,160 --> 00:11:37,829
+threw it into into town and on up pops a
+nicely formatted notion doc with
+
+702
+00:11:37,829 --> 00:11:37,839
+nicely formatted notion doc with
+ 
+
+703
+00:11:37,839 --> 00:11:39,070
+nicely formatted notion doc with
+research on all the speakers that I
+
+704
+00:11:39,070 --> 00:11:39,080
+research on all the speakers that I
+ 
+
+705
+00:11:39,080 --> 00:11:41,790
+research on all the speakers that I
+intend to solicit and
+
+706
+00:11:41,790 --> 00:11:41,800
+intend to solicit and
+ 
+
+707
+00:11:41,800 --> 00:11:43,310
+intend to solicit and
+think about curating.
+
+708
+00:11:43,310 --> 00:11:43,320
+think about curating.
+ 
+
+709
+00:11:43,320 --> 00:11:44,870
+think about curating.
+And
+
+710
+00:11:44,870 --> 00:11:44,880
+And
+ 
+
+711
+00:11:44,880 --> 00:11:46,670
+And
+then obviously once you get enough
+
+712
+00:11:46,670 --> 00:11:46,680
+then obviously once you get enough
+ 
+
+713
+00:11:46,680 --> 00:11:49,030
+then obviously once you get enough
+psychosis you are thinking about
+
+714
+00:11:49,030 --> 00:11:49,040
+psychosis you are thinking about
+ 
+
+715
+00:11:49,040 --> 00:11:51,070
+psychosis you are thinking about
+replacing entire pieces of SAS. Here is
+
+716
+00:11:51,070 --> 00:11:51,080
+replacing entire pieces of SAS. Here is
+ 
+
+717
+00:11:51,080 --> 00:11:53,293
+replacing entire pieces of SAS. Here is
+me arguing with my employees about
+
+718
+00:11:53,293 --> 00:11:53,303
+me arguing with my employees about
+ 
+
+719
+00:11:53,303 --> 00:11:53,990
+me arguing with my employees about
+[laughter]
+
+720
+00:11:53,990 --> 00:11:54,000
+[laughter]
+ 
+
+721
+00:11:54,000 --> 00:11:55,790
+[laughter]
+kicking out a SAS tool and building it
+
+722
+00:11:55,790 --> 00:11:55,800
+kicking out a SAS tool and building it
+ 
+
+723
+00:11:55,800 --> 00:11:57,350
+kicking out a SAS tool and building it
+ourselves because we can.
+
+724
+00:11:57,350 --> 00:11:57,360
+ourselves because we can.
+ 
+
+725
+00:11:57,360 --> 00:12:00,310
+ourselves because we can.
+So I clearly have the most psychosis. If
+
+726
+00:12:00,310 --> 00:12:00,320
+So I clearly have the most psychosis. If
+ 
+
+727
+00:12:00,320 --> 00:12:01,950
+So I clearly have the most psychosis. If
+anyone of the annoying things is if
+
+728
+00:12:01,950 --> 00:12:01,960
+anyone of the annoying things is if
+ 
+
+729
+00:12:01,960 --> 00:12:03,390
+anyone of the annoying things is if
+you're in a position of power or
+
+730
+00:12:03,390 --> 00:12:03,400
+you're in a position of power or
+ 
+
+731
+00:12:03,400 --> 00:12:05,470
+you're in a position of power or
+management to deal with employees who
+
+732
+00:12:05,470 --> 00:12:05,480
+management to deal with employees who
+ 
+
+733
+00:12:05,480 --> 00:12:07,990
+management to deal with employees who
+are who are not as much in psychosis and
+
+734
+00:12:07,990 --> 00:12:08,000
+are who are not as much in psychosis and
+ 
+
+735
+00:12:08,000 --> 00:12:09,230
+are who are not as much in psychosis and
+try to bring them along the journey and
+
+736
+00:12:09,230 --> 00:12:09,240
+try to bring them along the journey and
+ 
+
+737
+00:12:09,240 --> 00:12:10,510
+try to bring them along the journey and
+then not
+
+738
+00:12:10,510 --> 00:12:10,520
+then not
+ 
+
+739
+00:12:10,520 --> 00:12:12,710
+then not
+talk down or or or or ignore their
+
+740
+00:12:12,710 --> 00:12:12,720
+talk down or or or or ignore their
+ 
+
+741
+00:12:12,720 --> 00:12:13,950
+talk down or or or or ignore their
+concerns right? Because they are very
+
+742
+00:12:13,950 --> 00:12:13,960
+concerns right? Because they are very
+ 
+
+743
+00:12:13,960 --> 00:12:15,470
+concerns right? Because they are very
+valid concerns because they are exactly
+
+744
+00:12:15,470 --> 00:12:15,480
+valid concerns because they are exactly
+ 
+
+745
+00:12:15,480 --> 00:12:16,870
+valid concerns because they are exactly
+the people that will have to deal with
+
+746
+00:12:16,870 --> 00:12:16,880
+the people that will have to deal with
+ 
+
+747
+00:12:16,880 --> 00:12:18,630
+the people that will have to deal with
+your when you get it wrong and
+
+748
+00:12:18,630 --> 00:12:18,640
+your when you get it wrong and
+ 
+
+749
+00:12:18,640 --> 00:12:20,030
+your when you get it wrong and
+we do get it wrong.
+
+750
+00:12:20,030 --> 00:12:20,040
+we do get it wrong.
+ 
+
+751
+00:12:20,040 --> 00:12:21,630
+we do get it wrong.
+So
+
+752
+00:12:21,630 --> 00:12:21,640
+So
+ 
+
+753
+00:12:21,640 --> 00:12:24,390
+So
+one one one top one method I I'm
+
+754
+00:12:24,390 --> 00:12:24,400
+one one one top one method I I'm
+ 
+
+755
+00:12:24,400 --> 00:12:25,990
+one one one top one method I I'm
+approaching this sort of AI replacing
+
+756
+00:12:25,990 --> 00:12:26,000
+approaching this sort of AI replacing
+ 
+
+757
+00:12:26,000 --> 00:12:28,310
+approaching this sort of AI replacing
+SAS concept which I think it it should
+
+758
+00:12:28,310 --> 00:12:28,320
+SAS concept which I think it it should
+ 
+
+759
+00:12:28,320 --> 00:12:29,990
+SAS concept which I think it it should
+be relevant for a lot of you
+
+760
+00:12:29,990 --> 00:12:30,000
+be relevant for a lot of you
+ 
+
+761
+00:12:30,000 --> 00:12:31,790
+be relevant for a lot of you
+is well let's identify the top three
+
+762
+00:12:31,790 --> 00:12:31,800
+is well let's identify the top three
+ 
+
+763
+00:12:31,800 --> 00:12:33,990
+is well let's identify the top three
+concerns and let's systematically reduce
+
+764
+00:12:33,990 --> 00:12:34,000
+concerns and let's systematically reduce
+ 
+
+765
+00:12:34,000 --> 00:12:35,190
+concerns and let's systematically reduce
+reduce them and that's the process that
+
+766
+00:12:35,190 --> 00:12:35,200
+reduce them and that's the process that
+ 
+
+767
+00:12:35,200 --> 00:12:37,470
+reduce them and that's the process that
+we're going through right now. So I just
+
+768
+00:12:37,470 --> 00:12:37,480
+we're going through right now. So I just
+ 
+
+769
+00:12:37,480 --> 00:12:39,390
+we're going through right now. So I just
+wanted to give you a little bit of that
+
+770
+00:12:39,390 --> 00:12:39,400
+wanted to give you a little bit of that
+ 
+
+771
+00:12:39,400 --> 00:12:41,470
+wanted to give you a little bit of that
+taste of like here's how AI is changing
+
+772
+00:12:41,470 --> 00:12:41,480
+taste of like here's how AI is changing
+ 
+
+773
+00:12:41,480 --> 00:12:44,590
+taste of like here's how AI is changing
+our business as managing the conference.
+
+774
+00:12:44,590 --> 00:12:44,600
+our business as managing the conference.
+ 
+
+775
+00:12:44,600 --> 00:12:46,630
+our business as managing the conference.
+Um It's come really it's come really a
+
+776
+00:12:46,630 --> 00:12:46,640
+Um It's come really it's come really a
+ 
+
+777
+00:12:46,640 --> 00:12:48,510
+Um It's come really it's come really a
+long way. It's a it's a consistent theme
+
+778
+00:12:48,510 --> 00:12:48,520
+long way. It's a it's a consistent theme
+ 
+
+779
+00:12:48,520 --> 00:12:50,950
+long way. It's a it's a consistent theme
+I'm seeing even among our our speakers.
+
+780
+00:12:50,950 --> 00:12:50,960
+I'm seeing even among our our speakers.
+ 
+
+781
+00:12:50,960 --> 00:12:53,150
+I'm seeing even among our our speakers.
+This is Malte's opening keynote talking
+
+782
+00:12:53,150 --> 00:12:53,160
+This is Malte's opening keynote talking
+ 
+
+783
+00:12:53,160 --> 00:12:54,470
+This is Malte's opening keynote talking
+about how
+
+784
+00:12:54,470 --> 00:12:54,480
+about how
+ 
+
+785
+00:12:54,480 --> 00:12:57,630
+about how
+the the 60% of the the sort of user base
+
+786
+00:12:57,630 --> 00:12:57,640
+the the 60% of the the sort of user base
+ 
+
+787
+00:12:57,640 --> 00:13:00,510
+the the 60% of the the sort of user base
+of Vercel now is bots is is is agents
+
+788
+00:13:00,510 --> 00:13:00,520
+of Vercel now is bots is is is agents
+ 
+
+789
+00:13:00,520 --> 00:13:02,150
+of Vercel now is bots is is is agents
+it's not humans. So actually your
+
+790
+00:13:02,150 --> 00:13:02,160
+it's not humans. So actually your
+ 
+
+791
+00:13:02,160 --> 00:13:03,990
+it's not humans. So actually your
+dashboards don't matter your APIs matter
+
+792
+00:13:03,990 --> 00:13:04,000
+dashboards don't matter your APIs matter
+ 
+
+793
+00:13:04,000 --> 00:13:06,550
+dashboards don't matter your APIs matter
+your CLIs matter your MCPs matter.
+
+794
+00:13:06,550 --> 00:13:06,560
+your CLIs matter your MCPs matter.
+ 
+
+795
+00:13:06,560 --> 00:13:11,150
+your CLIs matter your MCPs matter.
+Here's the MCP apps guys Edo and Liad
+
+796
+00:13:11,150 --> 00:13:11,160
+Here's the MCP apps guys Edo and Liad
+ 
+
+797
+00:13:11,160 --> 00:13:13,030
+Here's the MCP apps guys Edo and Liad
+who spoke today
+
+798
+00:13:13,030 --> 00:13:13,040
+who spoke today
+ 
+
+799
+00:13:13,040 --> 00:13:15,470
+who spoke today
+on speaking on ETM about how basically
+
+800
+00:13:15,470 --> 00:13:15,480
+on speaking on ETM about how basically
+ 
+
+801
+00:13:15,480 --> 00:13:17,270
+on speaking on ETM about how basically
+the your custom UI is kind of going away
+
+802
+00:13:17,270 --> 00:13:17,280
+the your custom UI is kind of going away
+ 
+
+803
+00:13:17,280 --> 00:13:19,230
+the your custom UI is kind of going away
+like you should ship UI to somebody
+
+804
+00:13:19,230 --> 00:13:19,240
+like you should ship UI to somebody
+ 
+
+805
+00:13:19,240 --> 00:13:20,829
+like you should ship UI to somebody
+else's app and I think like this
+
+806
+00:13:20,829 --> 00:13:20,839
+else's app and I think like this
+ 
+
+807
+00:13:20,839 --> 00:13:23,790
+else's app and I think like this
+patterns of like how your primary user
+
+808
+00:13:23,790 --> 00:13:23,800
+patterns of like how your primary user
+ 
+
+809
+00:13:23,800 --> 00:13:26,430
+patterns of like how your primary user
+is changing is really shifting towards
+
+810
+00:13:26,430 --> 00:13:26,440
+is changing is really shifting towards
+ 
+
+811
+00:13:26,440 --> 00:13:27,829
+is changing is really shifting towards
+what people are calling agent experience
+
+812
+00:13:27,829 --> 00:13:27,839
+what people are calling agent experience
+ 
+
+813
+00:13:27,839 --> 00:13:29,430
+what people are calling agent experience
+and I think that's something that again
+
+814
+00:13:29,430 --> 00:13:29,440
+and I think that's something that again
+ 
+
+815
+00:13:29,440 --> 00:13:31,190
+and I think that's something that again
+I'm really inspired by and focused on
+
+816
+00:13:31,190 --> 00:13:31,200
+I'm really inspired by and focused on
+ 
+
+817
+00:13:31,200 --> 00:13:33,030
+I'm really inspired by and focused on
+because it is helping me right? I no
+
+818
+00:13:33,030 --> 00:13:33,040
+because it is helping me right? I no
+ 
+
+819
+00:13:33,040 --> 00:13:35,430
+because it is helping me right? I no
+longer care about the Figma dashboard I
+
+820
+00:13:35,430 --> 00:13:35,440
+longer care about the Figma dashboard I
+ 
+
+821
+00:13:35,440 --> 00:13:37,150
+longer care about the Figma dashboard I
+throw it into cloud co-work and I hope
+
+822
+00:13:37,150 --> 00:13:37,160
+throw it into cloud co-work and I hope
+ 
+
+823
+00:13:37,160 --> 00:13:38,550
+throw it into cloud co-work and I hope
+that it works for me.
+
+824
+00:13:38,550 --> 00:13:38,560
+that it works for me.
+ 
+
+825
+00:13:38,560 --> 00:13:40,150
+that it works for me.
+So
+
+826
+00:13:40,150 --> 00:13:40,160
+So
+ 
+
+827
+00:13:40,160 --> 00:13:41,790
+So
+that's my message agents for everything
+
+828
+00:13:41,790 --> 00:13:41,800
+that's my message agents for everything
+ 
+
+829
+00:13:41,800 --> 00:13:43,990
+that's my message agents for everything
+else are coming. Wake up.
+
+830
+00:13:43,990 --> 00:13:44,000
+else are coming. Wake up.
+ 
+
+831
+00:13:44,000 --> 00:13:46,990
+else are coming. Wake up.
+Use it. Bring it home to work.
+
+832
+00:13:46,990 --> 00:13:47,000
+Use it. Bring it home to work.
+ 
+
+833
+00:13:47,000 --> 00:13:50,150
+Use it. Bring it home to work.
+If people are insufficiently bought on
+
+834
+00:13:50,150 --> 00:13:50,160
+If people are insufficiently bought on
+ 
+
+835
+00:13:50,160 --> 00:13:59,709
+If people are insufficiently bought on
+prescribe them one of these. Thank you.
+
+836
+00:13:59,709 --> 00:13:59,719
+
+ 
+
+837
+00:13:59,719 --> 00:14:01,739
+
+>> [music]
+

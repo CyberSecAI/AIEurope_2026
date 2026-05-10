@@ -1,0 +1,5165 @@
+1
+00:00:07,205 --> 00:00:14,550
+
+[music]
+
+2
+00:00:14,550 --> 00:00:14,560
+
+ 
+
+3
+00:00:14,560 --> 00:00:17,590
+
+>> Hi everyone. Thank you for coming.
+
+4
+00:00:17,590 --> 00:00:17,600
+>> Hi everyone. Thank you for coming.
+ 
+
+5
+00:00:17,600 --> 00:00:19,590
+>> Hi everyone. Thank you for coming.
+Even though there is a lunch being
+
+6
+00:00:19,590 --> 00:00:19,600
+Even though there is a lunch being
+ 
+
+7
+00:00:19,600 --> 00:00:21,910
+Even though there is a lunch being
+served now. Really appreciate you coming
+
+8
+00:00:21,910 --> 00:00:21,920
+served now. Really appreciate you coming
+ 
+
+9
+00:00:21,920 --> 00:00:22,910
+served now. Really appreciate you coming
+here.
+
+10
+00:00:22,910 --> 00:00:22,920
+here.
+ 
+
+11
+00:00:22,920 --> 00:00:24,190
+here.
+Um
+
+12
+00:00:24,190 --> 00:00:24,200
+Um
+ 
+
+13
+00:00:24,200 --> 00:00:27,590
+Um
+I'm Boris. I work for 11 Labs.
+
+14
+00:00:27,590 --> 00:00:27,600
+I'm Boris. I work for 11 Labs.
+ 
+
+15
+00:00:27,600 --> 00:00:31,270
+I'm Boris. I work for 11 Labs.
+Usually we do agents voice agents
+
+16
+00:00:31,270 --> 00:00:31,280
+Usually we do agents voice agents
+ 
+
+17
+00:00:31,280 --> 00:00:33,590
+Usually we do agents voice agents
+like all things voice. But for this chat
+
+18
+00:00:33,590 --> 00:00:33,600
+like all things voice. But for this chat
+ 
+
+19
+00:00:33,600 --> 00:00:35,270
+like all things voice. But for this chat
+I just wanted to show you something
+
+20
+00:00:35,270 --> 00:00:35,280
+I just wanted to show you something
+ 
+
+21
+00:00:35,280 --> 00:00:38,230
+I just wanted to show you something
+else. Um you might have seen if you've
+
+22
+00:00:38,230 --> 00:00:38,240
+else. Um you might have seen if you've
+ 
+
+23
+00:00:38,240 --> 00:00:39,830
+else. Um you might have seen if you've
+been on the third floor, you might have
+
+24
+00:00:39,830 --> 00:00:39,840
+been on the third floor, you might have
+ 
+
+25
+00:00:39,840 --> 00:00:42,150
+been on the third floor, you might have
+seen this phone booth. This is Twilio by
+
+26
+00:00:42,150 --> 00:00:42,160
+seen this phone booth. This is Twilio by
+ 
+
+27
+00:00:42,160 --> 00:00:43,750
+seen this phone booth. This is Twilio by
+the way, the organizer.
+
+28
+00:00:43,750 --> 00:00:43,760
+the way, the organizer.
+ 
+
+29
+00:00:43,760 --> 00:00:45,430
+the way, the organizer.
+Um
+
+30
+00:00:45,430 --> 00:00:45,440
+Um
+ 
+
+31
+00:00:45,440 --> 00:00:46,550
+Um
+Um
+
+32
+00:00:46,550 --> 00:00:46,560
+Um
+ 
+
+33
+00:00:46,560 --> 00:00:49,630
+Um
+We've built it as a as a demo. Um demo
+
+34
+00:00:49,630 --> 00:00:49,640
+We've built it as a as a demo. Um demo
+ 
+
+35
+00:00:49,640 --> 00:00:51,910
+We've built it as a as a demo. Um demo
+for this summit. Uh there is this phone
+
+36
+00:00:51,910 --> 00:00:51,920
+for this summit. Uh there is this phone
+ 
+
+37
+00:00:51,920 --> 00:00:53,390
+for this summit. Uh there is this phone
+inside.
+
+38
+00:00:53,390 --> 00:00:53,400
+inside.
+ 
+
+39
+00:00:53,400 --> 00:00:55,830
+inside.
+Um and I don't know how many of you have
+
+40
+00:00:55,830 --> 00:00:55,840
+Um and I don't know how many of you have
+ 
+
+41
+00:00:55,840 --> 00:00:58,150
+Um and I don't know how many of you have
+went through it. Did anyone? You should
+
+42
+00:00:58,150 --> 00:00:58,160
+went through it. Did anyone? You should
+ 
+
+43
+00:00:58,160 --> 00:01:01,030
+went through it. Did anyone? You should
+totally give it a try. Oh my god. Okay.
+
+44
+00:01:01,030 --> 00:01:01,040
+totally give it a try. Oh my god. Okay.
+ 
+
+45
+00:01:01,040 --> 00:01:03,230
+totally give it a try. Oh my god. Okay.
+But uh the idea is that when when you
+
+46
+00:01:03,230 --> 00:01:03,240
+But uh the idea is that when when you
+ 
+
+47
+00:01:03,240 --> 00:01:05,630
+But uh the idea is that when when you
+pick it up, you actually end up talking
+
+48
+00:01:05,630 --> 00:01:05,640
+pick it up, you actually end up talking
+ 
+
+49
+00:01:05,640 --> 00:01:08,550
+pick it up, you actually end up talking
+to AI agent uh with the Michael Caine's
+
+50
+00:01:08,550 --> 00:01:08,560
+to AI agent uh with the Michael Caine's
+ 
+
+51
+00:01:08,560 --> 00:01:12,470
+to AI agent uh with the Michael Caine's
+voice uh approved. Um there you go.
+
+52
+00:01:12,470 --> 00:01:12,480
+voice uh approved. Um there you go.
+ 
+
+53
+00:01:12,480 --> 00:01:13,870
+voice uh approved. Um there you go.
+Who
+
+54
+00:01:13,870 --> 00:01:13,880
+Who
+ 
+
+55
+00:01:13,880 --> 00:01:15,350
+Who
+who then walks you through five
+
+56
+00:01:15,350 --> 00:01:15,360
+who then walks you through five
+ 
+
+57
+00:01:15,360 --> 00:01:18,390
+who then walks you through five
+questions about British AI history. And
+
+58
+00:01:18,390 --> 00:01:18,400
+questions about British AI history. And
+ 
+
+59
+00:01:18,400 --> 00:01:21,070
+questions about British AI history. And
+then if you answer at least one of them,
+
+60
+00:01:21,070 --> 00:01:21,080
+then if you answer at least one of them,
+ 
+
+61
+00:01:21,080 --> 00:01:23,230
+then if you answer at least one of them,
+you can get a swag from from 11 Labs. So
+
+62
+00:01:23,230 --> 00:01:23,240
+you can get a swag from from 11 Labs. So
+ 
+
+63
+00:01:23,240 --> 00:01:25,270
+you can get a swag from from 11 Labs. So
+that's the idea. But uh today I want to
+
+64
+00:01:25,270 --> 00:01:25,280
+that's the idea. But uh today I want to
+ 
+
+65
+00:01:25,280 --> 00:01:27,830
+that's the idea. But uh today I want to
+show you how I actually build it.
+
+66
+00:01:27,830 --> 00:01:27,840
+show you how I actually build it.
+ 
+
+67
+00:01:27,840 --> 00:01:30,470
+show you how I actually build it.
+So this is how it looks like now. And
+
+68
+00:01:30,470 --> 00:01:30,480
+So this is how it looks like now. And
+ 
+
+69
+00:01:30,480 --> 00:01:33,190
+So this is how it looks like now. And
+this is how it looked like last week.
+
+70
+00:01:33,190 --> 00:01:33,200
+this is how it looked like last week.
+ 
+
+71
+00:01:33,200 --> 00:01:34,710
+this is how it looked like last week.
+This is the
+
+72
+00:01:34,710 --> 00:01:34,720
+This is the
+ 
+
+73
+00:01:34,720 --> 00:01:35,870
+This is the
+um
+
+74
+00:01:35,870 --> 00:01:35,880
+um
+ 
+
+75
+00:01:35,880 --> 00:01:37,030
+um
+old
+
+76
+00:01:37,030 --> 00:01:37,040
+old
+ 
+
+77
+00:01:37,040 --> 00:01:40,470
+old
+I mean it's not that old. It still has a
+
+78
+00:01:40,470 --> 00:01:40,480
+I mean it's not that old. It still has a
+ 
+
+79
+00:01:40,480 --> 00:01:42,990
+I mean it's not that old. It still has a
+a controller inside, but it's a quite
+
+80
+00:01:42,990 --> 00:01:43,000
+a controller inside, but it's a quite
+ 
+
+81
+00:01:43,000 --> 00:01:45,590
+a controller inside, but it's a quite
+old piece of hardware, this phone. And
+
+82
+00:01:45,590 --> 00:01:45,600
+old piece of hardware, this phone. And
+ 
+
+83
+00:01:45,600 --> 00:01:48,070
+old piece of hardware, this phone. And
+the main problem when we tried to make
+
+84
+00:01:48,070 --> 00:01:48,080
+the main problem when we tried to make
+ 
+
+85
+00:01:48,080 --> 00:01:49,950
+the main problem when we tried to make
+this happen
+
+86
+00:01:49,950 --> 00:01:49,960
+this happen
+ 
+
+87
+00:01:49,960 --> 00:01:51,950
+this happen
+the main problem with the this piece of
+
+88
+00:01:51,950 --> 00:01:51,960
+the main problem with the this piece of
+ 
+
+89
+00:01:51,960 --> 00:01:53,670
+the main problem with the this piece of
+hardware was that
+
+90
+00:01:53,670 --> 00:01:53,680
+hardware was that
+ 
+
+91
+00:01:53,680 --> 00:01:54,390
+hardware was that
+um
+
+92
+00:01:54,390 --> 00:01:54,400
+um
+ 
+
+93
+00:01:54,400 --> 00:01:58,150
+um
+it only had uh Windows
+
+94
+00:01:58,150 --> 00:01:58,160
+it only had uh Windows
+ 
+
+95
+00:01:58,160 --> 00:02:02,150
+it only had uh Windows
+Windows XP compatible uh software. So it
+
+96
+00:02:02,150 --> 00:02:02,160
+Windows XP compatible uh software. So it
+ 
+
+97
+00:02:02,160 --> 00:02:04,070
+Windows XP compatible uh software. So it
+was very hard to set it up cuz it turned
+
+98
+00:02:04,070 --> 00:02:04,080
+was very hard to set it up cuz it turned
+ 
+
+99
+00:02:04,080 --> 00:02:05,990
+was very hard to set it up cuz it turned
+out that nobody at 11 Labs have a
+
+100
+00:02:05,990 --> 00:02:06,000
+out that nobody at 11 Labs have a
+ 
+
+101
+00:02:06,000 --> 00:02:09,270
+out that nobody at 11 Labs have a
+Windows uh laptop. Uh they all had Macs.
+
+102
+00:02:09,270 --> 00:02:09,280
+Windows uh laptop. Uh they all had Macs.
+ 
+
+103
+00:02:09,280 --> 00:02:11,950
+Windows uh laptop. Uh they all had Macs.
+But also when we tried to set up like a
+
+104
+00:02:11,950 --> 00:02:11,960
+But also when we tried to set up like a
+ 
+
+105
+00:02:11,960 --> 00:02:13,950
+But also when we tried to set up like a
+virtual environment, you know, also had
+
+106
+00:02:13,950 --> 00:02:13,960
+virtual environment, you know, also had
+ 
+
+107
+00:02:13,960 --> 00:02:16,390
+virtual environment, you know, also had
+some driver issues. So uh what happened
+
+108
+00:02:16,390 --> 00:02:16,400
+some driver issues. So uh what happened
+ 
+
+109
+00:02:16,400 --> 00:02:18,670
+some driver issues. So uh what happened
+to this phone? Um
+
+110
+00:02:18,670 --> 00:02:18,680
+to this phone? Um
+ 
+
+111
+00:02:18,680 --> 00:02:21,150
+to this phone? Um
+Our team in San Francisco purchased it 1
+
+112
+00:02:21,150 --> 00:02:21,160
+Our team in San Francisco purchased it 1
+ 
+
+113
+00:02:21,160 --> 00:02:23,190
+Our team in San Francisco purchased it 1
+year ago for some other event. And three
+
+114
+00:02:23,190 --> 00:02:23,200
+year ago for some other event. And three
+ 
+
+115
+00:02:23,200 --> 00:02:25,030
+year ago for some other event. And three
+software engineers, three senior
+
+116
+00:02:25,030 --> 00:02:25,040
+software engineers, three senior
+ 
+
+117
+00:02:25,040 --> 00:02:26,750
+software engineers, three senior
+software engineers and a Claude uh
+
+118
+00:02:26,750 --> 00:02:26,760
+software engineers and a Claude uh
+ 
+
+119
+00:02:26,760 --> 00:02:29,230
+software engineers and a Claude uh
+sorry, ChatGPT at the time, they
+
+120
+00:02:29,230 --> 00:02:29,240
+sorry, ChatGPT at the time, they
+ 
+
+121
+00:02:29,240 --> 00:02:31,630
+sorry, ChatGPT at the time, they
+couldn't figure out how to make it work.
+
+122
+00:02:31,630 --> 00:02:31,640
+couldn't figure out how to make it work.
+ 
+
+123
+00:02:31,640 --> 00:02:33,750
+couldn't figure out how to make it work.
+So it was just for 1 year it was just
+
+124
+00:02:33,750 --> 00:02:33,760
+So it was just for 1 year it was just
+ 
+
+125
+00:02:33,760 --> 00:02:35,230
+So it was just for 1 year it was just
+laying there
+
+126
+00:02:35,230 --> 00:02:35,240
+laying there
+ 
+
+127
+00:02:35,240 --> 00:02:38,470
+laying there
+uh waiting for waiting to be rescued.
+
+128
+00:02:38,470 --> 00:02:38,480
+uh waiting for waiting to be rescued.
+ 
+
+129
+00:02:38,480 --> 00:02:39,990
+uh waiting for waiting to be rescued.
+And uh
+
+130
+00:02:39,990 --> 00:02:40,000
+And uh
+ 
+
+131
+00:02:40,000 --> 00:02:41,830
+And uh
+for this project we we we asked them to
+
+132
+00:02:41,830 --> 00:02:41,840
+for this project we we we asked them to
+ 
+
+133
+00:02:41,840 --> 00:02:46,150
+for this project we we we asked them to
+send it to to London. Um and uh then I
+
+134
+00:02:46,150 --> 00:02:46,160
+send it to to London. Um and uh then I
+ 
+
+135
+00:02:46,160 --> 00:02:48,310
+send it to to London. Um and uh then I
+tried to crack it
+
+136
+00:02:48,310 --> 00:02:48,320
+tried to crack it
+ 
+
+137
+00:02:48,320 --> 00:02:50,910
+tried to crack it
+hack it, reverse engineer it using
+
+138
+00:02:50,910 --> 00:02:50,920
+hack it, reverse engineer it using
+ 
+
+139
+00:02:50,920 --> 00:02:52,470
+hack it, reverse engineer it using
+Claude code. And this is what I wanted
+
+140
+00:02:52,470 --> 00:02:52,480
+Claude code. And this is what I wanted
+ 
+
+141
+00:02:52,480 --> 00:02:54,190
+Claude code. And this is what I wanted
+to talk about. How to use Claude code
+
+142
+00:02:54,190 --> 00:02:54,200
+to talk about. How to use Claude code
+ 
+
+143
+00:02:54,200 --> 00:02:56,790
+to talk about. How to use Claude code
+not just to build uh applications, but
+
+144
+00:02:56,790 --> 00:02:56,800
+not just to build uh applications, but
+ 
+
+145
+00:02:56,800 --> 00:02:59,190
+not just to build uh applications, but
+how to use it to actually like
+
+146
+00:02:59,190 --> 00:02:59,200
+how to use it to actually like
+ 
+
+147
+00:02:59,200 --> 00:03:02,150
+how to use it to actually like
+uh reverse engineer some hardware.
+
+148
+00:03:02,150 --> 00:03:02,160
+uh reverse engineer some hardware.
+ 
+
+149
+00:03:02,160 --> 00:03:04,990
+uh reverse engineer some hardware.
+So by the way, this slides are fully
+
+150
+00:03:04,990 --> 00:03:05,000
+So by the way, this slides are fully
+ 
+
+151
+00:03:05,000 --> 00:03:08,150
+So by the way, this slides are fully
+fully made by Claude code as well. So I
+
+152
+00:03:08,150 --> 00:03:08,160
+fully made by Claude code as well. So I
+ 
+
+153
+00:03:08,160 --> 00:03:10,510
+fully made by Claude code as well. So I
+the way I made them is I um
+
+154
+00:03:10,510 --> 00:03:10,520
+the way I made them is I um
+ 
+
+155
+00:03:10,520 --> 00:03:12,310
+the way I made them is I um
+put the whole conversation we had about
+
+156
+00:03:12,310 --> 00:03:12,320
+put the whole conversation we had about
+ 
+
+157
+00:03:12,320 --> 00:03:13,790
+put the whole conversation we had about
+this um
+
+158
+00:03:13,790 --> 00:03:13,800
+this um
+ 
+
+159
+00:03:13,800 --> 00:03:16,430
+this um
+process and then asked it to as a
+
+160
+00:03:16,430 --> 00:03:16,440
+process and then asked it to as a
+ 
+
+161
+00:03:16,440 --> 00:03:19,310
+process and then asked it to as a
+context and then asked it to make slides
+
+162
+00:03:19,310 --> 00:03:19,320
+context and then asked it to make slides
+ 
+
+163
+00:03:19,320 --> 00:03:20,630
+context and then asked it to make slides
+based on that.
+
+164
+00:03:20,630 --> 00:03:20,640
+based on that.
+ 
+
+165
+00:03:20,640 --> 00:03:22,030
+based on that.
+So
+
+166
+00:03:22,030 --> 00:03:22,040
+So
+ 
+
+167
+00:03:22,040 --> 00:03:24,350
+So
+the goal here uh what we want to achieve
+
+168
+00:03:24,350 --> 00:03:24,360
+the goal here uh what we want to achieve
+ 
+
+169
+00:03:24,360 --> 00:03:26,910
+the goal here uh what we want to achieve
+is uh they have this Viking phone.
+
+170
+00:03:26,910 --> 00:03:26,920
+is uh they have this Viking phone.
+ 
+
+171
+00:03:26,920 --> 00:03:28,470
+is uh they have this Viking phone.
+The
+
+172
+00:03:28,470 --> 00:03:28,480
+The
+ 
+
+173
+00:03:28,480 --> 00:03:30,950
+The
+uh retro legacy Viking phone.
+
+174
+00:03:30,950 --> 00:03:30,960
+uh retro legacy Viking phone.
+ 
+
+175
+00:03:30,960 --> 00:03:32,950
+uh retro legacy Viking phone.
+And we want to connect it to a
+
+176
+00:03:32,950 --> 00:03:32,960
+And we want to connect it to a
+ 
+
+177
+00:03:32,960 --> 00:03:35,990
+And we want to connect it to a
+conversational AI agent by 11 Labs.
+
+178
+00:03:35,990 --> 00:03:36,000
+conversational AI agent by 11 Labs.
+ 
+
+179
+00:03:36,000 --> 00:03:38,070
+conversational AI agent by 11 Labs.
+Uh it can only make a phone call to a
+
+180
+00:03:38,070 --> 00:03:38,080
+Uh it can only make a phone call to a
+ 
+
+181
+00:03:38,080 --> 00:03:40,070
+Uh it can only make a phone call to a
+phone number. So we need to put Twilio
+
+182
+00:03:40,070 --> 00:03:40,080
+phone number. So we need to put Twilio
+ 
+
+183
+00:03:40,080 --> 00:03:41,310
+phone number. So we need to put Twilio
+in between.
+
+184
+00:03:41,310 --> 00:03:41,320
+in between.
+ 
+
+185
+00:03:41,320 --> 00:03:44,470
+in between.
+Just um to handle that a SIP SIP domain
+
+186
+00:03:44,470 --> 00:03:44,480
+Just um to handle that a SIP SIP domain
+ 
+
+187
+00:03:44,480 --> 00:03:46,710
+Just um to handle that a SIP SIP domain
+complexity. So it goes Viking phone,
+
+188
+00:03:46,710 --> 00:03:46,720
+complexity. So it goes Viking phone,
+ 
+
+189
+00:03:46,720 --> 00:03:49,750
+complexity. So it goes Viking phone,
+then Twilio, then 11 Labs.
+
+190
+00:03:49,750 --> 00:03:49,760
+then Twilio, then 11 Labs.
+ 
+
+191
+00:03:49,760 --> 00:03:53,550
+then Twilio, then 11 Labs.
+Um Yeah, the problem.
+
+192
+00:03:53,550 --> 00:03:53,560
+Um Yeah, the problem.
+ 
+
+193
+00:03:53,560 --> 00:03:55,630
+Um Yeah, the problem.
+I have a Mac.
+
+194
+00:03:55,630 --> 00:03:55,640
+I have a Mac.
+ 
+
+195
+00:03:55,640 --> 00:03:58,990
+I have a Mac.
+Uh so we couldn't really like easily set
+
+196
+00:03:58,990 --> 00:03:59,000
+Uh so we couldn't really like easily set
+ 
+
+197
+00:03:59,000 --> 00:04:00,030
+Uh so we couldn't really like easily set
+it up.
+
+198
+00:04:00,030 --> 00:04:00,040
+it up.
+ 
+
+199
+00:04:00,040 --> 00:04:02,590
+it up.
+Uh so what we ended up doing, what I
+
+200
+00:04:02,590 --> 00:04:02,600
+Uh so what we ended up doing, what I
+ 
+
+201
+00:04:02,600 --> 00:04:05,190
+Uh so what we ended up doing, what I
+ended up doing instead, I uh connected
+
+202
+00:04:05,190 --> 00:04:05,200
+ended up doing instead, I uh connected
+ 
+
+203
+00:04:05,200 --> 00:04:06,910
+ended up doing instead, I uh connected
+the
+
+204
+00:04:06,910 --> 00:04:06,920
+the
+ 
+
+205
+00:04:06,920 --> 00:04:10,670
+the
+connected my laptop to the phone via
+
+206
+00:04:10,670 --> 00:04:10,680
+connected my laptop to the phone via
+ 
+
+207
+00:04:10,680 --> 00:04:11,870
+connected my laptop to the phone via
+router
+
+208
+00:04:11,870 --> 00:04:11,880
+router
+ 
+
+209
+00:04:11,880 --> 00:04:13,510
+router
+and uh
+
+210
+00:04:13,510 --> 00:04:13,520
+and uh
+ 
+
+211
+00:04:13,520 --> 00:04:16,310
+and uh
+started exploring. I mean, by saying I
+
+212
+00:04:16,310 --> 00:04:16,320
+started exploring. I mean, by saying I
+ 
+
+213
+00:04:16,320 --> 00:04:18,229
+started exploring. I mean, by saying I
+started exploring, uh Claude code
+
+214
+00:04:18,229 --> 00:04:18,239
+started exploring, uh Claude code
+ 
+
+215
+00:04:18,239 --> 00:04:21,110
+started exploring, uh Claude code
+started exploring it. So first it um
+
+216
+00:04:21,110 --> 00:04:21,120
+started exploring it. So first it um
+ 
+
+217
+00:04:21,120 --> 00:04:23,350
+started exploring it. So first it um
+nmapped all of the
+
+218
+00:04:23,350 --> 00:04:23,360
+nmapped all of the
+ 
+
+219
+00:04:23,360 --> 00:04:25,750
+nmapped all of the
+ports that were available.
+
+220
+00:04:25,750 --> 00:04:25,760
+ports that were available.
+ 
+
+221
+00:04:25,760 --> 00:04:28,390
+ports that were available.
+Uh so port 1001.
+
+222
+00:04:28,390 --> 00:04:28,400
+Uh so port 1001.
+ 
+
+223
+00:04:28,400 --> 00:04:30,470
+Uh so port 1001.
+Um
+
+224
+00:04:30,470 --> 00:04:30,480
+Um
+ 
+
+225
+00:04:30,480 --> 00:04:32,470
+Um
+Which turned out to be the wrong one. It
+
+226
+00:04:32,470 --> 00:04:32,480
+Which turned out to be the wrong one. It
+ 
+
+227
+00:04:32,480 --> 00:04:35,910
+Which turned out to be the wrong one. It
+was just uh electronics tunnel.
+
+228
+00:04:35,910 --> 00:04:35,920
+was just uh electronics tunnel.
+ 
+
+229
+00:04:35,920 --> 00:04:38,590
+was just uh electronics tunnel.
+Uh then it proceeded to iterate and the
+
+230
+00:04:38,590 --> 00:04:38,600
+Uh then it proceeded to iterate and the
+ 
+
+231
+00:04:38,600 --> 00:04:40,790
+Uh then it proceeded to iterate and the
+next one was the actual
+
+232
+00:04:40,790 --> 00:04:40,800
+next one was the actual
+ 
+
+233
+00:04:40,800 --> 00:04:42,950
+next one was the actual
+uh target port that could be used to
+
+234
+00:04:42,950 --> 00:04:42,960
+uh target port that could be used to
+ 
+
+235
+00:04:42,960 --> 00:04:45,550
+uh target port that could be used to
+communicate with the phone. So step one,
+
+236
+00:04:45,550 --> 00:04:45,560
+communicate with the phone. So step one,
+ 
+
+237
+00:04:45,560 --> 00:04:48,510
+communicate with the phone. So step one,
+Claude code found the way to communicate
+
+238
+00:04:48,510 --> 00:04:48,520
+Claude code found the way to communicate
+ 
+
+239
+00:04:48,520 --> 00:04:49,710
+Claude code found the way to communicate
+with the phone.
+
+240
+00:04:49,710 --> 00:04:49,720
+with the phone.
+ 
+
+241
+00:04:49,720 --> 00:04:52,710
+with the phone.
+Um then
+
+242
+00:04:52,710 --> 00:04:52,720
+Um then
+ 
+
+243
+00:04:52,720 --> 00:04:54,910
+Um then
+uh then it started discovering it.
+
+244
+00:04:54,910 --> 00:04:54,920
+uh then it started discovering it.
+ 
+
+245
+00:04:54,920 --> 00:04:56,670
+uh then it started discovering it.
+So it sent um
+
+246
+00:04:56,670 --> 00:04:56,680
+So it sent um
+ 
+
+247
+00:04:56,680 --> 00:04:58,990
+So it sent um
+some random sequence. I mean, not random
+
+248
+00:04:58,990 --> 00:04:59,000
+some random sequence. I mean, not random
+ 
+
+249
+00:04:59,000 --> 00:05:01,750
+some random sequence. I mean, not random
+Viking, but just random sequence.
+
+250
+00:05:01,750 --> 00:05:01,760
+Viking, but just random sequence.
+ 
+
+251
+00:05:01,760 --> 00:05:04,070
+Viking, but just random sequence.
+Um to the phone and the phone responded.
+
+252
+00:05:04,070 --> 00:05:04,080
+Um to the phone and the phone responded.
+ 
+
+253
+00:05:04,080 --> 00:05:06,630
+Um to the phone and the phone responded.
+So that's how Claude code realized that
+
+254
+00:05:06,630 --> 00:05:06,640
+So that's how Claude code realized that
+ 
+
+255
+00:05:06,640 --> 00:05:09,350
+So that's how Claude code realized that
+um that this is an actual interface, a
+
+256
+00:05:09,350 --> 00:05:09,360
+um that this is an actual interface, a
+ 
+
+257
+00:05:09,360 --> 00:05:10,630
+um that this is an actual interface, a
+protocol.
+
+258
+00:05:10,630 --> 00:05:10,640
+protocol.
+ 
+
+259
+00:05:10,640 --> 00:05:13,110
+protocol.
+But the protocol is not like
+
+260
+00:05:13,110 --> 00:05:13,120
+But the protocol is not like
+ 
+
+261
+00:05:13,120 --> 00:05:14,870
+But the protocol is not like
+Google-able. You can't There is no open
+
+262
+00:05:14,870 --> 00:05:14,880
+Google-able. You can't There is no open
+ 
+
+263
+00:05:14,880 --> 00:05:17,070
+Google-able. You can't There is no open
+documentation on what the exact protocol
+
+264
+00:05:17,070 --> 00:05:17,080
+documentation on what the exact protocol
+ 
+
+265
+00:05:17,080 --> 00:05:18,870
+documentation on what the exact protocol
+is. So it had to
+
+266
+00:05:18,870 --> 00:05:18,880
+is. So it had to
+ 
+
+267
+00:05:18,880 --> 00:05:19,830
+is. So it had to
+then
+
+268
+00:05:19,830 --> 00:05:19,840
+then
+ 
+
+269
+00:05:19,840 --> 00:05:22,350
+then
+um reverse engineer it, right?
+
+270
+00:05:22,350 --> 00:05:22,360
+um reverse engineer it, right?
+ 
+
+271
+00:05:22,360 --> 00:05:24,550
+um reverse engineer it, right?
+So first thing Claude noticed is that
+
+272
+00:05:24,550 --> 00:05:24,560
+So first thing Claude noticed is that
+ 
+
+273
+00:05:24,560 --> 00:05:26,430
+So first thing Claude noticed is that
+when you send a random string to the
+
+274
+00:05:26,430 --> 00:05:26,440
+when you send a random string to the
+ 
+
+275
+00:05:26,440 --> 00:05:30,110
+when you send a random string to the
+phone, it returns uh this ER
+
+276
+00:05:30,110 --> 00:05:30,120
+phone, it returns uh this ER
+ 
+
+277
+00:05:30,120 --> 00:05:31,830
+phone, it returns uh this ER
+and then the string itself.
+
+278
+00:05:31,830 --> 00:05:31,840
+and then the string itself.
+ 
+
+279
+00:05:31,840 --> 00:05:34,190
+and then the string itself.
+Meaning likely it's an error.
+
+280
+00:05:34,190 --> 00:05:34,200
+Meaning likely it's an error.
+ 
+
+281
+00:05:34,200 --> 00:05:36,910
+Meaning likely it's an error.
+Error that this string is not a correct
+
+282
+00:05:36,910 --> 00:05:36,920
+Error that this string is not a correct
+ 
+
+283
+00:05:36,920 --> 00:05:40,550
+Error that this string is not a correct
+command for the phone. So
+
+284
+00:05:40,550 --> 00:05:40,560
+command for the phone. So
+ 
+
+285
+00:05:40,560 --> 00:05:42,150
+command for the phone. So
+next
+
+286
+00:05:42,150 --> 00:05:42,160
+next
+ 
+
+287
+00:05:42,160 --> 00:05:44,710
+next
+um
+
+288
+00:05:44,710 --> 00:05:44,720
+
+ 
+
+289
+00:05:44,720 --> 00:05:47,110
+
+Yeah, next Claude figured out those
+
+290
+00:05:47,110 --> 00:05:47,120
+Yeah, next Claude figured out those
+ 
+
+291
+00:05:47,120 --> 00:05:51,070
+Yeah, next Claude figured out those
+commands that um
+
+292
+00:05:51,070 --> 00:05:51,080
+
+ 
+
+293
+00:05:51,080 --> 00:05:53,350
+
+that this this phone it operates using
+
+294
+00:05:53,350 --> 00:05:53,360
+that this this phone it operates using
+ 
+
+295
+00:05:53,360 --> 00:05:56,350
+that this this phone it operates using
+two-letter commands, command codes. Um
+
+296
+00:05:56,350 --> 00:05:56,360
+two-letter commands, command codes. Um
+ 
+
+297
+00:05:56,360 --> 00:05:58,870
+two-letter commands, command codes. Um
+some of them are non-existent, then it
+
+298
+00:05:58,870 --> 00:05:58,880
+some of them are non-existent, then it
+ 
+
+299
+00:05:58,880 --> 00:06:00,710
+some of them are non-existent, then it
+returns an error
+
+300
+00:06:00,710 --> 00:06:00,720
+returns an error
+ 
+
+301
+00:06:00,720 --> 00:06:03,230
+returns an error
+like on this slide. Other, however, they
+
+302
+00:06:03,230 --> 00:06:03,240
+like on this slide. Other, however, they
+ 
+
+303
+00:06:03,240 --> 00:06:05,350
+like on this slide. Other, however, they
+return something else.
+
+304
+00:06:05,350 --> 00:06:05,360
+return something else.
+ 
+
+305
+00:06:05,360 --> 00:06:08,910
+return something else.
+Um the next idea was that actually if
+
+306
+00:06:08,910 --> 00:06:08,920
+Um the next idea was that actually if
+ 
+
+307
+00:06:08,920 --> 00:06:10,590
+Um the next idea was that actually if
+it's two-letter
+
+308
+00:06:10,590 --> 00:06:10,600
+it's two-letter
+ 
+
+309
+00:06:10,600 --> 00:06:11,990
+it's two-letter
+commands, then we can just iterate
+
+310
+00:06:11,990 --> 00:06:12,000
+commands, then we can just iterate
+ 
+
+311
+00:06:12,000 --> 00:06:13,790
+commands, then we can just iterate
+through all of them, right?
+
+312
+00:06:13,790 --> 00:06:13,800
+through all of them, right?
+ 
+
+313
+00:06:13,800 --> 00:06:16,910
+through all of them, right?
+Uh brute forcing. So it wrote this this
+
+314
+00:06:16,910 --> 00:06:16,920
+Uh brute forcing. So it wrote this this
+ 
+
+315
+00:06:16,920 --> 00:06:18,150
+Uh brute forcing. So it wrote this this
+program
+
+316
+00:06:18,150 --> 00:06:18,160
+program
+ 
+
+317
+00:06:18,160 --> 00:06:20,710
+program
+and literally like tried out every
+
+318
+00:06:20,710 --> 00:06:20,720
+and literally like tried out every
+ 
+
+319
+00:06:20,720 --> 00:06:22,990
+and literally like tried out every
+single combination of two letters.
+
+320
+00:06:22,990 --> 00:06:23,000
+single combination of two letters.
+ 
+
+321
+00:06:23,000 --> 00:06:25,270
+single combination of two letters.
+Um and it turned out that most of them
+
+322
+00:06:25,270 --> 00:06:25,280
+Um and it turned out that most of them
+ 
+
+323
+00:06:25,280 --> 00:06:27,630
+Um and it turned out that most of them
+returned error codes, but 80 of them
+
+324
+00:06:27,630 --> 00:06:27,640
+returned error codes, but 80 of them
+ 
+
+325
+00:06:27,640 --> 00:06:30,030
+returned error codes, but 80 of them
+returned actual like
+
+326
+00:06:30,030 --> 00:06:30,040
+returned actual like
+ 
+
+327
+00:06:30,040 --> 00:06:31,630
+returned actual like
+something else, meaning they're actual
+
+328
+00:06:31,630 --> 00:06:31,640
+something else, meaning they're actual
+ 
+
+329
+00:06:31,640 --> 00:06:34,590
+something else, meaning they're actual
+valid commands.
+
+330
+00:06:34,590 --> 00:06:34,600
+valid commands.
+ 
+
+331
+00:06:34,600 --> 00:06:41,670
+valid commands.
+Uh those were some of them.
+
+332
+00:06:41,670 --> 00:06:41,680
+
+ 
+
+333
+00:06:41,680 --> 00:06:45,670
+
+By the way, I'm not sure
+
+334
+00:06:45,670 --> 00:06:45,680
+
+ 
+
+335
+00:06:45,680 --> 00:06:49,070
+
+Okay, I'm not sure what this is, but uh
+
+336
+00:06:49,070 --> 00:06:49,080
+Okay, I'm not sure what this is, but uh
+ 
+
+337
+00:06:49,080 --> 00:06:50,630
+Okay, I'm not sure what this is, but uh
+Yeah, then it
+
+338
+00:06:50,630 --> 00:06:50,640
+Yeah, then it
+ 
+
+339
+00:06:50,640 --> 00:06:51,710
+Yeah, then it
+then it
+
+340
+00:06:51,710 --> 00:06:51,720
+then it
+ 
+
+341
+00:06:51,720 --> 00:06:53,310
+then it
+some of the commands they kind of made
+
+342
+00:06:53,310 --> 00:06:53,320
+some of the commands they kind of made
+ 
+
+343
+00:06:53,320 --> 00:06:55,990
+some of the commands they kind of made
+sense based on the
+
+344
+00:06:55,990 --> 00:06:56,000
+sense based on the
+ 
+
+345
+00:06:56,000 --> 00:06:57,510
+sense based on the
+on the name.
+
+346
+00:06:57,510 --> 00:06:57,520
+on the name.
+ 
+
+347
+00:06:57,520 --> 00:07:00,230
+on the name.
+Maybe not those ones, but for example
+
+348
+00:07:00,230 --> 00:07:00,240
+Maybe not those ones, but for example
+ 
+
+349
+00:07:00,240 --> 00:07:02,230
+Maybe not those ones, but for example
+uh
+
+350
+00:07:02,230 --> 00:07:02,240
+uh
+ 
+
+351
+00:07:02,240 --> 00:07:05,230
+uh
+SA for status kind of makes sense.
+
+352
+00:07:05,230 --> 00:07:05,240
+SA for status kind of makes sense.
+ 
+
+353
+00:07:05,240 --> 00:07:07,750
+SA for status kind of makes sense.
+I don't know if it makes sense. Yeah. Uh
+
+354
+00:07:07,750 --> 00:07:07,760
+I don't know if it makes sense. Yeah. Uh
+ 
+
+355
+00:07:07,760 --> 00:07:08,950
+I don't know if it makes sense. Yeah. Uh
+Then
+
+356
+00:07:08,950 --> 00:07:08,960
+Then
+ 
+
+357
+00:07:08,960 --> 00:07:11,630
+Then
+then it proceeded to try to set up the
+
+358
+00:07:11,630 --> 00:07:11,640
+then it proceeded to try to set up the
+ 
+
+359
+00:07:11,640 --> 00:07:13,350
+then it proceeded to try to set up the
+actual
+
+360
+00:07:13,350 --> 00:07:13,360
+actual
+ 
+
+361
+00:07:13,360 --> 00:07:14,870
+actual
+credentials
+
+362
+00:07:14,870 --> 00:07:14,880
+credentials
+ 
+
+363
+00:07:14,880 --> 00:07:17,750
+credentials
+on the phone. So this is this is uh
+
+364
+00:07:17,750 --> 00:07:17,760
+on the phone. So this is this is uh
+ 
+
+365
+00:07:17,760 --> 00:07:20,110
+on the phone. So this is this is uh
+this is the phone memory. And it
+
+366
+00:07:20,110 --> 00:07:20,120
+this is the phone memory. And it
+ 
+
+367
+00:07:20,120 --> 00:07:21,630
+this is the phone memory. And it
+basically what they're trying to do here
+
+368
+00:07:21,630 --> 00:07:21,640
+basically what they're trying to do here
+ 
+
+369
+00:07:21,640 --> 00:07:23,550
+basically what they're trying to do here
+is to put the right credentials to the
+
+370
+00:07:23,550 --> 00:07:23,560
+is to put the right credentials to the
+ 
+
+371
+00:07:23,560 --> 00:07:25,310
+is to put the right credentials to the
+phone memory so that it knows where to
+
+372
+00:07:25,310 --> 00:07:25,320
+phone memory so that it knows where to
+ 
+
+373
+00:07:25,320 --> 00:07:27,350
+phone memory so that it knows where to
+call. We want to call Twilio SIP trunk,
+
+374
+00:07:27,350 --> 00:07:27,360
+call. We want to call Twilio SIP trunk,
+ 
+
+375
+00:07:27,360 --> 00:07:29,190
+call. We want to call Twilio SIP trunk,
+right? Um
+
+376
+00:07:29,190 --> 00:07:29,200
+right? Um
+ 
+
+377
+00:07:29,200 --> 00:07:30,950
+right? Um
+And it turned out that yes, these
+
+378
+00:07:30,950 --> 00:07:30,960
+And it turned out that yes, these
+ 
+
+379
+00:07:30,960 --> 00:07:32,670
+And it turned out that yes, these
+commands they worked and all of the
+
+380
+00:07:32,670 --> 00:07:32,680
+commands they worked and all of the
+ 
+
+381
+00:07:32,680 --> 00:07:34,910
+commands they worked and all of the
+settings got accepted.
+
+382
+00:07:34,910 --> 00:07:34,920
+settings got accepted.
+ 
+
+383
+00:07:34,920 --> 00:07:36,590
+settings got accepted.
+But the problem is the moment the phone
+
+384
+00:07:36,590 --> 00:07:36,600
+But the problem is the moment the phone
+ 
+
+385
+00:07:36,600 --> 00:07:40,590
+But the problem is the moment the phone
+got rebooted they all were gone.
+
+386
+00:07:40,590 --> 00:07:40,600
+got rebooted they all were gone.
+ 
+
+387
+00:07:40,600 --> 00:07:43,670
+got rebooted they all were gone.
+So
+
+388
+00:07:43,670 --> 00:07:43,680
+
+ 
+
+389
+00:07:43,680 --> 00:07:46,070
+
+they were not saved in the memory. They
+
+390
+00:07:46,070 --> 00:07:46,080
+they were not saved in the memory. They
+ 
+
+391
+00:07:46,080 --> 00:07:50,430
+they were not saved in the memory. They
+were just wrote to the temporary memory.
+
+392
+00:07:50,430 --> 00:07:50,440
+were just wrote to the temporary memory.
+ 
+
+393
+00:07:50,440 --> 00:07:51,630
+were just wrote to the temporary memory.
+And
+
+394
+00:07:51,630 --> 00:07:51,640
+And
+ 
+
+395
+00:07:51,640 --> 00:07:54,550
+And
+then uh we started me and Claude code we
+
+396
+00:07:54,550 --> 00:07:54,560
+then uh we started me and Claude code we
+ 
+
+397
+00:07:54,560 --> 00:07:56,790
+then uh we started me and Claude code we
+started like a multi-hour operation of
+
+398
+00:07:56,790 --> 00:07:56,800
+started like a multi-hour operation of
+ 
+
+399
+00:07:56,800 --> 00:07:58,510
+started like a multi-hour operation of
+trying to figure out how to actually
+
+400
+00:07:58,510 --> 00:07:58,520
+trying to figure out how to actually
+ 
+
+401
+00:07:58,520 --> 00:08:00,950
+trying to figure out how to actually
+save what you put to the put to this
+
+402
+00:08:00,950 --> 00:08:00,960
+save what you put to the put to this
+ 
+
+403
+00:08:00,960 --> 00:08:03,390
+save what you put to the put to this
+like temporary memory, how to make it
+
+404
+00:08:03,390 --> 00:08:03,400
+like temporary memory, how to make it
+ 
+
+405
+00:08:03,400 --> 00:08:05,830
+like temporary memory, how to make it
+actually um
+
+406
+00:08:05,830 --> 00:08:05,840
+actually um
+ 
+
+407
+00:08:05,840 --> 00:08:08,390
+actually um
+persistent. Like how to save it to the
+
+408
+00:08:08,390 --> 00:08:08,400
+persistent. Like how to save it to the
+ 
+
+409
+00:08:08,400 --> 00:08:11,150
+persistent. Like how to save it to the
+long-term memory of the phone. It tried
+
+410
+00:08:11,150 --> 00:08:11,160
+long-term memory of the phone. It tried
+ 
+
+411
+00:08:11,160 --> 00:08:13,310
+long-term memory of the phone. It tried
+everything. It tried
+
+412
+00:08:13,310 --> 00:08:13,320
+everything. It tried
+ 
+
+413
+00:08:13,320 --> 00:08:15,150
+everything. It tried
+different commands. And then it I don't
+
+414
+00:08:15,150 --> 00:08:15,160
+different commands. And then it I don't
+ 
+
+415
+00:08:15,160 --> 00:08:16,910
+different commands. And then it I don't
+know if the slides are going to show
+
+416
+00:08:16,910 --> 00:08:16,920
+know if the slides are going to show
+ 
+
+417
+00:08:16,920 --> 00:08:18,830
+know if the slides are going to show
+this, but it tried
+
+418
+00:08:18,830 --> 00:08:18,840
+this, but it tried
+ 
+
+419
+00:08:18,840 --> 00:08:20,870
+this, but it tried
+three-letter commands. It iterated over
+
+420
+00:08:20,870 --> 00:08:20,880
+three-letter commands. It iterated over
+ 
+
+421
+00:08:20,880 --> 00:08:23,110
+three-letter commands. It iterated over
+all three-letter commands, over all
+
+422
+00:08:23,110 --> 00:08:23,120
+all three-letter commands, over all
+ 
+
+423
+00:08:23,120 --> 00:08:24,990
+all three-letter commands, over all
+reasonable words.
+
+424
+00:08:24,990 --> 00:08:25,000
+reasonable words.
+ 
+
+425
+00:08:25,000 --> 00:08:28,510
+reasonable words.
+And it didn't find anything.
+
+426
+00:08:28,510 --> 00:08:28,520
+
+ 
+
+427
+00:08:28,520 --> 00:08:33,510
+
+Uh so this was the dead end situation.
+
+428
+00:08:33,510 --> 00:08:33,520
+Uh so this was the dead end situation.
+ 
+
+429
+00:08:33,520 --> 00:08:35,430
+Uh so this was the dead end situation.
+This was around the
+
+430
+00:08:35,430 --> 00:08:35,440
+This was around the
+ 
+
+431
+00:08:35,440 --> 00:08:37,750
+This was around the
+place where our team in San Francisco,
+
+432
+00:08:37,750 --> 00:08:37,760
+place where our team in San Francisco,
+ 
+
+433
+00:08:37,760 --> 00:08:39,750
+place where our team in San Francisco,
+when we just started exploring it the
+
+434
+00:08:39,750 --> 00:08:39,760
+when we just started exploring it the
+ 
+
+435
+00:08:39,760 --> 00:08:41,070
+when we just started exploring it the
+first time.
+
+436
+00:08:41,070 --> 00:08:41,080
+first time.
+ 
+
+437
+00:08:41,080 --> 00:08:43,630
+first time.
+Um
+
+438
+00:08:43,630 --> 00:08:43,640
+
+ 
+
+439
+00:08:43,640 --> 00:08:45,590
+
+They they could they couldn't figure out
+
+440
+00:08:45,590 --> 00:08:45,600
+They they could they couldn't figure out
+ 
+
+441
+00:08:45,600 --> 00:08:48,710
+They they could they couldn't figure out
+what to do next. But that was 1 year ago
+
+442
+00:08:48,710 --> 00:08:48,720
+what to do next. But that was 1 year ago
+ 
+
+443
+00:08:48,720 --> 00:08:49,950
+what to do next. But that was 1 year ago
+when um
+
+444
+00:08:49,950 --> 00:08:49,960
+when um
+ 
+
+445
+00:08:49,960 --> 00:08:52,430
+when um
+there was only ChatGPT. Now with Claude,
+
+446
+00:08:52,430 --> 00:08:52,440
+there was only ChatGPT. Now with Claude,
+ 
+
+447
+00:08:52,440 --> 00:08:54,430
+there was only ChatGPT. Now with Claude,
+Claude didn't give up at this point.
+
+448
+00:08:54,430 --> 00:08:54,440
+Claude didn't give up at this point.
+ 
+
+449
+00:08:54,440 --> 00:08:56,910
+Claude didn't give up at this point.
+Claude suggested that
+
+450
+00:08:56,910 --> 00:08:56,920
+Claude suggested that
+ 
+
+451
+00:08:56,920 --> 00:08:58,030
+Claude suggested that
+uh
+
+452
+00:08:58,030 --> 00:08:58,040
+uh
+ 
+
+453
+00:08:58,040 --> 00:09:00,350
+uh
+there is a Yeah, Claude figured figured
+
+454
+00:09:00,350 --> 00:09:00,360
+there is a Yeah, Claude figured figured
+ 
+
+455
+00:09:00,360 --> 00:09:02,430
+there is a Yeah, Claude figured figured
+out the problem and then it suggested a
+
+456
+00:09:02,430 --> 00:09:02,440
+out the problem and then it suggested a
+ 
+
+457
+00:09:02,440 --> 00:09:06,390
+out the problem and then it suggested a
+solution. So the solution at this uh
+
+458
+00:09:06,390 --> 00:09:06,400
+solution. So the solution at this uh
+ 
+
+459
+00:09:06,400 --> 00:09:10,230
+solution. So the solution at this uh
+step was was to set up a
+
+460
+00:09:10,230 --> 00:09:10,240
+step was was to set up a
+ 
+
+461
+00:09:10,240 --> 00:09:12,030
+step was was to set up a
+Windows virtual machine.
+
+462
+00:09:12,030 --> 00:09:12,040
+Windows virtual machine.
+ 
+
+463
+00:09:12,040 --> 00:09:13,950
+Windows virtual machine.
+However, uh the main problem with with
+
+464
+00:09:13,950 --> 00:09:13,960
+However, uh the main problem with with
+ 
+
+465
+00:09:13,960 --> 00:09:15,950
+However, uh the main problem with with
+Windows virtual machine is that you
+
+466
+00:09:15,950 --> 00:09:15,960
+Windows virtual machine is that you
+ 
+
+467
+00:09:15,960 --> 00:09:17,910
+Windows virtual machine is that you
+can't bridge Wi-Fi
+
+468
+00:09:17,910 --> 00:09:17,920
+can't bridge Wi-Fi
+ 
+
+469
+00:09:17,920 --> 00:09:20,470
+can't bridge Wi-Fi
+um to macOS. So there is no internet
+
+470
+00:09:20,470 --> 00:09:20,480
+um to macOS. So there is no internet
+ 
+
+471
+00:09:20,480 --> 00:09:22,470
+um to macOS. So there is no internet
+connection in the Windows virtual
+
+472
+00:09:22,470 --> 00:09:22,480
+connection in the Windows virtual
+ 
+
+473
+00:09:22,480 --> 00:09:25,270
+connection in the Windows virtual
+machine. So what Claude did next was
+
+474
+00:09:25,270 --> 00:09:25,280
+machine. So what Claude did next was
+ 
+
+475
+00:09:25,280 --> 00:09:27,870
+machine. So what Claude did next was
+actually a very smart thing. It set up a
+
+476
+00:09:27,870 --> 00:09:27,880
+actually a very smart thing. It set up a
+ 
+
+477
+00:09:27,880 --> 00:09:31,630
+actually a very smart thing. It set up a
+TCP proxy on the Mac so that the
+
+478
+00:09:31,630 --> 00:09:31,640
+TCP proxy on the Mac so that the
+ 
+
+479
+00:09:31,640 --> 00:09:34,750
+TCP proxy on the Mac so that the
+uh traffic from the virtual machine Oh,
+
+480
+00:09:34,750 --> 00:09:34,760
+uh traffic from the virtual machine Oh,
+ 
+
+481
+00:09:34,760 --> 00:09:36,310
+uh traffic from the virtual machine Oh,
+why are we setting up virtual machine?
+
+482
+00:09:36,310 --> 00:09:36,320
+why are we setting up virtual machine?
+ 
+
+483
+00:09:36,320 --> 00:09:38,270
+why are we setting up virtual machine?
+Because in the virtual in the Windows
+
+484
+00:09:38,270 --> 00:09:38,280
+Because in the virtual in the Windows
+ 
+
+485
+00:09:38,280 --> 00:09:40,830
+Because in the virtual in the Windows
+virtual machine, we can set we can um
+
+486
+00:09:40,830 --> 00:09:40,840
+virtual machine, we can set we can um
+ 
+
+487
+00:09:40,840 --> 00:09:43,270
+virtual machine, we can set we can um
+run the software of this phone that
+
+488
+00:09:43,270 --> 00:09:43,280
+run the software of this phone that
+ 
+
+489
+00:09:43,280 --> 00:09:44,990
+run the software of this phone that
+actually knows how to communicate with
+
+490
+00:09:44,990 --> 00:09:45,000
+actually knows how to communicate with
+ 
+
+491
+00:09:45,000 --> 00:09:46,030
+actually knows how to communicate with
+it.
+
+492
+00:09:46,030 --> 00:09:46,040
+it.
+ 
+
+493
+00:09:46,040 --> 00:09:47,790
+it.
+So the solution uh so what we're trying
+
+494
+00:09:47,790 --> 00:09:47,800
+So the solution uh so what we're trying
+ 
+
+495
+00:09:47,800 --> 00:09:49,670
+So the solution uh so what we're trying
+to do now, we're trying to
+
+496
+00:09:49,670 --> 00:09:49,680
+to do now, we're trying to
+ 
+
+497
+00:09:49,680 --> 00:09:52,830
+to do now, we're trying to
+uh put like a man in the middle attack
+
+498
+00:09:52,830 --> 00:09:52,840
+uh put like a man in the middle attack
+ 
+
+499
+00:09:52,840 --> 00:09:53,910
+uh put like a man in the middle attack
+kind of
+
+500
+00:09:53,910 --> 00:09:53,920
+kind of
+ 
+
+501
+00:09:53,920 --> 00:09:55,950
+kind of
+to intercept the traffic between the
+
+502
+00:09:55,950 --> 00:09:55,960
+to intercept the traffic between the
+ 
+
+503
+00:09:55,960 --> 00:09:58,990
+to intercept the traffic between the
+software and the phone to analyze it and
+
+504
+00:09:58,990 --> 00:09:59,000
+software and the phone to analyze it and
+ 
+
+505
+00:09:59,000 --> 00:10:01,230
+software and the phone to analyze it and
+to figure out how how it communicates,
+
+506
+00:10:01,230 --> 00:10:01,240
+to figure out how how it communicates,
+ 
+
+507
+00:10:01,240 --> 00:10:02,990
+to figure out how how it communicates,
+how it works.
+
+508
+00:10:02,990 --> 00:10:03,000
+how it works.
+ 
+
+509
+00:10:03,000 --> 00:10:05,110
+how it works.
+So,
+
+510
+00:10:05,110 --> 00:10:05,120
+So,
+ 
+
+511
+00:10:05,120 --> 00:10:06,590
+So,
+the software is running in Windows
+
+512
+00:10:06,590 --> 00:10:06,600
+the software is running in Windows
+ 
+
+513
+00:10:06,600 --> 00:10:09,630
+the software is running in Windows
+virtual machine now. Then it
+
+514
+00:10:09,630 --> 00:10:09,640
+virtual machine now. Then it
+ 
+
+515
+00:10:09,640 --> 00:10:12,110
+virtual machine now. Then it
+it's directed it communicates to the
+
+516
+00:10:12,110 --> 00:10:12,120
+it's directed it communicates to the
+ 
+
+517
+00:10:12,120 --> 00:10:15,270
+it's directed it communicates to the
+proxy on my Mac. The proxy is relaying
+
+518
+00:10:15,270 --> 00:10:15,280
+proxy on my Mac. The proxy is relaying
+ 
+
+519
+00:10:15,280 --> 00:10:17,710
+proxy on my Mac. The proxy is relaying
+it to the Viking phone, but also it logs
+
+520
+00:10:17,710 --> 00:10:17,720
+it to the Viking phone, but also it logs
+ 
+
+521
+00:10:17,720 --> 00:10:19,390
+it to the Viking phone, but also it logs
+everything so that to figure out what
+
+522
+00:10:19,390 --> 00:10:19,400
+everything so that to figure out what
+ 
+
+523
+00:10:19,400 --> 00:10:21,590
+everything so that to figure out what
+they're talking about and what's the
+
+524
+00:10:21,590 --> 00:10:21,600
+they're talking about and what's the
+ 
+
+525
+00:10:21,600 --> 00:10:23,670
+they're talking about and what's the
+protocol is, what are the what is the
+
+526
+00:10:23,670 --> 00:10:23,680
+protocol is, what are the what is the
+ 
+
+527
+00:10:23,680 --> 00:10:25,710
+protocol is, what are the what is the
+missing piece.
+
+528
+00:10:25,710 --> 00:10:25,720
+missing piece.
+ 
+
+529
+00:10:25,720 --> 00:10:27,710
+missing piece.
+Um
+
+530
+00:10:27,710 --> 00:10:27,720
+Um
+ 
+
+531
+00:10:27,720 --> 00:10:29,870
+Um
+very simple code.
+
+532
+00:10:29,870 --> 00:10:29,880
+very simple code.
+ 
+
+533
+00:10:29,880 --> 00:10:31,870
+very simple code.
+And then yeah, then it started capturing
+
+534
+00:10:31,870 --> 00:10:31,880
+And then yeah, then it started capturing
+ 
+
+535
+00:10:31,880 --> 00:10:33,390
+And then yeah, then it started capturing
+the
+
+536
+00:10:33,390 --> 00:10:33,400
+the
+ 
+
+537
+00:10:33,400 --> 00:10:35,590
+the
+communication.
+
+538
+00:10:35,590 --> 00:10:35,600
+communication.
+ 
+
+539
+00:10:35,600 --> 00:10:37,670
+communication.
+And it
+
+540
+00:10:37,670 --> 00:10:37,680
+And it
+ 
+
+541
+00:10:37,680 --> 00:10:39,710
+And it
+figured out that there was this command
+
+542
+00:10:39,710 --> 00:10:39,720
+figured out that there was this command
+ 
+
+543
+00:10:39,720 --> 00:10:41,630
+figured out that there was this command
+that uh
+
+544
+00:10:41,630 --> 00:10:41,640
+that uh
+ 
+
+545
+00:10:41,640 --> 00:10:44,070
+that uh
+that Cloud didn't understand before,
+
+546
+00:10:44,070 --> 00:10:44,080
+that Cloud didn't understand before,
+ 
+
+547
+00:10:44,080 --> 00:10:45,630
+that Cloud didn't understand before,
+which is TS.
+
+548
+00:10:45,630 --> 00:10:45,640
+which is TS.
+ 
+
+549
+00:10:45,640 --> 00:10:47,710
+which is TS.
+Um which had like some weird binary
+
+550
+00:10:47,710 --> 00:10:47,720
+Um which had like some weird binary
+ 
+
+551
+00:10:47,720 --> 00:10:49,950
+Um which had like some weird binary
+payload.
+
+552
+00:10:49,950 --> 00:10:49,960
+payload.
+ 
+
+553
+00:10:49,960 --> 00:10:52,430
+payload.
+And then
+
+554
+00:10:52,430 --> 00:10:52,440
+And then
+ 
+
+555
+00:10:52,440 --> 00:10:56,510
+And then
+that had like this format.
+
+556
+00:10:56,510 --> 00:10:56,520
+
+ 
+
+557
+00:10:56,520 --> 00:10:59,950
+
+And what you can see here is most of the
+
+558
+00:10:59,950 --> 00:10:59,960
+And what you can see here is most of the
+ 
+
+559
+00:10:59,960 --> 00:11:02,910
+And what you can see here is most of the
+most of the params of this uh command
+
+560
+00:11:02,910 --> 00:11:02,920
+most of the params of this uh command
+ 
+
+561
+00:11:02,920 --> 00:11:04,670
+most of the params of this uh command
+they kind of make sense except for the
+
+562
+00:11:04,670 --> 00:11:04,680
+they kind of make sense except for the
+ 
+
+563
+00:11:04,680 --> 00:11:07,030
+they kind of make sense except for the
+checksum. But checksum turned out to be
+
+564
+00:11:07,030 --> 00:11:07,040
+checksum. But checksum turned out to be
+ 
+
+565
+00:11:07,040 --> 00:11:08,110
+checksum. But checksum turned out to be
+only
+
+566
+00:11:08,110 --> 00:11:08,120
+only
+ 
+
+567
+00:11:08,120 --> 00:11:08,910
+only
+uh
+
+568
+00:11:08,910 --> 00:11:08,920
+uh
+ 
+
+569
+00:11:08,920 --> 00:11:10,590
+uh
+one byte. So, it's something that you
+
+570
+00:11:10,590 --> 00:11:10,600
+one byte. So, it's something that you
+ 
+
+571
+00:11:10,600 --> 00:11:12,190
+one byte. So, it's something that you
+can
+
+572
+00:11:12,190 --> 00:11:12,200
+can
+ 
+
+573
+00:11:12,200 --> 00:11:14,070
+can
+brute force as well.
+
+574
+00:11:14,070 --> 00:11:14,080
+brute force as well.
+ 
+
+575
+00:11:14,080 --> 00:11:19,030
+brute force as well.
+Um right.
+
+576
+00:11:19,030 --> 00:11:19,040
+
+ 
+
+577
+00:11:19,040 --> 00:11:21,030
+
+Yeah.
+
+578
+00:11:21,030 --> 00:11:21,040
+Yeah.
+ 
+
+579
+00:11:21,040 --> 00:11:23,590
+Yeah.
+Uh so, the way it it work it doesn't
+
+580
+00:11:23,590 --> 00:11:23,600
+Uh so, the way it it work it doesn't
+ 
+
+581
+00:11:23,600 --> 00:11:25,510
+Uh so, the way it it work it doesn't
+know the checksum, but it knows which
+
+582
+00:11:25,510 --> 00:11:25,520
+know the checksum, but it knows which
+ 
+
+583
+00:11:25,520 --> 00:11:27,630
+know the checksum, but it knows which
+data is being sent and it knows the
+
+584
+00:11:27,630 --> 00:11:27,640
+data is being sent and it knows the
+ 
+
+585
+00:11:27,640 --> 00:11:28,910
+data is being sent and it knows the
+result.
+
+586
+00:11:28,910 --> 00:11:28,920
+result.
+ 
+
+587
+00:11:28,920 --> 00:11:32,030
+result.
+So, it can easily reverse engineer the
+
+588
+00:11:32,030 --> 00:11:32,040
+So, it can easily reverse engineer the
+ 
+
+589
+00:11:32,040 --> 00:11:34,590
+So, it can easily reverse engineer the
+the encryption protocol.
+
+590
+00:11:34,590 --> 00:11:34,600
+the encryption protocol.
+ 
+
+591
+00:11:34,600 --> 00:11:36,430
+the encryption protocol.
+Which is just which turned out to be
+
+592
+00:11:36,430 --> 00:11:36,440
+Which is just which turned out to be
+ 
+
+593
+00:11:36,440 --> 00:11:39,070
+Which is just which turned out to be
+just adding a
+
+594
+00:11:39,070 --> 00:11:39,080
+just adding a
+ 
+
+595
+00:11:39,080 --> 00:11:41,550
+just adding a
+uh
+
+596
+00:11:41,550 --> 00:11:41,560
+
+ 
+
+597
+00:11:41,560 --> 00:11:43,590
+
+Yeah, basically doing a simple
+
+598
+00:11:43,590 --> 00:11:43,600
+Yeah, basically doing a simple
+ 
+
+599
+00:11:43,600 --> 00:11:45,470
+Yeah, basically doing a simple
+subtraction like adding a sim a simple
+
+600
+00:11:45,470 --> 00:11:45,480
+subtraction like adding a sim a simple
+ 
+
+601
+00:11:45,480 --> 00:11:47,430
+subtraction like adding a sim a simple
+one byte value
+
+602
+00:11:47,430 --> 00:11:47,440
+one byte value
+ 
+
+603
+00:11:47,440 --> 00:11:49,990
+one byte value
+uh to the checksum. It
+
+604
+00:11:49,990 --> 00:11:50,000
+uh to the checksum. It
+ 
+
+605
+00:11:50,000 --> 00:11:52,390
+uh to the checksum. It
+not just Cloud code, I want to highlight
+
+606
+00:11:52,390 --> 00:11:52,400
+not just Cloud code, I want to highlight
+ 
+
+607
+00:11:52,400 --> 00:11:54,590
+not just Cloud code, I want to highlight
+it. Cloud code didn't just figure out
+
+608
+00:11:54,590 --> 00:11:54,600
+it. Cloud code didn't just figure out
+ 
+
+609
+00:11:54,600 --> 00:11:55,750
+it. Cloud code didn't just figure out
+what the
+
+610
+00:11:55,750 --> 00:11:55,760
+what the
+ 
+
+611
+00:11:55,760 --> 00:11:58,310
+what the
+um format of the checksum is. It
+
+612
+00:11:58,310 --> 00:11:58,320
+um format of the checksum is. It
+ 
+
+613
+00:11:58,320 --> 00:12:00,390
+um format of the checksum is. It
+actually like managed to find it and
+
+614
+00:12:00,390 --> 00:12:00,400
+actually like managed to find it and
+ 
+
+615
+00:12:00,400 --> 00:12:02,829
+actually like managed to find it and
+then it confirmed it
+
+616
+00:12:02,829 --> 00:12:02,839
+then it confirmed it
+ 
+
+617
+00:12:02,839 --> 00:12:05,630
+then it confirmed it
+uh by running uh by running more
+
+618
+00:12:05,630 --> 00:12:05,640
+uh by running uh by running more
+ 
+
+619
+00:12:05,640 --> 00:12:07,510
+uh by running uh by running more
+values through it. So, it it was kind of
+
+620
+00:12:07,510 --> 00:12:07,520
+values through it. So, it it was kind of
+ 
+
+621
+00:12:07,520 --> 00:12:11,150
+values through it. So, it it was kind of
+like closed loop iteration.
+
+622
+00:12:11,150 --> 00:12:11,160
+like closed loop iteration.
+ 
+
+623
+00:12:11,160 --> 00:12:12,430
+like closed loop iteration.
+Um
+
+624
+00:12:12,430 --> 00:12:12,440
+Um
+ 
+
+625
+00:12:12,440 --> 00:12:14,510
+Um
+and at this point the phone was pretty
+
+626
+00:12:14,510 --> 00:12:14,520
+and at this point the phone was pretty
+ 
+
+627
+00:12:14,520 --> 00:12:16,910
+and at this point the phone was pretty
+much cracked.
+
+628
+00:12:16,910 --> 00:12:16,920
+much cracked.
+ 
+
+629
+00:12:16,920 --> 00:12:18,870
+much cracked.
+Um
+
+630
+00:12:18,870 --> 00:12:18,880
+Um
+ 
+
+631
+00:12:18,880 --> 00:12:21,430
+Um
+so now we managed to figure out how the
+
+632
+00:12:21,430 --> 00:12:21,440
+so now we managed to figure out how the
+ 
+
+633
+00:12:21,440 --> 00:12:24,550
+so now we managed to figure out how the
+software communicated to the phone.
+
+634
+00:12:24,550 --> 00:12:24,560
+software communicated to the phone.
+ 
+
+635
+00:12:24,560 --> 00:12:27,110
+software communicated to the phone.
+And uh we had the list of commands and
+
+636
+00:12:27,110 --> 00:12:27,120
+And uh we had the list of commands and
+ 
+
+637
+00:12:27,120 --> 00:12:28,150
+And uh we had the list of commands and
+we
+
+638
+00:12:28,150 --> 00:12:28,160
+we
+ 
+
+639
+00:12:28,160 --> 00:12:33,030
+we
+What was that?
+
+640
+00:12:33,030 --> 00:12:33,040
+
+ 
+
+641
+00:12:33,040 --> 00:12:34,230
+
+Yeah, and then
+
+642
+00:12:34,230 --> 00:12:34,240
+Yeah, and then
+ 
+
+643
+00:12:34,240 --> 00:12:36,670
+Yeah, and then
+we figured out how to actually the the
+
+644
+00:12:36,670 --> 00:12:36,680
+we figured out how to actually the the
+ 
+
+645
+00:12:36,680 --> 00:12:38,310
+we figured out how to actually the the
+problem I stated in the beginning, how
+
+646
+00:12:38,310 --> 00:12:38,320
+problem I stated in the beginning, how
+ 
+
+647
+00:12:38,320 --> 00:12:42,030
+problem I stated in the beginning, how
+to actually uh save what you what you
+
+648
+00:12:42,030 --> 00:12:42,040
+to actually uh save what you what you
+ 
+
+649
+00:12:42,040 --> 00:12:44,510
+to actually uh save what you what you
+put to the memory. We need um
+
+650
+00:12:44,510 --> 00:12:44,520
+put to the memory. We need um
+ 
+
+651
+00:12:44,520 --> 00:12:46,670
+put to the memory. We need um
+this uh to run this sequence of
+
+652
+00:12:46,670 --> 00:12:46,680
+this uh to run this sequence of
+ 
+
+653
+00:12:46,680 --> 00:12:49,070
+this uh to run this sequence of
+commands.
+
+654
+00:12:49,070 --> 00:12:49,080
+commands.
+ 
+
+655
+00:12:49,080 --> 00:12:50,470
+commands.
+Um
+
+656
+00:12:50,470 --> 00:12:50,480
+Um
+ 
+
+657
+00:12:50,480 --> 00:12:51,510
+Um
+and
+
+658
+00:12:51,510 --> 00:12:51,520
+and
+ 
+
+659
+00:12:51,520 --> 00:12:53,990
+and
+the last one the fun bit was that
+
+660
+00:12:53,990 --> 00:12:54,000
+the last one the fun bit was that
+ 
+
+661
+00:12:54,000 --> 00:12:56,030
+the last one the fun bit was that
+actually there is this uh
+
+662
+00:12:56,030 --> 00:12:56,040
+actually there is this uh
+ 
+
+663
+00:12:56,040 --> 00:13:00,950
+actually there is this uh
+256 bytes um memory in the phone which
+
+664
+00:13:00,950 --> 00:13:00,960
+256 bytes um memory in the phone which
+ 
+
+665
+00:13:00,960 --> 00:13:03,870
+256 bytes um memory in the phone which
+um it also happened to crack.
+
+666
+00:13:03,870 --> 00:13:03,880
+um it also happened to crack.
+ 
+
+667
+00:13:03,880 --> 00:13:07,390
+um it also happened to crack.
+Um
+
+668
+00:13:07,390 --> 00:13:07,400
+
+ 
+
+669
+00:13:07,400 --> 00:13:09,670
+
+and then the the last bit the last bit
+
+670
+00:13:09,670 --> 00:13:09,680
+and then the the last bit the last bit
+ 
+
+671
+00:13:09,680 --> 00:13:11,990
+and then the the last bit the last bit
+of this process was that actually I
+
+672
+00:13:11,990 --> 00:13:12,000
+of this process was that actually I
+ 
+
+673
+00:13:12,000 --> 00:13:14,030
+of this process was that actually I
+didn't want to run Windows virtual
+
+674
+00:13:14,030 --> 00:13:14,040
+didn't want to run Windows virtual
+ 
+
+675
+00:13:14,040 --> 00:13:15,829
+didn't want to run Windows virtual
+machine every time.
+
+676
+00:13:15,829 --> 00:13:15,839
+machine every time.
+ 
+
+677
+00:13:15,839 --> 00:13:18,350
+machine every time.
+So, the last bit was actually uh now
+
+678
+00:13:18,350 --> 00:13:18,360
+So, the last bit was actually uh now
+ 
+
+679
+00:13:18,360 --> 00:13:20,950
+So, the last bit was actually uh now
+when I know the protocol, I know how to
+
+680
+00:13:20,950 --> 00:13:20,960
+when I know the protocol, I know how to
+ 
+
+681
+00:13:20,960 --> 00:13:22,710
+when I know the protocol, I know how to
+talk to the phone.
+
+682
+00:13:22,710 --> 00:13:22,720
+talk to the phone.
+ 
+
+683
+00:13:22,720 --> 00:13:24,990
+talk to the phone.
+I can just factory reset it and now I
+
+684
+00:13:24,990 --> 00:13:25,000
+I can just factory reset it and now I
+ 
+
+685
+00:13:25,000 --> 00:13:28,070
+I can just factory reset it and now I
+can use this skill this information to
+
+686
+00:13:28,070 --> 00:13:28,080
+can use this skill this information to
+ 
+
+687
+00:13:28,080 --> 00:13:30,470
+can use this skill this information to
+program it directly without having to
+
+688
+00:13:30,470 --> 00:13:30,480
+program it directly without having to
+ 
+
+689
+00:13:30,480 --> 00:13:32,710
+program it directly without having to
+run the virtual machine at all. So, what
+
+690
+00:13:32,710 --> 00:13:32,720
+run the virtual machine at all. So, what
+ 
+
+691
+00:13:32,720 --> 00:13:35,950
+run the virtual machine at all. So, what
+I did I put all of this as a skill and
+
+692
+00:13:35,950 --> 00:13:35,960
+I did I put all of this as a skill and
+ 
+
+693
+00:13:35,960 --> 00:13:38,590
+I did I put all of this as a skill and
+open sourced it so that now
+
+694
+00:13:38,590 --> 00:13:38,600
+open sourced it so that now
+ 
+
+695
+00:13:38,600 --> 00:13:43,230
+open sourced it so that now
+um now everyone if any of you by any
+
+696
+00:13:43,230 --> 00:13:43,240
+um now everyone if any of you by any
+ 
+
+697
+00:13:43,240 --> 00:13:45,470
+um now everyone if any of you by any
+chance have a Viking phone, you don't
+
+698
+00:13:45,470 --> 00:13:45,480
+chance have a Viking phone, you don't
+ 
+
+699
+00:13:45,480 --> 00:13:47,670
+chance have a Viking phone, you don't
+have to set up Windows machine. You can
+
+700
+00:13:47,670 --> 00:13:47,680
+have to set up Windows machine. You can
+ 
+
+701
+00:13:47,680 --> 00:13:50,350
+have to set up Windows machine. You can
+just ask Cloud code like give this uh
+
+702
+00:13:50,350 --> 00:13:50,360
+just ask Cloud code like give this uh
+ 
+
+703
+00:13:50,360 --> 00:13:53,110
+just ask Cloud code like give this uh
+skill to Cloud code and it will set it
+
+704
+00:13:53,110 --> 00:13:53,120
+skill to Cloud code and it will set it
+ 
+
+705
+00:13:53,120 --> 00:13:55,350
+skill to Cloud code and it will set it
+up.
+
+706
+00:13:55,350 --> 00:13:55,360
+up.
+ 
+
+707
+00:13:55,360 --> 00:13:57,950
+up.
+Um yeah, victory.
+
+708
+00:13:57,950 --> 00:13:57,960
+Um yeah, victory.
+ 
+
+709
+00:13:57,960 --> 00:14:00,030
+Um yeah, victory.
+Um it works. I mean, I didn't go into
+
+710
+00:14:00,030 --> 00:14:00,040
+Um it works. I mean, I didn't go into
+ 
+
+711
+00:14:00,040 --> 00:14:03,270
+Um it works. I mean, I didn't go into
+much details about how this step works
+
+712
+00:14:03,270 --> 00:14:03,280
+much details about how this step works
+ 
+
+713
+00:14:03,280 --> 00:14:05,390
+much details about how this step works
+because it's super easy thanks to Eleven
+
+714
+00:14:05,390 --> 00:14:05,400
+because it's super easy thanks to Eleven
+ 
+
+715
+00:14:05,400 --> 00:14:08,190
+because it's super easy thanks to Eleven
+Labs. We we really made it end video. I
+
+716
+00:14:08,190 --> 00:14:08,200
+Labs. We we really made it end video. I
+ 
+
+717
+00:14:08,200 --> 00:14:11,030
+Labs. We we really made it end video. I
+mean, this step is super easy. This one
+
+718
+00:14:11,030 --> 00:14:11,040
+mean, this step is super easy. This one
+ 
+
+719
+00:14:11,040 --> 00:14:13,030
+mean, this step is super easy. This one
+was the most painful part. I think it
+
+720
+00:14:13,030 --> 00:14:13,040
+was the most painful part. I think it
+ 
+
+721
+00:14:13,040 --> 00:14:15,510
+was the most painful part. I think it
+took me like couple of days to
+
+722
+00:14:15,510 --> 00:14:15,520
+took me like couple of days to
+ 
+
+723
+00:14:15,520 --> 00:14:18,430
+took me like couple of days to
+to reverse engineer it. I'm really
+
+724
+00:14:18,430 --> 00:14:18,440
+to reverse engineer it. I'm really
+ 
+
+725
+00:14:18,440 --> 00:14:20,750
+to reverse engineer it. I'm really
+trying to avoid the word hack
+
+726
+00:14:20,750 --> 00:14:20,760
+trying to avoid the word hack
+ 
+
+727
+00:14:20,760 --> 00:14:22,829
+trying to avoid the word hack
+uh that I hacked the phone. I reverse
+
+728
+00:14:22,829 --> 00:14:22,839
+uh that I hacked the phone. I reverse
+ 
+
+729
+00:14:22,839 --> 00:14:27,750
+uh that I hacked the phone. I reverse
+engineered it. Um
+
+730
+00:14:27,750 --> 00:14:27,760
+
+ 
+
+731
+00:14:27,760 --> 00:14:29,870
+
+Yeah. So,
+
+732
+00:14:29,870 --> 00:14:29,880
+Yeah. So,
+ 
+
+733
+00:14:29,880 --> 00:14:31,030
+Yeah. So,
+I mean, what we learned about the
+
+734
+00:14:31,030 --> 00:14:31,040
+I mean, what we learned about the
+ 
+
+735
+00:14:31,040 --> 00:14:33,510
+I mean, what we learned about the
+protocol it has two layers. Um
+
+736
+00:14:33,510 --> 00:14:33,520
+protocol it has two layers. Um
+ 
+
+737
+00:14:33,520 --> 00:14:34,910
+protocol it has two layers. Um
+the encryption
+
+738
+00:14:34,910 --> 00:14:34,920
+the encryption
+ 
+
+739
+00:14:34,920 --> 00:14:36,750
+the encryption
+it we were lucky that the encryption was
+
+740
+00:14:36,750 --> 00:14:36,760
+it we were lucky that the encryption was
+ 
+
+741
+00:14:36,760 --> 00:14:38,670
+it we were lucky that the encryption was
+just a single byte checksum because it
+
+742
+00:14:38,670 --> 00:14:38,680
+just a single byte checksum because it
+ 
+
+743
+00:14:38,680 --> 00:14:40,630
+just a single byte checksum because it
+if it was something harder than it would
+
+744
+00:14:40,630 --> 00:14:40,640
+if it was something harder than it would
+ 
+
+745
+00:14:40,640 --> 00:14:44,270
+if it was something harder than it would
+probably be much harder to break. And um
+
+746
+00:14:44,270 --> 00:14:44,280
+probably be much harder to break. And um
+ 
+
+747
+00:14:44,280 --> 00:14:47,430
+probably be much harder to break. And um
+yeah, and the persistence bit we had to
+
+748
+00:14:47,430 --> 00:14:47,440
+yeah, and the persistence bit we had to
+ 
+
+749
+00:14:47,440 --> 00:14:49,870
+yeah, and the persistence bit we had to
+run the server intermediate server
+
+750
+00:14:49,870 --> 00:14:49,880
+run the server intermediate server
+ 
+
+751
+00:14:49,880 --> 00:14:53,110
+run the server intermediate server
+between virtual Windows machine and and
+
+752
+00:14:53,110 --> 00:14:53,120
+between virtual Windows machine and and
+ 
+
+753
+00:14:53,120 --> 00:14:54,390
+between virtual Windows machine and and
+the phone.
+
+754
+00:14:54,390 --> 00:14:54,400
+the phone.
+ 
+
+755
+00:14:54,400 --> 00:14:56,510
+the phone.
+And
+
+756
+00:14:56,510 --> 00:14:56,520
+And
+ 
+
+757
+00:14:56,520 --> 00:14:58,550
+And
+that's how just yeah
+
+758
+00:14:58,550 --> 00:14:58,560
+that's how just yeah
+ 
+
+759
+00:14:58,560 --> 00:15:01,350
+that's how just yeah
+to comment on the step five here.
+
+760
+00:15:01,350 --> 00:15:01,360
+to comment on the step five here.
+ 
+
+761
+00:15:01,360 --> 00:15:03,829
+to comment on the step five here.
+Um
+
+762
+00:15:03,829 --> 00:15:03,839
+
+ 
+
+763
+00:15:03,839 --> 00:15:05,590
+
+without Cloud code
+
+764
+00:15:05,590 --> 00:15:05,600
+without Cloud code
+ 
+
+765
+00:15:05,600 --> 00:15:08,030
+without Cloud code
+it wouldn't be possible to to to do that
+
+766
+00:15:08,030 --> 00:15:08,040
+it wouldn't be possible to to to do that
+ 
+
+767
+00:15:08,040 --> 00:15:09,829
+it wouldn't be possible to to to do that
+demo. It it
+
+768
+00:15:09,829 --> 00:15:09,839
+demo. It it
+ 
+
+769
+00:15:09,839 --> 00:15:11,510
+demo. It it
+it's not just it made it 10 times
+
+770
+00:15:11,510 --> 00:15:11,520
+it's not just it made it 10 times
+ 
+
+771
+00:15:11,520 --> 00:15:13,590
+it's not just it made it 10 times
+faster, it just made it possible because
+
+772
+00:15:13,590 --> 00:15:13,600
+faster, it just made it possible because
+ 
+
+773
+00:15:13,600 --> 00:15:17,230
+faster, it just made it possible because
+I'm not a security security engineer
+
+774
+00:15:17,230 --> 00:15:17,240
+I'm not a security security engineer
+ 
+
+775
+00:15:17,240 --> 00:15:18,829
+I'm not a security security engineer
+whatsoever. I'm actually like just a
+
+776
+00:15:18,829 --> 00:15:18,839
+whatsoever. I'm actually like just a
+ 
+
+777
+00:15:18,839 --> 00:15:21,470
+whatsoever. I'm actually like just a
+normal software engineer and I had like
+
+778
+00:15:21,470 --> 00:15:21,480
+normal software engineer and I had like
+ 
+
+779
+00:15:21,480 --> 00:15:23,350
+normal software engineer and I had like
+when I looked at all this like programs,
+
+780
+00:15:23,350 --> 00:15:23,360
+when I looked at all this like programs,
+ 
+
+781
+00:15:23,360 --> 00:15:25,190
+when I looked at all this like programs,
+I was like, what what is that? What is
+
+782
+00:15:25,190 --> 00:15:25,200
+I was like, what what is that? What is
+ 
+
+783
+00:15:25,200 --> 00:15:27,910
+I was like, what what is that? What is
+that? What is zero X? Okay.
+
+784
+00:15:27,910 --> 00:15:27,920
+that? What is zero X? Okay.
+ 
+
+785
+00:15:27,920 --> 00:15:29,910
+that? What is zero X? Okay.
+Um
+
+786
+00:15:29,910 --> 00:15:29,920
+Um
+ 
+
+787
+00:15:29,920 --> 00:15:33,550
+Um
+Yeah, that's it. Um so, now uh the
+
+788
+00:15:33,550 --> 00:15:33,560
+Yeah, that's it. Um so, now uh the
+ 
+
+789
+00:15:33,560 --> 00:15:35,550
+Yeah, that's it. Um so, now uh the
+outcome of this is not just a nice demo
+
+790
+00:15:35,550 --> 00:15:35,560
+outcome of this is not just a nice demo
+ 
+
+791
+00:15:35,560 --> 00:15:37,550
+outcome of this is not just a nice demo
+that you can see on the third floor.
+
+792
+00:15:37,550 --> 00:15:37,560
+that you can see on the third floor.
+ 
+
+793
+00:15:37,560 --> 00:15:41,390
+that you can see on the third floor.
+It's also a skill that makes it much
+
+794
+00:15:41,390 --> 00:15:41,400
+It's also a skill that makes it much
+ 
+
+795
+00:15:41,400 --> 00:15:43,390
+It's also a skill that makes it much
+easier to
+
+796
+00:15:43,390 --> 00:15:43,400
+easier to
+ 
+
+797
+00:15:43,400 --> 00:15:45,710
+easier to
+to program the this this kind of phone
+
+798
+00:15:45,710 --> 00:15:45,720
+to program the this this kind of phone
+ 
+
+799
+00:15:45,720 --> 00:15:46,550
+to program the this this kind of phone
+and
+
+800
+00:15:46,550 --> 00:15:46,560
+and
+ 
+
+801
+00:15:46,560 --> 00:15:49,230
+and
+um the nice part is that I think this is
+
+802
+00:15:49,230 --> 00:15:49,240
+um the nice part is that I think this is
+ 
+
+803
+00:15:49,240 --> 00:15:51,230
+um the nice part is that I think this is
+extendable to other hardware as well.
+
+804
+00:15:51,230 --> 00:15:51,240
+extendable to other hardware as well.
+ 
+
+805
+00:15:51,240 --> 00:15:53,949
+extendable to other hardware as well.
+So, it's not just like Viking specific,
+
+806
+00:15:53,949 --> 00:15:53,959
+So, it's not just like Viking specific,
+ 
+
+807
+00:15:53,959 --> 00:15:56,030
+So, it's not just like Viking specific,
+but like if you want to crack some other
+
+808
+00:15:56,030 --> 00:15:56,040
+but like if you want to crack some other
+ 
+
+809
+00:15:56,040 --> 00:15:57,350
+but like if you want to crack some other
+hardware
+
+810
+00:15:57,350 --> 00:15:57,360
+hardware
+ 
+
+811
+00:15:57,360 --> 00:16:01,190
+hardware
+I would really recommend thinking about
+
+812
+00:16:01,190 --> 00:16:01,200
+I would really recommend thinking about
+ 
+
+813
+00:16:01,200 --> 00:16:03,030
+I would really recommend thinking about
+Well, you don't the the difference is
+
+814
+00:16:03,030 --> 00:16:03,040
+Well, you don't the the difference is
+ 
+
+815
+00:16:03,040 --> 00:16:05,110
+Well, you don't the the difference is
+that 1 year ago you actually needed the
+
+816
+00:16:05,110 --> 00:16:05,120
+that 1 year ago you actually needed the
+ 
+
+817
+00:16:05,120 --> 00:16:09,870
+that 1 year ago you actually needed the
+proprietary software interface that the
+
+818
+00:16:09,870 --> 00:16:09,880
+proprietary software interface that the
+ 
+
+819
+00:16:09,880 --> 00:16:11,510
+proprietary software interface that the
+provide the the company that made the
+
+820
+00:16:11,510 --> 00:16:11,520
+provide the the company that made the
+ 
+
+821
+00:16:11,520 --> 00:16:13,590
+provide the the company that made the
+hardware provides. Now you don't need
+
+822
+00:16:13,590 --> 00:16:13,600
+hardware provides. Now you don't need
+ 
+
+823
+00:16:13,600 --> 00:16:16,190
+hardware provides. Now you don't need
+it. You can connect to to the phone, but
+
+824
+00:16:16,190 --> 00:16:16,200
+it. You can connect to to the phone, but
+ 
+
+825
+00:16:16,200 --> 00:16:18,390
+it. You can connect to to the phone, but
+you can the same way you can connect to
+
+826
+00:16:18,390 --> 00:16:18,400
+you can the same way you can connect to
+ 
+
+827
+00:16:18,400 --> 00:16:19,949
+you can the same way you can connect to
+any like piece of hardware in your
+
+828
+00:16:19,949 --> 00:16:19,959
+any like piece of hardware in your
+ 
+
+829
+00:16:19,959 --> 00:16:21,030
+any like piece of hardware in your
+house.
+
+830
+00:16:21,030 --> 00:16:21,040
+house.
+ 
+
+831
+00:16:21,040 --> 00:16:21,910
+house.
+Um
+
+832
+00:16:21,910 --> 00:16:21,920
+Um
+ 
+
+833
+00:16:21,920 --> 00:16:24,829
+Um
+so, this is this is cool. Um yeah, this
+
+834
+00:16:24,829 --> 00:16:24,839
+so, this is this is cool. Um yeah, this
+ 
+
+835
+00:16:24,839 --> 00:16:26,510
+so, this is this is cool. Um yeah, this
+is how it started
+
+836
+00:16:26,510 --> 00:16:26,520
+is how it started
+ 
+
+837
+00:16:26,520 --> 00:16:29,270
+is how it started
+and the the actual demo again to people
+
+838
+00:16:29,270 --> 00:16:29,280
+and the the actual demo again to people
+ 
+
+839
+00:16:29,280 --> 00:16:31,630
+and the the actual demo again to people
+who just came here. On the third floor
+
+840
+00:16:31,630 --> 00:16:31,640
+who just came here. On the third floor
+ 
+
+841
+00:16:31,640 --> 00:16:34,110
+who just came here. On the third floor
+we have a this red telephone booth that
+
+842
+00:16:34,110 --> 00:16:34,120
+we have a this red telephone booth that
+ 
+
+843
+00:16:34,120 --> 00:16:36,550
+we have a this red telephone booth that
+lets you speak to Michael Caine. How
+
+844
+00:16:36,550 --> 00:16:36,560
+lets you speak to Michael Caine. How
+ 
+
+845
+00:16:36,560 --> 00:16:38,670
+lets you speak to Michael Caine. How
+many of you have tried it? Have has
+
+846
+00:16:38,670 --> 00:16:38,680
+many of you have tried it? Have has
+ 
+
+847
+00:16:38,680 --> 00:16:39,670
+many of you have tried it? Have has
+anyone?
+
+848
+00:16:39,670 --> 00:16:39,680
+anyone?
+ 
+
+849
+00:16:39,680 --> 00:16:41,710
+anyone?
+Oh my god. Okay, you should totally try
+
+850
+00:16:41,710 --> 00:16:41,720
+Oh my god. Okay, you should totally try
+ 
+
+851
+00:16:41,720 --> 00:16:43,630
+Oh my god. Okay, you should totally try
+it. It's it's it feels magical and I
+
+852
+00:16:43,630 --> 00:16:43,640
+it. It's it's it feels magical and I
+ 
+
+853
+00:16:43,640 --> 00:16:47,670
+it. It's it's it feels magical and I
+just uh told you how I how I made it
+
+854
+00:16:47,670 --> 00:16:47,680
+just uh told you how I how I made it
+ 
+
+855
+00:16:47,680 --> 00:16:52,230
+just uh told you how I how I made it
+into real life. Yeah. Um any
+
+856
+00:16:52,230 --> 00:16:52,240
+into real life. Yeah. Um any
+ 
+
+857
+00:16:52,240 --> 00:16:55,310
+into real life. Yeah. Um any
+I guess any questions?
+
+858
+00:16:55,310 --> 00:16:55,320
+I guess any questions?
+ 
+
+859
+00:16:55,320 --> 00:16:56,870
+I guess any questions?
+This is the booth.
+
+860
+00:16:56,870 --> 00:16:56,880
+This is the booth.
+ 
+
+861
+00:16:56,880 --> 00:16:57,870
+This is the booth.
+And this is Swiggy.
+
+862
+00:16:57,870 --> 00:16:57,880
+And this is Swiggy.
+ 
+
+863
+00:16:57,880 --> 00:17:00,491
+And this is Swiggy.
+>> tokens you burned?
+
+864
+00:17:00,491 --> 00:17:00,501
+>> tokens you burned?
+ 
+
+865
+00:17:00,501 --> 00:17:01,110
+>> tokens you burned?
+>> [sighs]
+
+866
+00:17:01,110 --> 00:17:01,120
+>> [sighs]
+ 
+
+867
+00:17:01,120 --> 00:17:02,990
+>> [sighs]
+>> I used Eleven Labs
+
+868
+00:17:02,990 --> 00:17:03,000
+>> I used Eleven Labs
+ 
+
+869
+00:17:03,000 --> 00:17:05,429
+>> I used Eleven Labs
+our corporate tokens. So, I I yeah, I
+
+870
+00:17:05,429 --> 00:17:05,439
+our corporate tokens. So, I I yeah, I
+ 
+
+871
+00:17:05,439 --> 00:17:07,750
+our corporate tokens. So, I I yeah, I
+think it was in order of
+
+872
+00:17:07,750 --> 00:17:07,760
+think it was in order of
+ 
+
+873
+00:17:07,760 --> 00:17:10,590
+think it was in order of
+between 10 and 100 dollars. So, quite
+
+874
+00:17:10,590 --> 00:17:10,600
+between 10 and 100 dollars. So, quite
+ 
+
+875
+00:17:10,600 --> 00:17:13,590
+between 10 and 100 dollars. So, quite
+reasonable.
+
+876
+00:17:13,590 --> 00:17:13,600
+
+ 
+
+877
+00:17:13,600 --> 00:17:15,910
+
+And and did you did you have the did you
+
+878
+00:17:15,910 --> 00:17:15,920
+And and did you did you have the did you
+ 
+
+879
+00:17:15,920 --> 00:17:17,470
+And and did you did you have the did you
+have Cloud So, you see you had some
+
+880
+00:17:17,470 --> 00:17:17,480
+have Cloud So, you see you had some
+ 
+
+881
+00:17:17,480 --> 00:17:20,230
+have Cloud So, you see you had some
+software installed on UTM on Windows.
+
+882
+00:17:20,230 --> 00:17:20,240
+software installed on UTM on Windows.
+ 
+
+883
+00:17:20,240 --> 00:17:23,590
+software installed on UTM on Windows.
+Did you have Cloud control that as well?
+
+884
+00:17:23,590 --> 00:17:23,600
+Did you have Cloud control that as well?
+ 
+
+885
+00:17:23,600 --> 00:17:25,829
+Did you have Cloud control that as well?
+Or or did somebody have to manually It
+
+886
+00:17:25,829 --> 00:17:25,839
+Or or did somebody have to manually It
+ 
+
+887
+00:17:25,839 --> 00:17:29,030
+Or or did somebody have to manually It
+it was a quite interesting because my
+
+888
+00:17:29,030 --> 00:17:29,040
+it was a quite interesting because my
+ 
+
+889
+00:17:29,040 --> 00:17:31,230
+it was a quite interesting because my
+participation in that was basically
+
+890
+00:17:31,230 --> 00:17:31,240
+participation in that was basically
+ 
+
+891
+00:17:31,240 --> 00:17:33,030
+participation in that was basically
+following Cloud's commands.
+
+892
+00:17:33,030 --> 00:17:33,040
+following Cloud's commands.
+ 
+
+893
+00:17:33,040 --> 00:17:34,870
+following Cloud's commands.
+>> Right. So, it would tell me like, "Hey,
+
+894
+00:17:34,870 --> 00:17:34,880
+>> Right. So, it would tell me like, "Hey,
+ 
+
+895
+00:17:34,880 --> 00:17:36,030
+>> Right. So, it would tell me like, "Hey,
+can you
+
+896
+00:17:36,030 --> 00:17:36,040
+can you
+ 
+
+897
+00:17:36,040 --> 00:17:37,550
+can you
+can you like
+
+898
+00:17:37,550 --> 00:17:37,560
+can you like
+ 
+
+899
+00:17:37,560 --> 00:17:39,990
+can you like
+take the handle and how many beeps can
+
+900
+00:17:39,990 --> 00:17:40,000
+take the handle and how many beeps can
+ 
+
+901
+00:17:40,000 --> 00:17:41,990
+take the handle and how many beeps can
+you hear?" And I would like listen and
+
+902
+00:17:41,990 --> 00:17:42,000
+you hear?" And I would like listen and
+ 
+
+903
+00:17:42,000 --> 00:17:43,870
+you hear?" And I would like listen and
+like, "Okay, I think three." It was
+
+904
+00:17:43,870 --> 00:17:43,880
+like, "Okay, I think three." It was
+ 
+
+905
+00:17:43,880 --> 00:17:44,910
+like, "Okay, I think three." It was
+like,
+
+906
+00:17:44,910 --> 00:17:44,920
+like,
+ 
+
+907
+00:17:44,920 --> 00:17:46,669
+like,
+"You idiot, it's either two or four."
+
+908
+00:17:46,669 --> 00:17:46,679
+"You idiot, it's either two or four."
+ 
+
+909
+00:17:46,679 --> 00:17:49,070
+"You idiot, it's either two or four."
+And I'm like, "Oh yeah, it's two." So,
+
+910
+00:17:49,070 --> 00:17:49,080
+And I'm like, "Oh yeah, it's two." So,
+ 
+
+911
+00:17:49,080 --> 00:17:51,030
+And I'm like, "Oh yeah, it's two." So,
+it was like I was actually like the
+
+912
+00:17:51,030 --> 00:17:51,040
+it was like I was actually like the
+ 
+
+913
+00:17:51,040 --> 00:17:53,350
+it was like I was actually like the
+agent for Cloud. Like Cloud was
+
+914
+00:17:53,350 --> 00:17:53,360
+agent for Cloud. Like Cloud was
+ 
+
+915
+00:17:53,360 --> 00:17:54,990
+agent for Cloud. Like Cloud was
+orchestrating the whole thing. And
+
+916
+00:17:54,990 --> 00:17:55,000
+orchestrating the whole thing. And
+ 
+
+917
+00:17:55,000 --> 00:17:56,630
+orchestrating the whole thing. And
+answering your No, answering your
+
+918
+00:17:56,630 --> 00:17:56,640
+answering your No, answering your
+ 
+
+919
+00:17:56,640 --> 00:17:59,830
+answering your No, answering your
+Basically, I was the hands for Cloud. It
+
+920
+00:17:59,830 --> 00:17:59,840
+Basically, I was the hands for Cloud. It
+ 
+
+921
+00:17:59,840 --> 00:18:01,790
+Basically, I was the hands for Cloud. It
+couldn't really I think if I use like
+
+922
+00:18:01,790 --> 00:18:01,800
+couldn't really I think if I use like
+ 
+
+923
+00:18:01,800 --> 00:18:05,590
+couldn't really I think if I use like
+computer user something I could make it
+
+924
+00:18:05,590 --> 00:18:05,600
+computer user something I could make it
+ 
+
+925
+00:18:05,600 --> 00:18:07,590
+computer user something I could make it
+fully like close the close the loop and
+
+926
+00:18:07,590 --> 00:18:07,600
+fully like close the close the loop and
+ 
+
+927
+00:18:07,600 --> 00:18:08,870
+fully like close the close the loop and
+make it
+
+928
+00:18:08,870 --> 00:18:08,880
+make it
+ 
+
+929
+00:18:08,880 --> 00:18:10,870
+make it
+control the virtual machine, but I was
+
+930
+00:18:10,870 --> 00:18:10,880
+control the virtual machine, but I was
+ 
+
+931
+00:18:10,880 --> 00:18:12,710
+control the virtual machine, but I was
+too lazy so I just did what it told me
+
+932
+00:18:12,710 --> 00:18:12,720
+too lazy so I just did what it told me
+ 
+
+933
+00:18:12,720 --> 00:18:13,950
+too lazy so I just did what it told me
+to do.
+
+934
+00:18:13,950 --> 00:18:13,960
+to do.
+ 
+
+935
+00:18:13,960 --> 00:18:15,390
+to do.
+Were there any places where Cloud got
+
+936
+00:18:15,390 --> 00:18:15,400
+Were there any places where Cloud got
+ 
+
+937
+00:18:15,400 --> 00:18:17,430
+Were there any places where Cloud got
+stuck and you had to
+
+938
+00:18:17,430 --> 00:18:17,440
+stuck and you had to
+ 
+
+939
+00:18:17,440 --> 00:18:20,990
+stuck and you had to
+unblock it?
+
+940
+00:18:20,990 --> 00:18:21,000
+
+ 
+
+941
+00:18:21,000 --> 00:18:23,710
+
+Uh stuck in in what sense? As in it
+
+942
+00:18:23,710 --> 00:18:23,720
+Uh stuck in in what sense? As in it
+ 
+
+943
+00:18:23,720 --> 00:18:25,430
+Uh stuck in in what sense? As in it
+couldn't figure out the next step.
+
+944
+00:18:25,430 --> 00:18:25,440
+couldn't figure out the next step.
+ 
+
+945
+00:18:25,440 --> 00:18:27,350
+couldn't figure out the next step.
+So, that's the thing. It it was
+
+946
+00:18:27,350 --> 00:18:27,360
+So, that's the thing. It it was
+ 
+
+947
+00:18:27,360 --> 00:18:29,270
+So, that's the thing. It it was
+orchestrating it. Like I had no idea
+
+948
+00:18:29,270 --> 00:18:29,280
+orchestrating it. Like I had no idea
+ 
+
+949
+00:18:29,280 --> 00:18:31,510
+orchestrating it. Like I had no idea
+what was going on. So, intellectually I
+
+950
+00:18:31,510 --> 00:18:31,520
+what was going on. So, intellectually I
+ 
+
+951
+00:18:31,520 --> 00:18:32,990
+what was going on. So, intellectually I
+couldn't unblock it. So, you just
+
+952
+00:18:32,990 --> 00:18:33,000
+couldn't unblock it. So, you just
+ 
+
+953
+00:18:33,000 --> 00:18:34,990
+couldn't unblock it. So, you just
+unblocked I unblocked it by like
+
+954
+00:18:34,990 --> 00:18:35,000
+unblocked I unblocked it by like
+ 
+
+955
+00:18:35,000 --> 00:18:36,950
+unblocked I unblocked it by like
+actually like rebooting like physically
+
+956
+00:18:36,950 --> 00:18:36,960
+actually like rebooting like physically
+ 
+
+957
+00:18:36,960 --> 00:18:39,710
+actually like rebooting like physically
+rebooting the phone or like controlling
+
+958
+00:18:39,710 --> 00:18:39,720
+rebooting the phone or like controlling
+ 
+
+959
+00:18:39,720 --> 00:18:41,110
+rebooting the phone or like controlling
+the virtual machine, but the
+
+960
+00:18:41,110 --> 00:18:41,120
+the virtual machine, but the
+ 
+
+961
+00:18:41,120 --> 00:18:43,270
+the virtual machine, but the
+intellectual part which is like cracking
+
+962
+00:18:43,270 --> 00:18:43,280
+intellectual part which is like cracking
+ 
+
+963
+00:18:43,280 --> 00:18:45,030
+intellectual part which is like cracking
+the cracking the
+
+964
+00:18:45,030 --> 00:18:45,040
+the cracking the
+ 
+
+965
+00:18:45,040 --> 00:18:46,350
+the cracking the
+algorithm
+
+966
+00:18:46,350 --> 00:18:46,360
+algorithm
+ 
+
+967
+00:18:46,360 --> 00:18:48,110
+algorithm
+I could I wouldn't be able to unblock
+
+968
+00:18:48,110 --> 00:18:48,120
+I could I wouldn't be able to unblock
+ 
+
+969
+00:18:48,120 --> 00:18:49,270
+I could I wouldn't be able to unblock
+it. I mean,
+
+970
+00:18:49,270 --> 00:18:49,280
+it. I mean,
+ 
+
+971
+00:18:49,280 --> 00:18:51,390
+it. I mean,
+it was just smarter than me, I think.
+
+972
+00:18:51,390 --> 00:18:51,400
+it was just smarter than me, I think.
+ 
+
+973
+00:18:51,400 --> 00:18:52,470
+it was just smarter than me, I think.
+Yeah.
+
+974
+00:18:52,470 --> 00:18:52,480
+Yeah.
+ 
+
+975
+00:18:52,480 --> 00:18:53,950
+Yeah.
+Um
+
+976
+00:18:53,950 --> 00:18:53,960
+Um
+ 
+
+977
+00:18:53,960 --> 00:18:56,350
+Um
+How how did you physically connect to
+
+978
+00:18:56,350 --> 00:18:56,360
+How how did you physically connect to
+ 
+
+979
+00:18:56,360 --> 00:18:58,310
+How how did you physically connect to
+the phone? Yeah, I I wish I had a
+
+980
+00:18:58,310 --> 00:18:58,320
+the phone? Yeah, I I wish I had a
+ 
+
+981
+00:18:58,320 --> 00:19:02,070
+the phone? Yeah, I I wish I had a
+picture. Um
+
+982
+00:19:02,070 --> 00:19:02,080
+
+ 
+
+983
+00:19:02,080 --> 00:19:04,350
+
+So, this phone you can see the black
+
+984
+00:19:04,350 --> 00:19:04,360
+So, this phone you can see the black
+ 
+
+985
+00:19:04,360 --> 00:19:07,790
+So, this phone you can see the black
+cable. It's uh called power over
+
+986
+00:19:07,790 --> 00:19:07,800
+cable. It's uh called power over
+ 
+
+987
+00:19:07,800 --> 00:19:10,510
+cable. It's uh called power over
+Ethernet, PoE. Yeah. Which is uh
+
+988
+00:19:10,510 --> 00:19:10,520
+Ethernet, PoE. Yeah. Which is uh
+ 
+
+989
+00:19:10,520 --> 00:19:12,270
+Ethernet, PoE. Yeah. Which is uh
+basically there is an Ethernet cable,
+
+990
+00:19:12,270 --> 00:19:12,280
+basically there is an Ethernet cable,
+ 
+
+991
+00:19:12,280 --> 00:19:13,830
+basically there is an Ethernet cable,
+the one that
+
+992
+00:19:13,830 --> 00:19:13,840
+the one that
+ 
+
+993
+00:19:13,840 --> 00:19:15,750
+the one that
+everyone probably has at home for home
+
+994
+00:19:15,750 --> 00:19:15,760
+everyone probably has at home for home
+ 
+
+995
+00:19:15,760 --> 00:19:17,710
+everyone probably has at home for home
+internet and there is also a power
+
+996
+00:19:17,710 --> 00:19:17,720
+internet and there is also a power
+ 
+
+997
+00:19:17,720 --> 00:19:20,710
+internet and there is also a power
+adapter and it brings them together.
+
+998
+00:19:20,710 --> 00:19:20,720
+adapter and it brings them together.
+ 
+
+999
+00:19:20,720 --> 00:19:24,550
+adapter and it brings them together.
+And I put a router in between
+
+1000
+00:19:24,550 --> 00:19:24,560
+And I put a router in between
+ 
+
+1001
+00:19:24,560 --> 00:19:26,750
+And I put a router in between
+which let me connect my
+
+1002
+00:19:26,750 --> 00:19:26,760
+which let me connect my
+ 
+
+1003
+00:19:26,760 --> 00:19:29,030
+which let me connect my
+So, this was connected to the router and
+
+1004
+00:19:29,030 --> 00:19:29,040
+So, this was connected to the router and
+ 
+
+1005
+00:19:29,040 --> 00:19:30,870
+So, this was connected to the router and
+my laptop was connected to the Wi-Fi
+
+1006
+00:19:30,870 --> 00:19:30,880
+my laptop was connected to the Wi-Fi
+ 
+
+1007
+00:19:30,880 --> 00:19:33,590
+my laptop was connected to the Wi-Fi
+router as well. And then yeah, and then
+
+1008
+00:19:33,590 --> 00:19:33,600
+router as well. And then yeah, and then
+ 
+
+1009
+00:19:33,600 --> 00:19:35,470
+router as well. And then yeah, and then
+there was this step of
+
+1010
+00:19:35,470 --> 00:19:35,480
+there was this step of
+ 
+
+1011
+00:19:35,480 --> 00:19:37,038
+there was this step of
+uh
+
+1012
+00:19:37,038 --> 00:19:37,048
+uh
+ 
+
+1013
+00:19:37,048 --> 00:19:37,149
+uh
+>> [clears throat]
+
+1014
+00:19:37,149 --> 00:19:37,159
+>> [clears throat]
+ 
+
+1015
+00:19:37,159 --> 00:19:38,590
+>> [clears throat]
+>> searching the network. So, this was the
+
+1016
+00:19:38,590 --> 00:19:38,600
+>> searching the network. So, this was the
+ 
+
+1017
+00:19:38,600 --> 00:19:41,310
+>> searching the network. So, this was the
+first step. Cloud just checked all of
+
+1018
+00:19:41,310 --> 00:19:41,320
+first step. Cloud just checked all of
+ 
+
+1019
+00:19:41,320 --> 00:19:43,390
+first step. Cloud just checked all of
+the devices connected to the router and
+
+1020
+00:19:43,390 --> 00:19:43,400
+the devices connected to the router and
+ 
+
+1021
+00:19:43,400 --> 00:19:46,669
+the devices connected to the router and
+found the the phone.
+
+1022
+00:19:46,669 --> 00:19:46,679
+found the the phone.
+ 
+
+1023
+00:19:46,679 --> 00:19:47,870
+found the the phone.
+Okay.
+
+1024
+00:19:47,870 --> 00:19:47,880
+Okay.
+ 
+
+1025
+00:19:47,880 --> 00:19:49,350
+Okay.
+And I have full time.
+
+1026
+00:19:49,350 --> 00:19:49,360
+And I have full time.
+ 
+
+1027
+00:19:49,360 --> 00:19:50,310
+And I have full time.
+Yeah. Next session is at 11.
+
+1028
+00:19:50,310 --> 00:19:50,320
+Yeah. Next session is at 11.
+ 
+
+1029
+00:19:50,320 --> 00:19:54,723
+Yeah. Next session is at 11.
+>> Thanks. Thanks everyone. Great. Um
+
+1030
+00:19:54,723 --> 00:19:54,733
+
+ 
+
+1031
+00:19:54,733 --> 00:20:00,618
+
+>> [applause]
+
+1032
+00:20:00,618 --> 00:20:00,628
+
+ 
+
+1033
+00:20:00,628 --> 00:20:02,648
+
+[music]
+

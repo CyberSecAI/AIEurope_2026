@@ -23,7 +23,14 @@ Empower agents with executable runtimes to move beyond simple reasoning and achi
 - Running generated code provides an empirical verification step that ensures the agent's actions are both correct and safe for the system.
 - Integration with existing automated testing suites allows agents to validate their own changes against established project standards and requirements.
 
+## Type-Driven Development
+- TypeScript types provide extremely concise API representation enabling agents to write code against SDKs instead of tool calls.
+- Programmable sandboxes with V8 isolates enable safe LLM code execution with domain whitelisting and timeout controls.
+- Human acts as physical agent executing Claude's commands in reverse orchestration pattern for hardware tasks.
+
 # Related Talks
 
 - **[Code Mode — Sunil Pai, Cloudflare](../insights/8txf05vVVl4_Code_Mode_Sunil_Pai_Cloudflare.md)**
 - **[Why and how you need to sandbox AI-Generated Code — Harshil Agrawal, Cloudflare](../insights/AHtGAgQ0Q_Q_Why_and_how_you_need_to_sandbox_AI_Generated_Code_Harshil_Agrawal_Cloudflare.md)**
+- **[MCP = Mega Context Problem — Matt Carey](../insights/YBYUvGOuotE_MCP_Mega_Context_Problem_Matt_Carey.md)**
+- **[Reverse engineering a Viking VOIP phone protocol with Claude Code — Boris Starkov](../insights/V-L0INGTEOg_Reverse_engineering_a_Viking_VOIP_phone_protocol_with_Claude_Code_Boris_Starkov.md)**

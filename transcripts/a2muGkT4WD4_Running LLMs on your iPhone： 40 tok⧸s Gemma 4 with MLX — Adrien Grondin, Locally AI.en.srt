@@ -1,0 +1,2725 @@
+1
+00:00:07,860 --> 00:00:14,950
+
+[music]
+
+2
+00:00:14,950 --> 00:00:14,960
+
+ 
+
+3
+00:00:14,960 --> 00:00:16,870
+
+>> Okay, hello everybody.
+
+4
+00:00:16,870 --> 00:00:16,880
+>> Okay, hello everybody.
+ 
+
+5
+00:00:16,880 --> 00:00:17,430
+>> Okay, hello everybody.
+I'm going [clears throat] to show you
+
+6
+00:00:17,430 --> 00:00:17,440
+I'm going [clears throat] to show you
+ 
+
+7
+00:00:17,440 --> 00:00:20,630
+I'm going [clears throat] to show you
+today how to run Gemma 4 on iPhone with
+
+8
+00:00:20,630 --> 00:00:20,640
+today how to run Gemma 4 on iPhone with
+ 
+
+9
+00:00:20,640 --> 00:00:23,470
+today how to run Gemma 4 on iPhone with
+MLX. So, first let's introduce myself.
+
+10
+00:00:23,470 --> 00:00:23,480
+MLX. So, first let's introduce myself.
+ 
+
+11
+00:00:23,480 --> 00:00:26,350
+MLX. So, first let's introduce myself.
+I'm Adria. You can find my Twitter if
+
+12
+00:00:26,350 --> 00:00:26,360
+I'm Adria. You can find my Twitter if
+ 
+
+13
+00:00:26,360 --> 00:00:28,390
+I'm Adria. You can find my Twitter if
+you want to learn more about all on
+
+14
+00:00:28,390 --> 00:00:28,400
+you want to learn more about all on
+ 
+
+15
+00:00:28,400 --> 00:00:32,670
+you want to learn more about all on
+device things. I'm a developer of
+
+16
+00:00:32,670 --> 00:00:32,680
+device things. I'm a developer of
+ 
+
+17
+00:00:32,680 --> 00:00:34,550
+device things. I'm a developer of
+Locally AI, so maybe you have already
+
+18
+00:00:34,550 --> 00:00:34,560
+Locally AI, so maybe you have already
+ 
+
+19
+00:00:34,560 --> 00:00:35,470
+Locally AI, so maybe you have already
+seen
+
+20
+00:00:35,470 --> 00:00:35,480
+seen
+ 
+
+21
+00:00:35,480 --> 00:00:37,990
+seen
+the the app. So, Locally AI is a chatbot
+
+22
+00:00:37,990 --> 00:00:38,000
+the the app. So, Locally AI is a chatbot
+ 
+
+23
+00:00:38,000 --> 00:00:40,310
+the the app. So, Locally AI is a chatbot
+that allow you to run on device models
+
+24
+00:00:40,310 --> 00:00:40,320
+that allow you to run on device models
+ 
+
+25
+00:00:40,320 --> 00:00:44,070
+that allow you to run on device models
+on your iPhone with MLX. So, I will just
+
+26
+00:00:44,070 --> 00:00:44,080
+on your iPhone with MLX. So, I will just
+ 
+
+27
+00:00:44,080 --> 00:00:46,910
+on your iPhone with MLX. So, I will just
+go through what is MLX in a in a few few
+
+28
+00:00:46,910 --> 00:00:46,920
+go through what is MLX in a in a few few
+ 
+
+29
+00:00:46,920 --> 00:00:48,190
+go through what is MLX in a in a few few
+seconds.
+
+30
+00:00:48,190 --> 00:00:48,200
+seconds.
+ 
+
+31
+00:00:48,200 --> 00:00:49,750
+seconds.
+Basically,
+
+32
+00:00:49,750 --> 00:00:49,760
+Basically,
+ 
+
+33
+00:00:49,760 --> 00:00:51,190
+Basically,
+as I said, it's it's a chatbot. It's
+
+34
+00:00:51,190 --> 00:00:51,200
+as I said, it's it's a chatbot. It's
+ 
+
+35
+00:00:51,200 --> 00:00:52,870
+as I said, it's it's a chatbot. It's
+fully native. You can also chat with
+
+36
+00:00:52,870 --> 00:00:52,880
+fully native. You can also chat with
+ 
+
+37
+00:00:52,880 --> 00:00:55,550
+fully native. You can also chat with
+Apple Foundation with it. And
+
+38
+00:00:55,550 --> 00:00:55,560
+Apple Foundation with it. And
+ 
+
+39
+00:00:55,560 --> 00:00:58,270
+Apple Foundation with it. And
+and many models like that are compatible
+
+40
+00:00:58,270 --> 00:00:58,280
+and many models like that are compatible
+ 
+
+41
+00:00:58,280 --> 00:01:01,350
+and many models like that are compatible
+with MLX. And one of those models is
+
+42
+00:01:01,350 --> 00:01:01,360
+with MLX. And one of those models is
+ 
+
+43
+00:01:01,360 --> 00:01:04,189
+with MLX. And one of those models is
+Gemma 4. So, basically, [clears throat]
+
+44
+00:01:04,189 --> 00:01:04,199
+Gemma 4. So, basically, [clears throat]
+ 
+
+45
+00:01:04,199 --> 00:01:06,750
+Gemma 4. So, basically, [clears throat]
+Gemma 4 by Google in mind have a lot of
+
+46
+00:01:06,750 --> 00:01:06,760
+Gemma 4 by Google in mind have a lot of
+ 
+
+47
+00:01:06,760 --> 00:01:08,870
+Gemma 4 by Google in mind have a lot of
+model and some of them like can run on
+
+48
+00:01:08,870 --> 00:01:08,880
+model and some of them like can run on
+ 
+
+49
+00:01:08,880 --> 00:01:10,870
+model and some of them like can run on
+iPhone like the smaller ones and they
+
+50
+00:01:10,870 --> 00:01:10,880
+iPhone like the smaller ones and they
+ 
+
+51
+00:01:10,880 --> 00:01:13,150
+iPhone like the smaller ones and they
+are pretty great.
+
+52
+00:01:13,150 --> 00:01:13,160
+are pretty great.
+ 
+
+53
+00:01:13,160 --> 00:01:14,950
+are pretty great.
+Maybe you have seen on on Twitter one of
+
+54
+00:01:14,950 --> 00:01:14,960
+Maybe you have seen on on Twitter one of
+ 
+
+55
+00:01:14,960 --> 00:01:17,030
+Maybe you have seen on on Twitter one of
+the post I've made that I should I demo
+
+56
+00:01:17,030 --> 00:01:17,040
+the post I've made that I should I demo
+ 
+
+57
+00:01:17,040 --> 00:01:19,950
+the post I've made that I should I demo
+it running in the app on iPhone. It's
+
+58
+00:01:19,950 --> 00:01:19,960
+it running in the app on iPhone. It's
+ 
+
+59
+00:01:19,960 --> 00:01:22,510
+it running in the app on iPhone. It's
+really fast. It runs really well on MLX.
+
+60
+00:01:22,510 --> 00:01:22,520
+really fast. It runs really well on MLX.
+ 
+
+61
+00:01:22,520 --> 00:01:24,790
+really fast. It runs really well on MLX.
+And behind the app, so
+
+62
+00:01:24,790 --> 00:01:24,800
+And behind the app, so
+ 
+
+63
+00:01:24,800 --> 00:01:26,310
+And behind the app, so
+it's using [clears throat] MLX. MLX is a
+
+64
+00:01:26,310 --> 00:01:26,320
+it's using [clears throat] MLX. MLX is a
+ 
+
+65
+00:01:26,320 --> 00:01:28,270
+it's using [clears throat] MLX. MLX is a
+framework made by Apple that is
+
+66
+00:01:28,270 --> 00:01:28,280
+framework made by Apple that is
+ 
+
+67
+00:01:28,280 --> 00:01:31,670
+framework made by Apple that is
+optimized for Apple Silicon. So, mainly
+
+68
+00:01:31,670 --> 00:01:31,680
+optimized for Apple Silicon. So, mainly
+ 
+
+69
+00:01:31,680 --> 00:01:33,310
+optimized for Apple Silicon. So, mainly
+mainly the
+
+70
+00:01:33,310 --> 00:01:33,320
+mainly the
+ 
+
+71
+00:01:33,320 --> 00:01:34,950
+mainly the
+the chip [clears throat] in iPhone, but
+
+72
+00:01:34,950 --> 00:01:34,960
+the chip [clears throat] in iPhone, but
+ 
+
+73
+00:01:34,960 --> 00:01:37,110
+the chip [clears throat] in iPhone, but
+also the chips on the on the Mac. The
+
+74
+00:01:37,110 --> 00:01:37,120
+also the chips on the on the Mac. The
+ 
+
+75
+00:01:37,120 --> 00:01:39,230
+also the chips on the on the Mac. The
+the app Locally is available on iPad. It
+
+76
+00:01:39,230 --> 00:01:39,240
+the app Locally is available on iPad. It
+ 
+
+77
+00:01:39,240 --> 00:01:41,030
+the app Locally is available on iPad. It
+works also very well on this device and
+
+78
+00:01:41,030 --> 00:01:41,040
+works also very well on this device and
+ 
+
+79
+00:01:41,040 --> 00:01:44,550
+works also very well on this device and
+Mac OS. And everything is is built to be
+
+80
+00:01:44,550 --> 00:01:44,560
+Mac OS. And everything is is built to be
+ 
+
+81
+00:01:44,560 --> 00:01:47,470
+Mac OS. And everything is is built to be
+as optimized as possible on on this
+
+82
+00:01:47,470 --> 00:01:47,480
+as optimized as possible on on this
+ 
+
+83
+00:01:47,480 --> 00:01:49,510
+as optimized as possible on on this
+devices.
+
+84
+00:01:49,510 --> 00:01:49,520
+devices.
+ 
+
+85
+00:01:49,520 --> 00:01:51,790
+devices.
+So, if you want if you want to run on
+
+86
+00:01:51,790 --> 00:01:51,800
+So, if you want if you want to run on
+ 
+
+87
+00:01:51,800 --> 00:01:53,190
+So, if you want if you want to run on
+iPhone
+
+88
+00:01:53,190 --> 00:01:53,200
+iPhone
+ 
+
+89
+00:01:53,200 --> 00:01:55,470
+iPhone
+a language model, so Gemma works well,
+
+90
+00:01:55,470 --> 00:01:55,480
+a language model, so Gemma works well,
+ 
+
+91
+00:01:55,480 --> 00:01:57,150
+a language model, so Gemma works well,
+but you have a lot of model that you can
+
+92
+00:01:57,150 --> 00:01:57,160
+but you have a lot of model that you can
+ 
+
+93
+00:01:57,160 --> 00:01:59,790
+but you have a lot of model that you can
+run also. The Quen model and
+
+94
+00:01:59,790 --> 00:01:59,800
+run also. The Quen model and
+ 
+
+95
+00:01:59,800 --> 00:02:01,990
+run also. The Quen model and
+and the small LM model from Hugging
+
+96
+00:02:01,990 --> 00:02:02,000
+and the small LM model from Hugging
+ 
+
+97
+00:02:02,000 --> 00:02:04,110
+and the small LM model from Hugging
+Face. The place you you will want to go
+
+98
+00:02:04,110 --> 00:02:04,120
+Face. The place you you will want to go
+ 
+
+99
+00:02:04,120 --> 00:02:06,630
+Face. The place you you will want to go
+is GitHub and go to the repo MLX Swift
+
+100
+00:02:06,630 --> 00:02:06,640
+is GitHub and go to the repo MLX Swift
+ 
+
+101
+00:02:06,640 --> 00:02:08,910
+is GitHub and go to the repo MLX Swift
+LM. I won't go into detail how you
+
+102
+00:02:08,910 --> 00:02:08,920
+LM. I won't go into detail how you
+ 
+
+103
+00:02:08,920 --> 00:02:10,830
+LM. I won't go into detail how you
+implement the repo. It's I think I will
+
+104
+00:02:10,830 --> 00:02:10,840
+implement the repo. It's I think I will
+ 
+
+105
+00:02:10,840 --> 00:02:13,990
+implement the repo. It's I think I will
+let your agent in a implement that for
+
+106
+00:02:13,990 --> 00:02:14,000
+let your agent in a implement that for
+ 
+
+107
+00:02:14,000 --> 00:02:15,830
+let your agent in a implement that for
+you, but it's one repo that you need to
+
+108
+00:02:15,830 --> 00:02:15,840
+you, but it's one repo that you need to
+ 
+
+109
+00:02:15,840 --> 00:02:17,790
+you, but it's one repo that you need to
+install if you're developing an iOS or
+
+110
+00:02:17,790 --> 00:02:17,800
+install if you're developing an iOS or
+ 
+
+111
+00:02:17,800 --> 00:02:20,910
+install if you're developing an iOS or
+Mac OS or iPad OS app. And you can use
+
+112
+00:02:20,910 --> 00:02:20,920
+Mac OS or iPad OS app. And you can use
+ 
+
+113
+00:02:20,920 --> 00:02:22,550
+Mac OS or iPad OS app. And you can use
+you can use that to simply download the
+
+114
+00:02:22,550 --> 00:02:22,560
+you can use that to simply download the
+ 
+
+115
+00:02:22,560 --> 00:02:25,070
+you can use that to simply download the
+model and then run it. The API is very
+
+116
+00:02:25,070 --> 00:02:25,080
+model and then run it. The API is very
+ 
+
+117
+00:02:25,080 --> 00:02:26,950
+model and then run it. The API is very
+straightforward, very simple to to
+
+118
+00:02:26,950 --> 00:02:26,960
+straightforward, very simple to to
+ 
+
+119
+00:02:26,960 --> 00:02:28,910
+straightforward, very simple to to
+implement. In less than 10 minutes, you
+
+120
+00:02:28,910 --> 00:02:28,920
+implement. In less than 10 minutes, you
+ 
+
+121
+00:02:28,920 --> 00:02:30,790
+implement. In less than 10 minutes, you
+can have an iOS app with a model that is
+
+122
+00:02:30,790 --> 00:02:30,800
+can have an iOS app with a model that is
+ 
+
+123
+00:02:30,800 --> 00:02:31,710
+can have an iOS app with a model that is
+running
+
+124
+00:02:31,710 --> 00:02:31,720
+running
+ 
+
+125
+00:02:31,720 --> 00:02:33,190
+running
+on your on your device. That's very
+
+126
+00:02:33,190 --> 00:02:33,200
+on your on your device. That's very
+ 
+
+127
+00:02:33,200 --> 00:02:36,790
+on your on your device. That's very
+simple to do. As as mentioned, MLX So,
+
+128
+00:02:36,790 --> 00:02:36,800
+simple to do. As as mentioned, MLX So,
+ 
+
+129
+00:02:36,800 --> 00:02:38,990
+simple to do. As as mentioned, MLX So,
+this is MLX Swift LM, but if you're more
+
+130
+00:02:38,990 --> 00:02:39,000
+this is MLX Swift LM, but if you're more
+ 
+
+131
+00:02:39,000 --> 00:02:41,150
+this is MLX Swift LM, but if you're more
+into Python apps or Mac OS app, you can
+
+132
+00:02:41,150 --> 00:02:41,160
+into Python apps or Mac OS app, you can
+ 
+
+133
+00:02:41,160 --> 00:02:44,190
+into Python apps or Mac OS app, you can
+also run MLX VLM from from Prince. Maybe
+
+134
+00:02:44,190 --> 00:02:44,200
+also run MLX VLM from from Prince. Maybe
+ 
+
+135
+00:02:44,200 --> 00:02:47,110
+also run MLX VLM from from Prince. Maybe
+you have seen him that he's doing on
+
+136
+00:02:47,110 --> 00:02:47,120
+you have seen him that he's doing on
+ 
+
+137
+00:02:47,120 --> 00:02:49,510
+you have seen him that he's doing on
+device for audio with MLX audio and
+
+138
+00:02:49,510 --> 00:02:49,520
+device for audio with MLX audio and
+ 
+
+139
+00:02:49,520 --> 00:02:52,510
+device for audio with MLX audio and
+visual model with MLX VLM and also MLX
+
+140
+00:02:52,510 --> 00:02:52,520
+visual model with MLX VLM and also MLX
+ 
+
+141
+00:02:52,520 --> 00:02:54,910
+visual model with MLX VLM and also MLX
+video to to run
+
+142
+00:02:54,910 --> 00:02:54,920
+video to to run
+ 
+
+143
+00:02:54,920 --> 00:02:55,790
+video to to run
+to run
+
+144
+00:02:55,790 --> 00:02:55,800
+to run
+ 
+
+145
+00:02:55,800 --> 00:02:58,510
+to run
+image image generation model or image or
+
+146
+00:02:58,510 --> 00:02:58,520
+image image generation model or image or
+ 
+
+147
+00:02:58,520 --> 00:03:01,430
+image image generation model or image or
+video generation model. MLX it's the
+
+148
+00:03:01,430 --> 00:03:01,440
+video generation model. MLX it's the
+ 
+
+149
+00:03:01,440 --> 00:03:03,670
+video generation model. MLX it's the
+ecosystem is getting bigger
+
+150
+00:03:03,670 --> 00:03:03,680
+ecosystem is getting bigger
+ 
+
+151
+00:03:03,680 --> 00:03:05,070
+ecosystem is getting bigger
+it's getting bigger it's it's really
+
+152
+00:03:05,070 --> 00:03:05,080
+it's getting bigger it's it's really
+ 
+
+153
+00:03:05,080 --> 00:03:07,270
+it's getting bigger it's it's really
+great right now. You can do pretty much
+
+154
+00:03:07,270 --> 00:03:07,280
+great right now. You can do pretty much
+ 
+
+155
+00:03:07,280 --> 00:03:10,150
+great right now. You can do pretty much
+everything like omni models. As I say,
+
+156
+00:03:10,150 --> 00:03:10,160
+everything like omni models. As I say,
+ 
+
+157
+00:03:10,160 --> 00:03:12,670
+everything like omni models. As I say,
+text to speech speech speech to speech.
+
+158
+00:03:12,670 --> 00:03:12,680
+text to speech speech speech to speech.
+ 
+
+159
+00:03:12,680 --> 00:03:13,990
+text to speech speech speech to speech.
+There's a lot of thing that you can do
+
+160
+00:03:13,990 --> 00:03:14,000
+There's a lot of thing that you can do
+ 
+
+161
+00:03:14,000 --> 00:03:14,990
+There's a lot of thing that you can do
+with um
+
+162
+00:03:14,990 --> 00:03:15,000
+with um
+ 
+
+163
+00:03:15,000 --> 00:03:17,710
+with um
+with a model. And basically, let's say
+
+164
+00:03:17,710 --> 00:03:17,720
+with a model. And basically, let's say
+ 
+
+165
+00:03:17,720 --> 00:03:20,430
+with a model. And basically, let's say
+you integrate the you integrate
+
+166
+00:03:20,430 --> 00:03:20,440
+you integrate the you integrate
+ 
+
+167
+00:03:20,440 --> 00:03:22,710
+you integrate the you integrate
+this model. You can't just run any model
+
+168
+00:03:22,710 --> 00:03:22,720
+this model. You can't just run any model
+ 
+
+169
+00:03:22,720 --> 00:03:25,030
+this model. You can't just run any model
+on it. Like you need to you need to get
+
+170
+00:03:25,030 --> 00:03:25,040
+on it. Like you need to you need to get
+ 
+
+171
+00:03:25,040 --> 00:03:26,750
+on it. Like you need to you need to get
+some model and there's a good place to
+
+172
+00:03:26,750 --> 00:03:26,760
+some model and there's a good place to
+ 
+
+173
+00:03:26,760 --> 00:03:28,190
+some model and there's a good place to
+get the model is Hugging Face. I'm
+
+174
+00:03:28,190 --> 00:03:28,200
+get the model is Hugging Face. I'm
+ 
+
+175
+00:03:28,200 --> 00:03:30,230
+get the model is Hugging Face. I'm
+pretty sure everybody heard uh of
+
+176
+00:03:30,230 --> 00:03:30,240
+pretty sure everybody heard uh of
+ 
+
+177
+00:03:30,240 --> 00:03:32,150
+pretty sure everybody heard uh of
+Hugging Face. And on Hugging Face, you
+
+178
+00:03:32,150 --> 00:03:32,160
+Hugging Face. And on Hugging Face, you
+ 
+
+179
+00:03:32,160 --> 00:03:34,630
+Hugging Face. And on Hugging Face, you
+will want to look for MLX community.
+
+180
+00:03:34,630 --> 00:03:34,640
+will want to look for MLX community.
+ 
+
+181
+00:03:34,640 --> 00:03:37,070
+will want to look for MLX community.
+This is where like all of the the weight
+
+182
+00:03:37,070 --> 00:03:37,080
+This is where like all of the the weight
+ 
+
+183
+00:03:37,080 --> 00:03:38,950
+This is where like all of the the weight
+of the model, the quantized weight, the
+
+184
+00:03:38,950 --> 00:03:38,960
+of the model, the quantized weight, the
+ 
+
+185
+00:03:38,960 --> 00:03:41,710
+of the model, the quantized weight, the
+full size will be uploaded.
+
+186
+00:03:41,710 --> 00:03:41,720
+full size will be uploaded.
+ 
+
+187
+00:03:41,720 --> 00:03:43,310
+full size will be uploaded.
+So, you will just be able to go to this
+
+188
+00:03:43,310 --> 00:03:43,320
+So, you will just be able to go to this
+ 
+
+189
+00:03:43,320 --> 00:03:45,550
+So, you will just be able to go to this
+community look for the models. I think
+
+190
+00:03:45,550 --> 00:03:45,560
+community look for the models. I think
+ 
+
+191
+00:03:45,560 --> 00:03:48,350
+community look for the models. I think
+right now there's almost 4,000 or 5,000
+
+192
+00:03:48,350 --> 00:03:48,360
+right now there's almost 4,000 or 5,000
+ 
+
+193
+00:03:48,360 --> 00:03:50,790
+right now there's almost 4,000 or 5,000
+model uploaded. So, the community is
+
+194
+00:03:50,790 --> 00:03:50,800
+model uploaded. So, the community is
+ 
+
+195
+00:03:50,800 --> 00:03:53,470
+model uploaded. So, the community is
+really active on it. When a model is is
+
+196
+00:03:53,470 --> 00:03:53,480
+really active on it. When a model is is
+ 
+
+197
+00:03:53,480 --> 00:03:55,790
+really active on it. When a model is is
+released by a by a lab you will directly
+
+198
+00:03:55,790 --> 00:03:55,800
+released by a by a lab you will directly
+ 
+
+199
+00:03:55,800 --> 00:03:58,390
+released by a by a lab you will directly
+have it almost 30 minutes after release
+
+200
+00:03:58,390 --> 00:03:58,400
+have it almost 30 minutes after release
+ 
+
+201
+00:03:58,400 --> 00:04:00,750
+have it almost 30 minutes after release
+quantized in 4-bit, 6-bit
+
+202
+00:04:00,750 --> 00:04:00,760
+quantized in 4-bit, 6-bit
+ 
+
+203
+00:04:00,760 --> 00:04:02,390
+quantized in 4-bit, 6-bit
+and everything that you can you can
+
+204
+00:04:02,390 --> 00:04:02,400
+and everything that you can you can
+ 
+
+205
+00:04:02,400 --> 00:04:03,910
+and everything that you can you can
+imagine. Here you have like an example
+
+206
+00:04:03,910 --> 00:04:03,920
+imagine. Here you have like an example
+ 
+
+207
+00:04:03,920 --> 00:04:06,910
+imagine. Here you have like an example
+for Gemma 4 8-bit, which is the one I I
+
+208
+00:04:06,910 --> 00:04:06,920
+for Gemma 4 8-bit, which is the one I I
+ 
+
+209
+00:04:06,920 --> 00:04:09,390
+for Gemma 4 8-bit, which is the one I I
+run on um on iPhone. There's like a lot
+
+210
+00:04:09,390 --> 00:04:09,400
+run on um on iPhone. There's like a lot
+ 
+
+211
+00:04:09,400 --> 00:04:12,750
+run on um on iPhone. There's like a lot
+of variant of it for from BF16 and make
+
+212
+00:04:12,750 --> 00:04:12,760
+of variant of it for from BF16 and make
+ 
+
+213
+00:04:12,760 --> 00:04:13,710
+of variant of it for from BF16 and make
+MXFP4 [clears throat]
+
+214
+00:04:13,710 --> 00:04:13,720
+MXFP4 [clears throat]
+ 
+
+215
+00:04:13,720 --> 00:04:16,349
+MXFP4 [clears throat]
+like 5-bit, 6-bit
+
+216
+00:04:16,349 --> 00:04:16,359
+like 5-bit, 6-bit
+ 
+
+217
+00:04:16,359 --> 00:04:18,470
+like 5-bit, 6-bit
+there's everything. So,
+
+218
+00:04:18,470 --> 00:04:18,480
+there's everything. So,
+ 
+
+219
+00:04:18,480 --> 00:04:21,069
+there's everything. So,
+so you download MLX Swift LM, install it
+
+220
+00:04:21,069 --> 00:04:21,079
+so you download MLX Swift LM, install it
+ 
+
+221
+00:04:21,079 --> 00:04:23,670
+so you download MLX Swift LM, install it
+with your agent or anything. Then you go
+
+222
+00:04:23,670 --> 00:04:23,680
+with your agent or anything. Then you go
+ 
+
+223
+00:04:23,680 --> 00:04:26,190
+with your agent or anything. Then you go
+to MLX community and you just choose the
+
+224
+00:04:26,190 --> 00:04:26,200
+to MLX community and you just choose the
+ 
+
+225
+00:04:26,200 --> 00:04:29,030
+to MLX community and you just choose the
+model you want to run and then with ID
+
+226
+00:04:29,030 --> 00:04:29,040
+model you want to run and then with ID
+ 
+
+227
+00:04:29,040 --> 00:04:31,070
+model you want to run and then with ID
+you can just pass it to the framework
+
+228
+00:04:31,070 --> 00:04:31,080
+you can just pass it to the framework
+ 
+
+229
+00:04:31,080 --> 00:04:33,150
+you can just pass it to the framework
+and it will directly it will be
+
+230
+00:04:33,150 --> 00:04:33,160
+and it will directly it will be
+ 
+
+231
+00:04:33,160 --> 00:04:34,750
+and it will directly it will be
+integrated with Hugging Face to download
+
+232
+00:04:34,750 --> 00:04:34,760
+integrated with Hugging Face to download
+ 
+
+233
+00:04:34,760 --> 00:04:36,790
+integrated with Hugging Face to download
+the model with MLX Swift LM directly.
+
+234
+00:04:36,790 --> 00:04:36,800
+the model with MLX Swift LM directly.
+ 
+
+235
+00:04:36,800 --> 00:04:39,110
+the model with MLX Swift LM directly.
+So, you just need to grab the ID and and
+
+236
+00:04:39,110 --> 00:04:39,120
+So, you just need to grab the ID and and
+ 
+
+237
+00:04:39,120 --> 00:04:41,790
+So, you just need to grab the ID and and
+pass it to to the framework.
+
+238
+00:04:41,790 --> 00:04:41,800
+pass it to to the framework.
+ 
+
+239
+00:04:41,800 --> 00:04:43,830
+pass it to to the framework.
+Usually, when you're running the the
+
+240
+00:04:43,830 --> 00:04:43,840
+Usually, when you're running the the
+ 
+
+241
+00:04:43,840 --> 00:04:45,550
+Usually, when you're running the the
+model on
+
+242
+00:04:45,550 --> 00:04:45,560
+model on
+ 
+
+243
+00:04:45,560 --> 00:04:47,590
+model on
+on iPhone, what you want to what you
+
+244
+00:04:47,590 --> 00:04:47,600
+on iPhone, what you want to what you
+ 
+
+245
+00:04:47,600 --> 00:04:50,030
+on iPhone, what you want to what you
+want to do is quantize select selecting
+
+246
+00:04:50,030 --> 00:04:50,040
+want to do is quantize select selecting
+ 
+
+247
+00:04:50,040 --> 00:04:52,110
+want to do is quantize select selecting
+some quantized quantized version of the
+
+248
+00:04:52,110 --> 00:04:52,120
+some quantized quantized version of the
+ 
+
+249
+00:04:52,120 --> 00:04:53,830
+some quantized quantized version of the
+model because the full size will be way
+
+250
+00:04:53,830 --> 00:04:53,840
+model because the full size will be way
+ 
+
+251
+00:04:53,840 --> 00:04:56,830
+model because the full size will be way
+too large. What I recommend is going is
+
+252
+00:04:56,830 --> 00:04:56,840
+too large. What I recommend is going is
+ 
+
+253
+00:04:56,840 --> 00:04:58,910
+too large. What I recommend is going is
+trying depending on the size between
+
+254
+00:04:58,910 --> 00:04:58,920
+trying depending on the size between
+ 
+
+255
+00:04:58,920 --> 00:05:02,270
+trying depending on the size between
+3-bit and and 8-bit. Usually, between
+
+256
+00:05:02,270 --> 00:05:02,280
+3-bit and and 8-bit. Usually, between
+ 
+
+257
+00:05:02,280 --> 00:05:04,990
+3-bit and and 8-bit. Usually, between
+4-bit and 8-bit. Usually, under like
+
+258
+00:05:04,990 --> 00:05:05,000
+4-bit and 8-bit. Usually, under like
+ 
+
+259
+00:05:05,000 --> 00:05:06,910
+4-bit and 8-bit. Usually, under like
+4-bit it's getting it's starting to get
+
+260
+00:05:06,910 --> 00:05:06,920
+4-bit it's getting it's starting to get
+ 
+
+261
+00:05:06,920 --> 00:05:10,230
+4-bit it's getting it's starting to get
+a lot of impact on the output. And
+
+262
+00:05:10,230 --> 00:05:10,240
+a lot of impact on the output. And
+ 
+
+263
+00:05:10,240 --> 00:05:11,910
+a lot of impact on the output. And
+and the model are not that great
+
+264
+00:05:11,910 --> 00:05:11,920
+and the model are not that great
+ 
+
+265
+00:05:11,920 --> 00:05:14,310
+and the model are not that great
+usually. 4-bit is the lower I would go.
+
+266
+00:05:14,310 --> 00:05:14,320
+usually. 4-bit is the lower I would go.
+ 
+
+267
+00:05:14,320 --> 00:05:16,390
+usually. 4-bit is the lower I would go.
+And 8-bit is the higher I would go if
+
+268
+00:05:16,390 --> 00:05:16,400
+And 8-bit is the higher I would go if
+ 
+
+269
+00:05:16,400 --> 00:05:18,950
+And 8-bit is the higher I would go if
+you're using really small models. And in
+
+270
+00:05:18,950 --> 00:05:18,960
+you're using really small models. And in
+ 
+
+271
+00:05:18,960 --> 00:05:20,430
+you're using really small models. And in
+my app for example, I have like some
+
+272
+00:05:20,430 --> 00:05:20,440
+my app for example, I have like some
+ 
+
+273
+00:05:20,440 --> 00:05:22,270
+my app for example, I have like some
+bigger model like Gemma 4, but I also
+
+274
+00:05:22,270 --> 00:05:22,280
+bigger model like Gemma 4, but I also
+ 
+
+275
+00:05:22,280 --> 00:05:25,390
+bigger model like Gemma 4, but I also
+have some liquid model where that is 300
+
+276
+00:05:25,390 --> 00:05:25,400
+have some liquid model where that is 300
+ 
+
+277
+00:05:25,400 --> 00:05:27,710
+have some liquid model where that is 300
+350 parameters and this it can run in
+
+278
+00:05:27,710 --> 00:05:27,720
+350 parameters and this it can run in
+ 
+
+279
+00:05:27,720 --> 00:05:30,070
+350 parameters and this it can run in
+shortcuts. So, you can do a lot of kind
+
+280
+00:05:30,070 --> 00:05:30,080
+shortcuts. So, you can do a lot of kind
+ 
+
+281
+00:05:30,080 --> 00:05:31,750
+shortcuts. So, you can do a lot of kind
+of automation because the model are
+
+282
+00:05:31,750 --> 00:05:31,760
+of automation because the model are
+ 
+
+283
+00:05:31,760 --> 00:05:34,710
+of automation because the model are
+really fast and really efficient at that
+
+284
+00:05:34,710 --> 00:05:34,720
+really fast and really efficient at that
+ 
+
+285
+00:05:34,720 --> 00:05:37,590
+really fast and really efficient at that
+at that size to do some text processing
+
+286
+00:05:37,590 --> 00:05:37,600
+at that size to do some text processing
+ 
+
+287
+00:05:37,600 --> 00:05:39,790
+at that size to do some text processing
+and things like this.
+
+288
+00:05:39,790 --> 00:05:39,800
+and things like this.
+ 
+
+289
+00:05:39,800 --> 00:05:42,230
+and things like this.
+And on the on the latest iPhone like if
+
+290
+00:05:42,230 --> 00:05:42,240
+And on the on the latest iPhone like if
+ 
+
+291
+00:05:42,240 --> 00:05:43,990
+And on the on the latest iPhone like if
+you take Gemma 4 8-bit quantized in
+
+292
+00:05:43,990 --> 00:05:44,000
+you take Gemma 4 8-bit quantized in
+ 
+
+293
+00:05:44,000 --> 00:05:46,270
+you take Gemma 4 8-bit quantized in
+4-bit it's extremely fast. Like it can
+
+294
+00:05:46,270 --> 00:05:46,280
+4-bit it's extremely fast. Like it can
+ 
+
+295
+00:05:46,280 --> 00:05:50,990
+4-bit it's extremely fast. Like it can
+run easily at 40 token 40 token
+
+296
+00:05:50,990 --> 00:05:51,000
+run easily at 40 token 40 token
+ 
+
+297
+00:05:51,000 --> 00:05:52,910
+run easily at 40 token 40 token
+per second. I will just do an update in
+
+298
+00:05:52,910 --> 00:05:52,920
+per second. I will just do an update in
+ 
+
+299
+00:05:52,920 --> 00:05:54,590
+per second. I will just do an update in
+the slide because I remove
+
+300
+00:05:54,590 --> 00:05:54,600
+the slide because I remove
+ 
+
+301
+00:05:54,600 --> 00:05:55,670
+the slide because I remove
+I remove a slide where there's the
+
+302
+00:05:55,670 --> 00:05:55,680
+I remove a slide where there's the
+ 
+
+303
+00:05:55,680 --> 00:05:57,590
+I remove a slide where there's the
+video, but maybe I can add it back
+
+304
+00:05:57,590 --> 00:05:57,600
+video, but maybe I can add it back
+ 
+
+305
+00:05:57,600 --> 00:06:01,390
+video, but maybe I can add it back
+because I have a little bit more time.
+
+306
+00:06:01,390 --> 00:06:01,400
+
+ 
+
+307
+00:06:01,400 --> 00:06:05,110
+
+I just like this. So, just to show you
+
+308
+00:06:05,110 --> 00:06:05,120
+I just like this. So, just to show you
+ 
+
+309
+00:06:05,120 --> 00:06:07,510
+I just like this. So, just to show you
+in demo what's what the 40 token per
+
+310
+00:06:07,510 --> 00:06:07,520
+in demo what's what the 40 token per
+ 
+
+311
+00:06:07,520 --> 00:06:10,110
+in demo what's what the 40 token per
+second means.
+
+312
+00:06:10,110 --> 00:06:10,120
+second means.
+ 
+
+313
+00:06:10,120 --> 00:06:15,310
+second means.
+And that's running live offline.
+
+314
+00:06:15,310 --> 00:06:15,320
+
+ 
+
+315
+00:06:15,320 --> 00:06:17,070
+
+And as you can see, it's like really
+
+316
+00:06:17,070 --> 00:06:17,080
+And as you can see, it's like really
+ 
+
+317
+00:06:17,080 --> 00:06:18,910
+And as you can see, it's like really
+fast. Like 40 token per second is more
+
+318
+00:06:18,910 --> 00:06:18,920
+fast. Like 40 token per second is more
+ 
+
+319
+00:06:18,920 --> 00:06:21,230
+fast. Like 40 token per second is more
+than acceptable for a lot of use cases.
+
+320
+00:06:21,230 --> 00:06:21,240
+than acceptable for a lot of use cases.
+ 
+
+321
+00:06:21,240 --> 00:06:22,750
+than acceptable for a lot of use cases.
+This is of course streaming. You can
+
+322
+00:06:22,750 --> 00:06:22,760
+This is of course streaming. You can
+ 
+
+323
+00:06:22,760 --> 00:06:25,030
+This is of course streaming. You can
+also like not do streaming and do a UI
+
+324
+00:06:25,030 --> 00:06:25,040
+also like not do streaming and do a UI
+ 
+
+325
+00:06:25,040 --> 00:06:27,190
+also like not do streaming and do a UI
+that just will wait for for 4 seconds.
+
+326
+00:06:27,190 --> 00:06:27,200
+that just will wait for for 4 seconds.
+ 
+
+327
+00:06:27,200 --> 00:06:29,750
+that just will wait for for 4 seconds.
+And here the output is quite long. So,
+
+328
+00:06:29,750 --> 00:06:29,760
+And here the output is quite long. So,
+ 
+
+329
+00:06:29,760 --> 00:06:32,270
+And here the output is quite long. So,
+it's generating a lot of tokens. On
+
+330
+00:06:32,270 --> 00:06:32,280
+it's generating a lot of tokens. On
+ 
+
+331
+00:06:32,280 --> 00:06:34,550
+it's generating a lot of tokens. On
+device with MLX, it's working. It's
+
+332
+00:06:34,550 --> 00:06:34,560
+device with MLX, it's working. It's
+ 
+
+333
+00:06:34,560 --> 00:06:37,390
+device with MLX, it's working. It's
+here. Like it's really not easy and
+
+334
+00:06:37,390 --> 00:06:37,400
+here. Like it's really not easy and
+ 
+
+335
+00:06:37,400 --> 00:06:39,990
+here. Like it's really not easy and
+really not hard to to integrate.
+
+336
+00:06:39,990 --> 00:06:40,000
+really not hard to to integrate.
+ 
+
+337
+00:06:40,000 --> 00:06:42,430
+really not hard to to integrate.
+As I said, if you go to the to the repo
+
+338
+00:06:42,430 --> 00:06:42,440
+As I said, if you go to the to the repo
+ 
+
+339
+00:06:42,440 --> 00:06:45,190
+As I said, if you go to the to the repo
+MLX Swift LM very it's a breeze to to
+
+340
+00:06:45,190 --> 00:06:45,200
+MLX Swift LM very it's a breeze to to
+ 
+
+341
+00:06:45,200 --> 00:06:46,790
+MLX Swift LM very it's a breeze to to
+install.
+
+342
+00:06:46,790 --> 00:06:46,800
+install.
+ 
+
+343
+00:06:46,800 --> 00:06:48,910
+install.
+On top of that, as I said like again,
+
+344
+00:06:48,910 --> 00:06:48,920
+On top of that, as I said like again,
+ 
+
+345
+00:06:48,920 --> 00:06:50,550
+On top of that, as I said like again,
+latest iPhones really great, but it
+
+346
+00:06:50,550 --> 00:06:50,560
+latest iPhones really great, but it
+ 
+
+347
+00:06:50,560 --> 00:06:52,870
+latest iPhones really great, but it
+works also with older iPhone. Like you
+
+348
+00:06:52,870 --> 00:06:52,880
+works also with older iPhone. Like you
+ 
+
+349
+00:06:52,880 --> 00:06:54,630
+works also with older iPhone. Like you
+will not get 40 token per second, which
+
+350
+00:06:54,630 --> 00:06:54,640
+will not get 40 token per second, which
+ 
+
+351
+00:06:54,640 --> 00:06:56,630
+will not get 40 token per second, which
+is quite fast, but even if you get 20
+
+352
+00:06:56,630 --> 00:06:56,640
+is quite fast, but even if you get 20
+ 
+
+353
+00:06:56,640 --> 00:06:58,870
+is quite fast, but even if you get 20
+tokens per second, that's already great
+
+354
+00:06:58,870 --> 00:06:58,880
+tokens per second, that's already great
+ 
+
+355
+00:06:58,880 --> 00:07:01,830
+tokens per second, that's already great
+and useful for a lot of
+
+356
+00:07:01,830 --> 00:07:01,840
+and useful for a lot of
+ 
+
+357
+00:07:01,840 --> 00:07:03,790
+and useful for a lot of
+for a lot of application a lot of use
+
+358
+00:07:03,790 --> 00:07:03,800
+for a lot of application a lot of use
+ 
+
+359
+00:07:03,800 --> 00:07:06,950
+for a lot of application a lot of use
+cases that you would want to do with
+
+360
+00:07:06,950 --> 00:07:06,960
+cases that you would want to do with
+ 
+
+361
+00:07:06,960 --> 00:07:09,470
+cases that you would want to do with
+with your
+
+362
+00:07:09,470 --> 00:07:09,480
+with your
+ 
+
+363
+00:07:09,480 --> 00:07:12,310
+with your
+with your with your app. You can go to
+
+364
+00:07:12,310 --> 00:07:12,320
+with your with your app. You can go to
+ 
+
+365
+00:07:12,320 --> 00:07:13,790
+with your with your app. You can go to
+and scan this QR code if you want to try
+
+366
+00:07:13,790 --> 00:07:13,800
+and scan this QR code if you want to try
+ 
+
+367
+00:07:13,800 --> 00:07:15,430
+and scan this QR code if you want to try
+it by yourself. If you want to have a if
+
+368
+00:07:15,430 --> 00:07:15,440
+it by yourself. If you want to have a if
+ 
+
+369
+00:07:15,440 --> 00:07:16,830
+it by yourself. If you want to have a if
+you have an iPhone, the app is on the
+
+370
+00:07:16,830 --> 00:07:16,840
+you have an iPhone, the app is on the
+ 
+
+371
+00:07:16,840 --> 00:07:18,910
+you have an iPhone, the app is on the
+App Store. It's free to use.
+
+372
+00:07:18,910 --> 00:07:18,920
+App Store. It's free to use.
+ 
+
+373
+00:07:18,920 --> 00:07:20,230
+App Store. It's free to use.
+Only thing is that you will have to
+
+374
+00:07:20,230 --> 00:07:20,240
+Only thing is that you will have to
+ 
+
+375
+00:07:20,240 --> 00:07:22,150
+Only thing is that you will have to
+download the model that's usually around
+
+376
+00:07:22,150 --> 00:07:22,160
+download the model that's usually around
+ 
+
+377
+00:07:22,160 --> 00:07:24,190
+download the model that's usually around
+1 gigabytes
+
+378
+00:07:24,190 --> 00:07:24,200
+1 gigabytes
+ 
+
+379
+00:07:24,200 --> 00:07:26,630
+1 gigabytes
+or 3 gigabytes. Really depend on the on
+
+380
+00:07:26,630 --> 00:07:26,640
+or 3 gigabytes. Really depend on the on
+ 
+
+381
+00:07:26,640 --> 00:07:28,630
+or 3 gigabytes. Really depend on the on
+which model, but that's the biggest
+
+382
+00:07:28,630 --> 00:07:28,640
+which model, but that's the biggest
+ 
+
+383
+00:07:28,640 --> 00:07:30,070
+which model, but that's the biggest
+barrier right now. It's the size of the
+
+384
+00:07:30,070 --> 00:07:30,080
+barrier right now. It's the size of the
+ 
+
+385
+00:07:30,080 --> 00:07:32,150
+barrier right now. It's the size of the
+model, but this also is getting better.
+
+386
+00:07:32,150 --> 00:07:32,160
+model, but this also is getting better.
+ 
+
+387
+00:07:32,160 --> 00:07:34,790
+model, but this also is getting better.
+Model are getting smaller or getting
+
+388
+00:07:34,790 --> 00:07:34,800
+Model are getting smaller or getting
+ 
+
+389
+00:07:34,800 --> 00:07:38,150
+Model are getting smaller or getting
+smarter and they're also the iPhone is
+
+390
+00:07:38,150 --> 00:07:38,160
+smarter and they're also the iPhone is
+ 
+
+391
+00:07:38,160 --> 00:07:40,630
+smarter and they're also the iPhone is
+getting better. So, next and second the
+
+392
+00:07:40,630 --> 00:07:40,640
+getting better. So, next and second the
+ 
+
+393
+00:07:40,640 --> 00:07:44,030
+getting better. So, next and second the
+next next iPhone everything will just is
+
+394
+00:07:44,030 --> 00:07:44,040
+next next iPhone everything will just is
+ 
+
+395
+00:07:44,040 --> 00:07:47,430
+next next iPhone everything will just is
+reaching really great usability from
+
+396
+00:07:47,430 --> 00:07:47,440
+reaching really great usability from
+ 
+
+397
+00:07:47,440 --> 00:07:50,150
+reaching really great usability from
+what I can see. And also on top of that
+
+398
+00:07:50,150 --> 00:07:50,160
+what I can see. And also on top of that
+ 
+
+399
+00:07:50,160 --> 00:07:51,710
+what I can see. And also on top of that
+like maybe you have heard the news
+
+400
+00:07:51,710 --> 00:07:51,720
+like maybe you have heard the news
+ 
+
+401
+00:07:51,720 --> 00:07:54,710
+like maybe you have heard the news
+yesterday. Locally have been acquired by
+
+402
+00:07:54,710 --> 00:07:54,720
+yesterday. Locally have been acquired by
+ 
+
+403
+00:07:54,720 --> 00:07:57,230
+yesterday. Locally have been acquired by
+LM Studio. If you don't know
+
+404
+00:07:57,230 --> 00:07:57,240
+LM Studio. If you don't know
+ 
+
+405
+00:07:57,240 --> 00:07:58,800
+LM Studio. If you don't know
+LM LM Studio
+
+406
+00:07:58,800 --> 00:07:58,810
+LM LM Studio
+ 
+
+407
+00:07:58,810 --> 00:07:58,830
+LM LM Studio
+>> [clears throat]
+
+408
+00:07:58,830 --> 00:07:58,840
+>> [clears throat]
+ 
+
+409
+00:07:58,840 --> 00:08:00,750
+>> [clears throat]
+>> it's basically
+
+410
+00:08:00,750 --> 00:08:00,760
+>> it's basically
+ 
+
+411
+00:08:00,760 --> 00:08:04,430
+>> it's basically
+a kind of a AI studio for all your local
+
+412
+00:08:04,430 --> 00:08:04,440
+a kind of a AI studio for all your local
+ 
+
+413
+00:08:04,440 --> 00:08:06,750
+a kind of a AI studio for all your local
+models. So, you can download the the
+
+414
+00:08:06,750 --> 00:08:06,760
+models. So, you can download the the
+ 
+
+415
+00:08:06,760 --> 00:08:08,910
+models. So, you can download the the
+model with any model with LM Studio
+
+416
+00:08:08,910 --> 00:08:08,920
+model with any model with LM Studio
+ 
+
+417
+00:08:08,920 --> 00:08:10,870
+model with any model with LM Studio
+directly from Hugging Face. You can run
+
+418
+00:08:10,870 --> 00:08:10,880
+directly from Hugging Face. You can run
+ 
+
+419
+00:08:10,880 --> 00:08:13,030
+directly from Hugging Face. You can run
+them and you can open a server. You can
+
+420
+00:08:13,030 --> 00:08:13,040
+them and you can open a server. You can
+ 
+
+421
+00:08:13,040 --> 00:08:16,070
+them and you can open a server. You can
+run them with Llama CPP, but also MLX.
+
+422
+00:08:16,070 --> 00:08:16,080
+run them with Llama CPP, but also MLX.
+ 
+
+423
+00:08:16,080 --> 00:08:17,550
+run them with Llama CPP, but also MLX.
+So, you can really compare the different
+
+424
+00:08:17,550 --> 00:08:17,560
+So, you can really compare the different
+ 
+
+425
+00:08:17,560 --> 00:08:19,030
+So, you can really compare the different
+engine how they
+
+426
+00:08:19,030 --> 00:08:19,040
+engine how they
+ 
+
+427
+00:08:19,040 --> 00:08:21,070
+engine how they
+how they work. You can
+
+428
+00:08:21,070 --> 00:08:21,080
+how they work. You can
+ 
+
+429
+00:08:21,080 --> 00:08:22,750
+how they work. You can
+as I said, you can open a
+
+430
+00:08:22,750 --> 00:08:22,760
+as I said, you can open a
+ 
+
+431
+00:08:22,760 --> 00:08:25,150
+as I said, you can open a
+a server locally and connect your app
+
+432
+00:08:25,150 --> 00:08:25,160
+a server locally and connect your app
+ 
+
+433
+00:08:25,160 --> 00:08:28,230
+a server locally and connect your app
+to this to this hosted server with
+
+434
+00:08:28,230 --> 00:08:28,240
+to this to this hosted server with
+ 
+
+435
+00:08:28,240 --> 00:08:30,030
+to this to this hosted server with
+various
+
+436
+00:08:30,030 --> 00:08:30,040
+various
+ 
+
+437
+00:08:30,040 --> 00:08:31,750
+various
+various response response type. For
+
+438
+00:08:31,750 --> 00:08:31,760
+various response response type. For
+ 
+
+439
+00:08:31,760 --> 00:08:36,135
+various response response type. For
+example, open open API response type or
+
+440
+00:08:36,135 --> 00:08:36,145
+example, open open API response type or
+ 
+
+441
+00:08:36,145 --> 00:08:36,310
+example, open open API response type or
+>> [clears throat]
+
+442
+00:08:36,310 --> 00:08:36,320
+>> [clears throat]
+ 
+
+443
+00:08:36,320 --> 00:08:37,790
+>> [clears throat]
+>> or
+
+444
+00:08:37,790 --> 00:08:37,800
+>> or
+ 
+
+445
+00:08:37,800 --> 00:08:40,390
+>> or
+or Anthropic response type for streaming
+
+446
+00:08:40,390 --> 00:08:40,400
+or Anthropic response type for streaming
+ 
+
+447
+00:08:40,400 --> 00:08:42,230
+or Anthropic response type for streaming
+anything and you can just get any model
+
+448
+00:08:42,230 --> 00:08:42,240
+anything and you can just get any model
+ 
+
+449
+00:08:42,240 --> 00:08:45,270
+anything and you can just get any model
+running really easily with that.
+
+450
+00:08:45,270 --> 00:08:45,280
+running really easily with that.
+ 
+
+451
+00:08:45,280 --> 00:08:46,990
+running really easily with that.
+So, and I want to thank you. That was a
+
+452
+00:08:46,990 --> 00:08:47,000
+So, and I want to thank you. That was a
+ 
+
+453
+00:08:47,000 --> 00:08:49,030
+So, and I want to thank you. That was a
+very short introduction how you can do
+
+454
+00:08:49,030 --> 00:08:49,040
+very short introduction how you can do
+ 
+
+455
+00:08:49,040 --> 00:08:51,350
+very short introduction how you can do
+the same and run any model like in Gemma
+
+456
+00:08:51,350 --> 00:08:51,360
+the same and run any model like in Gemma
+ 
+
+457
+00:08:51,360 --> 00:08:54,310
+the same and run any model like in Gemma
+4 if you want on your on your iPhone.
+
+458
+00:08:54,310 --> 00:08:54,320
+4 if you want on your on your iPhone.
+ 
+
+459
+00:08:54,320 --> 00:08:57,096
+4 if you want on your on your iPhone.
+If you have any question also.
+
+460
+00:08:57,096 --> 00:08:57,106
+If you have any question also.
+ 
+
+461
+00:08:57,106 --> 00:09:02,270
+If you have any question also.
+>> [applause]
+
+462
+00:09:02,270 --> 00:09:02,280
+
+ 
+
+463
+00:09:02,280 --> 00:09:04,870
+
+>> Does this support tool calling? Sorry?
+
+464
+00:09:04,870 --> 00:09:04,880
+>> Does this support tool calling? Sorry?
+ 
+
+465
+00:09:04,880 --> 00:09:06,950
+>> Does this support tool calling? Sorry?
+Does this Yes, like so yeah, I forgot
+
+466
+00:09:06,950 --> 00:09:06,960
+Does this Yes, like so yeah, I forgot
+ 
+
+467
+00:09:06,960 --> 00:09:08,950
+Does this Yes, like so yeah, I forgot
+about that. So, it support tool calling.
+
+468
+00:09:08,950 --> 00:09:08,960
+about that. So, it support tool calling.
+ 
+
+469
+00:09:08,960 --> 00:09:10,550
+about that. So, it support tool calling.
+Um
+
+470
+00:09:10,550 --> 00:09:10,560
+Um
+ 
+
+471
+00:09:10,560 --> 00:09:11,990
+Um
+not yet
+
+472
+00:09:11,990 --> 00:09:12,000
+not yet
+ 
+
+473
+00:09:12,000 --> 00:09:15,110
+not yet
+custom not yet structured generation.
+
+474
+00:09:15,110 --> 00:09:15,120
+custom not yet structured generation.
+ 
+
+475
+00:09:15,120 --> 00:09:16,670
+custom not yet structured generation.
+There are some package on top of MLX
+
+476
+00:09:16,670 --> 00:09:16,680
+There are some package on top of MLX
+ 
+
+477
+00:09:16,680 --> 00:09:19,630
+There are some package on top of MLX
+Swift LM that are trying to to make this
+
+478
+00:09:19,630 --> 00:09:19,640
+Swift LM that are trying to to make this
+ 
+
+479
+00:09:19,640 --> 00:09:21,910
+Swift LM that are trying to to make this
+make this working. Um
+
+480
+00:09:21,910 --> 00:09:21,920
+make this working. Um
+ 
+
+481
+00:09:21,920 --> 00:09:24,510
+make this working. Um
+I will let you Hugging Face is doing it,
+
+482
+00:09:24,510 --> 00:09:24,520
+I will let you Hugging Face is doing it,
+ 
+
+483
+00:09:24,520 --> 00:09:27,270
+I will let you Hugging Face is doing it,
+but you can easily find them online. But
+
+484
+00:09:27,270 --> 00:09:27,280
+but you can easily find them online. But
+ 
+
+485
+00:09:27,280 --> 00:09:28,750
+but you can easily find them online. But
+MLX Swift LM, yes, it support tool
+
+486
+00:09:28,750 --> 00:09:28,760
+MLX Swift LM, yes, it support tool
+ 
+
+487
+00:09:28,760 --> 00:09:30,670
+MLX Swift LM, yes, it support tool
+calling. So, that's really useful if you
+
+488
+00:09:30,670 --> 00:09:30,680
+calling. So, that's really useful if you
+ 
+
+489
+00:09:30,680 --> 00:09:32,990
+calling. So, that's really useful if you
+want to do tool calling and call over
+
+490
+00:09:32,990 --> 00:09:33,000
+want to do tool calling and call over
+ 
+
+491
+00:09:33,000 --> 00:09:35,150
+want to do tool calling and call over
+over system. And the model the model are
+
+492
+00:09:35,150 --> 00:09:35,160
+over system. And the model the model are
+ 
+
+493
+00:09:35,160 --> 00:09:36,950
+over system. And the model the model are
+getting also better at tool calling.
+
+494
+00:09:36,950 --> 00:09:36,960
+getting also better at tool calling.
+ 
+
+495
+00:09:36,960 --> 00:09:38,710
+getting also better at tool calling.
+They were not so great like a year ago.
+
+496
+00:09:38,710 --> 00:09:38,720
+They were not so great like a year ago.
+ 
+
+497
+00:09:38,720 --> 00:09:42,950
+They were not so great like a year ago.
+Now it's getting much better.
+
+498
+00:09:42,950 --> 00:09:42,960
+
+ 
+
+499
+00:09:42,960 --> 00:09:44,790
+
+I see you mentioned two things. First
+
+500
+00:09:44,790 --> 00:09:44,800
+I see you mentioned two things. First
+ 
+
+501
+00:09:44,800 --> 00:09:47,190
+I see you mentioned two things. First
+was the GitHub repo. Yes. And then the
+
+502
+00:09:47,190 --> 00:09:47,200
+was the GitHub repo. Yes. And then the
+ 
+
+503
+00:09:47,200 --> 00:09:49,190
+was the GitHub repo. Yes. And then the
+second thing was the app.
+
+504
+00:09:49,190 --> 00:09:49,200
+second thing was the app.
+ 
+
+505
+00:09:49,200 --> 00:09:49,990
+second thing was the app.
+Um
+
+506
+00:09:49,990 --> 00:09:50,000
+Um
+ 
+
+507
+00:09:50,000 --> 00:09:52,790
+Um
+So, you have the GitHub repo for
+
+508
+00:09:52,790 --> 00:09:52,800
+So, you have the GitHub repo for
+ 
+
+509
+00:09:52,800 --> 00:09:55,110
+So, you have the GitHub repo for
+for MLX Swift LM. That's the the package
+
+510
+00:09:55,110 --> 00:09:55,120
+for MLX Swift LM. That's the the package
+ 
+
+511
+00:09:55,120 --> 00:09:57,190
+for MLX Swift LM. That's the the package
+that will install in your app. And then
+
+512
+00:09:57,190 --> 00:09:57,200
+that will install in your app. And then
+ 
+
+513
+00:09:57,200 --> 00:09:59,430
+that will install in your app. And then
+you need to go to a game face and
+
+514
+00:09:59,430 --> 00:09:59,440
+you need to go to a game face and
+ 
+
+515
+00:09:59,440 --> 00:10:00,510
+you need to go to a game face and
+and getting
+
+516
+00:10:00,510 --> 00:10:00,520
+and getting
+ 
+
+517
+00:10:00,520 --> 00:10:02,270
+and getting
+to get the weight of the model.
+
+518
+00:10:02,270 --> 00:10:02,280
+to get the weight of the model.
+ 
+
+519
+00:10:02,280 --> 00:10:05,190
+to get the weight of the model.
+But for for a normal user, they can just
+
+520
+00:10:05,190 --> 00:10:05,200
+But for for a normal user, they can just
+ 
+
+521
+00:10:05,200 --> 00:10:06,830
+But for for a normal user, they can just
+download the app from the app Oh, and
+
+522
+00:10:06,830 --> 00:10:06,840
+download the app from the app Oh, and
+ 
+
+523
+00:10:06,840 --> 00:10:08,910
+download the app from the app Oh, and
+yes, if you want to try my app, you can
+
+524
+00:10:08,910 --> 00:10:08,920
+yes, if you want to try my app, you can
+ 
+
+525
+00:10:08,920 --> 00:10:10,390
+yes, if you want to try my app, you can
+if you want to try it like right now
+
+526
+00:10:10,390 --> 00:10:10,400
+if you want to try it like right now
+ 
+
+527
+00:10:10,400 --> 00:10:12,270
+if you want to try it like right now
+without having anything to install, you
+
+528
+00:10:12,270 --> 00:10:12,280
+without having anything to install, you
+ 
+
+529
+00:10:12,280 --> 00:10:14,670
+without having anything to install, you
+can do that. And you can choose any open
+
+530
+00:10:14,670 --> 00:10:14,680
+can do that. And you can choose any open
+ 
+
+531
+00:10:14,680 --> 00:10:16,750
+can do that. And you can choose any open
+source model inside that. Uh
+
+532
+00:10:16,750 --> 00:10:16,760
+source model inside that. Uh
+ 
+
+533
+00:10:16,760 --> 00:10:18,790
+source model inside that. Uh
+there is a selection that that they are
+
+534
+00:10:18,790 --> 00:10:18,800
+there is a selection that that they are
+ 
+
+535
+00:10:18,800 --> 00:10:20,910
+there is a selection that that they are
+not it's not any like I'm ensuring that
+
+536
+00:10:20,910 --> 00:10:20,920
+not it's not any like I'm ensuring that
+ 
+
+537
+00:10:20,920 --> 00:10:22,910
+not it's not any like I'm ensuring that
+all the model ones correctly
+
+538
+00:10:22,910 --> 00:10:22,920
+all the model ones correctly
+ 
+
+539
+00:10:22,920 --> 00:10:24,950
+all the model ones correctly
+on the on the iPhone because not all of
+
+540
+00:10:24,950 --> 00:10:24,960
+on the on the iPhone because not all of
+ 
+
+541
+00:10:24,960 --> 00:10:29,870
+on the on the iPhone because not all of
+them work work well.
+
+542
+00:10:29,870 --> 00:10:29,880
+
+ 
+
+543
+00:10:29,880 --> 00:10:45,827
+
+Thank you very much.
+
+544
+00:10:45,827 --> 00:10:45,837
+
+ 
+
+545
+00:10:45,837 --> 00:10:47,857
+
+>> [music]
+
